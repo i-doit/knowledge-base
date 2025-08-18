@@ -1,9 +1,17 @@
+---
+title: System requirements
+description: i-doit system requirements
+icon:
+status:
+lang: de
+---
+
 # System requirements
 
 In order to guarantee the operation of all functionalities of i-doit, some requirements must be met by the underlying system.
 
 !!! info "Current version"
-    The requirements shown below apply to the current version of i-doit, in this case **35**. These requirements are adjusted for each major release of i-doit. If the requirements of older versions are needed, the change history of this page can be used.
+    The requirements shown below apply to the current version of i-doit, in this case **36**. These requirements are adjusted for each major release of i-doit. If the requirements of older versions are needed, the change history of this page can be used.
 
 ## Minimum Requirements
 
@@ -25,11 +33,11 @@ For Windows, the [general Windows system requirements](https://learn.microsoft.c
 
 -   GNU/Linux in the 64bit variant (amd64) or Windows Server 2022 in the 64bit variant (amd64)
 -   Apache Webserver **2.4**
--   MariaDB 10.5 (deprecated), **10.6** (recommended), 10.11, 11.4 or MySQL 5.7 or 8.0.
--   PHP 8.1 (deprecated), 8.2 and 8.3 (recommended).
+-   MariaDB 10.5 (deprecated), **10.6** (recommended), 10.11, 11.4 or MySQL 5.7 or 8.0 (recommended).
+-   PHP 8.2, 8.3  (recommended) and 8.4.
 -   PHP extensions: bcmath, ctype, curl, fileinfo, gd, imagick, json, ldap, mbstring, memcached, mysqli, mysqlnd, pgsql, session, soap, xml, xmlwriter, zip
 
-We recommend the usage of **Apache Webserver 2.4, PHP 8.2 and MariaDB 10.6**.
+We recommend the usage of **Apache Webserver 2.4, PHP 8.3 and MariaDB 10.6**.
 
 !!! success "Reference configuration (GNU/Linux)"
     The following system parameters comprise a configuration reference that is tested and recommended by us and guarantees high performance when used with up to 500,000 objects and a high number of simultaneously working users.
@@ -66,105 +74,126 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
 
 ## Compatibility matrix
 
+=== "36"
+
+    | **i-doit Version**       | 36                                                                  |
+    | ------------------------ | ------------------------------------------------------------------- |
+    | **Release**              | 2025-09                                                             |
+    | **Apache Webserver**     | 2.4                                                                 |
+    | **PHP**                  | 8.1 {~~(deprecated)~~}<br>8.2<br>==8.3== (recommended)<br>{++8.4++} |
+    | **MySQL**                | 5.7<br>8.0 (recommended)                                            |
+    | **MariaDB**              | 10.5 (deprecated)<br>==10.6== (recommended)<br>10.11<br>11.4        |
+    | **Can this be skipped?** |                                                                     |
+
 === "35"
 
-    | **i-doit Version**   | 35                                                                                            |
-    | -------------------- | --------------------------------------------------------------------------------------------- |
-    | **Release**          | 2025-06                                                                                       |
-    | **Apache Webserver** | 2.4                                                                                           |
-    | **PHP**              | 8.1 {++(deprecated)++}<br>8.2 {--(recommended)--}<br>{++==8.3== (recommended)++}              |
-    | **MySQL**            | 5.7<br>8.0                                                                                    |
-    | **MariaDB**          | {--10.4 (deprecated)--}<br>10.5 (deprecated)<br>==10.6== (recommended)<br>10.11<br>{++11.4++} |
+    | **i-doit Version**       | 35                                                                                            |
+    | ------------------------ | --------------------------------------------------------------------------------------------- |
+    | **Release**              | 2025-06                                                                                       |
+    | **Apache Webserver**     | 2.4                                                                                           |
+    | **PHP**                  | 8.1 {++(deprecated)++}<br>8.2 {--(recommended)--}<br>{++==8.3== (recommended)++}              |
+    | **MySQL**                | 5.7<br>8.0                                                                                    |
+    | **MariaDB**              | {--10.4 (deprecated)--}<br>10.5 (deprecated)<br>==10.6== (recommended)<br>10.11<br>{++11.4++} |
+    | **Can this be skipped?** | Yes                                                                                           |
 
 === "34"
 
-    | **i-doit Version**   | 34                                                                        |
-    | -------------------- | ------------------------------------------------------------------------- |
-    | **Release**          | 2025-02                                                                   |
-    | **Apache Webserver** | 2.4                                                                       |
-    | **PHP**              | 8.1<br>==8.2== (recommended)<br>8.3                                       |
-    | **MySQL**            | 5.7 <br>8.0                                                               |
-    | **MariaDB**          | 10.4 (deprecated)<br>10.5 (deprecated)<br>==10.6== (recommended)<br>10.11 |
+    | **i-doit Version**       | 34                                                                        |
+    | ------------------------ | ------------------------------------------------------------------------- |
+    | **Release**              | 2025-02                                                                   |
+    | **Apache Webserver**     | 2.4                                                                       |
+    | **PHP**                  | 8.1<br>==8.2== (recommended)<br>8.3                                       |
+    | **MySQL**                | 5.7 <br>8.0                                                               |
+    | **MariaDB**              | 10.4 (deprecated)<br>10.5 (deprecated)<br>==10.6== (recommended)<br>10.11 |
+    | **Can this be skipped?** | Yes                                                                       |
 
 === "33"
 
-    | **i-doit Version**   | 33                                                                        |
-    | -------------------- | ------------------------------------------------------------------------- |
-    | **Release**          | 2024-10                                                                   |
-    | **Apache Webserver** | 2.4                                                                       |
-    | **PHP**              | 8.1<br>==8.2== (recommended)<br>8.3                                       |
-    | **MySQL**            | 5.7 <br>8.0                                                               |
-    | **MariaDB**          | 10.4 (deprecated)<br>10.5 (deprecated)<br>==10.6== (recommended)<br>10.11 |
+    | **i-doit Version**       | 33                                                                        |
+    | ------------------------ | ------------------------------------------------------------------------- |
+    | **Release**              | 2024-10                                                                   |
+    | **Apache Webserver**     | 2.4                                                                       |
+    | **PHP**                  | 8.1<br>==8.2== (recommended)<br>8.3                                       |
+    | **MySQL**                | 5.7 <br>8.0                                                               |
+    | **MariaDB**              | 10.4 (deprecated)<br>10.5 (deprecated)<br>==10.6== (recommended)<br>10.11 |
+    | **Can this be skipped?** | Yes                                                                       |
 
 === "32"
 
-    | **i-doit Version**   | 32                                                                        |
-    | -------------------- | ------------------------------------------------------------------------- |
-    | **Release**          | 2024-07                                                                   |
-    | **Apache Webserver** | 2.4                                                                       |
-    | **PHP**              | 8.0<br>==8.1== (empfohlen)<br>8.2                                         |
-    | **MySQL**            | 5.7 <br>8.0                                                               |
-    | **MariaDB**          | 10.4 (deprecated)<br>10.5 (deprecated)<br>==10.6== (recommended)<br>10.11 |
+    | **i-doit Version**       | 32                                                                        |
+    | ------------------------ | ------------------------------------------------------------------------- |
+    | **Release**              | 2024-07                                                                   |
+    | **Apache Webserver**     | 2.4                                                                       |
+    | **PHP**                  | 8.0<br>==8.1== (empfohlen)<br>8.2                                         |
+    | **MySQL**                | 5.7 <br>8.0                                                               |
+    | **MariaDB**              | 10.4 (deprecated)<br>10.5 (deprecated)<br>==10.6== (recommended)<br>10.11 |
+    | **Can this be skipped?** | Yes                                                                       |
 
 === "31"
 
-    | **i-doit Version**   | 31                                                                        |
-    | -------------------- | ------------------------------------------------------------------------- |
-    | **Release**          | 2024-05                                                                   |
-    | **Apache Webserver** | 2.4                                                                       |
-    | **PHP**              | 8.0<br>==8.1== (recommended)<br>8.2                                       |
-    | **MySQL**            | 5.7 <br>8.0                                                               |
-    | **MariaDB**          | 10.4 (deprecated)<br>10.5 (deprecated)<br>==10.6== (recommended)<br>10.11 |
+    | **i-doit Version**       | 31                                                                        |
+    | ------------------------ | ------------------------------------------------------------------------- |
+    | **Release**              | 2024-05                                                                   |
+    | **Apache Webserver**     | 2.4                                                                       |
+    | **PHP**                  | 8.0<br>==8.1== (recommended)<br>8.2                                       |
+    | **MySQL**                | 5.7 <br>8.0                                                               |
+    | **MariaDB**              | 10.4 (deprecated)<br>10.5 (deprecated)<br>==10.6== (recommended)<br>10.11 |
+    | **Can this be skipped?** | Yes                                                                       |
 
 === "30"
 
-    | **i-doit Version**   | 30                                                                              |
-    | -------------------- | ------------------------------------------------------------------------------- |
-    | **Release**          | 2024-04                                                                         |
-    | **Apache Webserver** | 2.4                                                                             |
-    | **PHP**              | 7.4 (deprecated) <br>8.0<br>==8.1== (recommended)<br>8.2                        |
-    | **MySQL**            | 5.7 <br>8.0                                                                     |
-    | **MariaDB**          | 10.4 (deprecated)<br>10.5 (deprecated)<br>==10.6== (recommended)<br>{++10.11++} |
+    | **i-doit Version**       | 30                                                                              |
+    | ------------------------ | ------------------------------------------------------------------------------- |
+    | **Release**              | 2024-04                                                                         |
+    | **Apache Webserver**     | 2.4                                                                             |
+    | **PHP**                  | 7.4 (deprecated) <br>8.0<br>==8.1== (recommended)<br>8.2                        |
+    | **MySQL**                | 5.7 <br>8.0                                                                     |
+    | **MariaDB**              | 10.4 (deprecated)<br>10.5 (deprecated)<br>==10.6== (recommended)<br>{++10.11++} |
+    | **Can this be skipped?** | Yes                                                                             |
 
 === "29"
 
-    | **i-doit Version**   | 29                                                             |
-    | -------------------- | -------------------------------------------------------------- |
-    | **Release**          | 2024-02                                                        |
-    | **Apache Webserver** | 2.4                                                            |
-    | **PHP**              | 7.4 (deprecated) <br>==8.0== (recommended)<br>8.1<br>{++8.2++} |
-    | **MySQL**            | 5.7 <br>8.0                                                    |
-    | **MariaDB**          | 10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (recommended)   |
+    | **i-doit Version**       | 29                                                             |
+    | ------------------------ | -------------------------------------------------------------- |
+    | **Release**              | 2024-02                                                        |
+    | **Apache Webserver**     | 2.4                                                            |
+    | **PHP**                  | 7.4 (deprecated) <br>==8.0== (recommended)<br>8.1<br>{++8.2++} |
+    | **MySQL**                | 5.7 <br>8.0                                                    |
+    | **MariaDB**              | 10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (recommended)   |
+    | **Can this be skipped?** | ==No==                                                         |
 
 === "28"
 
-    | **i-doit Version**   | 28                                                           |
-    | -------------------- | ------------------------------------------------------------ |
-    | **Release**          | 2023-12                                                      |
-    | **Apache Webserver** | 2.4                                                          |
-    | **PHP**              | 7.4 (deprecated) <br>==8.0== (recommended)<br>8.1            |
-    | **MySQL**            | 5.7 <br>8.0                                                  |
-    | **MariaDB**          | 10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (recommended) |
+    | **i-doit Version**       | 28                                                           |
+    | ------------------------ | ------------------------------------------------------------ |
+    | **Release**              | 2023-12                                                      |
+    | **Apache Webserver**     | 2.4                                                          |
+    | **PHP**                  | 7.4 (deprecated) <br>==8.0== (recommended)<br>8.1            |
+    | **MySQL**                | 5.7 <br>8.0                                                  |
+    | **MariaDB**              | 10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (recommended) |
+    | **Can this be skipped?** | Yes                                                          |
 
 === "27"
 
-    | **i-doit Version**   | 27                                                           |
-    | -------------------- | ------------------------------------------------------------ |
-    | **Release**          | 2023-08                                                      |
-    | **Apache Webserver** | 2.4                                                          |
-    | **PHP**              | 7.4 (deprecated) <br>==8.0== (recommended)<br>8.1            |
-    | **MySQL**            | 5.7 <br>8.0                                                  |
-    | **MariaDB**          | 10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (recommended) |
+    | **i-doit Version**       | 27                                                           |
+    | ------------------------ | ------------------------------------------------------------ |
+    | **Release**              | 2023-08                                                      |
+    | **Apache Webserver**     | 2.4                                                          |
+    | **PHP**                  | 7.4 (deprecated) <br>==8.0== (recommended)<br>8.1            |
+    | **MySQL**                | 5.7 <br>8.0                                                  |
+    | **MariaDB**              | 10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (recommended) |
+    | **Can this be skipped?** | Yes                                                          |
 
 === "26"
 
-    | **i-doit Version**   | 26                                                           |
-    | -------------------- | ------------------------------------------------------------ |
-    | **Release**          | 2023-08                                                      |
-    | **Apache Webserver** | 2.4                                                          |
-    | **PHP**              | 7.4 <br>==8.0== (recommended)<br>{++8.1++}                   |
-    | **MySQL**            | 5.7 <br>8.0                                                  |
-    | **MariaDB**          | 10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (recommended) |
+    | **i-doit Version**       | 26                                                           |
+    | ------------------------ | ------------------------------------------------------------ |
+    | **Release**              | 2023-08                                                      |
+    | **Apache Webserver**     | 2.4                                                          |
+    | **PHP**                  | 7.4 <br>==8.0== (recommended)<br>{++8.1++}                   |
+    | **MySQL**                | 5.7 <br>8.0                                                  |
+    | **MariaDB**              | 10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (recommended) |
+    | **Can this be skipped?** | Yes                                                          |
 
 === "25"
 
