@@ -42,7 +42,7 @@ A pop-up window showing the list with an optimized view for printing opens by ac
 
 ## Export Object List as CSV file
 
-You can download the displayed object list [as a file in CSV format](../../consolidate-data/csv-data-export.md) with the **Export as CSV** button and then process it with third-party applications.
+You can download the displayed object list as a [CSV file](../../consolidate-data/csv-data-export.md) with the 'Export as CSV' button and then process it with third-party applications. If you don't want the object ID next to the title in the CSV file, you can select `Remove object IDs from CSV exported lists` in [Administration -> [tenant-name] Management -> Settings for [tenant-name] -> CMDB](../../system-administration/administration/tenant-management/settings-for-tenant.md#cmdb).
 
 ## Link to this page
 
