@@ -82,20 +82,28 @@ In addition to this the filter can be further defined. The options behind this h
 
 Append to last filter:
 
-    (&(objectClass=user)(test=test))
+```shell
+(&(objectClass=user)(test=test))
+```
 
 Append as new filter:
 
-    (&(objectClass=user)(&(test=test)))
+```shell
+(&(objectClass=user)(&(test=test)))
+```
 
 Create new term:
 
-    (&(&(objectClass=user))(test=test))
+```shell
+(&(&(objectClass=user))(test=test))
+```
 
 You can then test the configuration specified above in the bottom section. Optimally, the following notification is displayed:
 
-    Connection OK!
-    XX object(s) found in OU=tree,OU=synetics,DC=synetics,DC=int.
+```shell
+Connection OK!
+XX object(s) found in OU=tree,OU=synetics,DC=synetics,DC=int.
+```
 
 If the error message is not clear enough in the event of a failure, the debug level can be increased so that further outputs are written into the Apache error log. In Debian-based operating systems the error log can be found at /var/log/apache2/error.log.
 
