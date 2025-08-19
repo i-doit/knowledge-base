@@ -76,127 +76,127 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
 
 === "36"
 
-    | **i-doit Version**            | 36                                                              |
-    | ----------------------------- | --------------------------------------------------------------- |
-    | **Release**                   | 2025-09                                                         |
-    | **Apache Webserver**          | 2.4                                                             |
-    | **PHP**                       | 8.1 {~~(veraltet)~~}<br>8.2<br>==8.3== (empfohlen)<br>{++8.4++} |
-    | **MySQL**                     | 5.7<br>8.0 (empfohlen)                                          |
-    | **MariaDB**                   | 10.5 (veraltet)<br>==10.6== (empfohlen)<br>10.11<br>11.4        |
-    | **Kann übersprungen werden?** |                                                                 |
+    | **i-doit Version**                          | 36                                                              |
+    | ------------------------------------------- | --------------------------------------------------------------- |
+    | **Release**                                 | 2025-09                                                         |
+    | **Apache Webserver**                        | 2.4                                                             |
+    | **PHP**                                     | {~~8.1 (veraltet)~~}<br>8.2<br>==8.3== (empfohlen)<br>{++8.4++} |
+    | **MySQL**                                   | 5.7<br>8.0 (empfohlen)                                          |
+    | **MariaDB**                                 | 10.5 (veraltet)<br>==10.6== (empfohlen)<br>10.11<br>11.4        |
+    | **Update Update kann übersprungen werden?** |                                                                 |
 
 
 === "35"
 
-    | **i-doit Version**            | 35                                                                                      |
-    | ----------------------------- | --------------------------------------------------------------------------------------- |
-    | **Release**                   | 2025-06                                                                                 |
-    | **Apache Webserver**          | 2.4                                                                                     |
-    | **PHP**                       | 8.1 {++(veraltet)++}<br>8.2 {--(empfohlen)--}<br>{++==8.3== (empfohlen)++}              |
-    | **MySQL**                     | 5.7<br>8.0                                                                              |
-    | **MariaDB**                   | {--10.4 (veraltet)--}<br>10.5 (veraltet)<br>==10.6== (empfohlen)<br>10.11<br>{++11.4++} |
-    | **Kann übersprungen werden?** | ==Nein==                                                                                |
+    | **i-doit Version**                   | 35                                                                                      |
+    | ------------------------------------ | --------------------------------------------------------------------------------------- |
+    | **Release**                          | 2025-06                                                                                 |
+    | **Apache Webserver**                 | 2.4                                                                                     |
+    | **PHP**                              | {++8.1 (veraltet)++}<br>{--8.2 (empfohlen)--}<br>{++==8.3== (empfohlen)++}              |
+    | **MySQL**                            | 5.7<br>8.0                                                                              |
+    | **MariaDB**                          | {--10.4 (veraltet)--}<br>10.5 (veraltet)<br>==10.6== (empfohlen)<br>10.11<br>{++11.4++} |
+    | **Update kann übersprungen werden?** | ==Nein==                                                                                |
 
 === "34"
 
-    | **i-doit Version**            | 34                                                                  |
-    | ----------------------------- | ------------------------------------------------------------------- |
-    | **Release**                   | 2025-02                                                             |
-    | **Apache Webserver**          | 2.4                                                                 |
-    | **PHP**                       | 8.1<br>==8.2== (empfohlen)<br>8.3                                   |
-    | **MySQL**                     | 5.7 <br>8.0                                                         |
-    | **MariaDB**                   | 10.4 (veraltet)<br>10.5 (veraltet)<br>==10.6== (empfohlen)<br>10.11 |
-    | **Kann übersprungen werden?** | Ja                                                                  |
+    | **i-doit Version**                   | 34                                                                  |
+    | ------------------------------------ | ------------------------------------------------------------------- |
+    | **Release**                          | 2025-02                                                             |
+    | **Apache Webserver**                 | 2.4                                                                 |
+    | **PHP**                              | 8.1<br>==8.2== (empfohlen)<br>8.3                                   |
+    | **MySQL**                            | 5.7 <br>8.0                                                         |
+    | **MariaDB**                          | 10.4 (veraltet)<br>10.5 (veraltet)<br>==10.6== (empfohlen)<br>10.11 |
+    | **Update kann übersprungen werden?** | Ja                                                                  |
 
 === "33"
 
-    | **i-doit Version**            | 33                                                                  |
-    | ----------------------------- | ------------------------------------------------------------------- |
-    | **Release**                   | 2024-10                                                             |
-    | **Apache Webserver**          | 2.4                                                                 |
-    | **PHP**                       | 8.1<br>==8.2== (empfohlen)<br>8.3                                   |
-    | **MySQL**                     | 5.7 <br>8.0                                                         |
-    | **MariaDB**                   | 10.4 (veraltet)<br>10.5 (veraltet)<br>==10.6== (empfohlen)<br>10.11 |
-    | **Kann übersprungen werden?** | Ja                                                                  |
+    | **i-doit Version**                   | 33                                                                  |
+    | ------------------------------------ | ------------------------------------------------------------------- |
+    | **Release**                          | 2024-10                                                             |
+    | **Apache Webserver**                 | 2.4                                                                 |
+    | **PHP**                              | 8.1<br>==8.2== (empfohlen)<br>8.3                                   |
+    | **MySQL**                            | 5.7 <br>8.0                                                         |
+    | **MariaDB**                          | 10.4 (veraltet)<br>10.5 (veraltet)<br>==10.6== (empfohlen)<br>10.11 |
+    | **Update kann übersprungen werden?** | Ja                                                                  |
 
 === "32"
 
-    | **i-doit Version**            | 32                                                                  |
-    | ----------------------------- | ------------------------------------------------------------------- |
-    | **Release**                   | 2024-07                                                             |
-    | **Apache Webserver**          | 2.4                                                                 |
-    | **PHP**                       | 8.0<br>==8.1== (empfohlen)<br>8.2                                   |
-    | **MySQL**                     | 5.7 <br>8.0                                                         |
-    | **MariaDB**                   | 10.4 (veraltet)<br>10.5 (veraltet)<br>==10.6== (empfohlen)<br>10.11 |
-    | **Kann übersprungen werden?** | Ja                                                                  |
+    | **i-doit Version**                   | 32                                                                  |
+    | ------------------------------------ | ------------------------------------------------------------------- |
+    | **Release**                          | 2024-07                                                             |
+    | **Apache Webserver**                 | 2.4                                                                 |
+    | **PHP**                              | 8.0<br>==8.1== (empfohlen)<br>8.2                                   |
+    | **MySQL**                            | 5.7 <br>8.0                                                         |
+    | **MariaDB**                          | 10.4 (veraltet)<br>10.5 (veraltet)<br>==10.6== (empfohlen)<br>10.11 |
+    | **Update kann übersprungen werden?** | Ja                                                                  |
 
 === "31"
 
-    | **i-doit Version**            | 31                                                                  |
-    | ----------------------------- | ------------------------------------------------------------------- |
-    | **Release**                   | 2024-05                                                             |
-    | **Apache Webserver**          | 2.4                                                                 |
-    | **PHP**                       | 8.0<br>==8.1== (empfohlen)<br>8.2                                   |
-    | **MySQL**                     | 5.7 <br>8.0                                                         |
-    | **MariaDB**                   | 10.4 (veraltet)<br>10.5 (veraltet)<br>==10.6== (empfohlen)<br>10.11 |
-    | **Kann übersprungen werden?** | Ja                                                                  |
+    | **i-doit Version**                   | 31                                                                  |
+    | ------------------------------------ | ------------------------------------------------------------------- |
+    | **Release**                          | 2024-05                                                             |
+    | **Apache Webserver**                 | 2.4                                                                 |
+    | **PHP**                              | 8.0<br>==8.1== (empfohlen)<br>8.2                                   |
+    | **MySQL**                            | 5.7 <br>8.0                                                         |
+    | **MariaDB**                          | 10.4 (veraltet)<br>10.5 (veraltet)<br>==10.6== (empfohlen)<br>10.11 |
+    | **Update kann übersprungen werden?** | Ja                                                                  |
 
 === "30"
 
-    | **i-doit Version**            | 30                                                                        |
-    | ----------------------------- | ------------------------------------------------------------------------- |
-    | **Release**                   | 2024-04                                                                   |
-    | **Apache Webserver**          | 2.4                                                                       |
-    | **PHP**                       | 7.4 (veraltet) <br>8.0<br>==8.1== (empfohlen)<br>8.2                      |
-    | **MySQL**                     | 5.7 <br>8.0                                                               |
-    | **MariaDB**                   | 10.4 (veraltet)<br>10.5 (veraltet)<br>==10.6== (empfohlen)<br>{++10.11++} |
-    | **Kann übersprungen werden?** | Ja                                                                        |
+    | **i-doit Version**                   | 30                                                                        |
+    | ------------------------------------ | ------------------------------------------------------------------------- |
+    | **Release**                          | 2024-04                                                                   |
+    | **Apache Webserver**                 | 2.4                                                                       |
+    | **PHP**                              | 7.4 (veraltet) <br>8.0<br>==8.1== (empfohlen)<br>8.2                      |
+    | **MySQL**                            | 5.7 <br>8.0                                                               |
+    | **MariaDB**                          | 10.4 (veraltet)<br>10.5 (veraltet)<br>==10.6== (empfohlen)<br>{++10.11++} |
+    | **Update kann übersprungen werden?** | Ja                                                                        |
 
 === "29"
 
-    | **i-doit Version**            | 29                                                         |
-    | ----------------------------- | ---------------------------------------------------------- |
-    | **Release**                   | 2024-02                                                    |
-    | **Apache Webserver**          | 2.4                                                        |
-    | **PHP**                       | 7.4 (veraltet) <br>==8.0== (empfohlen)<br>8.1<br>{++8.2++} |
-    | **MySQL**                     | 5.7 <br>8.0                                                |
-    | **MariaDB**                   | 10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (empfohlen) |
-    | **Kann übersprungen werden?** | ==Nein==                                                   |
+    | **i-doit Version**                   | 29                                                         |
+    | ------------------------------------ | ---------------------------------------------------------- |
+    | **Release**                          | 2024-02                                                    |
+    | **Apache Webserver**                 | 2.4                                                        |
+    | **PHP**                              | 7.4 (veraltet) <br>==8.0== (empfohlen)<br>8.1<br>{++8.2++} |
+    | **MySQL**                            | 5.7 <br>8.0                                                |
+    | **MariaDB**                          | 10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (empfohlen) |
+    | **Update kann übersprungen werden?** | ==Nein==                                                   |
 
 === "28"
 
-    | **i-doit Version**            | 28                                                         |
-    | ----------------------------- | ---------------------------------------------------------- |
-    | **Release**                   | 2023-12                                                    |
-    | **Apache Webserver**          | 2.4                                                        |
-    | **PHP**                       | 7.4 (veraltet) <br>==8.0== (empfohlen)<br>8.1              |
-    | **MySQL**                     | 5.7 <br>8.0                                                |
-    | **MariaDB**                   | 10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (empfohlen) |
-    | **Kann übersprungen werden?** | Ja                                                         |
+    | **i-doit Version**                   | 28                                                         |
+    | ------------------------------------ | ---------------------------------------------------------- |
+    | **Release**                          | 2023-12                                                    |
+    | **Apache Webserver**                 | 2.4                                                        |
+    | **PHP**                              | 7.4 (veraltet) <br>==8.0== (empfohlen)<br>8.1              |
+    | **MySQL**                            | 5.7 <br>8.0                                                |
+    | **MariaDB**                          | 10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (empfohlen) |
+    | **Update kann übersprungen werden?** | Ja                                                         |
 
 
 === "27"
 
-    | **i-doit Version**            | 27                                                         |
-    | ----------------------------- | ---------------------------------------------------------- |
-    | **Release**                   | 2023-08                                                    |
-    | **Apache Webserver**          | 2.4                                                        |
-    | **PHP**                       | 7.4 (veraltet) <br>==8.0== (empfohlen)<br>8.1              |
-    | **MySQL**                     | 5.7 <br>8.0                                                |
-    | **MariaDB**                   | 10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (empfohlen) |
-    | **Kann übersprungen werden?** | Ja                                                         |
+    | **i-doit Version**                   | 27                                                         |
+    | ------------------------------------ | ---------------------------------------------------------- |
+    | **Release**                          | 2023-08                                                    |
+    | **Apache Webserver**                 | 2.4                                                        |
+    | **PHP**                              | 7.4 (veraltet) <br>==8.0== (empfohlen)<br>8.1              |
+    | **MySQL**                            | 5.7 <br>8.0                                                |
+    | **MariaDB**                          | 10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (empfohlen) |
+    | **Update kann übersprungen werden?** | Ja                                                         |
 
 
 === "26"
 
-    | **i-doit Version**            | 26                                                         |
-    | ----------------------------- | ---------------------------------------------------------- |
-    | **Release**                   | 2023-08                                                    |
-    | **Apache Webserver**          | 2.4                                                        |
-    | **PHP**                       | 7.4 <br>==8.0== (empfohlen) <br>{++8.1++}                  |
-    | **MySQL**                     | 5.7 <br>8.0                                                |
-    | **MariaDB**                   | 10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (empfohlen) |
-    | **Kann übersprungen werden?** | Ja                                                         |
+    | **i-doit Version**                   | 26                                                         |
+    | ------------------------------------ | ---------------------------------------------------------- |
+    | **Release**                          | 2023-08                                                    |
+    | **Apache Webserver**                 | 2.4                                                        |
+    | **PHP**                              | 7.4 <br>==8.0== (empfohlen) <br>{++8.1++}                  |
+    | **MySQL**                            | 5.7 <br>8.0                                                |
+    | **MariaDB**                          | 10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (empfohlen) |
+    | **Update kann übersprungen werden?** | Ja                                                         |
 
 
 === "25"
