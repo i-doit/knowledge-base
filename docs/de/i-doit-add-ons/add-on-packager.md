@@ -50,16 +50,16 @@ Basis Informationen
 
 In den Basis Informationen können mehrere Metadaten zu dem Add-on angegeben werden.
 
-| <!-- --> | <!-- --> |
-|---|---|
-| **Bezeichnung** | Name des Add-ons |
-| **Hersteller** | Der Name Ihres Unternehmens oder Synonym |
-| **Webseite** | Ein Link auf weitere Informationen zu dem Add-on(wird derzeit nicht für den Anwender angezeigt) |
-| **Lizenzpflichtig** | Definiert, ob das Add-on lizenzpflichtig sein soll oder nicht. Lizenzen können nur über den i-doit Lizenzserver ausgestellt werden. Falls Sie ihr Add-on kommerziell verkaufen möchten, sprechen Sie bitte mit Ihrem Ansprechpartner der synetics GmbH. |
-| **Identifikator** | Der Identifikator wird bei der Erstellung als Freitext angegeben. Wird er abgespeichert, wird er mit dem Herstellernamen kombiniert, um eine Eindeutigkeit zu gewährleisten.Der Add-on Identifikator ist für die Lizenzierung, aber auch das spätere Update eines Add-ons wichtig und sollte eindeutig und unveränderlich sein.Bitte Verwenden Sie keine Leerzeichen oder Sonderzeichen. |
-| **Benötigt mindestens i-doit Version** | Standardmäßig ist hier i-doit Version 1.11 eingetragen. Dieser Wert stellt die aktuelle Mindestkompatibilität dar und muss im Normalfall nicht verändert werden. |
-| **Erstellt mit Add-on Packager** | Gibt die verwendete Version des Add-on Packagers an, um Kompatibilität zu gewährleisten. |
-| **Beschreibung** | Freitext-beschreibung des Add-ons |
+| <!-- -->                               | <!-- -->                                                                                                                                                                                                                                                                                                                                                                                 |
+| -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Bezeichnung**                        | Name des Add-ons                                                                                                                                                                                                                                                                                                                                                                         |
+| **Hersteller**                         | Der Name Ihres Unternehmens oder Synonym                                                                                                                                                                                                                                                                                                                                                 |
+| **Webseite**                           | Ein Link auf weitere Informationen zu dem Add-on(wird derzeit nicht für den Anwender angezeigt)                                                                                                                                                                                                                                                                                          |
+| **Lizenzpflichtig**                    | Definiert, ob das Add-on lizenzpflichtig sein soll oder nicht. Lizenzen können nur über den i-doit Lizenzserver ausgestellt werden. Falls Sie ihr Add-on kommerziell verkaufen möchten, sprechen Sie bitte mit Ihrem Ansprechpartner der synetics GmbH.                                                                                                                                  |
+| **Identifikator**                      | Der Identifikator wird bei der Erstellung als Freitext angegeben. Wird er abgespeichert, wird er mit dem Herstellernamen kombiniert, um eine Eindeutigkeit zu gewährleisten.Der Add-on Identifikator ist für die Lizenzierung, aber auch das spätere Update eines Add-ons wichtig und sollte eindeutig und unveränderlich sein.Bitte Verwenden Sie keine Leerzeichen oder Sonderzeichen. |
+| **Benötigt mindestens i-doit Version** | Standardmäßig ist hier i-doit Version 1.11 eingetragen. Dieser Wert stellt die aktuelle Mindestkompatibilität dar und muss im Normalfall nicht verändert werden.                                                                                                                                                                                                                         |
+| **Erstellt mit Add-on Packager**       | Gibt die verwendete Version des Add-on Packagers an, um Kompatibilität zu gewährleisten.                                                                                                                                                                                                                                                                                                 |
+| **Beschreibung**                       | Freitext-beschreibung des Add-ons                                                                                                                                                                                                                                                                                                                                                        |
 
 Eingebundene Ressourcen
 -----------------------
@@ -151,12 +151,13 @@ Die Pakete sind die fertigen ZIP Dateien der Add-ons. Jede Version jedes Add-ons
 Releases
 --------
 
-| Version | Datum | Changelog |
-| --- | --- | --- |
-| 1.3 | 07.11.2023 | [Bug] Custom Object types are not replaced in report conditions<br/>[Bug] HTTP 500 while Add-on uninstall via Admin-Center |
-| 1.2.1 | 22.08.2023 | [Bug] The content buttons do not work in some browsers<br>[Bug] The User is not able to download the add on zip file |
-| 1.2 | 05.09.2022 | [Task] PHP 8.0 Compatibility <br/> [Task] Design Compatibility |
-| 1.1.1 | 27.07.2022 | [Bug] Packaging does not work with custom category dialog+ fields |
-| 1.1 | 21.02.2022 | [Improvement] Add Report-Manager categories to the Add-On <br/> [Bug] Error message when creating a package with Dialog Plus Listener resources "Unknown column '\*\_\_sort' in 'field list'" <br/> [Bug] CSV import files are not being copied correctly |
-| 1.0.1 | 04.05.2020 | [Bug] Packages with custom multi value categories become single value categories on import |
-| 1.0 | 21.10.2019 | `Initial release` |
+| Version | Datum      | Changelog                                                                                                                                                                                                                                                 |
+| ------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1.4     | 2025-09-09 | [Task] PHP 8.4 compatibility<br[Bug] 500er error after install add-on with report<br[Bug] Importing reports via a add-on package removes set conditions                                                                                                   |
+| 1.3     | 07.11.2023 | [Bug] Custom Object types are not replaced in report conditions<br/>[Bug] HTTP 500 while Add-on uninstall via Admin-Center                                                                                                                                |
+| 1.2.1   | 22.08.2023 | [Bug] The content buttons do not work in some browsers<br>[Bug] The User is not able to download the add on zip file                                                                                                                                      |
+| 1.2     | 05.09.2022 | [Task] PHP 8.0 Compatibility <br/> [Task] Design Compatibility                                                                                                                                                                                            |
+| 1.1.1   | 27.07.2022 | [Bug] Packaging does not work with custom category dialog+ fields                                                                                                                                                                                         |
+| 1.1     | 21.02.2022 | [Improvement] Add Report-Manager categories to the Add-On <br/> [Bug] Error message when creating a package with Dialog Plus Listener resources "Unknown column '\*\_\_sort' in 'field list'" <br/> [Bug] CSV import files are not being copied correctly |
+| 1.0.1   | 04.05.2020 | [Bug] Packages with custom multi value categories become single value categories on import                                                                                                                                                                |
+| 1.0     | 21.10.2019 | `Initial release`                                                                                                                                                                                                                                         |
