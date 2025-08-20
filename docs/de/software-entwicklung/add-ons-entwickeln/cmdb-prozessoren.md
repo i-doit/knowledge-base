@@ -85,9 +85,9 @@ public readonly int $sort = 0;
 public readonly int|null $status = null; 
 ```
 
-Hier sehen wir, dass der `title`-Parameter ein Pflichtfeld vom Typ `string` ist. \
-Die `constant` ist optional und muss – falls vorhanden – vom Typ `string` sein und mit `C__OBJTYPE_GROUP__` beginnen. \
-Der `sort`-Parameter muss numerisch sein – keine weiteren Regeln. \
+Hier sehen wir, dass der `title`-Parameter ein Pflichtfeld vom Typ `string` ist.<br>
+Die `constant` ist optional und muss – falls vorhanden – vom Typ `string` sein und mit `C__OBJTYPE_GROUP__` beginnen.<br>
+Der `sort`-Parameter muss numerisch sein – keine weiteren Regeln.<br>
 Der `status` ist optional und muss – falls vorhanden – entweder den Wert der Konstanten `C__RECORD_STATUS__BIRTH` oder
 `C__RECORD_STATUS__NORMAL` enthalten.
 

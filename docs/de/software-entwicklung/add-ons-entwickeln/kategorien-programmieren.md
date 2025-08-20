@@ -109,37 +109,37 @@ isysgui_catg__overview = 1;
 Die Tabelle beinhaltet noch andere Felder, die wir jedoch nicht mehr verwenden. Beim erzeugen eines Datensatzes können diese also
 ignoriert werden. Nachfolgend eine Erklärung zu den verschiedenen Feldern:
 
-* `isysgui_catg__type` \
-  Definiert den Kategorie "Typen" für die interne verwendung, wir verwenden die folgenden Typen: \
+* `isysgui_catg__type`<br>
+  Definiert den Kategorie "Typen" für die interne verwendung, wir verwenden die folgenden Typen:<br>
   **1 - View**: Eine Kategorie ohne eigene Daten bzw. Datenbanktabelle, sie stellt lediglich Daten dar, die in der UI-Klasse
-  aufbereitet wurden. \
-  **2 - Edit**: Eine normale Kategorie, die bearbeitet werden kann. \
-  **3 - Rückwärtige**: Die "rückwärtige" Seite einer anderen Kategorie (z.B. "Personengruppen > Mitglieder"). \
+  aufbereitet wurden.<br>
+  **2 - Edit**: Eine normale Kategorie, die bearbeitet werden kann.<br>
+  **3 - Rückwärtige**: Die "rückwärtige" Seite einer anderen Kategorie (z.B. "Personengruppen > Mitglieder").<br>
   **4 - Zuweisung**: Eine Kategorie, die lediglich Objektreferenzen zuweist (z.B. "Kontaktzuweisung").
-* `isysgui_catg__title` \
+* `isysgui_catg__title`<br>
   Beinhaltet die Sprache-Konstante der Kategorie.
-* `isysgui_catg__const` \
+* `isysgui_catg__const`<br>
   Beinhaltet die Konstante der Kategorie, diese ist sehr wichtig da sie intern als Identifikator dient (wir nutzen im Code keine
   IDs, da sich diese von Installation zu Installation ändern können).  
   Die Kategorie-Konstante sollte IMMER dem Format `C__CATG__*` folgen und keine Sonderzeichen beinhalten, da diese von i-doit zu
   einer PHP-Konstante umgewandelt wird.
-* `isysgui_catg__source_table` \
+* `isysgui_catg__source_table`<br>
   Der Name der zugehörigen Datenbank Tabelle. Hierbei sollte beachtet werden, dass der Name NICHT mit "_list" endet, die
   eigentliche Datenbanktabelle allerdings schon.
-* `isysgui_catg__class_name` \
+* `isysgui_catg__class_name`<br>
   Der Name der zugehörigen DAO-Klasse.
-* `isysgui_catg__parent` \
+* `isysgui_catg__parent`<br>
   Dieses Feld beinhaltet eine optionale Referenz zu einer anderen Kategorie. Diese entscheidet darüber, ob die Kategorie unterhalb
   einer anderen Kategorie dargestellt werden soll ("Ordner Kategorie")
-* `isysgui_catg__list_multi_value` \
+* `isysgui_catg__list_multi_value`<br>
   Der Inhalt dieses Feldes (0 oder 1) entscheidet, ob eine Kategorie eine Multi-Value-Kategorie ist
-* `isysgui_catg__status` \
+* `isysgui_catg__status`<br>
   Der Status entscheidet, wie auch bei Objekten und Kategorien, ob der jeweilige Datensatz den "Normal" (= 2) Status hat und
   verwendet werden kann.
-* `isysgui_catg__standard` \
+* `isysgui_catg__standard`<br>
   Eine "Standard"-Kategorie ist in jedem Objekttypen verfügbar und wird nur als Icon im Navigationsbaum eines Objektes
   dargestellt (siehe "Beziehungen", "Status Planung", "Alle Tickets" usw.)
-* `isysgui_catg__overview` \
+* `isysgui_catg__overview`<br>
   Dieses Feld definiert, ob die Kategorie auf der Übersichtsseite verwendet werden kann oder nicht.
 
 Diese notwendige Query wird idealerweise bei der Installation des eigenen Add-ons ausgeführt, siehe dazu auch den
@@ -183,10 +183,10 @@ Hierbei bitte beachten, dass Kategorietabellen den Prefix `isys_catg_` und den S
 
 Die folgenden vier Tabellenfelder werden von i-doit benötigt und müssen immer Bestandteil einer Kategorietabelle sein:
 
- * `*__id`
- * `*__isys_obj__id`
- * `*__description`
- * `*__status`
+* `*__id`
+* `*__isys_obj__id`
+* `*__description`
+* `*__status`
 
 Alle weiteren Felder können für die eigenen Kategoriedaten verwendet werden.
 
@@ -331,7 +331,7 @@ Die weitere Verarbeitung der Daten kann hier auf zwei verschiedene Arten erfolge
 
 1. Anpassen einzelner Attribut-Daten und anschließende Weiterleitung an `parent::create_data()`. Dies wird beispielsweise in der
    Passwort-Kategorie verwendet: Wir verschlüsseln das Passwort und lassen die übergeordnete Methode den Datensatz mit Hilfe von
-   generischer Logik speichern. \
+   generischer Logik speichern.<br>
    Ein anderes Beispiel ist die Monitor-Kategorie. Hier wird lediglich die Bildschirmgröße entsprechend der ausgewählten "Einheit"
    berechnet und ebenfalls an `parent::create_data()` übergeben.
 1. Theoretisch können wir an dieser Stelle die `INSERT INTO ...` Query selbst erzeugen und an die Datenbank übermitteln. Dies wird
@@ -347,33 +347,33 @@ Parameter der Methode beinhaltet die Datensatz ID des jeweiligen Eintrags.
 #### Sync Methode `public function sync($data, $objectId, $status = 1)`
 
 Sollte es beim Speichern von Kategorie-Daten mittels API, CSV-Import oder Listeneditierung zu Fehlern kommen, ist es möglich das
-die zuständige sync Methode selbst implementiert werden muss. Bei der Verwendung von `create_data` und `save_data` ist dies 
+die zuständige sync Methode selbst implementiert werden muss. Bei der Verwendung von `create_data` und `save_data` ist dies
 allerdings auszuschließen und dürfte nur Kategorien betreffen, die noch veraltete Speicherlogik nutzen.
 
 ### Sicherheit in SQL Queries
 
-Um sogenannter [SQL-Injection](https://de.wikipedia.org/wiki/SQL-Injection) und auch 
+Um sogenannter [SQL-Injection](https://de.wikipedia.org/wiki/SQL-Injection) und auch
 [XSS](https://de.wikipedia.org/wiki/Cross-Site-Scripting) vorzubeugen, liefert i-doit einige interne Helfer zum Säubern von
 Inhalten, die durch den User eingegeben werden. Konkret stellt jede DAO eine Reihe von Methoden bereit, die für verschiedene
 Einsatzzwecke gedacht sind:
 
-* `convert_sql_id` \
+* `convert_sql_id`<br>
   Diese Methode formatiert jeden übergebenen Wert zu einer Ganzzahl. Sollte das Ergebnis kleiner oder gleich 0 sein, wird `NULL`
   zurückgeliefert.
-* `convert_sql_int` \
+* `convert_sql_int`<br>
   Wird jeden übergebenen Wert zur Ganzzahl formatieren. Lediglich der Leerwert `NULL` wird auch zum SQL Leerwert `NULL`.
-* `convert_sql_float` \
+* `convert_sql_float`<br>
   Ähnlich wie `convert_sql_int`, nur für Kommazahlen. Hier wird außerdem eine interne Funktion verwendet, um beliebige Formate (
   Tausendertrennzeichen, Dezimaltrennzeichen, etc.) zu vereinheitlichen, sodass diese mit SQL kompatibel sind.
-* `convert_sql_text` \
+* `convert_sql_text`<br>
   Diese Methode wird den übergebenen Text formatieren, so dass jegliche Zeichen, die
   für [SQL-Injection](https://de.wikipedia.org/wiki/SQL-Injection) genutzt werden, nicht länger gefährlich sind.
-* `convert_sql_boolean` \
+* `convert_sql_boolean`<br>
   Diese Methode kann genutzt werden, um beliebige Werte zu 1 (für Wahr) oder 0 (für Falsch) zu formatieren.
-* `convert_sql_datetime` \
+* `convert_sql_datetime`<br>
   Mit dieser Methode wird ein Datum in die SQL konforme Schreibweise geändert. Es lassen sich Zeichenketten, Timestamp Werte,
   `"NOW()"` oder `"CURDATE()"` übergeben.
-* `convert_sql_point` \
+* `convert_sql_point`<br>
   Kann genutzt werden um "Coordinate"-Instanzen für SQL "geometry" Felder zu formatieren (zum Beispiel für GPS Koordinaten)
 
 Für den Fall das HTML in die Datenbank gespeichert werden soll, können wir darüber hinaus
@@ -471,7 +471,7 @@ Diese Methode wird aufgerufen, sobald ein User in eine Multi-Value-Kategorie nav
 die Tabelle vorzubereiten. Für gewöhnlich muss diese Methode nicht selbst implementiert werden - einzig Kategorien vom Typ "
 Zuweisung" müssen dies tun, um die "Hinzufügen" -Schaltfläche mit einer "Objekt-Browser"-Instanz zu koppeln.
 
-Das geschieht mittels `$this->object_browser_as_new(...)`. Es gibt eine Reihe an notwendigen Parametern, die man sich am besten 
+Das geschieht mittels `$this->object_browser_as_new(...)`. Es gibt eine Reihe an notwendigen Parametern, die man sich am besten
 aus Kategorien, wie zum Beispiel der "Kontaktzuweisung" oder "Stacking", abschaut.
 
 Anschließend kann `parent::process_list()` mit allen Parametern aufgerufen werden, damit i-doit den Rest übernimmt.
@@ -521,18 +521,18 @@ werden können.
 
 Einige der gemeinsamen Parameter lauten:
 
-* `name` \
+* `name`<br>
   Der Name ist notwendig und wird für das "TOM" und die übergebenen "rules" verwendet, um das jeweilige Plugin zu identifizieren.
-* `id` oder `p_strID` \
+* `id` oder `p_strID`<br>
   Die "id" wird in den meisten Fällen im HTML als gleichnamiges Attribut ausgegeben und kann dann im Javascript wiederverwendet
   werden, um Elemente zu selektieren.
-* `type` \
+* `type`<br>
   Der "type" Parameter entscheidet letztendlich darüber, welches Smarty Plugin verwendet werden soll. Mit Hilfe des übergebenen
   Wertes lässt sich auch die zuständige PHP-Klasse ausfindig machen:
   `isys_smarty_plugin_{type}.class.php`.
-* `p_strClass` \
+* `p_strClass`<br>
   Wird verwendet, um CSS-Klassen auf die HTML-Elemente zu schreiben.
-* `p_strStyle` \
+* `p_strStyle`<br>
   Der Inhalt dieses Parameters wird als "style" Attribut auf das zuständige HTML-Element geschrieben.
 
 Die beste Anlaufstelle für verfügbare Parameter ist der Code selbst, da die Plugins von Zeit zu Zeit aktualisiert werden und eine
@@ -551,17 +551,17 @@ Neben den anderen Formularfeldern gibt es in i-doit auch "popups", wie zum Beisp
 Datepicker. Für diese GUI Elemente wird immer der gleiche "type" verwendet ("f_popup"). Das jeweilige Popup muss dann über den
 Parameter `p_strPopupType` bestimmt werden.
 
-Die Kern-Popups befinden sich im Ordner `{i-doit}/src/classes/popups/` und werden über ihren Typen referenziert: 
+Die Kern-Popups befinden sich im Ordner `{i-doit}/src/classes/popups/` und werden über ihren Typen referenziert:
 `isys_popup_{type}.class.php`.
 
 Popup-Klassen erben immer von `isys_component_popup` und beinhalten mindestens zwei Methoden:
 
-* `handle_smarty_include` \
+* `handle_smarty_include`<br>
   Diese Methode wird sowohl im VIEW- als auch EDIT-Modus aufgerufen und muss HTML zurückliefern das den eigentlichen Popup-Trigger
   beinhaltet - dabei handelt es sich um ein beliebiges HTML Element, dass ein "onclick" Attribut erhält, dessen Inhalt mit Hilfe
   von `$this->getModalJs(...)` erzeugt wird. Üblicherweise beinhaltet das HTML auch noch ein Formular-Feld, dass den jeweiligen
   Popup-Wert beinhaltet.
-* `handle_smarty_request` \
+* `handle_smarty_request`<br>
   Diese Methode wird via Ajax-Request aufgerufen, wenn der Popup-Trigger aktiviert wurde. Sie muss das Popup spezifische
   Smarty-Template rendern und den Request mittels die; beenden. i-doit wird das Template im Frontend empfangen, in das HTML des
   Popups einbetten und darstellen.
