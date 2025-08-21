@@ -75,6 +75,12 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
      Got error 'PHP message: PHP Fatal error:  Uncaught TypeError: idoit\\Component\\Helper\\Purify::formatUrlPart(): Argument #1 ($url) must be of type string, null given, called in /var/www/html/src/classes/ajax/handler/isys_ajax_handler_quick_info.class.php on line 256 and defined in /var/www/html/src/idoit/Component/Helper/Purify.php:254
 
+### Mass change purges fields in custom categories despite the setting to ignore empty fields (ID-12126)
+
+[i-doit_35_hotfix_ID-12126_aada6f7.zip :material-file-download:](../../assets/downloads/hotfixes/35/i-doit_35_hotfix_ID-12126_aada6f7.zip){ .md-button .md-button--primary }
+
+* * *
+
 ## API Add-on
 
 ### Compatibility to Monolog 3 (API-596)
@@ -85,17 +91,23 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 [api_2.3_hotfix_API-596_426c958.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_2.3_hotfix_API-596_426c958.zip){ .md-button .md-button--primary }
 
+* * *
+
 ## Flows Add-on
 
 ### Flows does not work with MySQL (Flow-385)
 
 [Flows_1.1.0_hotfix_FLOW-385_5973795.zip :material-file-download:](../../assets/downloads/hotfixes/flows/Flows_1.1.0_hotfix_FLOW-385_5973795.zip){ .md-button .md-button--primary }
 
+* * *
+
 ## Documents Add-on
 
 ### Rights for Templates in categories are not checked (DOKU-502)
 
 [Documents_1.10_hotfix_DOKU-502_f8a6ec2.zip :material-file-download:](../../assets/downloads/hotfixes/documents/Documents_1.10_hotfix_DOKU-502_f8a6ec2.zip){ .md-button .md-button--primary }
+
+* * *
 
 ## Replacement Add-on
 
