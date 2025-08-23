@@ -1,12 +1,12 @@
 ---
-title: Red Hat Enterprise Linux 9.5
-description: i-doit installation auf RHEL 9.5
+title: Red Hat Enterprise Linux 9.6
+description: i-doit installation auf RHEL 9.6
 icon: material/redhat
 status:
 lang: de
 ---
 
-!!! note "Getestet mit i-doit **34** und RHEL 9.5"
+!!! note "Getestet mit i-doit **34** und RHEL 9.6"
 
 Welche Pakete zu installieren und zu konfigurieren sind, erklären wir in wenigen Schritten in diesem Artikel.
 
@@ -31,7 +31,7 @@ uname -m
 Auf einem aktuell gehaltenen System werden
 
 *   der **Apache** HTTP Server 2.4,
-*   die Script-Sprache **PHP-FPM** 8.2,
+*   die Script-Sprache **PHP-FPM** 8.3,
 *   das Datenbankmanagementsystem **MariaDB** 10.11 und
 *   der Caching-Server **memcached**
 
@@ -43,13 +43,11 @@ Zunächst werden erste Pakete aus den Standard-Repositories aktualisiert:
 sudo dnf update
 ```
 
-!!! note "[PHP 8.3 ist bisher nicht verfügbar](https://access.redhat.com/solutions/7064136)."
-
-Installieren von PHP 8.2 und MariaDB über Module Stream:
+Installieren von PHP 8.3 und MariaDB über Module Stream:
 
 ```sh
-sudo dnf module enable php:8.2 mariadb:10.11 -y
-sudo dnf module install php:8.2 mariadb:10.11 -y
+sudo dnf module enable php:8.3 mariadb:10.11 -y
+sudo dnf module install php:8.3 mariadb:10.11 -y
 ```
 
 Die Installation weiterer Pakete erfolgt danach:
@@ -87,30 +85,14 @@ Die installierten Pakete für Apache HTTP Server, PHP und MariaDB bringen bereit
 
 ### PHP-FPM Konfiguration
 
-Zunächst wird die alte Konfiguration, durch umbenennen, deaktiviert:
-
-```sh
-sudo mv /etc/php-fpm.d/www.conf{,.bak}
-```
-
-und anschließend eine neue Datei erstellt und mit den Einstellungen befüllt:
+Die Default Konfiguration steht in /etc/php-fpm.d/www.conf. Eine spezifische Einstellung wird ergänzt:
 <!-- cSpell:disable -->
 ```sh
 sudo nano /etc/php-fpm.d/i-doit.conf
 ```
 
 ```ini
-[i-doit]
-listen = /var/run/php-fpm/php-fpm.sock
-user = apache
-group = apache
-listen.owner = apache
-listen.group = apache
-pm = dynamic
-pm.max_children = 50
-pm.start_servers = 5
-pm.min_spare_servers = 5
-pm.max_spare_servers = 35
+[www]
 security.limit_extensions = .php
 ```
 <!-- cSpell:enable -->
@@ -156,10 +138,11 @@ Der Parameter **date.timezone** sollte auf die lokale Zeitzone anpasst werden (s
 
 ### Apache HTTP Server Konfiguration
 
-Die Welcome Page wird, durch umbenennen, deaktiviert:
+Die Welcome Page wird umbenannt und durch eine leere Datei ersetzt:
 
 ```sh
 sudo mv /etc/httpd/conf.d/welcome.conf{,.bak}
+sudo touch /etc/httpd/conf.d/welcome.conf
 ```
 
 Nun wird ein neuer Virtual Host für i-doit angelegt:
@@ -311,7 +294,7 @@ ProxyTimeout 600
 
 <FilesMatch "\\.php$">
     <If "-f %{REQUEST_FILENAME}">
-        SetHandler "proxy:unix:/var/run/php-fpm/php-fpm.sock|fcgi://localhost"
+        SetHandler "proxy:unix:/run/php-fpm/php-fpm.sock|fcgi://localhost"
     </If>
 </FilesMatch>
 ```
@@ -328,7 +311,6 @@ Damit Apache Lese- und Schreibrechte im künftigen Installationsverzeichnis von 
 <!-- cSpell:disable -->
 ```sh
 sudo chown apache:apache -R /var/www/html
-sudo chcon -t httpd_sys_content_t "/var/www/html/" -R
 sudo chcon -t httpd_sys_rw_content_t "/var/www/html/" -R
 ```
 <!-- cSpell:enable -->
