@@ -113,7 +113,7 @@ Wenn sich die Benutzer beispielsweise dadurch unterscheiden, dass sie zwei `obje
 
 ## Welche weiteren Attribute über die ldap.ini importiert werden können
 
-*   Der Beitrag [ldap.ini Konfiguration](../../automatisierung-und-integration/cli/configuration-files.md#beispiel-für-den-command-ldap-sync) sollte bekannt sein.
+*   Der Beitrag [ldap.ini Konfiguration](../../automatisierung-und-integration/cli/configuration-files.md#beispiel-für-den-befehl-ldap-sync) sollte bekannt sein.
 *   Es kann eine .ini Datei für den Import erstellt werden, mit dieser können weitere Attribute importiert werden.
 *   Die [Attributerweiterungen](../../administration/verwaltung/import-und-schnittstellen/ldap/attributerweiterung.md) sollte bereits Konfiguriert sein.
 *   Wir verwenden den .ini Abschnitt "additional"

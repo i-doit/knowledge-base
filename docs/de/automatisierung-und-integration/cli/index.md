@@ -182,9 +182,9 @@ Fügt einen neuen Lizenz-Token zur i-doit-Installation hinzu.
 
 Richten Sie in der i-doit-Weboberfläche einen dedizierten Benutzer für Automatisierungsaufgaben ein. Vergeben Sie nur die unbedingt notwendigen Berechtigungen (z. B. Import-Rechte) an diesen Benutzer, anstatt den globalen `admin`-Account zu verwenden.
 
-### Verwendung in Cronjobs
+### Verwendung in Crontab
 
-Die Befehle der i-doit console utility eignen sich hervorragend für die Automatisierung via Cronjobs.
+Die Befehle der i-doit console utility eignen sich hervorragend für die Automatisierung via Crontab. Zur Hilfe lassen sich im Internet sogenannte "Crontab generator" Seiten finden.
 
   * **Beispiel: Nächtlicher CSV-Import und Neuaufbau des Suchindex**
 

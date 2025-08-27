@@ -8,13 +8,13 @@ lang: de
 
 ## Voraussetzung
 
-Damit Benachrichtigungen überhaupt verschickt werden können, muss [SMTP Konfiguriert](../administration/verwaltung/import-und-schnittstellen/smtp-konfiguration-email.md) werden.
+Damit Benachrichtigungen überhaupt verschickt werden können, muss [SMTP Konfiguriert](../administration/verwaltung/import-und-schnittstellen/smtp-konfiguration-email.md) werden. Außerdem ist es notwendig die den [i-doit console utility](../automatisierung-und-integration/cli/index.md) Befehl regelmäßig auszuführen.
 
 ## Benachrichtigungen
 
 Das Benachrichtigungsmodul ist ein leistungsstarkes Werkzeug, um Ihre IT-Dokumentation proaktiv zu überwachen. Anstatt reaktiv auf Probleme zu stoßen, können Sie sich automatisch per E-Mail informieren lassen, wenn bestimmte Ereignisse eintreten. So verpassen Sie keine ablaufenden Verträge, Zertifikate oder Wartungsfristen mehr und können die Datenqualität nachhaltig sichern.
 
-In diesem Artikel beschreiben wir den gesamten Prozess von der Auswahl der passenden **[Benachrichtigungsart](#benachrichtigungsarten)** über die detaillierte **[Einrichtung](#einrichtung-einer-benachrichtigung)** und Anpassung der **[E-Mail-Vorlagen](#e-mail-vorlagen-anpassen)** bis hin zur automatisierten Ausführung über die **[i-doit console utility)](#automatisierung-per-cronjob-cli)**.
+In diesem Artikel beschreiben wir den gesamten Prozess von der Auswahl der passenden **[Benachrichtigungsart](#benachrichtigungsarten)** über die detaillierte **[Einrichtung](#einrichtung-einer-benachrichtigung)** und Anpassung der **[E-Mail-Vorlagen](#e-mail-vorlagen-anpassen)** bis hin zur automatisierten Ausführung über die **[i-doit console utility](#konfiguration-des-aufrufs-mit-cli)**.
 
 !!! info "Ein Praxisbeispiel für Benachrichtigungen und Eskalationsstufen finden Sie auch auf unserem [Blog](https://www.i-doit.com/blog/benachrichtigungen-und-eskalationsstufen-mit-i-doit/)"
 

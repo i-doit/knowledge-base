@@ -41,7 +41,7 @@ lang: de
 | [jdisc-create-server](#jdisc-create-server)                               | Erzeugt einen JDisc Server, basierend auf einer gegebenen Eingabe                                                                                                       |
 | [ldap-sync](#ldap-sync)                                                   | Personen und Personengruppen aus einem [LDAP-Verzeichnis oder Active Directory (AD)](../benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md) importieren |
 | [ldap-syncdn](#ldap-sync)                                                 | Synchronisiere aus einem LDAP/AD den Distinguished Name (DN) der Benutzer (siehe Kategorie LDAP)                                                                        |
-| [license-add](#license-add)                                               | Fügt eine Lizenz für i-doit hinzu (in Bearbeitung)                                                                                                                      |
+| [license-add](#license-add)                                              | Fügt eine Lizenz für i-doit hinzu (in Bearbeitung)                                                                                                                      |
 | [license-assign](#license-assign)                                         | Ordnet eine Hosting Lizenz einem Mandaten zu (in Bearbeitung)                                                                                                           |
 | [license-import](#license-import)                                         | Importiert Lizenzen vom i-doit Server (in Bearbeitung)                                                                                                                  |
 | [license-key](#license-key)                                               | Setzt einen Lizenzschlüssel für i-doit (in Bearbeitung)                                                                                                                 |
@@ -708,7 +708,7 @@ Listet alle Befehle auf. Format der Ausgabe kann geändert werden.
 sudo -u www-data php console.php list --format=txt
 ```
 
-**license-add**
+### license-add
 
 Fügt eine Lizenz für i-doit hinzu
 

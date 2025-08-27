@@ -121,7 +121,7 @@ Lösungen:
 *   oder verwenden Sie das folgende Hotfix, wenn das Neuladen nicht funktioniert
 
 !!! attention "Einwilligungserklärung"
-    Durch das Herunterladen eines Hotfix erklären Sie, dass Sie die [oben genannte Notiz](#update-guide-from-i-doit-174-to-119) vollständig gelesen und verstanden haben.
+    Durch das Herunterladen eines Hotfix erklären Sie, dass Sie die [oben genannte Notiz](#wichtige-informationen-bevor-sie-beginnen-important-information) vollständig gelesen und verstanden haben.
     [Klicken Sie hier für das Hotfix](../assets/downloads/upgrades-and-migrations/ID-5843_b4159eb.zip)
 
 Fahren Sie mit dem Update fort
