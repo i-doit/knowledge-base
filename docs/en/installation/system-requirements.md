@@ -33,8 +33,8 @@ For Windows, the [general Windows system requirements](https://learn.microsoft.c
 
 -   GNU/Linux in the 64bit variant (amd64) or Windows Server 2022 in the 64bit variant (amd64)
 -   Apache Webserver **2.4**
--   MariaDB 10.5 (deprecated), **10.6** (recommended), 10.11, 11.4 or MySQL 5.7 or 8.0 (recommended).
--   PHP 8.2, 8.3  (recommended) and 8.4.
+-   MariaDB 10.5 (deprecated), **10.6** (recommended), 10.11, 11.4 or MySQL 5.7 or 8.0 (recommended)
+-   PHP 8.2, **8.3** (recommended) and 8.4.
 -   PHP extensions: bcmath, ctype, curl, fileinfo, gd, imagick, json, ldap, mbstring, memcached, mysqli, mysqlnd, pgsql, session, soap, xml, xmlwriter, zip
 
 We recommend the usage of **Apache Webserver 2.4, PHP 8.3 and MariaDB 10.6**.
@@ -80,7 +80,7 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
     | ------------------------------ | ------------------------------------------------------------------- |
     | **Release**                    | 2025-09                                                             |
     | **Apache Webserver**           | 2.4                                                                 |
-    | **PHP**                        | {~~8.1 (deprecated)~~}<br>8.2<br>==8.3== (recommended)<br>{++8.4++} |
+    | **PHP**                        | {--8.1 (deprecated)--}<br>8.2<br>==8.3== (recommended)<br>{++8.4++} |
     | **MySQL**                      | 5.7<br>8.0 (recommended)                                            |
     | **MariaDB**                    | 10.5 (deprecated)<br>==10.6== (recommended)<br>10.11<br>11.4        |
     | **Can the update be skipped?** |                                                                     |
@@ -91,7 +91,7 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
     | ------------------------------ | --------------------------------------------------------------------------------------------- |
     | **Release**                    | 2025-06                                                                                       |
     | **Apache Webserver**           | 2.4                                                                                           |
-    | **PHP**                        | {++8.1 (deprecated)++}<br>{--8.2 (recommended)--}<br>{++==8.3== (recommended)++}              |
+    | **PHP**                        | 8.1 {++(deprecated)++}<br>{--8.2 (recommended)--}<br>{++==8.3== (recommended)++}              |
     | **MySQL**                      | 5.7<br>8.0                                                                                    |
     | **MariaDB**                    | {--10.4 (deprecated)--}<br>10.5 (deprecated)<br>==10.6== (recommended)<br>10.11<br>{++11.4++} |
     | **Can the update be skipped?** | Yes                                                                                           |

@@ -33,7 +33,7 @@ Für Windows sind die [generellen Windows Systemvoraussetzungen](https://learn.m
 
 -   GNU/Linux in der 64bit Variante (amd64) oder Windows Server 2022 in der 64bit Variante(amd64)
 -   Apache Webserver **2.4**
--   MariaDB 10.5 (veraltet), **10.6** (empfohlen), 10.11, 11.4 oder MySQL 5.7 oder 8.0 (empfohlen) _Wir empfehlen jedoch, MariaDB anstelle von MySQL zu verwenden._
+-   MariaDB 10.5 (veraltet), **10.6** (empfohlen), 10.11, 11.4 oder MySQL 5.7 oder 8.0 (empfohlen)
 -   PHP 8.2, **PHP 8.3** (empfohlen) oder PHP 8.4
 -   PHP Extensions: bcmath, ctype, curl, fileinfo, gd, imagick, json, ldap, mbstring, memcached, mysqli, mysqlnd, pgsql, session, soap, xml, xmlwriter, zip
 
@@ -80,7 +80,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | ------------------------------------------- | --------------------------------------------------------------- |
     | **Release**                                 | 2025-09                                                         |
     | **Apache Webserver**                        | 2.4                                                             |
-    | **PHP**                                     | {~~8.1 (veraltet)~~}<br>8.2<br>==8.3== (empfohlen)<br>{++8.4++} |
+    | **PHP**                                     | {--8.1 (veraltet)--}<br>8.2<br>==8.3== (empfohlen)<br>{++8.4++} |
     | **MySQL**                                   | 5.7<br>8.0 (empfohlen)                                          |
     | **MariaDB**                                 | 10.5 (veraltet)<br>==10.6== (empfohlen)<br>10.11<br>11.4        |
     | **Update Update kann übersprungen werden?** |                                                                 |
@@ -92,10 +92,10 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | ------------------------------------ | --------------------------------------------------------------------------------------- |
     | **Release**                          | 2025-06                                                                                 |
     | **Apache Webserver**                 | 2.4                                                                                     |
-    | **PHP**                              | {++8.1 (veraltet)++}<br>{--8.2 (empfohlen)--}<br>{++==8.3== (empfohlen)++}              |
+    | **PHP**                              | 8.1 {++(veraltet)++}<br>{--8.2 (empfohlen)--}<br>==8.3== {++(empfohlen)++}              |
     | **MySQL**                            | 5.7<br>8.0                                                                              |
     | **MariaDB**                          | {--10.4 (veraltet)--}<br>10.5 (veraltet)<br>==10.6== (empfohlen)<br>10.11<br>{++11.4++} |
-    | **Update kann übersprungen werden?** | ==Nein==                                                                                |
+    | **Update kann übersprungen werden?** | **Nein**                                                                                |
 
 === "34"
 
