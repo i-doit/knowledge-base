@@ -83,19 +83,6 @@ sudo systemctl restart firewalld.service
 
 Die installierten Pakete für Apache HTTP Server, PHP und MariaDB bringen bereits Konfigurationsdateien mit. **Es empfiehlt sich, abweichende Einstellungen in gesonderten Dateien zu speichern**, anstatt die vorhandenen Konfigurationsdateien anzupassen. Die Einstellungen der Standardkonfiguration werden durch die benutzerdefinierten ergänzt bzw. überschrieben.
 
-### PHP-FPM Konfiguration
-
-Die Default Konfiguration steht in /etc/php-fpm.d/www.conf. Eine spezifische Einstellung wird ergänzt:
-<!-- cSpell:disable -->
-```sh
-sudo nano /etc/php-fpm.d/i-doit.conf
-```
-
-```ini
-[www]
-security.limit_extensions = .php
-```
-<!-- cSpell:enable -->
 ### PHP Konfiguration
 
 Zunächst wird eine neue Datei erstellt und mit den nötigen Einstellungen befüllt:
@@ -291,12 +278,6 @@ DocumentRoot /var/www/html
 
 TimeOut 600
 ProxyTimeout 600
-
-<FilesMatch "\\.php$">
-    <If "-f %{REQUEST_FILENAME}">
-        SetHandler "proxy:unix:/run/php-fpm/php-fpm.sock|fcgi://localhost"
-    </If>
-</FilesMatch>
 ```
 <!-- cSpell:enable -->
 !!! note "i-doit liefert abweichende Apache-Einstellungen in Dateien mit dem Namen **.htaccess** mit. Diese müssen nach jedem Update geprüft und in der VirtualHost Konfiguration aktualisiert werden."
