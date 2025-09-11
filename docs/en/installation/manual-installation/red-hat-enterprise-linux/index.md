@@ -1,12 +1,12 @@
 ---
-title: Red Hat Enterprise Linux 9.5
-description: i-doit installation auf RHEL 9.5
+title: Red Hat Enterprise Linux 9.6
+description: i-doit installation auf RHEL 9.6
 icon: material/redhat
 status:
 lang: en
 ---
 
-!!! note "Tested with i-doit **34** and RHEL 9.5"
+!!! note "Tested with i-doit **34** and RHEL 9.6"
 
 In this article, we explain in a few steps which packages need to be installed and configured.
 
@@ -31,7 +31,7 @@ uname -m
 On a system that is up-to-date
 
 -   the **Apache** HTTP Server 2.4,
--   the script language **PHP-FPM** 8.2,
+-   the script language **PHP-FPM** 8.3,
 -   the database management system **MariaDB** 10.11 and
 -   the caching server **memcached**
 
@@ -44,8 +44,8 @@ sudo dnf update
 Install PHP 8.2 and MariaDB via module stream:
 
 ```sh
-sudo dnf module enable php:8.2 mariadb:10.11 -y
-sudo dnf module install php:8.2 mariadb:10.11 -y
+sudo dnf module enable php:8.3 mariadb:10.11 -y
+sudo dnf module install php:8.3 mariadb:10.11 -y
 ```
 
 Further packages are installed afterwards:
@@ -81,35 +81,6 @@ sudo systemctl restart firewalld.service
 
 The installed packages for Apache HTTP Server, PHP and MariaDB already include configuration files. **It is recommended to save deviating settings in separate files** instead of adapting the existing configuration files. The settings of the standard configuration are supplemented or overwritten by the user-defined settings.
 
-### PHP-FPM Configuration
-
-First, the old configuration is deactivated by renaming it:
-
-```sh
-sudo mv /etc/php-fpm.d/www.conf{,.bak}
-```
-
-and then create a new file and fill it with the settings:
-<!-- cSpell:disable -->
-```sh
-sudo nano /etc/php-fpm.d/i-doit.conf
-```
-
-```ini
-[i-doit]
-listen = /var/run/php-fpm/php-fpm.sock
-user = apache
-group = apache
-listen.owner = apache
-listen.group = apache
-pm = dynamic
-pm.max_children = 50
-pm.start_servers = 5
-pm.min_spare_servers = 5
-pm.max_spare_servers = 35
-security.limit_extensions = .php
-```
-<!-- cSpell:enable -->
 ### PHP Configuration
 
 First, a new file is created and filled with the necessary settings:
@@ -152,10 +123,11 @@ The **date.timezone** parameter should be adjusted to the local time zone (see [
 
 ### Apache HTTP Server configuration
 
-The Welcome Page is deactivated by renaming it:
+The Welcome Page is renamed and replaced with an empty file:
 
 ```sh
 sudo mv /etc/httpd/conf.d/welcome.conf{,.bak}
+sudo touch /etc/httpd/conf.d/welcome.conf
 ```
 
 Now a new virtual host is created for i-doit:
@@ -304,12 +276,6 @@ DocumentRoot /var/www/html/i-doit
 
 TimeOut 600
 ProxyTimeout 600
-
-<FilesMatch "\\.php$">
-    <If "-f %{REQUEST_FILENAME}">
-        SetHandler "proxy:unix:/var/run/php-fpm/php-fpm.sock|fcgi://localhost"
-    </If>
-</FilesMatch>
 ```
 <!-- cSpell:enable -->
 !!! note "i-doit provides different Apache settings in files with the name **.htaccess**. These must be checked after each update and updated in the VirtualHost configuration."
@@ -324,7 +290,6 @@ In order for Apache to have read and write permissions in the future installatio
 <!-- cSpell:disable -->
 ```sh
 sudo chown apache:apache -R /var/www/html
-sudo chcon -t httpd_sys_content_t "/var/www/html/" -R
 sudo chcon -t httpd_sys_rw_content_t "/var/www/html/" -R
 ```
 <!-- cSpell:enable -->
