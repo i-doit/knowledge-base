@@ -50,7 +50,7 @@ Using the "Report" button it is possible to include result lists from previously
 
 The results list in the document always corresponds to the report output when the document was created. If it is expected that the results of the report have changed/updated, a new revision of the document must be created based on the template.
 
-Additionally, it is possible to include [variable reports](../../evaluation/variable-reports.md) in the document. Here, the selected placeholders correspond to the main object and dynamically output the contents for the main object.
+Additionally, it is possible to include [variable reports](../../use-cases/variable-reports.md) in the document. Here, the selected placeholders correspond to the main object and dynamically output the contents for the main object.
 
 Furthermore, formatting options can be used to optionally add the title and the description of the report in the document. Furthermore, column headers, font and background color, grid and the rows of the table can be defined via the respective options.
 

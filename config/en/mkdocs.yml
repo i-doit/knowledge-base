@@ -354,7 +354,6 @@ nav:
   - Evaluation:
       - evaluation/index.md
       - Report manager: evaluation/report-manager.md
-      - Variable reports: evaluation/variable-reports.md
       - Notifications: evaluation/notifications.md
       - CMDB-Explorer:
           - evaluation/cmdb-explorer/index.md
@@ -522,6 +521,7 @@ nav:
       - Mapping of customer sites: use-cases/mapping-of-customer-sites.md
       - Switch Stacking: use-cases/switch-stacking.md
       - Upload and link of files: use-cases/upload-and-link-files.md
+      - Variable reports: use-cases/variable-reports.md
       - VM Provisioning: use-cases/vm-provisioning.md
       - Workplaces: use-cases/wokplaces.md
   - i-doit Add-ons:
