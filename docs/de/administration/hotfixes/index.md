@@ -51,6 +51,8 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 [Documents_1.10_hotfix_DOKU-502_f8a6ec2.zip :material-file-download:](../../assets/downloads/hotfixes/documents/Documents_1.10_hotfix_DOKU-502_f8a6ec2.zip){ .md-button .md-button--primary }
 
+* * *
+
 ## Replacement Add-on
 
 ### TypeErrors when selecting objects to swap (SWAPCI-47)
