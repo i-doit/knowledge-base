@@ -6,8 +6,7 @@ status:
 lang: de
 ---
 
-!!! warning "Wichtiger Hinweis"
-    Bitte erstellen Sie **vor jeder Änderung an einer Schnittstelle oder einem Import** ein vollständiges Backup. Sollte das Ergebnis nicht zufriedenstellend sein, kann dieses problemlos wiederhergestellt werden.
+!!! info "Seit Version 36 gibt es das [JDisc Connector Add-on](../../i-doit-add-ons/jdisc-connector/index.md)"
 
 [JDisc Discovery](http://www.jdisc.com/de/) ist ein Discovery-Tool zur automatischen Netzwerk-Inventarisierung. Es erkennt Hardware, Betriebssysteme, Software, Netzwerke, Virtualisierungs- und Cluster-Umgebungen. Ein Praxisbeispiel finden Sie auf unserem [Blog](https://www.i-doit.com/blog/it-service-management-mit-dem-discovery-tool-jdisc-und-i-doit/).
 

@@ -4,6 +4,8 @@ description: i-doit installation auf RHEL 8.10
 icon: material/redhat
 status:
 lang: de
+search:
+  exclude: true
 ---
 
 # Red Hat Enterprise Linux 8.10

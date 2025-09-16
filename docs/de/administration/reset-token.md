@@ -2,7 +2,7 @@
 title: Den Lizenz Token finden oder zurücksetzen
 description: Wo finde ich meinen Lizenztoken?
 icon:
-status: new
+status:
 lang: de
 note: linked in A&S Center
 ---

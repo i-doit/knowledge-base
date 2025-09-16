@@ -1,7 +1,7 @@
 ---
 title: i-doit Add-ons
 description: i-doit Add-ons
-#icon: material/
+icon: add-ons
 status:
 lang: en
 ---
@@ -11,34 +11,7 @@ The [IT documentation](../basics/structure-of-the-it-documentation.md) and the [
 !!! info ""Modules" and "Extensions""
     The previously called "Modules" and "Extensions" were renamed "Add-ons" in March 2017. However, in some places in the software you can still find the old names which will replaced gradually with new releases.
 
-## List of Available Add-ons
-
-| Add-on                                                                            | Subject to license? |
-| --------------------------------------------------------------------------------- | ------------------- |
-| **[Add-on Packager](./add-on-packager.md)**                                       | no                  |
-| **[Active Directory Documentation](active-directory-documentation.md)**           | no                  |
-| **[Analysis](./analysis.md)**                                                     | yes                 |
-| **[API](./api/index.md)**                                                         | no                  |
-| **[Cabling](./cabling.md)**                                                       | no                  |
-| **[Checkmk](./checkmk.md)**                                                       | no                  |
-| **[Checkmk2](./checkmk2/index.md)**                                               | yes                 |
-| **[DNS Documentation](dns-documentation.md)**                                     | no                  |
-| **[Documents](./documents/index.md)**                                             | yes                 |
-| **[Events](./events.md)**                                                         | no                  |
-| **[Floorplan](./floorplan.md)**                                                   | no                  |
-| **[Flows](flows/index.md)**                                                       | yes/no              |
-| **[Forms](forms/index.md)**                                                       | yes                 |
-| **HomeOffice ([GER](https://www.i-doit.com/blog/i-doit-home-office-add-on/))**    | no                  |
-| **[i-diary](./i-diary/index.md)**                                                 | no                  |
-| **[ISMS aka ISO27001](./isms.md)**                                                | yes                 |
-| **[Maintenance](./maintenance.md)**                                               | no                  |
-| **[Nagios](./nagios.md)**                                                         | no                  |
-| **[Relocate-CI](./relocate-ci.md)**                                               | no                  |
-| **[Replacement](./replacement.md)**                                               | no                  |
-| **Report Special ([GER](https://www.i-doit.com/blog/i-doit-reporting-special/))** | no                  |
-| **[VIVA](viva/index.md)**                                                         | yes                 |
-| **[VIVA2 aka IT-Grundschutz](viva2.md)**                                          | yes                 |
-| **[Workflow](./workflow.md)**                                                     | no                  |
+!!! "All available add-ons are listed at [https://www.i-doit.com/en/products/add-ons](https://www.i-doit.com/en/products/add-ons){:target="_blank"}"
 
 Beside these add-ons there are many others which are provided by our partners or external developers. You can find a detailed list at the i-doit website [i-doit.com under **Product → Add-ons**](https://www.i-doit.com/en/i-doit/add-ons/).
 

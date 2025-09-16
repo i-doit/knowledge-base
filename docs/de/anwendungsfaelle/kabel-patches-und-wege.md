@@ -59,32 +59,32 @@ Der Kategorie-Ordner **Kabelverbindung** enthält die Kategorie **Kabel** und wi
 
 Die wesentlichen Eigenschaften eines Kabels werden in der Kategorie **Kabelverbindung → Kabel** festgehalten:
 
-| Attribut | Beschreibung |
-| --- | --- |
-| **Art des Kabels** | Spezifikation des Kabels, beispielsweise "CAT7" oder "LWL" |
-| **Länge in CM** | Länge des Kabels - nicht nur in Zentimetern |
-| **Farbe** | Farbe der äußeren Ummantlung |
-| **Belegung** | Wie viele Adern/Fasern enthält das Kabel? |
-| **Maximale Anzahl an Fasern/Adern** | Wie viele Adern/Fasern dürfen maximal genutzt werden? |
+| Attribut                            | Beschreibung                                               |
+| ----------------------------------- | ---------------------------------------------------------- |
+| **Art des Kabels**                  | Spezifikation des Kabels, beispielsweise "CAT7" oder "LWL" |
+| **Länge in CM**                     | Länge des Kabels - nicht nur in Zentimetern                |
+| **Farbe**                           | Farbe der äußeren Ummantlung                               |
+| **Belegung**                        | Wie viele Adern/Fasern enthält das Kabel?                  |
+| **Maximale Anzahl an Fasern/Adern** | Wie viele Adern/Fasern dürfen maximal genutzt werden?      |
 
 ### Kategorie **Faser/Ader**
 
 Wer bis ins kleinste Detail dokumentieren möchte/muss, wird die Kategorie Faser/Ader lieben. Für jede Faser eines Glasfaserkabels bzw. jede Ader eines Kupferkabels können weitere Eigenschaften hinterlegt werden:
 
-| ### Attribut | ### Beschreibung |
-| --- | --- |
-| **Label** | Bezeichnung |
+| ### Attribut  | ### Beschreibung                |
+| ------------- | ------------------------------- |
+| **Label**     | Bezeichnung                     |
 | **Kategorie** | Relevant für LWL (OM1-4, OS1-2) |
-| **Farbe** | Wellenlänge |
-| **Dämpfung** | in dB |
-| **RX** | Leitung zum Empfang von Daten |
-| **TX** | Leitung zum Senden von Daten |
+| **Farbe**     | Wellenlänge                     |
+| **Dämpfung**  | in dB                           |
+| **RX**        | Leitung zum Empfang von Daten   |
+| **TX**        | Leitung zum Senden von Daten    |
 
 ## Objekttyp **Patchfeld**
 
 Patchpanel werden in i-doit als Objekte vom Typ **Patchfeld** dokumentiert. Dieser passiven Komponente ist typischerweise der Kategorie-Ordner **Verkabelung** zu geordnet. In der Kategorie **Verkabelung → Anschlüsse** werden die Ports definiert: Ein **Eingang** repräsentiert den Netzwerk-Port. Ein **Ausgang** repräsentiert das aufgelegte Kabel. Ein- und Ausgang werden miteinander verbunden.
 
-Zum schnellen Verbinden von Patchfeldern eignet sich der [Verkabelungsbrowser](#Verkabelungsbrowser).
+Zum schnellen Verbinden von Patchfeldern eignet sich der [Verkabelungsbrowser](#verkabelungsbrowser).
 
 ## Verkabelungsbrowser
 
@@ -114,12 +114,12 @@ Verkabelungswege können in i-doit über den Import einer Datei im CSV-Format er
 
 Folgende Optionen stehen zur Verfügung:
 
-| Option | Beschreibung |
-| --- | --- |
-| **Verkabelungsart** | In welcher Kategorie sollen Einträge erstellt werden? Zur Auswahl stehen:<br><br>-   **Anschlüsse** (siehe Kategorie **Verkabelung → Anschlüsse**)<br>-   **FC-Ports** (siehe Kategorie **Speichernetze → FC-Port**)<br>-   **Ports** (siehe Kategorie **Netzwerk → Port**)<br>-   **Schnittstelle** (siehe Kategorie **Verkabelung → Schnittstelle**)<br><br>Die Kategorie wird nur beim ersten und beim letzten Objekt des jeweiligen Verkabelungsweges berücksichtigt. Bei allen anderen Zwischen-Objekten werden Einträge in der Kategorie **Verkabelung →** **Anschlüsse** importiert. |
-| **Anschlussart** | Um welchen Anschluss handelt es sich? Zur Auswahl stehen alle Einträge des Attributs **Anschlussart** in der Kategorie **Verkabelung → Anschlüsse**. Diese Liste kann unter **Verwaltung → Vordefinierte Inhalte → Dialog-Admin → Anschlüsse: Anschlussart** angepasst werden. |
-| **Nicht existierende Zwischenobjekte automatisch erzeugen** | Wird diese Option aktiviert, können nicht bereits dokumentierte Objekte zwischen Anfangs- und End-Objekt beim Import erzeugt werden. |
-| **Objekttyp des automatisch erzeugten Zwischenobjekts** | Ist die oben genannte Option aktiv, muss zusätzlich definiert werden, welchem Objekttyp neu erstellte Objekte zugeordnet werden sollen. |
+| Option                                                      | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Verkabelungsart**                                         | In welcher Kategorie sollen Einträge erstellt werden? Zur Auswahl stehen:<br><br>-   **Anschlüsse** (siehe Kategorie **Verkabelung → Anschlüsse**)<br>-   **FC-Ports** (siehe Kategorie **Speichernetze → FC-Port**)<br>-   **Ports** (siehe Kategorie **Netzwerk → Port**)<br>-   **Schnittstelle** (siehe Kategorie **Verkabelung → Schnittstelle**)<br><br>Die Kategorie wird nur beim ersten und beim letzten Objekt des jeweiligen Verkabelungsweges berücksichtigt. Bei allen anderen Zwischen-Objekten werden Einträge in der Kategorie **Verkabelung →** **Anschlüsse** importiert. |
+| **Anschlussart**                                            | Um welchen Anschluss handelt es sich? Zur Auswahl stehen alle Einträge des Attributs **Anschlussart** in der Kategorie **Verkabelung → Anschlüsse**. Diese Liste kann unter **Verwaltung → Vordefinierte Inhalte → Dialog-Admin → Anschlüsse: Anschlussart** angepasst werden.                                                                                                                                                                                                                                                                                                              |
+| **Nicht existierende Zwischenobjekte automatisch erzeugen** | Wird diese Option aktiviert, können nicht bereits dokumentierte Objekte zwischen Anfangs- und End-Objekt beim Import erzeugt werden.                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| **Objekttyp des automatisch erzeugten Zwischenobjekts**     | Ist die oben genannte Option aktiv, muss zusätzlich definiert werden, welchem Objekttyp neu erstellte Objekte zugeordnet werden sollen.                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 
 Über den Button **CSV-Datei einlesen** wird eine zuvor ausgewählte Datei hochgeladen und analysiert. Das Ergebnis befindet sich im Tab **Inhalt**.
 

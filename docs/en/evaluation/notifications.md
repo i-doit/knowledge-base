@@ -14,7 +14,7 @@ For notifications to be sent at all, [SMTP must be configured](../system-adminis
 
 The Notifications module is a powerful tool to proactively monitor your IT documentation. Instead of reacting to problems, you can be automatically informed by email when certain events occur. This way, you will no longer miss expiring contracts, certificates, or maintenance periods and can sustainably ensure data quality.
 
-In this article, we describe the entire process from selecting the appropriate **[Notification Type](#notification-types)**, to the detailed **[Setup](#setting-up-a-notification)** and customization of **[Email Templates](#customizing-email-templates)**, up to the automated execution via the **[i-doit console utility](#automation-via-cronjob-cli)**.
+In this article, we describe the entire process from selecting the appropriate **[Notification Type](#notification-types)**, to the detailed **[Setup](#setting-up-a-notification)** and customization of **[Email Templates](#customizing-email-templates)**, up to the automated execution via the **[i-doit console utility](#configuration-of-the-call-with-the-cli)**.
 
 !!! info "You can find a practical example of notifications and escalation levels on our [Blog](https://www.i-doit.com/blog/benachrichtigungen-und-eskalationsstufen-mit-i-doit/)"
 

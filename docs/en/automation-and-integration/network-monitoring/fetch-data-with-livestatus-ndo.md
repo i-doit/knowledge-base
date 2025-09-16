@@ -7,28 +7,26 @@ For a target/actual-comparison between the target documentation in i-doit and th
 The interfaces
 
 -   [NDOUtils](https://exchange.nagios.org/directory/Addons/Database-Backends/NDOUtils/details) (or IDOUtils) and
--   [MK Livestatus](https://mathias-kettner.de/checkmk_livestatus.html)
+-   [checkmk Livestatus](https://docs.checkmk.com/latest/de/livestatus.html)
 
-for [Nagios](https://www.nagios.org/), [Check\_MK](http://mathias-kettner.com/check_mk.html), [Icinga](https://www.icinga.org/) and all compatible forks are supported.
+for [Nagios](https://www.nagios.org/), [checkmk](https://docs.checkmk.com/latest/de/livestatus.html), [Icinga](https://www.icinga.org/) and all compatible forks are supported.
 
 !!! success "Recommendation"
-    MK Livestatus offers a highly performant connection to the Network Monitoring. Thus it is to be preferred over NDOUtils.
+    checkmk Livestatus offers a highly performant connection to the Network Monitoring. Thus it is to be preferred over NDOUtils.
 
 ## Basic Configuration
 
-A running NDOUtils or MK Livestatus are required on the monitoring system. The access to one of the interfaces has to be configured in i-doit at **Administration → Interfaces and interfaces → Monitoring → Livestatus/NDO**.
+A running NDOUtils or checkmk Livestatus are required on the monitoring system. The access to one of the interfaces has to be configured in i-doit at **Administration → Interfaces and interfaces → Monitoring → Livestatus/NDO**.
 
 [![Livestatus/NDO](../../assets/images/en/automation-and-integration/network-monitoring/fetch-data-with-livestatus/1-fdwls.png)](../../assets/images/en/automation-and-integration/network-monitoring/fetch-data-with-livestatus/1-fdwls.png)
 
 A TCP/UNIX socket or a database configuration with corresponding access permissions has to be set depending on the type of interface.
 
-Example for NDOUtils:
+!!! note "Starting with i-doit version 36, Livestatus supports TLS"
+
+Example for Livestatus:
 
 [![NDOUtils](../../assets/images/en/automation-and-integration/network-monitoring/fetch-data-with-livestatus/2-fdwls.png)](../../assets/images/en/automation-and-integration/network-monitoring/fetch-data-with-livestatus/2-fdwls.png)
-
-Example for MK Livestatus:
-
-[![Livestatus](../../assets/images/en/automation-and-integration/network-monitoring/fetch-data-with-livestatus/3-fdwls.png)](../../assets/images/en/automation-and-integration/network-monitoring/fetch-data-with-livestatus/3-fdwls.png)
 
 ## Categories
 

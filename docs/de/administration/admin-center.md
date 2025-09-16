@@ -64,7 +64,7 @@ Bei einem Klick auf den Bereich **Support** wird das <help.i-doit.com></https.he
 
 ## System settings
 
-Hier finden Sie die system bezogenen Einstellungen. Auch finden Sie hier den Link zu den [Experteneinstellungen](#expert-settings-system-related) auf der rechten Seite.
+Hier finden Sie die system bezogenen Einstellungen. Auch finden Sie hier den Link zu den [Expert settings](#expert-settings-system-bezogen) auf der rechten Seite.
 
 ### Login
 
@@ -78,7 +78,7 @@ Hier finden Sie die system bezogenen Einstellungen. Auch finden Sie hier den Lin
 | ---------- | ------------ |
 | LDAP Debug | Ja oder Nein |
 
-Einstellung kann auch via [Expert settings](#expert-settings-system-related) geändert werden. Die Option heißt `ldap.debug`.
+Einstellung kann auch via [Expert settings](#expert-settings-system-bezogen) geändert werden. Die Option heißt `ldap.debug`.
 
 ### SMTP
 

@@ -2,7 +2,7 @@
 title: Zwei-Faktor-Authentisierung (2FA)
 description: Zwei-Faktor-Authentisierungsmöglichkeiten für i-doit
 icon: material/two-factor-authentication
-status: new
+status:
 lang: de
 ---
 

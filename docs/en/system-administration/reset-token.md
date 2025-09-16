@@ -2,7 +2,7 @@
 title: Find or reset your license token
 description: How to get your license token?
 icon:
-status: new
+status:
 lang: en
 note: linked in A&S Center
 ---

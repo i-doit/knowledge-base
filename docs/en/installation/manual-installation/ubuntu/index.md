@@ -2,7 +2,7 @@
 title: Ubuntu 24.04.1 GNU/Linux
 description: i-doit installation auf Ubuntu 24.04.1
 icon: material/ubuntu
-#status: new
+#status:
 lang: de
 ---
 
