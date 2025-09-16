@@ -4,6 +4,8 @@ description: i-doit installation auf Debian 11
 icon: material/debian
 #status: updated
 lang: de
+search:
+  exclude: true
 ---
 
 Welche Pakete zu installieren und zu konfigurieren sind, erklären wir in wenigen Schritten in diesem Artikel.

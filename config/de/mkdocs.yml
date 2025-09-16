@@ -171,6 +171,7 @@ nav:
           - Release Notes 1.7: versionshistorie/release-notes/release-notes-1.7.md
       - Changelogs:
           - versionshistorie/changelogs/index.md
+          - Changelog 36: versionshistorie/changelogs/changelog-36.md
           - Changelog 35: versionshistorie/changelogs/changelog-35.md
           - Changelog 34: versionshistorie/changelogs/changelog-34.md
           - Changelog 33: versionshistorie/changelogs/changelog-33.md
@@ -526,6 +527,7 @@ nav:
           - i-doit 1.13.2 & 1.14 Login im Admin-Center nicht möglich: administration/hotfixes/i-doit-1.13.2-1.14-login-im-admin-center-nicht-moeglich.md
           - Hotfix Archiv:
               - administration/hotfixes/hotfix-archiv/index.md
+              - Version 35: administration/hotfixes/hotfix-archiv/v35.md
               - Version 34: administration/hotfixes/hotfix-archiv/v34.md
               - Version 33: administration/hotfixes/hotfix-archiv/v33.md
               - Version 32: administration/hotfixes/hotfix-archiv/v32.md
@@ -641,6 +643,7 @@ nav:
           - Verwendung der Forms API: i-doit-add-ons/forms/verwenden-der-forms-api.md
       - i-diary: i-doit-add-ons/i-diary.md
       - i-doit QR-Code Printer: i-doit-add-ons/i-doit-qr-code-printer.md
+      - JDisc Connector: i-doit-add-ons/jdisc-connector/index.md
       - ISMS: i-doit-add-ons/isms.md
       - Maintenance: i-doit-add-ons/maintenance.md
       - Nagios: i-doit-add-ons/nagios.md

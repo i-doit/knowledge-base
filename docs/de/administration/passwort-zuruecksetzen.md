@@ -2,7 +2,7 @@
 title: Passwort zurücksetzen
 description: Passwort zurücksetzen
 icon:
-status: new
+status:
 lang: de
 ---
 

@@ -2,7 +2,7 @@
 title: external
 description: cmdb.external endpunkt
 icon: material/api
-status: new
+status:
 lang: de
 ---
 
@@ -126,22 +126,22 @@ Und ganz wichtig:
 
 !!! note "Durch die Verwendung der Push-API muss man nicht auf generelle CMDB-Strukturen verzichten, wie zum Beispiel das Rechtesystem, Validierungsregel oder das Logbuch. Alles greift wie bisher!"
 
-| Strategy | Eintrag existiert single-value | Eintrag existiert multi-value | Eintrag existiert nicht single-value | Eintrag existiert nicht multi-value |
-| --- | --- | --- | --- | --- |
-| **create** | :material-close: wird übersprungen | :material-close: wird übersprungen | :material-plus: wird erstellt | :material-plus: wird erstellt |
-| **update** | :material-pencil: wird aktualisiert | :material-pencil: wird aktualisiert | :material-plus: wird erstellt | :material-plus: wird erstellt |
-| **overwrite** | :material-pencil: wird aktualisiert | :material-pencil: wird aktualisiert | :material-plus: wird erstellt | :material-plus: wird erstellt |
+| Strategy      | Eintrag existiert single-value      | Eintrag existiert multi-value       | Eintrag existiert nicht single-value | Eintrag existiert nicht multi-value |
+| ------------- | ----------------------------------- | ----------------------------------- | ------------------------------------ | ----------------------------------- |
+| **create**    | :material-close: wird übersprungen  | :material-close: wird übersprungen  | :material-plus: wird erstellt        | :material-plus: wird erstellt       |
+| **update**    | :material-pencil: wird aktualisiert | :material-pencil: wird aktualisiert | :material-plus: wird erstellt        | :material-plus: wird erstellt       |
+| **overwrite** | :material-pencil: wird aktualisiert | :material-pencil: wird aktualisiert | :material-plus: wird erstellt        | :material-plus: wird erstellt       |
 
 !!! warning "**overwrite** löscht alle multi-value Einträge aus i-doit, die nicht im Request enthalten sind. Bestehende werden aktualisiert oder erstellt."
 
 ### Request parameters
 
-| Key | JSON data type | Required | Description |
-| --- | --- | --- | --- |
-| **extType** | String | Ja | Datenquelle, zum Beispiel: **datenquelle-1** |
-| **extId** | String | Ja | Objekt, zum Beispiel: **windows-server100** |
-| **class** | String | Ja | Objekttyp, zum Beispiel: **C__OBJTYPE__SERVER** |
-| **title** | String | Ja | Objekt Bezeichnung, zum Beispiel: **Server 100** |
+| Key         | JSON data type | Required | Description                                      |
+| ----------- | -------------- | -------- | ------------------------------------------------ |
+| **extType** | String         | Ja       | Datenquelle, zum Beispiel: **datenquelle-1**     |
+| **extId**   | String         | Ja       | Objekt, zum Beispiel: **windows-server100**      |
+| **class**   | String         | Ja       | Objekttyp, zum Beispiel: **C__OBJTYPE__SERVER**  |
+| **title**   | String         | Ja       | Objekt Bezeichnung, zum Beispiel: **Server 100** |
 
 ### Example
 
@@ -366,19 +366,19 @@ Und ganz wichtig:
 Lesen von CMDB-Daten basierend auf dem "External Identifier".
 Beim Pull bestimmt der External Identifier die abgefragten Daten zum Beispiel:
 
-| extType | extId | Aktion |
-| --- | --- | --- |
-| datenquelle-1 | null | Liest alle Objekte und jegliche Kategoriedaten |
-| datenquelle-1 | windows-server100 | Liest windows100 und jegliche Kategoriedaten |
-| datenquelle-1 / windows-server100 / C__CATG__CPU | null | Liest windows100 und alle CPU-Einträge |
-| datenquelle-1 / windows-server100 / C__CATG__CPU | intel-1 | Liest windows100 und nur den CPU-Eintrag intel-1 |
+| extType                                          | extId             | Aktion                                           |
+| ------------------------------------------------ | ----------------- | ------------------------------------------------ |
+| datenquelle-1                                    | null              | Liest alle Objekte und jegliche Kategoriedaten   |
+| datenquelle-1                                    | windows-server100 | Liest windows100 und jegliche Kategoriedaten     |
+| datenquelle-1 / windows-server100 / C__CATG__CPU | null              | Liest windows100 und alle CPU-Einträge           |
+| datenquelle-1 / windows-server100 / C__CATG__CPU | intel-1           | Liest windows100 und nur den CPU-Eintrag intel-1 |
 
 ### Request parameters
 
-| Key | JSON data type | Required | Description |
-| --- | --- | --- | --- |
-| **extType** | String | Ja | Datenquelle, zum Beispiel: **datenquelle-1** |
-| **extId** | String | Ja | Objekt, zum Beispiel: **windows-server100** |
+| Key         | JSON data type | Required | Description                                  |
+| ----------- | -------------- | -------- | -------------------------------------------- |
+| **extType** | String         | Ja       | Datenquelle, zum Beispiel: **datenquelle-1** |
+| **extId**   | String         | Ja       | Objekt, zum Beispiel: **windows-server100**  |
 
 ### Example
 

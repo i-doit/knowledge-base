@@ -2,7 +2,7 @@
 title: i-doit 33 update and Flows installation
 description: i-doit 33 update and Flows installation
 icon:
-status: new
+status:
 lang: en
 ---
 
