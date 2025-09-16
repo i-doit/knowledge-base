@@ -172,6 +172,7 @@ nav:
           - Release notes 1.7: version-history/release-notes/release-notes-1.7.md
       - Changelogs:
           - version-history/changelogs/index.md
+          - Changelog 36: version-history/changelogs/changelog-36.md
           - Changelog 35: version-history/changelogs/changelog-35.md
           - Changelog 34: version-history/changelogs/changelog-34.md
           - Changelog 33: version-history/changelogs/changelog-33.md
@@ -385,6 +386,7 @@ nav:
       - i-doit console utility:
           - automation-and-integration/cli/index.md
           - Configuration files: automation-and-integration/cli/configuration-files.md
+          - Commands and options: automation-and-integration/cli/commands-and-options.md
       - Network Monitoring:
           - automation-and-integration/network-monitoring/index.md
           - Fetch Data with Livestatus/ NDOUtils: automation-and-integration/network-monitoring/fetch-data-with-livestatus-ndo.md
@@ -616,7 +618,7 @@ nav:
           - i-diary Determine the host: i-doit-add-ons/i-diary/determine-the-host.md
       - i-doit QR-Code Printer: i-doit-add-ons/i-doit-qr-code-printer.md
       - ISMS: i-doit-add-ons/isms.md
-        JDisc Connector: i-doit-add-ons/jdisc-connector/index.md
+      - JDisc Connector: i-doit-add-ons/jdisc-connector/index.md
       - Maintenance: i-doit-add-ons/maintenance.md
       - Nagios: i-doit-add-ons/nagios.md
       - OCS Inventory NG: i-doit-add-ons/ocs-inventory-ng.md
