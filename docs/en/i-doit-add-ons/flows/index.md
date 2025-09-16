@@ -72,7 +72,7 @@ Triggers determine when a flow is executed. Only one trigger per flow is possibl
     === "Time based"
         The action is executed as soon as the date and time are reached. It can be repeated regularly.
     === "Button"
-        The action is executed as soon as the button is clicked. The button is displayed in the action bar of the object if the conditions are met.
+        The action is executed as soon as the button is clicked. It is displayed in the action bar of the object when the corresponding conditions are met. Buttons can also be grouped to execute multiple flows with a single click. In addition, buttons can be assigned icons.
     === "Object event"
         The action is executed when a specific CMDB status is set. It can also be filtered according to specific object types.
     === "Category event"
@@ -105,7 +105,9 @@ At least one action must be defined.
         The action creates a new object. It is possible to store attributes for categories.
     === "Update object"
         The action updates attributes for existing objects.
-    == "Call command"
+    === "Rank object"
+        The action changes the object condition. For example, from "Archived" to "Deleted".
+    === "Call command"
         Call a i-doit console command. More infos for [Call command](actions/call-command.md).
 
 ## Logs
