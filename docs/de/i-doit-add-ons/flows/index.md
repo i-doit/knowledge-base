@@ -85,7 +85,7 @@ Trigger bestimmen wann ein Flow ausgeführt wird. Es ist nur ein Trigger pro Flo
     === "Zeitbasiert"
         Die Aktion wird ausgeführt, sobald Datum und Uhrzeit erreicht sind. Sie kann regelmäßig wiederholt werden.
     === "Button"
-        Die Aktion wird ausgeführt, sobald der Button angeklickt wird. Der Button wird in der Aktionsleiste des Objektes angezeigt, wenn die Bedingungen erfüllt sind. Buttons lassen sich außerdem gruppieren um mehrere Flows mit einem Klick auszuführen.
+        Die Aktion wird ausgeführt, sobald der Button angeklickt wird. Dieser wird in der Aktionsleiste des Objekts angezeigt, wenn die entsprechenden Bedingungen erfüllt sind. Buttons lassen sich außerdem gruppieren, um mehrere Flows mit einem Klick auszuführen. Darüber hinaus können Buttons mit Icons versehen werden.
     === "Objekt Ereignis"
         Die Aktion wird ausgeführt, wenn ein bestimmter CMDB-Status gesetzt wird. Es lässt sich auch nach bestimmten Objekttypen filtern. Wird **NICHT** ausgelöst, wenn Kategoriedaten durch Importe oder API-Interaktion geändert werden.
     === "Kategorie Ereignis"
