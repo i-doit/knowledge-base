@@ -55,7 +55,7 @@ The integration of JDisc Discovery into i-doit aims to combine the strengths of 
 2. Test connection
 3. Create [Sync Profile](#sync-profile)
 4. Perform synchronization
-5. Check [Status and Logs](#recent-logs)
+5. Check [Status and Logs](#last-logs)
 
 * * *
 

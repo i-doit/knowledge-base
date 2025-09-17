@@ -22,7 +22,7 @@ The **License Token** will be sent by e-mail. The **Offline License** can be acc
 -   [How do I activate the i-doit eval/trial if i-doit has **access to the Internet**?](#how-do-i-activate-the-i-doit-evaltrial-online)
 -   [How do I activate the i-doit eval/trial if i-doit has **no access to the Internet**?](#how-do-i-activate-the-i-doit-evaltrial-offline)
 
--   [How do I change or update the i-doit license token if i-doit **has access to the Internet**?](#how-do-i-change-or-update-the-i-doit-License-token-online)
+-   [How do I change or update the i-doit license token if i-doit **has access to the Internet**?](#how-do-i-change-or-update-the-i-doit-license-token-online)
 -   [How do I change or update the i-doit license token if i-doit **has no access to the Internet**?](#how-do-i-change-or-update-the-i-doit-license-token-offline)
 
 -   [Frequently asked questions](#faq)
@@ -164,4 +164,3 @@ Open the Tenant tab in the [Admin-Center](../system-administration/admin-center.
 
 !!! success ""
     [![FAQ-license-settings](../assets/images/en/maintenance-and-operation/licensing/faq-license-settings.png)](../assets/images/en/maintenance-and-operation/licensing/faq-license-settings.png)
-

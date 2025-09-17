@@ -47,7 +47,7 @@ Unter dem Menüpunkt _Informationsverbünde_ können einer oder mehrere Informat
 
 [![Informationsverbund erstellen](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/3-vv.png)](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/3-vv.png)
 
-Durch das Anlegen eines neuen Informationsverbunds wird automatisch eine Zielgruppe mit derselben Bezeichnung und passendem Zielobjekt angelegt. Auf diese Zielgruppe werden die Bausteine der Schicht 1 _Übergreifende Aspekte_ angewendet. Ebenso werden die [Schutzbedarfskategorien](#schutzbedarfskategorien-definieren) mit den Beispielen aus dem BSI-Standard 100-2 ausgefüllt.
+Durch das Anlegen eines neuen Informationsverbunds wird automatisch eine Zielgruppe mit derselben Bezeichnung und passendem Zielobjekt angelegt. Auf diese Zielgruppe werden die Bausteine der Schicht 1 _Übergreifende Aspekte_ angewendet. Ebenso werden die [Schutzbedarfskategorien]() mit den Beispielen aus dem BSI-Standard 100-2 ausgefüllt.
 
 Zielgruppen anlegen
 -------------------
@@ -62,11 +62,11 @@ In Zielgruppen werden sich ähnelnde Zielobjekte zu Gruppen zusammengefasst. Die
 
 [![Zielgruppe erstellen](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/4-vv.png)](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/4-vv.png)
 
-Die Schichtzugehörigkeit kann durch Zuordnen von Bausteinen aus anderen Schichten erweitert werden. Der Informationsverbund selbst ist der 1. Schicht zugeordnet, was automatisch beim Anlegen eines neuen Informationsverbunds geschieht. Eine Ausnahme bildet der [Wechsel vom alten Modul (Migration)](#migrierenvombisherigen-itgs-modul): Dort wird die Schichtzuordnung anhand der zugeordneten Bausteine vorgenommen.
+Die Schichtzugehörigkeit kann durch Zuordnen von Bausteinen aus anderen Schichten erweitert werden. Der Informationsverbund selbst ist der 1. Schicht zugeordnet, was automatisch beim Anlegen eines neuen Informationsverbunds geschieht. Eine Ausnahme bildet der [Wechsel vom alten Modul (Migration)](): Dort wird die Schichtzuordnung anhand der zugeordneten Bausteine vorgenommen.
 
 [![Zielgruppe R 2 erscheint in 2 Schichten.](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/5-vv.png)](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/5-vv.png)
 
-Zielgruppen der Schichten 4 _Netze_ und 5 _Anwendungen_ verhalten sich unterschiedlich zu denjenigen der übrigen Schichten: Zielgruppen der Schicht 4 enthalten keine [Zielobjekte](#zielobjekte-zuordnen), sondern bestehen aus der Verknüpfung aus zwei Zielgruppen, was im Punkt _Kommunikationsverbindung_ dokumentiert wird. Anstatt zwei Zielgruppen zu verknüpfen, kann alternativ eine Gruppe mit etwas außerhalb des Informationsverbunds stehendem verknüpft werden. Beispiel: Die Zielgruppe ist mit dem Internet verknüpft.
+Zielgruppen der Schichten 4 _Netze_ und 5 _Anwendungen_ verhalten sich unterschiedlich zu denjenigen der übrigen Schichten: Zielgruppen der Schicht 4 enthalten keine [Zielobjekte](), sondern bestehen aus der Verknüpfung aus zwei Zielgruppen, was im Punkt _Kommunikationsverbindung_ dokumentiert wird. Anstatt zwei Zielgruppen zu verknüpfen, kann alternativ eine Gruppe mit etwas außerhalb des Informationsverbunds stehendem verknüpft werden. Beispiel: Die Zielgruppe ist mit dem Internet verknüpft.
 
 [![Zielgruppe der Schicht 4 bearbeiten](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/6-vv.png)](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/6-vv.png)
 
@@ -77,7 +77,7 @@ Zielgruppen der Schicht 5 werden um die Art der Information, die sie verarbeiten
 Zielobjekte zuordnen
 --------------------
 
-Innerhalb von Zielgruppen werden Zielobjekte bestimmt. Eine Ausnahme stellen die [Zielgruppen](#zielgruppen-anlegen) der Schicht 4 _Netze_ dar. Dies ist Teil der Strukturanalyse. VIVA ist an dieser Stelle eng mit den CMDB-Daten aus i-doit verzahnt. Über den aus i-doit bekannten Objekt-Browser werden neue Zielobjekte ausgewählt.
+Innerhalb von Zielgruppen werden Zielobjekte bestimmt. Eine Ausnahme stellen die [Zielgruppen]() der Schicht 4 _Netze_ dar. Dies ist Teil der Strukturanalyse. VIVA ist an dieser Stelle eng mit den CMDB-Daten aus i-doit verzahnt. Über den aus i-doit bekannten Objekt-Browser werden neue Zielobjekte ausgewählt.
 
 [![Zielobjekte auflisten](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/8-vv.png)](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/8-vv.png)
 
@@ -88,7 +88,7 @@ Zielgruppenvererbung
 
 Zielobjekte erben automatisch die Eigenschaften ihrer Zielgruppe, sodass keine weiteren Anpassungen nötig sind. Soweit die Theorie. Die Praxis hat jedoch gezeigt, dass einige Eigenschaften nicht immer synchron zu allen Zielobjekten gleichzeitig passen.
 
-Das betrifft vor allem die [Umsetzung von Maßnahmen](#massnahmenumsetzen). Daher können innerhalb eines Zielobjekts einige wenige von der Zielgruppe abweichende Eigenschaften festgehalten werden, um beispielsweise das Datum der Umsetzung, das gegebenenfalls differieren darf, zu dokumentieren.
+Das betrifft vor allem die [Umsetzung von Maßnahmen](). Daher können innerhalb eines Zielobjekts einige wenige von der Zielgruppe abweichende Eigenschaften festgehalten werden, um beispielsweise das Datum der Umsetzung, das gegebenenfalls differieren darf, zu dokumentieren.
 
 !!! attention "Die Referenzdokumente beachten die Vererbung nicht, sondern ziehen die Informationen aus den Zielgruppen und nicht aus den Zielobjekten."
 
@@ -102,7 +102,7 @@ Unterhalb eines Informationsverbunds erscheint im Menübaum der Punkt _Schutzbed
 Schutzbedarf festlegen
 ----------------------
 
-Als Teil der Schutzbedarfsfeststellung wird der Schutzbedarf der einzelnen [Zielgruppen](#zielgruppen-anlegen) festgestellt. (Siehe BSI-Standard 100-2, Kapitel 4.3.2 bis 4.3.5.) Daher sind die entsprechenden Formularfelder innerhalb einer Zielgruppe zu finden.
+Als Teil der Schutzbedarfsfeststellung wird der Schutzbedarf der einzelnen [Zielgruppen]() festgestellt. (Siehe BSI-Standard 100-2, Kapitel 4.3.2 bis 4.3.5.) Daher sind die entsprechenden Formularfelder innerhalb einer Zielgruppe zu finden.
 
 [![Schutzbedarf bearbeiten](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/10-vv.png)](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/10-vv.png)
 
@@ -113,13 +113,13 @@ Eine Besonderheit gilt in der Schicht 4 _Netze_: Der Schutzbedarf der Kommunikat
 Bausteine zuordnen
 ------------------
 
-Den [Zielgruppen](#zielgruppen-anlegen) werden Bausteine aus den IT-Grundschutz-Katalogen zugeordnet. (Siehe BSI-Standard 100-2, Kapitel 4.4.) Bausteine enthalten Gefährdungen und Maßnahmen inklusive derer Qualifizierungsstufen, die VIVA automatisch bei einer Bausteinzuordnung berücksichtigt.
+Den [Zielgruppen]() werden Bausteine aus den IT-Grundschutz-Katalogen zugeordnet. (Siehe BSI-Standard 100-2, Kapitel 4.4.) Bausteine enthalten Gefährdungen und Maßnahmen inklusive derer Qualifizierungsstufen, die VIVA automatisch bei einer Bausteinzuordnung berücksichtigt.
 
 [![Bausteine einer Zielgruppe zuordnen](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/12-vv.png)](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/12-vv.png)
 
 Werden Bausteine aus einer anderen Schicht als der der Zielgruppe zugeordneten Schicht ausgewählt, führt dies dazu, dass diese Zielgruppe auch dieser anderen Schicht zugeordnet wird. Im Menübaum taucht diese Gruppe somit in mehreren Schichten gleichzeitig auf.
 
-Beim Anlegen eines neuen [Informationsverbunds](#informationsverbuende-modellieren) werden der automatisch miterstellten Zielgruppe sämtliche Bausteine der Schicht 1 _Übergreifende Aspekte_ zugeordnet.
+Beim Anlegen eines neuen [Informationsverbunds]() werden der automatisch miterstellten Zielgruppe sämtliche Bausteine der Schicht 1 _Übergreifende Aspekte_ zugeordnet.
 
 Maßnahmen umsetzen
 ------------------
@@ -128,7 +128,7 @@ Maßnahmen sind per Definition darauf ausgerichtet, umgesetzt zu werden, um iden
 
 [![Zugeordnete Maßnahmen auflisten](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/13-vv.png)](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/13-vv.png)
 
-Bei einem Klick auf eine verknüpfte Maßnahme unterhalb von einem einer [Zielgruppe](#zielgruppen-anlegen) [zugeordneten Baustein](#bausteine-zuordnen), kann der Status ihrer Umsetzung im Detail dokumentiert werden.
+Bei einem Klick auf eine verknüpfte Maßnahme unterhalb von einem einer [Zielgruppe]() [zugeordneten Baustein](), kann der Status ihrer Umsetzung im Detail dokumentiert werden.
 
 [![Umsetzung einer Maßnahme dokumentieren](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/14-vv.png)](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/14-vv.png)
 
@@ -137,15 +137,15 @@ Prüffragen beantworten
 
 In der Regel gehören zu Maßnahmen eine Reihe von Prüffragen, die als Checkliste zum Abhaken zu verstehen sind. Alle Fragen können entweder mit "ja" oder mit "nein" beantwortet werden.
 
-Die in den Katalogen mitgelieferten Prüffragen werden bereits beim [Import](#kataloge-importieren) berücksichtigt und werden [innerhalb der Maßnahmen](#kataloge-anpassen) angezeigt. Zudem können diese bearbeitet, gelöscht oder durch neue ergänzt werden.
+Die in den Katalogen mitgelieferten Prüffragen werden bereits beim [Import]() berücksichtigt und werden [innerhalb der Maßnahmen]() angezeigt. Zudem können diese bearbeitet, gelöscht oder durch neue ergänzt werden.
 
 [![Prüffragen zu einer Maßnahme beantworten](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/15-vv.png)](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/15-vv.png)
 
-Die Checklisten, die sich aus den Prüffragen zusammensetzen, sind innerhalb von [Zielgruppen](#zielgruppen-anlegen) [zugeordneten Maßnahmen](#massnahmen-umsetzen) verfügbar.
+Die Checklisten, die sich aus den Prüffragen zusammensetzen, sind innerhalb von [Zielgruppen]() [zugeordneten Maßnahmen]() verfügbar.
 
 Ergänzende Sicherheitsanalyse durchführen
 -----------------------------------------
 
-Die ergänzende Sicherheitsanalyse (Siehe BSI-Standard 100-2, Kapitel 4.6.) wird für jede [Zielgruppe](#zielgruppen-anlegen) durchgeführt. Ob dieser Schritt überhaupt nötig ist, erkennt VIVA selbstständig anhand der Daten aus der Schutzbedarfsfeststellung (der Kommunikationsverbindungen) und der Angabe, ob über diese Angaben hinaus eine ergänzende Sicherheitsanalyse nötig ist.
+Die ergänzende Sicherheitsanalyse (Siehe BSI-Standard 100-2, Kapitel 4.6.) wird für jede [Zielgruppe]() durchgeführt. Ob dieser Schritt überhaupt nötig ist, erkennt VIVA selbstständig anhand der Daten aus der Schutzbedarfsfeststellung (der Kommunikationsverbindungen) und der Angabe, ob über diese Angaben hinaus eine ergänzende Sicherheitsanalyse nötig ist.
 
 [![Ergänzende Sicherheitsanalyse bearbeiten](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/16-vv.png)](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/16-vv.png)

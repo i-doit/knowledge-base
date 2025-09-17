@@ -10,7 +10,7 @@ lang: de
 Der Import von Benutzern und Gruppen aus dem Active Directory in i-doit findet immer über den [console.php](../../automatisierung-und-integration/cli/index.md) Befehl statt. Dazu benutzen wir das Kommando `ldap-sync`. Am Ende des Artikels ist ein komplettes Beispiel der erstellten erweiterten Konfiguration zu finden.
 
 Der Artikel zur Konfiguration vom [LDAP-Verzeichnis/Active Directory](../ldap-verzeichnis/index.md) sollte vorher jedem bekannt sein.<br>
-Wir werden hier verschiedene LDAP Filter und eine komplette [ldap.ini Konfiguration](../../automatisierung-und-integration/cli/configuration-files.md#beispiel-für-den-command-ldap-sync) durchgehen.<br>
+Wir werden hier verschiedene LDAP Filter und eine komplette [ldap.ini Konfiguration](../../automatisierung-und-integration/cli/configuration-files.md) durchgehen.<br>
 Ziel ist es alle Benutzer und Gruppen aus dem AD/LDAP mit i-doit zu synchronisieren, sowie deren Mitgliedschaften.
 
 Ich setzte Grundkenntnisse im Bezug auf AD/LDAP voraus.<br>
@@ -113,7 +113,7 @@ Wenn sich die Benutzer beispielsweise dadurch unterscheiden, dass sie zwei `obje
 
 ## Welche weiteren Attribute über die ldap.ini importiert werden können
 
-*   Der Beitrag [ldap.ini Konfiguration](../../automatisierung-und-integration/cli/configuration-files.md#beispiel-für-den-befehl-ldap-sync) sollte bekannt sein.
+*   Der Beitrag [ldap.ini Konfiguration](../../automatisierung-und-integration/cli/configuration-files.md) sollte bekannt sein.
 *   Es kann eine .ini Datei für den Import erstellt werden, mit dieser können weitere Attribute importiert werden.
 *   Die [Attributerweiterungen](../../administration/verwaltung/import-und-schnittstellen/ldap/attributerweiterung.md) sollte bereits Konfiguriert sein.
 *   Wir verwenden den .ini Abschnitt "additional"
@@ -295,7 +295,7 @@ syncEmptyAttributes=true
 ### Die komplette ldap.ini
 
 Hier eine fertige ini. Datei diese kann natürlich bearbeitet werden.<br>
-Der erste Teil der ldap.ini wird von [Verwendung von Konfigurationsdateien für Console Commands](../../automatisierung-und-integration/cli/configuration-files.md#beispiel-für-den-command-ldap-sync) bezogen.
+Der erste Teil der ldap.ini wird von [Verwendung von Konfigurationsdateien für Console Commands](../../automatisierung-und-integration/cli/configuration-files.md) bezogen.
 
 ```ini
 [commandArguments]

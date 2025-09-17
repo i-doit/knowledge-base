@@ -32,11 +32,11 @@ Das erste Referenzdokument enthält einige übergreifende Angaben, die direkt im
 
 ### Referenzdokument A.1 _IT-Strukturanalyse_
 
-Das zweite Referenzdokument speist sich zum Einen aus den Daten, die innerhalb des gewählten Informationsverbunds dokumentiert werden (Siehe _[Zielgruppen anlegen](./vorgehensweise-mit-viva.md#zielgruppen-anlegen)_ und _[Zielobjekte zuordnen](./vorgehensweise-mit-viva.md#zielobjekte-zuordnen)_.\], und zum Anderen aus weiteren Daten, die direkt im jeweiligen Audit hinterlegt werden können.
+Das zweite Referenzdokument speist sich zum Einen aus den Daten, die innerhalb des gewählten Informationsverbunds dokumentiert werden (Siehe _[Zielgruppen anlegen](./vorgehensweise-mit-viva.md)_ und _[Zielobjekte zuordnen](./vorgehensweise-mit-viva.md)_.\], und zum Anderen aus weiteren Daten, die direkt im jeweiligen Audit hinterlegt werden können.
 
 [![Referenzdokument A.1 bearbeiten](../../assets/images/de/i-doit-add-ons/viva/audits/4-va.png)](../../assets/images/de/i-doit-add-ons/viva/audits/4-va.png)
 
-Das Referenzdokument enthält unter anderem einen bereinigten Netzplan (Siehe BSI-Standard 100-2, Kapitel 4.2.3 und 4.3.5.). Dieser kann entweder über das entsprechende Formularfeld textuell referenziert werden oder - wenn das Feld leergelassen wird - ein automatisch generiertes Diagramm wird verwendet, das den Netzplan repräsentiert. Das generierte Bild enthält alle Informationen, die zu einem bereinigten Netzplan benötigt werden und durch die momentane Dokumentation zur Verfügung stehen: Dazu gehören die einzelnen [Zielgruppen](./vorgehensweise-mit-viva.md#zielgruppen-anlegen), deren Kommunikationsverbindungen untereinander sowie den dazugehörenden [Kritikalitäten](./vorgehensweise-mit-viva.md#schutzbedarf-festlegen). Ergänzt wird dies durch eine Farbgestaltung, die sich aus der Objekttyp-Konfiguration zusammensetzt: Dies geschieht auf Basis der den Zielgruppen zugeordneten [Zielobjekte](./vorgehensweise-mit-viva.md#zielobjekte-zuordnen).
+Das Referenzdokument enthält unter anderem einen bereinigten Netzplan (Siehe BSI-Standard 100-2, Kapitel 4.2.3 und 4.3.5.). Dieser kann entweder über das entsprechende Formularfeld textuell referenziert werden oder - wenn das Feld leergelassen wird - ein automatisch generiertes Diagramm wird verwendet, das den Netzplan repräsentiert. Das generierte Bild enthält alle Informationen, die zu einem bereinigten Netzplan benötigt werden und durch die momentane Dokumentation zur Verfügung stehen: Dazu gehören die einzelnen [Zielgruppen](./vorgehensweise-mit-viva.md), deren Kommunikationsverbindungen untereinander sowie den dazugehörenden [Kritikalitäten](./vorgehensweise-mit-viva.md). Ergänzt wird dies durch eine Farbgestaltung, die sich aus der Objekttyp-Konfiguration zusammensetzt: Dies geschieht auf Basis der den Zielgruppen zugeordneten [Zielobjekte](./vorgehensweise-mit-viva.md).
 
 [![Bereinigter Netzplan](../../assets/images/de/i-doit-add-ons/viva/audits/5-va.jpg)](../../assets/images/de/i-doit-add-ons/viva/audits/5-va.jpg)
 
@@ -44,23 +44,23 @@ Das Referenzdokument enthält unter anderem einen bereinigten Netzplan (Siehe BS
 
 ### Referenzdokument A.2 _Schutzbedarfsfeststellung_
 
-Dieses Referenzdokument enthält lediglich Daten, die bereits innerhalb des gewählten Informationsverbunds dokumentiert wurden. Siehe [_Schutzbedarfskategorien definieren_](./vorgehensweise-mit-viva.md#schutzbedarfskategorien-definieren) und _[Schutzbedarf festlegen](./vorgehensweise-mit-viva.md#schutzbedarf-festlegen)_.
+Dieses Referenzdokument enthält lediglich Daten, die bereits innerhalb des gewählten Informationsverbunds dokumentiert wurden. Siehe [_Schutzbedarfskategorien definieren_](./vorgehensweise-mit-viva.md) und _[Schutzbedarf festlegen](./vorgehensweise-mit-viva.md)_.
 
 ### Referenzdokument A.3 _Modellierung des IT-Verbunds_
 
-Dieses Referenzdokument enthält lediglich Daten, die bereits innerhalb des gewählten Informationsverbunds dokumentiert wurden. Siehe _[Informationsverbünde modellieren](./vorgehensweise-mit-viva.md#informationsverbünde-modellieren)_.
+Dieses Referenzdokument enthält lediglich Daten, die bereits innerhalb des gewählten Informationsverbunds dokumentiert wurden. Siehe _[Informationsverbünde modellieren](./vorgehensweise-mit-viva.md)_.
 
 ### Referenzdokument A.4 _Ergebnis des Basis-Sicherheitschecks_
 
-Dieses Referenzdokument enthält lediglich Daten, die bereits innerhalb des gewählten Informationsverbunds dokumentiert wurden. Siehe _[Maßnahmen umsetzen](./vorgehensweise-mit-viva.md#maßnahmen-umsetzen)_.
+Dieses Referenzdokument enthält lediglich Daten, die bereits innerhalb des gewählten Informationsverbunds dokumentiert wurden. Siehe _[Maßnahmen umsetzen](./vorgehensweise-mit-viva.md)_.
 
 ### Referenzdokument A.5 _Ergänzende Sicherheitsanalyse_
 
-Dieses Referenzdokument enthält lediglich Daten, die bereits innerhalb des gewählten Informationsverbunds dokumentiert wurden. Siehe _[Ergänzende Sicherheitsanalyse durchführen](./vorgehensweise-mit-viva.md#ergänzende-sicherheitsanalyse-durchführen)_.
+Dieses Referenzdokument enthält lediglich Daten, die bereits innerhalb des gewählten Informationsverbunds dokumentiert wurden. Siehe _[Ergänzende Sicherheitsanalyse durchführen](./vorgehensweise-mit-viva.md)_.
 
 ### Referenzdokument A.6 _Risikoanalyse_
 
-Dieses Referenzdokument stellt Informationen zusammen, um eine Risikoanalyse nach BSI-Standard 100-3 abzudecken. Siehe _[Risikoanalyse nach IT-Grundschutz](./risikoanalyse-nach-it-grundschutz.md#risikoanalyse-nach-it-grundschutz)_.
+Dieses Referenzdokument stellt Informationen zusammen, um eine Risikoanalyse nach BSI-Standard 100-3 abzudecken. Siehe _[Risikoanalyse nach IT-Grundschutz](./risikoanalyse-nach-it-grundschutz.md)_.
 
 ### Referenzdokument A.7 _Risikobehandlungsplan_
 

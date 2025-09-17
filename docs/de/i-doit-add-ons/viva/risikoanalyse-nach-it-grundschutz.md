@@ -5,7 +5,7 @@ Teilweise beruhen die nötigen Informationen auf zusätzlich zu dokumentierenden
 Gefährdungen identifizieren
 ---------------------------
 
-Beim [Zuordnen von Bausteinen](./vorgehensweise-mit-viva.md#bausteine-zuordnen) zu einer [Zielgruppe](./vorgehensweise-mit-viva.md#zielgruppen-anlegen) werden neben Maßnahmen auch Gefährdungen berücksichtigt, die zu diesem Baustein gehören. Es können weitere Gefährdungen hinzugefügt oder bestehenende angepasst oder gelöscht werden. Dies geschieht innerhalb der zugeordneten Bausteine. (Siehe BSI-Standard 100-3, Kapitel 3 und 4.)
+Beim [Zuordnen von Bausteinen](./vorgehensweise-mit-viva.md) zu einer [Zielgruppe](./vorgehensweise-mit-viva.md) werden neben Maßnahmen auch Gefährdungen berücksichtigt, die zu diesem Baustein gehören. Es können weitere Gefährdungen hinzugefügt oder bestehenende angepasst oder gelöscht werden. Dies geschieht innerhalb der zugeordneten Bausteine. (Siehe BSI-Standard 100-3, Kapitel 3 und 4.)
 
 [![Zugeordnete Gefährdungen auflisten](../../assets/images/de/i-doit-add-ons/viva/risikoanalyse/1-vra.png)](../../assets/images/de/i-doit-add-ons/viva/risikoanalyse/1-vra.png)
 

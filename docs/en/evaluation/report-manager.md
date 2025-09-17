@@ -98,7 +98,7 @@ Conditions can be set for attributes of objects being in relation by choosing th
 
 #### Updating reports after an update
 
-i-doit updates may also change the query editor, resulting in queries being structured differently than before. To ensure that reports always use the current logic, it is necessary to update these queries. This can be done either via [Repair and cleanup](../system-administration/administration/tenant-management/repair-and-clean-up.md) or via a [CLI command](../automation-and-integration/cli/index.md#report-refresher).
+i-doit updates may also change the query editor, resulting in queries being structured differently than before. To ensure that reports always use the current logic, it is necessary to update these queries. This can be done either via [Repair and cleanup](../system-administration/administration/tenant-management/repair-and-clean-up.md) or via a [CLI command](../automation-and-integration/cli/index.md).
 
 [![Update reports](../assets/images/de/auswertungen/report-manager/15-rm.png)](../assets/images/de/auswertungen/report-manager/15-rm.png)
 
