@@ -363,8 +363,6 @@ Diese Datei enthält die neuen Konfigurationseinstellungen. **Für eine optimale
 #
 # Typical values are 1G (1-2GB RAM), 5-6G (8GB RAM), 20-25G (32GB RAM), 100-120G (128GB RAM).
 innodb_buffer_pool_size = 1G
-# Use multiple instances if you have innodb_buffer_pool_size > 10G, 1 every 4GB
-innodb_buffer_pool_instances = 1
 # Redo log file size, the higher the better.
 # MySQL/MariaDB writes two of these log files in a default installation.
 innodb_log_file_size = 512M
@@ -380,8 +378,6 @@ query_cache_size = 80M
 tmp_table_size = 32M
 max_connections = 200
 innodb_file_per_table = 1
-# Disable this (= 0) if you have only one to two CPU cores, change it to 4 for a quad core.
-innodb_thread_concurrency = 0
 # Disable this (= 0) if you have slow harddisks
 innodb_flush_log_at_trx_commit = 1
 innodb_flush_method = O_DIRECT
