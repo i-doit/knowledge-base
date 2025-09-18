@@ -2,18 +2,18 @@
 
 Um eine kontinuierliche Qualitätssicherung zu gewährleisten, unterstützt das [Add-on](../index.md) **VIVA** den Anwender mit einer Reihe von Berichten (auch "Reports" genannt). Diese eignen sich in erster Linie zur Sichtbarmachung von fehlenden oder unzureichenden Informationen während der eigentlichen Dokumentation. Die Berichte begleiten den Anwender durch den gesamten Dokumentationsprozess.
 
-Als Resultat dient wiederum der [Audit](./audits-mit-viva-unterstuetzen.md#audits-erstellen), der den Abschlussbericht des Projekts bildet und in eine mögliche Zertifizierung nach ISO 27001 auf Basis von IT-Grundschutz mündet.
+Als Resultat dient wiederum der [Audit](./audits-mit-viva-unterstuetzen.md), der den Abschlussbericht des Projekts bildet und in eine mögliche Zertifizierung nach ISO 27001 auf Basis von IT-Grundschutz mündet.
 
-Zu jedem [Informationsverbund](./vorgehensweise-mit-viva.md#informationsverbünde-modellieren) stehen unterschiedliche Berichte zur Auswahl. Sie sind innerhalb von VIVA über den Menübaum unter **Informationsverbünde → Name des Informationsverbunds → Berichte** zu erreichen.
+Zu jedem [Informationsverbund](./vorgehensweise-mit-viva.md) stehen unterschiedliche Berichte zur Auswahl. Sie sind innerhalb von VIVA über den Menübaum unter **Informationsverbünde → Name des Informationsverbunds → Berichte** zu erreichen.
 
 [![Berichte im Menübaum](../../assets/images/de/i-doit-add-ons/viva/berichte/1-vb.png)](../../assets/images/de/i-doit-add-ons/viva/berichte/1-vb.png)
 
 Die Übersichtsseite bietet eine Zusammenfassung aller verfügbaren Berichte in Echtzeit. Diese sind namentlich aufgeführt und durch ein Ampelsystem visualisiert:
 
-| Rot | Der Report meldet fehlende oder unzureichende Daten. In Klammern wird angegeben, an wie vielen Stellen dies identifiziert wurde. |
-| --- | --- |
-| Gelb | Der Report wird gerade ausgeführt und hat noch keine Ergebnisse gemeldet. |
-| Grün | Der Report meldet ein positives Ergebnis: Es wurden keine fehlenden oder unzureichenden Daten identifiziert. |
+| Rot  | Der Report meldet fehlende oder unzureichende Daten. In Klammern wird angegeben, an wie vielen Stellen dies identifiziert wurde. |
+| ---- | -------------------------------------------------------------------------------------------------------------------------------- |
+| Gelb | Der Report wird gerade ausgeführt und hat noch keine Ergebnisse gemeldet.                                                        |
+| Grün | Der Report meldet ein positives Ergebnis: Es wurden keine fehlenden oder unzureichenden Daten identifiziert.                     |
 
 [![Übersichtsseite der Berichte](../../assets/images/de/i-doit-add-ons/viva/berichte/2-vb.png)](../../assets/images/de/i-doit-add-ons/viva/berichte/2-vb.png)
 

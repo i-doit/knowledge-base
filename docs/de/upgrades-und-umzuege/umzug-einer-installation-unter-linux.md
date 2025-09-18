@@ -26,7 +26,7 @@ Es sind ein paar Dinge zu beachten, um einen möglichst reibungslosen Umzug zu g
 
 Zunächst gilt es, das neue System so weit wie möglich vorzubereiten:
 
-1. Die Systemvoraussetzungen entsprechen der genutzten Version, siehe dazu die [Kompatibilitätsmatrix](../installation/systemvoraussetzungen.md#kompatibilitätsmatrix).
+1. Die Systemvoraussetzungen entsprechen der genutzten Version, siehe dazu die [Kompatibilitätsmatrix](../installation/systemvoraussetzungen.md#kompatibilitatsmatrix).
 2. Angepasste [Systemeinstellungen](../installation/manuelle-installation/systemeinstellungen.md) sind konfiguriert worden.
 
 ## Altes System außer Betrieb nehmen

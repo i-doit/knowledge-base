@@ -121,7 +121,7 @@ Solutions:
 *   or use the following Hotfix if reloading do not work
 
 !!! attention "Declaration of consent"
-    By downloading a Hotfix you declare that you have read and understood the [above mentioned note](#update-guide-from-i-doit-174-to-119) completely.
+    By downloading a Hotfix you declare that you have read and understood the [above mentioned note](#important-information-before-you-start) completely.
     [Click here for the Hotfix](../assets/downloads/upgrades-and-migrations/ID-5843_b4159eb.zip)
 
 Continue with the update

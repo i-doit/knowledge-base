@@ -1,21 +1,21 @@
 # Update i-doit
 
-_i-doit_ sollte immer in der aktuellsten Version betrieben werden. In Minor-Releases befinden sich immer zahlreiche Bugfixes, in Major-Releases dazu dann noch neue Funktionen und Verbesserungen von bestehenden Funktionen. Minor-Releases erscheinen ungefähr alle vier Wochen, Major-Releases alle sechs Monate. Das Update kann [über die Web-Oberfläche von i-doit durchgeführt werden](#update-uber-die-web-oberflache), setzt jedoch einen Internetzugang (gegebenenfalls über einen HTTP-Proxy) voraus. Alternativ kann das Update [über die Konsole vorbereitet](#update-über-die-konsole-vorbereiten) und anschließend über die Web-Oberfläche fortgeführt werden.
+_i-doit_ sollte immer in der aktuellsten Version betrieben werden. In Minor-Releases befinden sich immer zahlreiche Bugfixes, in Major-Releases dazu dann noch neue Funktionen und Verbesserungen von bestehenden Funktionen. Minor-Releases erscheinen ungefähr alle vier Wochen, Major-Releases alle sechs Monate. Das Update kann [über die Web-Oberfläche von i-doit durchgeführt werden](#update-uber-die-web-oberflache), setzt jedoch einen Internetzugang (gegebenenfalls über einen HTTP-Proxy) voraus. Alternativ kann das Update [über die Konsole vorbereitet](#update-uber-die-konsole-vorbereiten) und anschließend über die Web-Oberfläche fortgeführt werden.
 
 === "Release überspringen ab version 20"
     !!! attention "Release überspringen ab version 20"
-        Wenn du direkt auf eine neuere Version, z.B. 26, springen möchtest, kannst du das neueste Update-Paket aus dem [Kundenportal](../administration/kundenportal.md) herunterladen und im i-doit Ordner entpacken. Die notwendigen Schritte findest du unter [updates über die Konsole vorbereiten](#update-über-die-konsole-vorbereiten).
+        Wenn du direkt auf eine neuere Version, z.B. 26, springen möchtest, kannst du das neueste Update-Paket aus dem [Kundenportal](../administration/kundenportal.md) herunterladen und im i-doit Ordner entpacken. Die notwendigen Schritte findest du unter [updates über die Konsole vorbereiten](#update-uber-die-konsole-vorbereiten).
         Ab Version **25** mit [Hotfix](../administration/hotfixes/hotfix-archiv/index.md), wird auch die Version 27 beim update check für den download angeboten.
 
 === "Releases überspringen vor version 20"
     !!! attention "Releases überspringen vor version 20"
-        Wenn aktuell die Version 1.13.1 installiert und schon die Version 1.13.3 verfügbar ist, wird trotzdem nur die nächsthöhere Version - also 1.13.2 - angezeigt. Allerdings können Minor-Releases grundsätzlich übersprungen werden. Dennoch werden über diesen Weg trotzdem alle Minor-Releases einzeln installiert, bis die aktuellste Version erreicht ist. Wenn du direkt auf die Version 1.13.3 springen möchtest, kannst du das neueste Paket im [Kundenportal](../administration/kundenportal.md) herunterladen und auf dem _i-doit_\-Host entpacken. Die notwendigen Schritte dafür kannst du [hier](#update-über-die-konsole-vorbereiten) finden.
+        Wenn aktuell die Version 1.13.1 installiert und schon die Version 1.13.3 verfügbar ist, wird trotzdem nur die nächsthöhere Version - also 1.13.2 - angezeigt. Allerdings können Minor-Releases grundsätzlich übersprungen werden. Dennoch werden über diesen Weg trotzdem alle Minor-Releases einzeln installiert, bis die aktuellste Version erreicht ist. Wenn du direkt auf die Version 1.13.3 springen möchtest, kannst du das neueste Paket im [Kundenportal](../administration/kundenportal.md) herunterladen und auf dem _i-doit_\-Host entpacken. Die notwendigen Schritte dafür kannst du [hier](#update-uber-die-konsole-vorbereiten) finden.
 
 !!! warning "Backup"
     Vor dem Update sollte unbedingt ein [Backup](daten-sichern-und-wiederherstellen/index.md) angefertigt werden.
 
 !!! attention "Fehlende Schreibrechte"
-    Wenn beim Herunterladen und Extrahieren eine Fehlermeldung erscheint, ist es oft der Fall, dass der Apache-Webserver keine Schreibrechte für den Pfad hat, in dem i-doit installiert ist. Mehr dazu [hier](#update-über-die-konsole-vorbereiten)
+    Wenn beim Herunterladen und Extrahieren eine Fehlermeldung erscheint, ist es oft der Fall, dass der Apache-Webserver keine Schreibrechte für den Pfad hat, in dem i-doit installiert ist. Mehr dazu [hier](#update-uber-die-konsole-vorbereiten)
 
 ## Update über die Web-Oberfläche
 

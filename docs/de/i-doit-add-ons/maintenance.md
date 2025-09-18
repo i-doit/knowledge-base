@@ -145,15 +145,15 @@ Das manuelle Versenden von E-Mails (Button **E-Mails abschicken** unter **Add-on
 
 ## CLI Console Commands und Optionen
 
-| Command                       | Interne Beschreibung                                                     |
-| ----------------------------- | ------------------------------------------------------------------------ |
-| [maintenance](#maintenance-1) | Sendet Benachrichtigungen zu geplanten Wartungen aus dem Wartungs-Add-on |
+| Command     | Interne Beschreibung                                                     |
+| ----------- | ------------------------------------------------------------------------ |
+| maintenance | Sendet Benachrichtigungen zu geplanten Wartungen aus dem Wartungs-Add-on |
 
 !!! info "Dieser Befehl ist erst nach Installation des Maintenance Add-ons verfügbar."
 
 ### maintenance
 
-Verschickt E-Mails mit geplanten Wartungen gemäß den im Add-on [Wartungen](#maintenance) festgelegten Zeiträumen.
+Verschickt E-Mails mit geplanten Wartungen gemäß festgelegten Zeiträumen.
 
 **Optionen:**
 
