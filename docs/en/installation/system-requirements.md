@@ -83,7 +83,7 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
     | **PHP**                        | {--8.1 (deprecated)--}<br>8.2<br>==8.3== (recommended)<br>{++8.4++} |
     | **MySQL**                      | 5.7<br>8.0 (recommended)                                            |
     | **MariaDB**                    | 10.5 (deprecated)<br>==10.6== (recommended)<br>10.11<br>11.4        |
-    | **Can the update be skipped?** |                                                                     |
+    | **Can the update be skipped?** | Requires v35                                                             |
 
 === "35"
 
@@ -91,10 +91,10 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
     | ------------------------------ | --------------------------------------------------------------------------------------------- |
     | **Release**                    | 2025-06                                                                                       |
     | **Apache Webserver**           | 2.4                                                                                           |
-    | **PHP**                        | 8.1 {++(deprecated)++}<br>{--8.2 (recommended)--}<br>{++==8.3== (recommended)++}              |
+    | **PHP**                        | 8.1 {++(deprecated)++}<br>8.2 {--(recommended)--}<br>{++==8.3== (recommended)++}              |
     | **MySQL**                      | 5.7<br>8.0                                                                                    |
     | **MariaDB**                    | {--10.4 (deprecated)--}<br>10.5 (deprecated)<br>==10.6== (recommended)<br>10.11<br>{++11.4++} |
-    | **Can the update be skipped?** | Yes                                                                                           |
+    | **Can the update be skipped?** | No, requires v29                                                                              |
 
 === "34"
 
@@ -105,7 +105,7 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
     | **PHP**                        | 8.1<br>==8.2== (recommended)<br>8.3                                       |
     | **MySQL**                      | 5.7 <br>8.0                                                               |
     | **MariaDB**                    | 10.4 (deprecated)<br>10.5 (deprecated)<br>==10.6== (recommended)<br>10.11 |
-    | **Can the update be skipped?** | Yes                                                                       |
+    | **Can the update be skipped?** | Yes, requires v29                                                         |
 
 === "33"
 
@@ -116,7 +116,7 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
     | **PHP**                        | 8.1<br>==8.2== (recommended)<br>8.3                                       |
     | **MySQL**                      | 5.7 <br>8.0                                                               |
     | **MariaDB**                    | 10.4 (deprecated)<br>10.5 (deprecated)<br>==10.6== (recommended)<br>10.11 |
-    | **Can the update be skipped?** | Yes                                                                       |
+    | **Can the update be skipped?** | Yes, requires v29                                                         |
 
 === "32"
 
@@ -127,7 +127,7 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
     | **PHP**                        | 8.0<br>==8.1== (empfohlen)<br>8.2                                         |
     | **MySQL**                      | 5.7 <br>8.0                                                               |
     | **MariaDB**                    | 10.4 (deprecated)<br>10.5 (deprecated)<br>==10.6== (recommended)<br>10.11 |
-    | **Can the update be skipped?** | Yes                                                                       |
+    | **Can the update be skipped?** | Yes, requires v29                                                         |
 
 === "31"
 
@@ -138,7 +138,7 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
     | **PHP**                        | 8.0<br>==8.1== (recommended)<br>8.2                                       |
     | **MySQL**                      | 5.7 <br>8.0                                                               |
     | **MariaDB**                    | 10.4 (deprecated)<br>10.5 (deprecated)<br>==10.6== (recommended)<br>10.11 |
-    | **Can the update be skipped?** | Yes                                                                       |
+    | **Can the update be skipped?** | Yes, requires v29                                                         |
 
 === "30"
 
@@ -160,7 +160,7 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
     | **PHP**                        | 7.4 (deprecated) <br>==8.0== (recommended)<br>8.1<br>{++8.2++} |
     | **MySQL**                      | 5.7 <br>8.0                                                    |
     | **MariaDB**                    | 10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (recommended)   |
-    | **Can the update be skipped?** | ==No==                                                         |
+    | **Can the update be skipped?** | ==No==, requires v20                                           |
 
 === "28"
 
@@ -171,7 +171,7 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
     | **PHP**                        | 7.4 (deprecated) <br>==8.0== (recommended)<br>8.1            |
     | **MySQL**                      | 5.7 <br>8.0                                                  |
     | **MariaDB**                    | 10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (recommended) |
-    | **Can the update be skipped?** | Yes                                                          |
+    | **Can the update be skipped?** | Yes, requires v20                                            |
 
 === "27"
 
@@ -182,7 +182,7 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
     | **PHP**                        | 7.4 (deprecated) <br>==8.0== (recommended)<br>8.1            |
     | **MySQL**                      | 5.7 <br>8.0                                                  |
     | **MariaDB**                    | 10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (recommended) |
-    | **Can the update be skipped?** | Yes                                                          |
+    | **Can the update be skipped?** | Yes, requires v20                                            |
 
 === "26"
 
@@ -193,7 +193,7 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
     | **PHP**                        | 7.4 <br>==8.0== (recommended)<br>{++8.1++}                   |
     | **MySQL**                      | 5.7 <br>8.0                                                  |
     | **MariaDB**                    | 10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (recommended) |
-    | **Can the update be skipped?** | Yes                                                          |
+    | **Can the update be skipped?** | Yes, requires v20                                            |
 
 === "25"
 
