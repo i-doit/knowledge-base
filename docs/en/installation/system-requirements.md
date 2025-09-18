@@ -83,7 +83,7 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
     | **PHP**                        | {--8.1 (deprecated)--}<br>8.2<br>==8.3== (recommended)<br>{++8.4++} |
     | **MySQL**                      | 5.7<br>8.0 (recommended)                                            |
     | **MariaDB**                    | 10.5 (deprecated)<br>==10.6== (recommended)<br>10.11<br>11.4        |
-    | **Can the update be skipped?** |                                                                     |
+    | **Can the update be skipped?** | Requires v35                                                             |
 
 === "35"
 
