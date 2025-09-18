@@ -83,7 +83,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **PHP**                                     | {--8.1 (veraltet)--}<br>8.2<br>==8.3== (empfohlen)<br>{++8.4++} |
     | **MySQL**                                   | 5.7<br>8.0 (empfohlen)                                          |
     | **MariaDB**                                 | 10.5 (veraltet)<br>==10.6== (empfohlen)<br>10.11<br>11.4        |
-    | **Update Update kann übersprungen werden?** |                                                                 |
+    | **Update kann übersprungen werden?**        |                                                                 |
 
 
 === "35"
