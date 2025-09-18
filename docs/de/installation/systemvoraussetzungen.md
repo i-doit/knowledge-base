@@ -76,15 +76,14 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
 
 === "36"
 
-    | **i-doit Version**                          | 36                                                              |
-    | ------------------------------------------- | --------------------------------------------------------------- |
-    | **Release**                                 | 2025-09                                                         |
-    | **Apache Webserver**                        | 2.4                                                             |
-    | **PHP**                                     | {--8.1 (veraltet)--}<br>8.2<br>==8.3== (empfohlen)<br>{++8.4++} |
-    | **MySQL**                                   | 5.7<br>8.0 (empfohlen)                                          |
-    | **MariaDB**                                 | 10.5 (veraltet)<br>==10.6== (empfohlen)<br>10.11<br>11.4        |
-    | **Update kann übersprungen werden?**        |                                                                 |
-
+    | **i-doit Version**                   | 36                                                              |
+    | ------------------------------------ | --------------------------------------------------------------- |
+    | **Release**                          | 2025-09                                                         |
+    | **Apache Webserver**                 | 2.4                                                             |
+    | **PHP**                              | {--8.1 (veraltet)--}<br>8.2<br>==8.3== (empfohlen)<br>{++8.4++} |
+    | **MySQL**                            | 5.7<br>8.0 (empfohlen)                                          |
+    | **MariaDB**                          | 10.5 (veraltet)<br>==10.6== (empfohlen)<br>10.11<br>11.4        |
+    | **Update kann übersprungen werden?** | Setzt v35 voraus                                                |
 
 === "35"
 
@@ -92,10 +91,10 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | ------------------------------------ | --------------------------------------------------------------------------------------- |
     | **Release**                          | 2025-06                                                                                 |
     | **Apache Webserver**                 | 2.4                                                                                     |
-    | **PHP**                              | 8.1 {++(veraltet)++}<br>{--8.2 (empfohlen)--}<br>==8.3== {++(empfohlen)++}              |
+    | **PHP**                              | 8.1 {++(veraltet)++}<br>8.2 {--(empfohlen)--}<br>==8.3== {++(empfohlen)++}              |
     | **MySQL**                            | 5.7<br>8.0                                                                              |
     | **MariaDB**                          | {--10.4 (veraltet)--}<br>10.5 (veraltet)<br>==10.6== (empfohlen)<br>10.11<br>{++11.4++} |
-    | **Update kann übersprungen werden?** | **Nein**                                                                                |
+    | **Update kann übersprungen werden?** | **Nein**. Setzt v29 voraus                                                              |
 
 === "34"
 
@@ -106,7 +105,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **PHP**                              | 8.1<br>==8.2== (empfohlen)<br>8.3                                   |
     | **MySQL**                            | 5.7 <br>8.0                                                         |
     | **MariaDB**                          | 10.4 (veraltet)<br>10.5 (veraltet)<br>==10.6== (empfohlen)<br>10.11 |
-    | **Update kann übersprungen werden?** | Ja                                                                  |
+    | **Update kann übersprungen werden?** | Ja. Setzt v29 voraus                                                |
 
 === "33"
 
@@ -117,7 +116,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **PHP**                              | 8.1<br>==8.2== (empfohlen)<br>8.3                                   |
     | **MySQL**                            | 5.7 <br>8.0                                                         |
     | **MariaDB**                          | 10.4 (veraltet)<br>10.5 (veraltet)<br>==10.6== (empfohlen)<br>10.11 |
-    | **Update kann übersprungen werden?** | Ja                                                                  |
+    | **Update kann übersprungen werden?** | Ja. Setzt v29 voraus                                                |
 
 === "32"
 
@@ -128,7 +127,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **PHP**                              | 8.0<br>==8.1== (empfohlen)<br>8.2                                   |
     | **MySQL**                            | 5.7 <br>8.0                                                         |
     | **MariaDB**                          | 10.4 (veraltet)<br>10.5 (veraltet)<br>==10.6== (empfohlen)<br>10.11 |
-    | **Update kann übersprungen werden?** | Ja                                                                  |
+    | **Update kann übersprungen werden?** | Ja. Setzt v29 voraus                                                |
 
 === "31"
 
@@ -139,7 +138,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **PHP**                              | 8.0<br>==8.1== (empfohlen)<br>8.2                                   |
     | **MySQL**                            | 5.7 <br>8.0                                                         |
     | **MariaDB**                          | 10.4 (veraltet)<br>10.5 (veraltet)<br>==10.6== (empfohlen)<br>10.11 |
-    | **Update kann übersprungen werden?** | Ja                                                                  |
+    | **Update kann übersprungen werden?** | Ja. Setzt v29 voraus                                                |
 
 === "30"
 
@@ -150,7 +149,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **PHP**                              | 7.4 (veraltet) <br>8.0<br>==8.1== (empfohlen)<br>8.2                      |
     | **MySQL**                            | 5.7 <br>8.0                                                               |
     | **MariaDB**                          | 10.4 (veraltet)<br>10.5 (veraltet)<br>==10.6== (empfohlen)<br>{++10.11++} |
-    | **Update kann übersprungen werden?** | Ja                                                                        |
+    | **Update kann übersprungen werden?** | Ja. Setzt v29 voraus                                                      |
 
 === "29"
 
@@ -161,7 +160,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **PHP**                              | 7.4 (veraltet) <br>==8.0== (empfohlen)<br>8.1<br>{++8.2++} |
     | **MySQL**                            | 5.7 <br>8.0                                                |
     | **MariaDB**                          | 10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (empfohlen) |
-    | **Update kann übersprungen werden?** | ==Nein==                                                   |
+    | **Update kann übersprungen werden?** | ==Nein==. Setzt v20 voraus                                 |
 
 === "28"
 
@@ -172,7 +171,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **PHP**                              | 7.4 (veraltet) <br>==8.0== (empfohlen)<br>8.1              |
     | **MySQL**                            | 5.7 <br>8.0                                                |
     | **MariaDB**                          | 10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (empfohlen) |
-    | **Update kann übersprungen werden?** | Ja                                                         |
+    | **Update kann übersprungen werden?** | Ja. Setzt v20 voraus                                       |
 
 
 === "27"
@@ -184,7 +183,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **PHP**                              | 7.4 (veraltet) <br>==8.0== (empfohlen)<br>8.1              |
     | **MySQL**                            | 5.7 <br>8.0                                                |
     | **MariaDB**                          | 10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (empfohlen) |
-    | **Update kann übersprungen werden?** | Ja                                                         |
+    | **Update kann übersprungen werden?** | Ja. Setzt v20 voraus                                       |
 
 
 === "26"
@@ -196,7 +195,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **PHP**                              | 7.4 <br>==8.0== (empfohlen) <br>{++8.1++}                  |
     | **MySQL**                            | 5.7 <br>8.0                                                |
     | **MariaDB**                          | 10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (empfohlen) |
-    | **Update kann übersprungen werden?** | Ja                                                         |
+    | **Update kann übersprungen werden?** | Ja. Setzt v20 voraus                                       |
 
 
 === "25"
