@@ -26,7 +26,7 @@ This article describes the manual [IT documentation](../../glossary.md) of i-doi
 The specific steps depend on the selected operating system:
 
 -   [Debian 12 GNU/Linux](debian/index.md)
--   [Red Hat Enterprise Linux (RHEL)](red-hat-enterprise-linux/index.md)
+-   [Red Hat Enterprise Linux (RHEL) and compatible](red-hat-enterprise-linux/index.md)
 -   [SUSE Linux Enterprise Server (SLES)](suse/index.md)
 -   [Ubuntu Linux](ubuntu/index.md)
 -   [Microsoft Windows Server](microsoft-windows-server/index.md)
