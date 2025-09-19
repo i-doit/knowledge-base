@@ -44,4 +44,4 @@ Neben der Veröffentlichung von i-doit 36 werden auch die folgenden Versionen un
 - [Packager 1.4](../../i-doit-add-ons/add-on-packager.md)
 - [Workflow 1.6](../../i-doit-add-ons/workflow.md)
 
-Stellen Sie sicher, dass Sie **die Add-ons entsprechend aktualisieren**, damit Sie die Anforderungen für i-doit 36 erfüllen.
+Stellen Sie sicher, dass Sie **die Add-ons und i-doit entsprechend aktualisieren**, damit Sie die [Anforderungen](../../installation/systemvoraussetzungen.md#__tabbed_1_1) für i-doit 36 erfüllen.

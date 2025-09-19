@@ -9,7 +9,7 @@ Hier finden Sie die Einstellungen für die Benutzeroberfläche
 | Option                   | Wert                                                                                    |
 | ------------------------ | --------------------------------------------------------------------------------------- |
 | Zeilenabstände           | [Klein oder Mittel oder Groß](../../../../grundlagen/web-gui.md#zeilen-abstande)        |
-| Abstände in Menübäumen   | [Klein oder Mittel oder Groß](../../../../grundlagen/web-gui.md#abstande-in-menübäumen) |
+| Abstände in Menübäumen   | [Klein oder Mittel oder Groß](../../../../grundlagen/web-gui.md#abstande-in-menubaumen) |
 | Abstandhalter darstellen | [Ja oder Nein](../../../../grundlagen/web-gui.md#abstandhalter-darstellen)              |
 
 ## Hauptmenü
