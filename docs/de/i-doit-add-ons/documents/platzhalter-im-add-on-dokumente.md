@@ -50,7 +50,7 @@ Informationen eines fest definierten Objekts können über diesen Platzhalter ei
 
 Die Ergebnisliste im Dokument entspricht immer der Ausgabe im Report bei der Dokumentenerstellung. Wenn zu erwarten ist, dass die Ergebnisse des Reports sich verändert/aktualisiert haben, muss eine neue Revision des Dokuments auf Basis der Vorlage erstellt werden.
 
-Zusätzlich ist es möglich, [Variable Reports](../../auswertungen/variable-reports.md) in das Dokument einzubinden. Die gewählten Platzhalter entsprechen hier dem Hauptobjekt und geben dynamisch die Inhalte für das Hauptobjekt aus.
+Zusätzlich ist es möglich, [Variable Reports](../../anwendungsfaelle/variable-reports.md) in das Dokument einzubinden. Die gewählten Platzhalter entsprechen hier dem Hauptobjekt und geben dynamisch die Inhalte für das Hauptobjekt aus.
 
 Weiterhin können Formatierungsoptionen genutzt werden um den Titel sowie die Beschreibung des Reports im Dokument optional zu ergänzen. Weiterhin lassen sich Spaltenüberschriften, Schrift- und Hintergrundfarbe, Gitternetz und die Zeilen der Tabelle über die jeweiligen Optionen definieren.
 
