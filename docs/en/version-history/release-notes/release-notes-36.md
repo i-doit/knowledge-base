@@ -44,4 +44,4 @@ Alongside the release of i-doit 36, the following versions of our Add-ons will a
 - [Packager 1.4](https://kb.i-doit.com/en/i-doit-pro-add-ons/add-on-packager.html)
 - [Workflow 1.6](https://kb.i-doit.com/en/i-doit-pro-add-ons/workflow.html)
 
-Make sure to** update the Add-ons accordingly**, so you are meeting the requirements for i-doit 36.
+Make sure to **update the Add-ons and i-doit accordingly**, so you are meeting the [requirements](../../installation/system-requirements.md#__tabbed_1_1) for i-doit 36.
