@@ -45,6 +45,18 @@ Path for the **i-doit Discovery installer**:
 C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 ```
 
+## i-doit core
+
+### Find the object when using Attach object of type = Automatic in CSV Import (ID-12143)
+
+[i-doit_36_hotfix_ID-12143_6cf8641.zip :material-file-download:](../../assets/downloads/hotfixes/36/i-doit_36_hotfix_ID-12143_6cf8641.zip){ .md-button .md-button--primary }
+
+### Do not validate position in rack when not positioned in rack (ID-12182)
+
+[i-doit_36_hotfix_ID-12182_e8bd5f3.zip :material-file-download:](../../assets/downloads/hotfixes/36/i-doit_36_hotfix_ID-12182_e8bd5f3.zip){ .md-button .md-button--primary }
+
+* * *
+
 ## Documents Add-on
 
 ### Rights for Templates in categories are not checked (DOKU-502)
