@@ -67,6 +67,7 @@ plugins:
         'automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md': 'automatisierung-und-integration/cli/console/befehle-und-optionen.md'
         'daten-konsolidieren/jdisc-discovery.md': 'daten-konsolidieren/jdisc/index.md'
         'upgrades-und-umzuege/update-anleitung-1.7.4-bis-31.md': 'upgrades-und-umzuege/update-anleitung.md'
+        'auswertungen/variable-reports.md': 'anwendungsfaelle/variable-reports.md'
 markdown_extensions:
   - abbr
   - admonition
@@ -389,7 +390,6 @@ nav:
   - Auswertungen:
       - auswertungen/index.md
       - Report-Manager: auswertungen/report-manager.md
-      - Variabler Report (auswertungern/variabler-report.md): anwendungsfaelle/variabler-report.md
       - Benachrichtigungen: auswertungen/benachrichtigungen.md
       - CMDB-Explorer:
           - auswertungen/cmdb-explorer/index.md
