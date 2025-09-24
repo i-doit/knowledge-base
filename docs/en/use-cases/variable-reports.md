@@ -6,7 +6,7 @@ status:
 lang: en
 ---
 
-#### Introduction
+## Introduction
 
 Variable reports can be used to display object-specific information, unlike normal reports, which always output static results.
 The object information can be viewed **backwards** using variable reports. For example, you can go from object A to object B and then back again from object B to object A.

@@ -206,5 +206,8 @@ You can assign permissions for the report manager to users and user groups (repr
 *   **Reports in categories**
 *   **Reports**
 
-
 [![Assign Permissions](../assets/images/en/evaluation/report-manager/14-rm.png)](../assets/images/en/evaluation/report-manager/14-rm.png)
+
+## Variable Reports
+
+You can use [variable reports](../use-cases/variable-reports.md) to display object specific data, rather than static object data through a normal report.

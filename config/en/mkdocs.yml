@@ -354,6 +354,7 @@ nav:
   - Evaluation:
       - evaluation/index.md
       - Report manager: evaluation/report-manager.md
+      - Variaable Report (evaluation/variable-report.md): use-cases/variable-reports.md
       - Notifications: evaluation/notifications.md
       - CMDB-Explorer:
           - evaluation/cmdb-explorer/index.md

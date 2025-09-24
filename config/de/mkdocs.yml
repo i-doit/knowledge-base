@@ -389,6 +389,7 @@ nav:
   - Auswertungen:
       - auswertungen/index.md
       - Report-Manager: auswertungen/report-manager.md
+      - Variabler Report (auswertungern/variabler-report.md): anwendungsfaelle/variabler-report.md
       - Benachrichtigungen: auswertungen/benachrichtigungen.md
       - CMDB-Explorer:
           - auswertungen/cmdb-explorer/index.md

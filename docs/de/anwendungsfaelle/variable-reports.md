@@ -6,7 +6,7 @@ status:
 lang: de
 ---
 
-#### Einführung
+## Einführung
 
 Variable Reports können dafür verwendet werden, Objektspezifische Informationen dazustellen, anders als bei normales Reports, welche immer statische Ergebnisse ausgeben.
 Die Objektinformationen sind durch die Variablen Reports **rückwärtig** einsehbar, z.B. kann man von Objekt A zu Objekt B schließend und von Objekt B dann auch wieder zurück auf Objekt A.

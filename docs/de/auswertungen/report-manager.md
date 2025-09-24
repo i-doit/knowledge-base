@@ -207,4 +207,8 @@ Benutzern und Benutzergruppen (in i-doit vertreten durch die Objekttypen **Perso
 *   **Report importieren**
 *   **Selbsterstellte Reports**
 
-[![rechte-vergeben](../assets/images/de/auswertungen/report-manager/14-rm.png)](../assets/images/de/auswertungen/report-manager/14-rm.png)
+[![rechte-vergeben](../assets/images/de/auswertungen/report-manager/14-rm.png)](../assets/images/de/auswertungen/report-manager/14-rm.png
+
+## Variable Reports
+
+Mit [Variablen Reports](../anwendungsfaelle/variable-reports.md) kann man sich Daten anzeigen lassen, welche Objektspezifisch sind, statt statisch wie bei normalen Reports.
