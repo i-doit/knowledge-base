@@ -55,6 +55,10 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 [i-doit_36_hotfix_ID-12182_e8bd5f3.zip :material-file-download:](../../assets/downloads/hotfixes/36/i-doit_36_hotfix_ID-12182_e8bd5f3.zip){ .md-button .md-button--primary }
 
+### Do not throw flows error when importing (ID-12183)
+
+[i-doit_36_hotfix_ID-12183_5f2a1bb.zip :material-file-download:](../../assets/downloads/hotfixes/36/i-doit_36_hotfix_ID-12183_5f2a1bb.zip){ .md-button .md-button--primary }
+
 * * *
 
 ## Documents Add-on
