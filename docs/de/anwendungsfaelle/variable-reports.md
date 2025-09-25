@@ -19,7 +19,7 @@ Um sowohl von den Räumen als auch von den Drucker Objekten nachvollziehen zu k�
 ## Benutzerdefinierte Kategorie Bereichsdrucker
 
 Um die Drucker den jeweiligen Räumen zuweisen zu können, erstellen wir eine benutzerdefinierte Kategorie namens **Bereichsdrucker**
-Diese wird dem [Objekttyp](../grundlagen/struktur-it-dokumentation.md#objekttyp) **Drucker** zugeordnet und als [Single-Value-Kategorie](../grundlagen/struktur-it-dokumentation.md#single-value-kategorie). Das [Attribut](../grundlagen/struktur-it-dokumentation.md#attribut) **Bereichsdrucker für** wird als **Objekt-Beziehung (Mehrfachauswahl)** mit Zusatz **Freigabenzugriff** hinzugefügt.
+Diese wird dem [Objekttyp](../grundlagen/struktur-it-dokumentation.md#objekttyp) **Drucker** zugeordnet und als [Single-Value-Kategorie](../grundlagen/struktur-it-dokumentation.md#single-value-kategorie). Das [Attribut](../grundlagen/struktur-it-dokumentation.md#attribut) **Bereichsdrucker für** wird als **Objekt-Beziehung (Mehrere Objekte)** mit Zusatz **Freigabenzugriff** hinzugefügt.
 
 [![benutzerdefinierte-kategorien](../assets/images/de/anwendungsfaelle/variable-reports/1-vr.png)](../assets/images/de/anwendungsfaelle/variable-reports/1-vr.png)
 
