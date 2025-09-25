@@ -69,6 +69,7 @@ plugins:
         'automation-and-integration/cli/console/using-configuration-files-for-console-cli.md': 'automation-and-integration/cli/configuration-files.md'
         'consolidate-data/jdisc-discovery.md': 'consolidate-data/jdisc/index.md'
         'upgrades-and-migrations/update-guide-from-1.7.4-to-31.md': 'upgrades-and-migrations/update-guide.md'
+        'evaluation/variable-reports.md': 'use-cases/variable-reports.md'
 markdown_extensions:
   - abbr
   - admonition
@@ -358,7 +359,6 @@ nav:
   - Evaluation:
       - evaluation/index.md
       - Report manager: evaluation/report-manager.md
-      - Variable reports: evaluation/variable-reports.md
       - Notifications: evaluation/notifications.md
       - CMDB-Explorer:
           - evaluation/cmdb-explorer/index.md
@@ -525,6 +525,7 @@ nav:
       - Mapping of customer sites: use-cases/mapping-of-customer-sites.md
       - Switch Stacking: use-cases/switch-stacking.md
       - Upload and link of files: use-cases/upload-and-link-files.md
+      - Variable reports: use-cases/variable-reports.md
       - VM Provisioning: use-cases/vm-provisioning.md
       - Workplaces: use-cases/wokplaces.md
   - i-doit Add-ons:

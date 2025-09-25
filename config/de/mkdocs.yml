@@ -69,6 +69,7 @@ plugins:
         'automatisierung-und-integration/cli/console/verwendung-von-konfigurationsdateien-fuer-console-commands.md': 'automatisierung-und-integration/cli/configuration-files.md'
         'daten-konsolidieren/jdisc-discovery.md': 'daten-konsolidieren/jdisc/index.md'
         'upgrades-und-umzuege/update-anleitung-1.7.4-bis-31.md': 'upgrades-und-umzuege/update-anleitung.md'
+        'auswertungen/variable-reports.md': 'anwendungsfaelle/variable-reports.md'
 markdown_extensions:
   - abbr
   - admonition
@@ -393,7 +394,6 @@ nav:
   - Auswertungen:
       - auswertungen/index.md
       - Report-Manager: auswertungen/report-manager.md
-      - Variable Reports: auswertungen/variable-reports.md
       - Benachrichtigungen: auswertungen/benachrichtigungen.md
       - CMDB-Explorer:
           - auswertungen/cmdb-explorer/index.md
@@ -562,6 +562,7 @@ nav:
       - Standort-basierte Benutzerrechte: anwendungsfaelle/standort-basierte-benutzerrechte.md
       - Standorte: anwendungsfaelle/standorte.md
       - Switch Stacking: anwendungsfaelle/switch-stacking.md
+      - Variable Reports: anwendungsfaelle/variable-reports.md
       - VM provisionieren (veraltet): anwendungsfaelle/vm-provisionieren.md
   - i-doit Add-ons:
       - i-doit-add-ons/index.md
