@@ -55,6 +55,14 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 [i-doit_36_hotfix_ID-12182_e8bd5f3.zip :material-file-download:](../../assets/downloads/hotfixes/36/i-doit_36_hotfix_ID-12182_e8bd5f3.zip){ .md-button .md-button--primary }
 
+### Do not throw flows error when importing (ID-12183)
+
+!!! info "If this error is displayed when importing via JDisc Connector"
+
+    Import JDisc.ERROR: idoit\Module\SyneticsFlows\ConnectSignal\ObjectPurgedConnect::__invoke(): Argument #3 ($objectTitle) must be of type string, null given, called in /var/www/idoit/src/classes/modules/synetics_flows/src/ConnectSignal/Connect.php on line 17. File: /var/www/idoit/src/classes/modules/synetics_flows/src/ConnectSignal/ObjectPurgedConnect.php Line: 25
+
+[i-doit_36_hotfix_ID-12183_5f2a1bb.zip :material-file-download:](../../assets/downloads/hotfixes/36/i-doit_36_hotfix_ID-12183_5f2a1bb.zip){ .md-button .md-button--primary }
+
 * * *
 
 ## Documents Add-on
