@@ -50,6 +50,9 @@ Um ein oder mehrere Objekte in einen anderen [Zustand](../lebens-und-dokumentati
 
 ## Objekt-Liste als CSV-Datei exportieren
 
+Sie können die angezeigte Objektliste über die Schaltfläche "Als CSV exportieren" als [CSV-Datei](../../daten-konsolidieren/csv-datenexport.md) herunterladen und anschließend mit Anwendungen von Drittanbietern weiterverarbeiten. Wenn Sie nicht möchten, dass die Objekt-ID neben dem Titel in der CSV-Datei angezeigt wird, können Sie unter [Administration -> [Mandantenname] Verwaltung -> Einstellungen für [Mandantenname] -> CMDB](../../administration/verwaltung/mandanten-name-verwaltung/einstellungen-mandanten-name.md#cmdb) die Option "Bei CSV-Export von Listen Objekt-IDs entfernen" auswählen.
+
+
 Die angezeigte Objekt-Liste lässt sich über den Button **Als CSV exportieren** [im CSV-Format als Datei herunterladen](../../daten-konsolidieren/csv-datenexport.md) und mit Dritt-Applikationen weiterverarbeiten.
 
 ## Link zu dieser Seite

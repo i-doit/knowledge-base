@@ -1,3 +1,12 @@
+---
+title: Controller (removed in v26)
+description:
+icon:
+status:
+lang:
+search:
+  exclude: true
+---
 # Controller (removed in v26)
 
 i-doit verfügt über ein Kommandozeilen-Werkzeug namens Controller.

@@ -23,7 +23,7 @@ Per Drag'n'Drop zieht man das Objekt zum gewünschten Objekttypen im linken Men�
 
 [![objekt-liste-3](../../assets/images/de/grundlagen/objekt-listen/3-ol.gif)](../../assets/images/de/grundlagen/objekt-listen/3-ol.gif)
 
-Dazu muss die [oberflächendarstellung](../../administration/verwaltung/mandanten-name-verwaltung/einstellungen-mandanten-name.md#oberflächendarstellung) Drag 'n' Drop von Objekten auf Ja stehen.
+Dazu muss die [oberflächendarstellung](../../administration/verwaltung/mandanten-name-verwaltung/einstellungen-mandanten-name.md#oberflachendarstellung) Drag 'n' Drop von Objekten auf Ja stehen.
 
 Welche weiteren Funktionen und Anpassungen für die Objekt-Liste genutzt werden können, verraten folgende Artikel:
 

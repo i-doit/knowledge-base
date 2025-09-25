@@ -2,7 +2,7 @@
 title: MariaDB database corruption errors
 description: MariaDB database corruption errors and how to solve them
 icon:
-status: new
+status:
 lang: en
 ---
 
@@ -31,7 +31,7 @@ Before you follow the steps below, you should make a copy of both files so that 
 4. Stop and start the MySQL service
 
     ```shell
-    sudo service mysql stop 
+    sudo service mysql stop
     sudo service mysql start
     ```
 

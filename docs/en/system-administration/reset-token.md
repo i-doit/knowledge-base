@@ -2,7 +2,7 @@
 title: Find or reset your license token
 description: How to get your license token?
 icon:
-status: new
+status:
 lang: en
 note: linked in A&S Center
 ---
@@ -15,7 +15,7 @@ The i-doit license token is used to authenticate your i-doit instance against th
 
 1. **I want to retrieve my license token from my running i-doit instance**
 
-    1. [Variant A: Find my token in the Add-on & Subscription Center? (i-doit version 33 and above)](#variant-a-find-my-token-in-the-add-on--subscription-center-i-doit-version-33-and-above)
+    1. [Variant A: Find my token in the Add-on & Subscription Center? (i-doit version 33 and above)](#variant-a-find-my-token-in-the-add-on-subscription-center-i-doit-version-33-and-above)
     2. [Variant B: Find my token in the Admin-Center? (i-doit version 34 and below)](#variant-b-find-my-token-in-the-admin-center-i-doit-version-34-and-below)
     3. [Variant C: Find my token with access to the operating system? (All versions)](#variant-c-find-my-token-with-access-to-the-operating-system-all-versions)
 

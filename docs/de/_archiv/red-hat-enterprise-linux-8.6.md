@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Red Hat Enterprise Linux 8.6 (RHEL 8)
 
 Welche Pakete zu installieren und zu konfigurieren sind, erklären wir in wenigen Schritten in diesem Artikel.

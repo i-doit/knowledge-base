@@ -6,7 +6,7 @@ status:
 lang: de
 ---
 
-Es mag gute Gründe geben, i-doit unter [Windows](../installation/manuelle-installation/microsoft-windows-server/index.md) zu betreiben. Aus diversen Gründen empfehlen wir allerdings den Betrieb unter Linux. Doch wie bekommt man die gut befüllte [IT-Dokumentation](../glossar.md#Glossar-IT-Dokumentation) im laufenden Betrieb möglichst reibungslos von einem System zum anderen?
+Es mag gute Gründe geben, i-doit unter [Windows](../installation/manuelle-installation/microsoft-windows-server/index.md) zu betreiben. Aus diversen Gründen empfehlen wir allerdings den Betrieb unter Linux. Doch wie bekommt man die gut befüllte [IT-Dokumentation](../glossar.md) im laufenden Betrieb möglichst reibungslos von einem System zum anderen?
 
 ## Vorbereitungen und Annahmen
 

@@ -13,8 +13,7 @@ Der Vorteil durch die Befüllung mit i-doit liegt darin, dass keine doppelte Dat
     Schnittstelle unterstützt offiziell ausschließlich Check\_MK bis Version 1.4. Für alle neueren Versionen ist das [Check\_MK 2 Add-on](./checkmk2/index.md) vorgesehen.
     Welche Funktionen/Bereiche der Schnittstelle auch mit Check\_MK Versionen > 1.4 fehlerfrei funktionieren ist daher unklar.
 
-Grundkonfiguration
-------------------
+## Grundkonfiguration
 
 In i-doit wird unter **Verwaltung →** **Schnittstellen → Monitoring → Exportkonfiguration** eine Konfiguration für Check\_MK hinterlegt. Der lokale Pfad definiert einen absoluten oder relativen Pfad (beispielsweise zur Installation von i-doit) im Dateisystem, in dem die von i-doit erzeugte Konfiguration abgelegt werden soll. Der Link zum Monitoring-Tool gibt einen Basislink an, um aus i-doit heraus Links auf die Monitoring-Instanz zu generieren.
 
@@ -28,8 +27,7 @@ Wenn man Hosts oder Ordner sperrt, kann man die exportierte Konfiguration in Che
 
 Als **Master Site** sind die Sites auswählbar, die über mehrere Exportkonfigurationen hinzugekommen sind. Gibt es nur eine Konfiguration, kann der Eintrag leer gelassen werden.[![Master Site](../assets/images/de/i-doit-add-ons/checkmk/2-cmk.png)](../assets/images/de/i-doit-add-ons/checkmk/2-cmk.png)
 
-Kategorien
-----------
+## Kategorien
 
 Grundsätzlich muss den zu nutzenden [Objekttypen](../grundlagen/struktur-it-dokumentation.md) über [Datenstruktur bearbeiten](../administration/verwaltung/datenstruktur/datenstruktur-bearbeiten.md) der [Kategorie-Ordner](../grundlagen/struktur-it-dokumentation.md) **Check_Mk (Host)** zugeordnet werden.
 
@@ -37,8 +35,7 @@ In der Kategorie **Check_MK (Host)** wird eine Export-Konfiguration ausgewählt 
 
 [![Check_MK (Host)](../assets/images/de/i-doit-add-ons/checkmk/3-cmk.png)](../assets/images/de/i-doit-add-ons/checkmk/3-cmk.png)
 
-Hostmerkmale
-------------
+## Hostmerkmale
 
 Über die Kategorie **Hostmerkmale** werden diese zugewiesen oder angezeigt. Es wird unterschieden zwischen:
 
@@ -62,13 +59,11 @@ Der Server im Beispiel hat als Betriebssystem Debian 7.1 zugewiesen. Dieser Wert
 
 Die dynamischen Merkmale funktionieren ähnlich, nur dass sie regelbasiert arbeiten. Im folgenden Beispiel wird der Standort eines Objektes ausgewertet und beim Export der Konfiguration die angegebenen Hostmerkmale mit übergeben. Steht ein Server im konkreten Beispiel unterhalb des Standortes München, bekommt er das Hostmerkmal WAN mitgegeben.
 
-Kategorie Hostmerkmale
-----------------------
+### Kategorie Hostmerkmale
 
 In der Kategorie **Hostmerkmale** eines Objektes werden die dynamischen Hostmerkmale angezeigt und die manuellen, statischen Hostmerkmale zugewiesen.
 
-Kategorie Servicezuweisung
---------------------------
+### Kategorie Servicezuweisung
 
 Analyse-Modul
 
@@ -78,8 +73,7 @@ Die **Servicezuweisung** dient zur Zuweisung von installierter Software zu Servi
 
 Dadurch kann im Analyse-Modul ermittelt werden, welche IT-Services direkt oder indirekt von dem technischen Ausfall betroffen sind.
 
-Export der Konfiguration
-------------------------
+## Export der Konfiguration
 
 Über **Extras → Check_MK → Check_MK Export** erreichbar kann manuell der Export der WATO-Konfigurationsdaten angestoßen werden.
 
@@ -87,8 +81,7 @@ Erzeugt werden Dateien im .mk\-Format, die zur Check\_MK-Instanz übertragen wer
 
 Die Definition der Export-Struktur erlaubt es, die exportierten Objekte in einer Ordnerstruktur ins Check\_MK zu übertragen. Hierbei kann gewählt werden, ob entweder die Standorte als Ordner angelegt werden sollen oder die Objekttypen.
 
-Transfer Script
----------------
+## Transfer Script
 
 Im Installationsverzeichnis von i-doit befindet sich ein Shellscript namens checkmk_transfer.sh. Dieses wird mit den entsprechenden Zugriffen auf die OMD Site konfiguriert und überträgt dann automatisiert die i-doit-Konfiguration ins WATO.
 
@@ -96,12 +89,12 @@ Dazu steuert es die [i-doit Console](../automatisierung-und-integration/cli/inde
 
 Voraussetzung für die Übertragung per SSH ist Public-Key-Authentifizierung zwischen der i-doit-Instanz und der Check\_MK OMD Site. Eine detaillierte Anleitung dazu liegt im Installationverzeichnis von i-doit unter docs/checkmk/README bzw. README.german.
 
-Releases
---------
+## Releases
 
-| Version | Date       | Changelog                                                                                                                                                                                                                                                             |
-| ------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1.1     | 05.09.2022 | [Task] PHP 8.0 Compatibility  <br> [Task] Design Compatibility                                                                                                                                                                                                        |
-| 1.0.2   |            | [Improvement] Compatibility with i-doit 1.16                                                                                                                                                                                                                          |
-| 1.0.1   | 14.10.2019 | [Bug] List editing of Check_MK categories <br> [Bug] Create new category entries in the list editing category "Export Parameter (subcategory of Check_MK (Host))" <br>[Bug] Add more dynamic CMDB-tags <br> [Bug] Export of dynamic host tags with special characters |
-| 1.0     | 17.12.2018 | [Improvement] Add-on is installable[Improvement] Add-on is uninstallable <br> [Improvement] Add-on is activatable <br> [Improvement] Add-on is deactivatable <br> [Change] Add-onize Check_MK                                                                         |
+| Version | Date       | Changelog                                                                                                                                                                                                                                                            |
+| ------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1.1.1   | 09.09.2025 | [Task] PHP 8.4 compatibility                                                                                                                                                                                                                                         |
+| 1.1     | 05.09.2022 | [Task] PHP 8.0 Compatibility<br> [Task] Design Compatibility                                                                                                                                                                                                         |
+| 1.0.2   |            | [Improvement] Compatibility with i-doit 1.16                                                                                                                                                                                                                         |
+| 1.0.1   | 14.10.2019 | [Bug] List editing of Check_MK categories<br> [Bug] Create new category entries in the list editing category "Export Parameter (subcategory of Check_MK (Host))" <br>[Bug] Add more dynamic CMDB-tags <br> [Bug] Export of dynamic host tags with special characters |
+| 1.0     | 17.12.2018 | [Improvement] Add-on is installable[Improvement] Add-on is uninstallable <br> [Improvement] Add-on is activatable <br> [Improvement] Add-on is deactivatable <br> [Change] Add-onize Check_MK                                                                        |

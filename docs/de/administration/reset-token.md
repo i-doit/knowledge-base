@@ -2,7 +2,7 @@
 title: Den Lizenz Token finden oder zurücksetzen
 description: Wo finde ich meinen Lizenztoken?
 icon:
-status: new
+status:
 lang: de
 note: linked in A&S Center
 ---
@@ -15,13 +15,13 @@ Damit du auf das Add-on & Subscription Center zugreifen kannst und dein i-doit l
 
 1. Ich möchte meinen Lizenz Token von meiner laufenden i-doit Instanz abrufen
 
-    1. [Token im Add-on & Subscription Center finden (i-doit ab Version 33)](#variante-a-token-im-add-on--subscription-center-finden-i-doit-ab-version-33)
+    1. [Token im Add-on & Subscription Center finden (i-doit ab Version 33)](#variante-a-token-im-add-on-subscription-center-finden-i-doit-ab-version-33)
     2. [Token im Admin-Center finden (i-doit bis Version 34)](#variante-b-token-im-admin-center-finden-i-doit-bis-version-34)
     3. [Token mit Zugriff auf das Betriebssystem finden (Alle Versionen)](#variante-c-token-mit-zugriff-auf-das-betriebssystem-finden-alle-versionen)
 
 2. Ich kann mein Lizenz Token nicht finden und würde ihn gerne zurücksetzen
 
-    1. [Wie kann ich meinen Token zurücksetzen?](#wie-kann-ich-meinen-token-zurücksetzen)
+    1. [Wie kann ich meinen Token zurücksetzen?](#wie-kann-ich-meinen-token-zurucksetzen)
     2. \!\!\! WICHTIG \!\!\![Neuen Token einspielen](#neuen-token-einspielen)
 
 ## Variante A: Token im Add-on & Subscription Center finden (i-doit ab Version 33)

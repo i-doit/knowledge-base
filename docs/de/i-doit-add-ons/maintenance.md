@@ -145,15 +145,15 @@ Das manuelle Versenden von E-Mails (Button **E-Mails abschicken** unter **Add-on
 
 ## CLI Console Commands und Optionen
 
-| Command                       | Interne Beschreibung                                                     |
-| ----------------------------- | ------------------------------------------------------------------------ |
-| [maintenance](#maintenance-1) | Sendet Benachrichtigungen zu geplanten Wartungen aus dem Wartungs-Add-on |
+| Command     | Interne Beschreibung                                                     |
+| ----------- | ------------------------------------------------------------------------ |
+| maintenance | Sendet Benachrichtigungen zu geplanten Wartungen aus dem Wartungs-Add-on |
 
 !!! info "Dieser Befehl ist erst nach Installation des Maintenance Add-ons verfügbar."
 
 ### maintenance
 
-Verschickt E-Mails mit geplanten Wartungen gemäß den im Add-on [Wartungen](#maintenance) festgelegten Zeiträumen.
+Verschickt E-Mails mit geplanten Wartungen gemäß festgelegten Zeiträumen.
 
 **Optionen:**
 
@@ -179,6 +179,7 @@ sudo -u www-data php console.php maintenance --user admin --password admin --ten
 <!-- cSpell:disable -->
 | Version | Datum      | Changelog                                                                                                                                                                                                                                                                                                                           |
 | ------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1.7     | 09.09.2025 | [Task] PHP 8.4 compatibility<br>[Bug] SQL error when installing via console                                                                                                                                                                                                                                                         |
 | 1.6     | 26.02.2025 | [Task] Make symfony 6.4 compatible<br>[Bug] Option 'Send multiple notifications for each maintenance?' automatically sets to 'Yes' after finishing an upcoming maintenance                                                                                                                                                          |
 | 1.5     | 10.10.2024 | [Bug] Fix autoload issue during add-on installation                                                                                                                                                                                                                                                                                 |
 | 1.4     | 09.07.2024 | **Improvement** Send an email with all the objects within the maintenance<br>**Bug** Only one role can be selected to be notified                                                                                                                                                                                                   |

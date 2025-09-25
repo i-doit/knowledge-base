@@ -120,7 +120,7 @@ ignoriert werden. Nachfolgend eine Erklärung zu den verschiedenen Feldern:
   Beinhaltet die Sprache-Konstante der Kategorie.
 * `isysgui_catg__const`<br>
   Beinhaltet die Konstante der Kategorie, diese ist sehr wichtig da sie intern als Identifikator dient (wir nutzen im Code keine
-  IDs, da sich diese von Installation zu Installation ändern können).  
+  IDs, da sich diese von Installation zu Installation ändern können).
   Die Kategorie-Konstante sollte IMMER dem Format `C__CATG__*` folgen und keine Sonderzeichen beinhalten, da diese von i-doit zu
   einer PHP-Konstante umgewandelt wird.
 * `isysgui_catg__source_table`<br>
@@ -303,7 +303,7 @@ public function get_data($p_catg_list_id = null, $p_obj_id = null, $p_condition 
 
     return $this->retrieve($l_sql);
 }
-```  
+```
 
 Diese Methode wird von allen internen Stellen verwendet, um objektspezifische Daten aus der Kategorie zu lesen. Um eine möglichst
 hohe Kompatibilität mit allen Kernfunktionen zu garantieren, müssen sowohl Objekt als auch Objekttypinformationen zum geladenen
@@ -399,7 +399,7 @@ selbstständig verarbeiten kann.
 
 Damit ist das auslesen der Kategorie Daten zum jeweiligen Objekt und die übergabe an das Template gemeint. Außerdem werden die "UI
 Parameter" aus der Attribut-Definition an das Template übergeben (mehr dazu im
-Bereich "[Reihenfolge der Datenübergabe](#reihenfolge-der-datenübergabe)")
+Bereich "[Reihenfolge der Datenübergabe](#reihenfolge-der-datenubergabe)")
 
 Im Fall einer "View"-Kategorie oder komplexen Daten, die vor der Übergabe an das Template verarbeitet werden müssen, muss die
 `process` Methode genutzt und die zugrundeliegenden Daten manuell an das Template weitergeleitet werden.

@@ -2,7 +2,7 @@
 title: LDAPS i-doit for Windows
 description: Guide for configuring an LDAPS connection with i-doit for Windows
 icon: material/microsoft-windows
-status: new
+status:
 lang: en
 ---
 

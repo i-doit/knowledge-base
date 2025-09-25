@@ -141,6 +141,7 @@ nav:
       - version-history/index.md
       - Release notes:
           - version-history/release-notes/index.md
+          - Release Notes 36: version-history/release-notes/release-notes-36.md
           - Release Notes 35: version-history/release-notes/release-notes-35.md
           - Release Notes 34: version-history/release-notes/release-notes-34.md
           - Release Notes 33: version-history/release-notes/release-notes-33.md
@@ -171,6 +172,7 @@ nav:
           - Release notes 1.7: version-history/release-notes/release-notes-1.7.md
       - Changelogs:
           - version-history/changelogs/index.md
+          - Changelog 36: version-history/changelogs/changelog-36.md
           - Changelog 35: version-history/changelogs/changelog-35.md
           - Changelog 34: version-history/changelogs/changelog-34.md
           - Changelog 33: version-history/changelogs/changelog-33.md
@@ -384,6 +386,7 @@ nav:
       - i-doit console utility:
           - automation-and-integration/cli/index.md
           - Configuration files: automation-and-integration/cli/configuration-files.md
+          - Commands and options: automation-and-integration/cli/commands-and-options.md
       - Network Monitoring:
           - automation-and-integration/network-monitoring/index.md
           - Fetch Data with Livestatus/ NDOUtils: automation-and-integration/network-monitoring/fetch-data-with-livestatus-ndo.md
@@ -492,6 +495,7 @@ nav:
           - i-doit 1.13.2 & 1.14 Login im Admin-Center nicht möglich: system-administration/hotfixes/i-doit-1.13.2-1.14-login-admincenter.md
           - Hotfix archive:
               - system-administration/hotfixes/hotfix-archive/index.md
+              - Version 35: system-administration/hotfixes/hotfix-archive/v35.md
               - Version 34: system-administration/hotfixes/hotfix-archive/v34.md
               - Version 33: system-administration/hotfixes/hotfix-archive/v33.md
               - Version 32: system-administration/hotfixes/hotfix-archive/v32.md
@@ -614,6 +618,7 @@ nav:
           - i-diary Determine the host: i-doit-add-ons/i-diary/determine-the-host.md
       - i-doit QR-Code Printer: i-doit-add-ons/i-doit-qr-code-printer.md
       - ISMS: i-doit-add-ons/isms.md
+      - JDisc Connector: i-doit-add-ons/jdisc-connector/index.md
       - Maintenance: i-doit-add-ons/maintenance.md
       - Nagios: i-doit-add-ons/nagios.md
       - OCS Inventory NG: i-doit-add-ons/ocs-inventory-ng.md

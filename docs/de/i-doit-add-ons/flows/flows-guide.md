@@ -2,7 +2,7 @@
 title: i-doit 33 update und Flows Installation
 description: i-doit 33 update und Flows Installation
 icon:
-status: new
+status:
 lang: de
 ---
 
@@ -111,7 +111,7 @@ Jetzt werden die Dateirechte angepasst, sodass der Webserver lesend wie schreibe
 
 <!--//TODO add a selection -->
 
-Mit i-doit 33 wurde das Feature [Subscription & Add-ons](../../administration/add-on-and-subscription-center.md) hinzugefügt, worüber auch Add-ons direkt installiert werden können. Das Flows Add-on kann aber auch wie üblich über das [Admin-Center](#22-offline-flows-add-on-über-das-admin-center-installieren) installiert werden.
+Mit i-doit 33 wurde das Feature [Subscription & Add-ons](../../administration/add-on-and-subscription-center.md) hinzugefügt, worüber auch Add-ons direkt installiert werden können. Das Flows Add-on kann aber auch wie üblich über das [Admin-Center](../../administration/admin-center.md) installiert werden.
 
 ### (Online) Flows Add-on über Subscription & Add-ons installieren
 

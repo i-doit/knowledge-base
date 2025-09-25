@@ -2,7 +2,7 @@
 title: MariaDB Database Corruption Errors
 description: MariaDB Fehler und wie man diese löst
 icon:
-status: new
+status:
 lang: de
 ---
 
@@ -31,7 +31,7 @@ Bevor Sie die folgenden Schritte befolgen, sollten Sie eine Kopie der beiden Dat
 4. Stoppen und starten Sie den MySQL Service
 
     ```shell
-    sudo service mysql stop 
+    sudo service mysql stop
     sudo service mysql start
     ```
 

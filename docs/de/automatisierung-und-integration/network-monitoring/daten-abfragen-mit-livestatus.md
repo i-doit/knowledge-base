@@ -7,28 +7,22 @@ Für einen Soll-/Ist-Vergleich zwischen der Soll-Dokumentation in i-doit und dem
 Es werden die Schnittstellen
 
 -   [NDOUtils](https://exchange.nagios.org/directory/Addons/Database-Backends/NDOUtils/details) (bzw. IDOUtils) sowie
--   [MK Livestatus](https://mathias-kettner.de/checkmk_livestatus.html)
+-   [checkmk Livestatus](https://docs.checkmk.com/latest/de/livestatus.html)
 
-für [Nagios](https://www.nagios.org/), [Check_MK](https://mathias-kettner.de/check_mk), [Icinga](https://www.icinga.org/) und kompatiblen Forks unterstützt.
+für [Nagios](https://www.nagios.org/), [checkmk](https://docs.checkmk.com/latest/de/livestatus.html), [Icinga](https://www.icinga.org/) und kompatiblen Forks unterstützt.
 
 !!! success "Empfehlung"
-    MK Livestatus bietet eine sehr performante Anbindung an das Network Monitoring. Daher ist es den NDOUtils zu bevorzugen.
+    checkmk Livestatus bietet eine sehr performante Anbindung an das Network Monitoring. Daher ist es den NDOUtils zu bevorzugen.
 
 ## Grundkonfiguration
 
-Voraussetzung ist ein laufendes NDOUtils oder MK Livestatus auf dem Monitoring-System. In i-doit muss unter **Verwaltung → Import und Schnittstellen → Monitoring → Livestatus/NDO** der Zugriff auf eine der Schnittstellen konfiguriert werden.
+Voraussetzung ist ein laufendes NDOUtils oder checkmk Livestatus auf dem Monitoring-System. In i-doit muss unter **Verwaltung → Import und Schnittstellen → Monitoring → Livestatus/NDO** der Zugriff auf eine der Schnittstellen konfiguriert werden.
 
-[![daten-abfragen-mls-access](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/1-nm.png)](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/1-nm.png)
+!!! note "Livestatus unterstützt ab i-doit 36 auch TLS"
 
-Je nach Typ der Schnittstelle muss nun entweder ein TCP/UNIX Socket oder eine Datenbankkonfiguration mit entsprechenden Zugriffsberechtigungen angegeben werden.
-
-Beispiel NDOUtils:
+Beispiel Livestatus:
 
 [![daten-abfragen-mls-example](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/2-nm.png)](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/2-nm.png)
-
-Beispiel MK Livestatus:
-
-[![daten-abfragen-mls-example](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/3-nm.png)](../../assets/images/de/automatisierung-und-integration/network-monitoring/livestatus/3-nm.png)
 
 ## Kategorien
 

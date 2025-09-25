@@ -43,16 +43,16 @@ Then navigate to the Add-ons area and create a new structural template by clicki
 
 In the basic information, several metadata can be specified for the add-on.
 
-|     |     |
-| --- | --- |
-| **Title** | Name of the add-on |
-| **Manufacturer** | The name of your company or synonym |
-| **Webseite** | A link to further information about the add-on<br>(currently not displayed for the user) |
-| **Requires license<br>** | Defines whether the add-on should be subject to licensing or not. Licenses can only be issued via the i-doit license server. If you would like to sell your add-on commercially, please speak to your contact person at synetics GmbH. |
-| **Identifier** | The identifier is specified as free text during creation. If it is saved, it is combined with the manufacturer name to ensure uniqueness.<br>The add-on identifier is important for licensing, but also for the later update of an add-on and should be unique and unchangeable.<br>Please do not use spaces or special characters. |
-| **Minimum i-doit version requirement<br>** | i-doit version 1.11 is entered here by default. This value represents the current minimum compatibility and normally does not need to be changed. |
-| **Created with Add-on Packager** | Specifies the version of the Add-on Packager used to ensure compatibility. |
-| **Description** | Free text description of the add-on |
+|                                            |                                                                                                                                                                                                                                                                                                                                     |
+| ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Title**                                  | Name of the add-on                                                                                                                                                                                                                                                                                                                  |
+| **Manufacturer**                           | The name of your company or synonym                                                                                                                                                                                                                                                                                                 |
+| **Webseite**                               | A link to further information about the add-on<br>(currently not displayed for the user)                                                                                                                                                                                                                                            |
+| **Requires license<br>**                   | Defines whether the add-on should be subject to licensing or not. Licenses can only be issued via the i-doit license server. If you would like to sell your add-on commercially, please speak to your contact person at synetics GmbH.                                                                                              |
+| **Identifier**                             | The identifier is specified as free text during creation. If it is saved, it is combined with the manufacturer name to ensure uniqueness.<br>The add-on identifier is important for licensing, but also for the later update of an add-on and should be unique and unchangeable.<br>Please do not use spaces or special characters. |
+| **Minimum i-doit version requirement<br>** | i-doit version 1.11 is entered here by default. This value represents the current minimum compatibility and normally does not need to be changed.                                                                                                                                                                                   |
+| **Created with Add-on Packager**           | Specifies the version of the Add-on Packager used to ensure compatibility.                                                                                                                                                                                                                                                          |
+| **Description**                            | Free text description of the add-on                                                                                                                                                                                                                                                                                                 |
 
 ## Included resources
 
@@ -125,12 +125,13 @@ The packages are the finished ZIP files of the add-ons. Each version of each add
 
 ## Releases
 
-| Version | Datum | Changelog |
-| --- | --- | --- |
-| 1.3 | 2023-11-07 | [Bug] Custom Object types are not replaced in report conditions<br/>[Bug] HTTP 500 while Add-on uninstall via Admin-Center |
-| 1.2.1 | 2023-08-22 | [Bug] The content buttons do not work in some browsers<br>[Bug] The User is not able to download the add on zip file |
-| 1.2 | 2022-09-05 | [Task] PHP 8.0 Compatibility<br>[Task] Design Compatibility |
-| 1.1.1 | 2022-07-27 | [Bug] Packaging does not work with custom category dialog+ fields |
-| 1.1 | 2022-02-21 |[Improvement] Add Report-Manager categories to the Add-On<br>[Bug] Error message when creating a package with Dialog Plus Listener resources "Unknown column '\*\_\_sort' in 'field list'"<br>[Bug] CSV import files are not being copied correctly |
-| 1.0.1 | 2020-05-04 | [Bug] Packages with custom multi value categories become single value categories on import |
-| 1.0 | 2019-10-21 | Initial release |
+| Version | Datum      | Changelog                                                                                                                                                                                                                                           |
+| ------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1.4     | 2025-09-09 | [Task] PHP 8.4 compatibility<br[Bug] 500er error after install add-on with report<br[Bug] Importing reports via a add-on package removes set conditions                                                                                             |
+| 1.3     | 2023-11-07 | [Bug] Custom Object types are not replaced in report conditions<br/>[Bug] HTTP 500 while Add-on uninstall via Admin-Center                                                                                                                          |
+| 1.2.1   | 2023-08-22 | [Bug] The content buttons do not work in some browsers<br>[Bug] The User is not able to download the add on zip file                                                                                                                                |
+| 1.2     | 2022-09-05 | [Task] PHP 8.0 Compatibility<br>[Task] Design Compatibility                                                                                                                                                                                         |
+| 1.1.1   | 2022-07-27 | [Bug] Packaging does not work with custom category dialog+ fields                                                                                                                                                                                   |
+| 1.1     | 2022-02-21 | [Improvement] Add Report-Manager categories to the Add-On<br>[Bug] Error message when creating a package with Dialog Plus Listener resources "Unknown column '\*\_\_sort' in 'field list'"<br>[Bug] CSV import files are not being copied correctly |
+| 1.0.1   | 2020-05-04 | [Bug] Packages with custom multi value categories become single value categories on import                                                                                                                                                          |
+| 1.0     | 2019-10-21 | Initial release                                                                                                                                                                                                                                     |

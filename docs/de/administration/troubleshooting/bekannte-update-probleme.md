@@ -66,7 +66,7 @@ Bitte führe die folgenden Schritte aus:
 
 1. Führe das Update auf Version **28** noch mal mit dem Updater aus
 2. Lade die Update ZIP der Version **29** über das [Kundenportal](../kundenportal.md) runter
-3. Entpacke die Update ZIP im i-doit Ordner, wie [hier beschrieben](../../wartung-und-betrieb/update-einspielen.md#update-über-die-konsole-vorbereiten)
+3. Entpacke die Update ZIP im i-doit Ordner, wie [hier beschrieben](../../wartung-und-betrieb/update-einspielen.md#update-uber-die-konsole-vorbereiten)
 4. Führe das Update auf Version **29** noch mal mit dem Updater aus
 
 ## Version 25 - 28

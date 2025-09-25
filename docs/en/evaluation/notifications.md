@@ -14,7 +14,7 @@ For notifications to be sent at all, [SMTP must be configured](../system-adminis
 
 The Notifications module is a powerful tool to proactively monitor your IT documentation. Instead of reacting to problems, you can be automatically informed by email when certain events occur. This way, you will no longer miss expiring contracts, certificates, or maintenance periods and can sustainably ensure data quality.
 
-In this article, we describe the entire process from selecting the appropriate **[Notification Type](#notification-types)**, to the detailed **[Setup](#setting-up-a-notification)** and customization of **[Email Templates](#customizing-email-templates)**, up to the automated execution via the **[i-doit console utility](#automation-via-cronjob-cli)**.
+In this article, we describe the entire process from selecting the appropriate **[Notification Type](#notification-types)**, to the detailed **[Setup](#setting-up-a-notification)** and customization of **[Email Templates](#customizing-email-templates)**, up to the automated execution via the **[i-doit console utility](#configuration-of-the-call-with-the-cli)**.
 
 !!! info "You can find a practical example of notifications and escalation levels on our [Blog](https://www.i-doit.com/blog/benachrichtigungen-und-eskalationsstufen-mit-i-doit/)"
 
@@ -109,11 +109,11 @@ In the left navigation tree under **Email Templates**, you can globally customiz
 
 ## Configuration of the call with the CLI
 
-To ensure that the set-up notifications are also checked regularly, the i-doit [CLI](../console/../automation-and-integration/cli/index.md) must be executed with the command **[notifications-send](../automation-and-integration/cli/index.md#notifications-send)**, for example as a cron job. It is not possible to call up each notification individually, but all notifications are always checked automatically one after the other. It makes sense to consider how often the maximum number of checks should be. In our experience, it has proven useful to check every day shortly before starting work, so that it is immediately clear in the morning what you should deal with during the day.
+To ensure that the set-up notifications are also checked regularly, the i-doit [CLI](../console/../automation-and-integration/cli/index.md) must be executed with the command **[notifications-send](../automation-and-integration/cli/index.md)**, for example as a cron job. It is not possible to call up each notification individually, but all notifications are always checked automatically one after the other. It makes sense to consider how often the maximum number of checks should be. In our experience, it has proven useful to check every day shortly before starting work, so that it is immediately clear in the morning what you should deal with during the day.
 
 !!! info "Without a call of the command via the i-doit CLI **no** dispatch of the notifications takes place!"
 
-The possible parameters as well as an example call for sending notifications can be found in the [corresponding article](,/../notifications.md) for the command **[notifications-send](../automation-and-integration/cli/index.md#notifications-send)**.
+The possible parameters as well as an example call for sending notifications can be found in the [corresponding article](,/../notifications.md) for the command **[notifications-send](../automation-and-integration/cli/index.md)**.
 
 !!! info "You can map escalation levels by using the notification module. For this, you need to set up multiple notifications with different recipient groups and threshold values for the same notification types."
 
@@ -129,4 +129,4 @@ sudo -u www-data php /var/w/html/console.php notifications-send --user admin --p
 
 ## Logging
 
-When the CLI command [notifications-send](../automation-and-integration/cli/index.md#notifications-send) is called, a log file is created. The file with the name `notifications_YYYY-MM-DD.log` can be found in the i-doit `log` folder. If a person is not notified, the reason can be found in the log file.
+When the CLI command [notifications-send](../automation-and-integration/cli/index.md) is called, a log file is created. The file with the name `notifications_YYYY-MM-DD.log` can be found in the i-doit `log` folder. If a person is not notified, the reason can be found in the log file.

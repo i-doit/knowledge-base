@@ -2,7 +2,7 @@
 title: Password reset
 description: Password reset
 icon:
-status: new
+status:
 lang: en
 ---
 

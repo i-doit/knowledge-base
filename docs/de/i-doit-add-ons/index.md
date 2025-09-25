@@ -1,56 +1,27 @@
 ---
 title: i-doit Add-ons
 description: i-doit Add-ons
-#icon: material/
+icon: add-ons
 status:
 lang: de
 ---
 
 Mit i-doit stehen die [IT-Dokumentation](../grundlagen/struktur-it-dokumentation.md) und die [CMDB](../grundlagen/struktur-it-dokumentation.md) im Vordergrund. Darüber hinaus existieren zusätzliche Add-ons, um den Funktionsumfang von i-doit bedarfsgerecht zu erweitern. Auf diese Weise gewinnt der Benutzer einen völlig neuen Blick auf die IT-Dokumentation.
 
-!!!info ""Module" und "Erweiterungen""
+!!! info ""Module" und "Erweiterungen""
     Im März 2017 wurden die bisherigen "Module" und "Erweiterungen" in "Add-ons" umbenannt. Die alten Namen sind allerdings noch in der Software an einigen Stellen zu finden und werden bei neuen Releases sukzessive ersetzt.
 
-## Liste von verfügbaren Add-ons
-
-| Add-on                                                                      | Lizenzpflichtig? |
-| --------------------------------------------------------------------------- | ---------------- |
-| **[Active Directory Documentation](./active-directory-documentation.md)**   | nein             |
-| **[Add-on Packager](./add-on-packager.md)**                                 | ja               |
-| **[Analysis](./analysis.md)**                                               | ja               |
-| **[API](./api/index.md)**                                                   | nein             |
-| **[Cabling](./cabling.md)**                                                 | nein             |
-| **[Checkmk](./checkmk.md)**                                                 | nein             |
-| **[Checkmk2](./checkmk2/index.md)**                                         | ja               |
-| **[DNS Documentation](./dns-documentation.md)**                             | nein             |
-| **[Documents](./documents/index.md)**                                       | ja               |
-| **[Events](./events.md)**                                                   | nein             |
-| **[Floorplan](./floorplan.md)**                                             | nein             |
-| **[Flows](flows/index.md)**                                                 | ja               |
-| **[Forms](forms/index.md)**                                                 | ja               |
-| **[HomeOffice](https://www.i-doit.com/blog/i-doit-home-office-add-on/)**    | nein             |
-| **[i-diary](./i-diary.md)**                                                 | nein             |
-| **[ISMS aka ISO27001](./isms.md)**                                          | ja               |
-| **[Maintenance](./maintenance.md)**                                         | nein             |
-| **[Nagios](./nagios.md)**                                                   | nein             |
-| **[Relocate CI](./relocate-ci.md)**                                         | nein             |
-| **[Replacement](./replacement.md)**                                         | nein             |
-| **[Report Special](https://www.i-doit.com/blog/i-doit-reporting-special/)** | nein             |
-| **[VIVA](./viva/index.md)**                                                 | ja               |
-| **[VIVA2 aka. IT-Grundschutz](viva2.md)**                                   | ja               |
-| **[Workflow](./workflow.md)**                                               | nein             |
+!!! info "Alle verfügbaren Add-ons sind unter [https://www.i-doit.com/produkte/add-ons](https://www.i-doit.com/produkte/add-ons){:target="_blank"} zu finden"
 
 Neben diesen Add-ons existieren viele weitere, die von unseren Partnern und externen Entwicklern zur Verfügung gestellt werden. Eine umfangreiche Auflistung befindet sich [auf der Website i-doit.com unter **Produkt → Add-ons**](https://www.i-doit.com/i-doit/add-ons/).
 
 ## Download
 
-Herunterladen
-
 Add-ons sind als installierbare ZIP-Dateien erhältlich. Diese werden über das [Admin-Center](../administration/admin-center.md#add-ons) installiert.
 Im [Kundenportal](../administration/kundenportal.md) können Kunden Add-ons herunterladen. Lizenzpflichtige Add-ons (siehe oben) werden im Kaufprozess in Ihrem Kundenkonto zum Download freigeschaltet.
 Wenn Sie irgendwelche Add-ons vermissen, die Sie gekauft haben, kontaktieren Sie bitte [help@i-doit.com](mailto:help@i-doit.com) für Hilfe.
 
-Evaluierungsbenutzer können alle kostenlosen und kommerziellen Add-ons im Evaluierungsprozess herunterladen. Für alle Add-ons gibt es auf Ihrer persönlichen Evaluierungsseite ([https://center.i-doit.com](https://center.i-doit.com)) Download-Buttons. Alle lizenzpflichtigen Add-ons sind in der Evaluierungslizenz lizenziert.
+Evaluierungsbenutzer können alle kostenlosen und kommerziellen Add-ons im Evaluierungsprozess herunterladen. Für alle Add-ons gibt es auf Ihrer persönlichen Evaluierungsseite [https://center.i-doit.com](https://center.i-doit.com) Download-Buttons. Alle lizenzpflichtigen Add-ons sind in der Evaluierungslizenz lizenziert.
 
 ## Installation
 

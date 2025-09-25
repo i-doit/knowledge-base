@@ -1,6 +1,6 @@
 # Dialog-Admin
 
-In _i-doit_ kommt oftmals das [Attributfeld](../glossar.md#Glossar-Attributfeld) **Dialog+** zum Einsatz, ein Dropdown-Feld, dessen Werte sich bearbeiten lassen. Diese Felder verteilen sich auf viele [Kategorien](../glossar.md) in der [IT-Dokumentation](../glossar.md) oder andere Features von _i-doit_. Die zentrale Administration der Werte findet über den **Dialog-Admin** in der **Verwaltung** statt.
+In _i-doit_ kommt oftmals das [Attributfeld](../glossar.md) **Dialog+** zum Einsatz, ein Dropdown-Feld, dessen Werte sich bearbeiten lassen. Diese Felder verteilen sich auf viele [Kategorien](../glossar.md) in der [IT-Dokumentation](../glossar.md) oder andere Features von _i-doit_. Die zentrale Administration der Werte findet über den **Dialog-Admin** in der **Verwaltung** statt.
 
 ## Übersicht
 
