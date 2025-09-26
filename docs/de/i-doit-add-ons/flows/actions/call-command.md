@@ -5,7 +5,7 @@ icon:
 status:
 lang: de
 ---
-PENIS
+
 Die folgenden [console commands](../../../automatisierung-und-integration/cli/index.md) sind im Add-on verfügbar. Diese Funktionen können anstelle eines Cronjobs verwendet werden.
 
 | Console command                                                 | Options                                                                                                                          | Beschreibung                                                                                                      |
