@@ -8,10 +8,7 @@ lang: en
 
 The [IT documentation](../basics/structure-of-the-it-documentation.md) and the [CMDB](../basics/structure-of-the-it-documentation.md) are in the foreground of i-doit. Moreover, there are extra add-ons to expand the scope of available functions of i-doit in line with your demands. In this way, the user is provided with a completely new perspective on IT documentation.
 
-!!! info ""Modules" and "Extensions""
-    The previously called "Modules" and "Extensions" were renamed "Add-ons" in March 2017. However, in some places in the software you can still find the old names which will replaced gradually with new releases.
-
-!!! "All available add-ons are listed at [https://www.i-doit.com/en/products/add-ons](https://www.i-doit.com/en/products/add-ons){:target="_blank"}"
+!!! info "All available add-ons are listed at [https://www.i-doit.com/en/products/add-ons](https://www.i-doit.com/en/products/add-ons){:target="_blank"}"
 
 Beside these add-ons there are many others which are provided by our partners or external developers. You can find a detailed list at the i-doit website [i-doit.com under **Product → Add-ons**](https://www.i-doit.com/en/i-doit/add-ons/).
 
