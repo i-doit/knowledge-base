@@ -65,6 +65,16 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 * * *
 
+## JDisc Connector Add-on
+
+### Support new JDisc Version (JDISC-51) & (JDISC-54)
+
+!!! note "You need to install the fixed Version via the [Admin-Center](../admin-center.md)."
+
+[hotfix-idoit-jdisc-1.0.zip :material-file-download:](../../assets/downloads/hotfixes/jdisc/hotfix-idoit-jdisc-1.0.zip){ .md-button .md-button--primary }
+
+* * *
+
 ## Documents Add-on
 
 ### Rights for Templates in categories are not checked (DOKU-502)
