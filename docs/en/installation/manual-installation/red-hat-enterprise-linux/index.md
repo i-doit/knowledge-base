@@ -1,6 +1,6 @@
 ---
 title: Red Hat Enterprise Linux 9.6
-description: i-doit installation auf RHEL 9.6
+description: i-doit installation on RHEL 9.6
 icon: material/redhat
 status:
 lang: en
