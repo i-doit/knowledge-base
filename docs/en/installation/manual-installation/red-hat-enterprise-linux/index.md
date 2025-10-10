@@ -1,12 +1,12 @@
 ---
-title: Red Hat Enterprise Linux 9.5
-description: i-doit installation auf RHEL 9.5
+title: Red Hat Enterprise Linux 9.6
+description: i-doit installation on RHEL 9.6
 icon: material/redhat
 status:
 lang: en
 ---
 
-!!! note "Tested with i-doit **34** and RHEL 9.5"
+!!! note "Tested with i-doit **36** and RHEL 9.6"
 
 In this article, we explain in a few steps which packages need to be installed and configured.
 
@@ -31,7 +31,7 @@ uname -m
 On a system that is up-to-date
 
 -   the **Apache** HTTP Server 2.4,
--   the script language **PHP-FPM** 8.2,
+-   the script language **PHP-FPM** 8.3,
 -   the database management system **MariaDB** 10.11 and
 -   the caching server **memcached**
 
@@ -44,8 +44,8 @@ sudo dnf update
 Install PHP 8.2 and MariaDB via module stream:
 
 ```sh
-sudo dnf module enable php:8.2 mariadb:10.11 -y
-sudo dnf module install php:8.2 mariadb:10.11 -y
+sudo dnf module enable php:8.3 mariadb:10.11 -y
+sudo dnf module install php:8.3 mariadb:10.11 -y
 ```
 
 Further packages are installed afterwards:
@@ -54,7 +54,7 @@ Further packages are installed afterwards:
 sudo dnf install httpd boost-program-options memcached unzip php php-{bcmath,curl,gd,json,ldap,mysqli,mysqlnd,odbc,pecl-zip,pgsql,pdo,snmp,soap,zip} -y
 ```
 <!-- cSpell:enable -->
-!!! info "Für die PHP extension memcached sind weitere Schritte notwendig: <https://access.redhat.com/solutions/7002155>. i-doit funktioniert auch ohne."
+!!! info "Additional steps are necessary for the PHP extension memcached: <https://access.redhat.com/solutions/7002155>. i-doit also works without"
 
 These commands are required so that the Apache HTTP server, MariaDB, PHP-FPM and memcached are also started at boot time:
 <!-- cSpell:disable -->
@@ -81,35 +81,6 @@ sudo systemctl restart firewalld.service
 
 The installed packages for Apache HTTP Server, PHP and MariaDB already include configuration files. **It is recommended to save deviating settings in separate files** instead of adapting the existing configuration files. The settings of the standard configuration are supplemented or overwritten by the user-defined settings.
 
-### PHP-FPM Configuration
-
-First, the old configuration is deactivated by renaming it:
-
-```sh
-sudo mv /etc/php-fpm.d/www.conf{,.bak}
-```
-
-and then create a new file and fill it with the settings:
-<!-- cSpell:disable -->
-```sh
-sudo nano /etc/php-fpm.d/i-doit.conf
-```
-
-```ini
-[i-doit]
-listen = /var/run/php-fpm/php-fpm.sock
-user = apache
-group = apache
-listen.owner = apache
-listen.group = apache
-pm = dynamic
-pm.max_children = 50
-pm.start_servers = 5
-pm.min_spare_servers = 5
-pm.max_spare_servers = 35
-security.limit_extensions = .php
-```
-<!-- cSpell:enable -->
 ### PHP Configuration
 
 First, a new file is created and filled with the necessary settings:
@@ -152,10 +123,11 @@ The **date.timezone** parameter should be adjusted to the local time zone (see [
 
 ### Apache HTTP Server configuration
 
-The Welcome Page is deactivated by renaming it:
+The Welcome Page is renamed and replaced with an empty file:
 
 ```sh
 sudo mv /etc/httpd/conf.d/welcome.conf{,.bak}
+sudo touch /etc/httpd/conf.d/welcome.conf
 ```
 
 Now a new virtual host is created for i-doit:
@@ -167,149 +139,150 @@ sudo nano /etc/httpd/conf.d/i-doit.conf
 This file contains the following content:
 <!-- cSpell:disable -->
 ```ini
-DirectoryIndex index.php
-DocumentRoot /var/www/html/i-doit
+<VirtualHost *:80>
+    ServerName idoit.example.com
+    ServerAdmin webmaster@example.com
 
-<Directory /var/www/html/i-doit>
-    ## See https://httpd.apache.org/docs/2.2/mod/core.html#allowoverride
-    AllowOverride None
+    DocumentRoot /var/www/html
 
-    ## Apache Web server configuration file for i-doit
-    ##
-    ## This file requires:
-    ##
-    ## - Apache HTTPD >= 2.4 with enabled modules:
-    ##   - rewrite
-    ##   - expires
-    ##   - headers
-    ##   - authz_core
-    ##
-    ## For performance and security reasons we put these settings
-    ## directly into the VirtualHost configuration and explicitly set
-    ## "AllowOverride none". After each i-doit update check if the .htaccess file, in the i-doit directory,
-    ## has changed and add the changes in the VirtualHost configuration.
-    ##
-    ## See the i-doit Knowledge Base for more details:
-    ## <https://kb.i-doit.com/>
+    ErrorLog /var/log/httpd/idoit_error.log
+    CustomLog /var/log/httpd/idoit_access.log combined
 
-    ## Disable directory indexes:
-    Options -Indexes +SymLinksIfOwnerMatch
+    <Directory /var/www/html/>
+        ## See https://httpd.apache.org/docs/2.2/mod/core.html#allowoverride
+        AllowOverride None
 
-    <IfModule mod_authz_core.c>
-        RewriteCond %{REQUEST_METHOD}  =GET
-        RewriteRule "^$" "/index.php"
+        ## Apache Web server configuration file for i-doit
+        ##
+        ## This file requires:
+        ##
+        ## - Apache HTTPD >= 2.4 with enabled modules:
+        ##   - rewrite
+        ##   - expires
+        ##   - headers
+        ##   - authz_core
+        ##
+        ## For performance and security reasons we put these settings
+        ## directly into the VirtualHost configuration and explicitly set
+        ## "AllowOverride none". After each i-doit update check if the .htaccess file, in the i-doit directory,
+        ## has changed and add the changes in the VirtualHost configuration.
+        ##
+        ## See the i-doit Knowledge Base for more details:
+        ## <https://kb.i-doit.com/>
 
-        ## Deny access to meta files:
-        <Files "*.yml">
-            Require all denied
-        </Files>
+        ## Disable directory indexes:
+        Options -Indexes +SymLinksIfOwnerMatch
 
-        ## Deny access to hidden files:
-        <FilesMatch "^\.">
-            Require all denied
-        </FilesMatch>
+        <IfModule mod_authz_core.c>
+            RewriteCond %{REQUEST_METHOD}  =GET
+            RewriteRule "^$" "/index.php"
 
-        ## Deny access to bash scripts:
-        <FilesMatch "^(controller|.*\.sh)$">
-            Require all denied
-        </FilesMatch>
+            ## Deny access to meta files:
+            <Files "*.yml">
+                Require all denied
+            </Files>
 
-        ## Deny access to all PHP files…
-        <Files "*.php">
-            Require all denied
-        </Files>
+            ## Deny access to hidden files:
+            <FilesMatch "^\.">
+                Require all denied
+            </FilesMatch>
 
-        ## Deny access to wrongly created config backup files like ...inc.php.0123123 instead of ...inc.012341.php
-        <FilesMatch "\.php\.\d+$">
-            Require all denied
-        </FilesMatch>
+            ## Deny access to bash scripts:
+            <FilesMatch "^(controller|.*\.sh)$">
+                Require all denied
+            </FilesMatch>
 
-        ## …except some PHP files in root directory:
-        <FilesMatch "^(index\.php|controller\.php|proxy\.php)$">
-            <IfModule mod_auth_kerb.c>
-                Require valid-user
-            </IfModule>
-            <IfModule !mod_auth_kerb.c>
+            ## Deny access to all PHP files…
+            <Files "*.php">
+                Require all denied
+            </Files>
+
+            ## Deny access to wrongly created config backup files like ...inc.php.0123123 instead of ...inc.012341.php
+            <FilesMatch "\.php\.\d+$">
+                Require all denied
+            </FilesMatch>
+
+            ## …except some PHP files in root directory:
+            <FilesMatch "^(index\.php|controller\.php|proxy\.php)$">
+                <IfModule mod_auth_kerb.c>
+                    Require valid-user
+                </IfModule>
+                <IfModule !mod_auth_kerb.c>
+                    Require all granted
+                </IfModule>
+            </FilesMatch>
+
+            ## …except some PHP files in src/:
+            <Files "jsonrpc.php">
                 Require all granted
-            </IfModule>
-        </FilesMatch>
+            </Files>
 
-        ## …except some PHP files in src/:
-        <Files "jsonrpc.php">
-            Require all granted
+            ## …except some PHP files in src/tools/php/:
+            <FilesMatch "^(rt\.php|barcode_window\.php|barcode\.php)$">
+                Require all granted
+            </FilesMatch>
+
+            ## …except some PHP files in src/tools/php/qr/:
+            <FilesMatch "^(qr\.php|qr_img\.php)$">
+                Require all granted
+            </FilesMatch>
+
+            ## …except some PHP files in src/tools/js/:
+            <FilesMatch "^js\.php$">
+                Require all granted
+            </FilesMatch>
+        </IfModule>
+
+        ## Deny access to some directories:
+        <IfModule mod_alias.c>
+            RedirectMatch 403 /imports/.*$
+            RedirectMatch 403 /log/.*$
+            RedirectMatch 403 /temp/.*(?<!\.(css|xsl))$
+            RedirectMatch 403 /upload/files/.*$
+            RedirectMatch 403 /upload/images/.*$
+            RedirectMatch 403 /vendor/.*$
+        </IfModule>
+
+        ## Cache static files:
+        <IfModule mod_expires.c>
+            ExpiresActive On
+            # A2592000 = 30 days
+            ExpiresByType image/svg+xml A2592000
+            ExpiresByType image/gif A2592000
+            ExpiresByType image/png A2592000
+            ExpiresByType image/jpg A2592000
+            ExpiresByType image/jpeg A2592000
+            ExpiresByType image/ico A2592000
+            ExpiresByType text/css A2592000
+            ExpiresByType text/javascript A2592000
+            ExpiresByType image/x-icon "access 1 year"
+            ExpiresDefault "access 2 week"
+
+            <IfModule mod_headers.c>
+                Header append Cache-Control "public"
+            </IfModule>
+        </IfModule>
+
+        ## Pretty URLs:
+        <IfModule mod_rewrite.c>
+            RewriteEngine On
+            RewriteRule favicon\.ico$ images/favicon.ico [L]
+            RewriteCond %{REQUEST_FILENAME} !-l
+            RewriteCond %{REQUEST_FILENAME} !-f
+            RewriteCond %{REQUEST_FILENAME} !-d
+            RewriteRule .* index.php [L,QSA]
+        </IfModule>
+
+        ## Deny access to all ini files…
+        <Files "*.ini">
+            Require all denied
         </Files>
 
-        ## …except some PHP files in src/tools/php/:
-        <FilesMatch "^(rt\.php|barcode_window\.php|barcode\.php)$">
-            Require all granted
-        </FilesMatch>
+        </Directory>
 
-        ## …except some PHP files in src/tools/php/qr/:
-        <FilesMatch "^(qr\.php|qr_img\.php)$">
-            Require all granted
-        </FilesMatch>
-
-        ## …except some PHP files in src/tools/js/:
-        <FilesMatch "^js\.php$">
-            Require all granted
-        </FilesMatch>
-    </IfModule>
-
-    ## Deny access to some directories:
-    <IfModule mod_alias.c>
-        RedirectMatch 403 /imports/.*$
-        RedirectMatch 403 /log/.*$
-        RedirectMatch 403 /temp/.*(?<!\.(css|xsl))$
-        RedirectMatch 403 /upload/files/.*$
-        RedirectMatch 403 /upload/images/.*$
-        RedirectMatch 403 /vendor/.*$
-    </IfModule>
-
-    ## Cache static files:
-    <IfModule mod_expires.c>
-        ExpiresActive On
-        # A2592000 = 30 days
-        ExpiresByType image/svg+xml A2592000
-        ExpiresByType image/gif A2592000
-        ExpiresByType image/png A2592000
-        ExpiresByType image/jpg A2592000
-        ExpiresByType image/jpeg A2592000
-        ExpiresByType image/ico A2592000
-        ExpiresByType text/css A2592000
-        ExpiresByType text/javascript A2592000
-        ExpiresByType image/x-icon "access 1 year"
-        ExpiresDefault "access 2 week"
-
-        <IfModule mod_headers.c>
-            Header append Cache-Control "public"
-        </IfModule>
-    </IfModule>
-
-    ## Pretty URLs:
-    <IfModule mod_rewrite.c>
-        RewriteEngine On
-        RewriteRule favicon\.ico$ images/favicon.ico [L]
-        RewriteCond %{REQUEST_FILENAME} !-l
-        RewriteCond %{REQUEST_FILENAME} !-f
-        RewriteCond %{REQUEST_FILENAME} !-d
-        RewriteRule .* index.php [L,QSA]
-    </IfModule>
-
-    ## Deny access to all ini files…
-    <Files "*.ini">
-        Require all denied
-    </Files>
-
-    </Directory>
-
-TimeOut 600
-ProxyTimeout 600
-
-<FilesMatch "\\.php$">
-    <If "-f %{REQUEST_FILENAME}">
-        SetHandler "proxy:unix:/var/run/php-fpm/php-fpm.sock|fcgi://localhost"
-    </If>
-</FilesMatch>
+    TimeOut 600
+    ProxyTimeout 600
+</VirtualHost>
 ```
 <!-- cSpell:enable -->
 !!! note "i-doit provides different Apache settings in files with the name **.htaccess**. These must be checked after each update and updated in the VirtualHost configuration."
@@ -324,7 +297,6 @@ In order for Apache to have read and write permissions in the future installatio
 <!-- cSpell:disable -->
 ```sh
 sudo chown apache:apache -R /var/www/html
-sudo chcon -t httpd_sys_content_t "/var/www/html/" -R
 sudo chcon -t httpd_sys_rw_content_t "/var/www/html/" -R
 ```
 <!-- cSpell:enable -->
@@ -335,6 +307,8 @@ To ensure that MariaDB delivers good performance and can be operated securely, a
 ```sh
 mysql_secure_installation
 ```
+
+!!! warning "Do **not** activate socket authentication for the user root, as this would prevent i-doit from connecting to the database."
 
 MariaDB is then stopped and set to [slow shutdown](https://mariadb.com/kb/en/innodb-system-variables/#innodb_fast_shutdown):
 <!-- cSpell:disable -->
