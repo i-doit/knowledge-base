@@ -63,6 +63,10 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 [i-doit_36_hotfix_ID-12183_5f2a1bb.zip :material-file-download:](../../assets/downloads/hotfixes/36/i-doit_36_hotfix_ID-12183_5f2a1bb.zip){ .md-button .md-button--primary }
 
+### Prevent unnecessary HTML Purifier calls (ID-12202)
+
+[i-doit_36_hotfix_ID-12202_ID-12203.zip :material-file-download:](../../assets/downloads/hotfixes/36/i-doit_36_hotfix_ID-12202_ID-12203.zip){ .md-button .md-button--primary }
+
 * * *
 
 ## JDisc Connector Add-on
