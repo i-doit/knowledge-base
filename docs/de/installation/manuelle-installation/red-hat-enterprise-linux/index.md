@@ -13,17 +13,17 @@ Welche Pakete zu installieren und zu konfigurieren sind, erklären wir in wenige
 ## Systemvoraussetzungen
 
 Es gelten die allgemeinen [Systemvoraussetzungen](../../systemvoraussetzungen.md). Um zu bestimmen, welche Version eingesetzt wird, kann auf der Konsole dieser Befehl ausgeführt werden:
-
+<!-- cSpell:disable -->
 ```sh
 cat /etc/os-release
 ```
-
+<!-- cSpell:enable -->
 Als Systemarchitektur sollte ein x86 in 64bit zum Einsatz kommen:
-
+<!-- cSpell:disable -->
 ```sh
 uname -m
 ```
-
+<!-- cSpell:enable -->
 **x86_64** bedeutet 64bit, **i386** oder **i686** lediglich 32bit.
 
 ## Installation der Pakete
@@ -38,18 +38,18 @@ Auf einem aktuell gehaltenen System werden
 installiert.
 
 Zunächst werden erste Pakete aus den Standard-Repositories aktualisiert:
-
+<!-- cSpell:disable -->
 ```sh
 sudo dnf update
 ```
-
+<!-- cSpell:enable -->
 Installieren von PHP 8.3 und MariaDB über Module Stream:
-
+<!-- cSpell:disable -->
 ```sh
 sudo dnf module enable php:8.3 mariadb:10.11 -y
 sudo dnf module install php:8.3 mariadb:10.11 -y
 ```
-
+<!-- cSpell:enable -->
 Die Installation weiterer Pakete erfolgt danach:
 <!-- cSpell:disable -->
 ```sh
@@ -86,11 +86,11 @@ Die installierten Pakete für Apache HTTP Server, PHP und MariaDB bringen bereit
 ### PHP Konfiguration
 
 Zunächst wird eine neue Datei erstellt und mit den nötigen Einstellungen befüllt:
-
+<!-- cSpell:disable -->
 ```sh
 sudo nano /etc/php.d/i-doit.ini
 ```
-
+<!-- cSpell:enable -->
 !!! example "Diese Datei erhält folgende von uns vorgegebenen Inhalt. Für mehr Informationen zu den Parametern, schauen Sie auf [PHP.net](https://www.php.net/manual/en/install.fpm.configuration.php) vorbei"
 <!-- cSpell:disable -->
 ```ini
@@ -126,18 +126,18 @@ Der Parameter **date.timezone** sollte auf die lokale Zeitzone anpasst werden (s
 ### Apache HTTP Server Konfiguration
 
 Die Welcome Page wird umbenannt und durch eine leere Datei ersetzt:
-
+<!-- cSpell:disable -->
 ```sh
 sudo mv /etc/httpd/conf.d/welcome.conf{,.bak}
 sudo touch /etc/httpd/conf.d/welcome.conf
 ```
-
+<!-- cSpell:enable -->
 Nun wird ein neuer Virtual Host für i-doit angelegt:
-
+<!-- cSpell:disable -->
 ```sh
 sudo nano /etc/httpd/conf.d/i-doit.conf
 ```
-
+<!-- cSpell:enable -->
 Diese Datei erhält folgenden Inhalt:
 <!-- cSpell:disable -->
 ```ini
@@ -305,18 +305,17 @@ sudo chcon -t httpd_sys_rw_content_t "/var/www/html/" -R
 ### MariaDB
 
 Damit MariaDB eine gute Performance liefert und sicher betrieben werden kann, sind einige, wenige Schritte nötig, die penibel ausgeführt werden sollten. Dies fängt an mit einer sicheren Installation. **Den Empfehlungen sollte gefolgt werden**. Der Benutzer **root** sollte ein sicheres Passwort erhalten:
-
+<!-- cSpell:disable -->
 ```sh
-mysql_secure_installation
+sudo mysql_secure_installation
 ```
-
+<!-- cSpell:enable -->
 !!! warning "Aktivieren Sie die Socket-Authentifizierung **nicht** für den Benutzer root, da dies i-doit daran hindern würde, eine Verbindung zur Datenbank herzustellen."
 
 Anschließend wird MariaDB gestoppt und auf [slow shutdown](https://mariadb.com/kb/en/innodb-system-variables/#innodb_fast_shutdown) gesetzt:
 <!-- cSpell:disable -->
 ```sh
 mysql -u root -p -e"SET GLOBAL innodb_fast_shutdown = 0"
-sudo systemctl stop mariadb.service
 ```
 <!-- cSpell:enable -->
 Für die abweichenden Konfigurationseinstellungen wird eine neue Datei erstellt:
@@ -363,15 +362,20 @@ sql-mode = ""
 ```
 <!-- cSpell:enable -->
 Abschließend wird MariaDB gestartet:
-
+<!-- cSpell:disable -->
 ```sh
 sudo systemctl restart mariadb.service
 ```
-
-Zum Schluss müssen wir noch SELinux konfigurieren:
+<!-- cSpell:enable -->
+Zum Schluss müssen wir noch SELinux konfigurieren, damit Apache auf das Netzwerk und die Datenbank zugreifen kann:
 <!-- cSpell:disable -->
 ```sh
+# Allow Apache to connect to the database
 sudo setsebool -P httpd_can_network_connect_db 1
+# Allow Apache to connect to the network
+sudo setsebool -P httpd_can_network_connect 1
+# Allow Apache to connect to unusual pgsql Port for JDisc
+sudo semanage port -a -t postgresql_port_t -p tcp 25321
 ```
 <!-- cSpell:enable -->
 ## Nächster Schritt

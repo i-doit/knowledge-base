@@ -13,17 +13,17 @@ In this article, we explain in a few steps which packages need to be installed a
 ## System requirements
 
 The general [system requirements](../../system-requirements.md) apply. To determine which version is used, this command can be executed on the console:
-
+<!-- cSpell:disable -->
 ```sh
 cat /etc/os-release
 ```
-
+<!-- cSpell:enable -->
 As system architecture a x86 in 64bit should be used:
-
+<!-- cSpell:disable -->
 ```sh
 uname -m
 ```
-
+<!-- cSpell:enable -->
 **x86_64** stands for 64bit, **i386** or **i686** only for 32bit.
 
 ## Installation of the packages
@@ -36,18 +36,18 @@ On a system that is up-to-date
 -   the caching server **memcached**
 
 At first the first packages are installed from the default repositories:
-
+<!-- cSpell:disable -->
 ```sh
 sudo dnf update
 ```
-
+<!-- cSpell:enable -->
 Install PHP 8.2 and MariaDB via module stream:
-
+<!-- cSpell:disable -->
 ```sh
 sudo dnf module enable php:8.3 mariadb:10.11 -y
 sudo dnf module install php:8.3 mariadb:10.11 -y
 ```
-
+<!-- cSpell:enable -->
 Further packages are installed afterwards:
 <!-- cSpell:disable -->
 ```sh
@@ -84,11 +84,11 @@ The installed packages for Apache HTTP Server, PHP and MariaDB already include c
 ### PHP Configuration
 
 First, a new file is created and filled with the necessary settings:
-
+<!-- cSpell:disable -->
 ```sh
 sudo nano /etc/php.d/i-doit.ini
 ```
-
+<!-- cSpell:enable -->
 !!! example "This file contains the following content specified by us. For more information on the parameters, see [PHP.net](https://www.php.net/manual/en/install.fpm.configuration.php)"
 <!-- cSpell:disable -->
 ```ini
@@ -124,18 +124,18 @@ The **date.timezone** parameter should be adjusted to the local time zone (see [
 ### Apache HTTP Server configuration
 
 The Welcome Page is renamed and replaced with an empty file:
-
+<!-- cSpell:disable -->
 ```sh
 sudo mv /etc/httpd/conf.d/welcome.conf{,.bak}
 sudo touch /etc/httpd/conf.d/welcome.conf
 ```
-
+<!-- cSpell:enable -->
 Now a new virtual host is created for i-doit:
-
+<!-- cSpell:disable -->
 ```sh
 sudo nano /etc/httpd/conf.d/i-doit.conf
 ```
-
+<!-- cSpell:enable -->
 This file contains the following content:
 <!-- cSpell:disable -->
 ```ini
@@ -303,18 +303,17 @@ sudo chcon -t httpd_sys_rw_content_t "/var/www/html/" -R
 ### MariaDB configuration
 
 To ensure that MariaDB delivers good performance and can be operated securely, a few steps are necessary that should be carried out meticulously. This starts with a secure installation. **The recommendations should be followed**. The user **root** should be given a secure password:
-
+<!-- cSpell:disable -->
 ```sh
-mysql_secure_installation
+sudo mysql_secure_installation
 ```
-
+<!-- cSpell:enable -->
 !!! warning "Do **not** activate socket authentication for the user root, as this would prevent i-doit from connecting to the database."
 
 MariaDB is then stopped and set to [slow shutdown](https://mariadb.com/kb/en/innodb-system-variables/#innodb_fast_shutdown):
 <!-- cSpell:disable -->
 ```sh
 mysql -u root -p -e"SET GLOBAL innodb_fast_shutdown = 0"
-sudo systemctl stop mariadb.service
 ```
 <!-- cSpell:enable -->
 A new file is created for the different configuration settings:
@@ -361,19 +360,25 @@ sql-mode = ""
 ```
 <!-- cSpell:enable -->
 Finally, MariaDB is restarted:
-
+<!-- cSpell:disable -->
 ```sh
 sudo systemctl restart mariadb.service
 ```
-
-Finally, we need to configure SELinux:
+<!-- cSpell:enable -->
+Finally, we need to configure SELinux so that Apache can access the network and the database:
 <!-- cSpell:disable -->
 ```sh
+# Allow Apache to connect to the database
 sudo setsebool -P httpd_can_network_connect_db 1
+# Allow Apache to connect to the network
+sudo setsebool -P httpd_can_network_connect 1
+# Allow Apache to connect to unusual pgsql Port for JDisc
+sudo semanage port -a -t postgresql_port_t -p tcp 25321
 ```
 <!-- cSpell:enable -->
+
 ## Next Step
 
 The operating system is now prepared so that i-doit can be installed:
 
-[Go to Setup ...](../../manual-installation/setup.md)
+[Go to **Setup**](../setup.md)
