@@ -63,6 +63,20 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 [i-doit_36_hotfix_ID-12183_5f2a1bb.zip :material-file-download:](../../assets/downloads/hotfixes/36/i-doit_36_hotfix_ID-12183_5f2a1bb.zip){ .md-button .md-button--primary }
 
+### Prevent unnecessary HTML Purifier calls (ID-12202)
+
+[i-doit_36_hotfix_ID-12202_ID-12203.zip :material-file-download:](../../assets/downloads/hotfixes/36/i-doit_36_hotfix_ID-12202_ID-12203.zip){ .md-button .md-button--primary }
+
+* * *
+
+## JDisc Connector Add-on
+
+### Support new JDisc Version (JDISC-51) & (JDISC-54)
+
+!!! note "You need to install the fixed Version via the [Admin-Center](../admin-center.md)."
+
+[hotfix-idoit-jdisc-1.0.zip :material-file-download:](../../assets/downloads/hotfixes/jdisc/hotfix-idoit-jdisc-1.0.zip){ .md-button .md-button--primary }
+
 * * *
 
 ## Documents Add-on
