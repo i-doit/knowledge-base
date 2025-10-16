@@ -297,7 +297,9 @@ nav:
       - Manuelle Installation:
           - installation/manuelle-installation/index.md
           - Debian GNU/Linux: installation/manuelle-installation/debian/index.md
-          - Red Hat Enterprise Linux (RHEL) und kompatible: installation/manuelle-installation/red-hat-enterprise-linux/index.md
+          - Red Hat Enterprise Linux (RHEL) und kompatible:
+            - installation/manuelle-installation/red-hat-enterprise-linux/index.md
+            - Red Hat Enterprise Linux 9: installation/manuelle-installation/red-hat-enterprise-linux/rhel9.md
           - SUSE Linux Enterprise Server (SLES): installation/manuelle-installation/suse/index.md
           - Ubuntu GNU/Linux: installation/manuelle-installation/ubuntu/index.md
           - Microsoft Windows Server:

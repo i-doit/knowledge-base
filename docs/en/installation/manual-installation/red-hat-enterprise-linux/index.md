@@ -1,12 +1,12 @@
 ---
-title: Red Hat Enterprise Linux 9.6
-description: i-doit installation on RHEL 9.6
+title: Red Hat Enterprise Linux 10
+description: i-doit installation auf RHEL 10
 icon: material/redhat
 status:
 lang: en
 ---
 
-!!! note "Tested with i-doit **36** and RHEL 9.6"
+!!! note "Tested with i-doit **36** and **Red Hat Linux Enterprise Server 10.0**"
 
 In this article, we explain in a few steps which packages need to be installed and configured.
 
@@ -41,17 +41,10 @@ At first the first packages are installed from the default repositories:
 sudo dnf update
 ```
 <!-- cSpell:enable -->
-Install PHP 8.2 and MariaDB via module stream:
+Install packages:
 <!-- cSpell:disable -->
 ```sh
-sudo dnf module enable php:8.3 mariadb:10.11 -y
-sudo dnf module install php:8.3 mariadb:10.11 -y
-```
-<!-- cSpell:enable -->
-Further packages are installed afterwards:
-<!-- cSpell:disable -->
-```sh
-sudo dnf install httpd boost-program-options memcached unzip php php-{bcmath,curl,gd,json,ldap,mysqli,mysqlnd,odbc,pecl-zip,pgsql,pdo,snmp,soap,zip} -y
+sudo dnf install mariadb-server mariadb httpd boost-program-options memcached unzip php php-{bcmath,curl,gd,json,ldap,mysqli,mysqlnd,odbc,pecl-zip,pgsql,pdo,snmp,soap,zip} -y
 ```
 <!-- cSpell:enable -->
 !!! info "Additional steps are necessary for the PHP extension memcached: <https://access.redhat.com/solutions/7002155>. i-doit also works without"
@@ -75,7 +68,8 @@ sudo firewall-cmd --permanent --add-service=http
 sudo systemctl restart firewalld.service
 ```
 <!-- cSpell:enable -->
-!!! info "For HTTPS, further steps must be carried out which are not covered here, see [Security and protection](../../../maintenance-and-operation/security-and-protection.md)"
+
+!!! success "If you want to use i-doit via HTTPS, you have to create a corresponding VirtualHost configuration for port 443. [This is not described here.](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10/html/deploying_web_servers_and_reverse_proxies/setting-up-the-apache-http-web-server#configuring-tls-encryption-on-an-apache-http-server)"
 
 ## Configuration
 
@@ -138,7 +132,7 @@ sudo nano /etc/httpd/conf.d/i-doit.conf
 <!-- cSpell:enable -->
 This file contains the following content:
 <!-- cSpell:disable -->
-```ini
+```apache
 <VirtualHost *:80>
     ServerName idoit.example.com
     ServerAdmin webmaster@example.com
@@ -310,7 +304,7 @@ sudo mysql_secure_installation
 <!-- cSpell:enable -->
 !!! warning "Do **not** activate socket authentication for the user root, as this would prevent i-doit from connecting to the database."
 
-MariaDB is then stopped and set to [slow shutdown](https://mariadb.com/kb/en/innodb-system-variables/#innodb_fast_shutdown):
+MariaDB is then set to [slow shutdown](https://mariadb.com/kb/en/innodb-system-variables/#innodb_fast_shutdown):
 <!-- cSpell:disable -->
 ```sh
 mysql -u root -p -e"SET GLOBAL innodb_fast_shutdown = 0"
@@ -324,7 +318,7 @@ sudo nano /etc/my.cnf.d/99-i-doit.cnf
 <!-- cSpell:enable -->
 This file contains the new configuration settings. **For optimum performance, these settings should be adapted to the (virtual) hardware**:
 <!-- cSpell:disable -->
-```sh
+```conf
 [mysqld]
 # This is the number 1 setting to look at for any performance optimization
 # It is where the data and indexes are cached: having it as large as possible will
@@ -376,7 +370,6 @@ sudo setsebool -P httpd_can_network_connect 1
 sudo semanage port -a -t postgresql_port_t -p tcp 25321
 ```
 <!-- cSpell:enable -->
-
 ## Next Step
 
 The operating system is now prepared so that i-doit can be installed:
