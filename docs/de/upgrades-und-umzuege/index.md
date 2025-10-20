@@ -9,4 +9,4 @@ An dieser Stelle werden bestimmte Upgrades und Umzüge rund um i-doit thematisie
 *   [Umzug einer Installation unter GNU/Linux](umzug-einer-installation-unter-linux.md)
 *   [Umzug von Windows zu Linux](umzug-von-windows-zu-linux.md)
 *   [Umzug von Linux zu Windows](umzug-von-linux-zu-windows.md)
-*   [Update PHP und MariaDB für i-doit Windows](update-php-und-mariadb-idoit-windows.md)
+*   [Update PHP und MariaDB für i-doit Windows](update-php-und-mariadb-fuer-windows.md)
