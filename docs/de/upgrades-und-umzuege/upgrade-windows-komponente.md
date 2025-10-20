@@ -1,5 +1,5 @@
 ---
-title: Update PHP und MariaDB für i-doit Windows
+title: Upgrade Windows Komponente
 description: Anleitung zum updaten von PHP und MariaDB für i-doit Windows Installationen
 icon: material/microsoft-windows
 status:
@@ -12,7 +12,7 @@ In diesem Artikel zeigen wir Ihnen, wie Sie PHP und MariaDB für Ihre [i-doit Wi
 
 Um PHP und MariaDB erfolgreich updaten zu können, brauchen wir die jeweils richtigen Update Pakete.
 
-### PHP 8.2
+### PHP 8.4
 
 Um erfolgreich auf PHP8.2 updaten zu können wird das Update als zip Datei benötigt.
 Das entsprechende Paket kann hier heruntergeladen werden (64bit Variante): [VS16 x64 Thread Safe](https://windows.php.net/download/)
