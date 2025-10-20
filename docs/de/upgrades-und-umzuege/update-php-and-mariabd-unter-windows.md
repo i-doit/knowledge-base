@@ -1,6 +1,6 @@
 ---
-title: Upgrade Windows Komponente
-description: Anleitung zum updaten von PHP und MariaDB für i-doit Windows Installationen
+title: Update PHP und MariaDB unter Windows
+description: Anleitung zum updaten von PHP und MariaDB für i-doit Windows Installationen. Beinhaltete PHP Versionen sind 8.2, 8.3 und 8.4. Beinhaltete MariaDB Versionen sind MariaDB 10.11. Hier zeigen wir, welche Schritte notwendig sind um die PHP und MariaDB Versionen korrekt anzuheben.
 icon: material/microsoft-windows
 status:
 lang: de
@@ -12,14 +12,17 @@ In diesem Artikel zeigen wir Ihnen, wie Sie PHP und MariaDB für Ihre [i-doit Wi
 
 Um PHP und MariaDB erfolgreich updaten zu können, brauchen wir die jeweils richtigen Update Pakete.
 
-### PHP 8.4
+### PHP Update Paket herunterladen
 
-Um erfolgreich auf PHP8.2 updaten zu können wird das Update als zip Datei benötigt.
-Das entsprechende Paket kann hier heruntergeladen werden (64bit Variante): [VS16 x64 Thread Safe](https://windows.php.net/download/)
+Um erfolgreich auf eine der PHP8.X Versionen updaten zu können wird das Update als zip Datei benötigt.
+Das entsprechende Paket kann hier heruntergeladen werden: [x64 Thread Safe](https://windows.php.net/download/)
 
-!!! warning "Es muss unbedingt eine Zip Datei sein und die 'Thread Safe' Version"
+!!! warning "Es muss unbedingt eine Zip Datei sein und die 'x64 Thread Safe' Version"
 
-### MariaDB 10.11
+Überprüfen Sie vorab, ob die PHP Version auch mit Ihrer i-doit Version übereinstimmt!
+Hier finden Sie unsere [Kompatibilitätsmatrix](../installation/systemvoraussetzungen.md#kompatibilitätsmatrix).
+
+### MariaDB 10.11 installer herunterladen
 
 Um erfolgreich aus MariaDB 10.11 Updaten zu können benötigen wir die [MariaDB Server 10.11.1 RC Version](https://mariadb.org/download/?t=mariadb&o=true&p=mariadb&r=10.11.1&os=windows&cpu=x86_64&pkg=msi&mirror=archive)
 
@@ -69,6 +72,8 @@ Zuletzt muss noch die Option "Launch Wizard to Upgrade existing MariaDB or MySQL
 In dem neuen Fenster das Sich daraufhin öffnet wählen Sie dann den MySQL Service aus und klicken auf **"Upgrade"**.
 
 [![upgrade existing instances](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/6-pum.png)](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/6-pum.png)
+
+!!! info "Sollte das Upgrade Fenster nicht auftauchen, können Sie die MariaDB 10.11 Upgrade Wizzard EXE manuell unter **C:\ProgramData\MariaDB10.11\bin** finden und ausführen."
 
 Damit ist MariaDB erfolgreich auf MariaDB 10.11 aktualisiert.
 
