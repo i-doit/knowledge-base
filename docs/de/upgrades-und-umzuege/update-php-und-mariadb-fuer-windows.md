@@ -73,7 +73,7 @@ In dem neuen Fenster das Sich daraufhin öffnet wählen Sie dann den MySQL Servi
 
 [![upgrade existing instances](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/6-pum.png)](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/6-pum.png)
 
-!!! info "Sollte das Upgrade Fenster nicht auftauchen, können Sie die MariaDB 10.11 Upgrade Wizzard EXE manuell unter **C:\ProgramData\MariaDB10.11\bin** finden und ausführen."
+!!! info "Sollte das Upgrade Fenster nicht auftauchen, können Sie die MariaDB 10.11 Upgrade Wizard EXE manuell unter **C:\ProgramData\MariaDB10.11\bin** finden und ausführen."
 
 Damit ist MariaDB erfolgreich auf MariaDB 10.11 aktualisiert.
 

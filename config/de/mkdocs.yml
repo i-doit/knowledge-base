@@ -70,7 +70,6 @@ plugins:
         'daten-konsolidieren/jdisc-discovery.md': 'daten-konsolidieren/jdisc/index.md'
         'upgrades-und-umzuege/update-anleitung-1.7.4-bis-31.md': 'upgrades-und-umzuege/update-anleitung.md'
         'auswertungen/variable-reports.md': 'anwendungsfaelle/variable-reports.md'
-        'upgrades-und-umzuege/update-php-und-mariadb-idoit-windows.md': 'wartung-und-betrieb/ugrade-windows-komponente.md'
 markdown_extensions:
   - abbr
   - admonition
@@ -329,7 +328,7 @@ nav:
       - Umzug einer Installation unter GNU/Linux: upgrades-und-umzuege/umzug-einer-installation-unter-linux.md
       - Umzug von Windows zu Linux: upgrades-und-umzuege/umzug-von-windows-zu-linux.md
       - Umzug von Linux zu Windows: upgrades-und-umzuege/umzug-von-linux-zu-windows.md
-      - Upgrade Windows Komponente: upgrades-und-umzuege/upgrade-windows-komponente.md
+      - Update PHP und MariaDB für Windows: upgrades-und-umzuege/update-php-und-mariadb-fuer-windows.md
   - Grundlagen:
       - grundlagen/index.md
       - Erstanmeldung: grundlagen/erstanmeldung.md

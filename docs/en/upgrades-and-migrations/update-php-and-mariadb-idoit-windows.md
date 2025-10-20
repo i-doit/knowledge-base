@@ -1,6 +1,6 @@
 ---
 title: Update PHP and MariaDB for i-doit Windows
-description: Instructions for updating PHP and MariaDB for i-doit Windows installations
+description: Instructions for updating PHP and MariaDB for i-doit Windows installations. Includes the PHP Versions 8.2, 8.3 and 8.4. Includes MariaDB version 10.11. In this article we show how to correctly update PHP and MariaDB.
 icon: material/microsoft-windows
 status:
 lang: en
@@ -12,12 +12,12 @@ In this article we will show you how to update PHP and MariaDB for your [i-doit 
 
 In order to successfully update PHP and MariaDB, we need the correct update packages.
 
-### PHP 8.2
+### PHP packages
 
-In order to successfully update to PHP8.2, the update is required as a zip file.
-The corresponding package can be downloaded here (64bit version): [VS16 x64 Thread Safe](https://windows.php.net/download/)
+In order to successfully update to PHP8.X, the update is required as a zip file.
+The corresponding packages can be downloaded here (64bit version): [x64 Thread Safe](https://windows.php.net/download/)
 
-!!! warning "It must be a zip file and the ‘Thread Safe’ version"
+!!! warning "It must be a zip file and the 'x64 Thread Safe' version"
 
 ### MariaDB 10.11
 
@@ -69,6 +69,8 @@ Finally, the option "Launch Wizard to Upgrade existing MariaDB or MySQL services
 In the new window that opens up, select the MySQL service and click on **Upgrade**.
 
 [![upgrade existing instances](../assets/images/en/upgrades-and-migrations/php-mariadb-update/6-pum.png)](../assets/images/en/upgrades-and-migrations/php-mariadb-update/6-pum.png)
+
+!!! info "If the upgrade window does not open itself, you can find the MariaDB 10.11 Upgrade Wizard EXE at **C:\ProgramData\MariaDB10.11\bin** and manually execute it."
 
 MariaDB has now been successfully upgraded to MariaDB 10.11.
 
