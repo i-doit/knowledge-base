@@ -15,6 +15,19 @@ The [PHP-Extension php_ldap](http://de.php.net/manual/en/ldap.setup.php) has to 
 Don't forget to allow LDAP connection if you are using **SELinux** with `setsebool -P httpd_can_connect_ldap on`. The -P is for Permanent
 Verify it via `getsebool -a | grep httpd`
 
+### Required Permissions for the LDAP Sync
+
+A user for the `ldap-sync` command requires the following minimum permissions:
+
+**1. Administration (Execute Command)**
+
+- Condition **Commands** and `All` permissions for the `SyncCommand` parameter.
+
+**2. CMDB (Edit Objects & Groups)**
+
+- Condition **Category in Object Type "Persons"** and `All` permissions for the `Persons - Person group memberships` category.
+
+
 ### Subsequent Installation under [Debian GNU/Linux](../../installation/manual-installation/debian/index.md)
 
 ```shell
@@ -38,7 +51,7 @@ the ";" is deleted, resulting in
 extension=php_ldap.dll
 ```
 
-Sometimes it may also be necessary to copy the files ssleay32.dll and libeay32.dll (in most cases they are located at `C:\xampp\apache\bin\`, however, this varies from version to version) to the php\ folder. The Apache web server has to be restarted afterwards.
+Sometimes it may also be necessary to copy the files `ssleay32.dll` and `libeay32.dll` (in most cases they are located at `C:\xampp\apache\bin\`, however, this varies from version to version) to the php\ folder. The Apache web server has to be restarted afterwards.
 
 ## Configuration
 
@@ -134,8 +147,8 @@ So that this file is considered e.g. with the ldap-sync Command, this must be in
 | **defaultCompany**            | Through this the users added by the LDAP synchronization are assigned automatically to the configured organization. (Default: **empty**)<br><br>e.g .<br><br>defaultCompany='i-doit'                                                                                                                                                                                                                                             |
 | **deletedUsersBehaviour**     | Can be set to **archive**, **delete** or **disable_login** to set users to the status [archived or deleted](../../basics/life-and-documentation-cycle.md) when they cannot be found anymore via the synchronization. A user that is archived or deleted cannot log in to _i-doit_ anymore!<br><br>Or you just deactivate the login for the users.<br><br>(Default: **archive**)<br><br>e.g.<br><br>deletedUsersBehaviour=archive |
 | **disabledUsersBehaviour**    | Can be set to **archive**, **delete** or **disable_login** to set users to the status [archived or deleted](../../basics/life-and-documentation-cycle.md) when they cannot be found anymore via the synchronization. A user that is archived or deleted cannot log in to _i-doit_ anymore!<br><br>Or you just deactivate the login for the users.<br><br>e.g.<br><br>disabledUsersBehaviour=archive                              |
-| **rooms**                     | As seen in the example, an assignment of an user to a **room** can be predefined here. The assignment is carried out via the contact assignment without a role.<br><br>e.g. <br><br>rooms["Raum B"] = ["Person A", "Person C", "Person D"]                                                                                                                                                                                       |
-| **attributes**                | The respective fields from the directory are linked with attributes in _i-doit_ using the "Attributes". These complement the assigned attributes described in the above mentioned part of the guide.<br><br>e.g.<br><br>attributes[department]=department                                                                                                                                                                        |
+| **rooms**                     | As seen in the example, an assignment of an user to a **room** can be predefined here. The assignment is carried out via the contact assignment without a role.<br><br>e.g. <br><br>rooms\["Raum B"] = \["Person A", "Person C", "Person D"]                                                                                                                                                                                     |
+| **attributes**                | The respective fields from the directory are linked with attributes in _i-doit_ using the "Attributes". These complement the assigned attributes described in the above mentioned part of the guide.<br><br>e.g.<br><br>attributes\[department]=department                                                                                                                                                                       |
 | **autoReactivateUsers**       | This is only relevant for Novel Directory Services (NDS) and OpenLDAP. During synchronization all users are activated again with this and deactivated according to the common principle, if applicable.<br><br>e.g.<br><br>autoReactivateUsers=false                                                                                                                                                                             |
 | **ignoreUsersWithAttributes** | This function helps to prevent synchronization of unwanted directory objects.<br><br>The user will not be synchronized if the **ignoreFunction** fails for all selected attributes.<br><br>e.g.<br><br>ignoreUsersWithAttributes\[\]\="samaccountname"                                                                                                                                                                           |
 | **ignoreFunction**            | This can be any function name which can be called through call\_user\_func or the defined functions.<br><br>Defined functions:<br><br>empty  <br>!empty  <br>isset  <br>!isset<br><br>e.g,<br><br>ignoreFunction\=empty                                                                                                                                                                                                          |
@@ -152,7 +165,7 @@ The automated assignment makes sure that the specified permissions of the person
 [![Automated Assignment of Persons to Person Groups](../../assets/images/en/automation-and-integration/ldap/1-ldap.png)](../../assets/images/en/automation-and-integration/ldap/1-ldap.png)
 
 !!! info "memberOf with OpenLDAP"
-    The automatical assignment is based on LDAP querying in which groups there is a user. The memberOf attribute plays an important role in this connection. This attribute has to be available as an overlay. However, in many default installations of OpenLDAP this is not the case. Useful information about the required configurations can be found in [this](http://www.adimian.com/blog/2014/10/how-to-enable-memberof-using-openldap/) and [this article](https://technicalnotes.wordpress.com/2014/04/19/openldap-setup-with-memberof-overlay/).
+    The automatic assignment is based on LDAP querying in which groups there is a user. The memberOf attribute plays an important role in this connection. This attribute has to be available as an overlay. However, in many default installations of OpenLDAP this is not the case. Useful information about the required configurations can be found in [this](http://www.adimian.com/blog/2014/10/how-to-enable-memberof-using-openldap/) and [this article](https://technicalnotes.wordpress.com/2014/04/19/openldap-setup-with-memberof-overlay/).
 
 ### Synchronize persons and groups of persons
 
@@ -174,22 +187,3 @@ The ldap-sync can only be executed via the console of the server. To be able to 
 ```shell
 sudo -u www-data php console.php ldap-sync --user admin --password admin --tenantId 1 --verbose --ldapServerId 1
 ```
-
-## Required Permissions for the LDAP Sync
-
-A user for the `ldap-sync` command requires the following minimum permissions:
-
-**1. Administration (Execute Command)**
-* Condition **Commands**: `All` permissions for the `SyncCommand` parameter.
-
-**2. CMDB (Edit Objects & Groups)**
-* Condition **Category in Object Type "Persons"**: Permissions for the categories:
-    * Persons
-    * Person - Master Data
-    * Person - Login
-    * Person - Group Memberships
-
-* Condition **Category in Object Type "Person groups"**: Permissions for the categories:
-    * Person groups
-    * Person groups - Master Data
-    * Person groups - Memberships

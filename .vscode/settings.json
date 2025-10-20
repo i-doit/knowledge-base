@@ -231,6 +231,7 @@
         "Weblicense",
         "Webtatic",
         "wwwrun",
+        "xampp",
         "XAMPP",
         "xdebug",
         "xmlwriter",
@@ -239,7 +240,17 @@
         "zeitbasierte",
         "zeitbasierten",
         "zeitbasierter",
-        "zypper"
+        "zypper",
+        "setsebool",
+        "getsebool",
+        "ssl",
+        "Attributeerweitertung",
+        "samaccountname",
+        "isset"
     ],
-    "editor.renderWhitespace": "trailing"
+    "editor.renderWhitespace": "trailing",
+    "cSpell.ignoreRegExpList": [
+        "/^(\\s*`{3,}).*`[\\s\\S]*?^\\1 /gmx",
+        "`[^`]*`"
+    ]
 }

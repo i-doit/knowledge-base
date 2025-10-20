@@ -13,7 +13,7 @@ Für die Authentifizierung/Autorisierung und Synchronisierung von Daten aus eine
 !!! info ""
     Ein Praxisbeispiel finden Sie auf unserem [Blog](https://www.i-doit.com/blog/ldap-integration-mit-i-doit/)
 
-**Voraussetzungen**
+## Voraussetzungen
 
 i-doit unterstützt folgende Verzeichnisdienste:
 
@@ -23,10 +23,22 @@ i-doit unterstützt folgende Verzeichnisdienste:
 
 Die [PHP-Extension php_ldap](http://de.php.net/manual/de/ldap.setup.php) für die Kommunikation mit einem Active Directory (AD) bzw. LDAP-Verzeichnis muss installiert und aktiviert werden. Wer den Installationsanweisungen gefolgt ist, hat die Extension bereits auf dem System.
 
-Nicht vergessen, LDAP zu erlauben, wenn SELinux verwendet wird. Dazu `setsebool -P httpd_can_connect_ldap on` verwenden. Das -P steht für Permanent<br>
-Überprüfen Sie dies mit `getsebool -a | grep httpd`
+Nicht vergessen, LDAP zu erlauben, wenn SELinux verwendet wird. Dazu `setsebool -P httpd_can_connect_ldap on` verwenden. Das -P steht für Permanent. Überprüfen Sie dies mit `getsebool -a | grep httpd`
 
-## Nachträgliche Installation unter Debian GNU/Linux
+### Benötigte Rechte für den LDAP-Sync
+
+Ein Benutzer für den `ldap-sync` Befehl benötigt folgende Mindestberechtigungen:
+
+**1. Verwaltung (Befehl ausführen)**
+
+- Bedingung **Commands** und `Alle` Rechte für den Parameter `SyncCommand`.
+
+**2. CMDB (Objekte & Gruppen bearbeiten)**
+
+- Bedingung **Kategorie in Objekttyp "Personen"** und `Alle` Rechte für die Kategorie `Personen - Personengruppenmitgliedschaft`.
+
+
+### Nachträgliche Installation unter Debian GNU/Linux
 
 ```shell
 sudo apt install php-ldap
@@ -66,7 +78,7 @@ Unter **Verwaltung → Import und Schnittstellen → LDAP → Server** können e
 | **Aktiv**                                           | Soll der Server beim Login mit abgefragt werden?                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | **Directory**                                       | **Pflichtfeld**: Welche Art Directory wird abgefragt?                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | **LDAP-Version**                                    | In welcher Version ist das Directory vorhanden? (Standard: 3)                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| **Enable LDAP Paging**                              | Soll die maximale Anzahl der Suchergebnisse aktiviert/überschrieben werden?  <br>Dann werden die Ergebnisse "päckchenweise" übermittelt.<br><br>_In einem LDAP-Suchvorgang muss stets damit gerechnet werden, dass der LDAP-Server eine Obergrenze der zurückgelieferten Ergebnisse pro Suchanfrage hat. Man sucht z.B. nach allen User-Objekten in einer gesamten OU-Struktur, bekommt aber nur 500 User als Ergebnis zurück, obwohl sich weit über 2000 User auf dem Server befinden müssen._ |
+| **Enable LDAP Paging**                              | Soll die maximale Anzahl der Suchergebnisse aktiviert/überschrieben werden?  <br>Dann werden die Ergebnisse Paket für Paket übermittelt.<br><br>_In einem LDAP-Suchvorgang muss stets damit gerechnet werden, dass der LDAP-Server eine Obergrenze der zurückgelieferten Ergebnisse pro Suchanfrage hat. Man sucht z.B. nach allen User-Objekten in einer gesamten OU-Struktur, bekommt aber nur 500 User als Ergebnis zurück, obwohl sich weit über 2000 User auf dem Server befinden müssen._ |
 | **LDAP Page Limit**                                 | Wie viele Ergebnisse sollen pro "Päckchen" zurückgeliefert werden?                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | **IP / Hostname**                                   | **Pflichtfeld**: Die IP oder der Hostname des Servers                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | **Port**                                            | **Pflichtfeld**: Über welchen Port wird die Abfrage durchgeführt? (Standard: 389)                                                                                                                                                                                                                                                                                                                                                                                                               |
@@ -146,10 +158,10 @@ Ein Beispiel dazu ist [hier](../../automatisierung-und-integration/cli/configura
 | **defaultCompany**            | Hierdurch werden durch die LDAP-Synchronisation hinzugefügte Benutzer automatisch der konfigurierten<br><br>Organisation zugewiesen. (Standard: leer)<br><br>Bsp. <br><br>defaultCompany='i-doit'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | **deletedUsersBehaviour**     | Kann auf **archive**, **delete** und **disable_login** gesetzt werden um Benutzer auf [archiviert bzw. gelöscht](../../grundlagen/lebens-und-dokumentationszyklus.md) zu setzen, die nicht mehr über die Synchronisation gefunden werden. Ein archivierter/gelöschter Benutzer kann sich nicht mehr in i-doit anmelden.<br><br>deletedUserBehavior=archive, setzt den Status des Benutzers auf archiviert  <br>deletedUserBehavior=delete, setzt den Status des Benutzers auf gelöscht  <br>deletedUserBehavior=disable\_login, setzt den Status des Benutzers auf normal und Deaktiviere Login auf Ja<br><br>(Standard: **archive)**<br><br>Bsp.<br><br>deletedUsersBehaviour=archive |
 | **disabledUsersBehaviour**    | Kann auf **archive**, **delete** und **disable_login** gesetzt werden um Benutzer auf [archiviert bzw. gelöscht](../../grundlagen/lebens-und-dokumentationszyklus.md) zu setzen, die nicht mehr über die Synchronisation gefunden werden. Ein archivierter/gelöschter Benutzer kann sich nicht mehr in i-doit anmelden.<br><br>Oder man deaktiviert nur den Login für die User.<br><br>Bsp.<br><br>disabledUsersBehaviour=archive                                                                                                                                                                                                                                                      |
-| **rooms**                     | Wie in dem Beispiel kann hier eine Zuweisung von Benutzer zu einem Raum vordefiniert werden, die bei der Synchronisation vorgenommen wird. Die Zuweisung wird über die Kontaktzuweisung ohne eine Rolle realisiert.<br><br>Bsp. <br><br>rooms["Raum B"] = ["Person A", "Person C", "Person D"]                                                                                                                                                                                                                                                                                                                                                                                         |
-| **attributes**                | Hiermit werden die jeweiligen Felder aus dem Directory mit Attributen in i-doit verknüpft. Diese ergänzen die zugewiesenen Attribute aus dem oberen Teil der Anleitung.<br><br>Bsp.<br><br>attributes[department]=department                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **rooms**                     | Wie in dem Beispiel kann hier eine Zuweisung von Benutzer zu einem Raum vordefiniert werden, die bei der Synchronisation vorgenommen wird. Die Zuweisung wird über die Kontaktzuweisung ohne eine Rolle realisiert.<br><br>Bsp. <br><br>rooms\["Raum B"] = \["Person A", "Person C", "Person D"]                                                                                                                                                                                                                                                                                                                                                                                       |
+| **attributes**                | Hiermit werden die jeweiligen Felder aus dem Directory mit Attributen in i-doit verknüpft. Diese ergänzen die zugewiesenen Attribute aus dem oberen Teil der Anleitung.<br><br>Bsp.<br><br>attributes\[department]=department                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | **autoReactivateUsers**       | Ist nur für Novel Directory Services (NDS) und OpenLDAP relevant. Hierdurch werden bei der Synchronisation erst mal alle Benutzer wieder aktiviert und nach dem regulären Prinzip wieder deaktiviert, falls zutreffend.<br><br>Bsp.<br><br>autoReactivateUsers=false                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| **ignoreUsersWithAttributes** | Diese Funktion hilft, eine Synchronisation unerwünschter Verzeichnisobjekte zu verhindern.<br><br>Der Benutzer wird nicht synchronisiert, wenn die ignoreFunctionfür alle ausgewählten Attribute fehlschlägt.<br><br>Bsp.<br><br>ignoreUsersWithAttributes\[\] = "samaccountname"                                                                                                                                                                                                                                                                                                                                                                                                      |
+| **ignoreUsersWithAttributes** | Diese Funktion hilft, eine Synchronisation unerwünschter Verzeichnisobjekte zu verhindern.<br><br>Der Benutzer wird nicht synchronisiert, wenn die ignoreFunction für alle ausgewählten Attribute fehlschlägt.<br><br>Bsp.<br><br>ignoreUsersWithAttributes\[\] = "samaccountname"                                                                                                                                                                                                                                                                                                                                                                                                     |
 | **ignoreFunction**            | Dies kann ein beliebiger Funktionsname sein, der über call\_user\_func oder die definierten Funktionen aufrufbar ist.<br><br>Definierte Funktionen:<br><br>empty  <br>!empty  <br>isset  <br>!isset<br><br>Bsp,<br><br>ignoreFunction\=empty                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | **syncEmptyAttributes**       | Wurden Werte aus Feldern im AD gelöscht/geleert werden diese in i-doit übernommen<br><br>syncEmptyAttributes=true                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
@@ -157,7 +169,7 @@ Ein Beispiel dazu ist [hier](../../automatisierung-und-integration/cli/configura
 
 Die automatische Zuweisung sorgt dafür, dass nach dem Login automatisch die für die Personengruppe festgelegten Berechtigungen zugewiesen werden. Damit die Zuweisung erfolgen kann, muss in den **Stammdaten** einer **Personengruppe** das Attribut **LDAP-Gruppe (Mapping)** mit einer validen Gruppe aus LDAP/AD gefüllt werden. Loggt sich ein Benutzer ein oder wird die Synchronisation ausgeführt, werden automatisch auch die dem Benutzerobjekt im Directory zugewiesenen Gruppen abgefragt und mit dem Attribut **LDAP-Gruppe (Mapping)** der Personengruppen verglichen. Gibt es eine Übereinstimmung wird die Gruppe zugewiesen und die weiteren Gruppen abgefragt.
 
-[![ldap-autozuweis](../../assets/images/de/automatisierung-und-integration/ldap/1-ldap.png)](../../assets/images/de/automatisierung-und-integration/ldap/1-ldap.png)
+[![ldap-autozuweisung](../../assets/images/de/automatisierung-und-integration/ldap/1-ldap.png)](../../assets/images/de/automatisierung-und-integration/ldap/1-ldap.png)
 
 !!! info "memberOf bei OpenLDAP"
     Die automatische Zuweisung beruht auf der LDAP-Abfrage, in welchen Gruppen ein Benutzer ist. Hierbei spielt das Attribut memberOf eine wichtige Rolle. Dieses Attribut muss als Overlay verfügbar sein, was in vielen Standard-Installationen von OpenLDAP nicht der Fall ist. Gute Artikel für die nötige Konfiguration befinden sich [hier](http://www.adimian.com/blog/2014/10/how-to-enable-memberof-using-openldap/) und [hier](https://technicalnotes.wordpress.com/2014/04/19/openldap-setup-with-memberof-overlay/).
@@ -184,22 +196,3 @@ Der ldap-sync lässt sich nur über die Console des Servers ausführen. Um die C
 ```shell
 sudo -u www-data php console.php ldap-sync --user admin --password admin --tenantId 1 --verbose --ldapServerId 1
 ```
-
-## Benötigte Rechte für den LDAP-Sync
-
-Ein Benutzer für den `ldap-sync` Befehl benötigt folgende Mindestberechtigungen:
-
-**1. Verwaltung (Befehl ausführen)**
-* Bedingung **Commands** und `Alle` Rechte für den Parameter `SyncCommand`.
-
-**2. CMDB (Objekte & Gruppen bearbeiten)**
-* Bedingung **Kategorie in Objekttyp "Personen"**: Rechte auf die Kategorien:
-    * Personen
-    * Personen - Stammdaten
-    * Personen - Login
-    * Personen - Gruppenmitgliedschaften
-
-* **Objekttyp Kategorie in Objekttyp "Personengruppen"**: Rechte auf die Kategorien:
-    * Personengruppen
-    * Personengruppen - Stammdaten
-    * Personengruppen - Gruppenmitgliedschaften
