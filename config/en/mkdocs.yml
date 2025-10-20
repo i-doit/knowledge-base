@@ -264,8 +264,8 @@ nav:
           - installation/manual-installation/index.md
           - Debian GNU/Linux: installation/manual-installation/debian/index.md
           - Red Hat Enterprise Linux (RHEL) and compatible:
-            - installation/manual-installation/red-hat-enterprise-linux/index.md
-            - Red Hat Enterprise Linux 9: installation/manual-installation/red-hat-enterprise-linux/rhel9.md
+              - installation/manual-installation/red-hat-enterprise-linux/index.md
+              - Red Hat Enterprise Linux 9: installation/manual-installation/red-hat-enterprise-linux/rhel9.md
           - SUSE Linux Enterprise Server (SLES): installation/manual-installation/suse/index.md
           - Ubuntu GNU/Linux: installation/manual-installation/ubuntu/index.md
           - Microsoft Windows Server:
