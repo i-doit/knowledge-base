@@ -19,6 +19,9 @@ The corresponding packages can be downloaded here (64bit version): [x64 Thread S
 
 !!! warning "It must be a zip file and the 'x64 Thread Safe' version"
 
+Please check beforehand if the PHP version is compatible with your i-doit version!
+You can find our [compatibility-matrix here](../installation/system-requirements.md#compatibility-matrix).
+
 ### MariaDB 10.11
 
 To successfully update from MariaDB 10.11 we need the [MariaDB Server 10.11.1 RC Version](https://mariadb.org/download/?t=mariadb&o=true&p=mariadb&r=10.11.1&os=windows&cpu=x86_64&pkg=msi&mirror=archive)
