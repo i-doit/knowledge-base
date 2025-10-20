@@ -297,12 +297,13 @@ sudo chcon -t httpd_sys_rw_content_t "/var/www/html/" -R
 ### MariaDB
 
 Damit MariaDB eine gute Performance liefert und sicher betrieben werden kann, sind einige, wenige Schritte nötig, die penibel ausgeführt werden sollten. Dies fängt an mit einer sicheren Installation. **Den Empfehlungen sollte gefolgt werden**. Der Benutzer **root** sollte ein sicheres Passwort erhalten:
+
+!!! warning "Aktivieren Sie die Socket-Authentifizierung **nicht** für den Benutzer root, da dies i-doit daran hindern würde, eine Verbindung zur Datenbank herzustellen."
 <!-- cSpell:disable -->
 ```sh
 sudo mysql_secure_installation
 ```
 <!-- cSpell:enable -->
-!!! warning "Aktivieren Sie die Socket-Authentifizierung **nicht** für den Benutzer root, da dies i-doit daran hindern würde, eine Verbindung zur Datenbank herzustellen."
 
 Anschließend wird MariaDB auf [slow shutdown](https://mariadb.com/kb/en/innodb-system-variables/#innodb_fast_shutdown) gesetzt:
 <!-- cSpell:disable -->
