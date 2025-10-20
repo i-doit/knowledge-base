@@ -1,89 +1,97 @@
 ---
-title: Red Hat Enterprise Linux 10
-description: i-doit installation auf RHEL 10
+title: Red Hat Enterprise Linux 9.6
+description: i-doit installation auf RHEL 9.6
 icon: material/redhat
 status:
-lang: en
+lang: de
 ---
 
-!!! note "Tested with i-doit **36** and **Red Hat Linux Enterprise Server 10.0**"
+!!! note "Getestet mit i-doit **36** und RHEL 9.6"
 
-In this article, we explain in a few steps which packages need to be installed and configured.
+Welche Pakete zu installieren und zu konfigurieren sind, erklären wir in wenigen Schritten in diesem Artikel.
 
-## System requirements
+## Systemvoraussetzungen
 
-The general [system requirements](../../system-requirements.md) apply. To determine which version is used, this command can be executed on the console:
+Es gelten die allgemeinen [Systemvoraussetzungen](../../systemvoraussetzungen.md). Um zu bestimmen, welche Version eingesetzt wird, kann auf der Konsole dieser Befehl ausgeführt werden:
 <!-- cSpell:disable -->
 ```sh
 cat /etc/os-release
 ```
 <!-- cSpell:enable -->
-As system architecture a x86 in 64bit should be used:
+Als Systemarchitektur sollte ein x86 in 64bit zum Einsatz kommen:
 <!-- cSpell:disable -->
 ```sh
 uname -m
 ```
 <!-- cSpell:enable -->
-**x86_64** stands for 64bit, **i386** or **i686** only for 32bit.
+**x86_64** bedeutet 64bit, **i386** oder **i686** lediglich 32bit.
 
-## Installation of the packages
+## Installation der Pakete
 
-On a system that is up-to-date
+Auf einem aktuell gehaltenen System werden
 
--   the **Apache** HTTP Server 2.4,
--   the script language **PHP-FPM** 8.3,
--   the database management system **MariaDB** 10.11 and
--   the caching server **memcached**
+*   der **Apache** HTTP Server 2.4,
+*   die Script-Sprache **PHP-FPM** 8.3,
+*   das Datenbankmanagementsystem **MariaDB** 10.11 und
+*   der Caching-Server **memcached**
 
-At first the first packages are installed from the default repositories:
+installiert.
+
+Zunächst werden erste Pakete aus den Standard-Repositories aktualisiert:
 <!-- cSpell:disable -->
 ```sh
 sudo dnf update
 ```
 <!-- cSpell:enable -->
-Install packages:
+Installieren von PHP 8.3 und MariaDB über Module Stream:
 <!-- cSpell:disable -->
 ```sh
-sudo dnf install mariadb-server mariadb httpd boost-program-options memcached unzip php php-{bcmath,curl,gd,json,ldap,mysqli,mysqlnd,odbc,pecl-zip,pgsql,pdo,snmp,soap,zip} -y
+sudo dnf module enable php:8.3 mariadb:10.11 -y
+sudo dnf module install php:8.3 mariadb:10.11 -y
 ```
 <!-- cSpell:enable -->
-!!! info "Additional steps are necessary for the PHP extension memcached: <https://access.redhat.com/solutions/7002155>. i-doit also works without"
+Die Installation weiterer Pakete erfolgt danach:
+<!-- cSpell:disable -->
+```sh
+sudo dnf install httpd boost-program-options memcached unzip php php-{bcmath,curl,gd,json,ldap,mysqli,mysqlnd,odbc,pecl-zip,pgsql,pdo,snmp,soap,zip} -y
+```
+<!-- cSpell:enable -->
+!!! info "Für die PHP extension memcached sind weitere Schritte notwendig: <https://access.redhat.com/solutions/7002155>. i-doit funktioniert auch ohne."
 
-These commands are required so that the Apache HTTP server, MariaDB, PHP-FPM and memcached are also started at boot time:
+Damit der Apache HTTP Server, MariaDB, PHP-FPM und memcached auch beim Booten gestartet werden, sind diese Befehle erforderlich:
 <!-- cSpell:disable -->
 ```sh
 sudo systemctl enable httpd mariadb php-fpm memcached
 ```
 <!-- cSpell:enable -->
-The services are then started:
+Anschließend erfolgt der Start der Dienste:
 <!-- cSpell:disable -->
 ```sh
 sudo systemctl start httpd mariadb php-fpm memcached
 ```
 <!-- cSpell:enable -->
-Furthermore, the standard HTTP port 80 is permitted via the firewall. This must be restarted after the adjustment:
+Weiterhin wird der Standard-Port 80 von HTTP über die Firewall erlaubt. Diese muss nach der Anpassung neu gestartet werden:
 <!-- cSpell:disable -->
 ```sh
 sudo firewall-cmd --permanent --add-service=http
 sudo systemctl restart firewalld.service
 ```
 <!-- cSpell:enable -->
+!!! info "Für HTTPS müssen weitere Schritte durchgeführt werden die hier nicht behandelt werden, siehe [Sicherheit und Schutz](../../../wartung-und-betrieb/sicherheit-und-schutz.md)"
 
-!!! success "If you want to use i-doit via HTTPS, you have to create a corresponding VirtualHost configuration for port 443. [This is not described here.](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10/html/deploying_web_servers_and_reverse_proxies/setting-up-the-apache-http-web-server#configuring-tls-encryption-on-an-apache-http-server)"
+## Konfiguration
 
-## Configuration
+Die installierten Pakete für Apache HTTP Server, PHP und MariaDB bringen bereits Konfigurationsdateien mit. **Es empfiehlt sich, abweichende Einstellungen in gesonderten Dateien zu speichern**, anstatt die vorhandenen Konfigurationsdateien anzupassen. Die Einstellungen der Standardkonfiguration werden durch die benutzerdefinierten ergänzt bzw. überschrieben.
 
-The installed packages for Apache HTTP Server, PHP and MariaDB already include configuration files. **It is recommended to save deviating settings in separate files** instead of adapting the existing configuration files. The settings of the standard configuration are supplemented or overwritten by the user-defined settings.
+### PHP Konfiguration
 
-### PHP Configuration
-
-First, a new file is created and filled with the necessary settings:
+Zunächst wird eine neue Datei erstellt und mit den nötigen Einstellungen befüllt:
 <!-- cSpell:disable -->
 ```sh
 sudo nano /etc/php.d/i-doit.ini
 ```
 <!-- cSpell:enable -->
-!!! example "This file contains the following content specified by us. For more information on the parameters, see [PHP.net](https://www.php.net/manual/en/install.fpm.configuration.php)"
+!!! example "Diese Datei erhält folgende von uns vorgegebenen Inhalt. Für mehr Informationen zu den Parametern, schauen Sie auf [PHP.net](https://www.php.net/manual/en/install.fpm.configuration.php) vorbei"
 <!-- cSpell:disable -->
 ```ini
 allow_url_fopen = Yes
@@ -111,26 +119,26 @@ session.cookie_lifetime = 0
 mysqli.default_socket = /var/lib/mysql/mysql.sock
 ```
 <!-- cSpell:enable -->
-The `memory_limit` must be increased if necessary, e.g. for very large reports or extensive documents.
-The value (in seconds) of **session.gc_maxlifetime** should be greater than or equal to the **session timeout** in the [system settings](../system-settings.md) of i-doit.
-The **date.timezone** parameter should be adjusted to the local time zone (see [List of supported time zones](http://php.net/manual/de/timezones.php)).
+Das `memory_limit` muss bei bedarf z.B. bei sehr großen Reports oder umfangreichen Dokumenten erhöht werden.
+Der Wert (in Sekunden) von **session.gc_maxlifetime** sollte größer oder gleich dem **Session Timeout** in den [Systemeinstellungen](../systemeinstellungen.md) von i-doit sein.
+Der Parameter **date.timezone** sollte auf die lokale Zeitzone anpasst werden (siehe [Liste unterstützter Zeitzonen](http://php.net/manual/de/timezones.php)).
 
-### Apache HTTP Server configuration
+### Apache HTTP Server Konfiguration
 
-The Welcome Page is renamed and replaced with an empty file:
+Die Welcome Page wird umbenannt und durch eine leere Datei ersetzt:
 <!-- cSpell:disable -->
 ```sh
 sudo mv /etc/httpd/conf.d/welcome.conf{,.bak}
 sudo touch /etc/httpd/conf.d/welcome.conf
 ```
 <!-- cSpell:enable -->
-Now a new virtual host is created for i-doit:
+Nun wird ein neuer Virtual Host für i-doit angelegt:
 <!-- cSpell:disable -->
 ```sh
 sudo nano /etc/httpd/conf.d/i-doit.conf
 ```
 <!-- cSpell:enable -->
-This file contains the following content:
+Diese Datei erhält folgenden Inhalt:
 <!-- cSpell:disable -->
 ```apache
 <VirtualHost *:80>
@@ -279,45 +287,44 @@ This file contains the following content:
 </VirtualHost>
 ```
 <!-- cSpell:enable -->
-!!! note "i-doit provides different Apache settings in files with the name **.htaccess**. These must be checked after each update and updated in the VirtualHost configuration."
+!!! note "i-doit liefert abweichende Apache-Einstellungen in Dateien mit dem Namen **.htaccess** mit. Diese müssen nach jedem Update geprüft und in der VirtualHost Konfiguration aktualisiert werden."
 
-In the next step, the Apache HTTP server is restarted:
+Im nächsten Schritt wird der Apache HTTP Server neu gestartet:
 <!-- cSpell:disable -->
 ```sh
 sudo systemctl restart httpd php-fpm
 ```
 <!-- cSpell:enable -->
-In order for Apache to have read and write permissions in the future installation directory of i-doit, this must be permitted by **SELinux**:
+Damit Apache Lese- und Schreibrechte im künftigen Installationsverzeichnis von i-doit hat, muss dies von **SELinux** erlaubt werden:
 <!-- cSpell:disable -->
 ```sh
 sudo chown apache:apache -R /var/www/html
 sudo chcon -t httpd_sys_rw_content_t "/var/www/html/" -R
 ```
 <!-- cSpell:enable -->
-### MariaDB configuration
+### MariaDB
 
-To ensure that MariaDB delivers good performance and can be operated securely, a few steps are necessary that should be carried out meticulously. This starts with a secure installation. **The recommendations should be followed**. The user **root** should be given a secure password:
-
-!!! warning "Do **not** activate socket authentication for the user root, as this would prevent i-doit from connecting to the database."
+Damit MariaDB eine gute Performance liefert und sicher betrieben werden kann, sind einige, wenige Schritte nötig, die penibel ausgeführt werden sollten. Dies fängt an mit einer sicheren Installation. **Den Empfehlungen sollte gefolgt werden**. Der Benutzer **root** sollte ein sicheres Passwort erhalten:
 <!-- cSpell:disable -->
 ```sh
 sudo mysql_secure_installation
 ```
 <!-- cSpell:enable -->
+!!! warning "Aktivieren Sie die Socket-Authentifizierung **nicht** für den Benutzer root, da dies i-doit daran hindern würde, eine Verbindung zur Datenbank herzustellen."
 
-MariaDB is then set to [slow shutdown](https://mariadb.com/kb/en/innodb-system-variables/#innodb_fast_shutdown):
+Anschließend wird MariaDB gestoppt und auf [slow shutdown](https://mariadb.com/kb/en/innodb-system-variables/#innodb_fast_shutdown) gesetzt:
 <!-- cSpell:disable -->
 ```sh
 mysql -u root -p -e"SET GLOBAL innodb_fast_shutdown = 0"
 ```
 <!-- cSpell:enable -->
-A new file is created for the different configuration settings:
+Für die abweichenden Konfigurationseinstellungen wird eine neue Datei erstellt:
 <!-- cSpell:disable -->
 ```sh
 sudo nano /etc/my.cnf.d/99-i-doit.cnf
 ```
 <!-- cSpell:enable -->
-This file contains the new configuration settings. **For optimum performance, these settings should be adapted to the (virtual) hardware**:
+Diese Datei enthält die neuen Konfigurationseinstellungen. **Für eine optimale Performance sollten diese Einstellungen an die (virtuelle) Hardware angepasst werden**:
 <!-- cSpell:disable -->
 ```conf
 [mysqld]
@@ -354,13 +361,13 @@ innodb_stats_on_metadata = 0
 sql-mode = ""
 ```
 <!-- cSpell:enable -->
-Finally, MariaDB is restarted:
+Abschließend wird MariaDB gestartet:
 <!-- cSpell:disable -->
 ```sh
 sudo systemctl restart mariadb.service
 ```
 <!-- cSpell:enable -->
-Finally, we need to configure SELinux so that Apache can access the network and the database:
+Zum Schluss müssen wir noch SELinux konfigurieren, damit Apache auf das Netzwerk und die Datenbank zugreifen kann:
 <!-- cSpell:disable -->
 ```sh
 # Allow Apache to connect to the database
@@ -371,8 +378,8 @@ sudo setsebool -P httpd_can_network_connect 1
 sudo semanage port -a -t postgresql_port_t -p tcp 25321
 ```
 <!-- cSpell:enable -->
-## Next Step
+## Nächster Schritt
 
-The operating system is now prepared so that i-doit can be installed:
+Das Betriebssystem ist nun vorbereitet, sodass i-doit installiert werden kann:
 
-[Go to **Setup**](../setup.md)
+[Weiter zu **Setup**](../setup.md)

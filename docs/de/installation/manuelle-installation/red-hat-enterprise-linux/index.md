@@ -1,29 +1,29 @@
 ---
-title: Red Hat Enterprise Linux 9.6
-description: i-doit installation auf RHEL 9.6
+title: Red Hat Enterprise Linux 10
+description: i-doit installation auf RHEL 10
 icon: material/redhat
 status:
 lang: de
 ---
 
-!!! note "Getestet mit i-doit **36** und RHEL 9.6"
+!!! note "Getestet mit i-doit **36** und **Red Hat Linux Enterprise Server 10.0**"
 
 Welche Pakete zu installieren und zu konfigurieren sind, erklären wir in wenigen Schritten in diesem Artikel.
 
 ## Systemvoraussetzungen
 
 Es gelten die allgemeinen [Systemvoraussetzungen](../../systemvoraussetzungen.md). Um zu bestimmen, welche Version eingesetzt wird, kann auf der Konsole dieser Befehl ausgeführt werden:
-
+<!-- cSpell:disable -->
 ```sh
 cat /etc/os-release
 ```
-
+<!-- cSpell:enable -->
 Als Systemarchitektur sollte ein x86 in 64bit zum Einsatz kommen:
-
+<!-- cSpell:disable -->
 ```sh
 uname -m
 ```
-
+<!-- cSpell:enable -->
 **x86_64** bedeutet 64bit, **i386** oder **i686** lediglich 32bit.
 
 ## Installation der Pakete
@@ -38,26 +38,17 @@ Auf einem aktuell gehaltenen System werden
 installiert.
 
 Zunächst werden erste Pakete aus den Standard-Repositories aktualisiert:
-
+<!-- cSpell:disable -->
 ```sh
 sudo dnf update
 ```
-
-Installieren von PHP 8.3 und MariaDB über Module Stream:
-
-```sh
-sudo dnf module enable php:8.3 mariadb:10.11 -y
-sudo dnf module install php:8.3 mariadb:10.11 -y
-```
-
-Die Installation weiterer Pakete erfolgt danach:
+<!-- cSpell:enable -->
+Die Installation weiterer Pakete:
 <!-- cSpell:disable -->
 ```sh
-sudo dnf install httpd boost-program-options memcached unzip php php-{bcmath,curl,gd,json,ldap,mysqli,mysqlnd,odbc,pecl-zip,pgsql,pdo,snmp,soap,zip} -y
+sudo dnf install mariadb-server mariadb httpd boost-program-options memcached unzip php php-{bcmath,curl,gd,json,ldap,mysqli,mysqlnd,odbc,pecl-zip,pgsql,pdo,snmp,soap,zip} -y
 ```
 <!-- cSpell:enable -->
-!!! info "Für die PHP extension memcached sind weitere Schritte notwendig: <https://access.redhat.com/solutions/7002155>. i-doit funktioniert auch ohne."
-
 Damit der Apache HTTP Server, MariaDB, PHP-FPM und memcached auch beim Booten gestartet werden, sind diese Befehle erforderlich:
 <!-- cSpell:disable -->
 ```sh
@@ -70,14 +61,15 @@ Anschließend erfolgt der Start der Dienste:
 sudo systemctl start httpd mariadb php-fpm memcached
 ```
 <!-- cSpell:enable -->
-Weiterhin wird der Standard-Port 80 von HTTP über die Firewall erlaubt. Diese muss nach der Anpassung neu gestartet werden:
+Weiterhin wird der Standard HTTP Port 80 über die Firewall erlaubt. Diese muss nach der Anpassung neu gestartet werden:
 <!-- cSpell:disable -->
 ```sh
 sudo firewall-cmd --permanent --add-service=http
 sudo systemctl restart firewalld.service
 ```
 <!-- cSpell:enable -->
-!!! info "Für HTTPS müssen weitere Schritte durchgeführt werden die hier nicht behandelt werden, siehe [Sicherheit und Schutz](../../../wartung-und-betrieb/sicherheit-und-schutz.md)"
+
+!!! success "If you want to use i-doit via HTTPS, you have to create a corresponding VirtualHost configuration for port 443. [This is not described here.](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10/html/deploying_web_servers_and_reverse_proxies/setting-up-the-apache-http-web-server#configuring-tls-encryption-on-an-apache-http-server)"
 
 ## Konfiguration
 
@@ -86,11 +78,11 @@ Die installierten Pakete für Apache HTTP Server, PHP und MariaDB bringen bereit
 ### PHP Konfiguration
 
 Zunächst wird eine neue Datei erstellt und mit den nötigen Einstellungen befüllt:
-
+<!-- cSpell:disable -->
 ```sh
 sudo nano /etc/php.d/i-doit.ini
 ```
-
+<!-- cSpell:enable -->
 !!! example "Diese Datei erhält folgende von uns vorgegebenen Inhalt. Für mehr Informationen zu den Parametern, schauen Sie auf [PHP.net](https://www.php.net/manual/en/install.fpm.configuration.php) vorbei"
 <!-- cSpell:disable -->
 ```ini
@@ -125,22 +117,22 @@ Der Parameter **date.timezone** sollte auf die lokale Zeitzone anpasst werden (s
 
 ### Apache HTTP Server Konfiguration
 
-Die Welcome Page wird umbenannt und durch eine leere Datei ersetzt:
-
+Die Welcome Page wird, durch umbenennen, deaktiviert:
+<!-- cSpell:disable -->
 ```sh
 sudo mv /etc/httpd/conf.d/welcome.conf{,.bak}
 sudo touch /etc/httpd/conf.d/welcome.conf
 ```
-
+<!-- cSpell:enable -->
 Nun wird ein neuer Virtual Host für i-doit angelegt:
-
+<!-- cSpell:disable -->
 ```sh
 sudo nano /etc/httpd/conf.d/i-doit.conf
 ```
-
+<!-- cSpell:enable -->
 Diese Datei erhält folgenden Inhalt:
 <!-- cSpell:disable -->
-```ini
+```apache
 <VirtualHost *:80>
     ServerName idoit.example.com
     ServerAdmin webmaster@example.com
@@ -306,17 +298,17 @@ sudo chcon -t httpd_sys_rw_content_t "/var/www/html/" -R
 
 Damit MariaDB eine gute Performance liefert und sicher betrieben werden kann, sind einige, wenige Schritte nötig, die penibel ausgeführt werden sollten. Dies fängt an mit einer sicheren Installation. **Den Empfehlungen sollte gefolgt werden**. Der Benutzer **root** sollte ein sicheres Passwort erhalten:
 
-```sh
-mysql_secure_installation
-```
-
 !!! warning "Aktivieren Sie die Socket-Authentifizierung **nicht** für den Benutzer root, da dies i-doit daran hindern würde, eine Verbindung zur Datenbank herzustellen."
+<!-- cSpell:disable -->
+```sh
+sudo mysql_secure_installation
+```
+<!-- cSpell:enable -->
 
-Anschließend wird MariaDB gestoppt und auf [slow shutdown](https://mariadb.com/kb/en/innodb-system-variables/#innodb_fast_shutdown) gesetzt:
+Anschließend wird MariaDB auf [slow shutdown](https://mariadb.com/kb/en/innodb-system-variables/#innodb_fast_shutdown) gesetzt:
 <!-- cSpell:disable -->
 ```sh
 mysql -u root -p -e"SET GLOBAL innodb_fast_shutdown = 0"
-sudo systemctl stop mariadb.service
 ```
 <!-- cSpell:enable -->
 Für die abweichenden Konfigurationseinstellungen wird eine neue Datei erstellt:
@@ -327,7 +319,7 @@ sudo nano /etc/my.cnf.d/99-i-doit.cnf
 <!-- cSpell:enable -->
 Diese Datei enthält die neuen Konfigurationseinstellungen. **Für eine optimale Performance sollten diese Einstellungen an die (virtuelle) Hardware angepasst werden**:
 <!-- cSpell:disable -->
-```sh
+```conf
 [mysqld]
 # This is the number 1 setting to look at for any performance optimization
 # It is where the data and indexes are cached: having it as large as possible will
@@ -363,15 +355,20 @@ sql-mode = ""
 ```
 <!-- cSpell:enable -->
 Abschließend wird MariaDB gestartet:
-
+<!-- cSpell:disable -->
 ```sh
 sudo systemctl restart mariadb.service
 ```
-
-Zum Schluss müssen wir noch SELinux konfigurieren:
+<!-- cSpell:enable -->
+Zum Schluss müssen wir noch SELinux konfigurieren, damit Apache auf das Netzwerk und die Datenbank zugreifen kann:
 <!-- cSpell:disable -->
 ```sh
+# Allow Apache to connect to the database
 sudo setsebool -P httpd_can_network_connect_db 1
+# Allow Apache to connect to the network
+sudo setsebool -P httpd_can_network_connect 1
+# Allow Apache to connect to unusual pgsql Port for JDisc
+sudo semanage port -a -t postgresql_port_t -p tcp 25321
 ```
 <!-- cSpell:enable -->
 ## Nächster Schritt
