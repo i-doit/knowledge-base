@@ -3,7 +3,7 @@ cyclonedx-bom == 7.2.1
 Jinja2 ~= 3.1.6
 Markdown ~= 3.9
 mkdocs == 1.6.1
-mkdocs-git-revision-date-localized-plugin ~= 1.4.7
+mkdocs-git-revision-date-localized-plugin ~= 1.5.0
 mkdocs-macros-plugin ~= 1.4.1
 mkdocs-material == 9.6.23
 mkdocs-minify-plugin ~= 0.8.0
