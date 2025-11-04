@@ -47,7 +47,7 @@ The update package is downloaded from the [customer portal](../../system-adminis
 The update package can be stored on the server (e.g. via [WinSCP](https://winscp.net/eng/docs/)). Then move the package to the root directory of **i-doit**, if you have not already placed it there directly. You can do this with this command:
 
 ```shell
-sudo mv idoit-33-update.zip /var/www/html/i-doit/
+sudo mv idoit-33-update.zip /var/www/html/
 ```
 
 #### Step 3: Extract ZIP file
@@ -55,7 +55,7 @@ sudo mv idoit-33-update.zip /var/www/html/i-doit/
 Switch to the i-doit folder:
 
 ```shell
-cd /var/www/html/i-doit/
+cd /var/www/html/
 ```
 
 Extract the ZIP file with:
@@ -71,7 +71,7 @@ Now the file permissions are adjusted so that the web server has read and write 
 !!! quote ""
     === "Debian & Ubuntu"
         ```shell
-        cd /var/www/html/i-doit/
+        cd /var/www/html/
         sudo chown www-data:www-data -R .
         sudo find . -type d -name \* -exec chmod 775 {} \;
         sudo find . -type f -exec chmod 664 {} \;
@@ -79,7 +79,7 @@ Now the file permissions are adjusted so that the web server has read and write 
 
     === "Red Hat Enterprise Linux (RHEL)"
         ```shell
-        cd /var/www/html/i-doit/
+        cd /var/www/html/
         sudo chown apache:apache -R .
         sudo find . -type d -name \* -exec chmod 775 {} \;
         sudo find . -type f -exec chmod 664 {} \;
@@ -87,7 +87,7 @@ Now the file permissions are adjusted so that the web server has read and write 
 
     === "SUSE Linux Enterprise Server (SLES)"
         ```shell
-        cd /var/www/html/i-doit/
+        cd /var/www/html/
         sudo chown wwwrun:www -R .
         sudo find . -type d -name \* -exec chmod 775 {} \;
         sudo find . -type f -exec chmod 664 {} \;
@@ -197,8 +197,8 @@ sudo crontab -u www-data -e
 Add the following lines at the end of the file, after replacing the i-doit login information. You may also need to replace the tenant ID.
 
 ```shell
-* * * * * /usr/bin/php /var/www/html/i-doit/console.php flows:time-trigger --user admin-user --password admin-user-password --tenantId 1
-* * * * * /usr/bin/php /var/www/html/i-doit/console.php flows:perform ---user admin-user --password admin-user-password --tenantId 1
+* * * * * /usr/bin/php /var/www/html/console.php flows:time-trigger --user admin-user --password admin-user-password --tenantId 1
+* * * * * /usr/bin/php /var/www/html/console.php flows:perform ---user admin-user --password admin-user-password --tenantId 1
 ```
 --->
 

@@ -41,13 +41,13 @@ Log in to the [Admin-Center](admin-center.md) and then the token is displayed un
 The "Weblicense Token" is stored in the file `.../i-doit/src/config.inc.php`. You can output the token directly if you adapt this command to your i-doit installation path:
 
 ```shell
-cat /var/www/html/i-doit/src/config.inc.php | grep license_token
+cat /var/www/html/src/config.inc.php | grep license_token
 ```
 
 The output will then look something like this:
 
 ```shell
-cat /var/www/html/i-doit/src/config.inc.php | grep license_token
+cat /var/www/html/src/config.inc.php | grep license_token
 $g_license_token = 'abcdefg1234567890';
 ```
 

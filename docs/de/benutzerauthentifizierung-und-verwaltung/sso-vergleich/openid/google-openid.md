@@ -72,7 +72,7 @@ sudo systemctl restart apache2
 
 ### Authentifizierung testen und finalisieren
 
-Eine Datei identity.php anlegen. In diesem Fall /var/www/html/i-doit/identity.php.
+Eine Datei identity.php anlegen. In diesem Fall /var/www/html/identity.php.
 
 ```php
 <?php

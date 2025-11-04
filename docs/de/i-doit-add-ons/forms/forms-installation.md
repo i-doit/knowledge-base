@@ -125,7 +125,7 @@ sudo apt-get install -y nodejs
 Zuerst navigieren wir in den Form Backend Unterordner innerhalb der i-doit Installation, der Pfad kann abweichen:
 
 ```shell
-cd /var/www/html/i-doit/src/classes/modules/forms/backend/
+cd /var/www/html/src/classes/modules/forms/backend/
 ```
 
 Wir erstellen eine Kopie der Konfiguration, der Apache Benutzer kann je nach OS abweichen. Das Beispiel für Debian/Ubuntu:

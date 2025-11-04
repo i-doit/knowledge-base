@@ -125,7 +125,7 @@ sudo apt-get install -y nodejs
 First, we navigate to the Form Backend subfolder within the i-doit installation:
 
 ```shell
-cd /var/www/html/i-doit/src/classes/modules/forms/backend/
+cd /var/www/html/src/classes/modules/forms/backend/
 ```
 
 We create a copy of the configuration template:

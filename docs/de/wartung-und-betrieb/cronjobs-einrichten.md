@@ -44,7 +44,7 @@ Das Script bekommt folgenden Inhalt, der an die eigene Installation angepasst we
     ## Configuration
     ##
 
-    INSTANCE_PATH="/var/www/html/i-doit"
+    INSTANCE_PATH="/var/www/html/"
     APACHE_USER="www-data"
     ARGS="$*"
 
@@ -141,7 +141,7 @@ Dieses Script bekommt folgenden Inhalt:
     ##
 
     CONSOLE_BIN="/usr/local/bin/idoit"
-    INSTANCE_PATH="/var/www/html/i-doit"
+    INSTANCE_PATH="/var/www/html/"
     APACHE_USER="www-data"
     IDOIT_USERNAME="admin"
     IDOIT_PASSWORD="admin"

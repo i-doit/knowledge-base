@@ -17,9 +17,9 @@ Hierbei ist idoit_system der Name der System-Datenbank und 86400 entspricht eine
 Diese und viele weitere Einstellungen werden aus Performance-Gründen in einem Cache gespeichert. Damit die Änderungen aktiv werden, muss das temp/\-Verzeichnis im Installationsverzeichnis von i-doit geleert werden:
 
 ```shell
-sudo rm -r /var/www/html/i-doit/temp/*
+sudo rm -r /var/www/html/temp/*
 ```
 
-Hierbei entspricht /var/www/html/i-doit/ dem Pfad zur Installation von i-doit.
+Hierbei entspricht /var/www/html/ dem Pfad zur Installation von i-doit.
 
 Beim Aufruf von i-doit über die Web GUI wird der Cache automatisch neu angelegt, sodass die manuelle Änderung aktiv wird. Der Login und die weitere Arbeit an der [IT-Dokumentation](../../glossar.md) sollten nun wieder funktionieren.

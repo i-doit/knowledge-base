@@ -2,8 +2,8 @@
 
 Hotfixes fix a certain error and are usually provided as a ZIP file. The ZIP file is unpacked in the i-doit installation directory. Confirm the question whether you want to overwrite files during unpacking (**Y** key for "yes" or **A** key for "all"). Here you can find an example:
 
-    sudo cp i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip /var/www/html/i-doit/
-    cd /var/www/html/i-doit/
+    sudo cp i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip /var/www/html/
+    cd /var/www/html/
     sudo -u www-data unzip i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
     sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 

@@ -16,8 +16,8 @@ Here idoit\_system is the name of the system database and 86400 corresponds to o
 
 These and many other settings are stored in a cache for performance reasons. For the changes to become active, the temp/ directory in the i-doit installation directory must be emptied:
 
-    sudo rm -r /var/www/html/i-doit/temp/*
+    sudo rm -r /var/www/html/temp/*
 
-Here, ***/var/www/html/i-doit/*** corresponds to the path for installing i-doit.
+Here, ***/var/www/html/*** corresponds to the path for installing i-doit.
 
 When i-doit is called via the web GUI, the cache is automatically recreated so that the manual change becomes active. Login and further work on the IT documentation should now work again.

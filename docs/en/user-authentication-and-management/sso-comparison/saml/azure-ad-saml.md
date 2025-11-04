@@ -90,8 +90,8 @@ Example:
 ```shell
 <IfModule mod_ssl.c>
     <VirtualHost _default_:443>
-        DocumentRoot /var/www/html/i-doit
-        <Directory /var/www/html/i-doit/>
+        DocumentRoot /var/www/html/
+        <Directory /var/www/html/>
                 AllowOverride All
         </Directory>
         ServerSignature Off
@@ -115,7 +115,7 @@ Example:
 ```
 
 !!! info ""
-    In this example, the directory `/var/www/html/i-doit` where our i-doit is located is protected by using Mellon.
+    In this example, the directory `/var/www/html/` where our i-doit is located is protected by using Mellon.
 
 ## Activate i-doit SSO
 

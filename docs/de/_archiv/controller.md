@@ -16,17 +16,17 @@ i-doit verfügt über ein Kommandozeilen-Werkzeug namens Controller.
 
 ## Erste Schritte
 
-Der Controller befindet sich im Hauptverzeichnis von i-doit. Wenn Du laut [Installationsanleitung]() vorgegangen bist, befindet sich das Hauptverzeichnis bei Debian-basierten Betriebssystemen unter **/var/www/html/i-doit/**:
+Der Controller befindet sich im Hauptverzeichnis von i-doit. Wenn Du laut [Installationsanleitung]() vorgegangen bist, befindet sich das Hauptverzeichnis bei Debian-basierten Betriebssystemen unter **/var/www/html/**:
 
 ```sh
-$ ll /var/www/html/i-doit/controller
--rwxrwxr-- 1 www-data www-data 314 Jul 7 14:23 /var/www/html/i-doit/controller
+$ ll /var/www/html/controller
+-rwxrwxr-- 1 www-data www-data 314 Jul 7 14:23 /var/www/html/controller
 ```
 
 Um Fehler zu vermeiden, ist es wichtig, den Controller mit dem selben Benutzer aufzurufen, den der Webserver benutzt. Im Beispiel ist es **www-data**. Zudem ist es wichtig, erst in das Hauptverzeichnis von i-doit zu wechseln, bevor man den den Controller aufruft:
 
 ```shell
-$ cd /var/www/html/i-doit/
+$ cd /var/www/html/
 $ sudo -u www-data ./controller
 
 Usage: controller.php [OPTION] [PARAMETERS]

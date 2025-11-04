@@ -31,8 +31,8 @@ Durchführung
 Nach dem Download wird das Update-Paket in das Installationsverzeichnis von i-doit kopiert und entpackt. Auf einem Debian-basierten Betriebssystem könnte dies folgendermaßen geschehen:
 
 
-    sudo -u www-data cp idoit-open-1.8-update.zip /var/www/html/i-doit/
-    cd /var/www/html/i-doit/
+    sudo -u www-data cp idoit-open-1.8-update.zip /var/www/html/
+    cd /var/www/html/
     sudo -u www-data unzip idoit-open-1.8-update.zip
 
 Der Pfad ist dementsprechend anzupassen. Das Kopieren und Entpacken erfolgt mit dem User des Apache Webservers, damit das Update mit dessen Rechten problemlos erfolgt.

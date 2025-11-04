@@ -28,13 +28,13 @@ One last thing: We should have all system user accounts and their passwords read
 To avoid having to transfer the files individually and to pack them into an archive, we use the **zip** command:
 
 ```shell
-sudo zip -r i-doit.zip /var/www/html/i-doit/
+sudo zip -r i-doit.zip /var/www/html/
 ```
 
 If your i-doit instance is under a different path, adjust the command accordingly. Now you only need to download the ZIP file or transfer it to the Windows server. You can use scp to transfer the ZIP file. We execute the following command on the Windows server:
 
 ```shell
-scp -r user@linuxsystem:/var/www/html/i-doit/i-doit.zip C:\
+scp -r user@linuxsystem:/var/www/html/i-doit.zip C:\
 ```
 
 ## Export the Database from Linux
