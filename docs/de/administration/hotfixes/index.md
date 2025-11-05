@@ -69,6 +69,16 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 * * *
 
+## API Add-on
+
+### Allow update of "layer3_assignments" property from "C__CATS__NET" (API-632)
+
+When an Layer-3 Net assignment is altered, the entry is not overwritten.
+
+[api_2.4_hotfix_API-632_9c15fb1.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_2.4_hotfix_API-632_9c15fb1.zip){ .md-button .md-button--primary }
+
+* * *
+
 ## JDisc Connector Add-on
 
 ### Support new JDisc Version (JDISC-51) & (JDISC-54)
