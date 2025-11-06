@@ -8,6 +8,8 @@ lang: de
 
 # JDisc Connector
 
+!!! success "Aktuell ist Version 1.0.1"
+
 ## Übersicht
 
 Der **JDisc Connector** ist ein Add-on für i-doit, das den automatisierten Import von IT-Objekten aus einer JDisc-Instanz ermöglicht. Die Integration basiert auf der GraphQL-Schnittstelle von JDisc und erlaubt eine präzise Synchronisation von Geräten und deren Eigenschaften in die CMDB von i-doit.
@@ -273,3 +275,10 @@ Die Berechtigungen für das JDisc Connector Add-on werden über die Rechteverwal
 - Regelmäßige Prüfung der Geräteliste und Logs
 - Pflege von Seriennummern und MAC-Adressen
 - Dokumentation der Sync Profile
+
+## Changelogs
+
+| Version | Date       | Changelog                                                                                                                                                                                                                       |
+| ------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1.0.1 | 2025-10-21 | [Bug][Sync Profiles] Checkboxes in new Sync Profiles are overwritten after Saving<br>[Bug][Device List] Enable Device List in JDISC Connector Add-On to load Devices|
+| 1.0 | 2025-09-16 | Initial release |

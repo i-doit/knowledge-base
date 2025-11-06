@@ -178,9 +178,10 @@ lang: de
 
 ## JDisc Connector
 
-| Version | Download-Link                                                                                              |
-| :------ | :--------------------------------------------------------------------------------------------------------- |
-| 1.0.1   | [:material-file-download: Download](assets/downloads/dl-archive/idoit-synetics_jdisc-1.0.zip){ .md-button} |
+| Version | Download-Link                                                                                                |
+| :------ | :----------------------------------------------------------------------------------------------------------- |
+| 1.0.1   | [:material-file-download: Download](assets/downloads/dl-archive/idoit-synetics_jdisc-1.0.1.zip){ .md-button} |
+| 1.0     | [:material-file-download: Download](assets/downloads/dl-archive/idoit-synetics_jdisc-1.0.zip){ .md-button}   |
 
 ## QR Code Printer
 
