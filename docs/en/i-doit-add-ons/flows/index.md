@@ -94,7 +94,7 @@ No condition needs to be selected. In addition, conditions can be linked and nes
 
 ### Action types
 
-At least one action must be defined.
+At least one action must be defined. In some actions, [Twig](https://twig.symfony.com/doc/3.x/) can be used as a template engine. An i-doit reference for Twig templates can be found [here](twig-reference.md).
 
 !!! note ""
     === "Call API"

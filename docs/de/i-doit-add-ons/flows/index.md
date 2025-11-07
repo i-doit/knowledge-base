@@ -107,7 +107,7 @@ Es muss keine Konditionen gewählt werden. Außerdem können conditions mit **UN
 
 ### Aktionen
 
-Es muss mindestens eine Aktion definiert werden.
+Es muss mindestens eine Aktion definiert werden. In einigen Aktionen lässt sich [Twig](https://twig.symfony.com/doc/3.x/) als template Engine verwenden. Eine i-doit Referenz für Twig Templates ist [hier](twig-reference.md) zu finden.
 
 !!! note ""
     === "API-Aufruf"
