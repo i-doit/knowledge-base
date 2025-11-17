@@ -636,6 +636,7 @@ nav:
       - Floorplan: i-doit-add-ons/floorplan.md
       - Flows:
           - i-doit-add-ons/flows/index.md
+          - Twig Templates: i-doit-add-ons/flows/twig-reference.md
           - Aktionen:
               - Befehl ausführen: i-doit-add-ons/flows/actions/call-command.md
           - i-doit 33 update und Flows installation: i-doit-add-ons/flows/flows-guide.md
