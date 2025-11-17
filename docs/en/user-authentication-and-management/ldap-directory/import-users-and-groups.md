@@ -357,7 +357,7 @@ syncEmptyAttributes=true
 On the console the command would look like this:
 
 ```shell
-sudo -u www-data php console.php ldap-sync -c /var/www/html/i-doit/src/handler/config/ldap-sync.ini
+sudo -u www-data php console.php ldap-sync -c /var/www/html/src/handler/config/ldap-sync.ini
 ```
 
 [example-ldap.ini :material-file-download:](../../assets/images/en/automation-and-integration/ldap/import-users-and-groups/example-ldap.ini){ .md-button .md-button--primary }

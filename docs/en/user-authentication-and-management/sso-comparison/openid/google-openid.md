@@ -79,7 +79,7 @@ sudo systemctl restart apache2
 
 ### Test authentication and finish last steps
 
-Create the file identity.php. In our case it will be created at /var/www/html/i-doit/identity.php.
+Create the file identity.php. In our case it will be created at /var/www/html/identity.php.
 
 ```php
 <?php

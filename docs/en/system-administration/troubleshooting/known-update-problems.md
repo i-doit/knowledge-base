@@ -84,7 +84,7 @@ We assume a "standard" installation, as described below [Installation](../../ins
 === "Debian/Ubuntu"
 
     ```sh
-    cd /var/www/html/i-doit/
+    cd /var/www/html/
     sudo chown www-data:www-data -R .
     sudo find . -type d -name \* -exec chmod 775 {} \;
     sudo find . -type f -exec chmod 664 {} \;
@@ -93,7 +93,7 @@ We assume a "standard" installation, as described below [Installation](../../ins
 === "Red Hat Enterprise Linux"
 
     ```sh
-    cd /var/www/html/i-doit/
+    cd /var/www/html/
     sudo chown apache:apache -R .
     sudo find . -type d -name \* -exec chmod 775 {} \;
     sudo find . -type f -exec chmod 664 {} \;
@@ -102,7 +102,7 @@ We assume a "standard" installation, as described below [Installation](../../ins
 === "SUSE Linux Enterprise Server"
 
     ```sh
-    cd /var/www/html/i-doit/
+    cd /var/www/html/
     sudo chown wwwrun:www -R .
     sudo find . -type d -name \* -exec chmod 775 {} \;
     sudo find . -type f -exec chmod 664 {} \;

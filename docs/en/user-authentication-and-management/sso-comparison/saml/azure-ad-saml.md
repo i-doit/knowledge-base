@@ -115,7 +115,7 @@ Example:
 ```
 
 !!! info ""
-    In this example, the directory `/var/www/html/i-doit` where our i-doit is located is protected by using Mellon.
+    In this example, the directory `/var/www/html/` where our i-doit is located is protected by using Mellon.
 
 ## Activate i-doit SSO
 

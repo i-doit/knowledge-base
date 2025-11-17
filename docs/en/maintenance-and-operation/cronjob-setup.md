@@ -46,7 +46,7 @@ The script gets the following contents which have to be adapted to your own inst
     ## Configuration
     ##
     
-    INSTANCE_PATH="/var/www/html/i-doit"
+    INSTANCE_PATH="/var/www/html/"
     APACHE_USER="www-data"
     ARGS="$*"
     
@@ -142,7 +142,7 @@ This script gets the following contents:
     ##
     
     CONSOLE_BIN="/usr/local/bin/idoit"
-    INSTANCE_PATH="/var/www/html/i-doit"
+    INSTANCE_PATH="/var/www/html/"
     APACHE_USER="www-data"
     IDOIT_USERNAME="admin"
     IDOIT_PASSWORD="admin"

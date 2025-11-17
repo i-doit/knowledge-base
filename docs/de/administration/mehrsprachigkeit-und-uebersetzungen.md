@@ -61,7 +61,7 @@ Die custom\-Dateien eignen sich nicht nur dafür neue Übersetzungen einzuführe
 !!! success "Sprachen ausschließen"
     Damit i-doit lediglich in einer Sprache den Benutzern zur Verfügung steht, hilft es, die nicht benötigten Sprachdateien zu ersetzen. Um beispielsweise i-doit lediglich in Englisch anzubieten führt man folgende Aktionen auf der Kommandozeile aus:
     ```shell
-    cd /var/www/html/i-doit # Wechsel in das Installationsverzeichnis von i-doit (ggf. anpassen)
+    cd /var/www/html/ # Wechsel in das Installationsverzeichnis von i-doit (ggf. anpassen)
     cd src/lang/ # Wechsel in das Verzeichnis mit den Sprachdateien
     cp de.inc.php de.inc.php.bak # Man weiß ja nie ;-)
     cp en.inc.php de.inc.php # Deutsche durch englische Sprache ersetzen

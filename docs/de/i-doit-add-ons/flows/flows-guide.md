@@ -45,7 +45,7 @@ Update Paket aus dem [Kundenportal](../../administration/kundenportal.md) herunt
 Das Update-Paket kann (beispielsweise per [WinSCP](https://winscp.net/eng/docs/lang:de)) auf dem Server abgelegt werden. Verschiebe danach das Paket in das Hauptverzeichnis von **i-doit**, wenn du es nicht schon direkt dort abgelegt hast. Das geht mit diesem Befehl:
 
 ```shell
-sudo mv idoit-33-update.zip /var/www/html/i-doit/
+sudo mv idoit-33-update.zip /var/www/html/
 ```
 
 * * *
@@ -55,7 +55,7 @@ sudo mv idoit-33-update.zip /var/www/html/i-doit/
 In den i-doit Ordner wechseln:
 
 ```shell
-cd /var/www/html/i-doit/
+cd /var/www/html/
 ```
 
 Die ZIP Datei entpacken und alle Dateien überschreiben lassen:
@@ -71,7 +71,7 @@ Jetzt werden die Dateirechte angepasst, sodass der Webserver lesend wie schreibe
 !!! quote ""
     === "Debian & Ubuntu"
         ```shell
-        cd /var/www/html/i-doit/
+        cd /var/www/html/
         sudo chown www-data:www-data -R .
         sudo find . -type d -name \* -exec chmod 775 {} \;
         sudo find . -type f -exec chmod 664 {} \;
@@ -79,7 +79,7 @@ Jetzt werden die Dateirechte angepasst, sodass der Webserver lesend wie schreibe
 
     === "Red Hat Enterprise Linux (RHEL)"
         ```shell
-        cd /var/www/html/i-doit/
+        cd /var/www/html/
         sudo chown apache:apache -R .
         sudo find . -type d -name \* -exec chmod 775 {} \;
         sudo find . -type f -exec chmod 664 {} \;
@@ -87,7 +87,7 @@ Jetzt werden die Dateirechte angepasst, sodass der Webserver lesend wie schreibe
 
     === "SUSE Linux Enterprise Server (SLES)"
         ```shell
-        cd /var/www/html/i-doit/
+        cd /var/www/html/
         sudo chown wwwrun:www -R .
         sudo find . -type d -name \* -exec chmod 775 {} \;
         sudo find . -type f -exec chmod 664 {} \;
@@ -192,8 +192,8 @@ sudo crontab -u www-data -e
 Fügen Sie die folgenden Zeilen am Ende der Datei ein, nachdem Sie die i-doit Anmeldeinformationen ersetzt haben. Möglicherweise müssen Sie auch die Mandanten-ID ersetzen.
 
 ```shell
-* * * * * /usr/bin/php /var/www/html/i-doit/console.php flows:time-trigger --user admin-user --password admin-user-password --tenantId 1
-* * * * * /usr/bin/php /var/www/html/i-doit/console.php flows:perform ---user admin-user --password admin-user-password --tenantId 1
+* * * * * /usr/bin/php /var/www/html/console.php flows:time-trigger --user admin-user --password admin-user-password --tenantId 1
+* * * * * /usr/bin/php /var/www/html/console.php flows:perform ---user admin-user --password admin-user-password --tenantId 1
 ```
 --->
 

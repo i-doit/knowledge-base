@@ -152,7 +152,7 @@ Dort hinterlegen wir unsere Einstellungen:
 <!-- cSpell:disable -->
 ```shell
 ;; Einschränkung auf Verzeichnisse, auf die PHP zugreifen darf:
-open_basedir = "/var/www/html/i-doit/:/tmp/"
+open_basedir = "/var/www/html/:/tmp/"
 
 ;; Unnötige Methoden deaktivieren:
 disable_functions = pcntl_alarm,pcntl_fork,pcntl_waitpid,pcntl_wait,pcntl_wifexited,pcntl_wifstopped,pcntl_wifsignaled,pcntl_wifcontinued,pcntl_wexitstatus,pcntl_wtermsig,pcntl_wstopsig,pcntl_signal,pcntl_signal_dispatch,pcntl_get_last_error,pcntl_strerror,pcntl_sigprocmask,pcntl_sigwaitinfo,pcntl_sigtimedwait,pcntl_exec,pcntl_getpriority,pcntl_setpriority,
@@ -321,7 +321,7 @@ Direkt nach der Installation ergreifen wir weitere Maßnahmen.
 
 ```shell
 # Wechsel ins Installations-Verzeichnis von i-doit:
-cd /var/www/html/i-doit
+cd /var/www/html/
 
 # Apache sollte die volle Kontrolle über die Dateien und Verzeichnisse haben:
 sudo chown www-data:www-data -R .
@@ -343,7 +343,7 @@ Bei einem Update von i-doit müssen einige Einschränkungen temporär aufgehoben
 
 ```shell
 # Wechsel ins Installations-Verzeichnis von i-doit:
-cd /var/www/html/i-doit
+cd /var/www/html/
 sudo chattr -R -i .
 sudo find . -type d -name \* -exec chmod 775 {} \;
 sudo find . -type f -exec chmod 664 {} \;
