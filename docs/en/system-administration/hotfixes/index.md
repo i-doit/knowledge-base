@@ -87,6 +87,12 @@ When an Layer-3 Net assignment is altered, the entry is not overwritten.
 
 [hotfix-idoit-jdisc-1.0.zip :material-file-download:](../../assets/downloads/hotfixes/jdisc/hotfix-idoit-jdisc-1.0.zip){ .md-button .md-button--primary }
 
+### Save CMDB status for newly imported objects (JDISC-72)
+
+!!! note "You need to install the fixed Version via the [Admin-Center](../admin-center.md)."
+
+[hotfix-i-doit-jdisc-1.0.1.zip :material-file-download:](../../assets/downloads/hotfixes/jdisc/hotfix-i-doit-jdisc-1.0.1.zip){ .md-button .md-button--primary }
+
 * * *
 
 ## Documents Add-on
