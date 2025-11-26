@@ -106,3 +106,13 @@ When an Layer-3 Net assignment is altered, the entry is not overwritten.
 ### TypeErrors when selecting objects to swap (SWAPCI-47)
 
 [Swapci_1.6_hotfix_SWAPCI-47_c1d34a3.zip :material-file-download:](../../assets/downloads/hotfixes/swap-ci/Swapci_1.6_hotfix_SWAPCI-47_c1d34a3.zip){ .md-button .md-button--primary }
+
+* * *
+
+## Flows Add-on
+
+### Fix AutomationsButtons is not assigned error in the GUI (FLOW-428)
+
+!!! note "You need to install the fixed Version via the [Admin-Center](../admin-center.md)."
+
+[module-i-doit-flows-1.3.0.zip :material-file-download:](../../assets/downloads/hotfixes/flows/module-i-doit-flows-1.3.0.zip){ .md-button .md-button--primary }
