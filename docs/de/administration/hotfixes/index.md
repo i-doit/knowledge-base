@@ -115,4 +115,4 @@ When an Layer-3 Net assignment is altered, the entry is not overwritten.
 
 !!! note "You need to install the fixed Version via the [Admin-Center](../admin-center.md)."
 
-[module-i-doit-flows-1.3.0.zip :material-file-download:](../../assets/downloads/hotfixes/flows/module-i-doit-flows-1.3.0.zip){ .md-button .md-button--primary }
+[hotfix-i-doit-flows-1.3.0.zip :material-file-download:](../../assets/downloads/hotfixes/flows/hotfix-i-doit-flows-1.3.0.zip){ .md-button .md-button--primary }
