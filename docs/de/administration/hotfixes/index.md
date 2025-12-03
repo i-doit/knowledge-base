@@ -91,6 +91,10 @@ When an Layer-3 Net assignment is altered, the entry is not overwritten.
 
 [hotfix-i-doit-jdisc-1.0.1.zip :material-file-download:](../../assets/downloads/hotfixes/jdisc/hotfix-i-doit-jdisc-1.0.1.zip){ .md-button .md-button--primary }
 
+### Prevent missing "JDisc Connector" in Add-ons menu after updating i-doit (JDISC-77)
+
+[jdisc-connector_1.0.1_hotfix_JDISC-77_a8aef2e.zip :material-file-download:](../../assets/downloads/hotfixes/jdisc/jdisc-connector_1.0.1_hotfix_JDISC-77_a8aef2e.zip){ .md-button .md-button--primary }
+
 * * *
 
 ## Documents Add-on
