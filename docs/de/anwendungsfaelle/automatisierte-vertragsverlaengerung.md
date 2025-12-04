@@ -61,7 +61,7 @@ In diesen Cronjob fügen wir folgenden Code ein:
 ```shell
     ## idoit cronjob idoit-extend-contracts
 
-    15 6 * * * www-data php /var/www/html/i-doit/console.php extend-contracts --user user --password password
+    15 6 * * * www-data php /var/www/html/console.php extend-contracts --user user --password password
 ```
 
 Mit diesem Code, wird der Cronjob jeden Tag um 6:15 Uhr ausgeführt und verlängert die Verträge automatisch, falls sie den Voraussetzungen entsprechen.<br>

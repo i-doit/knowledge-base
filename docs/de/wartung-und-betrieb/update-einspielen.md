@@ -88,13 +88,13 @@ Das Update kann über die Konsole vorbereitet werden. Für die Vorbereitung muss
 Das Update-Paket kann (beispielsweise per [WinSCP](https://winscp.net/eng/docs/lang:de)) auf dem Server abgelegt werden. Verschiebe danach das Paket in das Hauptverzeichnis von _i-doit_, wenn du es nicht schon direkt dort abgelegt hast.  Das geht mit diesem Befehl:
 
 ```shell
-mv idoit-26-update.zip /var/www/html/i-doit/
+mv idoit-26-update.zip /var/www/html/
 ```
 
 Dann muss das Paket entpackt und alle bestehenden Dateien überschrieben werden.
 
 ```shell
-cd /var/www/html/i-doit
+cd /var/www/html/
 unzip idoit-26-update.zip
 ```
 
@@ -105,7 +105,7 @@ Jetzt werden die Dateirechte angepasst, sodass der Webserver lesend wie schreibe
     **Sollten ein anderes Betriebssystem genutzt werden, muss die genutzte Benutzer:Gruppen Kombination angepasst werden.
 
 ```shell
-cd /var/www/html/i-doit/
+cd /var/www/html/
 sudo chown www-data:www-data -R .
 sudo find . -type d -name \* -exec chmod 775 {} \;
 sudo find . -type f -exec chmod 664 {} \;

@@ -11,14 +11,14 @@ i-doit possesses a command line tool called controller.
 First Steps
 -----------
 
-The controller is located in the main folder of _i-doit_. If you have followed the [installation guide,] then the main folder will be located at /var/www/html/i-doit/ for Debian-based operating systems:
+The controller is located in the main folder of _i-doit_. If you have followed the [installation guide,] then the main folder will be located at /var/www/html/ for Debian-based operating systems:
 
-    $ ll /var/www/html/i-doit/controller
-    -rwxrwxr-- 1 www-data www-data 314 Jul 7 14:23 /var/www/html/i-doit/controller
+    $ ll /var/www/html/controller
+    -rwxrwxr-- 1 www-data www-data 314 Jul 7 14:23 /var/www/html/controller
 
 In order to avoid errors it is important to execute the controller with the same user who uses the web server. In the example this is **www-data**. It's also important to change to the main folder of i-doit prior to executing the controller:
 
-    $ cd /var/www/html/i-doit/
+    $ cd /var/www/html/
     $ sudo -u www-data ./controller
     
     Usage: controller.php [OPTION] [PARAMETERS]

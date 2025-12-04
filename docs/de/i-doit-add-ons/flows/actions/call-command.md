@@ -45,14 +45,14 @@ Verlängert automatisch die Laufzeit von ungekündigten Verträgen. Ein Anwendun
 
 | Option              | Beschreibung                                                                                                                                                                                                           |
 | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **importFile**      | Geben Sie den vollständigen Pfad zur Datei an. Wenn Sie die Datei zuvor für den CSV-Import hochgeladen haben, lautet der Pfad beispielsweise `/var/www/html/i-doit/imports/1/title.csv`. Die `1` ist die Mandanten-ID. |
+| **importFile**      | Geben Sie den vollständigen Pfad zur Datei an. Wenn Sie die Datei zuvor für den CSV-Import hochgeladen haben, lautet der Pfad beispielsweise `/var/www/html/imports/1/title.csv`. Die `1` ist die Mandanten-ID. |
 | **importProfileId** | Ein CSV-Importprofil muss zuvor erstellt werden, siehe [Profil anlegen](../../../daten-konsolidieren/csv-datenimport/index.md#profil-anlegen)                                                                          |
 
 ## import-hinventory (nur on-prem)
 
 | Option         | Beschreibung                                                                                                                                |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| **importFile** | Geben Sie den vollständigen Pfad zur Datei an. Zum Beispiel `/var/www/html/i-doit/imports/1/title.xml`, wobei die `1` die Mandanten-ID ist. |
+| **importFile** | Geben Sie den vollständigen Pfad zur Datei an. Zum Beispiel `/var/www/html/imports/1/title.xml`, wobei die `1` die Mandanten-ID ist. |
 | **objectType** | Importiert den angegebenen Objekttyp. Auswahlfeld (Single-Select) mit Objekttypen, erforderlich mit Standardwert 'Client'.                  |
 | **objectId**   | Importiert nur das angegebene Objekt.                                                                                                       |
 | **force**      | Erzwingt die Aktualisierung bestehender Objekte, überschreibt dabei jedoch die importierten Kategorien.                                     |
@@ -82,7 +82,7 @@ Verlängert automatisch die Laufzeit von ungekündigten Verträgen. Ein Anwendun
 
 | Option         | Beschreibung                                                                                                                                |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| **importFile** | Geben Sie den vollständigen Pfad zur Datei an. Zum Beispiel `/var/www/html/i-doit/imports/1/title.xml`, wobei die `1` die Mandanten-ID ist. |
+| **importFile** | Geben Sie den vollständigen Pfad zur Datei an. Zum Beispiel `/var/www/html/imports/1/title.xml`, wobei die `1` die Mandanten-ID ist. |
 
 ## ldap-sync
 
