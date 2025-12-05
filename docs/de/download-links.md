@@ -219,7 +219,7 @@ lang: de
 
 | Version | Download-Link                                                                                                       | Checksums                                                                 |
 | :------ | :------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------- |
-| 1.5     | [:material-file-download: Download](https://login.i-doit.com/downloads/idoit-qr-code-printer-1.5.zip){ .md-button} | [Checksums i-doit-qr-code-printer-1.5.zip](#i-doit-qr-code-printer-15zip) |
+| 1.5     | [:material-file-download: Download](https://login.i-doit.com/downloads/idoit-qr_code_label_printer-1.5.zip){ .md-button} | [Checksums i-doit-qr-code-printer-1.5.zip](#i-doit-qr-code-printer-15zip) |
 
 ## Keybook Add-on
 
