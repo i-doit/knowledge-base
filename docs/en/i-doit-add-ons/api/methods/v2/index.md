@@ -122,6 +122,35 @@ This is to ensure that the v2 API no longer implements any special "own" logic. 
                         "optional": []
                     }
                 },
+                "cmdb.external.link.v2": {
+                    "description": "Links an existing object with an external identifier .",
+                    "parameters": {
+                        "required": {
+                            "extType": {
+                                "types": [
+                                    "string"
+                                ],
+                                "description": "First part of external identifier used to identify the data source.",
+                                "has-validation": true
+                            },
+                            "extId": {
+                                "types": [
+                                    "string"
+                                ],
+                                "description": "Second part of external identifier used to identifiy the asset.",
+                                "has-validation": true
+                            },
+                            "objectId": {
+                                "types": [
+                                    "integer"
+                                ],
+                                "description": "Numeric object ID.",
+                                "has-validation": true
+                            }
+                        },
+                        "optional": []
+                    }
+                },
                 "cmdb.external.pull.v2": {
                     "description": "Get object and category data based on external identifier.",
                     "parameters": {
@@ -183,7 +212,7 @@ This is to ensure that the v2 API no longer implements any special "own" logic. 
                                     "array"
                                 ],
                                 "description": "Category data for asset.",
-                                "has-validation": false
+                                "has-validation": true
                             }
                         },
                         "optional": []
@@ -202,13 +231,21 @@ This is to ensure that the v2 API no longer implements any special "own" logic. 
                             }
                         },
                         "optional": {
+                            "constant": {
+                                "types": [
+                                    "string"
+                                ],
+                                "description": "Constant of the object type group",
+                                "has-validation": true,
+                                "default-value": null
+                            },
                             "sort": {
                                 "types": [
                                     "integer"
                                 ],
                                 "description": "Sorting of the object type group",
                                 "has-validation": false,
-                                "default-value": null
+                                "default-value": 65535
                             },
                             "visible": {
                                 "types": [
@@ -216,7 +253,7 @@ This is to ensure that the v2 API no longer implements any special "own" logic. 
                                 ],
                                 "description": "Visibility of the object type groups",
                                 "has-validation": false,
-                                "default-value": null
+                                "default-value": true
                             }
                         }
                     },
@@ -227,6 +264,16 @@ This is to ensure that the v2 API no longer implements any special "own" logic. 
                             "method": "cmdb.object-type-group.create.v2",
                             "params": {
                                 "title": "Example group",
+                                "apikey": "{your-api-key}"
+                            }
+                        },
+                        "Full request": {
+                            "id": 1,
+                            "version": "2.0",
+                            "method": "cmdb.object-type-group.create.v2",
+                            "params": {
+                                "title": "Example group",
+                                "constant": "C__OBJTYPE_GROUP__SD_EXAMPLE_GROUP",
                                 "visible": true,
                                 "sort": 10,
                                 "apikey": "{your-api-key}"
@@ -239,50 +286,33 @@ This is to ensure that the v2 API no longer implements any special "own" logic. 
                             "jsonrpc": "2.0",
                             "result": {
                                 "success": true,
-                                "id": 123
+                                "id": 123,
+                                "message": "Object type group 'Example group' (#123) successfully created."
                             }
                         }
                     }
                 },
-                "cmdb.object-type-group.delete.v2": {
-                    "description": "Deletes one object type group in i-doit.",
+                "cmdb.object-type-group.delete-by-constant.v2": {
+                    "description": "Will permanently remove one object type group from the database.",
                     "parameters": {
-                        "required": [],
-                        "optional": {
-                            "id": {
-                                "types": [
-                                    "integer"
-                                ],
-                                "description": "Numeric entry ID.",
-                                "has-validation": true,
-                                "default-value": null
-                            },
+                        "required": {
                             "constant": {
                                 "types": [
                                     "string"
                                 ],
                                 "description": "Single constant as string.",
-                                "has-validation": true,
-                                "default-value": null
-                            }
-                        }
-                    },
-                    "example-request": {
-                        "With id": {
-                            "id": 1,
-                            "version": "2.0",
-                            "method": "cmdb.object-type-group.delete.v2",
-                            "params": {
-                                "id": 123,
-                                "apikey": "{your-api-key}"
+                                "has-validation": true
                             }
                         },
-                        "With constant": {
+                        "optional": []
+                    },
+                    "example-request": {
+                        "Basic request": {
                             "id": 1,
                             "version": "2.0",
-                            "method": "cmdb.object-type-group.delete.v2",
+                            "method": "cmdb.object-type-group.delete-by-constant.v2",
                             "params": {
-                                "constant": "C__OBJTYPE_GROUP__SD_CUSTOM_GROUP",
+                                "constant": "C__OBJTYPE_GROUP__SD_EXAMPLE_GROUP",
                                 "apikey": "{your-api-key}"
                             }
                         }
@@ -293,7 +323,46 @@ This is to ensure that the v2 API no longer implements any special "own" logic. 
                             "jsonrpc": "2.0",
                             "result": {
                                 "success": true,
-                                "messages": "Object type constant 'Example group' (#123) successfully deleted."
+                                "id": 123,
+                                "constant": "C__OBJTYPE_GROUP__SD_EXAMPLE_GROUP",
+                                "message": "Object type group #123 has been deleted."
+                            }
+                        }
+                    }
+                },
+                "cmdb.object-type-group.delete.v2": {
+                    "description": "Will permanently remove one object type group from the database.",
+                    "parameters": {
+                        "required": {
+                            "id": {
+                                "types": [
+                                    "integer"
+                                ],
+                                "description": "Numeric entry ID.",
+                                "has-validation": true
+                            }
+                        },
+                        "optional": []
+                    },
+                    "example-request": {
+                        "Basic request": {
+                            "id": 1,
+                            "version": "2.0",
+                            "method": "cmdb.object-type-group.delete.v2",
+                            "params": {
+                                "id": 123,
+                                "apikey": "{your-api-key}"
+                            }
+                        }
+                    },
+                    "example-response": {
+                        "Basic response": {
+                            "id": 1,
+                            "jsonrpc": "2.0",
+                            "result": {
+                                "success": true,
+                                "id": 123,
+                                "message": "Object type group #123 has been deleted."
                             }
                         }
                     }
@@ -401,16 +470,99 @@ This is to ensure that the v2 API no longer implements any special "own" logic. 
                         }
                     }
                 },
+                "cmdb.object-type-group.update-by-constant.v2": {
+                    "description": "Update an existing object type group.",
+                    "parameters": {
+                        "required": {
+                            "constant": {
+                                "types": [
+                                    "string"
+                                ],
+                                "description": "Single constant as string.",
+                                "has-validation": true
+                            }
+                        },
+                        "optional": {
+                            "title": {
+                                "types": [
+                                    "string"
+                                ],
+                                "description": "Title of the object type group",
+                                "has-validation": true,
+                                "default-value": null
+                            },
+                            "sort": {
+                                "types": [
+                                    "integer"
+                                ],
+                                "description": "Sorting of the object type group",
+                                "has-validation": false,
+                                "default-value": null
+                            },
+                            "visible": {
+                                "types": [
+                                    "boolean"
+                                ],
+                                "description": "Visibility of the object type groups",
+                                "has-validation": false,
+                                "default-value": null
+                            }
+                        }
+                    },
+                    "example-request": {
+                        "Basic request": {
+                            "id": 1,
+                            "version": "2.0",
+                            "method": "cmdb.object-type-group.update-by-constant.v2",
+                            "params": {
+                                "constant": "C__OBJTYPE_GROUP__SD_EXAMPLE_GROUP",
+                                "title": "New object type group name",
+                                "apikey": "{your-api-key}"
+                            }
+                        },
+                        "Change visibility": {
+                            "id": 1,
+                            "version": "2.0",
+                            "method": "cmdb.object-type-group.update-by-constant.v2",
+                            "params": {
+                                "constant": "C__OBJTYPE_GROUP__SD_EXAMPLE_GROUP",
+                                "visible": false,
+                                "apikey": "{your-api-key}"
+                            }
+                        },
+                        "Change order": {
+                            "id": 1,
+                            "version": "2.0",
+                            "method": "cmdb.object-type-group.update-by-constant.v2",
+                            "params": {
+                                "constant": "C__OBJTYPE_GROUP__SD_EXAMPLE_GROUP",
+                                "sort": 99,
+                                "apikey": "{your-api-key}"
+                            }
+                        }
+                    },
+                    "example-response": {
+                        "Basic response": {
+                            "id": 1,
+                            "jsonrpc": "2.0",
+                            "result": {
+                                "success": true,
+                                "id": 1234,
+                                "constant": "C__OBJTYPE_GROUP__SD_EXAMPLE_GROUP",
+                                "message": "Object type group #1234 successfully updated."
+                            }
+                        }
+                    }
+                },
                 "cmdb.object-type-group.update.v2": {
                     "description": "Update an existing object type group.",
                     "parameters": {
                         "required": {
                             "id": {
                                 "types": [
-                                    "integer",
-                                    "string"
+                                    "integer"
                                 ],
-                                "description": "Object type group, either as ID (integer) or constant (string).",
+                                "description": "Numeric entry ID.",
                                 "has-validation": true
                             }
                         },
@@ -478,16 +630,533 @@ This is to ensure that the v2 API no longer implements any special "own" logic. 
                             "id": 1,
                             "jsonrpc": "2.0",
                             "result": {
-                                "success": true
+                                "success": true,
+                                "id": 1234,
+                                "message": "Object type group #1234 successfully updated."
+                            }
+                        }
+                    }
+                },
+                "cmdb.object-type.create.v2": {
+                    "description": "Creates one new object types in i-doit.",
+                    "parameters": {
+                        "required": {
+                            "title": {
+                                "types": [
+                                    "string"
+                                ],
+                                "description": "Object type title",
+                                "has-validation": true
+                            },
+                            "objectTypeGroup": {
+                                "types": [
+                                    "integer",
+                                    "string"
+                                ],
+                                "description": "Assigned object type group, either ID (int) or constant (string)",
+                                "has-validation": true
+                            }
+                        },
+                        "optional": {
+                            "constant": {
+                                "types": [
+                                    "string"
+                                ],
+                                "description": "Object type constant",
+                                "has-validation": true,
+                                "default-value": null
+                            },
+                            "description": {
+                                "types": [
+                                    "string"
+                                ],
+                                "description": "Assigned object type group, either ID (int) or constant (string)",
+                                "has-validation": false,
+                                "default-value": null
+                            },
+                            "specificCategory": {
+                                "types": [
+                                    "string"
+                                ],
+                                "description": "Specific category",
+                                "has-validation": true,
+                                "default-value": null
+                            },
+                            "isContainer": {
+                                "types": [
+                                    "boolean"
+                                ],
+                                "description": "Can physically contain other objects",
+                                "has-validation": false,
+                                "default-value": false
+                            },
+                            "isPositionableInRack": {
+                                "types": [
+                                    "boolean"
+                                ],
+                                "description": "Can be physically positioned inside a rack",
+                                "has-validation": false,
+                                "default-value": false
+                            },
+                            "isVisible": {
+                                "types": [
+                                    "boolean"
+                                ],
+                                "description": "Visibility of the object type",
+                                "has-validation": false,
+                                "default-value": true
+                            },
+                            "isRelationMaster": {
+                                "types": [
+                                    "boolean"
+                                ],
+                                "description": "Is relation master",
+                                "has-validation": false,
+                                "default-value": false
+                            },
+                            "hasOverviewPage": {
+                                "types": [
+                                    "boolean"
+                                ],
+                                "description": "Has overview page",
+                                "has-validation": false,
+                                "default-value": false
+                            },
+                            "sort": {
+                                "types": [
+                                    "integer"
+                                ],
+                                "description": "Sorting of the object type",
+                                "has-validation": false,
+                                "default-value": 65535
+                            },
+                            "color": {
+                                "types": [
+                                    "string"
+                                ],
+                                "description": "Object type color",
+                                "has-validation": false,
+                                "default-value": "#ffffff"
+                            },
+                            "defaultTemplate": {
+                                "types": [
+                                    "integer",
+                                    "string"
+                                ],
+                                "description": "Default template",
+                                "has-validation": false,
+                                "default-value": null
+                            },
+                            "sysidPrefix": {
+                                "types": [
+                                    "string"
+                                ],
+                                "description": "SYS-ID Prefix",
+                                "has-validation": false,
+                                "default-value": null
+                            }
+                        }
+                    }
+                },
+                "cmdb.object-type.delete-by-constant.v2": {
+                    "description": "Will permanently remove one object types from the database.",
+                    "parameters": {
+                        "required": {
+                            "constant": {
+                                "types": [
+                                    "string"
+                                ],
+                                "description": "Single constant as string.",
+                                "has-validation": true
+                            }
+                        },
+                        "optional": []
+                    },
+                    "example-request": {
+                        "Basic request": {
+                            "id": 1,
+                            "version": "2.0",
+                            "method": "cmdb.object-type.delete-by-constant.v2",
+                            "params": {
+                                "constant": "C__OBJTYPE__EXAMPLE",
+                                "apikey": "{your-api-key}"
+                            }
+                        }
+                    },
+                    "example-response": {
+                        "Basic response": {
+                            "id": 1,
+                            "jsonrpc": "2.0",
+                            "result": {
+                                "success": true,
+                                "id": 123,
+                                "constant": "C__OBJTYPE__EXAMPLE",
+                                "message": "Object type #123 has been deleted."
+                            }
+                        }
+                    }
+                },
+                "cmdb.object-type.delete.v2": {
+                    "description": "Will permanently remove one object types from the database.",
+                    "parameters": {
+                        "required": {
+                            "id": {
+                                "types": [
+                                    "integer"
+                                ],
+                                "description": "Numeric entry ID.",
+                                "has-validation": true
+                            }
+                        },
+                        "optional": []
+                    },
+                    "example-request": {
+                        "Basic request": {
+                            "id": 1,
+                            "version": "2.0",
+                            "method": "cmdb.object-type.delete.v2",
+                            "params": {
+                                "id": 123,
+                                "apikey": "{your-api-key}"
+                            }
+                        }
+                    },
+                    "example-response": {
+                        "Basic response": {
+                            "id": 1,
+                            "jsonrpc": "2.0",
+                            "result": {
+                                "success": true,
+                                "id": 123,
+                                "message": "Object type #123 has been deleted."
+                            }
+                        }
+                    }
+                },
+                "cmdb.object-type.read.v2": {
+                    "description": "Reads one or more object types from i-doit, can include category information.",
+                    "parameters": {
+                        "required": [],
+                        "optional": {
+                            "id": {
+                                "types": [
+                                    "integer",
+                                    "array"
+                                ],
+                                "description": "Numeric entry ID as integer or array.",
+                                "has-validation": true,
+                                "default-value": null
+                            },
+                            "constant": {
+                                "types": [
+                                    "string",
+                                    "array"
+                                ],
+                                "description": "Constant as string or array.",
+                                "has-validation": true,
+                                "default-value": null
+                            },
+                            "visible": {
+                                "types": [
+                                    "boolean"
+                                ],
+                                "description": "Visibility of the object type",
+                                "has-validation": false,
+                                "default-value": null
+                            },
+                            "with-categories": {
+                                "types": [
+                                    "boolean"
+                                ],
+                                "description": "Read category assignments",
+                                "has-validation": false,
+                                "default-value": false
+                            }
+                        }
+                    },
+                    "example-request": {
+                        "Basic request": {
+                            "id": 1,
+                            "version": "2.0",
+                            "method": "cmdb.object-type.read.v2",
+                            "params": {
+                                "apikey": "{your-api-key}"
+                            }
+                        },
+                        "With ids": {
+                            "id": 1,
+                            "version": "2.0",
+                            "method": "cmdb.object-type.read.v2",
+                            "params": {
+                                "id": 123,
+                                "apikey": "{your-api-key}"
+                            }
+                        },
+                        "With constants": {
+                            "id": 1,
+                            "version": "2.0",
+                            "method": "cmdb.object-type.read.v2",
+                            "params": {
+                                "constant": [
+                                    "C__OBJTYPE__SERVER",
+                                    "C__OBJTYPE__CLIENT"
+                                ],
+                                "apikey": "{your-api-key}"
+                            }
+                        }
+                    }
+                },
+                "cmdb.object-type.update-by-constant.v2": {
+                    "description": "Updates one object type in i-doit.",
+                    "parameters": {
+                        "required": {
+                            "constant": {
+                                "types": [
+                                    "string"
+                                ],
+                                "description": "Single constant as string.",
+                                "has-validation": true
+                            }
+                        },
+                        "optional": {
+                            "title": {
+                                "types": [
+                                    "string"
+                                ],
+                                "description": "Object type title",
+                                "has-validation": true,
+                                "default-value": null
+                            },
+                            "objectTypeGroup": {
+                                "types": [
+                                    "integer",
+                                    "string"
+                                ],
+                                "description": "Assigned object type group, either ID (int) or constant (string)",
+                                "has-validation": true,
+                                "default-value": null
+                            },
+                            "description": {
+                                "types": [
+                                    "string"
+                                ],
+                                "description": "Assigned object type group, either ID (int) or constant (string)",
+                                "has-validation": false,
+                                "default-value": null
+                            },
+                            "specificCategory": {
+                                "types": [
+                                    "integer",
+                                    "string"
+                                ],
+                                "description": "Specific category",
+                                "has-validation": true,
+                                "default-value": null
+                            },
+                            "isContainer": {
+                                "types": [
+                                    "boolean"
+                                ],
+                                "description": "Can physically contain other objects",
+                                "has-validation": false,
+                                "default-value": false
+                            },
+                            "isPositionableInRack": {
+                                "types": [
+                                    "boolean"
+                                ],
+                                "description": "Can be physically positioned inside a rack",
+                                "has-validation": false,
+                                "default-value": false
+                            },
+                            "isVisible": {
+                                "types": [
+                                    "boolean"
+                                ],
+                                "description": "Visibility of the object type",
+                                "has-validation": false,
+                                "default-value": true
+                            },
+                            "isRelationMaster": {
+                                "types": [
+                                    "boolean"
+                                ],
+                                "description": "Is relation master",
+                                "has-validation": false,
+                                "default-value": false
+                            },
+                            "hasOverviewPage": {
+                                "types": [
+                                    "boolean"
+                                ],
+                                "description": "Has overview page",
+                                "has-validation": false,
+                                "default-value": false
+                            },
+                            "sort": {
+                                "types": [
+                                    "integer"
+                                ],
+                                "description": "Sorting of the object type",
+                                "has-validation": false,
+                                "default-value": 65535
+                            },
+                            "color": {
+                                "types": [
+                                    "string"
+                                ],
+                                "description": "Object type color",
+                                "has-validation": false,
+                                "default-value": "#ffffff"
+                            },
+                            "defaultTemplate": {
+                                "types": [
+                                    "integer",
+                                    "string"
+                                ],
+                                "description": "Default template",
+                                "has-validation": false,
+                                "default-value": null
+                            },
+                            "sysidPrefix": {
+                                "types": [
+                                    "string"
+                                ],
+                                "description": "SYS-ID Prefix",
+                                "has-validation": false,
+                                "default-value": null
+                            }
+                        }
+                    }
+                },
+                "cmdb.object-type.update.v2": {
+                    "description": "Updates one object type in i-doit.",
+                    "parameters": {
+                        "required": {
+                            "id": {
+                                "types": [
+                                    "integer"
+                                ],
+                                "description": "Numeric entry ID.",
+                                "has-validation": true
+                            }
+                        },
+                        "optional": {
+                            "title": {
+                                "types": [
+                                    "string"
+                                ],
+                                "description": "Object type title",
+                                "has-validation": true,
+                                "default-value": null
+                            },
+                            "objectTypeGroup": {
+                                "types": [
+                                    "integer",
+                                    "string"
+                                ],
+                                "description": "Assigned object type group, either ID (int) or constant (string)",
+                                "has-validation": true,
+                                "default-value": null
+                            },
+                            "description": {
+                                "types": [
+                                    "string"
+                                ],
+                                "description": "Assigned object type group, either ID (int) or constant (string)",
+                                "has-validation": false,
+                                "default-value": null
+                            },
+                            "specificCategory": {
+                                "types": [
+                                    "integer",
+                                    "string"
+                                ],
+                                "description": "Specific category",
+                                "has-validation": true,
+                                "default-value": null
+                            },
+                            "isContainer": {
+                                "types": [
+                                    "boolean"
+                                ],
+                                "description": "Can physically contain other objects",
+                                "has-validation": false,
+                                "default-value": false
+                            },
+                            "isPositionableInRack": {
+                                "types": [
+                                    "boolean"
+                                ],
+                                "description": "Can be physically positioned inside a rack",
+                                "has-validation": false,
+                                "default-value": false
+                            },
+                            "isVisible": {
+                                "types": [
+                                    "boolean"
+                                ],
+                                "description": "Visibility of the object type",
+                                "has-validation": false,
+                                "default-value": true
+                            },
+                            "isRelationMaster": {
+                                "types": [
+                                    "boolean"
+                                ],
+                                "description": "Is relation master",
+                                "has-validation": false,
+                                "default-value": false
+                            },
+                            "hasOverviewPage": {
+                                "types": [
+                                    "boolean"
+                                ],
+                                "description": "Has overview page",
+                                "has-validation": false,
+                                "default-value": false
+                            },
+                            "sort": {
+                                "types": [
+                                    "integer"
+                                ],
+                                "description": "Sorting of the object type",
+                                "has-validation": false,
+                                "default-value": 65535
+                            },
+                            "color": {
+                                "types": [
+                                    "string"
+                                ],
+                                "description": "Object type color",
+                                "has-validation": false,
+                                "default-value": "#ffffff"
+                            },
+                            "defaultTemplate": {
+                                "types": [
+                                    "integer",
+                                    "string"
+                                ],
+                                "description": "Default template",
+                                "has-validation": false,
+                                "default-value": null
+                            },
+                            "sysidPrefix": {
+                                "types": [
+                                    "string"
+                                ],
+                                "description": "SYS-ID Prefix",
+                                "has-validation": false,
+                                "default-value": null
                             }
                         }
                     }
                 },
                 "cmdb.object.archive.v2": {
-                    "description": "Will \"archive\" a singular object.",
+                    "description": "Will \"archive\" one object.",
                     "parameters": {
                         "required": {
-                            "object": {
+                            "id": {
                                 "types": [
                                     "integer"
                                 ],
@@ -499,10 +1168,10 @@ This is to ensure that the v2 API no longer implements any special "own" logic. 
                     }
                 },
                 "cmdb.object.delete.v2": {
-                    "description": "Will \"delete\" a singular object.",
+                    "description": "Will \"delete\" one object.",
                     "parameters": {
                         "required": {
-                            "object": {
+                            "id": {
                                 "types": [
                                     "integer"
                                 ],
@@ -514,10 +1183,25 @@ This is to ensure that the v2 API no longer implements any special "own" logic. 
                     }
                 },
                 "cmdb.object.purge.v2": {
-                    "description": "Will permanently remove a singular object from the database.",
+                    "description": "Will permanently remove one object from the database.",
                     "parameters": {
                         "required": {
-                            "object": {
+                            "id": {
+                                "types": [
+                                    "integer"
+                                ],
+                                "description": "Numeric object ID.",
+                                "has-validation": true
+                            }
+                        },
+                        "optional": []
+                    }
+                },
+                "cmdb.object.restore.v2": {
+                    "description": "Will \"restore\" one object.",
+                    "parameters": {
+                        "required": {
+                            "id": {
                                 "types": [
                                     "integer"
                                 ],
@@ -651,6 +1335,54 @@ This is to ensure that the v2 API no longer implements any special "own" logic. 
                                 ]
                             }
                         ]
+                    }
+                },
+                "console.import.jdisc": {
+                    "description": "Imports data from a JDisc server (SQL server access is defined in the GUI)",
+                    "parameters": {
+                        "required": [],
+                        "optional": {
+                            "options": {
+                                "types": [
+                                    "array"
+                                ],
+                                "description": "Command options, as an associative array",
+                                "has-validation": false,
+                                "default-value": null
+                            },
+                            "arguments": {
+                                "types": [
+                                    "array"
+                                ],
+                                "description": "Command arguments, as an associative array",
+                                "has-validation": false,
+                                "default-value": null
+                            }
+                        }
+                    }
+                },
+                "console.import.jdiscdiscovery": {
+                    "description": "Triggers a JDisc discovery (API Access to the JDisc server is defined in the GUI)",
+                    "parameters": {
+                        "required": [],
+                        "optional": {
+                            "options": {
+                                "types": [
+                                    "array"
+                                ],
+                                "description": "Command options, as an associative array",
+                                "has-validation": false,
+                                "default-value": null
+                            },
+                            "arguments": {
+                                "types": [
+                                    "array"
+                                ],
+                                "description": "Command arguments, as an associative array",
+                                "has-validation": false,
+                                "default-value": null
+                            }
+                        }
                     }
                 },
                 "system.endpoints.read.v2": {
