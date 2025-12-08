@@ -23,8 +23,8 @@ If you contact support after using the hotfixes, please add the reference to the
 ## Application with GNU/Linux
 
 ```sh
-sudo cp i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip /var/www/html/i-doit/
-cd /var/www/html/i-doit/
+sudo cp i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip /var/www/html/
+cd /var/www/html/
 sudo -u www-data unzip i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 sudo rm i-doit_<version>_hotfix_<description>_<ticket>_<commit>.zip
 ```

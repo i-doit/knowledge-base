@@ -30,8 +30,8 @@ Execution
 
 After download, you copy and unzip the update package in the i-doit installation directory. Here is an example for a Debian-based operating system:
 
-    sudo -u www-data cp idoit-open-1.8-update.zip /var/www/html/i-doit/
-    cd /var/www/html/i-doit/
+    sudo -u www-data cp idoit-open-1.8-update.zip /var/www/html/
+    cd /var/www/html/
     sudo -u www-data unzip idoit-open-1.8-update.zip
 
 You have to adapt the path accordingly. Copy and unzip the package with the user of the Apache Webserver so that the update is carried out with this user's rights without problems.

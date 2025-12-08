@@ -28,13 +28,13 @@ Eines noch: Wir sollten alle System-Benutzerkonten und deren Passwörter parat h
 Um die Dateien nicht einzeln übertragen zu müssen und die ein ein Archiv zu packen, verwenden wir den **zip** Befehl:
 
 ```shell
-sudo zip -r i-doit.zip /var/www/html/i-doit/
+sudo zip -r i-doit.zip /var/www/html/
 ```
 
 Wenn Ihre i-doit Instanz unter einem anderen Pfad liegt, passen Sie den Befehl entsprechend an. Jetzt muss nur noch die ZIP Datei heruntergeladen oder auf den Windows Server transferiert werden. Für den Transfer der ZIP Datei kann scp verwendet werden. Den folgenden Befehl führen wir auf dem Windows Server aus:
 
 ```shell
-scp -r user@linuxsystem:/var/www/html/i-doit/i-doit.zip C:\
+scp -r user@linuxsystem:/var/www/html/i-doit.zip C:\
 ```
 
 ## Datenbank aus Linux exportieren

@@ -38,16 +38,16 @@ Zuerst in das [Admin-Center](admin-center.md) einloggen und dort wird der Token 
 
 ## Variante C: Token mit Zugriff auf das Betriebssystem finden (Alle Versionen)
 
-Der "Weblicense Token" wird in der Datei `.../i-doit/src/config.inc.php` gespeichert. Der Token kann direkt ausgegeben werden, wenn dieser Befehl an deinen i-doit Installationspfad angepasst wurde:
+Der "Weblicense Token" wird in der Datei `.../src/config.inc.php` gespeichert. Der Token kann direkt ausgegeben werden, wenn dieser Befehl an deinen i-doit Installationspfad angepasst wurde:
 
 ```shell
-cat /var/www/html/i-doit/src/config.inc.php | grep license_token
+cat /var/www/html/src/config.inc.php | grep license_token
 ```
 
 Die Ausgabe wird dann etwa so aussehen:
 
 ```shell
-cat /var/www/html/i-doit/src/config.inc.php | grep license_token
+cat /var/www/html/src/config.inc.php | grep license_token
 $g_license_token = 'abcdefg1234567890';
 ```
 

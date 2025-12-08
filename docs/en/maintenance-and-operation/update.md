@@ -135,7 +135,7 @@ sudo -u www-data php console.php update
 We can also provide the command with all necessary parameters directly. To update i-doit version **35** to version **36**, the command is as follows:
 
 ```shell
-sudo -u www-data php console.php update -u {username} -p {password} -z /var/www/html/i-doit/idoit-36-update.zip --v 36
+sudo -u www-data php console.php update -u {username} -p {password} -z /var/www/html/idoit-36-update.zip --v 36
 ```
 
 ## After the update

@@ -72,7 +72,7 @@ The custom files are not only suitable for new translations but also for overwri
 
     In order to provide users with just one language it can help to replace unnecessary language files. If you want to provide i-doit only in English, for example, you carry out the following actions in the command line:
     ```
-    cd /var/www/html/i-doit # Change to the installation path of i-doit (adjust if needed)
+    cd /var/www/html/ # Change to the installation path of i-doit (adjust if needed)
     cd src/lang/ # Change to the folder containing the language files
     cp de.inc.php de.inc.php.bak # You never know ;-)
     cp en.inc.php de.inc.php # Replace german language with the english one

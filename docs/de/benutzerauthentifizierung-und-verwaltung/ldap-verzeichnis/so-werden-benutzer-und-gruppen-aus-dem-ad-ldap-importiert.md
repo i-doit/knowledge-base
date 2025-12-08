@@ -362,7 +362,7 @@ syncEmptyAttributes=true
 Damit die .ini Datei verwendet wird, muss diese mit dem `-c` parameter angegeben werden.
 
 ```shell
-sudo -u www-data php console.php ldap-sync -c /var/www/html/i-doit/src/handler/config/ldap-sync.ini
+sudo -u www-data php console.php ldap-sync -c /var/www/html/src/handler/config/ldap-sync.ini
 ```
 
 [ldap.ini :material-file-download:](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/example-ldap.ini){ .md-button .md-button--primary }

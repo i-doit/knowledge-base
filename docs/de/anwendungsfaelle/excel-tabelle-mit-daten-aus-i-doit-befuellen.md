@@ -1,4 +1,4 @@
-# Excel-Tabelle mit Daten aus i-doit befüllen (veraltet)
+# Excel-Tabelle mit Daten aus i-doit befüllen
 
 Mit wenigen Zeilen Visual Basic lassen sich beliebige Inhalte aus i-doit auslesen und in Microsoft Excel darstellen. In diesem Artikel erklären wir die Vorgehensweise anhand von [Reports](../auswertungen/report-manager.md).
 
@@ -6,8 +6,7 @@ Mit wenigen Zeilen Visual Basic lassen sich beliebige Inhalte aus i-doit auslese
 
     Bitte beachten Sie, dass der Artikel aus 2018 stammt und bisher nicht mit der aktuellen Version von i-doit getestet wurde.
 
-Installation
-============
+## Installation
 
 1.  Download [https://github.com/VBA-tools/VBA-JSON/releases](https://github.com/VBA-tools/VBA-JSON/releases) und entpacken
 

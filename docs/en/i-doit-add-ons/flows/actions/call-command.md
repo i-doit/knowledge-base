@@ -45,14 +45,14 @@ Automatically extend the runtime of not-cancelled contracts. A Use case can be f
 
 | Option              | Description                                                                                                                                                                |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **importFile**      | Specify the complete path to the file. If you uploaded it before for the CSV Import the path is like `/var/www/html/i-doit/imports/1/title.csv`. The `1` is the tenant ID. |
+| **importFile**      | Specify the complete path to the file. If you uploaded it before for the CSV Import the path is like `/var/www/html/imports/1/title.csv`. The `1` is the tenant ID. |
 | **importProfileId** | A CSV Import profile needs to be created before, see [Creating a profile](../../../consolidate-data/csv-data-import/index.md#creating-a-profile)                           |
 
 ## import-hinventory (only on-prem)
 
 | Option         | Description                                                                                                            |
 | -------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| **importFile** | Specify the complete path to the file. Like `/var/www/html/i-doit/imports/1/title.xml` where the `1` is the tenant ID. |
+| **importFile** | Specify the complete path to the file. Like `/var/www/html/imports/1/title.xml` where the `1` is the tenant ID. |
 | **objectType** | Imports the specified object type. Single select combobox with object types, required with default value 'Client'      |
 | **objectId**   | Imports only the specified object                                                                                      |
 | **force**      | Forces existing objects to be updated but overwrites the imported categories                                           |
@@ -82,7 +82,7 @@ Automatically extend the runtime of not-cancelled contracts. A Use case can be f
 
 | Option         | Description                                                                                                            |
 | -------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| **importFile** | Specify the complete path to the file. Like `/var/www/html/i-doit/imports/1/title.xml` where the `1` is the tenant ID. |
+| **importFile** | Specify the complete path to the file. Like `/var/www/html/imports/1/title.xml` where the `1` is the tenant ID. |
 
 ## ldap-sync
 
