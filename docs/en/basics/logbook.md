@@ -45,15 +45,15 @@ The option for the **Maximum amount of combined detailed changes** causes simult
 
 ### Delete Logbook entries from purged objects completely
 
-This configuration option for the logbook can be found under **Administration → Tenant management → Settings for Tenant → Logbook → Delete Logbook entries from purged objects completely**.
+This configuration option for the logbook can be found under **Administration → [Tenant-name] management → Settings for [Tenant-name] → Logbook → Delete Logbook entries from purged objects completely**.
 
 [![logbook-entries-purge](../assets/images/en/basics/logbook/12-lb.png)](../assets/images/en/basics/logbook/12-lb.png)
 
 This setting is set to **No** by default. If you set this setting to **Yes**, the logbook entry of the object will also be deleted after purging the object itself.
 
-## Activation/ Deactivation of the Logbook
+### Log detailed CMDB changes
 
-You can activate/ deactivate the logbook at **Administration → Tenant management → Settings for tenant → Logbook → Log detailed CMDB changes**.
+At **Administration → [Tenant-name] management management → Settings for [Tenant-name] → Logbook → Log detailed CMDB changes** you can disable details for entries in the logbook. It will no longer be recorded which change was made to which attribute.
 
 ## Custom Entries
 
@@ -95,4 +95,4 @@ The widget My last changed objects listing the latest changes to objects can be 
 
 ## Set Permissions
 
-The authorisation system of i-doit allows the configuration of persons (or person groups) that are allowed to have reading access to the logbook. For example, you can specify that only i-doit-administrators have the authorisation to track changes.
+The authorization system of i-doit allows the configuration of persons (or person groups) that are allowed to have reading access to the logbook. For example, you can specify that only i-doit-administrators have the authorization to track changes.

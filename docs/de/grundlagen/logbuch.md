@@ -41,7 +41,7 @@ In der Konfiguration lässt sich die **Benutzerkennung** ändern, die zu jedem E
 !!! success "Anonymisierung"
     Wird die **Benutzerkennung** auf einen festen Wert, beispielsweise auf "Anonymous", geändert, wird das Logbuch anonymisiert. Es lässt sich somit nicht mehr nachvollziehen, wer welche Änderungen getätigt hat.
 
-Die Einstellung für die **struktur-it-dokumentation.mdMaximalzahl kombinierter Änderungenstruktur-it-dokumentation.md** bewirkt, dass gleichzeitige Änderungen zusammengefasst werden. Die Detailtiefe flacht dadurch ab, aber die Performance bei Importen wird erhöht.
+Die Einstellung für die **Maximalzahl kombinierter Änderungen** bewirkt, dass gleichzeitige Änderungen zusammengefasst werden. Die Detailtiefe flacht dadurch ab, aber die Performance bei Importen wird erhöht.
 
 ### Logbucheinträge zu bereinigten Objekten vollständig löschen
 
@@ -51,9 +51,9 @@ Diese Konfiguration des Logbuch ist unter **Verwaltung → [Mandanten-Name] Verw
 
 Diese Einstellung ist Standardmäßig auf **Nein** gestellt. Stellt man diese Einstellung auf **Ja** wird nach bereinigen eines Objekts der Logbucheintrag des Objekts ebenfalls vollständig gelöscht.
 
-## Logbuch aktivieren/deaktivieren
+### Detaillierte CMDB Änderungen protokollieren
 
-Unter **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name] → Logbuch → Detaillierte CMDB Änderungen protokollieren** kann das Logbuch aktiviert bzw. deaktiviert werden.
+Unter **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name] → Logbuch → Detaillierte CMDB Änderungen protokollieren** können details für Einträge im Logbuch deaktiviert werden. Es wird dann nicht mehr erfasst, welche Änderung an welchem Attribut vorgenommen wurde.
 
 ## Eigene Einträge
 
@@ -61,7 +61,7 @@ Zu jedem Objekt kann ein neuer Eintrag im Logbuch generiert werden. Dazu wird in
 
 [![eigene-einträge](../assets/images/de/grundlagen/logbuch/7-lb.png)](../assets/images/de/grundlagen/logbuch/7-lb.png)
 
-## Einträge aus Dritt-Systemen
+### Einträge aus Dritt-Systemen
 
 Das Logbuch nimmt neue Einträge aus Dritt-Systemen entgegen, beispielsweise durch [Importe](../daten-konsolidieren/index.md), [Service Desks](../automatisierung-und-integration/service-desk/index.md), [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md) und die [API](../i-doit-add-ons/api/index.md).
 
