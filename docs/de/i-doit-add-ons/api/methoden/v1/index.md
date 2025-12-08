@@ -10,193 +10,199 @@ Dieser Namensraum ist für gängige Methoden reserviert.
 
 ### idoit.search
 
-Über die API suchen
+??? example "idoit.search (Zum aufklappen anklicken)"
 
-#### Anfrage Parameter
+    Über die API suchen
 
-| Key   | JSON Datentyp | Erforderlich | Beschreibung                                  |
-| ----- | ------------- | ------------ | --------------------------------------------- |
-| **q** | String        | Ja           | Abfrage, zum Beispiel: **"My little server"** |
+    **idoit.search Parameter**
 
-#### Antwort
+    | Key   | JSON Datentyp | Erforderlich | Beschreibung                                  |
+    | ----- | ------------- | ------------ | --------------------------------------------- |
+    | **q** | String        | Ja           | Abfrage, zum Beispiel: **"My little server"** |
 
-JSON-Schlüsselergebnis enthält ein Array von JSON-Objekten. Jedes Objekt enthält ein Suchergebnis.
+    **idoit.search Antwort**
 
-| Key            | JSON Datentyp | Beschreibung                                     |
-| -------------- | ------------- | ------------------------------------------------ |
-| **documentID** | String        | Identifikationsnummer                            |
-| **key**        | String        | Attribut, das sich auf die Abfrage bezieht       |
-| **value**      | String        | Wert, der sich auf die Abfrage bezieht           |
-| **type**       | String        | [Add-on](../../index.md) oder Kernfunktionalität |
-| **link**       | String        | Relative URL, die direkt zum Suchergebnis führt  |
-| **score**      | Integer       | Punktevergabe (veraltet)                         |
+    JSON-Schlüsselergebnis enthält ein Array von JSON-Objekten. Jedes Objekt enthält ein Suchergebnis.
 
-#### Anfrage
+    | Key            | JSON Datentyp | Beschreibung                                     |
+    | -------------- | ------------- | ------------------------------------------------ |
+    | **documentID** | String        | Identifikationsnummer                            |
+    | **key**        | String        | Attribut, das sich auf die Abfrage bezieht       |
+    | **value**      | String        | Wert, der sich auf die Abfrage bezieht           |
+    | **type**       | String        | [Add-on](../../index.md) oder Kernfunktionalität |
+    | **link**       | String        | Relative URL, die direkt zum Suchergebnis führt  |
+    | **score**      | Integer       | Punktevergabe (veraltet)                         |
 
-Body:
+    **idoit.search Anfrage**
 
-```json
-{
-    "version": "2.0",
-    "method": "idoit.search",
-    "params": {
-        "q": "My little server",
-        "apikey": "xxx",
-        "language": "en"
-    },
-    "id": 1
-}
-```
+    Body:
 
-#### Antwort
-
-Body:
-
-```json
-{
-    "jsonrpc": "2.0",
-    "result": [
-        {
-            "documentId": "1000",
-            "key": "Virtual Host > Global > Title",
-            "value": "My little server",
-            "type": "cmdb",
-            "link": "/?objID=1000&catgID=1&cateID=1029&highlight=My%20little%20server",
-            "score": 0
+    ```json
+    {
+        "version": "2.0",
+        "method": "idoit.search",
+        "params": {
+            "q": "My little server",
+            "apikey": "xxx",
+            "language": "en"
         },
-        […]
-    ],
-    "id": 1
-}
-```
+        "id": 1
+    }
+    ```
+
+    **idoit.search Antwort**
+
+    Body:
+
+    ```json
+    {
+        "jsonrpc": "2.0",
+        "result": [
+            {
+                "documentId": "1000",
+                "key": "Virtual Host > Global > Title",
+                "value": "My little server",
+                "type": "cmdb",
+                "link": "/?objID=1000&catgID=1&cateID=1029&highlight=My%20little%20server",
+                "score": 0
+            },
+            […]
+        ],
+        "id": 1
+    }
+    ```
 
 ### idoit.version
 
-Informationen über i-doit und den aktuellen Benutzer abrufen
+??? example "idoit.version (Zum aufklappen anklicken)"
 
-#### Anfrage Parameter
+    Informationen über i-doit und den aktuellen Benutzer abrufen
 
-Keine
+    **idoit.version Parameter**
 
-#### Antwort
+    Keine
 
-Das JSON-Schlüsselergebnis enthält ein JSON-Objekt mit verschiedenen Informationen über i-doit selbst und den aktuellen Benutzer.
+    **idoit.version Antwort**
 
-| Key                | JSON Datentyp | Beschreibung                                                                                |
-| ------------------ | ------------- | ------------------------------------------------------------------------------------------- |
-| **login**          | Array         | Informationen über den Benutzer, der die Anfrage durchgeführt hat; Einzelheiten siehe unten |
-| **login.userid**   | String        | Objekt-Identifikator (als numerische Zeichenfolge)                                          |
-| **login.name**     | String        | ObjektBezeichnung                                                                           |
-| **login.mail**     | String        | E-Mail-Adresse (siehe Kategorie Personen → Stammdaten)                                      |
-| **login.username** | String        | Benutzername (siehe Kategorie Personen → Login)                                             |
-| **login.tenant**   | String        | Name des Mandanten                                                                          |
-| **login.language** | String        | Sprache: "en" oder "de"                                                                     |
-| **version**        | String        | Version des installierten i-doit                                                            |
-| **step**           | String        | Dev, alpha oder beta release                                                                |
-| **type**           | String        | Variante: "OPEN" oder "PRO".                                                                |
+    Das JSON-Schlüsselergebnis enthält ein JSON-Objekt mit verschiedenen Informationen über i-doit selbst und den aktuellen Benutzer.
 
-#### Anfrage
+    | Key                | JSON Datentyp | Beschreibung                                                                                |
+    | ------------------ | ------------- | ------------------------------------------------------------------------------------------- |
+    | **login**          | Array         | Informationen über den Benutzer, der die Anfrage durchgeführt hat; Einzelheiten siehe unten |
+    | **login.userid**   | String        | Objekt-Identifikator (als numerische Zeichenfolge)                                          |
+    | **login.name**     | String        | ObjektBezeichnung                                                                           |
+    | **login.mail**     | String        | E-Mail-Adresse (siehe Kategorie Personen → Stammdaten)                                      |
+    | **login.username** | String        | Benutzername (siehe Kategorie Personen → Login)                                             |
+    | **login.tenant**   | String        | Name des Mandanten                                                                          |
+    | **login.language** | String        | Sprache: "en" oder "de"                                                                     |
+    | **version**        | String        | Version des installierten i-doit                                                            |
+    | **step**           | String        | Dev, alpha oder beta release                                                                |
+    | **type**           | String        | Variante: "OPEN" oder "PRO".                                                                |
 
-Body:
+    **idoit.version Anfrage**
 
-```json
-{
-    "version": "2.0",
-    "method": "idoit.version",
-    "params": {
-        "apikey": "xxx",
-        "language": "en"
-    },
-    "id": 1
-}
-```
+    Body:
 
-#### Antwort
-
-Body:
-
-```json
-{
-    "jsonrpc": "2.0",
-    "result": {
-        "login": {
-            "userid": "9",
-            "name": "i-doit Systemadministrator ",
-            "mail": "i-doit@acme-it.example",
-            "username": "admin",
-            "mandator": "ACME IT Solutions",
+    ```json
+    {
+        "version": "2.0",
+        "method": "idoit.version",
+        "params": {
+            "apikey": "xxx",
             "language": "en"
         },
-        "version": "1.10.2",
-        "step": "",
-        "type": "PRO"
-    },
-    "id": 1
-}
-```
+        "id": 1
+    }
+    ```
+
+    **idoit.version Antwort**
+
+    Body:
+
+    ```json
+    {
+        "jsonrpc": "2.0",
+        "result": {
+            "login": {
+                "userid": "9",
+                "name": "i-doit Systemadministrator ",
+                "mail": "i-doit@acme-it.example",
+                "username": "admin",
+                "mandator": "ACME IT Solutions",
+                "language": "en"
+            },
+            "version": "1.10.2",
+            "step": "",
+            "type": "PRO"
+        },
+        "id": 1
+    }
+    ```
 
 ### idoit.constants
 
-Abrufen definierter Konstanten aus i-doit
+??? example "idoit.constants (Zum aufklappen anklicken)"
 
-#### Anfrage Parameter
+    Abrufen definierter Konstanten aus i-doit
 
-Keine
+    **idoit.constants Parameter**
 
-#### Antwort
+    Keine
 
-JSON-Schlüsselergebnis enthält ein JSON-Objekt.
+    **idoit.constants Antwort**
 
-| Key              | JSON Datentyp | Beschreibung                                                                                                        |
-| ---------------- | ------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **objectTypes**  | Object        | Liste der Objekttypen<br><br>Schlüssel: Objekttyp-Konstanten<br><br>Werte: Bezeichnung der übersetzten Objekttypen  |
-| **categories**   | Object        | Liste der globalen und spezifischen Kategorien                                                                      |
-| **categories.g** | Object        | Liste der globalen Kategorien<br><br>Schlüssel: Kategorie-Konstanten<br><br>Werte: übersetzte Kategorie Bezeichnung |
-| **categories.s** | Object        | Liste spezifischer Kategorien<br><br>Schlüssel: Kategorie-Konstanten<br><br>Werte: übersetzte Kategorie Bezeichnung |
+    JSON-Schlüsselergebnis enthält ein JSON-Objekt.
 
-#### Anfrage
+    | Key              | JSON Datentyp | Beschreibung                                                                                                        |
+    | ---------------- | ------------- | ------------------------------------------------------------------------------------------------------------------- |
+    | **objectTypes**  | Object        | Liste der Objekttypen<br><br>Schlüssel: Objekttyp-Konstanten<br><br>Werte: Bezeichnung der übersetzten Objekttypen  |
+    | **categories**   | Object        | Liste der globalen und spezifischen Kategorien                                                                      |
+    | **categories.g** | Object        | Liste der globalen Kategorien<br><br>Schlüssel: Kategorie-Konstanten<br><br>Werte: übersetzte Kategorie Bezeichnung |
+    | **categories.s** | Object        | Liste spezifischer Kategorien<br><br>Schlüssel: Kategorie-Konstanten<br><br>Werte: übersetzte Kategorie Bezeichnung |
 
-Body:
+    **idoit.constants Anfrage**
 
-```json
-{
-    "version": "2.0",
-    "method": "idoit.constants",
-    "params": {
-        "apikey": "xxx",
-        "language": "en"
-    },
-    "id": 1
-}
-```
+    Body:
 
-#### Antwort
-
-Body:
-
-```json
-{
-    "jsonrpc": "2.0",
-    "result": {
-        "objectTypes": {
-            "C__OBJTYPE__SERVER": "Server",
-            […]
+    ```json
+    {
+        "version": "2.0",
+        "method": "idoit.constants",
+        "params": {
+            "apikey": "xxx",
+            "language": "en"
         },
-        "categories": {
-            "g": {
-                "C__CATG__GLOBAL": "General",
-                "C__CATG__MODEL": "Model",
+        "id": 1
+    }
+    ```
+
+    **idoit.constants Antwort**
+
+    Body:
+
+    ```json
+    {
+        "jsonrpc": "2.0",
+        "result": {
+            "objectTypes": {
+                "C__OBJTYPE__SERVER": "Server",
                 […]
             },
-            "s": {
-                "C__CATS__MONITOR": "Monitor",
-                […]
+            "categories": {
+                "g": {
+                    "C__CATG__GLOBAL": "General",
+                    "C__CATG__MODEL": "Model",
+                    […]
+                },
+                "s": {
+                    "C__CATS__MONITOR": "Monitor",
+                    […]
+                }
             }
-        }
-    },
-    "id": 1
-}
-```
+        },
+        "id": 1
+    }
+    ```
 
 ### idoit.login
 
@@ -204,10 +210,11 @@ Body:
 
     Neue Sitzung erstellen
 
-    Anfrage Parameter
+    **idoit.login Parameter**
+
     Keine
 
-    Antwort
+    **idoit.login Antwort**
 
     JSON-Schlüsselergebnis enthält ein JSON-Objekt.
 
@@ -224,7 +231,7 @@ Body:
 
     Beispiel
 
-    **Anfrage**
+    **idoit.login Anfrage**
     <br>Header:
     ```
     X-RPC-Auth-Username: admin
@@ -244,7 +251,7 @@ Body:
     }
     ```
 
-    **Antwort**
+    **idoit.login Antwort**
     <br>Header:
     ```
     X-RPC-Auth-Session: d1obs9m3d2pd8651grptjhdjg3
@@ -266,7 +273,7 @@ Body:
         "id": 1
     }
     ```
-    **Anfrage**
+    **idoit.login Anfrage**
     <br>Header:
     ```
     X-RPC-Auth-Session: d1obs9m3d2pd8651grptjhdjg3
@@ -283,7 +290,7 @@ Body:
         "id": 2
     }
     ```
-    **Antwort**
+    **idoit.login Antwort**
     <br>Header:
     ```
     X-RPC-Auth-Session: d1obs9m3d2pd8651grptjhdjg3
@@ -308,7 +315,7 @@ Body:
         "id": 2
     }
     ```
-    **Anfrage**
+    **idoit.login Anfrage**
     <br>Header:
     ```
     X-RPC-Auth-Session: d1obs9m3d2pd8651grptjhdjg3
@@ -325,7 +332,7 @@ Body:
         "id": 3
     }
     ```
-    **Antwort**
+    **idoit.login Antwort**
     <br>Header:
     ```
     X-RPC-Auth-Session: d1obs9m3d2pd8651grptjhdjg3
@@ -347,11 +354,11 @@ Body:
 ??? example "idoit.logout (Zum aufklappen anklicken)"
     Aktuelle Sitzung schließen
 
-    Anfrage Parameter
+    **Anfrage Parameter**
 
     Keine
 
-    Antwort
+    **Anfrage Antwort**
 
     JSON-Schlüsselergebnis enthält ein JSON-Objekt.
 
@@ -364,8 +371,7 @@ Body:
 
     Siehe Methode idoit.login
 
-Namespace [cmdb]
-----------------
+## Namespace [cmdb]
 
 Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behandlung von Objekten und Kategorien.
 
@@ -375,8 +381,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
     Erstelle ein neues Objekt mit einigen optionalen Informationen
 
-    Anfrage Parameter
-
+    idoit.constants Parameter
     | Key             | JSON Datentyp   | Erforderlich | Beschreibung                                                                                                                                                                                  |
     | --------------- | --------------- | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
     | **type**        | String\|Integer | Ja           | Objekttyp Konstante als String, zum Beispiel: "C\_\_OBJTYPE\_\_SERVER".<br><br>Alternativ z.B. Objekttyp-Identifikator als Ganzzahl: 5                                                        |
@@ -386,7 +391,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
     | **cmdb_status** | String\|Integer | Nein         | Attribute CMDB-Status in der Kategorie Global z. B. durch seine Konstante (String): **"C__CMDB_STATUS__IN_OPERATION"**<br><br>Alternativ, durch seinen Bezeichner (Ganzzahl), zum Beispiel: 6 |
     | **description** | String          | Nein         | Attributbeschreibung in der Kategorie Global                                                                                                                                                  |
 
-     Antwort
+    cmdb.object.create Antwort
 
     JSON-Schlüsselergebnis enthält ein JSON-Objekt.
 
@@ -398,7 +403,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
     Beispiel
 
-    **Anfrage**
+    **cmdb.object.create Anfrage**
     <br>Body:
     ```
     {
@@ -413,7 +418,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
         "id": 1
     }
     ```
-    **Antwort**
+    **cmdb.object.create Antwort**
     <br>Body:
     ```
     {
@@ -433,13 +438,13 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
     Lesen Sie allgemeine Informationen über eine Objekt
 
-     Anfrage Parameter
+    cmdb.object.read Parameter
 
     | Key    | JSON Datentyp | Erforderlich | Beschreibung                               |
     | ------ | ------------- | ------------ | ------------------------------------------ |
     | **id** | Integer       | Ja           | Objekt-Identifikator; zum Beispiel: **42** |
 
-     Antwort
+    cmdb.object.read
 
     JSON-Schlüsselergebnis enthält ein JSON-Objekt.
 
@@ -460,7 +465,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
     Beispiel
 
-    **Anfrage**
+    **cmdb.object.read Anfrage**
     <br>Body:
     ```
     {
@@ -474,7 +479,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
         "id": 1
     }
     ```
-    **Antwort**
+    **cmdb.object.read Antwort**
     <br>Body:
     ```
      {
@@ -503,14 +508,14 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
     Objekt ändern, z.B. Bezeichnung eines Objekts
 
-     Anfrage Parameter
+    cmdb.object.update Parameter
 
     | Key       | JSON Datentyp | Erforderlich | Description                                                     |
     | --------- | ------------- | ------------ | --------------------------------------------------------------- |
     | **id**    | Integer       | Ja           | Objekt-Identifikator, zum Beispiel: **42**                      |
     | **title** | String        | Ja           | Neue Objekt Bezeichnung, zum Beispiel: **"Your little server"** |
 
-     Antwort
+    cmdb.object.update Antwort
 
     JSON-Schlüsselergebnis enthält ein JSON-Objekt.
 
@@ -521,7 +526,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
     Beispiel
 
-    **Anfrage**
+    **cmdb.object.update Anfrage**
     <br>Body:
     ```
     {
@@ -536,7 +541,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
         "id": 1
     }
     ```
-    **Antwort**
+    **cmdb.object.update Antwort**
     <br>Body:
     ```
     {
@@ -555,20 +560,20 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
     Löscht ein Objekt
 
-     Anfrage Parameter
+    cmdb.object.delete Parameter
 
     | Key        | JSON Datentyp | Erforderlich | Beschreibung                                                                                                                                                                                                                       |
     | ---------- | ------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
     | **id**     | Integer       | Ja           | Objekt-Identifikator, zum Beispiel: **42**                                                                                                                                                                                         |
     | **status** | String        | Ja           | Status Konstante:<br><br>*   **"C__RECORD_STATUS__ARCHIVED"**: Archiviertes Objekt<br>*   **"C__RECORD_STATUS__DELETED"**: Objekt als gelöscht markieren<br>*   **"C__RECORD_STATUS__PURGE"**: Objekt aus der Datenbank bereinigen |
 
-    Antwort
+    cmdb.object.delete Antwort
 
     JSON-Schlüsselergebnis enthält ein JSON-Objekt.
 
     Beispiel
 
-    **Anfrage**
+    **cmdb.object.delete Anfrage**
     <br>Body:
     ```
     {
@@ -583,7 +588,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
         "id": 1
     }
     ```
-    **Antwort**
+    **cmdb.object.delete Antwort**
     <br>Body:
     ```
     {
@@ -602,13 +607,13 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
     Wiederherstellen eines Objekts
 
-    Anfrage Parameter
+    cmdb.object.recycle Parameter
 
     | **Key**    | **JSON Datentyp** | Erforderlich | Beschreibung                                |
     | ---------- | ----------------- | ------------ | ------------------------------------------- |
     | **object** | Integer           | Ja           | Objekt-Identifikator, zum Beispiel: **464** |
 
-    Antwort
+    cmdb.object.recycle Antwort
 
     JSON-Schlüsselergebnis enthält ein JSON-Objekt.
 
@@ -619,7 +624,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
     Beispiel
 
-    **Anfrage**
+    **cmdb.object.recycle Anfrage**
     <br>Body:
     ```
     {
@@ -633,7 +638,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
         "id": 1
     }
     ```
-    **Antwort**
+    **cmdb.object.recycle Antwort**
     <br>Body:
     ```
     {
@@ -658,7 +663,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
     | ---------- | ----------------- | ------------ | ------------------------------------------- |
     | **object** | Integer           | Yes          | Objekt-Identifikator, zum Beispiel: **464** |
 
-     **Antwort**
+    **cmdb.object.archive Antwort**
 
     JSON-Schlüsselergebnis enthält ein JSON-Objekt.
 
@@ -668,7 +673,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
     | **message** | String            | Einige Informationen |
     Beispiel
 
-    **Anfrage**
+    **cmdb.object.archive Anfrage**
     <br>Body:
     ```
     {
@@ -682,7 +687,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
         "id": 1
     }
     ```
-    **Antwort**
+    **cmdb.object.archive Antwort**
     <br>Body:
     ```
     {
