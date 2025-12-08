@@ -24,6 +24,10 @@ In order to have access to a category in a database when querying (for example, 
 
 [![database constant](../assets/images/en/basics/custom-categories/5-cc.png)](../assets/images/en/basics/custom-categories/5-cc.png)
 
+Since version 37 you can now select a custom icon for the custom category. A variety of icons are available which can be selected via the **Change icon** button. Additionally, you can upload your own icons. Maximum file size is **1024 KB** Allowed file extensions are **apng**, **avif**, **gif**, **jpg**, **jpeg**, **jfif**, **pjpeg**, **pjp**, **png**, **svg** and **webp**.
+
+[![change icon](../assets/images/en/basics/custom-categories/icon-cc.png)](../assets/images/en/basics/custom-categories/icon-cc.png)
+
 ## Characteristics of the Category
 
 In order to customize your category you can add any number of attributes with the **Add new field** button. You can choose from the following [field types](./attribute-fields.md):
