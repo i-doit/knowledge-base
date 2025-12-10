@@ -49,7 +49,7 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 ## i-doit core
 
-### Use the unique identifier for ldap-sync when it is set (ID-11944)
+### Use the unique identifier to match persons via LDAP sync when it is set (ID-11944)
 
 [i-doit_37_hotfix_ID-11944_bc4eddf.zip :material-file-download:](../../assets/downloads/hotfixes/37/i-doit_37_hotfix_ID-11944_bc4eddf.zip){ .md-button .md-button--primary }
 
