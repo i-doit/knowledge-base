@@ -7,7 +7,7 @@ lang: en
 
 # Hotfixes
 
-!!! success "Hotfixes for version **36**"
+!!! success "Hotfixes for version **37**"
 
 A hotfix fixes a specific error and is usually made available as a ZIP file. The ZIP file is extracted in the **installation directory** of i-doit. The prompt asking whether files should be overwritten when unpacking must be confirmed.
 
@@ -45,55 +45,13 @@ Path for the **i-doit Discovery installer**:
 C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 ```
 
+* * *
+
 ## i-doit core
 
-### Find the object when using Attach object of type = Automatic in CSV Import (ID-12143)
+### Use the unique identifier for ldap-sync when it is set (ID-11944)
 
-[i-doit_36_hotfix_ID-12143_6cf8641.zip :material-file-download:](../../assets/downloads/hotfixes/36/i-doit_36_hotfix_ID-12143_6cf8641.zip){ .md-button .md-button--primary }
-
-### Do not validate position in rack when not positioned in rack (ID-12182)
-
-[i-doit_36_hotfix_ID-12182_e8bd5f3.zip :material-file-download:](../../assets/downloads/hotfixes/36/i-doit_36_hotfix_ID-12182_e8bd5f3.zip){ .md-button .md-button--primary }
-
-### Do not throw flows error when importing (ID-12183)
-
-!!! info "If this error is displayed when importing via JDisc Connector"
-
-    Import JDisc.ERROR: idoit\Module\SyneticsFlows\ConnectSignal\ObjectPurgedConnect::__invoke(): Argument #3 ($objectTitle) must be of type string, null given, called in /var/www/idoit/src/classes/modules/synetics_flows/src/ConnectSignal/Connect.php on line 17. File: /var/www/idoit/src/classes/modules/synetics_flows/src/ConnectSignal/ObjectPurgedConnect.php Line: 25
-
-[i-doit_36_hotfix_ID-12183_5f2a1bb.zip :material-file-download:](../../assets/downloads/hotfixes/36/i-doit_36_hotfix_ID-12183_5f2a1bb.zip){ .md-button .md-button--primary }
-
-### Prevent unnecessary HTML Purifier calls (ID-12202)
-
-[i-doit_36_hotfix_ID-12202_ID-12203.zip :material-file-download:](../../assets/downloads/hotfixes/36/i-doit_36_hotfix_ID-12202_ID-12203.zip){ .md-button .md-button--primary }
-
-### Importing objects with ports connected to other objects causes jdisc import to stop (ID-11914)
-
-[i-doit_36_hotfix_ID-11914.zip :material-file-download:](../../assets/downloads/hotfixes/36/i-doit_36_hotfix_ID-11914.zip){ .md-button .md-button--primary }
-
-* * *
-
-## API Add-on
-
-### Allow update of "layer3_assignments" property from "C__CATS__NET" (API-632)
-
-When an Layer-3 Net assignment is altered, the entry is not overwritten.
-
-[api_2.4_hotfix_API-632_9c15fb1.zip :material-file-download:](../../assets/downloads/hotfixes/api/api_2.4_hotfix_API-632_9c15fb1.zip){ .md-button .md-button--primary }
-
-* * *
-
-## JDisc Connector Add-on
-
-### Save CMDB status for newly imported objects (JDISC-72)
-
-!!! note "You need to install the fixed Version via the [Admin-Center](../admin-center.md)."
-
-[hotfix-i-doit-jdisc-1.0.1.zip :material-file-download:](../../assets/downloads/hotfixes/jdisc/hotfix-i-doit-jdisc-1.0.1.zip){ .md-button .md-button--primary }
-
-### Prevent missing "JDisc Connector" in Add-ons menu after updating i-doit (JDISC-77)
-
-[jdisc-connector_1.0.1_hotfix_JDISC-77_a8aef2e.zip :material-file-download:](../../assets/downloads/hotfixes/jdisc/jdisc-connector_1.0.1_hotfix_JDISC-77_a8aef2e.zip){ .md-button .md-button--primary }
+[i-doit_37_hotfix_ID-11944_bc4eddf.zip :material-file-download:](../../assets/downloads/hotfixes/37/i-doit_37_hotfix_ID-11944_bc4eddf.zip){ .md-button .md-button--primary }
 
 * * *
 
