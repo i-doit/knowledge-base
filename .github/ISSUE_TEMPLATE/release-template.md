@@ -1,18 +1,18 @@
 ---
-name: i-doit Release Preparation
+name: i-doit Release preparation
 about: Checklist for preparing a new i-doit release in the Knowledge Base
 title: "[RELEASE] i-doit vXX"
 labels: update, documentation
 assignees: ''
 ---
 
-# 📦 Release Preparation Checklist
+# 📦 Release preparation checklist
 
-## 1. Review New Features and Fixes
+## 1. Review new features and fixes
 
 - [ ] Create separate sub issue(s) for documenting new features or important fixes.
 
-## 2. System Requirements Update
+## 2. System requirements update
 
 - [ ] Create separate sub issue(s) if system requirements need updating.
 
@@ -30,7 +30,7 @@ assignees: ''
 - [ ] Update recommended system usage
 - [ ] Update compatibility matrix
 
-## 3. Update Release Notes and Changelog
+## 3. Update release notes and changelog
 
 - [ ] Create separate sub issue(s) if needed.
 
@@ -52,7 +52,7 @@ assignees: ''
 - [ ] Update `docs/en/version-history/index.md`
 - [ ] Update `config/en/mkdocs.yml`
 
-## 4. Archive and Create New Hotfix Pages
+## 4. Archive and create new hotfix pages
 
 - [ ] Create separate sub issue(s) if needed.
 
@@ -76,6 +76,11 @@ assignees: ''
 - [ ] Update `docs/en/system-administration/hotfixes/hotfix-archive/index.html`
 - [ ] Update `config/en/mkdocs.yml`
 
-## 5. Add Changelogs for Updated Add-ons
+## 5. Add changelogs for updated add-ons
 
 - [ ] Create separate sub issue(s) for each updated add-on.
+
+## 6. Add Downloads to Download Page
+
+- [ ] Added Downloads (DE) `docs/de/download-links.md`
+- [ ] Added Downloads (EN) `docs/en/download-links.md`

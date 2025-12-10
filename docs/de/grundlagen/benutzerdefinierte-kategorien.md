@@ -24,6 +24,10 @@ Um auf die Kategorie bei Abfragen (zum Beispiel in selbst geschriebenen [Reports
 
 [![benutzerdefinierte-kategorien-5](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/5-bk.png)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/5-bk.png)
 
+Ab Version 37 ist es nun möglich ein eigenes Icon für die benutzerdefinierte Kategorie auszuwählen. Hierfür steht eine Vielzahl an Icons zur Verfügung, die über den Button **Icon ändern** ausgewählt werden können. Zusätzlich lassen sich eigene Icons hochladen. Maximale Dateigröße beträgt **1024 KB** Erlaubte Dateiendungen sind **apng**, **avif**, **gif**, **jpg**, **jpeg**, **jfif**, **pjpeg**, **pjp**, **png**, **svg** und **webp**.
+
+[![benutzerdefinierte-kategorien-5](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/icon-bk.png)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/icon-bk.png)
+
 ## Ausprägung der Kategorie
 
 Um eine Kategorie auszuprägen, können beliebig viele Attribute über den Button **Mehrere Felder hinzufügen** hinzugefügt werden. Hier stehen folgende [Feldtypen](attributfelder.md) zur Auswahl:

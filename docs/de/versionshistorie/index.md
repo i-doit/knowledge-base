@@ -5,6 +5,7 @@ Wann erschien welches Release von i-doit?
 | Version                | Datum          | Release Notes                                                    | Changelog                                                                    |
 | ---------------------- | -------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------------------- |
 | 2025<br>               |                |                                                                  |                                                                              |
+| **37**                 | **02.12.2025** | **[Release Notes](./release-notes/release-notes-37.md)**         | **[Changelog](./changelogs/changelog-37.md)**                                |
 | **36**                 | **16.09.2025** | **[Release Notes](./release-notes/release-notes-36.md)**         | **[Changelog](./changelogs/changelog-36.md)**                                |
 | **35**                 | **05.06.2025** | **[Release Notes](./release-notes/release-notes-35.md)**         | **[Changelog](./changelogs/changelog-35.md)**                                |
 | **34**                 | **26.02.2025** | **[Release Notes](./release-notes/release-notes-34.md)**         | **[Changelog](./changelogs/changelog-34.md)**                                |
@@ -56,7 +57,7 @@ Wann erschien welches Release von i-doit?
 | **1.12**               | **17.12.2018** | **[Release Notes](./release-notes/release-notes-1.12.md)**       | **[Changelog](./changelogs/changelog-1.12.x/changelog-1.12.md)**             |
 | 1.11.2                 | 22.10.2018     |                                                                  | [Changelog](./changelogs/changelog-1.11.x/changelog-1.11.2.md)               |
 | 1.11.1                 | 27.08.2018     |                                                                  | [Changelog](./changelogs/changelog-1.11.x/changelog-1.11.1.md)               |
-| **1.11**               | **02.07.2018** | **[Release Notes](./release-notes/release-notes-1.11.md)**       | [**Changelog**](./changelogs/changelog-1.11.x/changelog-1.11.md)             |
+| **1.11**               | **02.07.2018** | **[Release Notes](./release-notes/release-notes-1.11.md)**       | **[Changelog](./changelogs/changelog-1.11.x/changelog-1.11.md)**             |
 | 1.10.3                 | 02.07.2018     |                                                                  | [Changelog](./changelogs/changelog-1.10.x/changelog-1.10.3.md)               |
 | 1.10.2                 | 16.04.2018     |                                                                  | [Changelog](./changelogs/changelog-1.10.x/changelog-1.10.2.md)               |
 | 1.10.1                 | 26.02.2018     |                                                                  | [Changelog](./changelogs/changelog-1.10.x/changelog-1.10.1.md)               |
@@ -72,14 +73,14 @@ Wann erschien welches Release von i-doit?
 | 1.8.2                  | 19.01.2017     |                                                                  | [Changelog](./changelogs/changelog-1.8.x/changelog-1.8.2.md)                 |
 | 2016<br>               |                |                                                                  |                                                                              |
 | 1.8.1                  | 30.11.2016     |                                                                  | [Changelog](./changelogs/changelog-1.8.x/changelog-1.8.1.md)                 |
-| **1.8**                | **17.10.2016** | **[Release Notes](./release-notes/release-notes-1.8.md)**        | [**Changelog**](./changelogs/changelog-1.8.x/changelog-1.8.md)               |
+| **1.8**                | **17.10.2016** | **[Release Notes](./release-notes/release-notes-1.8.md)**        | **[Changelog](./changelogs/changelog-1.8.x/changelog-1.8.md)**               |
 | 1.7.5                  | 29.09.2016     |                                                                  | [Changelog](./changelogs/changelog-1.7.x/changelog-1.7.5.md)                 |
 | 1.7.4                  | 07.09.2016     |                                                                  | [Changelog](./changelogs/changelog-1.7.x/changelog-1.7.4.md)                 |
 | 1.7.3                  | 27.07.2016     |                                                                  | [Changelog](./changelogs/changelog-1.7.x/changelog-1.7.3.md)                 |
 | 1.7.2                  | 14.06.2016     |                                                                  | [Changelog](./changelogs/changelog-1.7.x/changelog-1.7.2.md)                 |
 | 1.7.1                  | 26.04.2016     |                                                                  | [Changelog](./changelogs/changelog-1.7.x/changelog-1.7.1.md)                 |
 | 1.6.5                  | 26.04.2016     |                                                                  | [Changelog](./changelogs/changelog-1.6.x/changelog-1.6.5.md)                 |
-| **1.7**                | **23.03.2016** | [**Release Notes**](./release-notes/release-notes-1.7.md)        | [**Changelog**](./changelogs/changelog-1.7.x/changelog-1.7.md)               |
+| **1.7**                | **23.03.2016** | **[Release Notes](./release-notes/release-notes-1.7.md)**        | **[Changelog](./changelogs/changelog-1.7.x/changelog-1.7.md)**               |
 | 1.6.4                  | 08.03.2016     |                                                                  | [Changelog](./changelogs/changelog-1.6.x/changelog-1.6.4.md)                 |
 | 1.6.3                  | 05.02.2016     |                                                                  | [Changelog](./changelogs/changelog-1.6.x/changelog-1.6.3.md)                 |
 | 2015<br>               |                |                                                                  |                                                                              |
@@ -105,26 +106,26 @@ Wann erschien welches Release von i-doit?
 | 1.4.3                  | 20.08.2014     |                                                                  |                                                                              |
 | 1.4.2                  | 07.08.2014     |                                                                  |                                                                              |
 | 1.4.1                  | 24.07.2014     |                                                                  |                                                                              |
-| **1.4**                | **10.07.2014** |                                                                  | [**Changelog**](./changelogs/changelog-aeltere-versionen/changelog-1.4.md)   |
+| **1.4**                | **10.07.2014** |                                                                  | **[Changelog](./changelogs/changelog-aeltere-versionen/changelog-1.4.md)**   |
 | 1.3.2                  | 06.05.2014     |                                                                  |                                                                              |
 | 1.3.1                  | 15.04.2014     |                                                                  |                                                                              |
 | 1.2.6                  | 11.03.2014     |                                                                  |                                                                              |
-| **1.3**                | **10.03.2014** |                                                                  | [**Changelog**](./changelogs/changelog-aeltere-versionen/changelog-1.3.md)   |
+| **1.3**                | **10.03.2014** |                                                                  | **[Changelog](./changelogs/changelog-aeltere-versionen/changelog-1.3.md)**   |
 | 1.2.5                  | 14.02.2014     |                                                                  |                                                                              |
 | 1.2.4                  | 15.01.2014     |                                                                  |                                                                              |
 | 2013<br>               |                |                                                                  |                                                                              |
 | 1.2.3                  | 05.12.2013     |                                                                  |                                                                              |
 | 1.2.2                  | 15.11.2013     |                                                                  |                                                                              |
 | 1.2.1                  | 11.10.2013     |                                                                  |                                                                              |
-| **1.2**                | **30.09.2013** |                                                                  | [**Changelog**](./changelogs/changelog-aeltere-versionen/changelog-1.2.md)   |
+| **1.2**                | **30.09.2013** |                                                                  | **[Changelog](./changelogs/changelog-aeltere-versionen/changelog-1.2.md)**   |
 | 1.1.2                  | 21.08.2013     |                                                                  |                                                                              |
 | 1.1.1                  | 24.07.2013     |                                                                  |                                                                              |
-| **1.1**                | **24.06.2013** |                                                                  | [**Changelog**](./changelogs/changelog-aeltere-versionen/changelog-1.1.md)   |
+| **1.1**                | **24.06.2013** |                                                                  | **[Changelog](./changelogs/changelog-aeltere-versionen/changelog-1.1.md)**   |
 | 1.0.3                  | 21.03.2013     |                                                                  |                                                                              |
 | 1.0.2                  | 20.02.2013     |                                                                  | [Changelog](./changelogs/changelog-aeltere-versionen/changelog-1.0.x.md)     |
 | 1.0.1                  | 22.01.2013     |                                                                  |                                                                              |
 | 2012<br>               |                |                                                                  |                                                                              |
-| **1.0**                | **20.12.2012** |                                                                  | [**Changelog**](./changelogs/changelog-aeltere-versionen/changelog-1.0.x.md) |
+| **1.0**                | **20.12.2012** |                                                                  | **[Changelog](./changelogs/changelog-aeltere-versionen/changelog-1.0.x.md)** |
 | 0.9.9-9                | 11.05.2012     |                                                                  | [Changelog](./changelogs/changelog-aeltere-versionen/changelog-0.9.x.md)     |
 | 2011<br>               |                |                                                                  |                                                                              |
 | 0.9.9-8                | 21.12.2011     |                                                                  | [Changelog](./changelogs/changelog-aeltere-versionen/changelog-0.9.x.md)     |

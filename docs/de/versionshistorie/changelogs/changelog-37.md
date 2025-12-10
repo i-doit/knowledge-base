@@ -5,7 +5,6 @@ search:
 
 # Changelog 37
 <!-- cSpell:disable -->
-
 [Task][Code (Internal)]                   Allow installation of i-doit with MySQL 8.4<br>
 [Task][Code (Internal)]                   Implement 'breadcrumb' service for add-ons<br>
 [Task][Usage of self-signed certificates] Use self-signed certificate in TTS communication<br>
@@ -30,7 +29,7 @@ search:
 [Bug][Logbook]                            Adding a object to a rack via locally assigned objects does not create a logbook entry for rack<br>
 [Bug][Logbook]                            Create a Logbook Entry for Layer 3 Nets when DNS Domain changes<br>
 [Bug][Logbook]                            Fix errors that occur when archiving large logbooks<br>
-[Bug][Custom categories]                  Creating "Dialog+ (Multiple selection)" field in custom categories auto-rewrites the identifier when it contains (or defaults to) DB-reserved keywords (e.g., SELECT, INSERT, REPLACE, â€¦)<br>
+[Bug][Custom categories]                  Creating "Dialog+ (Multiple selection)" field in custom categories auto-rewrites the identifier when it contains (or defaults to) DB-reserved keywords (e.g., SELECT, INSERT, REPLACE, …)<br>
 [Bug][Custom categories]                  Show values instead of IDs for attribute fields of type checkbox in document<br>
 [Bug][Custom categories]                  Deleting objects assigned to custom category object browser fields causes error<br>
 [Bug][API]                                Create a single-value category with API 'cmdb.category.save' returns wrong entry ID<br>
@@ -54,7 +53,7 @@ search:
 [Bug][Lists]                              Filter for cable connections does not work<br>
 [Bug][CMDB settings]                      Reference Error when browsing Settings for Tenant-Name<br>
 [Bug][Logging]                            Do not log Permission errors when checking right for a Person<br>
-[Bug][Categories]                         Archived relations are not displayed in the â€œAssigned objectsâ€œ list.<br>
+[Bug][Categories]                         Archived relations are not displayed in the "Assigned objects" list.<br>
 [Bug][Categories]                         Virtual machine category is displayed twice<br>
 [Bug][Notifications]                      Prevent uncaught TypeError when using a Report based notification<br>
 <!-- cSpell:enable -->

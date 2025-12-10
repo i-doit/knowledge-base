@@ -11,7 +11,7 @@ lang: de
 In order to guarantee the operation of all functionalities of i-doit, some requirements must be met by the underlying system.
 
 !!! info "Current version"
-    The requirements shown below apply to the current version of i-doit, in this case **36**. These requirements are adjusted for each major release of i-doit. If the requirements of older versions are needed, the change history of this page can be used.
+    The requirements shown below apply to the current version of i-doit, in this case **37**. These requirements are adjusted for each major release of i-doit. If the requirements of older versions are needed, the change history of this page can be used.
 
 ## Minimum Requirements
 
@@ -33,8 +33,8 @@ For Windows, the [general Windows system requirements](https://learn.microsoft.c
 
 -   GNU/Linux in the 64bit variant (amd64) or Windows Server 2022 in the 64bit variant (amd64)
 -   Apache Webserver **2.4**
--   MariaDB 10.5 (deprecated), **10.6** (recommended), 10.11, 11.4 or MySQL 5.7 or 8.0 (recommended)
--   PHP 8.2, **8.3** (recommended) and 8.4.
+-   MariaDB 10.5 (deprecated), **10.6** (recommended), 10.11, 11.4 or MySQL 5.7, 8.0 (recommended) or 8.4 LTS
+-   PHP 8.2, **8.3** (recommended) or 8.4.
 -   PHP extensions: bcmath, ctype, curl, fileinfo, gd, imagick, json, ldap, mbstring, memcached, mysqli, mysqlnd, pgsql, session, soap, xml, xmlwriter, zip
 
 We recommend the usage of **Apache Webserver 2.4, PHP 8.3 and MariaDB 10.6**.
@@ -58,7 +58,7 @@ We recommend the usage of **Apache Webserver 2.4, PHP 8.3 and MariaDB 10.6**.
     -   MariaDB 10.6.x (default package)
     -   PHP 8.3.x (default package)
 
-    !!! note Note
+    !!! note "Note"
         Because i-doit is a database application, it intensively uses the hard drive. Since the I/O throughput strongly determines the performance, a fast hard drive is recommended.<br>
         The need for disc space can increase with intense usage of file or image storage in i-doit.<br>
         The value of 50 GB is solely geared to the maximal size of the database, which can be achieved by full usage, updates and similar operations.
@@ -74,6 +74,45 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
 
 ## Compatibility matrix
 
+### Versions 30 - 37
+
+=== "37"
+
+    | **i-doit Version**                   | 37                                                           |
+    | ------------------------------------ | ------------------------------------------------------------ |
+    | **Release**                          | 2025-12                                                      |
+    | **Apache Webserver**                 | 2.4                                                          |
+    | **PHP**                              | 8.2<br>==8.3== (recommended)<br>8.4                          |
+    | **MySQL**                            | 5.7<br>==8.0== (recommended)<br>{++8.4 LTS++}                |
+    | **MariaDB**                          | 10.5 (deprecated)<br>==10.6== (recommended)<br>10.11<br>11.4 |
+    | **Update kann übersprungen werden?** |                                                              |
+    | **Setzt i-doit Version voraus**      | v35                                                          |
+
+    | Add-on                  | Incompatible below version |
+    | ----------------------- | -------------------------- |
+    | **analytics**           | 1.5                        |
+    | **api**                 | 2.3                        |
+    | **cabling**             | 1.5                        |
+    | **document**            | 1.10                       |
+    | **donamic_disposal**    | 1.2.9                      |
+    | **donamic_inheritance** | 1.3.7                      |
+    | **events**              | 1.3                        |
+    | **floorplan**           | 1.9                        |
+    | **iso27001**            | 1.6.3                      |
+    | **isms**                | 1.5.2                      |
+    | **maintenance**         | 1.2.2                      |
+    | **nagios**              | 1.3                        |
+    | **packager**            | 1.2.1                      |
+    | **privacy**             | 2.1.1                      |
+    | **relocate_ci**         | 1.5                        |
+    | **scanit**              | 2.0.1                      |
+    | **swapci**              | 1.6                        |
+    | **viva2**               | 3.2.5                      |
+    | **workflow**            | 1.5                        |
+    | **sectornord_snagview** | 1.2.5                      |
+    | **shd_smview_connect**  | 2025.1.1.2751              |
+    | **synetics_flows**      | 1.2.0                      |
+
 === "36"
 
     | **i-doit Version**             | 36                                                                  |
@@ -81,9 +120,9 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
     | **Release**                    | 2025-09                                                             |
     | **Apache Webserver**           | 2.4                                                                 |
     | **PHP**                        | {--8.1 (deprecated)--}<br>8.2<br>==8.3== (recommended)<br>{++8.4++} |
-    | **MySQL**                      | 5.7<br>8.0 (recommended)                                            |
+    | **MySQL**                      | 5.7<br>==8.0== (recommended)                                        |
     | **MariaDB**                    | 10.5 (deprecated)<br>==10.6== (recommended)<br>10.11<br>11.4        |
-    | **Can the update be skipped?** |                                                                     |
+    | **Can the update be skipped?** | Yes                                                                 |
     | **Requires i-doit Version**    | v35                                                                 |
 
     | Add-on              | Incompatible below version |
@@ -193,7 +232,7 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
     | ------------------------------ | ------------------------------------------------------------------------- |
     | **Release**                    | 2024-07                                                                   |
     | **Apache Webserver**           | 2.4                                                                       |
-    | **PHP**                        | 8.0<br>==8.1== (empfohlen)<br>8.2                                         |
+    | **PHP**                        | 8.0<br>==8.1== (recommended)<br>8.2                                       |
     | **MySQL**                      | 5.7<br>8.0                                                                |
     | **MariaDB**                    | 10.4 (deprecated)<br>10.5 (deprecated)<br>==10.6== (recommended)<br>10.11 |
     | **Can the update be skipped?** | Yes, requires v29                                                         |
@@ -222,6 +261,8 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
     | **MariaDB**                    | 10.4 (deprecated)<br>10.5 (deprecated)<br>==10.6== (recommended)<br>{++10.11++} |
     | **Can the update be skipped?** | Yes                                                                             |
     | **Requires i-doit Version**    | v29                                                                             |
+
+### Versions 20 - 29
 
 === "29"
 
@@ -305,11 +346,28 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
     | **Can the update be skipped?** | Yes                                              |
     | **Requires i-doit Version**    | v20,21,22,23,24 or 25                            |
 
-=== "23, 22, 21, 20, 1.19"
+=== "23, 22, 21, 20"
 
-    | **i-doit Version**     | 23, 22, 21, 20, 1.19                             |
+    | **i-doit Version**     | 23, 22, 21, 20                                   |
     | ---------------------- | ------------------------------------------------ |
-    | **Release**            | 2023-03 - 2022-09                                |
+    | **Release**            | 2023-03                                          |
+    | **Apache Webserver**   | 2.4                                              |
+    | **PHP**                | 7.4 <br>8.0 (recommended)                        |
+    | **MySQL**              | 5.7                                              |
+    | **MariaDB**            | 10.2  <br>10.3  <br>10.4  <br>10.5 (recommended) |
+    | **Debian GNU/Linux**   | 11                                               |
+    | **Ubuntu**             | 18.04<br> 20.04                                  |
+    | **RHEL**               | 7¹<br> 8                                         |
+    | **SLES**               | 15 SP1<br> 15 SP 2<br> SP 3                      |
+    | **XAMPP for Windows²** | 2016<br> 2019                                    |
+
+### Versions 1.7 - 1.19
+
+=== "1.19"
+
+    | **i-doit Version**     | 1.19                                             |
+    | ---------------------- | ------------------------------------------------ |
+    | **Release**            | 2022-09                                          |
     | **Apache Webserver**   | 2.4                                              |
     | **PHP**                | 7.4 <br>8.0 (recommended)                        |
     | **MySQL**              | 5.7                                              |

@@ -5,6 +5,7 @@ When were all the i-doit release dates?
 | Version                | Date           | Release Notes                                                    | Changelog                                                          |
 | ---------------------- | -------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------ |
 | 2025<br>               |                |                                                                  |                                                                    |
+| **37**                 | **2025-12-02** | **[Release Notes](./release-notes/release-notes-37.md)**         | **[Changelog](./changelogs/changelog-37.md)**                      |
 | **36**                 | **2025-09-16** | **[Release Notes](./release-notes/release-notes-36.md)**         | **[Changelog](./changelogs/changelog-36.md)**                      |
 | **35**                 | **2025-06-05** | **[Release Notes](./release-notes/release-notes-35.md)**         | **[Changelog](./changelogs/changelog-35.md)**                      |
 | **34**                 | **2025-02-26** | **[Release Notes](./release-notes/release-notes-34.md)**         | **[Changelog](./changelogs/changelog-34.md)**                      |
@@ -66,13 +67,13 @@ When were all the i-doit release dates?
 | 1.9.3                  | 2017-09-18     |                                                                  | [Changelog](./changelogs/changelog-1.9.x/changelog-1.9.3.md)       |
 | 1.9.2                  | 2017-07-31     |                                                                  | [Changelog](./changelogs/changelog-1.9.x/changelog-1.9.2.md)       |
 | 1.9.1                  | 2017-06-19     |                                                                  | [Changelog](./changelogs/changelog-1.9.x/changelog-1.9.1.md)       |
-| **1.9**                | **2017-05-08** | **[Release Notes](./release-notes/release-notes-1.9.md)**        | [**Changelog**](./changelogs/changelog-1.9.x/changelog-1.9.md)     |
+| **1.9**                | **2017-05-08** | **[Release Notes](./release-notes/release-notes-1.9.md)**        | **[Changelog](./changelogs/changelog-1.9.x/changelog-1.9.md)**     |
 | 1.8.3.1                | 2017-03-24     |                                                                  | [Changelog](./changelogs/changelog-1.8.x/changelog-1.8.3.1.md)     |
 | 1.8.3                  | 2017-03-08     |                                                                  | [Changelog](./changelogs/changelog-1.8.x/changelog-1.8.3.md)       |
 | 1.8.2                  | 2017-01-19     |                                                                  |                                                                    |
 | 2016<br>               |                |                                                                  |                                                                    |
 | 1.8.1                  | 2016-11-30     |                                                                  |                                                                    |
-| **1.8**                | **2016-10-17** | [**Release Notes**](./release-notes/release-notes-1.8.md)        |                                                                    |
+| **1.8**                | **2016-10-17** | **[Release Notes](./release-notes/release-notes-1.8.md)**        |                                                                    |
 | 1.7.5                  | 2016-09-29     |                                                                  |                                                                    |
 | 1.7.4                  | 2016-09-07     |                                                                  |                                                                    |
 | 1.7.3                  | 2016-07-27     |                                                                  |                                                                    |

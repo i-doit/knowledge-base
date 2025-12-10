@@ -278,7 +278,8 @@ Die Berechtigungen für das JDisc Connector Add-on werden über die Rechteverwal
 
 ## Changelogs
 
-| Version | Date       | Changelog                                                                                                                                                                                                                       |
-| ------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1.0.1 | 2025-10-21 | [Bug][Sync Profiles] Checkboxes in new Sync Profiles are overwritten after Saving<br>[Bug][Device List] Enable Device List in JDISC Connector Add-On to load Devices|
-| 1.0 | 2025-09-16 | Initial release |
+| Version | Date       | Changelog                                                                                                                                                            |
+| ------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1.0.2   | 2025-12-02 | [Bug] Save CMDB status for newly imported objects<br>[Bug] Prevent missing "JDisc Connector" in Add-ons menu after updating i-doit                                   |
+| 1.0.1   | 2025-10-21 | [Bug][Sync Profiles] Checkboxes in new Sync Profiles are overwritten after Saving<br>[Bug][Device List] Enable Device List in JDISC Connector Add-On to load Devices |
+| 1.0     | 2025-09-16 | Initial release                                                                                                                                                      |
