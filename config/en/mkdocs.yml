@@ -81,7 +81,8 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.mark
   - pymdownx.tilde
-  - pymdownx.critic
+  - pymdownx.critic:
+      mode: accept
   - pymdownx.details
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
@@ -499,6 +500,7 @@ nav:
           - i-doit 1.13.2 & 1.14 Login im Admin-Center nicht möglich: system-administration/hotfixes/i-doit-1.13.2-1.14-login-admincenter.md
           - Hotfix archive:
               - system-administration/hotfixes/hotfix-archive/index.md
+              - Version 36: system-administration/hotfixes/hotfix-archive/v36.md
               - Version 35: system-administration/hotfixes/hotfix-archive/v35.md
               - Version 34: system-administration/hotfixes/hotfix-archive/v34.md
               - Version 33: system-administration/hotfixes/hotfix-archive/v33.md
