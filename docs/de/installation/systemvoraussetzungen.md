@@ -1,9 +1,9 @@
 ---
-title Systemvoraussetzungen
-description i-doit Systemvoraussetzungen
-icon
-status
-lang de
+title: Systemvoraussetzungen
+description: i-doit Systemvoraussetzungen
+icon:
+status:
+lang: de
 ---
 
 # Systemvoraussetzungen
@@ -27,7 +27,7 @@ Wir empfehlen den Einsatz einer dedizierten, virtuellen Maschine. Der tatsächli
 
 ### Virtuelle Hardware (Windows)
 
-Für Windows sind die [generellen Windows Systemvoraussetzungen](https//learn.microsoft.com/windows-server/get-started/hardware-requirements) zu beachten.
+Für Windows sind die [generellen Windows Systemvoraussetzungen](https://learn.microsoft.com/windows-server/get-started/hardware-requirements) zu beachten.
 
 ### LAMP / WAMP Stack
 
@@ -39,7 +39,7 @@ Für Windows sind die [generellen Windows Systemvoraussetzungen](https//learn.mi
 
 Wir empfehlen den Einsatz von **Apache Webserver 2.4, PHP 8.3 und MariaDB 10.6**.
 
-!!! Success Referenzkonfiguration (GNU/Linux)
+!!! Success "Referenzkonfiguration (GNU/Linux)"
     Folgende Systemparameter bilden eine von uns getestete und empfohlene Referenzkonfiguration, welche eine hohe Performance bei bis zu 500.000 Objekten und einer hohen Anzahl von gleichzeitig arbeitenden Benutzern gewährleistet.
 
     ### Virtuelle Hardware
@@ -58,7 +58,7 @@ Wir empfehlen den Einsatz von **Apache Webserver 2.4, PHP 8.3 und MariaDB 10.6**
     - MariaDB 10.6.x (Standardpaket)
     - PHP 8.3.x (Standardpaket)
 
-    !!! info Hinweis
+    !!! info "Hinweis"
         i-doit ist eine Datenbankanwendung und daher intensiver Festplattennutzer. Ein schneller Festplattenspeicher wird empfohlen, da I/O-Verkehr maßgeblich die Performance bestimmt.<br>
         Die Festplattenbedarf kann sich bei intensiver Nutzung der Datei- oder Bildablage in i-doit erhöhen.<br>
         Der Wert von 50 GB orientiert sich nur an der maximalen Datenbankgröße, die bei voller Nutzung und bei Updates oder ähnlichen Operationen erreicht werden kann.
@@ -74,18 +74,19 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
 
 ## Kompatibilitätsmatrix
 
-=== 37
+### Versionen 30 bis 37
 
-    | **i-doit Version**                   | 37                                                        |
-    | ------------------------------------ | --------------------------------------------------------- |
-    | **Release**                          | 2025-12                                                   |
-    | **Apache Webserver**                 | 2.4                                                       |
-    | **PHP**                              | 8.2<br>==8.3== (empfohlen)<br>8.4                         |
-    | **MySQL**                            | 5.7<br>==8.0== (empfohlen), {++8.4 LTS++}                 |
-    | **MariaDB**                          | 10.5 (veraltet)<br> ==10.6== (empfohlen)<br>10.11<br>11.4 |
-    | **Update kann übersprungen werden?** |                                                           |
-    | **Setzt i-doit Version voraus**      | v35                                                       |
+=== "37"
 
+    | **i-doit Version**                   | 37                                                       |
+    | ------------------------------------ | -------------------------------------------------------- |
+    | **Release**                          | 2025-12                                                  |
+    | **Apache Webserver**                 | 2.4                                                      |
+    | **PHP**                              | 8.2<br>==8.3== (empfohlen)<br>8.4                        |
+    | **MySQL**                            | 5.7<br>==8.0== (empfohlen)<br>{++8.4 LTS++}              |
+    | **MariaDB**                          | 10.5 (veraltet)<br>==10.6== (empfohlen)<br>10.11<br>11.4 |
+    | **Update kann übersprungen werden?** |                                                          |
+    | **Setzt i-doit Version voraus**      | v35                                                      |
 
     | Add-on                  | Inkompatibel unter Version |
     | ----------------------- | -------------------------- |
@@ -112,18 +113,17 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **shd_smview_connect**  | 2025.1.1.2751              |
     | **synetics_flows**      | 1.2.0                      |
 
-=== 36
+=== "36"
 
     | **i-doit Version**                   | 36                                                              |
     | ------------------------------------ | --------------------------------------------------------------- |
     | **Release**                          | 2025-09                                                         |
     | **Apache Webserver**                 | 2.4                                                             |
     | **PHP**                              | {--8.1 (veraltet)--}<br>8.2<br>==8.3== (empfohlen)<br>{++8.4++} |
-    | **MySQL**                            | 5.7<br>8.0 (empfohlen)                                          |
+    | **MySQL**                            | 5.7<br>==8.0== (empfohlen)                                      |
     | **MariaDB**                          | 10.5 (veraltet)<br>==10.6== (empfohlen)<br>10.11<br>11.4        |
     | **Update kann übersprungen werden?** | Ja                                                              |
     | **Setzt i-doit Version voraus**      | v35                                                             |
-
 
     | Add-on              | Inkompatibel unter Version |
     | ------------------- | -------------------------- |
@@ -150,7 +150,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | shd_smview_connect  | 2025.1.1.2751              |
     | synetics_flows      | 1.2.0                      |
 
-=== 35
+=== "35"
 
     | **i-doit Version**                   | 35                                                                                      |
     | ------------------------------------ | --------------------------------------------------------------------------------------- |
@@ -186,7 +186,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | sectornord_snagview | 1.2.5                      |
     | shd_smview_connect  | 2025.1.1.2751              |
 
-=== 34
+=== "34"
 
     | **i-doit Version**                   | 34                                                                  |
     | ------------------------------------ | ------------------------------------------------------------------- |
@@ -214,7 +214,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | viva2               | 3.2.4                      |
     | workflow            | 1.1.1                      |
 
-=== 33
+=== "33"
 
     | **i-doit Version**                   | 33                                                                  |
     | ------------------------------------ | ------------------------------------------------------------------- |
@@ -226,7 +226,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **Update kann übersprungen werden?** | Ja                                                                  |
     | **Setzt i-doit Version voraus**      | v29,30,31 oder 32                                                   |
 
-=== 32
+=== "32"
 
     | **i-doit Version**                   | 32                                                                  |
     | ------------------------------------ | ------------------------------------------------------------------- |
@@ -238,7 +238,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **Update kann übersprungen werden?** | Ja                                                                  |
     | **Setzt i-doit Version voraus**      | v29,30 oder 31                                                      |
 
-=== 31
+=== "31"
 
     | **i-doit Version**                   | 31                                                                  |
     | ------------------------------------ | ------------------------------------------------------------------- |
@@ -250,7 +250,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **Update kann übersprungen werden?** | Ja                                                                  |
     | **Setzt i-doit Version voraus**      | v29 oder 30                                                         |
 
-=== 30
+=== "30"
 
     | **i-doit Version**                   | 30                                                                        |
     | ------------------------------------ | ------------------------------------------------------------------------- |
@@ -262,7 +262,10 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **Update kann übersprungen werden?** | Ja                                                                        |
     | **Setzt i-doit Version voraus**      | v29                                                                       |
 
-=== 29
+
+### Versionen 20 - 29
+
+=== "29"
 
     | **i-doit Version**                   | 29                                                         |
     | ------------------------------------ | ---------------------------------------------------------- |
@@ -274,7 +277,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **Update kann übersprungen werden?** | ==Nein==                                                   |
     | **Setzt i-doit Version voraus**      | v20,21,22,23,24,25,26,27 oder 28                           |
 
-=== 28
+=== "28"
 
     | **i-doit Version**                   | 28                                                         |
     | ------------------------------------ | ---------------------------------------------------------- |
@@ -286,7 +289,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **Update kann übersprungen werden?** | Ja                                                         |
     | **Setzt i-doit Version voraus**      | v20,21,22,23,24,25,26 oder 27                              |
 
-=== 27
+=== "27"
 
     | **i-doit Version**                   | 27                                                         |
     | ------------------------------------ | ---------------------------------------------------------- |
@@ -298,7 +301,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **Update kann übersprungen werden?** | Ja                                                         |
     | **Setzt i-doit Version voraus**      | v20,21,22,23,24,25 oder 26                                 |
 
-=== 26
+=== "26"
 
     | **i-doit Version**                   | 26                                                         |
     | ------------------------------------ | ---------------------------------------------------------- |
@@ -310,7 +313,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **Update kann übersprungen werden?** | Ja                                                         |
     | **Setzt i-doit Version voraus**      | v20,21,22,23,24 oder 25                                    |
 
-=== 25
+=== "25"
 
     | **i-doit Version**     | 25                                                      |
     | ---------------------- | ------------------------------------------------------- |
@@ -325,7 +328,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **SLES**               | 15 SP1<br> 15 SP 2<br> SP 3                             |
     | **XAMPP for Windows²** | 2022                                                    |
 
-=== 24
+=== "24"
 
     | **i-doit Version**     | 24                                             |
     | ---------------------- | ---------------------------------------------- |
@@ -340,7 +343,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **SLES**               | 15 SP1<br> 15 SP 2<br> SP 3                    |
     | **XAMPP for Windows²** | 2016<br> 2019                                  |
 
-=== 23, 22, 21, 20, 1.19
+=== "23, 22, 21, 20"
 
     | **i-doit Version**     | 23, 22, 21, 20, 1.19                           |
     | ---------------------- | ---------------------------------------------- |
@@ -355,7 +358,24 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **SLES**               | 15 SP1<br> 15 SP 2<br> SP 3                    |
     | **XAMPP for Windows²** | 2016<br> 2019                                  |
 
-=== 1.18
+## Versionen 1.7 - 1.19
+
+=== "1.19"
+
+    | **i-doit Version**     | 1.19                                           |
+    | ---------------------- | ---------------------------------------------- |
+    | **Release**            | 2022-09                                        |
+    | **Apache Webserver**   | 2.4                                            |
+    | **PHP**                | 7.4 <br>8.0 (empfohlen)                        |
+    | **MySQL**              | 5.7                                            |
+    | **MariaDB**            | 10.2  <br>10.3  <br>10.4  <br>10.5 (empfohlen) |
+    | **Debian GNU/Linux**   | 11                                             |
+    | **Ubuntu**             | 18.04<br> 20.04                                |
+    | **RHEL**               | 7¹<br> 8                                       |
+    | **SLES**               | 15 SP1<br> 15 SP 2<br> SP 3                    |
+    | **XAMPP for Windows²** | 2016<br> 2019                                  |
+
+=== "1.18"
 
     | **i-doit Version**     | 1.18                                           |
     | ---------------------- | ---------------------------------------------- |
@@ -370,7 +390,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **SLES**               | 15 SP1<br> 15 SP 2                             |
     | **XAMPP for Windows²** | 2016<br> 2019                                  |
 
-=== 1.17
+=== "1.17"
 
     | **i-doit Version**     | 1.17                                           |
     | ---------------------- | ---------------------------------------------- |
@@ -385,7 +405,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **SLES**               | 15<br> 15 SP1                                  |
     | **XAMPP for Windows²** | 2016<br> 2019                                  |
 
-=== 1.16
+=== "1.16"
 
     | **i-doit Version**     | 1.16                                                               |
     | ---------------------- | ------------------------------------------------------------------ |
@@ -400,7 +420,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **SLES**               | 15<br> 15 SP1                                                      |
     | **XAMPP for Windows²** | 2016<br> 2019                                                      |
 
-=== 1.15
+=== "1.15"
 
     | **i-doit Version**     | 1.15                                                      |
     | ---------------------- | --------------------------------------------------------- |
@@ -415,7 +435,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **SLES**               | 15<br> 15 SP1                                             |
     | **XAMPP for Windows²** | 2016<br> 2019                                             |
 
-=== 1.14
+=== "1.14"
 
     | **i-doit Version**     | 1.14                                                      |
     | ---------------------- | --------------------------------------------------------- |
@@ -430,7 +450,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **SLES**               | 15<br> 15 SP1                                             |
     | **XAMPP for Windows²** | 2016<br> 2019                                             |
 
-=== 1.13
+=== "1.13"
 
     | **i-doit Version**     | 1.13                                                      |
     | ---------------------- | --------------------------------------------------------- |
@@ -445,7 +465,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **SLES**               | 12 SP3<br> 15                                             |
     | **XAMPP for Windows²** | 2008 R2<br> 2012 R2<br> 2016<br> 2019                     |
 
-=== 1.12
+=== "1.12"
 
     | **i-doit Version**     | 1.12                                               |
     | ---------------------- | -------------------------------------------------- |
@@ -460,7 +480,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **SLES**               | 12 SP3<br> 15                                      |
     | **XAMPP for Windows²** | 2008 R2<br> 2012 R2<br> 2016<br> 2019              |
 
-=== 1.11
+=== "1.11"
 
     | **i-doit Version**     | 1.11                         |
     | ---------------------- | ---------------------------- |
@@ -475,7 +495,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **SLES**               | 12 SP3                       |
     | **XAMPP for Windows²** | 2008 R2<br> 2012 R2<br> 2016 |
 
-=== 1.10
+=== "1.10"
 
     | **i-doit Version**     | 1.10                         |
     | ---------------------- | ---------------------------- |
@@ -490,7 +510,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **SLES**               | 12 SP2 <br> 12 SP3           |
     | **XAMPP for Windows²** | 2008 R2<br> 2012 R2<br> 2016 |
 
-=== 1.9
+=== "1.9"
 
     | **i-doit Version**     | 1.9                           |
     | ---------------------- | ----------------------------- |
@@ -505,7 +525,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **SLES**               | 12<br> 12 SP2                 |
     | **XAMPP for Windows²** | 2008<br> 2012                 |
 
-=== 1.8
+=== "1.8"
 
     | **i-doit Version**     | 1.8                 |
     | ---------------------- | ------------------- |
@@ -520,7 +540,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **SLES**               | 12<br> 12 SP2       |
     | **XAMPP for Windows²** | 2008<br> 2012       |
 
-=== 1.7
+=== "1.7"
 
     | **i-doit Version**     | 1.7                 |
     | ---------------------- | ------------------- |

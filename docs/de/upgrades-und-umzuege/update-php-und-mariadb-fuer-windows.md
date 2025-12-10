@@ -20,7 +20,7 @@ Das entsprechende Paket kann hier heruntergeladen werden: [x64 Thread Safe](http
 !!! warning "Es muss unbedingt eine Zip Datei sein und die 'x64 Thread Safe' Version"
 
 Überprüfen Sie vorab, ob die PHP Version auch mit Ihrer i-doit Version übereinstimmt!
-Hier finden Sie unsere [Kompatibilitätsmatrix](../installation/systemvoraussetzungen.md#kompatibilitätsmatrix).
+Hier finden Sie unsere [Kompatibilitätsmatrix](../installation/systemvoraussetzungen.md#kompatibilitatsmatrix).
 
 ### MariaDB 10.11 installer herunterladen
 
