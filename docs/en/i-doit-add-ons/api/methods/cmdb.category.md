@@ -18,11 +18,11 @@ Create a new [category](../../../basics/structure-of-the-it-documentation.md) en
 
 ### Request parameters
 
-| Key          | JSON data type | Required | Description                                                                                                                                                        |
-| ------------ | -------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **objID**    | Integer        | Yes      | Object identifier, for example: **42**                                                                                                                             |
-| **category** | String         | Yes      | [Category constant](./../category-fields-for-data-arrays.md), for example: **C__CATG__MODEL**                                                                        |
-| **data**     | Object         | Yes      | [Attributes](./../category-fields-for-data-arrays.md) with their values, for example: <br>```{ "manufacturer": "Name of manufacturer", "title": "Name of model" }``` |
+| Key          | JSON data type | Required | Description                                                                                                                                                      |
+| ------------ | -------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **objID**    | Integer        | Yes      | Object identifier, for example: **42**                                                                                                                           |
+| **category** | String         | Yes      | [Category constant](../index.md#attribute-documentation), for example: **C__CATG__MODEL**                                                                        |
+| **data**     | Object         | Yes      | [Attributes](../index.md#attribute-documentation) with their values, for example: <br>```{ "manufacturer": "Name of manufacturer", "title": "Name of model" }``` |
 
 ### Response parameters
 
@@ -76,15 +76,15 @@ Read one or more [category](../../../basics/structure-of-the-it-documentation.md
 
 ### Request parameters
 
-| Key          | JSON data type | Required | Description                                          |
-| ------------ | -------------- | -------- | ---------------------------------------------------- |
-| **objID**    | Integer        | Yes      | Object identifier, for example: **42**               |
-| **category** | String         | Yes      | Category constant, for example: **"C__CATG__MODEL"** |
+| Key          | JSON data type | Required | Description                                                                                                                                                                            |
+| ------------ | -------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **objID**    | Integer        | Yes      | Object identifier, for example: **42**                                                                                                                                                 |
+| **category** | String         | Yes      | Category constant, for example: **"C__CATG__MODEL"**                                                                                                                                   |
 | **status**   | Integer        | Yes      | ID of the status, for example **2** for **normal** <br> If the status parameter is not specified, the status must be set to **2** (normal). This corresponds to the previous behavior. |
 
 ### Response parameters
 
-JSON key **result** contains an array of JSON objects. Each object contains [all available attributes](./../category-fields-for-data-arrays.md) for the requested category.
+JSON key **result** contains an array of JSON objects. Each object contains [all available attributes](./../index.md#attribute-documentation) for the requested category.
 
 !!! note ""
 
@@ -155,8 +155,8 @@ JSON key **result** contains an array of JSON objects. Each object contains [all
 | Key                  | JSON data type | Required | Description                                                                                                         |
 | -------------------- | -------------- | -------- | ------------------------------------------------------------------------------------------------------------------- |
 | **objID**            | Integer        | Yes      | Object identifier, for example: **42**                                                                              |
-| **category**         | String         | Yes      | [Category constant](./../category-fields-for-data-arrays.md), for example: **"C__CATG__MODEL"**                       |
-| **data**             | Object         | Yes      | [Attributes](./../category-fields-for-data-arrays.md) which will be updated                                           |
+| **category**         | String         | Yes      | [Category constant](./../index.md#attribute-documentation), for example: **"C__CATG__MODEL"**                       |
+| **data**             | Object         | Yes      | [Attributes](./../index.md#attribute-documentation) which will be updated                                           |
 | **data.category_id** | Integer        | No       | Entry identifier (only required for [multi-value categories](../../../basics/structure-of-the-it-documentation.md)) |
 
 ### Response parameters
@@ -218,7 +218,7 @@ JSON key **result** contains a JSON object.
 | Key                  | JSON data type | Required | Description                                                                                |
 | -------------------- | -------------- | -------- | ------------------------------------------------------------------------------------------ |
 | **objID**            | Integer        | Yes      | Object identifier, for example: **42**                                                     |
-| **category**         | String         | Yes      | [Category constant](./../category-fields-for-data-arrays.md), for example: **"C__CATG__IP"** |
+| **category**         | String         | Yes      | [Category constant](./../index.md#attribute-documentation), for example: **"C__CATG__IP"** |
 | **cateID** or **id** | Integer        | Yes      | Entry identifier, for example: **3**                                                       |
 
 ### Response
@@ -272,7 +272,7 @@ It works for [multi-value categories](../../../basics/structure-of-the-it-docume
 | **Key**      | **JSON data type** | **Required** | **Description**                                                                                |
 | ------------ | ------------------ | ------------ | ---------------------------------------------------------------------------------------------- |
 | **object**   | Integer            | Yes          | Object identifier, for example: **456**                                                        |
-| **category** | String             | Yes          | [Category constant](./../category-fields-for-data-arrays.md), for example: **"C__CATG__ACCESS"** |
+| **category** | String             | Yes          | [Category constant](./../index.md#attribute-documentation), for example: **"C__CATG__ACCESS"** |
 | **data**     | Object             | Yes          | ```{ "title":"Name of the access", "description": "description of the access" }```             |
 
 ### Response body
@@ -351,7 +351,7 @@ If **Quickpurge** is [enabled](../../../basics/life-and-documentation-cycle.md),
 | Key                  | JSON data type | Required | Description                                                                                |
 | -------------------- | -------------- | -------- | ------------------------------------------------------------------------------------------ |
 | **objID**            | Integer        | Yes      | Object identifier, for example: **42**                                                     |
-| **category**         | String         | Yes      | [Category constant](./../category-fields-for-data-arrays.md), for example: **"C__CATG__IP"** |
+| **category**         | String         | Yes      | [Category constant](./../index.md#attribute-documentation), for example: **"C__CATG__IP"** |
 | **cateID** or **id** | Integer        | Yes      | Entry identifier, for example: **3**                                                       |
 
 ### Response body
@@ -404,7 +404,7 @@ Purge a [category](../../../basics/structure-of-the-it-documentation.md) entry o
 | **Key**      | **JSON data type** | **Required** | **Description**                                                                                |
 | ------------ | ------------------ | ------------ | ---------------------------------------------------------------------------------------------- |
 | **object**   | Integer            | Yes          | Object identifier, for example: **456**                                                        |
-| **category** | String             | Yes          | [Category constant](./../category-fields-for-data-arrays.md), for example: **"C__CATG__ACCESS"** |
+| **category** | String             | Yes          | [Category constant](./../index.md#attribute-documentation), for example: **"C__CATG__ACCESS"** |
 | **entry**    | Integer            | Yes          | Entry identifier, for example: **33**                                                          |
 
 ### Response body
@@ -516,7 +516,7 @@ JSON key **result** contains a JSON object.
 | **Key**      | **JSON data type** | **Required** | **Description**                                                                                |
 | ------------ | ------------------ | ------------ | ---------------------------------------------------------------------------------------------- |
 | **object**   | Integer            | Yes          | Object identifier, for example: **456**                                                        |
-| **category** | String             | Yes          | [Category constant](./../category-fields-for-data-arrays.md), for example: **"C__CATG__ACCESS"** |
+| **category** | String             | Yes          | [Category constant](./../index.md#attribute-documentation), for example: **"C__CATG__ACCESS"** |
 | **entry**    | Integer            | Yes          | Entry identifier, for example: **32**                                                          |
 
 ### Response body
