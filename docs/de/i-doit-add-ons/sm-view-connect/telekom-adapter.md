@@ -1,6 +1,6 @@
 ---
-title: SHD SM-VIEW Connect - Telekom-Adapter
-description: SHD SM-VIEW Connect - Telekom-Adapter
+title: SHD Connect - Telekom-Adapter
+description: SHD Connect - Telekom-Adapter
 icon:
 status:
 lang: de

@@ -1,6 +1,6 @@
 ---
-title: SHD SM-VIEW Connect - Baramundi-Adapter
-description: SHD SM-VIEW Connect - Baramundi-Adapter
+title: SHD Connect - Baramundi-Adapter
+description: SHD Connect - Baramundi-Adapter
 icon:
 status:
 lang: en
