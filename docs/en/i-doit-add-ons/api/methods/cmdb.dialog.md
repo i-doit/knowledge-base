@@ -16,10 +16,10 @@ Read dialog information.
 
 ### Request parameters
 
-| **Key**      | **JSON data type** | **Required** | **Description**                                                                                    |
-| ------------ | ------------------ | ------------ | -------------------------------------------------------------------------------------------------- |
-| **category** | String             | Yes          | [Category constant](./../category-fields-for-data-arrays.md), for example: **"C__CATG__CPU"** |
-| **property** | String             | Yes          | Attribute in the category, for example: "manufacturer"                                             |
+| **Key**      | **JSON data type** | **Required** | **Description**                                                                             |
+| ------------ | ------------------ | ------------ | ------------------------------------------------------------------------------------------- |
+| **category** | String             | Yes          | [Category constant](./../index.md#attribute-documentation), for example: **"C__CATG__CPU"** |
+| **property** | String             | Yes          | Attribute in the category, for example: "manufacturer"                                      |
 
 ### Response parameters
 
@@ -76,11 +76,11 @@ Created Dialogs.
 
 ## Request parameters
 
-| **Key**      | **JSON data type** | **Required** | **Description**                                                                                    |
-| ------------ | ------------------ | ------------ | -------------------------------------------------------------------------------------------------- |
-| **category** | String             | Yes          | [Category constant](./../category-fields-for-data-arrays.md), for example: **"C__CATG__CPU"** |
-| **property** | String             | Yes          | Attribute in the category, for example: "manufacturer"                                             |
-| **value**    | String             | Yes          | Value of the Attribute                                                                             |
+| **Key**      | **JSON data type** | **Required** | **Description**                                                                             |
+| ------------ | ------------------ | ------------ | ------------------------------------------------------------------------------------------- |
+| **category** | String             | Yes          | [Category constant](./../index.md#attribute-documentation), for example: **"C__CATG__CPU"** |
+| **property** | String             | Yes          | Attribute in the category, for example: "manufacturer"                                      |
+| **value**    | String             | Yes          | Value of the Attribute                                                                      |
 
 ### Response parameters
 
@@ -129,12 +129,12 @@ Update a [dialog](../../../basics/dialog-admin.md#dialog-admin) entry.
 
 ## Request parameters
 
-| **Key**      | **JSON data type** | **Required** | **Description**                                                                                    |
-| ------------ | ------------------ | ------------ | -------------------------------------------------------------------------------------------------- |
-| **category** | String             | Yes          | [Category constant](./../category-fields-for-data-arrays.md), for example: **"C__CATG__CPU"** |
-| **property** | String             | Yes          | Attribute in the category, for example: "manufacturer"                                             |
-| **value**    | String             | Yes          | Value of the Attribute                                                                             |
-| **entry_id** | Integer            | Yes          | Entry Identifier, for example: 3                                                                   |
+| **Key**      | **JSON data type** | **Required** | **Description**                                                                             |
+| ------------ | ------------------ | ------------ | ------------------------------------------------------------------------------------------- |
+| **category** | String             | Yes          | [Category constant](./../index.md#attribute-documentation), for example: **"C__CATG__CPU"** |
+| **property** | String             | Yes          | Attribute in the category, for example: "manufacturer"                                      |
+| **value**    | String             | Yes          | Value of the Attribute                                                                      |
+| **entry_id** | Integer            | Yes          | Entry Identifier, for example: 3                                                            |
 
 ### Response parameters
 
@@ -184,11 +184,11 @@ Deletes dialogs.
 
 ### Request parameters
 
-| **Key**      | **JSON data type** | **Required** | **Description**                                                                                    |
-| ------------ | ------------------ | ------------ | -------------------------------------------------------------------------------------------------- |
-| **category** | String             | Yes          | [Category constant](./../category-fields-for-data-arrays.md), for example: **"C__CATG__CPU"** |
-| **property** | String             | Yes          | Attribute in the category, for example: "manufacturer"                                             |
-| **entry_id** | Integer            | Yes          | Entry Identifier, for example: 3                                                                   |
+| **Key**      | **JSON data type** | **Required** | **Description**                                                                             |
+| ------------ | ------------------ | ------------ | ------------------------------------------------------------------------------------------- |
+| **category** | String             | Yes          | [Category constant](./../index.md#attribute-documentation), for example: **"C__CATG__CPU"** |
+| **property** | String             | Yes          | Attribute in the category, for example: "manufacturer"                                      |
+| **entry_id** | Integer            | Yes          | Entry Identifier, for example: 3                                                            |
 
 ### Response parameters
 
