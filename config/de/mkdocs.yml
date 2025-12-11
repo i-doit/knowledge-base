@@ -608,7 +608,6 @@ nav:
                   - cmdb.external: i-doit-add-ons/api/methoden/v2/cmdb.external.md
           - Beispiele zur Nutzung der API: i-doit-add-ons/api/beispiele-zur-nutzung-der-api.md
           - Tipps und Tricks zur API: i-doit-add-ons/api/tipps-und-tricks-zur-nutzung-der-api.md
-          - Kategorie-Felder für Datenarrays: i-doit-add-ons/api/kategorie-felder-fuer-datenarrays.md
       - Cabling: i-doit-add-ons/cabling.md
       - Checkmk: i-doit-add-ons/checkmk.md
       - Checkmk 2:
