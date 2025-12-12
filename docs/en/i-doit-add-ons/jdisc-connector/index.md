@@ -243,21 +243,143 @@ Permissions for the JDisc Connector add-on are configured via the rights managem
 ### Available Permission Areas
 
 - **Dashboard**<br>
-  Access to the central overview of the add-on
+    Access to the central overview of the add-on
 
 - **Device List**<br>
-  View imported devices and their synchronization status
+    View imported devices and their synchronization status
 
 - **Sync Profile**<br>
-  Create, edit, and execute synchronization profiles
+    Create, edit, and execute synchronization profiles
 
 - **Discovery Server**<br>
-  Configuration and testing of JDisc server connection
+    Configuration and testing of JDisc server connection
 
 - **Logs**<br>
-  View and download log files for sync and discovery operations
+    View and download log files for sync and discovery operations
 
 Changes must be saved to take effect.
+
+### i-doit Console Utility Permissions
+
+To assign permissions for the i-doit console utility, the corresponding rights must be set in the rights management. This allows users to use the console to perform JDisc Connector operations. The permission can be found under Administration and the condition "Commands" is used.
+
+- **JDiscCreateServerCommand**<br>
+    Permission to create JDisc Discovery servers via the console
+
+- **JDiscDiscoveryCommand**<br>
+    Permission to start discovery jobs via the console
+
+- **JDiscImportCommand**<br>
+    Permission to start import jobs via the console
+
+* * *
+
+## i-doit Console Utility
+
+The i-doit Console Utility allows executing specific tasks of the JDisc Connector add-on via command line. This is particularly useful for automation and scheduling tasks.
+
+| Command                                    | Internal system description                                                       |
+| ------------------------------------------ | --------------------------------------------------------------------------------- |
+| [jdisc:create-server](#jdisccreate-server) | Creates a JDisc server, based on given input                                      |
+| [jdisc:discovery](#jdiscdiscovery)         | Triggers a JDisc discovery (API Access to the JDisc server is defined in the GUI) |
+| [jdisc:import](#jdiscimport)               | Imports data from a JDisc server (SQL server access is defined in the GUI)        |
+
+!!! info "This command is only available if the Maintenance add-on is installed"
+
+### jdisc:create-server
+
+Creates a JDisc server, based on given input
+
+**Options:**
+
+| Parameter (short version) | Parameter (long version)        | Description                                                                                  |
+| ------------------------- | ------------------------------- | -------------------------------------------------------------------------------------------- |
+|                           | --default                       | Set as default server                                                                        |
+|                           | --title=TITLE                   | Name for JDisc server configuration [default: "JDisc Server"]                                |
+|                           | --jdisc-host=JDISC-HOST         | JDisc host [default: "localhost"]                                                            |
+|                           | --jdisc-port=JDISC-PORT         | JDisc port [default: 25321]                                                                  |
+|                           | --jdisc-database=JDISC-DATABASE | JDisc database [default: "inventory"]                                                        |
+|                           | --jdisc-username=JDISC-USERNAME | JDisc username [default: "postgresro"]                                                       |
+|                           | --jdisc-password=JDISC-PASSWORD | JDisc password                                                                               |
+|                           | --allow-older-imports           | Allow import of older JDisc version [default: no]                                            |
+| -u                        | --user=USER                     | Username of a user who is authorized to execute                                              |
+| -p                        | --password=PASSWORD             | Password for authentication of the previously specified user                                 |
+| -i                        | --tenantId=TENANT-ID            | Tenant ID of the tenant to be used (default: 1)                                              |
+| -h                        | --help                          | Help message for displaying further information                                              |
+| -q                        | --quiet                         | Quiet-Mode to deactivate output                                                              |
+| -V                        | --version                       | Output of the i-doit Console version                                                         |
+|                           | --ansi<br>--no-ansi             | Force (or disable --no-ansi) ANSI output                                                     |
+| -n                        | --no-interaction                | Disables all interaction questions of the i-doit Console                                     |
+| -v / -vv / -vvv           | --verbose                       | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+
+**Example of use**
+
+```shell
+sudo -u www-data php console.php jdisc-create-server --username admin --password admin --jdisc-username administrator --jdisc-password administrator --allow-older-imports
+```
+
+### jdisc:discovery
+
+Triggers a JDisc discovery (API Access to the JDisc server is defined in the GUI)
+
+**Options:**
+
+| Parameter (short version) | Parameter (long version)                | Description                                                                                  |
+| ------------------------- | --------------------------------------- | -------------------------------------------------------------------------------------------- |
+| -s                        | --server=SERVER                         | Name of the JDisc server to be                                                               |
+| -j                        | --discoveryJob=DISCOVERYJOB             | Selected "Discovery Job" [default: "Discover all"]                                           |
+| -d                        | --deviceHostname=DEVICEHOSTNAME         | Selected device by "hostname"                                                                |
+| -a                        | --deviceHostAddress=DEVICEHOSTADDRESS   | Selected device by "hostaddress"                                                             |
+|                           | --deviceSerialNumber=DEVICESERIALNUMBER | Selected device by "serialnumber"                                                            |
+| -l                        | --showLog                               | Show log while discovery                                                                     |
+| -u                        | --user=USER                             | Username of a user who is authorized to execute                                              |
+| -p                        | --password=PASSWORD                     | Password for authentication of the previously specified user                                 |
+| -i                        | --tenantId=TENANT-ID                    | Tenant ID of the tenant to be used (default: 1)                                              |
+| -h                        | --help                                  | Help message for displaying further information                                              |
+| -q                        | --quiet                                 | Quiet-Mode to deactivate output                                                              |
+| -V                        | --version                               | Output of the i-doit Console version                                                         |
+|                           | --ansi<br>--no-ansi                     | Force (or disable --no-ansi) ANSI output                                                     |
+| -n                        | --no-interaction                        | Disables all interaction questions of the i-doit Console                                     |
+| -v / -vv / -vvv           | --verbose                               | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+
+**Example of use**
+
+```shell
+sudo -u www-data php console.php jdisc:discovery --username admin --password admin --server SERVER --discoveryJob DISCOVERYJOB --deviceHostname DEVICEHOSTNAME --showLog
+```
+
+### jdisc:import
+
+Imports data from a JDisc server (SQL server access is defined in the GUI)
+
+**Options:**
+
+| Parameter (short version) | Parameter (long version)            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| ------------------------- | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| -r                        | --profile=PROFILE                   | Jdisc Profile ID                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| -g                        | --group[=GROUP]                     | Group ID                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| -x                        | --mode=MODE                         | Possible modes are:<br>1: Append - The import will only create new objects.<br>2: Update - The import will try to update already existing objects.<br>3: Overwrite - The import behaves like the update mode but clears all list categories of the existing object.<br>4: Update (newly discovered) - The import clears all existing identification keys before the Update mode is triggered.<br>5: Overwrite (newly discovered) - The import clears all existing identification keys before the Overwrite mode is triggered.<br>6: Only create newly scanned devices - The import creates only newly scanned jdisc devices, existing ones are skipped.<br>7: Update (Existing) - Only existing objects will be updated. No new objects are created. |
+| -s                        | --server=SERVER                     | Jdisc Server ID                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| -o                        | --overwriteHost                     | Indicator for overwriting overlapped host addresses                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| -l                        | --detailedLogging[=DETAILEDLOGGING] | Possible log-levels are:<br>1: low log level only notices and warnings are being logged<br>2: additionally to the low log level errors are being logged<br>3: additionally to the normal log level debug messages are being logged. (Memory intensive)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| -b                        | --regenerateSearchIndex             | Regenerate search index after successful import                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+|                           | --listProfiles                      | List all available profiles                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+|                           | --ipFilter[=IPFILTER]               | IP filter, use a comma-separated string or newline-separated file with addresses.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| -u                        | --user=USER                         | Username of a user who is authorized to execute                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| -p                        | --password=PASSWORD                 | Password for authentication of the previously specified user                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| -i                        | --tenantId=TENANT-ID                | Tenant ID of the tenant to be used (default: 1)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| -h                        | --help                              | Help message for displaying further information                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| -q                        | --quiet                             | Quiet-Mode to deactivate output                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| -V                        | --version                           | Output of the i-doit Console version                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+|                           | --ansi<br>--no-ansi                 | Force (or disable --no-ansi) ANSI output                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| -n                        | --no-interaction                    | Disables all interaction questions of the i-doit Console                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| -v / -vv / -vvv           | --verbose                           | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+
+**Example of use**
+
+```shell
+sudo -u www-data php console.php jdisc:import --username admin --password admin --profile PROFILE --mode MODE --server SERVER --overwriteHost --detailedLogging DETAILEDLOGGING --regenerateSearchIndex
+```
 
 * * *
 
