@@ -53,6 +53,10 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 [i-doit_37_hotfix_ID-11944_bc4eddf.zip :material-file-download:](../../assets/downloads/hotfixes/37/i-doit_37_hotfix_ID-11944_bc4eddf.zip){ .md-button .md-button--primary }
 
+### Report Manager uses the wrong operator when there is a condition involving multiple objects (ID-11962)
+
+[i-doit_37_hotfix_ID-11962_b7d8e76.zip :material-file-download:](../../assets/downloads/hotfixes/37/i-doit_37_hotfix_ID-11962_b7d8e76.zip){ .md-button .md-button--primary }
+
 * * *
 
 ## Documents Add-on
