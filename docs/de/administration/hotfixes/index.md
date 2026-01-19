@@ -59,6 +59,12 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 * * *
 
+## Create jdisc:import option to get available devicegroup IDs (JDISC-84)
+
+[jdisc_1.0.2_hotfix_JDISC-84_07b4534.zip :material-file-download:](../../assets/downloads/hotfixes/jdisc/jdisc_1.0.2_hotfix_JDISC-84_07b4534.zip){ .md-button .md-button--primary }
+
+* * *
+
 ## Documents Add-on
 
 ### Turning off the auth system causes error when opening the administration (DOKU-526)
