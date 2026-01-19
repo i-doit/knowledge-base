@@ -51,8 +51,8 @@ RUN touch /var/mail/ubuntu; \
 WORKDIR /tmp/
 
 # Node.js and NPM:
-ARG NODE_VERSION=20.16.0
-ARG NPM_VERSION=10.9.0
+ARG NODE_VERSION=24.12.0
+ARG NPM_VERSION=11.7.0
 RUN curl -fsSL https://raw.githubusercontent.com/tj/n/master/bin/n \
     -o /usr/local/bin/n; \
     chmod 0755 /usr/local/bin/n; \
@@ -61,7 +61,7 @@ RUN curl -fsSL https://raw.githubusercontent.com/tj/n/master/bin/n \
     npm completion > /etc/bash_completion.d/npm
 
 # hadolint:
-ARG HADOLINT_VERSION=2.12.0
+ARG HADOLINT_VERSION=2.14.0
 RUN curl -OfsSL \
         "https://github.com/hadolint/hadolint/releases/download/v${HADOLINT_VERSION}/hadolint-Linux-x86_64"; \
     install -m 0755 -o root -g root hadolint-Linux-x86_64 /usr/local/bin/hadolint; \
@@ -101,7 +101,7 @@ RUN groupadd -g "${DOCKER_GROUP_ID}" docker; \
     chown root:docker /var/run/docker.sock
 
 # Docker Compose:
-ARG DOCKER_COMPOSE_VERSION=2.23.0
+ARG DOCKER_COMPOSE_VERSION=5.0.1
 RUN curl -OfsSL \
         "https://github.com/docker/compose/releases/download/v${DOCKER_COMPOSE_VERSION}/docker-compose-linux-x86_64"; \
     curl -OfsSL \
@@ -116,9 +116,9 @@ RUN curl -OfsSL \
         checksums.txt
 
 # editorconfig-checker (ec):
-ARG EC_VERSION=2.7.2
+ARG EC_VERSION=3.6.0
 RUN curl -OfsSL \
-        "https://github.com/editorconfig-checker/editorconfig-checker/releases/download/${EC_VERSION}/ec-linux-amd64.tar.gz"; \
+        "https://github.com/editorconfig-checker/editorconfig-checker/releases/download/v${EC_VERSION}/ec-linux-amd64.tar.gz"; \
     tar -xzf ec-linux-amd64.tar.gz; \
     install -m 755 -o root -g root bin/ec-linux-amd64 /usr/local/bin/ec; \
     rm -r \

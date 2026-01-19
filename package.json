@@ -27,7 +27,7 @@
     "devDependencies": {
         "@cyclonedx/bom": "^4.1.3",
         "@cyclonedx/cyclonedx-npm": "^4.1.2",
-        "@prantlf/jsonlint": "^16.0.0",
+        "@prantlf/jsonlint": "^17.0.0",
         "cloc": "^2.11.0",
         "husky": "^9",
         "jscpd": "^4.0.5",
