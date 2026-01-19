@@ -118,11 +118,11 @@ RUN curl -OfsSL \
 # editorconfig-checker (ec):
 ARG EC_VERSION=3.6.0
 RUN curl -OfsSL \
-        "https://github.com/editorconfig-checker/editorconfig-checker/releases/download/v${EC_VERSION}/ec-darwin-amd64.tar.gz"; \
-    tar -xzf ec-darwin-amd64.tar.gz; \
-    install -m 755 -o root -g root bin/ec-darwin-amd64 /usr/local/bin/ec; \
+        "https://github.com/editorconfig-checker/editorconfig-checker/releases/download/v${EC_VERSION}/ec-linux-amd64.tar.gz"; \
+    tar -xzf ec-linux-amd64.tar.gz; \
+    install -m 755 -o root -g root bin/ec-linux-amd64 /usr/local/bin/ec; \
     rm -r \
-        ec-darwin-amd64.tar.gz \
+        ec-linux-amd64.tar.gz \
         bin/
 
 # Upgrade pip:
