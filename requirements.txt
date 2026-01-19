@@ -14,4 +14,4 @@ Pygments ~= 2.19.2
 pymdown-extensions ~= 10.20
 PyOpenSSL ~= 25.3.0
 wheel ~= 0.45.1
-yamllint == 1.37.1
+yamllint == 1.38.0
