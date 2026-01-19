@@ -68,6 +68,8 @@ Zusätzlich installiert das ISMS-Add-on mehrere [Reports](reports.md), die eine 
 
 ## Rechtevergabe
 
+Das ISMS Add-on bringt neue Rechte mit, die in der [i-doit Rechteverwaltung](../../administration/verwaltung/berechtigungen.md) konfiguriert werden können. Diese Rechte steuern den Zugriff auf die Risikoklassen und die Risikoberechnung.
+
 * * *
 
 [Zur Einrichtung ->](configuration.md){ .md-button}
