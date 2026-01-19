@@ -652,7 +652,13 @@ nav:
           - Verwendung der Forms API: i-doit-add-ons/forms/verwenden-der-forms-api.md
       - i-diary: i-doit-add-ons/i-diary.md
       - i-doit QR-Code Printer: i-doit-add-ons/i-doit-qr-code-printer.md
-      - ISMS: i-doit-add-ons/isms.md
+      - ISMS:
+          - i-doit-add-ons/isms/index.md
+          - Einrichtung: i-doit-add-ons/isms/configuration.md
+          - Risikoeinschätzung: i-doit-add-ons/isms/risk-assessment.md
+          - Reporting: i-doit-add-ons/isms/reports.md
+          - Objekttypen und Kategorien: i-doit-add-ons/isms/object-types-and-categories.md
+          - Releases: i-doit-add-ons/isms/releases.md
       - JDisc Connector: i-doit-add-ons/jdisc-connector/index.md
       - Maintenance: i-doit-add-ons/maintenance.md
       - Nagios: i-doit-add-ons/nagios.md
