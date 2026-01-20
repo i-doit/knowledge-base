@@ -18,8 +18,6 @@ Das **ISMS Add-on** für die **i-doit CMDB** ist eine leistungsstarke Erweiterun
 - Import von Bedrohungen, Schwachstellen und Maßnahmen aus externen Katalogen
 - Ideal für **KRITIS**, **BSI-Standard 200-3** und andere Sicherheitsstandards
 
-[Zur Installation springen](#download-und-installation){ .md-button} · [Einrichtung](#einrichtung-des-isms-add-ons){ .md-button} · [Risikoeinschätzung](risk-assessment.md){ .md-button} · [Objekttypen und Kategorien](object-types-and-categories.md){ .md-button} · [Reports](reports.md){ .md-button} · [Releases](releases.md){ .md-button}
-
 ## Systemvoraussetzungen
 
 Das ISMS-Add-on setzt eine funktionsfähige i-doit-Installation voraus. Diese Dokumentation bezieht sich, sofern nicht anders angegeben, auf die aktuelle Version des Add-ons.
@@ -33,17 +31,19 @@ Das ISMS-Add-on setzt eine funktionsfähige i-doit-Installation voraus. Diese Do
 
 Dieses Add-on kann nachträglich installiert werden. Detaillierte Beschreibungen bezüglich Download, Installation, Updates usw. liefert der Artikel [i-doit Add-ons](../index.md).
 
+[Zur Einrichtung](configuration.md){ .md-button}
+
 * * *
 
 ## Verwendung des ISMS Add-ons
 
-Das Add-on orientiert sich an 3 übergeordneten Prozessen:
-
-- Vorbereitung,
-- Datenimport und
-- Umsetzung
-
-Diese Prozesse werden durch das Reporting ergänzt.
+1.  **Bewertungskriterien** festlegen
+2.  **Schadensszenarien** definieren
+3.  **Risikoklassen** und **Risikoformel** konfigurieren
+4.  **Maßnahmen** anlegen
+5.  **Risiken identifizieren** und **bewerten**
+6.  **Maßnahmen zuordnen** und **überwachen**
+7.  **Berichte erstellen**
 
 [Zur Einrichtung](configuration.md){ .md-button}
 
@@ -72,4 +72,4 @@ Das ISMS Add-on bringt neue Rechte mit, die in der [i-doit Rechteverwaltung](../
 
 * * *
 
-[Zur Einrichtung ->](configuration.md){ .md-button}
+[Zur Einrichtung ->](configuration.md){ .md-button} · [Releases](releases.md){ .md-button}

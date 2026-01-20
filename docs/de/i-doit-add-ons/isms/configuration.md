@@ -1,12 +1,12 @@
 ---
-title: Konfiguration des ISMS-Add-ons
+title: Einrichtung des ISMS-Add-ons
 description: Anleitung zur vollständigen Einrichtung des ISMS-Add-ons in i-doit.
 icon:
 status:
 lang: de
 ---
 
-# Konfiguration des ISMS-Add-ons
+# Einrichtung des ISMS-Add-ons
 
 Dieses Dokument beschreibt die vollständige Einrichtung des ISMS-Add-ons in i-doit.
 
@@ -73,7 +73,9 @@ Aus den gewählten Werten ergibt sich eine Risikomatrix.
 
 [![Risikoklassen](../../assets/images/de/i-doit-add-ons/isms/configuration/3-risikoklassen.png)](../../assets/images/de/i-doit-add-ons/isms/configuration/3-risikoklassen.png)
 
-#### Risikomatrix
+#### Risikoformel und Risikomatrix
+
+!!! note "Wenn keine Bewertungskriterien definiert sind, dann wird die Risikomatrix nicht angezeigt."
 
 Die Risikoformel definiert, wie die Risikohöhe aus den Bewertungskriterien berechnet wird. Beispiel für die Formel "Maximum Risikobewertung + Eintrittswahrscheinlichkeit = Risikohöhe":
 
