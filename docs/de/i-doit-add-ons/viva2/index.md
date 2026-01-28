@@ -1,5 +1,5 @@
 ---
-title: VIVA2 Add-on
+title: VIVA2 (IT-Grundschutz) Add-on
 description: Das VIVA2 Add-on unterstützt beim Aufbau und der Dokumentation eines Informationssicherheits-Managementsystems nach BSI IT-Grundschutz innerhalb der i-doit CMDB.
 icon: addons/viva2
 status:

@@ -662,6 +662,7 @@ nav:
       - OCS Inventory NG: i-doit-add-ons/ocs-inventory-ng.md
       - Relocate-CI: i-doit-add-ons/relocate-ci.md
       - Replacement: i-doit-add-ons/replacement.md
+      - Rights Documentation: i-doit-add-ons/rights-documentation.md
       - SHD SM-VIEW Connect:
           - i-doit-add-ons/sm-view-connect/index.md
           - SHD SM-VIEW Connect - Telekom Adapter: i-doit-add-ons/sm-view-connect/telekom-adapter.md
@@ -678,7 +679,7 @@ nav:
           - Objekt-Kategorie VIVA: i-doit-add-ons/viva/objekt-kategorie-viva.md
           - VIVA-Widget: i-doit-add-ons/viva/viva-widget.md
           - Arbeitsablauf mit VIVA: i-doit-add-ons/viva/arbeitsablauf-mit-viva.md
-      - VIVA2:
+      - VIVA2 (IT-Grundschutz):
           - i-doit-add-ons/viva2/index.md
           - Installation und Einrichtung: i-doit-add-ons/viva2/setup.md
           - IT-Grundschutz-Profile: i-doit-add-ons/viva2/it-grundschutz-profiles.md
@@ -688,10 +689,9 @@ nav:
           - Modellierung des Informationsverbundes: i-doit-add-ons/viva2/modeling.md
           - IT-Grundschutz-Check: i-doit-add-ons/viva2/it-grundschutz-check.md
           - Reports: i-doit-add-ons/viva2/reports.md
-          - Migration von VIVA zu VIVA2: i-doit-add-ons/viva2/migration.md
+          - Migration von VIVA zu VIVA 2: i-doit-add-ons/viva2/migration.md
           - Changelog: i-doit-add-ons/viva2/changelog.md
       - Workflow: i-doit-add-ons/workflow.md
-      - Rights Documentation: i-doit-add-ons/rights-documentation.md
   - i-doit cloud:
       - idoit-cloud/index.md
   - Download Links: download-links.md
@@ -726,4 +726,3 @@ not_in_nav: |
   _archiv/*
   i-doit-add-ons/api/methoden/v1/cmdb.ip_search.md
   i-doit-add-ons/flows.md
-  download-links.md
