@@ -1,0 +1,46 @@
+
+<svg
+    width="512"
+    height="512"
+    viewBox="0 0 512 512"
+    xmlns="http://www.w3.org/2000/svg"
+>
+    <!-- Hintergrund (optional, kann entfernt werden) -->
+    <rect width="512" height="512" fill="black"/>
+
+    <!-- Gelber Kreis -->
+    <circle cx="256" cy="256" r="220" fill="#FFC800"/>
+
+    <!-- Schild -->
+    <path
+        d="M256 140
+           L350 170
+           V270
+           C350 330 300 360 256 380
+           C212 360 162 330 162 270
+           V170
+           Z"
+        fill="black"
+    />
+
+    <!-- Schild Segmente -->
+    <!-- oben links -->
+    <path
+        d="M256 150
+           L175 175
+           V245
+           H256
+           Z"
+        fill="#FFC800"
+    />
+
+    <!-- unten rechts -->
+    <path
+        d="M256 245
+           H335
+           V270
+           C335 315 300 340 256 360
+           Z"
+        fill="#FFC800"
+    />
+</svg>

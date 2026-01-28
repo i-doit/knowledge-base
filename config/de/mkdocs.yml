@@ -5,8 +5,8 @@ docs_dir: '../../docs/de'
 site_dir: '../../generated/de'
 site_url: https://kb.i-doit.com/de/
 site_description: Knowledge Base
-site_author: synetics GmbH
-copyright: Copyright &copy; 2025 synetics GmbH
+site_author: i-doit GmbH
+copyright: Copyright &copy; 2026 i-doit GmbH
 repo_url: https://github.com/i-doit/knowledge-base
 edit_uri: edit/main/docs/de
 strict: true
@@ -35,10 +35,12 @@ theme:
   features:
     - content.action.edit
     - content.code.copy
+    - navigation.instant
+    - navigation.tracking
+    - navigation.indexes
     - navigation.footer
     - navigation.top
     - search.suggest
-    - navigation.indexes
   icon:
     admonition:
       note: octicons/tag-16
@@ -63,6 +65,7 @@ plugins:
       strict: false
   - redirects:
       redirect_maps:
+        'i-doit-add-ons/viva2.md': 'i-doit-add-ons/viva2/index.md'
         'wartung-und-betrieb/lizenz-aktivieren.md': 'wartung-und-betrieb/lizenzierung.md'
         'automatisierung-und-integration/cli/console/index.md': 'automatisierung-und-integration/cli/index.md'
         'automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md': 'automatisierung-und-integration/cli/index.md'
@@ -675,7 +678,18 @@ nav:
           - Objekt-Kategorie VIVA: i-doit-add-ons/viva/objekt-kategorie-viva.md
           - VIVA-Widget: i-doit-add-ons/viva/viva-widget.md
           - Arbeitsablauf mit VIVA: i-doit-add-ons/viva/arbeitsablauf-mit-viva.md
-      - VIVA2: i-doit-add-ons/viva2.md
+      - VIVA2:
+          - i-doit-add-ons/viva2/index.md
+          - Installation und Einrichtung:  i-doit-add-ons/viva2/setup.md
+          - IT-Grundschutz-Profile: i-doit-add-ons/viva2/it-grundschutz-profiles.md
+          - Objekttypen und Kategorien: i-doit-add-ons/viva2/objecttypes-categories.md
+          - Strukturanalyse: i-doit-add-ons/viva2/structural-analysis.md
+          - Schutzbedarfsfeststellung: i-doit-add-ons/viva2/assessment-of-protection.md
+          - Modellierung des Informationsverbundes: i-doit-add-ons/viva2/modeling.md
+          - IT-Grundschutz-Check: i-doit-add-ons/viva2/it-grundschutz-check.md
+          - Reports: i-doit-add-ons/viva2/reports.md
+          - Migration von VIVA zu VIVA2: i-doit-add-ons/viva2/migration.md
+          - Changelog: i-doit-add-ons/viva2/changelog.md
       - Workflow: i-doit-add-ons/workflow.md
       - Rights Documentation: i-doit-add-ons/rights-documentation.md
   - i-doit cloud:
