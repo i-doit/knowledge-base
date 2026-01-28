@@ -57,6 +57,10 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 [i-doit_37_hotfix_ID-11962_b7d8e76.zip :material-file-download:](../../assets/downloads/hotfixes/37/i-doit_37_hotfix_ID-11962_b7d8e76.zip){ .md-button .md-button--primary }
 
+### Prevent position in rack from not showing results at report for vertically positioned objects (ID-12304)
+
+[i-doit_37_hotfix_ID-12304_8d9eb35.zip :material-file-download:](../../assets/downloads/hotfixes/37/i-doit_37_hotfix_ID-12304_8d9eb35.zip){ .md-button .md-button--primary }
+
 * * *
 
 ## Create jdisc:import option to get available devicegroup IDs (JDISC-84)
