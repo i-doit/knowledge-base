@@ -8,26 +8,26 @@ lang: en
 
 The following [console commands](../../../automation-and-integration/cli/index.md) are available in the Add-on. These function can be used instead of a Cronjob.
 
-| Console command                                                    | Options                                                                                                         | Description                                                                                        |
-| ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| [auth-cleanup](#auth-cleanup)                                      | -                                                                                                               | It cleans up outdated rights to data that are no longer available                                  |
-| [contracts-outdated](#contracts-outdated)                          | -                                                                                                               | Updates status of outdated contracts                                                               |
-| [extend-contracts](#extend-contracts)                              | -                                                                                                               | Automatically extend the runtime of not-cancelled contracts                                        |
-| [import-csv](#import-csv-only-on-prem) only on-prem                | importFile<br>importProfileId is only available when a profile is saved, cached renewing needed                 | Performs the import of a CSV file with the desired import parameters                               |
-| [import-hinventory](#import-inventory-data-into-cmdb) only on-prem | importFile<br>objectType<br>objectId<br>force                                                                   | Performs an h-inventory import of a compatible XML file                                            |
-| [import-jdisc](#import-jdisc)                                      | server<br>profile<br>group<br>mode<br>overwriteHost<br>detailedLogging<br>regenerateSearchIndex                 | Performs a JDisc import to i-doit                                                                  |
-| [import-jdiscdiscovery](#import-jdiscdiscovery)                    | server<br>Discover by<br>discoveryJob<br>showLog                                                                | Triggers a JDisc Discovery job                                                                     |
-| [import-xml](#import-xml-only-on-prem) only on-prem                | importFile                                                                                                      | Performs an import of an XML file into i-doit                                                      |
-| [ldap-sync](#ldap-sync)                                            | ldapServerId<br>connectionRankingActive<br>dropExistingRelations<br>archiveDeletedGroups<br>useDefaultTemplates | Synchronizes user and groups from LDAP to i-doit and creates them as objects                       |
-| [ldap-syncdn](#ldap-syncdn)                                        | ldapServerId                                                                                                    | Synchronizes LDAP DNs with the i-doit users                                                        |
-| [logbook-archive](#logbook-archive)                                | -                                                                                                               | Archives the logbook entries with a defined age, according to the settings on the i-doit interface |
-| [notifications-send](#notifications-send)                          | notification-ids<br>notification-type-ids                                                                       | Sends the notifications configured on the i-doit interface                                         |
-| [search-index](#search-index)                                      | update<br>category                                                                                              | Restores the search index by deleting and rewriting it                                             |
-| [sync-dynamic-groups](#sync-dynamic-groups)                        | groups                                                                                                          | Resynchronizes dynamic group members                                                               |
-| [system-categorycleanup](#system-categorycleanup)                  | categoryStatus                                                                                                  | Purges optionally category entries that are in the state "unfinished", "archived" or "deleted"     |
-| [system-location-fix](#system-location-fix)                        | -                                                                                                               | Executes the location correction from the GUI in the console                                       |
-| [system-objectcleanup](#system-objectcleanup)                      | objectStatus                                                                                                    | Cleans all objects with a defined status                                                           |
-| [system-objectrelations](#system-objectrelations)                  | categoryConstant                                                                                                | Renews the names of all object relationships                                                       |
+| Console command                                                    | Description                                                                                        |
+| ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------- |
+| [auth-cleanup](#auth-cleanup)                                      | It cleans up outdated rights to data that are no longer available                                  |
+| [contracts-outdated](#contracts-outdated)                          | Updates status of outdated contracts                                                               |
+| [extend-contracts](#extend-contracts)                              | Automatically extend the runtime of not-cancelled contracts                                        |
+| [import-csv](#import-csv-only-on-prem) only on-prem                | Performs the import of a CSV file with the desired import parameters                               |
+| [import-hinventory](#import-inventory-data-into-cmdb) only on-prem | Performs an h-inventory import of a compatible XML file                                            |
+| [import-xml](#import-xml-only-on-prem) only on-prem                | Performs an import of an XML file into i-doit                                                      |
+| [jdisc:discovery](#jdiscdiscovery)                                 | Triggers a JDisc Discovery job                                                                     |
+| [jdisc:import](#jdiscimport)                                       | Performs a JDisc import to i-doit                                                                  |
+| [ldap-sync](#ldap-sync)                                            | Synchronizes user and groups from LDAP to i-doit and creates them as objects                       |
+| [ldap-syncdn](#ldap-syncdn)                                        | Synchronizes LDAP DNs with the i-doit users                                                        |
+| [logbook-archive](#logbook-archive)                                | Archives the logbook entries with a defined age, according to the settings on the i-doit interface |
+| [notifications-send](#notifications-send)                          | Sends the notifications configured on the i-doit interface                                         |
+| [search-index](#search-index)                                      | Restores the search index by deleting and rewriting it                                             |
+| [sync-dynamic-groups](#sync-dynamic-groups)                        | Resynchronizes dynamic group members                                                               |
+| [system-categorycleanup](#system-categorycleanup)                  | Purges optionally category entries that are in the state "unfinished", "archived" or "deleted"     |
+| [system-location-fix](#system-location-fix)                        | Executes the location correction from the GUI in the console                                       |
+| [system-objectcleanup](#system-objectcleanup)                      | Cleans all objects with a defined status                                                           |
+| [system-objectrelations](#system-objectrelations)                  | Renews the names of all object relationships                                                       |
 
 ## auth-cleanup
 
@@ -43,21 +43,27 @@ Automatically extend the runtime of not-cancelled contracts. A Use case can be f
 
 ## import-csv (only on-prem)
 
-| Option              | Description                                                                                                                                                                |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Option              | Description                                                                                                                                                         |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **importFile**      | Specify the complete path to the file. If you uploaded it before for the CSV Import the path is like `/var/www/html/imports/1/title.csv`. The `1` is the tenant ID. |
-| **importProfileId** | A CSV Import profile needs to be created before, see [Creating a profile](../../../consolidate-data/csv-data-import/index.md#creating-a-profile)                           |
+| **importProfileId** | A CSV Import profile needs to be created before, see [Creating a profile](../../../consolidate-data/csv-data-import/index.md#creating-a-profile)                    |
 
 ## import-hinventory (only on-prem)
 
-| Option         | Description                                                                                                            |
-| -------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| **importFile** | Specify the complete path to the file. Like `/var/www/html/imports/1/title.xml` where the `1` is the tenant ID. |
-| **objectType** | Imports the specified object type. Single select combobox with object types, required with default value 'Client'      |
-| **objectId**   | Imports only the specified object                                                                                      |
-| **force**      | Forces existing objects to be updated but overwrites the imported categories                                           |
+| Option         | Description                                                                                                       |
+| -------------- | ----------------------------------------------------------------------------------------------------------------- |
+| **importFile** | Specify the complete path to the file. Like `/var/www/html/imports/1/title.xml` where the `1` is the tenant ID.   |
+| **objectType** | Imports the specified object type. Single select combobox with object types, required with default value 'Client' |
+| **objectId**   | Imports only the specified object                                                                                 |
+| **force**      | Forces existing objects to be updated but overwrites the imported categories                                      |
 
-## import-jdisc
+## import-xml (only on-prem)
+
+| Option         | Description                                                                                                     |
+| -------------- | --------------------------------------------------------------------------------------------------------------- |
+| **importFile** | Specify the complete path to the file. Like `/var/www/html/imports/1/title.xml` where the `1` is the tenant ID. |
+
+## jdisc:import
 
 | Option                    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -68,8 +74,10 @@ Automatically extend the runtime of not-cancelled contracts. A Use case can be f
 | **overwriteHost**         | Specify whether to overwrite overlapping host addresses                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | **detailedLogging**       | Increases the logging level: 1: low log level only notices and warnings are being logged<br>2: additionally to the low log level errors are being logged<br>3: additionally to the normal log level debug messages are being logged. (Memory intensive)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | **regenerateSearchIndex** | Automatically renews the search index                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **list-device-groups**    | List all available device groups from the selected JDisc server                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| **list-servers**          | Lists all available JDisc servers                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
-## import-jdiscdiscovery
+## jdisc:discovery
 
 | Option           | Description                                                 |
 | ---------------- | ----------------------------------------------------------- |
@@ -77,12 +85,6 @@ Automatically extend the runtime of not-cancelled contracts. A Use case can be f
 | **Discover by**  | According to selected option, further options are displayed |
 | **discoveryJob** | Selecting the device by host name                           |
 | **showLog**      | Displays the log during the Discoveries                     |
-
-## import-xml (only on-prem)
-
-| Option         | Description                                                                                                            |
-| -------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| **importFile** | Specify the complete path to the file. Like `/var/www/html/imports/1/title.xml` where the `1` is the tenant ID. |
 
 ## ldap-sync
 
