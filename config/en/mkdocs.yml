@@ -625,7 +625,13 @@ nav:
           - i-diary Determine the author: i-doit-add-ons/i-diary/determine-the-author.md
           - i-diary Determine the host: i-doit-add-ons/i-diary/determine-the-host.md
       - i-doit QR-Code Printer: i-doit-add-ons/i-doit-qr-code-printer.md
-      - ISMS: i-doit-add-ons/isms/index.md
+      - ISMS:
+          - i-doit-add-ons/isms/index.md
+          - Configuration: i-doit-add-ons/isms/configuration.md
+          - Risk Management: i-doit-add-ons/isms/risk-management.md
+          - Reports: i-doit-add-ons/isms/isms-reports.md
+          - Object types and categories: i-doit-add-ons/isms/object-types-and-categories.md
+          - Releases: i-doit-add-ons/isms/releases.md
       - JDisc Connector: i-doit-add-ons/jdisc-connector/index.md
       - Maintenance: i-doit-add-ons/maintenance.md
       - Nagios: i-doit-add-ons/nagios.md
