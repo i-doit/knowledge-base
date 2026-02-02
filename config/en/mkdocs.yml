@@ -628,8 +628,8 @@ nav:
       - ISMS:
           - i-doit-add-ons/isms/index.md
           - Configuration: i-doit-add-ons/isms/configuration.md
-          - Risk Management: i-doit-add-ons/isms/risk-management.md
-          - Reports: i-doit-add-ons/isms/isms-reports.md
+          - Risk Management: i-doit-add-ons/isms/risk-assessment.md
+          - Reports: i-doit-add-ons/isms/reports.md
           - Object types and categories: i-doit-add-ons/isms/object-types-and-categories.md
           - Releases: i-doit-add-ons/isms/releases.md
       - JDisc Connector: i-doit-add-ons/jdisc-connector/index.md
