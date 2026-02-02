@@ -78,11 +78,11 @@ URL = "[https://demo.i-doit.com/src/jsonrpc.php](https://demo.i-doit.com/src/jso
 ```
 
 Und nun wird der API Call vorbereitet. Es wird die Methode cmdb.reports aufgerufen und der Report mit der Nummer 2 abgefragt.<br>
-Es wird keine Benutzer/Passwort-Authentifizierung verwendet, sondern nur der API-Key. Damit das funktioniert, müssen die unter 6.) gezeigten Einstellungen vorgenommen werden.<br>
+Es wird keine Benutzer/Passwort-Authentifizierung verwendet, sondern nur der API-Key. Damit das funktioniert, müssen die unter Schritt 6 gezeigten Einstellungen vorgenommen werden.<br>
 Bei der Formatierung des JSON Strings müssen alle Anführungszeichen innerhalb des JSON Strings doppelt gesetzt werden.
 
 ```bash
-postData = "{""jsonrpc"":""2.0"",""method"":""cmdb.reports"",""params"":{""apikey"":""c1ia5q"",""id"": 2}}"
+postData = "{""jsonrpc"":""2.0"",""id"":""1"",""method"":""cmdb.reports"",""params"":{""apikey"":""c1ia5q"",""id"": 2}}"
 ```
 
 Diese Anweisungen führen den HTTP POST Request aus und senden den angegebenen JSON String an die API
