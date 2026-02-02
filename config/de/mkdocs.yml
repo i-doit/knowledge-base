@@ -63,6 +63,7 @@ plugins:
       strict: false
   - redirects:
       redirect_maps:
+        'i-doit-add-ons/isms.md': 'i-doit-add-ons/isms/index.md'
         'wartung-und-betrieb/lizenz-aktivieren.md': 'wartung-und-betrieb/lizenzierung.md'
         'automatisierung-und-integration/cli/console/index.md': 'automatisierung-und-integration/cli/index.md'
         'automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md': 'automatisierung-und-integration/cli/index.md'
@@ -652,7 +653,13 @@ nav:
           - Verwendung der Forms API: i-doit-add-ons/forms/verwenden-der-forms-api.md
       - i-diary: i-doit-add-ons/i-diary.md
       - i-doit QR-Code Printer: i-doit-add-ons/i-doit-qr-code-printer.md
-      - ISMS: i-doit-add-ons/isms.md
+      - ISMS:
+          - i-doit-add-ons/isms/index.md
+          - Einrichtung: i-doit-add-ons/isms/configuration.md
+          - Risikoeinschätzung: i-doit-add-ons/isms/risk-assessment.md
+          - Reporting: i-doit-add-ons/isms/reports.md
+          - Objekttypen und Kategorien: i-doit-add-ons/isms/object-types-and-categories.md
+          - Releases: i-doit-add-ons/isms/releases.md
       - JDisc Connector: i-doit-add-ons/jdisc-connector/index.md
       - Maintenance: i-doit-add-ons/maintenance.md
       - Nagios: i-doit-add-ons/nagios.md
