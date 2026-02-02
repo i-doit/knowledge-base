@@ -31,7 +31,7 @@ The level should be a positive integer, with the criteria sorted in ascending or
 
 [![Assessment Criteria](../../assets/images/en/i-doit-add-ons/isms/configuration/1-assessment-criteria.png)](../../assets/images/en/i-doit-add-ons/isms/configuration/1-assessment-criteria.png)
 
-### 2. Define damage scenarios
+### 2. Define incident scenarios
 
 **Examples:**
 - Financial damages
@@ -47,9 +47,9 @@ The level should be a positive integer, with the criteria sorted in ascending or
     |             |                  | High: From €50,000 to €500,000 |
     |             |                  | Very high: More than €500,000  |
 
-For each assessment criterion, appropriate expressions should be created. The damage scenarios can be oriented based on those defined in the BSI IT Baseline Protection. The designation serves for sorting.
+For each assessment criterion, appropriate expressions should be created. The incident scenarios can be oriented based on those defined in the BSI IT Baseline Protection. The designation serves for sorting.
 
-[![Damage Scenarios](../../assets/images/en/i-doit-add-ons/isms/configuration/2-damage-scenarios.png)](../../assets/images/en/i-doit-add-ons/isms/configuration/2-damage-scenarios.png)
+[![incident Scenarios](../../assets/images/en/i-doit-add-ons/isms/configuration/2-incident-scenarios.png)](../../assets/images/en/i-doit-add-ons/isms/configuration/2-incident-scenarios.png)
 
 ### 3. Define risk classes and risk formula
 

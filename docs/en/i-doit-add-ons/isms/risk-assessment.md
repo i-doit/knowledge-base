@@ -27,12 +27,12 @@ The category **Risk Assessment** opens a **multi-value category** where existing
 2. Enter **Protection Goals** (default: *Confidentiality*, *Integrity*, *Availability*).
       - Additional values (e.g., *Authenticity*) can be added under
         `Administration -> Predefined Contents -> Dialog Admin -> ISMS -> Protection Goals`.
-3. In the **Risk Assessment** section, evaluate the **Damage Scenarios** using the **slider**.
+3. In the **Risk Assessment** section, evaluate the **incident Scenarios** using the **slider**.
 4. Also set the **Likelihood of Occurrence** using the slider.
 5. Assign **Existing Measures** (if available) and document a **Comment** on the assessment.
 6. Set the **Date of Risk Assessment** and **Follow-up Date** (usable for evaluations).
 
-[![Risk Assessment - Damage Scenarios & Likelihood of Occurrence](../../assets/images/en/i-doit-add-ons/isms/risk-assessment/create-ra2.png)](../../assets/images/en/i-doit-add-ons/isms/risk-assessment/create-ra2.png)
+[![Risk Assessment - incident Scenarios & Likelihood of Occurrence](../../assets/images/en/i-doit-add-ons/isms/risk-assessment/create-ra2.png)](../../assets/images/en/i-doit-add-ons/isms/risk-assessment/create-ra2.png)
 
 ### Risk Treatment
 
@@ -65,8 +65,8 @@ If the risk assessment is already available, for example in **Excel**, it can be
 
 ### Impact / Impact after Risk Treatment
 
-- **Format:** Semicolon-separated list of **levels** (numbers) per **damage scenario**.
-- The order follows the attribute **"Designation"** in the category **"Damage Scenario"**.
+- **Format:** Semicolon-separated list of **levels** (numbers) per **incident scenario**.
+- The order follows the attribute **"Designation"** in the category **"incident Scenario"**.
 
 **Example:**
 
@@ -94,4 +94,4 @@ Placement of fire extinguishers;3054
 
 * * *
 
-[<- Start](index.md){ .md-button} · [View Reporting ->](reports.md){ .md-button .md-button--primary} ->
+[<- Start](index.md){ .md-button} · [View Reporting ->](reports.md){ .md-button .md-button--primary}

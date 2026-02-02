@@ -118,4 +118,4 @@ This page describes the reports provided with the ISMS add-on in **i-doit**. A g
 
 * * *
 
-[<- Start](index.md){ .md-button} · [Object Types and Categories ->](object-types-and-categories.md){ .md-button .md-button--primary} ->
+[<- Start](index.md){ .md-button} · [Object Types and Categories ->](object-types-and-categories.md){ .md-button .md-button--primary}
