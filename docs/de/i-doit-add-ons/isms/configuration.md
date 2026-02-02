@@ -29,7 +29,7 @@ Vor der Nutzung müssen vier grundlegende Schritte durchgeführt werden.
     | 3     | Hoch        | Tritt mehrmals pro Jahr ein                  |
     | 4     | Sehr hoch   | Tritt täglich ein                            |
 
-Das Level sollte eine positive Ganzzahl sein, wonach die Kriterien aufsteigend sortiert werden. Die Beschreibung der Eintrittswahrscheinlichkeit ist optional
+Das Level sollte eine positive Ganzzahl sein, wonach die Kriterien aufsteigend sortiert werden. Die Beschreibung der Eintrittswahrscheinlichkeit ist optional.
 
 [![Bewertungskriterien](../../assets/images/de/i-doit-add-ons/isms/configuration/1-bewertungskriterien.png)](../../assets/images/de/i-doit-add-ons/isms/configuration/1-bewertungskriterien.png)
 

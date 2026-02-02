@@ -43,7 +43,7 @@ Diese Seite beschreibt die mit dem ISMS-Add-on bereitgestellten Auswertungen in 
 1. Kategorie **"Service Komponenten (Service)"** wählen
 2. Beim Attribut **"Zugewiesenes Objekt"** den Feld-Platzhalter **Objekt-ID** setzen
 
-! note "Hinweis"
+!!! note "Hinweis"
     Der Report ist an die gleichnamige **benutzerdefinierte Kategorie** gebunden und kann unterschiedlichen Objekttypen zugewiesen werden.
 
 * * *
@@ -108,4 +108,4 @@ Diese Seite beschreibt die mit dem ISMS-Add-on bereitgestellten Auswertungen in 
 ### Report-View: ISMS Risikoeinschätzung (objektbasiert)
 **Zweck:** Fokussierte Sicht auf **einzelne Objekte** mit denselben Informationen wie die allgemeine Risikoeinschätzung.
 
-[<- Zur Startseite](index.md){ .md-button} · [Objekttypen und Kategorien ->](object-types-and-categories.md){ .md-button .md-button--primary} ->
+[<- Zur Startseite](index.md){ .md-button} · [Objekttypen und Kategorien ->](object-types-and-categories.md){ .md-button .md-button--primary}

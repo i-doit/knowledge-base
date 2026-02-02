@@ -1,5 +1,5 @@
 ---
-title: ISMS Add-on Dokumentation
+title: ISMS Add-on Documentation
 description: ISMS Add-on für i-doit, ISO 27001-konformes Risikomanagement, Maßnahmenverwaltung und Compliance.
 icon: addons/ismslogo
 status:

@@ -175,4 +175,4 @@ Standardmäßig ist der Objekttyp ausgeblendet. Er kann bei Bedarf über die Obj
 
 * * *
 
-[<- Zur Startseite](index.md){ .md-button } · [Releases ->](releases.md){ .md-button  .md-button--primary}
+[<- Zur Startseite](index.md){ .md-button } · [Releases ->](releases.md){ .md-button .md-button--primary}
