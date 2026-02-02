@@ -91,4 +91,4 @@ Aufstellung von Handfeuerlöschern;3054
 
 !!! note "Alle übrigen Attribute der Multivalue-Kategorie "Risikoeinschätzung" können in der Standardsyntax von i-doit importiert werden."
 
-<- [Zur Startseite](index.md){ .md-button} · [Reporting ansehen](reports.md){ .md-button} ->
+[<- Zur Startseite](index.md){ .md-button} · [Reporting ansehen](reports.md){ .md-button .md-button--primary} ->

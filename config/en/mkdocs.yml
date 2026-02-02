@@ -63,6 +63,7 @@ plugins:
       strict: false
   - redirects:
       redirect_maps:
+        'i-doit-add-ons/isms.md': 'i-doit-add-ons/isms/index.md'
         'maintenance-and-operation/activate-license.md': 'maintenance-and-operation/licensing.md'
         'automation-and-integration/cli/console/options-and-parameters-cli.md': 'automation-and-integration/cli/index.md'
         'automation-and-integration/cli/console/commands-and-options.md': 'automation-and-integration/cli/index.md'
@@ -624,7 +625,7 @@ nav:
           - i-diary Determine the author: i-doit-add-ons/i-diary/determine-the-author.md
           - i-diary Determine the host: i-doit-add-ons/i-diary/determine-the-host.md
       - i-doit QR-Code Printer: i-doit-add-ons/i-doit-qr-code-printer.md
-      - ISMS: i-doit-add-ons/isms.md
+      - ISMS: i-doit-add-ons/isms/index.md
       - JDisc Connector: i-doit-add-ons/jdisc-connector/index.md
       - Maintenance: i-doit-add-ons/maintenance.md
       - Nagios: i-doit-add-ons/nagios.md

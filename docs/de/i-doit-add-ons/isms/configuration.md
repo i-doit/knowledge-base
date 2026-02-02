@@ -134,4 +134,4 @@ Zusätzlich ist es möglich, die Kategorie "Standort" an Objekte vom Typ "SOA-Ma
 
 * * *
 
-[<- Zur Startseite](index.md){ .md-button} · [Risikoeinschätzung ansehen ->](risk-assessment.md){ .md-button}
+[<- Zur Startseite](index.md){ .md-button} · [Risikoeinschätzung ansehen ->](risk-assessment.md){ .md-button .md-button--primary}

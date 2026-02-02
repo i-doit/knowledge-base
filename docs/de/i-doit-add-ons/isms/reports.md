@@ -108,4 +108,4 @@ Diese Seite beschreibt die mit dem ISMS-Add-on bereitgestellten Auswertungen in 
 ### Report-View: ISMS Risikoeinschätzung (objektbasiert)
 **Zweck:** Fokussierte Sicht auf **einzelne Objekte** mit denselben Informationen wie die allgemeine Risikoeinschätzung.
 
-<- [Zur Startseite](index.md){ .md-button} · [Objekttypen und Kategorien ->](object-types-and-categories.md){ .md-button} ->
+[<- Zur Startseite](index.md){ .md-button} · [Objekttypen und Kategorien ->](object-types-and-categories.md){ .md-button .md-button--primary} ->
