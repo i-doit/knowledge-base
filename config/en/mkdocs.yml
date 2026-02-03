@@ -647,7 +647,18 @@ nav:
           - Object category VIVA: i-doit-add-ons/viva/object-category-viva.md
           - VIVA-Widget: i-doit-add-ons/viva/viva-widget.md
           - Workflow with VIVA: i-doit-add-ons/viva/workflow-with-viva.md
-      - VIVA2: i-doit-add-ons/viva2.md
+      - VIVA2 (IT-Grundschutz):
+          - i-doit-add-ons/viva2/index.md
+          - Installation und Einrichtung: i-doit-add-ons/viva2/setup.md
+          - IT-Grundschutz-Profile: i-doit-add-ons/viva2/it-grundschutz-profiles.md
+          - Objekttypen und Kategorien: i-doit-add-ons/viva2/objecttypes-categories.md
+          - Strukturanalyse: i-doit-add-ons/viva2/structural-analysis.md
+          - Schutzbedarfsfeststellung: i-doit-add-ons/viva2/assessment-of-protection.md
+          - Modellierung des Informationsverbundes: i-doit-add-ons/viva2/modeling.md
+          - IT-Grundschutz-Check: i-doit-add-ons/viva2/it-grundschutz-check.md
+          - Reports: i-doit-add-ons/viva2/reports.md
+          - Migration von VIVA zu VIVA 2: i-doit-add-ons/viva2/migration.md
+          - Changelog: i-doit-add-ons/viva2/changelog.md
       - Workflow: i-doit-add-ons/workflow.md
       - Rights Documentation: i-doit-add-ons/rights-documentation.md
   - i-doit cloud:
