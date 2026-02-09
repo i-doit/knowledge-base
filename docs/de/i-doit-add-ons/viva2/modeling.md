@@ -12,13 +12,13 @@ Bei der Modellierung des Informationsverbundes müssen hauptsächlich die Bauste
 
 Die Zuweisung von Prozessbausteinen zum Informationsverbund geschieht über die Kategorie "Prozessbausteine" am Informationsverbund.
 
-[![Prozessbausteine](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/zielobjektgruppe-beispiel.png)](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/zielobjektgruppe-beispiel.png){:target="_blank"}
+[![Zuweisung von Prozessbausteinen](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/assign-beispiel.png)](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/zielobjektgruppe-beispiel.png){:target="_blank"}
 
 Hier müssen jetzt alle relevanten Prozessbausteine dem Informationsverbund zugewiesen werden.
 
 Die Zuweisung von Bausteinen zu Zielobjekten/Zielobjektgruppen geschieht über die Kategorie "Zugeordnete Bausteine" am Zielobjekt/an der Zielobjektgruppe.
 
-[![Zugeordnete Bausteine](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/zielobjektgruppe-beispiel.png)](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/zielobjektgruppe-beispiel.png){:target="_blank"}
+[![Zuweisung von Bausteinen](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/zielobjektgruppe-beispiel.png)](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/zielobjektgruppe-beispiel.png){:target="_blank"}
 
 Hier müssen jetzt alle für dieses Zielobjekt/diese Zielobjektgruppe relevanten Systembausteine zugeordnet werden. Es können natürlich auch Prozessbausteine zugeordnet werden, wenn dies an dieser Stelle sinnvoll ist (z.B. abweichende Backupkonzepte für einzelne Objekte).
 
