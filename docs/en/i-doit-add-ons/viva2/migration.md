@@ -1,6 +1,6 @@
 ---
 title: Migration
-description: Migration von VIVA1 zu VIVA2
+description: Migration from VIVA1 to VIVA2
 lang: en
 ---
 

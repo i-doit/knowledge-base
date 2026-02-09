@@ -24,7 +24,7 @@ Der Objekttyp "Baustein" bildet die Bausteine aus dem Grundschutzkompendium ab. 
 - **Dateien** (i-doit Standardkategorie): Hier können zusätzlich Dateien zu diesem Baustein verlinkt werden.
 - **Gefährdungslage**: Dies ist eine Multivalue-Kategorie, in der alle Gefährdungen verknüpft sind, die zu diesem Baustein gehören.
 - **Kontaktzuweisung** (i-doit Standardkategorie): Hier müssen die entsprechenden Ansprechpartner für den Baustein eingetragen werden.
-- **Zielobjekte/-gruppen**: Dies ist eine Multivalue-Kategorie, in der alle Objekte verknüpft sind, denen dieser Baustein zugewiesen (entweder über die Kategorie "Prozessbausteine" oder über die Kategorie "Zugeordnete Bausteine"). Dies ist eine Multivalue-Kategorie, in der alle Objekte verknüpft sind, denen dieser Baustein zugewiesen (entweder über die Kategorie "Prozessbausteine" oder über die Kategorie "Zugeordnete Bausteine").
+- **Zielobjekte/-gruppen**: Dies ist eine Multivalue-Kategorie, in der alle Objekte verknüpft sind, denen dieser Baustein zugewiesen (entweder über die Kategorie "Prozessbausteine" oder über die Kategorie "Zugeordnete Bausteine").
 - **Zugriff** (i-doit Standardkategorie): Über die Zugriffs-Kategorie ist der Baustein mit der Bausteinbeschreibung auf der Internetseite des IT-Grundschutzkompendiums des BSI verlinkt.
 
 ## Anforderung

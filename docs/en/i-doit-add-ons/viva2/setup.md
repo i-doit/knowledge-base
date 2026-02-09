@@ -22,11 +22,11 @@ For an existing i-doit installation, these requirements should already be met.
 - post_max_size ≥ 10 MB
 - max_execution_time ≥ 300 s
 - max_input_time ≥ 300 s
-- PHP Zip Modul aktiv, Systembibliothek libzip ≥ 1.2.0
+- PHP Zip module enabled; system library libzip ≥ 1.2.0
 
 ### Database
 
-- MariaDB ≥ 10.1 oder MySQL ≥ 8.0
+- MariaDB ≥ 10.1 or MySQL ≥ 8.0
 
 ## Installation
 

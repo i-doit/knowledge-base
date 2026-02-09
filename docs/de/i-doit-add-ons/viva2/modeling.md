@@ -1,18 +1,16 @@
 ---
 title: Modellierung des Informationsverbundes
-description: Bei der Modellierung des Informationsverbundes müssen hauptsächlich die Bausteine des Grundschutzkompendiums dem Informationsverbund und seinen Zielobjekten bzw. Zielobjektgruppen zugerdnet werden.
-icon:
-status:
+description: Bei der Modellierung des Informationsverbundes müssen hauptsächlich die Bausteine des Grundschutzkompendiums dem Informationsverbund und seinen Zielobjekten bzw. Zielobjektgruppen zugeordnet werden.
 lang: de
 ---
 
 # Modellierung des Informationsverbundes
 
-Bei der Modellierung des Informationsverbundes müssen hauptsächlich die Bausteine des Grundschutzkompendiums dem Informationsverbund und seinen Zielobjekten bzw. Zielobjektgruppen zugerdnet werden. Unterschieden wird hier zwischen der Zuweisung von Prozessbausteinen am Informationsverbund und von (hauptsächlich System-)Bausteinen an Zielobjekten bzw. Zielobjektgruppen.
+Bei der Modellierung des Informationsverbundes müssen hauptsächlich die Bausteine des Grundschutzkompendiums dem Informationsverbund und seinen Zielobjekten bzw. Zielobjektgruppen zugeordnet werden. Unterschieden wird hier zwischen der Zuweisung von Prozessbausteinen am Informationsverbund und von (hauptsächlich System-)Bausteinen an Zielobjekten bzw. Zielobjektgruppen.
 
 Die Zuweisung von Prozessbausteinen zum Informationsverbund geschieht über die Kategorie "Prozessbausteine" am Informationsverbund.
 
-[![Zuweisung von Prozessbausteinen](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/assign-beispiel.png)](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/zielobjektgruppe-beispiel.png){:target="_blank"}
+[![Zuweisung von Prozessbausteinen](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/zielobjektgruppe-beispiel.png)](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/zielobjektgruppe-beispiel.png){:target="_blank"}
 
 Hier müssen jetzt alle relevanten Prozessbausteine dem Informationsverbund zugewiesen werden.
 

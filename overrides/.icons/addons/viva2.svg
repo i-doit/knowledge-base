@@ -1,6 +1,6 @@
 <svg width="32" height="32" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
     <circle cx="256" cy="256" r="220" fill="#FFC800"/>
     <path d="M256 140 L350 170 V270 C350 330 300 360 256 380 C212 360 162 330 162 270 V170 Z" fill="black"/>
-    <path d="M256 150 L175 175 V245 H256 Z" fill="FFC800" />
+    <path d="M256 150 L175 175 V245 H256 Z" fill="#FFC800" />
     <path d="M256 245 H335 V270 C335 315 300 340 256 360 Z" fill="#FFC800"/>
 </svg>

@@ -41,13 +41,13 @@ Information security officers, security and compliance managers, administrators,
 ## Workflow in 5 steps
 
 1. **Structural analysis**: Ensure all relevant objects exist and are linked.
-   → [Strukturanalyse](structural-analysis.md)
+   → [Structural analysis](structural-analysis.md)
 2. **Protection needs assessment**: Determine and justify the protection needs and review inheritance.
-   → [Schutzbedarfsfeststellung](assessment-of-protection.md)
+   → [Protection needs assessment](assessment-of-protection.md)
 3. **Modeling the information scope**: Assign process and system modules and define contacts.
-   → [Modellierung](modeling.md)
+   → [Modeling](modeling.md)
 4. **IT-Grundschutz check**: Document the implementation status of requirements.
-   → [IT-Grundschutz-Check](structural-analysis.md)
+   → [IT-Grundschutz check](it-grundschutz-check.md)
 5. **Reports**: Evaluate responsibilities, coverage, and implementation status.
    → [Reports](reports.md)
 

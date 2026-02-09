@@ -1,6 +1,6 @@
 ---
 title: Protection needs assessment
-description: Visualization and management of the protection needs assessment and inheritance of an scope
+description: Visualization and management of the protection needs assessment and inheritance of a scope
 icon:
 status:
 lang: en
@@ -8,7 +8,7 @@ lang: en
 
 # Protection needs assessment
 
-Add-ons → IT-Grundschutz → Protection needs assessment opens the graphical view of the protection needs assessment and inheritance of an scope.
+Add-ons → IT-Grundschutz → Protection needs assessment opens the graphical view of the protection needs assessment and inheritance of a scope.
 
 To load the assessment, first select an scope in the object browser at the top. For large scopes, this can take several seconds.
 
@@ -22,15 +22,15 @@ The main area displays the complete scope graphically.
 
 Protection needs are inherited from top to bottom, starting with the target objects/target object groups assigned to the scope. All objects connected through one of the following relationships are then loaded (and the protection needs are inherited):
 
--   Gruppenmitgliedschaft
--   Service-Komponente
--   Softwarezuweisung
--   Anschlüsse
--   Clustermitgliedschaften
--   Virtuelle Maschine
--   Vertragszuweisung
--   Kommunikationsverbindung
--   Standort
+-   Group membership
+-   Service component
+-   Software assignment
+-   Connections
+-   Cluster memberships
+-   Virtual machine
+-   Contract assignment
+-   Communication link
+-   Location
 
 Protection needs for the various basic values are inherited downward using the maximum principle.
 
