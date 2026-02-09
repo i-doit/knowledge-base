@@ -30,8 +30,8 @@ For an existing i-doit installation, these requirements should already be met.
 
 ## Installation
 
-1. Download the add-on from the [Customer Portal](../../administration/admin-center.md) or install it within i-doit via the [Add-on & Subscription Center](../../administration/kundenportal.md)
-2. Log in to the [Admin Center](../../administration/admin-center.md)
+1. Download the add-on from the [Customer Portal](../../system-administration/admin-center.md) or install it within i-doit via the [Add-on & Subscription Center](../../system-administration/customer-portal.md)
+2. Log in to the [Admin Center](../../system-administration/admin-center.md)
 3. Open the **Add-ons** tab
 4. Choose Install/update add-on and select the **VIVA2 ZIP** file
 5. Run Upload and install
@@ -52,7 +52,7 @@ Automatic adjustments during the update:
 
 ## Setup
 
-After installation, import the IT-Grundschutz Compendium. The download is available in the [Customer Portal](../../administration/kundenportal.md).
+After installation, import the IT-Grundschutz Compendium. The download is available in the [Customer Portal](../../system-administration/customer-portal.md).
 
 1. Open Add-ons → IT-Grundschutz → Compendium
 2. Choose Import and upload the Compendium ZIP file

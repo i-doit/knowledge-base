@@ -21,7 +21,7 @@ As part of the structural analysis, ensure that all objects required to document
 
 To reduce complexity, similar objects should be grouped in the target object group object type. The group type must remain static. The target object group is then assigned to the information scope via the "Information scopes" category.
 
-[![Zielobjekt-Gruppen](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/zielobjektgruppe-beispiel.png)](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/zielobjektgruppe-beispiel.png){:target="_blank"}
+[![Target object groups](../../assets/images/en/i-doit-add-ons/viva2/structural-analysis/targetobjectgroup-example.png)](../../assets/images/en/i-doit-add-ons/viva2/structural-analysis/targetobjectgroup-example.png){:target="_blank"}
 
 !!! note "Technically, a target object group can be assigned to multiple information scopes, but it is recommended to assign a target object group to only one information scope."
 
@@ -40,15 +40,15 @@ For all relevant objects, responsibilities should be documented via the "Contact
 
 The cleaned network diagram should be linked in the "Information scope" category of the information scope.
 
-[![Bereinigter Netzplan](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/netzplan.png)](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/netzplan.png){:target="_blank"}
+[![Adjusted-network](../../assets/images/en/i-doit-add-ons/viva2/structural-analysis/adjusted-network.png)](../../assets/images/en/i-doit-add-ons/viva2/structural-analysis/adjusted-network.png){:target="_blank"}
 
-## Communication links
+## Communication link
 
-The communication links to be documented are created in i-doit via the new [Communication link object type](objecttypes-categories.md#kommunikationsverbindung).
+The communication link to be documented are created in i-doit via the new [Communication link object type](objecttypes-categories.md#communication-link).
 
-[![## Kommunikationsverbindungen](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/kommunikationsverbindungen.png)](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/kommunikationsverbindungen.png){:target="_blank"}
+[![Communication-link](../../assets/images/en/i-doit-add-ons/viva2/structural-analysis/communication-link.png)](../../assets/images/en/i-doit-add-ons/viva2/structural-analysis/communication-link.png){:target="_blank"}
 
-Communication links are usually assigned directly to the information scope, which is why the "IT-Grundschutz (target objects)" category is initially assigned to the "Communication link" object type. In the "Information scopes" category, the corresponding information scope must then be assigned.
+Communication link are usually assigned directly to the information scope, which is why the "IT-Grundschutz (target objects)" category is initially assigned to the "Communication link" object type. In the "Information scopes" category, the corresponding information scope must then be assigned.
 
 If objects are entered as "connection participants" in the "Communication link" category, the protection needs of those objects are inherited to the communication link in the protection needs assessment.
 

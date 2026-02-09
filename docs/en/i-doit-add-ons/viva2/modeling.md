@@ -10,13 +10,11 @@ When modeling the information scope, the modules from the IT-Grundschutz Compend
 
 Process modules are assigned to the scope via the "Process modules" category on the information scope.
 
-[![Prozessbausteine](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/zielobjektgruppe-beispiel.png)](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/zielobjektgruppe-beispiel.png){:target="_blank"}
+[![Process modules](../../assets/images/en/i-doit-add-ons/viva2/modeling/process-modules.png)](../../assets/images/en/i-doit-add-ons/viva2/modeling/process-modules.png){:target="_blank"}
 
-All relevant process modules must be assigned to the scope here.
+All relevant process modules must be assigned to the scope here. Modules are assigned to target objects/target object groups via the "Assigned modules" category on the target object/target object group.
 
-Modules are assigned to target objects/target object groups via the "Assigned modules" category on the target object/target object group.
-
-[![Zugeordnete Bausteine](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/zielobjektgruppe-beispiel.png)](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/zielobjektgruppe-beispiel.png){:target="_blank"}
+[![Assigned modules](../../assets/images/en/i-doit-add-ons/viva2/modeling/assigned-modules.png)](../../assets/images/en/i-doit-add-ons/viva2/modeling/assigned-modules.png){:target="_blank"}
 
 All system modules relevant for this target object/target object group must be assigned here. Process modules can also be assigned if this makes sense (for example, different backup concepts for individual objects).
 
@@ -28,4 +26,4 @@ For each used module, responsibilities should be recorded via the "Contact assig
 
 You can define a processing order for modules using the "Order" column.
 
-[<- Back](assessment-of-protection.md){ .md-button } · [IT-Grundschutz-Check ->](it-grundschutz-check.md){ .md-button .md-button--primary }
+[<- Back](assessment-of-protection.md){ .md-button } · [IT-Grundschutz check ->](it-grundschutz-check.md){ .md-button .md-button--primary }
