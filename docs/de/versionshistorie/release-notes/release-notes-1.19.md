@@ -46,7 +46,7 @@ Important update notes
 *   If you want to use the **new icons** for object types after updating to i-doit 1.19, you can activate them manually in your i-doit **administration** under System tools > Cache / Database.
 
 *   The following **Partner Add-ons** need to be updated **before** the i-doit 1.19 update (If these version requirements are not matched, the i-doit update cannot be performed):
-    *   **[ISMS](../../i-doit-add-ons/isms.md)** needs to be updated to version **1.5.2 or higher**
+    *   **[ISMS](../../i-doit-add-ons/isms/index.md)** needs to be updated to version **1.5.2 or higher**
     *   **[VIVA 2](../../i-doit-add-ons/viva2/index.md)** needs to be updated to version **3.2.1 or higher**
     *   **Privacy** needs to be updated to version **1.1 or higher**
     *   **Label** needs to be updated to version **0**.5**or higher**

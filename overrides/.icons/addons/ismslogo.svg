@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="32" height="32" viewBox="0 0 32 32"
+  role="img" aria-label="Schloss-Icon auf gelbem Kreis">
+  <title>Schloss-Icon</title>
+
+  <!-- Hintergrundkreis -->
+  <circle cx="16" cy="16" r="15" fill="#FFD24D" stroke="#111111" stroke-width="2"/>
+
+  <!-- Bügel -->
+  <path d="M12 14 v-3 a4 4 0 0 1 8 0 v3"
+        fill="none" stroke="#111111" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Korpus -->
+  <rect x="10" y="14" width="12" height="10" rx="2" ry="2" fill="#111111"/>
+</svg>

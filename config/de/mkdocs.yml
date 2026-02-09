@@ -65,6 +65,7 @@ plugins:
       strict: false
   - redirects:
       redirect_maps:
+        'i-doit-add-ons/isms.md': 'i-doit-add-ons/isms/index.md'
         'i-doit-add-ons/viva2.md': 'i-doit-add-ons/viva2/index.md'
         'wartung-und-betrieb/lizenz-aktivieren.md': 'wartung-und-betrieb/lizenzierung.md'
         'automatisierung-und-integration/cli/console/index.md': 'automatisierung-und-integration/cli/index.md'
@@ -561,7 +562,7 @@ nav:
       - Dateien hochladen und verknüpfen: anwendungsfaelle/dateien-hochladen-und-verknuepfen.md
       - Dokumentation von Datenbanken: anwendungsfaelle/dokumentation-von-datenbanken.md
       - Dokumentation von Lizenzen: anwendungsfaelle/dokumentation-von-lizenzen.md
-      - Excel-Tabelle mit Daten aus i-doit befüllen (veraltet): anwendungsfaelle/excel-tabelle-mit-daten-aus-i-doit-befuellen.md
+      - Excel-Tabelle mit Daten aus i-doit befüllen: anwendungsfaelle/excel-tabelle-mit-daten-aus-i-doit-befuellen.md
       - Geo-Koordinaten: anwendungsfaelle/geo-koordinaten.md
       - IP Address Management (IPAM): anwendungsfaelle/ip-adress-management.md
       - ISO 27000 mit i-doit: anwendungsfaelle/iso27000-mit-i-doit.md
@@ -655,7 +656,13 @@ nav:
           - Verwendung der Forms API: i-doit-add-ons/forms/verwenden-der-forms-api.md
       - i-diary: i-doit-add-ons/i-diary.md
       - i-doit QR-Code Printer: i-doit-add-ons/i-doit-qr-code-printer.md
-      - ISMS: i-doit-add-ons/isms.md
+      - ISMS:
+          - i-doit-add-ons/isms/index.md
+          - Einrichtung: i-doit-add-ons/isms/configuration.md
+          - Risikoeinschätzung: i-doit-add-ons/isms/risk-assessment.md
+          - Reporting: i-doit-add-ons/isms/reports.md
+          - Objekttypen und Kategorien: i-doit-add-ons/isms/object-types-and-categories.md
+          - Releases: i-doit-add-ons/isms/releases.md
       - JDisc Connector: i-doit-add-ons/jdisc-connector/index.md
       - Maintenance: i-doit-add-ons/maintenance.md
       - Nagios: i-doit-add-ons/nagios.md
