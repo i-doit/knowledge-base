@@ -266,7 +266,6 @@ Available commands:
     license-list                        List of the licenses:  ID, Product, Type (type of license), From (start of license), Expire (expiration date of license), Licensed (max amount of licensed objects), Tenants (max amount of tenants), Environment
     license-remove                      Remove license from i-doit
     list                                List commands
-    logbook-archive                     Archives Logbook entries (Settings are defined in the GUI)
     migrate-uploaded-files              Migrates uploaded files in i-doit <v1.13 to v.1.14>
     notifications-list                  Lists all notification types and notifications for later usage
     notifications-send                  Sends out e-mails for notifications defined in the notification add-on
@@ -298,6 +297,8 @@ idoit
     idoit:feature-manager               [idoit:fm] With this command it will be possible to activate a set of features in i-doit.
     idoit:set-env-var                   With this command it will be possible to set environmental variables for i-doit.
     idoit:set-update-capability         Dis- and enable the i-doit update capability
+logbook
+    logbook:archive                     Archives Logbook entries (Settings are defined in the GUI)
 system
     system:tenant-export                Export your tenant data including uploaded files in a ZIP package.
     system:tenant-import                Import your tenant data including uploaded files from a ZIP package generated from the system:tenant-export command.
