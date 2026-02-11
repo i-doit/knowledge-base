@@ -61,9 +61,15 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 [i-doit_37_hotfix_ID-12304_8d9eb35.zip :material-file-download:](../../assets/downloads/hotfixes/37/i-doit_37_hotfix_ID-12304_8d9eb35.zip){ .md-button .md-button--primary }
 
+### Do load the report list quickly (ID-12336)
+
+[i-doit_37_hotfix_ID-12336_7a5cbf6.zip :material-file-download:](../../assets/downloads/hotfixes/37/i-doit_37_hotfix_ID-12336_7a5cbf6.zip){ .md-button .md-button--primary }
+
 * * *
 
-## Create jdisc:import option to get available devicegroup IDs (JDISC-84)
+## JDisc Connector
+
+### Create jdisc:import option to get available devicegroup IDs (JDISC-84)
 
 [jdisc_1.0.2_hotfix_JDISC-84_07b4534.zip :material-file-download:](../../assets/downloads/hotfixes/jdisc/jdisc_1.0.2_hotfix_JDISC-84_07b4534.zip){ .md-button .md-button--primary }
 
