@@ -71,12 +71,12 @@ Whether older entries are to be archived or not can be configured via **Extras �
 
 [![Archiving and Restoring Older Entries](../assets/images/en/basics/logbook/8-lb.png)](../assets/images/en/basics/logbook/8-lb.png)
 
-Archiving is performed via the [i-doit Console](../i-doit-add-ons/api/index.md). This step can therefore also be automated. A corresponding example of a call and a [list of parameters](../automation-and-integration/cli/index.md) can be found in the corresponding article for the [logbook-archive](../automation-and-integration/cli/index.md) option.
+Archiving is performed via the [i-doit Console](../i-doit-add-ons/api/index.md). This step can therefore also be automated. A corresponding example of a call and a [list of parameters](../automation-and-integration/cli/index.md) can be found in the corresponding article for the [logbook:archive](../automation-and-integration/cli/index.md) option.
 
 Example:
 
 ```shell
-sudo -u www-data php console.php logbook-archive --user admin --password admin --tenantId 1
+sudo -u www-data php console.php logbook:archive --user admin --password admin --tenantId 1
 ```
 
 Archived entries can be restored for further evaluation. This item can be found under **Extras → CMDB → Logbook → Restore**.

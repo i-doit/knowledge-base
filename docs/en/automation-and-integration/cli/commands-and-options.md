@@ -48,7 +48,7 @@ lang: en
 | [license-list](#license-list)                                             | Lists all licenses with all information (ID; product; type; start date; end date; licensed objects; licensed clients; environment) |
 | [license-remove](#license-remove)                                         | Removes licenses from i-doit                                                                                                       |
 | [list](#list)                                                             | Lists all commands                                                                                                                 |
-| [logbook-archive](#logbook-archive)                                       | Archiving logbook entries                                                                                                          |
+| [logbook:archive](#logbookarchive)                                        | Archiving logbook entries                                                                                                          |
 | [migrate-uploaded-files](#migrate-uploaded-files)                         | Migrates uploaded files in i-doit <v1.13 to v.1.14>                                                                                |
 | [notifications-list](#notifications-list)                                 | Lists all notification types and notifications for later usage                                                                     |
 | [notifications-send](#notifications-send)                                 | Send notifications by e-mail (notifications are configured in the GUI)                                                             |
@@ -856,7 +856,7 @@ Deletes a license from i-doit
 sudo -u www-data php console.php license-remove --user admin --password admin --license LicenseID
 ```
 
-### logbook-archive
+### logbook:archive
 
 Archives the logbook entries with a defined age, according to the settings on the i-doit interface.
 
@@ -864,6 +864,7 @@ Archives the logbook entries with a defined age, according to the settings on th
 
 | Parameter (short version) | Parameter (long version) | Description                                                                                  |
 | ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
+|                           | --batch=BATCHSIZE        | Number of entries to be archived per batch [Default: 1000]                                   |
 | -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
 | -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
 | -i                        | --tenantId=TENANT-ID     | Tenant ID of the tenant to be used (default: 1)                                              |
@@ -878,7 +879,7 @@ Archives the logbook entries with a defined age, according to the settings on th
 **Example of use**
 
 ```shell
-sudo -u www-data php console.php logbook-archive --user admin --password admin --tenantId 1
+sudo -u www-data php console.php logbook:archive --user admin --password admin --tenantId 1
 ```
 
 ### migrate-uploaded-files

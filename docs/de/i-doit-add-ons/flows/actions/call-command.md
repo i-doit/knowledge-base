@@ -20,7 +20,7 @@ Die folgenden [console commands](../../../automatisierung-und-integration/cli/in
 | [jdisc:discovery](#jdiscdiscovery)                              | Löst einen JDisc-Discovery-Job aus.                                                                               |
 | [ldap-sync](#ldap-sync)                                         | Synchronisiert Benutzer und Gruppen von LDAP nach i-doit und legt sie als Objekte an.                             |
 | [ldap-syncdn](#ldap-syncdn)                                     | Synchronisiert LDAP-DNs mit den i-doit-Benutzern.                                                                 |
-| [logbook-archive](#logbook-archive)                             | Archiviert die Logbuch-Einträge mit einem definierten Alter gemäß den Einstellungen auf der i-doit-Oberfläche.    |
+| [logbook:archive](#logbookarchive)                              | Archiviert die Logbuch-Einträge mit einem definierten Alter gemäß den Einstellungen auf der i-doit-Oberfläche.    |
 | [notifications-send](#notifications-send)                       | Versendet die auf der i-doit-Oberfläche konfigurierten Benachrichtigungen.                                        |
 | [search-index](#search-index)                                   | Stellt den Suchindex wieder her, indem er gelöscht und neu geschrieben wird.                                      |
 | [sync-dynamic-groups](#sync-dynamic-groups)                     | Synchronisiert die Mitglieder dynamischer Gruppen neu.                                                            |
@@ -102,7 +102,7 @@ Verlängert automatisch die Laufzeit von ungekündigten Verträgen. Ein Anwendun
 | ---------------- | ------------------------------------ |
 | **ldapServerId** | Angabe des LDAP-Servers über die ID. |
 
-## logbook-archive
+## logbook:archive
 
 Archiviert die Logbuch-Einträge mit einem definierten Alter gemäß den Einstellungen auf der i-doit-Oberfläche.
 

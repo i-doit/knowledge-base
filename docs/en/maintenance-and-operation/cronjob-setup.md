@@ -8,7 +8,7 @@ The setup of cronjobs is optional. However, we definitely recommend using this o
 
     The setup of cronjobs is optional. However, we definitely recommend using this option, at best directly after the [installation](../installation/index.md).
 
-Simplify Access of the Controller  
+Simplify Access of the Controller
 ------------------------------------
 
 To simplify the process to access the controller, you can use a simple bash script:
@@ -18,11 +18,11 @@ To simplify the process to access the controller, you can use a simple bash scri
 The script gets the following contents which have to be adapted to your own installation:
 
     #!/bin/bash
-    
+
     ##
     ## i-doit console
     ##
-    
+
     ##
     ## Copyright (C) 2017-18 synetics GmbH, <https://i-doit.com/>
     ##
@@ -39,53 +39,53 @@ The script gets the following contents which have to be adapted to your own inst
     ## You should have received a copy of the GNU Affero General Public License
     ## along with this program. If not, see <http://www.gnu.org/licenses/>.
     ##
-    
+
     set -euo pipefail
-    
+
     ##
     ## Configuration
     ##
-    
+
     INSTANCE_PATH="/var/www/html/"
     APACHE_USER="www-data"
     ARGS="$*"
-    
+
     ##--------------------------------------------------------------------------------------------------
-    
+
     function execute {
         local prefix=""
         local console="php console.php $ARGS"
-    
+
         test "$(whoami)" != "$APACHE_USER" && prefix="sudo -u $APACHE_USER "
-    
+
         eval "${prefix}${console}" || abort "i-doit console exited with non-zero status"
     }
-    
+
     function setup {
         cd "$INSTANCE_PATH" || abort "No i-doit instance found under '${INSTANCE_PATH}'"
     }
-    
+
     function finish {
         exit 0
     }
-    
+
     function abort {
         echo -e "$1"  1>&2
         echo "Operation failed. Please check what is wrong and try again." 1>&2
         exit 1
     }
-    
+
     function log {
         echo -e "$1"
     }
-    
+
     ##--------------------------------------------------------------------------------------------------
-    
+
     if [[ "${BASH_SOURCE[0]}" = "$0" ]]; then
         setup && execute && finish
     fi
 
-Afterwards, the execution of the script is enabled:  
+Afterwards, the execution of the script is enabled:
 
     sudo chmod +x /usr/local/bin/idoit
 
@@ -112,11 +112,11 @@ In the next step we create another script which we can call up both manually and
 This script gets the following contents:
 
     #!/bin/bash
-    
+
     ##
     ## i-doit jobs
     ##
-    
+
     ##
     ## Copyright (C) 2017-18 synetics GmbH, <https://i-doit.com/>
     ##
@@ -133,91 +133,91 @@ This script gets the following contents:
     ## You should have received a copy of the GNU Affero General Public License
     ## along with this program. If not, see <http://www.gnu.org/licenses/>.
     ##
-    
+
     set -euo pipefail
     IFS=$'\n\t'
-    
+
     ##
     ## Configuration
     ##
-    
+
     CONSOLE_BIN="/usr/local/bin/idoit"
     INSTANCE_PATH="/var/www/html/"
     APACHE_USER="www-data"
     IDOIT_USERNAME="admin"
     IDOIT_PASSWORD="admin"
     TENANT_ID="1"
-    
+
     ##--------------------------------------------------------------------------------------------------
-    
+
     function execute {
         local prefix=""
         local suffix="--user $IDOIT_USERNAME --password $IDOIT_PASSWORD --tenantId $TENANT_ID"
-    
+
         test "$(whoami)" != "$APACHE_USER" && prefix="sudo -u $APACHE_USER "
-    
+
         log "Archive i-doit logbook"
-        eval "${prefix}${CONSOLE_BIN} logbook-archive $suffix" || \
-            abort "Command 'logbook-archive' failed"
+        eval "${prefix}${CONSOLE_BIN} logbook:archive $suffix" || \
+            abort "Command 'logbook:archive' failed"
         log ""
-    
+
         log "Cleanup i-doit rights"
         eval "${prefix}${CONSOLE_BIN} auth-cleanup $suffix" || \
             abort "Command 'auth-cleanup' failed"
         log ""
-    
+
         log "Purge unfinished objects"
         eval "${prefix}${CONSOLE_BIN} system-objectcleanup --objectStatus 1 $suffix" || \
             abort "Command 'system-objectcleanup' failed"
         log ""
-    
+
         log "Re-create search index"
         eval "${prefix}${CONSOLE_BIN} search-index $suffix" || \
             abort "Command 'search-index' failed"
-    
+
         log "Send notifications"
         eval "${prefix}${CONSOLE_BIN} notifications-send $suffix" || \
             abort "Command 'notifications-send' failed"
-    
+
         log "Clear caches"
         eval "${prefix}rm -rf ${INSTANCE_PATH}/temp/*" || \
             abort "Unable to clear caches"
-    
+
         log "Clear updates"
         eval "${prefix}rm -rf ${INSTANCE_PATH}/updates/versions/*" || \
             abort "Unable to clear updates"
     }
-    
+
     function setup {
         test -x "$CONSOLE_BIN" || \
             abort "Script '${CONSOLE_BIN}' not found"
-    
+
         test -d "$INSTANCE_PATH" || \
             abort "No i-doit instance found under '${INSTANCE_PATH}'"
     }
-    
+
     function log {
         echo -e "$1"
     }
-    
+
     function finish {
         log "Done. Have fun :-)"
         exit 0
     }
-    
+
     function abort {
         echo -e "$1"  1>&2
         echo "Operation failed. Please check what is wrong and try again." 1>&2
         exit 1
     }
-    
+
     ##--------------------------------------------------------------------------------------------------
-    
+
     if [[ "${BASH_SOURCE[0]}" = "$0" ]]; then
         setup && execute && finish
     fi
 
-Afterwards, the execution of the script is enabled:  
+Afterwards, the execution of the script is enabled:
 
     sudo chmod +x /usr/local/bin/idoit-jobs
 
@@ -225,7 +225,7 @@ From now on, every user can use it:
 
     idoit-jobs
 
-The following tasks are carried out when the script is executed:  
+The following tasks are carried out when the script is executed:
 
 *   File caches in the **temp/** directory are emptied.
 *   [Update packages](../maintenance-and-operation/update.md) which are not required anymore are deleted.
@@ -233,16 +233,16 @@ The following tasks are carried out when the script is executed:
 *   The cache for [user rights](../efficient-documentation/rights-management/index.md) is build up afresh.
 *   ["Unfinished" objects](../basics/life-and-documentation-cycle.md) are deleted irrevocably.
 *   The [search index](../efficient-documentation/search.md) is created freshly.
-*   [Notifications](../evaluation/notifications.md) are sent via e-mail.  
+*   [Notifications](../evaluation/notifications.md) are sent via e-mail.
 
 Automation of Jobs Calls
 ------------------------
 
-### When and how often?  
+### When and how often?
 
 We recommend executing the above mentioned jobs at least once per day. You should ensure that no other interactions are carried out in i-doit during the execution - neither via the web GUI nor through additional scripts or by external applications via the API. Therefore the jobs are usually carried out during the night.
 
-### GNU/Linux  
+### GNU/Linux
 
 Under Linux you can run automated commands on a regular basis. You could use [cron, anacron, crontab](https://de.wikipedia.org/wiki/Cron) or [systemd.timer](https://www.freedesktop.org/software/systemd/man/systemd.timer.html).
 

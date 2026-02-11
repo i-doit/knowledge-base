@@ -34,8 +34,8 @@ set IDOIT_PASSWORD="admin"
 set TENANT_ID="1"
 
 :: Commands
-:: Logbook-Archive: Archives the logbook entries with a predefined age, according to the settings on the i-doit interface.
-C:\ProgramData\i-doit\php\php.exe C:\ProgramData\i-doit\apache-2.4\htdocs\console.php logbook-archive --user %IDOIT_USERNAME% --password %IDOIT_PASSWORD% --tenantId %TENANT_ID%
+:: Logbook:Archive: Archives the logbook entries with a predefined age, according to the settings on the i-doit interface.
+C:\ProgramData\i-doit\php\php.exe C:\ProgramData\i-doit\apache-2.4\htdocs\console.php logbook:archive --user %IDOIT_USERNAME% --password %IDOIT_PASSWORD% --tenantId %TENANT_ID%
 
 :: Search-Index: Renews the search index by deleting and rewriting it.
 C:\ProgramData\i-doit\php\php.exe C:\ProgramData\i-doit\apache-2.4\htdocs\console.php search-index --user %IDOIT_USERNAME% --password %IDOIT_PASSWORD% --tenantId %TENANT_ID%

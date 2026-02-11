@@ -39,7 +39,7 @@ Enter for how long entries in the logbook should be kept before they will be arc
 | Entries older than | Value in Days                     |
 | Destination        | local database<br>remote database |
 
-To archive the logbook, the [logbook-archive](../../automation-and-integration/cli/index.md) CLI command must be executed.
+To archive the logbook, the [logbook:archive](../../automation-and-integration/cli/index.md) CLI command must be executed.
 
 ## Restore
 
