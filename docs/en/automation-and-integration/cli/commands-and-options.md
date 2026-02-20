@@ -1671,6 +1671,3 @@ Import your tenant data from a ZIP package created by the tenant-export command.
 |                           | --ansi<br>--no-ansi                         | Force (or disable --no-ansi) ANSI output                                                                                                                                                                                           |
 | -n                        | --no-interaction                            | Disables all interaction questions of the i-doit Console                                                                                                                                                                           |
 | -v / -vv / -vvv           | --verbose                                   | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level)                                                                                                                                       |
-If set, system.settings.json will be imported and overwrites the current settings of the system
-
-All settings which already exists but are not defined in system.settings.json will stay untouched
