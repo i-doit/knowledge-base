@@ -79,6 +79,7 @@ lang: en
 | [idoit:set-env-var](#idoitset-env-var)                                    | With this command it will be possible to set environmental variables for i-doit.                                                   |
 | [idoit:set-update-capability](#idoitset-update-capability)                | Dis- and enable the i-doit update capability                                                                                       |
 | [system:tenant-export](#systemtenant-export)                              | Export your tenant data including uploaded files in a ZIP package.                                                                 |
+| [system:tenant-import](#systemtenant-import)                              | Import your tenant data including uploaded files from a ZIP package.                                                               |
 
 !!! attention "Configuration file and parameters --config"
     It is possible to pass additional content to the call via a configuration file. This file must be stored in the i-doit directory src/handler/config/. An example in the form of the file "isys\_handler\_ldap.ini" can be found in the directory src/handler/config/examples/.<br>
@@ -1646,3 +1647,30 @@ Export your tenant data including uploaded files in a ZIP package.
 ```shell
 sudo -u www-data php console.php system:tenant-export --user admin --password admin
 ```
+
+### system:tenant-import
+
+Import your tenant data from a ZIP package created by the tenant-export command.
+
+**Options**
+
+| Parameter (short version) | Parameter (long version)                    | Description                                                                                                                                                                                                                        |
+| ------------------------- | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| -f,                       | --file=FILE                                 | Source ZIP file from [system:tenant-export](#systemtenant-export)                                                                                                                                                                  |
+| -d,                       | --tenant-database-name=TENANT-DATABASE-NAME | Tenant database name                                                                                                                                                                                                               |
+| -t,                       | --tenant-title=TENANT-TITLE                 | Tenant name                                                                                                                                                                                                                        |
+|                           | --with-system-settings                      | Merge system settings:<br>If set, `system.settings.json` will be imported and overwrites the current settings of the system<br>All settings which already exists but are not defined in `system.settings.json` will stay untouched |
+|                           | --with-tenant-settings                      | Import tenant settings:<br>If set, `tenant.settings.json` will be imported                                                                                                                                                         |
+|                           | --db-root-user=DB-ROOT-USER                 | Database root user                                                                                                                                                                                                                 |
+|                           | --db-root-pass=DB-ROOT-PASS                 | Database root password                                                                                                                                                                                                             |
+|                           | --db-host=DB-HOST                           | Database host [default: "localhost"]                                                                                                                                                                                               |
+|                           | --db-port=DB-PORT                           | Database port [default: "3306"]                                                                                                                                                                                                    |
+| -h                        | --help                                      | Help message for displaying further information                                                                                                                                                                                    |
+| -q                        | --quiet                                     | Quiet-Mode to deactivate output                                                                                                                                                                                                    |
+| -V                        | --version                                   | Output of the i-doit Console version                                                                                                                                                                                               |
+|                           | --ansi<br>--no-ansi                         | Force (or disable --no-ansi) ANSI output                                                                                                                                                                                           |
+| -n                        | --no-interaction                            | Disables all interaction questions of the i-doit Console                                                                                                                                                                           |
+| -v / -vv / -vvv           | --verbose                                   | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level)                                                                                                                                       |
+If set, system.settings.json will be imported and overwrites the current settings of the system
+
+All settings which already exists but are not defined in system.settings.json will stay untouched
