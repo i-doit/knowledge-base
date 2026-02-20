@@ -65,6 +65,10 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 [i-doit_37_hotfix_ID-12336_7a5cbf6.zip :material-file-download:](../../assets/downloads/hotfixes/37/i-doit_37_hotfix_ID-12336_7a5cbf6.zip){ .md-button .md-button--primary }
 
+### Save emptied Dialog+ multi selection fields (ID-12337)
+
+[i-doit_37_hotfix_ID-12342_5cfdb26.zip :material-file-download:](../../assets/downloads/hotfixes/37/i-doit_37_hotfix_ID-12342_5cfdb26.zip){ .md-button .md-button--primary }
+
 * * *
 
 ## JDisc Connector
