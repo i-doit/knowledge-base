@@ -28,8 +28,8 @@ set IDOIT_PASSWORD="admin"
 set TENANT_ID="1"
 
 :: Auszuführende Befehle
-:: Logbook-Archive: Archiviert die Logbucheinträge mit einem definierten Alter, gemäß den Einstellungen auf der i-doit Oberfläche.
-C:\ProgramData\i-doit\php\php.exe C:\ProgramData\i-doit\apache-2.4\htdocs\console.php logbook-archive --user %IDOIT_USERNAME% --password %IDOIT_PASSWORD% --tenantId %TENANT_ID%
+:: Logbook:Archive: Archiviert die Logbucheinträge mit einem definierten Alter, gemäß den Einstellungen auf der i-doit Oberfläche.
+C:\ProgramData\i-doit\php\php.exe C:\ProgramData\i-doit\apache-2.4\htdocs\console.php logbook:archive --user %IDOIT_USERNAME% --password %IDOIT_PASSWORD% --tenantId %TENANT_ID%
 
 :: Search-Index: Erneuert den Suchindex, indem dieser gelöscht und neu geschrieben wird.
 C:\ProgramData\i-doit\php\php.exe C:\ProgramData\i-doit\apache-2.4\htdocs\console.php search-index --user %IDOIT_USERNAME% --password %IDOIT_PASSWORD% --tenantId %TENANT_ID%

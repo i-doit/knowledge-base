@@ -48,7 +48,7 @@ lang: de
 | [license-list](#license-list)                                             | Listet alle Lizenzen mit allen Informationen auf (ID; Produkt; Typ; Startdatum; Enddatum; lizenzierte Objekte; lizenzierte Mandanten; Umgebung)                            |
 | [license-remove](#license-remove)                                         | Entfernt Lizenzen von i-doit                                                                                                                                               |
 | [list](#list)                                                             | Listet alle console Kommandos auf                                                                                                                                          |
-| [logbook-archive](#logbook-archive)                                       | Logbuch-Einträge archivieren                                                                                                                                               |
+| [logbook:archive](#logbookarchive)                                        | Logbuch-Einträge archivieren                                                                                                                                               |
 | [migrate-uploaded-files](#migrate-uploaded-files)                         | Migriert hochgeladene Dateien von i-doit <v1.13 zu v.1.14>                                                                                                                 |
 | [notifications-list](#notifications-list)                                 | Listet alle [Benachrichtigungen](../../auswertungen/benachrichtigungen.md) auf                                                                                             |
 | [notifications-send](#notifications-send)                                 | Benachrichtigungen per E-Mail versenden (Benachrichtigungen werden in der GUI konfiguriert)                                                                                |
@@ -853,7 +853,7 @@ Löscht eine Lizenz aus i-doit
 sudo -u www-data php console.php license-remove --user admin --password admin --license LicenseID
 ```
 
-### logbook-archive
+### logbook:archive
 
 Archiviert die Logbucheinträge mit einem definierten Alter, gemäß den Einstellungen auf der i-doit Oberfläche.
 
@@ -861,6 +861,7 @@ Archiviert die Logbucheinträge mit einem definierten Alter, gemäß den Einstel
 
 | Parameter (Kurzform) | Parameter (Langform)   | Beschreibung                                                                                     |
 | -------------------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
+|                      | --batch=[BATCHSIZE]    | Anzahl der Einträge, die pro Batch archiviert werden sollen [Standard: 1000]                     |
 | -u                   | --user=[USERNAME]      | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
 | -p                   | --password=[PASSWORD]  | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
 | -i                   | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
@@ -875,7 +876,7 @@ Archiviert die Logbucheinträge mit einem definierten Alter, gemäß den Einstel
 **Beispiel zur Verwendung**
 
 ```shell
-sudo -u www-data php console.php logbook-archive --user admin --password admin --tenantId 1
+sudo -u www-data php console.php logbook:archive --user admin --password admin --tenantId 1
 ```
 
 ### migrate-uploaded-files

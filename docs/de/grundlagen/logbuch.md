@@ -76,7 +76,7 @@ Das Logbuch nimmt neue Einträge aus Dritt-Systemen entgegen, beispielsweise dur
 Beispiel:
 
 ```shell
-    sudo -u www-data php console.php logbook-archive --user admin --password admin --tenantId 1
+    sudo -u www-data php console.php logbook:archive --user admin --password admin --tenantId 1
 ```
 
 Archivierte Einträge lassen sich zur weiteren Auswertung wiederherstellen. Dieser Punkt befindet sich unter **Extras → CMDB → Logbuch → Wiederherstellen**.

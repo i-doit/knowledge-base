@@ -20,7 +20,7 @@ The following [console commands](../../../automation-and-integration/cli/index.m
 | [jdisc:import](#jdiscimport)                                       | Performs a JDisc import to i-doit                                                                  |
 | [ldap-sync](#ldap-sync)                                            | Synchronizes user and groups from LDAP to i-doit and creates them as objects                       |
 | [ldap-syncdn](#ldap-syncdn)                                        | Synchronizes LDAP DNs with the i-doit users                                                        |
-| [logbook-archive](#logbook-archive)                                | Archives the logbook entries with a defined age, according to the settings on the i-doit interface |
+| [logbook:archive](#logbookarchive)                                 | Archives the logbook entries with a defined age, according to the settings on the i-doit interface |
 | [notifications-send](#notifications-send)                          | Sends the notifications configured on the i-doit interface                                         |
 | [search-index](#search-index)                                      | Restores the search index by deleting and rewriting it                                             |
 | [sync-dynamic-groups](#sync-dynamic-groups)                        | Resynchronizes dynamic group members                                                               |
@@ -102,7 +102,7 @@ Automatically extend the runtime of not-cancelled contracts. A Use case can be f
 | ---------------- | ------------------------------------- |
 | **ldapServerId** | Specifying the LDAP server via the ID |
 
-## logbook-archive
+## logbook:archive
 
 Archives the logbook entries with a defined age, according to the settings on the i-doit interface.
 
