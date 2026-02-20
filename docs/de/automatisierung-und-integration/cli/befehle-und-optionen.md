@@ -1664,7 +1664,3 @@ Importieren Sie Ihre Mandantendaten inklusive hochgeladener Dateien aus einem ZI
 |                      | --ansi<br>--no-ansi                         | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                                                                                                                                                                                                                                         |
 | -n                   | --no-interaction                            | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                                                                                                                                                                                                                                  |
 | -v / -vv / -vvv      | --verbose                                   | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level)                                                                                                                                                                                                             |
-
-If set, system.settings.json will be imported and overwrites the current settings of the system
-
-All settings which already exists but are not defined in system.settings.json will stay untouched
