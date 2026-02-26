@@ -6,10 +6,6 @@ status: new
 lang: en
 ---
 
-# JDisc Connector
-
-!!! success "The current version is 1.0.1"
-
 ## Overview
 
 The **JDisc Connector** is an add-on for i-doit that enables automated import of IT objects from a JDisc instance. The integration is based on JDisc's GraphQL interface and allows precise synchronization of devices and their properties into the i-doit CMDB.
