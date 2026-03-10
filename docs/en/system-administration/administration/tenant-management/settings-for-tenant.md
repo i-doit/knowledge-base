@@ -207,9 +207,10 @@ Here you will find tenant related settings. All settings can be expanded using `
 
 ## Notifications
 
-| Option                | Value     |
-| --------------------- | --------- |
-| Skip expired licenses | Yes or No |
+| Option                                   | Value     |
+| ---------------------------------------- | --------- |
+| Skip expired licenses                    | Yes or No |
+| Notify only for exact match of threshold | Yes or No |
 
 ## Installed Add-on related settings
 
