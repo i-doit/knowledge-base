@@ -147,6 +147,7 @@ nav:
       - versionshistorie/index.md
       - Release Notes:
           - versionshistorie/release-notes/index.md
+          - Release Notes 38: versionshistorie/release-notes/release-notes-38.md
           - Release Notes 37: versionshistorie/release-notes/release-notes-37.md
           - Release Notes 36: versionshistorie/release-notes/release-notes-36.md
           - Release Notes 35: versionshistorie/release-notes/release-notes-35.md
@@ -179,6 +180,7 @@ nav:
           - Release Notes 1.7: versionshistorie/release-notes/release-notes-1.7.md
       - Changelogs:
           - versionshistorie/changelogs/index.md
+          - Changelog 38: versionshistorie/changelogs/changelog-38.md
           - Changelog 37: versionshistorie/changelogs/changelog-37.md
           - Changelog 36: versionshistorie/changelogs/changelog-36.md
           - Changelog 35: versionshistorie/changelogs/changelog-35.md
