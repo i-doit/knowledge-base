@@ -9,6 +9,7 @@ search:
 
 Welche Änderungen sind mit welchen Versionen veröffentlicht worden?
 
+-   [Release Notes 38](release-notes-38.md)
 -   [Release Notes 37](release-notes-37.md)
 -   [Release Notes 36](release-notes-36.md)
 -   [Release Notes 35](release-notes-35.md)
