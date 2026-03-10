@@ -205,13 +205,17 @@ OPTIMIZE TABLE isys_search_idx;
 
 Zum Schluss muss eine Neu-Indexing über die i-doit Console oder die i-doit Verwaltung durchgeführt werden (siehe oben).
 
-### Das Limit von 2500 Ergenissen erhöhen
+### Das Limit von 2500 Ergebnissen erhöhen
 
 Wenn Objekte fortlaufend benannt werden z.B. 123456-00001 bis 123456-99999 so können mit normalen Sucheinstellungen nur Objekte bis 123456-2500 gefunden werden.
 Dieses Limit dient der Performance. Um dieses Limit zu erhöhen muss eine Experteneinstellung hinzugefügt werden.
 
-Hier ein Beispiel bei dem das Limit auf 5000 Ergenisse gesetzt wurde.
+Hier ein Beispiel bei dem das Limit auf 5000 Ergebnisse gesetzt wurde.
 
 | Key          | Value | Type        |
 | ------------ | ----- | ----------- |
 | search.limit | 5000  | Tenant-wide |
+
+### Tipps zur Suche
+
+IPv6 Adressen lassen sich auch mit gekürzten Schreibweisen finden. So kann beispielsweise die Adresse "2001:0db8:85a3:0000:0000:8a2e:0370:7334" auch mit "2001:db8:85a3::8a2e:370:7334" gefunden werden. Es ist also nicht notwendig, die vollständige Adresse einzugeben, um das gewünschte Ergebnis zu erhalten.
