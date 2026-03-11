@@ -202,3 +202,11 @@ Here is an example where the limit was set to 5000 results.
 | Key          | Value | Type        |
 | ------------ | ----- | ----------- |
 | search.limit | 5000  | Tenant-wide |
+
+### Tips for Searching
+
+IPv6 addresses can also be found with shortened notations. For example, the address "2001:0db8:85a3:0000:0000:8a2e:0370:7334" can also be found with "2001:db8:85a3::8a2e:370:7334". It is therefore not necessary to enter the full address to get the desired result.
+
+---
+
+It is also possible to search for MAC addresses with colons, without separators, or in blocks of 4. For example, the address "00:1A:2B:3C:4D:5E" can also be found with "001A2B3C4D5E" or "001A.2B3C.4D5E". It is therefore not necessary to enter the separators to get the desired result.

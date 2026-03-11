@@ -23,7 +23,7 @@ Das **ISMS Add-on** für die **i-doit CMDB** ist eine leistungsstarke Erweiterun
 Das ISMS-Add-on setzt eine funktionsfähige i-doit-Installation voraus. Diese Dokumentation bezieht sich, sofern nicht anders angegeben, auf die aktuelle Version des Add-ons.
 
 !!! warning "Das ISMS Add-on verbraucht lizenzpflichtige Objekte"
-    Das ISMS Add-on verwendet etwa **2015** lizenzpflichtige Objekte, siehe [Import](configuration.md#4-maßnahmen-hinzufugen). Stellen Sie sicher, dass Ihre i-doit-Lizenz ausreichend lizenzpflichtige Objekte umfasst, um das Add-on nutzen zu können.
+    Das ISMS Add-on verwendet etwa **2015** lizenzpflichtige Objekte, siehe [Import](configuration.md#4-manahmen-hinzufugen). Stellen Sie sicher, dass Ihre i-doit-Lizenz ausreichend lizenzpflichtige Objekte umfasst, um das Add-on nutzen zu können.
 
 * * *
 

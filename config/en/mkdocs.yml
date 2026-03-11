@@ -83,7 +83,7 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.tilde
   - pymdownx.critic:
-      mode: accept
+      mode: view
   - pymdownx.details
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
@@ -144,6 +144,7 @@ nav:
       - version-history/index.md
       - Release notes:
           - version-history/release-notes/index.md
+          - Release notes 38: version-history/release-notes/release-notes-38.md
           - Release notes 37: version-history/release-notes/release-notes-37.md
           - Release Notes 36: version-history/release-notes/release-notes-36.md
           - Release Notes 35: version-history/release-notes/release-notes-35.md
@@ -176,6 +177,7 @@ nav:
           - Release notes 1.7: version-history/release-notes/release-notes-1.7.md
       - Changelogs:
           - version-history/changelogs/index.md
+          - Changelog 38: version-history/changelogs/changelog-38.md
           - Changelog 37: version-history/changelogs/changelog-37.md
           - Changelog 36: version-history/changelogs/changelog-36.md
           - Changelog 35: version-history/changelogs/changelog-35.md
@@ -501,6 +503,7 @@ nav:
           - i-doit 1.13.2 & 1.14 Login im Admin-Center nicht möglich: system-administration/hotfixes/i-doit-1.13.2-1.14-login-admincenter.md
           - Hotfix archive:
               - system-administration/hotfixes/hotfix-archive/index.md
+              - Version 37: system-administration/hotfixes/hotfix-archive/v37.md
               - Version 36: system-administration/hotfixes/hotfix-archive/v36.md
               - Version 35: system-administration/hotfixes/hotfix-archive/v35.md
               - Version 34: system-administration/hotfixes/hotfix-archive/v34.md

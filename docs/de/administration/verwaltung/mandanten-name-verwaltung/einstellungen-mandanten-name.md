@@ -208,9 +208,10 @@ Hier findest du Einstellungen für den aktuellen Mandanten. Alle Einstellungen l
 
 ## Benachrichtigungen
 
-| Option                            | Wert         |
-| --------------------------------- | ------------ |
-| Abgelaufene Lizenzen überspringen | Ja oder Nein |
+| Option                                                           | Wert         |
+| ---------------------------------------------------------------- | ------------ |
+| Abgelaufene Lizenzen überspringen                                | Ja oder Nein |
+| Nur bei exakter Übereinstimmung des Schwellwerts benachrichtigen | Ja oder Nein |
 
 ## Installed Add-on related settings
 <!-- cSpell:disable -->

@@ -11,7 +11,7 @@ lang: de
 In order to guarantee the operation of all functionalities of i-doit, some requirements must be met by the underlying system.
 
 !!! info "Current version"
-    The requirements shown below apply to the current version of i-doit, in this case **37**. These requirements are adjusted for each major release of i-doit. If the requirements of older versions are needed, the change history of this page can be used.
+    The requirements shown below apply to the current version of i-doit, in this case **38**. These requirements are adjusted for each major release of i-doit. If the requirements of older versions are needed, the change history of this page can be used.
 
 ## Minimum Requirements
 
@@ -33,11 +33,11 @@ For Windows, the [general Windows system requirements](https://learn.microsoft.c
 
 -   GNU/Linux in the 64bit variant (amd64) or Windows Server 2022 in the 64bit variant (amd64)
 -   Apache Webserver **2.4**
--   MariaDB 10.5 (deprecated), **10.6** (recommended), 10.11, 11.4 or MySQL 5.7, 8.0 (recommended) or 8.4 LTS
--   PHP 8.2, **8.3** (recommended) or 8.4.
+-   MariaDB 10.6, **10.11** (recommended), 11.4, 11.8 or MySQL 5.7 (deprecated), 8.0, **8.4** (recommended)
+-   PHP 8.2, 8.3 or **8.4** (recommended).
 -   PHP extensions: bcmath, ctype, curl, fileinfo, gd, imagick, json, ldap, mbstring, memcached, mysqli, mysqlnd, pgsql, session, soap, xml, xmlwriter, zip
 
-We recommend the usage of **Apache Webserver 2.4, PHP 8.3 and MariaDB 10.6**.
+We recommend the usage of **Apache Webserver 2.4, PHP 8.4 and MariaDB 10.11**.
 
 !!! success "Reference configuration (GNU/Linux)"
     The following system parameters comprise a configuration reference that is tested and recommended by us and guarantees high performance when used with up to 500,000 objects and a high number of simultaneously working users.
@@ -55,8 +55,8 @@ We recommend the usage of **Apache Webserver 2.4, PHP 8.3 and MariaDB 10.6**.
     ### LAMP Stack
 
     -   Apache 2.4.x (default package)
-    -   MariaDB 10.6.x (default package)
-    -   PHP 8.3.x (default package)
+    -   MariaDB 10.11.x (default package)
+    -   PHP 8.4.x (default package)
 
     !!! note "Note"
         Because i-doit is a database application, it intensively uses the hard drive. Since the I/O throughput strongly determines the performance, a fast hard drive is recommended.<br>
@@ -74,19 +74,56 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
 
 ## Compatibility matrix
 
-### Versions 30 - 37
+### Versions 30 - 38
+
+=== "38"
+
+    | **i-doit Version**          | 38                                                           |
+    | --------------------------- | ------------------------------------------------------------ |
+    | **Release**                 | 2026-03                                                      |
+    | **Apache Webserver**        | 2.4                                                          |
+    | **PHP**                     | {++8.2 (deprecated)++}<br>8.3<br>{++==8.4== (recommended)++} |
+    | **MySQL**                   | {++5.7 (deprecated)++}<br>8.0<br>{++==8.4== (recommended)++} |
+    | **MariaDB**                 | 10.6<br>{++==10.11== (recommended)++}<br>11.4<br>{++11.8++}  |
+    | **Update can be skipped?**  |                                                              |
+    | **Requires i-doit Version** | v35                                                          |
+
+    | Add-on                  | Incompatible below version |
+    | ----------------------- | -------------------------- |
+    | **analytics**           | 1.5                        |
+    | **api**                 | 2.3                        |
+    | **cabling**             | 1.5                        |
+    | **document**            | 1.10                       |
+    | **donamic_disposal**    | 1.2.9                      |
+    | **donamic_inheritance** | 1.3.7                      |
+    | **events**              | 1.3                        |
+    | **floorplan**           | 1.9                        |
+    | **iso27001**            | 1.6.3                      |
+    | **isms**                | 1.5.2                      |
+    | **maintenance**         | 1.2.2                      |
+    | **nagios**              | 1.3                        |
+    | **packager**            | 1.2.1                      |
+    | **privacy**             | 2.1.1                      |
+    | **relocate_ci**         | 1.5                        |
+    | **scanit**              | 2.0.1                      |
+    | **swapci**              | 1.6                        |
+    | **viva2**               | 3.2.5                      |
+    | **workflow**            | 1.5                        |
+    | **sectornord_snagview** | 1.2.5                      |
+    | **shd_smview_connect**  | 2025.1.1.2751              |
+    | **synetics_flows**      | 1.2.0                      |
 
 === "37"
 
-    | **i-doit Version**                   | 37                                                           |
-    | ------------------------------------ | ------------------------------------------------------------ |
-    | **Release**                          | 2025-12                                                      |
-    | **Apache Webserver**                 | 2.4                                                          |
-    | **PHP**                              | 8.2<br>==8.3== (recommended)<br>8.4                          |
-    | **MySQL**                            | 5.7<br>==8.0== (recommended)<br>{++8.4 LTS++}                |
-    | **MariaDB**                          | 10.5 (deprecated)<br>==10.6== (recommended)<br>10.11<br>11.4 |
-    | **Update kann übersprungen werden?** |                                                              |
-    | **Setzt i-doit Version voraus**      | v35                                                          |
+    | **i-doit Version**          | 37                                                           |
+    | --------------------------- | ------------------------------------------------------------ |
+    | **Release**                 | 2025-12                                                      |
+    | **Apache Webserver**        | 2.4                                                          |
+    | **PHP**                     | 8.2<br>==8.3== (recommended)<br>8.4                          |
+    | **MySQL**                   | 5.7<br>==8.0== (recommended)<br>{++8.4 LTS++}                |
+    | **MariaDB**                 | 10.5 (deprecated)<br>==10.6== (recommended)<br>10.11<br>11.4 |
+    | **Update can be skipped?**  |                                                              |
+    | **Requires i-doit Version** | v35                                                          |
 
     | Add-on                  | Incompatible below version |
     | ----------------------- | -------------------------- |
