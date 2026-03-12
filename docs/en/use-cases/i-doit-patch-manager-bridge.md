@@ -1,7 +1,7 @@
 ---
 title: i-doit - Patch Manager bridge
 description: This example shows how to create a bridge between i-doit and Patch Manager on the example of servers.
-icon:
+icon: patch-manager
 lang: en
 ---
 
@@ -34,7 +34,7 @@ We utilize the possibility to automatically generate access links in i-doit to o
 
     [![example-link](../assets/images/en/use-cases/i-doit-patch-manager-bridge/6.png)](../assets/images/en/use-cases/i-doit-patch-manager-bridge/6.png){:target="_blank"}
 
-    !!! success "HOW THIS WORKS: If the user later presses the link, the Patch Manager launcher is opened with this parameter. The value of the URL parameter for Patch Manager can be either the equipment label, or the value of any attribute associated with the equipment. Patch Manager opens up the object that matches the value.<br>The value must be unique (eg. if there are two instances of equipment named `Server12345`, then the value will be skipped, and the link will just default to the top level location overview)."
+    !!! success "HOW THIS WORKS: If the user later presses the link, the Patch Manager launcher is opened with this parameter. The value of the URL parameter for Patch Manager can be either the equipment label, or the value of any attribute associated with the equipment. Patch Manager opens up the object that matches the value.<br>**The value must be unique** (eg. if there are two instances of equipment named `Server12345`, then the value will be skipped, and the link will just default to the top level location overview)."
 
 6. Save the "Access" category entry<br>
     [![Save-Access-Entry](../assets/images/en/use-cases/i-doit-patch-manager-bridge/7.png)](../assets/images/en/use-cases/i-doit-patch-manager-bridge/7.png){:target="_blank"}
@@ -47,8 +47,10 @@ We utilize the possibility to automatically generate access links in i-doit to o
 
 9.  You’re done with the i-doit side! Every time you create a new server, the default template with the access category is applied to the object and you can easily click on the Patch Manager access link to switch between the tools.<br>
     [![Use-Link](../assets/images/en/use-cases/i-doit-patch-manager-bridge/10.png)](../assets/images/en/use-cases/i-doit-patch-manager-bridge/10.png){:target="_blank"}
-
 </div>
+
+!!! bug "In order for the URL in i-doit to be built correctly, a hotfix needs to be applied<br>
+    The hotfix can be found [HERE](../system-administration/hotfixes/index.md)."
 
 ## URL Router preparation in i-doit
 
@@ -67,9 +69,9 @@ These steps describe the configuration of i-doit as an external application in P
 2. in the "External Applications Overview", add a new "External Application"<br>
     [![Create-External-Application](../assets/images/en/use-cases/i-doit-patch-manager-bridge/12.png)](../assets/images/en/use-cases/i-doit-patch-manager-bridge/12.png){:target="_blank"}
 
-3. Enter "i-doit" as "Name", "browser" as "Executable" and enter your i-doit URL with the following format: `http(s)://my-i-doit.server.com(:myport)/open-object/[Label]`<br>
+3. Enter "i-doit" as "Name", "browser" as "Executable" and enter your i-doit URL with the following format: `http(s)://my-i-doit.server.com(:myport)/open-object/[Label|url]`<br>
 
-    Example: `https://demo.i-doit.com/open-object/[Label]`
+    Example: `https://demo.i-doit.com/open-object/[Label|url]`
 
     !!! success "HOW THIS WORKS: Patch Manager creates a link with the objects label as a third party application entry. Once you click on that link, the default browser is opened up and navigates to yor i-doit instance. i-doit interprets the Patch Manager label and matches it against the object name. If it finds a unique entry, it opens up the specific object.<br><br>Optional advanced usages: "i-doit URL-router" also provides the following URL routes<br>`/open-object-by-ip/<ip address>`<br>`/open-object-by-inventory/<inventory no>`<br>You can use them for example with the Patch Manager `[ipaddress]` and `[inventory]` variables if you created custom fields for them accordingly."
 
