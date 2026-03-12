@@ -27,10 +27,10 @@ We utilize the possibility to automatically generate access links in i-doit to o
 4. Name the new entry for example "Patch manager" and give it a custom entry type if you want to.<br>
     [![Create-Access-Entry](../assets/images/en/use-cases/i-doit-patch-manager-bridge/4.png)](../assets/images/en/use-cases/i-doit-patch-manager-bridge/4.png){:target="_blank"}
 
-5. Enter the URL in the format `http(s)://mypatchmanager.server.com(:myport)/patchmanager.plp?initial-overview=%objectname%` whereas the variable `%objectname%` can be replaced by any of the available i-doit placeholder variables. You can get a list of available variables by clicking on the info button next to the URL field.<br>
+5. Enter the URL in the format `http(s)://mypatchmanager.server.com(:myport)/patchmanager.plp?initial-overview=%objectname|encode%` whereas the variable `%objectname%` can be replaced by any of the available i-doit placeholder variables. You can get a list of available variables by clicking on the info button next to the URL field.<br>
     [![Create-Access-Entry](../assets/images/en/use-cases/i-doit-patch-manager-bridge/5.png)](../assets/images/en/use-cases/i-doit-patch-manager-bridge/5.png){:target="_blank"}
 
-    Example: `https://mypatchmanager.com:8080/patchmanager.plp?initial-overview=%objectname%`
+    Example: `https://mypatchmanager.com:8080/patchmanager.plp?initial-overview=%objectname|encode%`
 
     [![example-link](../assets/images/en/use-cases/i-doit-patch-manager-bridge/6.png)](../assets/images/en/use-cases/i-doit-patch-manager-bridge/6.png){:target="_blank"}
 

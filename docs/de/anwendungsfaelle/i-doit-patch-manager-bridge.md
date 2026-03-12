@@ -27,10 +27,10 @@ Wir nutzen die Möglichkeit, automatisch Zugriffslinks in i-doit zu generieren, 
 4. Benenne das neue Eintrag z.B. "Patch manager" und gib ihm einen benutzerdefinierten Typ, wenn du willst.<br>
     [![Create-Access-Entry](../assets/images/de/anwendungsfaelle/i-doit-patch-manager-bridge/4.png)](../assets/images/de/anwendungsfaelle/i-doit-patch-manager-bridge/4.png){:target="_blank"}
 
-5. Gib die URL im Format `http(s)://mypatchmanager.server.com(:myport)/patchmanager.plp?initial-overview=%objectname%` ein, wobei die Variable `%objectname%` durch eine der verfügbaren i-doit Platzhaltervariablen ersetzt werden kann. Eine Liste der verfügbaren Variablen erhältst du, indem du auf den Info-Button neben dem URL-Feld klickst.<br>
+5. Gib die URL im Format `http(s)://mypatchmanager.server.com(:myport)/patchmanager.plp?initial-overview=%objectname|encode%` ein, wobei die Variable `%objectname%` durch eine der verfügbaren i-doit Platzhaltervariablen ersetzt werden kann. Eine Liste der verfügbaren Variablen erhältst du, indem du auf den Info-Button neben dem URL-Feld klickst.<br>
     [![Create-Access-Entry](../assets/images/de/anwendungsfaelle/i-doit-patch-manager-bridge/5.png)](../assets/images/de/anwendungsfaelle/i-doit-patch-manager-bridge/5.png){:target="_blank"}
 
-    Beispiel: `https://mypatchmanager.com:8080/patchmanager.plp?initial-overview=%objectname%`
+    Beispiel: `https://mypatchmanager.com:8080/patchmanager.plp?initial-overview=%objectname|encode%`
 
     [![example-link](../assets/images/de/anwendungsfaelle/i-doit-patch-manager-bridge/6.png)](../assets/images/de/anwendungsfaelle/i-doit-patch-manager-bridge/6.png){:target="_blank"}
 
