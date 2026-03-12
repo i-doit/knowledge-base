@@ -49,7 +49,7 @@ Wir nutzen die Möglichkeit, automatisch Zugriffslinks in i-doit zu generieren, 
     [![Use-Link](../assets/images/de/anwendungsfaelle/i-doit-patch-manager-bridge/10.png)](../assets/images/de/anwendungsfaelle/i-doit-patch-manager-bridge/10.png){:target="_blank"}
 </div>
 
-!!! bug "Damit die URL in i-doit korrekt aufgebaut wird, muss ein Hotfix verwendet werden<br>Der Hotfix ist [HIER](../administration/hotfixes/index.md) zu finden."
+!!! bug "Damit die URL in i-doit korrekt aufgebaut wird, muss ein Hotfix verwendet werden. Der Hotfix ist [HIER](../administration/hotfixes/index.md) zu finden."
 
 ## URL-Router Add-on installieren
 

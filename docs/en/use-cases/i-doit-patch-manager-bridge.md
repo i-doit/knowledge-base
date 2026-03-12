@@ -49,7 +49,7 @@ We utilize the possibility to automatically generate access links in i-doit to o
     [![Use-Link](../assets/images/en/use-cases/i-doit-patch-manager-bridge/10.png)](../assets/images/en/use-cases/i-doit-patch-manager-bridge/10.png){:target="_blank"}
 </div>
 
-!!! bug "In order for the URL in i-doit to be built correctly, a hotfix needs to be applied<br>The hotfix can be found [HERE](../system-administration/hotfixes/index.md)."
+!!! bug "In order for the URL in i-doit to be built correctly, a hotfix needs to be applied. The hotfix can be found [HERE](../system-administration/hotfixes/index.md)."
 
 ## URL Router preparation in i-doit
 
