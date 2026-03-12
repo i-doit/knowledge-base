@@ -48,7 +48,10 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 * * *
 
 ## i-doit core
-load:](../../assets/downloads/hotfixes/jdisc/jdisc_1.0.2_hotfix_JDISC-84_07b4534.zip){ .md-button .md-button--primary }
+
+### Load category folders (ID-12359)
+
+[i-doit_38_hotfix_ID-12359_2328dd6.zip :material-file-download:](../../assets/downloads/hotfixes/38/i-doit_38_hotfix_ID-12359_2328dd6.zip){ .md-button .md-button--primary }
 
 * * *
 

@@ -49,6 +49,10 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 ## i-doit core
 
+### Load category folders (ID-12359)
+
+[i-doit_38_hotfix_ID-12359_2328dd6.zip :material-file-download:](../../assets/downloads/hotfixes/38/i-doit_38_hotfix_ID-12359_2328dd6.zip){ .md-button .md-button--primary }
+
 * * *
 
 ## Documents Add-on
