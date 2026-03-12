@@ -49,12 +49,11 @@ We utilize the possibility to automatically generate access links in i-doit to o
     [![Use-Link](../assets/images/en/use-cases/i-doit-patch-manager-bridge/10.png)](../assets/images/en/use-cases/i-doit-patch-manager-bridge/10.png){:target="_blank"}
 </div>
 
-!!! bug "In order for the URL in i-doit to be built correctly, a hotfix needs to be applied<br>
-    The hotfix can be found [HERE](../system-administration/hotfixes/index.md)."
+!!! bug "In order for the URL in i-doit to be built correctly, a hotfix needs to be applied<br>The hotfix can be found [HERE](../system-administration/hotfixes/index.md)."
 
 ## URL Router preparation in i-doit
 
-In order to use the tool bridge, you need to install the free **"i-doit URL-router"** add-on in i-doit. See [Add-on Installation](../i-doit-add-ons/index.md#installation) for details on how to install an i-doit add-on
+In order to use the tool bridge, you need to install the free i-doit **"URL-router"** add-on in i-doit. See [Add-on Installation](../i-doit-add-ons/index.md#installation) for details on how to install an i-doit add-on
 
 !!! note "This add-on is needed to provide the `/open-object/objectname` navigation in i-doit. Without this add-on, the Patch Manager created links end up in the nirvana."
 

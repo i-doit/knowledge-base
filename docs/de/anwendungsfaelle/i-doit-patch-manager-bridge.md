@@ -49,12 +49,11 @@ Wir nutzen die Möglichkeit, automatisch Zugriffslinks in i-doit zu generieren, 
     [![Use-Link](../assets/images/de/anwendungsfaelle/i-doit-patch-manager-bridge/10.png)](../assets/images/de/anwendungsfaelle/i-doit-patch-manager-bridge/10.png){:target="_blank"}
 </div>
 
-!!! bug "Damit die URL in i-doit korrekt aufgebaut wird, muss ein Hotfix verwendet werden<br>
-    Der Hotfix ist [HIER](../administration/hotfixes/index.md) zu finden."
+!!! bug "Damit die URL in i-doit korrekt aufgebaut wird, muss ein Hotfix verwendet werden<br>Der Hotfix ist [HIER](../administration/hotfixes/index.md) zu finden."
 
 ## URL-Router Add-on installieren
 
-Damit die Bride funktioniert, musst du das kostenlose **"URL-router"** Add-on in i-doit installieren. Siehe [Add-on Installation](../i-doit-add-ons/index.md#installation) für Details zur Installation eines i-doit Add-ons.
+Damit die Bride funktioniert, musst du das kostenlose i-doit **"URL-router"** Add-on in i-doit installieren. Siehe [Add-on Installation](../i-doit-add-ons/index.md#installation) für Details zur Installation eines i-doit Add-ons.
 
 !!! note "Dieses Add-on wird benötigt, um die Navigation `/open-object/objectname` in i-doit bereitzustellen. Ohne dieses Add-on landen die vom Patch Manager erstellten Links im Nirwana.
 
