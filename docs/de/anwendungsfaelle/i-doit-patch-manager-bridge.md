@@ -1,7 +1,7 @@
 ---
 title: i-doit - Patch Manager bridge
 description: Dieses Beispiel zeigt, wie man eine Brücke zwischen i-doit und Patch Manager auf der Basis von Servern erstellt.
-icon:
+icon: patch-manager
 lang: de
 ---
 
