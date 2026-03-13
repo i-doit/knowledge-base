@@ -56,6 +56,7 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 ### Enable URL encoded variables in category Access (ID-12361)
 
 [i-doit_38_hotfix_ID-12361.zip :material-file-download:](../../assets/downloads/hotfixes/38/i-doit_38_hotfix_ID-12361.zip){ .md-button .md-button--primary }
+
 * * *
 
 ## Documents Add-on
