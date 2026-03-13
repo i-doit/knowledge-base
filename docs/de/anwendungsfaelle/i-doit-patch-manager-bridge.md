@@ -55,7 +55,7 @@ Wir nutzen die Möglichkeit, automatisch Zugriffslinks in i-doit zu generieren, 
 
 Damit die Bride funktioniert, musst du das kostenlose i-doit **"URL-router"** Add-on in i-doit installieren. Siehe [Add-on Installation](../i-doit-add-ons/index.md#installation) für Details zur Installation eines i-doit Add-ons.
 
-!!! note "Dieses Add-on wird benötigt, um die Navigation `/open-object/objectname` in i-doit bereitzustellen. Ohne dieses Add-on landen die vom Patch Manager erstellten Links im Nirwana.
+!!! note "Dieses Add-on wird benötigt, um die Navigation `/open-object/objectname` in i-doit bereitzustellen. Ohne dieses Add-on landen die vom Patch Manager erstellten Links im Nirwana."
 
 ## Patch Manager configuration
 
