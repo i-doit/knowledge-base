@@ -1,6 +1,6 @@
 ---
-title: Ubuntu 24.04.1 GNU/Linux
-description: i-doit installation auf Ubuntu 24.04.1
+title: Ubuntu 24.04 GNU/Linux
+description: i-doit installation auf Ubuntu 24.04
 icon: material/ubuntu
 #status:
 lang: de
@@ -12,7 +12,7 @@ In this article we explain in just a few steps which packages need to be install
 
 The general [system requirements](../../system-requirements.md) apply.
 
-When you want to use [Ubuntu Linux](https://www.ubuntu.com/) as operating system, the server version **24.04.1 LTS "Noble Numcat"** is recommended. In order to find out which version is used you can carry out the following command:
+When you want to use [Ubuntu Linux](https://www.ubuntu.com/) as operating system, the server version **24.04.4 LTS "Noble Numcat"** is recommended. In order to find out which version is used you can carry out the following command:
 
 ```shell
 cat /etc/os-release
@@ -36,8 +36,8 @@ When you want to use the official package repositories, use the following instru
 *   the caching server **memcached**
 
 ```shell
-apt update
-apt install apache2 libapache2-mod-fcgid mariadb-client mariadb-server memcached unzip sudo moreutils php php-{bcmath,cli,common,curl,fpm,gd,ldap,mbstring,memcached,mysql,opcache,pgsql,soap,xml,zip}
+sudo apt update
+sudo apt install apache2 libapache2-mod-fcgid mariadb-client mariadb-server memcached unzip sudo moreutils php-{bcmath,cli,common,curl,fpm,gd,ldap,mbstring,memcached,mysql,opcache,pgsql,soap,xml,zip}
 ```
 
 ## Configuration
@@ -46,36 +46,6 @@ The installed packages for Apache web server, PHP and MariaDB already supply con
 It is recommended to save changed settings in separate files instead of adjusting the already existing configuration files. Otherwise, any differences to the existing files would be pointed out or even overwritten during each package upgrade. The settings of the default configuration are supplemented or overwritten by user-defined settings.
 
 ### PHP-FPM
-
-First, the old configuration is deactivated by renaming it:
-
-```sh
-sudo mv /etc/php/8.3/fpm/pool.d/www.conf{,.bak}
-```
-
-<!-- cSpell:disable -->
-```sh
-sudo nano /etc/php/8.3/fpm/pool.d/i-doit.conf
-```
-
-!!! example "This file will contain the following content specified by us. For more information about the parameters, see [PHP.net](https://www.php.net/manual/en/install.fpm.configuration.php)"
-
-```ini
-[i-doit]
-listen = /var/run/php/php8.3-fpm.sock
-user = www-data
-group = www-data
-listen.owner = www-data
-listen.group = www-data
-pm = dynamic
-pm.max_children = 50
-pm.start_servers = 5
-pm.min_spare_servers = 5
-pm.max_spare_servers = 35
-security.limit_extensions = .php
-```
-<!-- cSpell:enable -->
-### PHP
 
 First, a new file is created and filled with the necessary settings:
 
@@ -132,7 +102,7 @@ sudo nano /etc/apache2/sites-available/i-doit.conf
 
 !!! example "This file contains the following content specified by us. For more information on the parameters, see [httpd.apache.org](https://httpd.apache.org/docs/2.4/de/mod/core.html)"
 
-```shell
+```conf
 <VirtualHost *:80>
         ServerAdmin i-doit@example.net
 
@@ -318,7 +288,7 @@ sudo nano /etc/mysql/mariadb.conf.d/99-i-doit.cnf
 
 !!! example "This file contains the new configuration settings. For **optimal performance, these settings should be adjusted to the (virtual) hardware**. For optimal settings, please refer to [mariadb.com](https://mariadb.com/kb/en/optimization-and-tuning/)."
 
-```shell
+```ini
 [mysqld]
 # This is the number 1 setting to look at for any performance optimization
 # It is where the data and indexes are cached: having it as large as possible will
@@ -358,7 +328,7 @@ sql-mode = ""
 Finally, MariaDB is restarted:
 
 ```shell
-sudo systemctl restart mysql.service
+sudo systemctl restart mysql
 ```
 
 ## Next Step

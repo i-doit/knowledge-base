@@ -15,7 +15,7 @@ Welche Pakete zu installieren und zu konfigurieren sind, erklären wir in wenige
 
 Es gelten die allgemeinen [Systemvoraussetzungen](../../systemvoraussetzungen.md).
 
-Dieser Artikel bezieht sich auf **Ubuntu 24.04.1 "Noble Numcat"**. Um zu bestimmen, welche Ubuntu Version eingesetzt wird, kann auf der Konsole dieser Befehl ausgeführt werden:
+Dieser Artikel bezieht sich auf **Ubuntu 24.04.4 "Noble Numcat"**. Um zu bestimmen, welche Ubuntu Version eingesetzt wird, kann auf der Konsole dieser Befehl ausgeführt werden:
 
 ```shell
 cat /etc/os-release
@@ -41,8 +41,8 @@ Die Standard-Repositories von Ubuntu GNU/Linux bringen bereits alle nötigen Pak
 zu installieren:
 
 ```shell
-apt update
-apt install apache2 libapache2-mod-fcgid mariadb-client mariadb-server memcached unzip sudo moreutils php php-{bcmath,cli,common,curl,fpm,gd,ldap,mbstring,memcached,mysql,opcache,pgsql,soap,xml,zip}
+sudo apt update
+sudo apt install apache2 libapache2-mod-fcgid mariadb-client mariadb-server memcached unzip sudo moreutils php-{bcmath,cli,common,curl,fpm,gd,ldap,mbstring,memcached,mysql,opcache,pgsql,soap,xml,zip}
 ```
 
 ## Konfiguration
@@ -50,37 +50,6 @@ apt install apache2 libapache2-mod-fcgid mariadb-client mariadb-server memcached
 Die installierten Pakete für Apache Webserver, PHP und MariaDB bringen bereits Konfigurationsdateien mit. Es empfiehlt sich, abweichende Einstellungen in gesonderten Dateien zu speichern, anstatt die vorhandenen Konfigurationsdateien anzupassen. Bei jedem Paket-Upgrade würden die abweichenden Einstellungen bemängelt oder überschrieben werden. Die Einstellungen der Standardkonfiguration werden durch die benutzerdefinierten ergänzt bzw. überschrieben.
 
 ### PHP-FPM
-
-Zunächst wird die alte Konfiguration, durch umbenennen, deaktiviert:
-
-```sh
-sudo mv /etc/php/8.3/fpm/pool.d/www.conf{,.bak}
-```
-
-und anschließend eine neue Datei erstellt und mit den Einstellungen befüllt:
-<!-- cSpell:disable -->
-```sh
-sudo nano /etc/php/8.3/fpm/pool.d/i-doit.conf
-```
-
-!!! example "Diese Datei erhält folgende von uns vorgegebenen Inhalt. Für mehr Informationen zu den Parametern, schauen Sie auf [PHP.net](https://www.php.net/manual/en/install.fpm.configuration.php) vorbei"
-
-```ini
-[i-doit]
-listen = /var/run/php/php8.3-fpm.sock
-user = www-data
-group = www-data
-listen.owner = www-data
-listen.group = www-data
-pm = dynamic
-pm.max_children = 50
-pm.start_servers = 5
-pm.min_spare_servers = 5
-pm.max_spare_servers = 35
-security.limit_extensions = .php
-```
-<!-- cSpell:enable -->
-### PHP
 
 Zunächst wird eine neue Datei erstellt und mit den nötigen Einstellungen befüllt:
 
@@ -120,6 +89,12 @@ Das `memory_limit` muss bei bedarf z.B. bei sehr großen Reports oder umfangreic
 Der Wert (in Sekunden) von **session.gc_maxlifetime** sollte größer oder gleich dem **Session Timeout** in den [Systemeinstellungen](../systemeinstellungen.md) von i-doit sein.
 Der Parameter **date.timezone** sollte auf die lokale Zeitzone anpasst werden (siehe [Liste unterstützter Zeitzonen](http://php.net/manual/de/timezones.php)).
 
+Anschließend werden die benötigten PHP-Module aktiviert und der Apache Webserver neu gestartet:
+
+```shell
+sudo phpenmod i-doit memcached
+```
+
 ### Apache HTTP Server
 
 Der standard Virtual Host wird deaktiviert und ein neuer angelegt:
@@ -130,8 +105,8 @@ sudo nano /etc/apache2/sites-available/i-doit.conf
 ```
 
 !!! example "Diese Datei erhält folgende von uns vorgegebenen Inhalt. Für mehr Informationen zu den Parametern, schauen Sie auf [httpd.apache.org](https://httpd.apache.org/docs/2.4/de/mod/core.html) vorbei"
-
-```shell
+<!-- cSpell:disable -->
+```conf
 <VirtualHost *:80>
         ServerAdmin i-doit@example.net
 
@@ -356,7 +331,7 @@ sql-mode = ""
 Abschließend wird MariaDB gestartet:
 
 ```shell
-sudo systemctl restart mysql.service
+sudo systemctl restart mysql
 ```
 
 ## Nächster Schritt
