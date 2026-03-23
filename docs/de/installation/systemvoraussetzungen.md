@@ -197,7 +197,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **MySQL**                            | 5.7<br>8.0                                                                              |
     | **MariaDB**                          | {--10.4 (veraltet)--}<br>10.5 (veraltet)<br>==10.6== (empfohlen)<br>10.11<br>{++11.4++} |
     | **Update kann übersprungen werden?** | ==Nein==                                                                                |
-    | **Setzt i-doit Version voraus**      | v29,30,31,32,33 oder 34                                                                 |
+    | **Setzt i-doit Version voraus**      | v31                                                                 |
 
     | Add-on              | Inkompatibel unter Version |
     | ------------------- | -------------------------- |
@@ -233,7 +233,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **MySQL**                            | 5.7<br>8.0                                                          |
     | **MariaDB**                          | 10.4 (veraltet)<br>10.5 (veraltet)<br>==10.6== (empfohlen)<br>10.11 |
     | **Update kann übersprungen werden?** | Ja                                                                  |
-    | **Setzt i-doit Version voraus**      | v29,30,31,32 oder 33                                                |
+    | **Setzt i-doit Version voraus**      | v31                                                |
 
     | Add-on              | Inkompatibel unter Version |
     | ------------------- | -------------------------- |
@@ -261,7 +261,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **MySQL**                            | 5.7<br>8.0                                                          |
     | **MariaDB**                          | 10.4 (veraltet)<br>10.5 (veraltet)<br>==10.6== (empfohlen)<br>10.11 |
     | **Update kann übersprungen werden?** | Ja                                                                  |
-    | **Setzt i-doit Version voraus**      | v29,30,31 oder 32                                                   |
+    | **Setzt i-doit Version voraus**      | v31                                                  |
 
 === "32"
 
@@ -273,7 +273,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **MySQL**                            | 5.7<br>8.0                                                          |
     | **MariaDB**                          | 10.4 (veraltet)<br>10.5 (veraltet)<br>==10.6== (empfohlen)<br>10.11 |
     | **Update kann übersprungen werden?** | Ja                                                                  |
-    | **Setzt i-doit Version voraus**      | v29,30 oder 31                                                      |
+    | **Setzt i-doit Version voraus**      | v31                                                      |
 
 === "31"
 
