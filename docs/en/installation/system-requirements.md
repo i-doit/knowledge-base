@@ -197,7 +197,7 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
     | **MySQL**                      | 5.7<br>8.0                                                                                    |
     | **MariaDB**                    | {--10.4 (deprecated)--}<br>10.5 (deprecated)<br>==10.6== (recommended)<br>10.11<br>{++11.4++} |
     | **Can the update be skipped?** | ==No==                                                                                        |
-    | **Requires i-doit Version**    | v29,30,31,32 or 34                                                                            |
+    | **Requires i-doit Version**    | v31                                                                            |
 
     | Add-on              | Incompatible below version |
     | ------------------- | -------------------------- |
@@ -233,7 +233,7 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
     | **MySQL**                      | 5.7<br>8.0                                                                |
     | **MariaDB**                    | 10.4 (deprecated)<br>10.5 (deprecated)<br>==10.6== (recommended)<br>10.11 |
     | **Can the update be skipped?** | Yes                                                                       |
-    | **Requires i-doit Version**    | v29,30,31,32 or 33                                                        |
+    | **Requires i-doit Version**    | v31                                                        |
 
     | Add-on              | Incompatible below version |
     | ------------------- | -------------------------- |
@@ -261,7 +261,7 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
     | **MySQL**                      | 5.7<br>8.0                                                                |
     | **MariaDB**                    | 10.4 (deprecated)<br>10.5 (deprecated)<br>==10.6== (recommended)<br>10.11 |
     | **Can the update be skipped?** | Yes                                                                       |
-    | **Requires i-doit Version**    | v29,30,31 or 32                                                           |
+    | **Requires i-doit Version**    | v31                                                          |
 
 === "32"
 
@@ -273,7 +273,7 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
     | **MySQL**                      | 5.7<br>8.0                                                                |
     | **MariaDB**                    | 10.4 (deprecated)<br>10.5 (deprecated)<br>==10.6== (recommended)<br>10.11 |
     | **Can the update be skipped?** | Yes, requires v29                                                         |
-    | **Requires i-doit Version**    | v29,30 or 31                                                              |
+    | **Requires i-doit Version**    | v31                                                              |
 
 === "31"
 
@@ -285,7 +285,7 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
     | **MySQL**                      | 5.7<br>8.0                                                                |
     | **MariaDB**                    | 10.4 (deprecated)<br>10.5 (deprecated)<br>==10.6== (recommended)<br>10.11 |
     | **Can the update be skipped?** | Yes                                                                       |
-    | **Requires i-doit Version**    | v29 or 30                                                                 |
+    | **Requires i-doit Version**    | v29                                                                 |
 
 === "30"
 
@@ -311,7 +311,7 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
     | **MySQL**                      | 5.7<br>8.0                                                     |
     | **MariaDB**                    | 10.2<br>10.3  <br>10.4  <br>10.5 <br>==10.6== (recommended)    |
     | **Can the update be skipped?** | ==No==                                                         |
-    | **Requires i-doit Version**    | v20,21,22,23,24,25,26 or 28                                    |
+    | **Requires i-doit Version**    | v20                                    |
 
 === "28"
 
@@ -335,7 +335,7 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
     | **MySQL**                      | 5.7<br>8.0                                                  |
     | **MariaDB**                    | 10.2<br>10.3  <br>10.4  <br>10.5 <br>==10.6== (recommended) |
     | **Can the update be skipped?** | Yes                                                         |
-    | **Requires i-doit Version**    | v20,21,22,23,24,25 or 26                                    |
+    | **Requires i-doit Version**    | v20                                    |
 
 === "26"
 
@@ -347,7 +347,7 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
     | **MySQL**                      | 5.7<br>8.0                                                  |
     | **MariaDB**                    | 10.2<br>10.3  <br>10.4  <br>10.5 <br>==10.6== (recommended) |
     | **Can the update be skipped?** | Yes                                                         |
-    | **Requires i-doit Version**    | v20,21,22,23,24 or 25                                       |
+    | **Requires i-doit Version**    | v20                                     |
 
 === "25"
 
@@ -364,7 +364,7 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
     | **SLES**                       | 15 SP1<br> 15 SP 2<br> SP 3                             |
     | **XAMPP for Windows²**         | 2022                                                    |
     | **Can the update be skipped?** | Yes                                                     |
-    | **Requires i-doit Version**    | v20,21,22,23,24 or 25                                   |
+    | **Requires i-doit Version**    | v20                                 |
 
 === "24"
 
@@ -381,7 +381,7 @@ A Web browser is needed on the client side in order to access the Web GUI of i-d
     | **SLES**                       | 15 SP1<br> 15 SP 2<br> SP 3                      |
     | **XAMPP for Windows²**         | 2016<br> 2019                                    |
     | **Can the update be skipped?** | Yes                                              |
-    | **Requires i-doit Version**    | v20,21,22,23,24 or 25                            |
+    | **Requires i-doit Version**    | v20                           |
 
 === "23, 22, 21, 20"
 

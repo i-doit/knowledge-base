@@ -197,7 +197,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **MySQL**                            | 5.7<br>8.0                                                                              |
     | **MariaDB**                          | {--10.4 (veraltet)--}<br>10.5 (veraltet)<br>==10.6== (empfohlen)<br>10.11<br>{++11.4++} |
     | **Update kann übersprungen werden?** | ==Nein==                                                                                |
-    | **Setzt i-doit Version voraus**      | v29,30,31,32,33 oder 34                                                                 |
+    | **Setzt i-doit Version voraus**      | v31                                                                 |
 
     | Add-on              | Inkompatibel unter Version |
     | ------------------- | -------------------------- |
@@ -233,7 +233,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **MySQL**                            | 5.7<br>8.0                                                          |
     | **MariaDB**                          | 10.4 (veraltet)<br>10.5 (veraltet)<br>==10.6== (empfohlen)<br>10.11 |
     | **Update kann übersprungen werden?** | Ja                                                                  |
-    | **Setzt i-doit Version voraus**      | v29,30,31,32 oder 33                                                |
+    | **Setzt i-doit Version voraus**      | v31                                                |
 
     | Add-on              | Inkompatibel unter Version |
     | ------------------- | -------------------------- |
@@ -261,7 +261,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **MySQL**                            | 5.7<br>8.0                                                          |
     | **MariaDB**                          | 10.4 (veraltet)<br>10.5 (veraltet)<br>==10.6== (empfohlen)<br>10.11 |
     | **Update kann übersprungen werden?** | Ja                                                                  |
-    | **Setzt i-doit Version voraus**      | v29,30,31 oder 32                                                   |
+    | **Setzt i-doit Version voraus**      | v31                                                  |
 
 === "32"
 
@@ -273,7 +273,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **MySQL**                            | 5.7<br>8.0                                                          |
     | **MariaDB**                          | 10.4 (veraltet)<br>10.5 (veraltet)<br>==10.6== (empfohlen)<br>10.11 |
     | **Update kann übersprungen werden?** | Ja                                                                  |
-    | **Setzt i-doit Version voraus**      | v29,30 oder 31                                                      |
+    | **Setzt i-doit Version voraus**      | v31                                                      |
 
 === "31"
 
@@ -285,7 +285,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **MySQL**                            | 5.7<br>8.0                                                          |
     | **MariaDB**                          | 10.4 (veraltet)<br>10.5 (veraltet)<br>==10.6== (empfohlen)<br>10.11 |
     | **Update kann übersprungen werden?** | Ja                                                                  |
-    | **Setzt i-doit Version voraus**      | v29 oder 30                                                         |
+    | **Setzt i-doit Version voraus**      | v29                                                         |
 
 === "30"
 
@@ -312,7 +312,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **MySQL**                            | 5.7<br>8.0                                                 |
     | **MariaDB**                          | 10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (empfohlen) |
     | **Update kann übersprungen werden?** | ==Nein==                                                   |
-    | **Setzt i-doit Version voraus**      | v20,21,22,23,24,25,26,27 oder 28                           |
+    | **Setzt i-doit Version voraus**      | v20                           |
 
 === "28"
 
@@ -324,7 +324,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **MySQL**                            | 5.7<br>8.0                                                 |
     | **MariaDB**                          | 10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (empfohlen) |
     | **Update kann übersprungen werden?** | Ja                                                         |
-    | **Setzt i-doit Version voraus**      | v20,21,22,23,24,25,26 oder 27                              |
+    | **Setzt i-doit Version voraus**      | v20                           |
 
 === "27"
 
@@ -336,7 +336,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **MySQL**                            | 5.7 <br>8.0                                                |
     | **MariaDB**                          | 10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (empfohlen) |
     | **Update kann übersprungen werden?** | Ja                                                         |
-    | **Setzt i-doit Version voraus**      | v20,21,22,23,24,25 oder 26                                 |
+    | **Setzt i-doit Version voraus**      | v20                                 |
 
 === "26"
 
@@ -348,7 +348,7 @@ Auf dem Client wird ein Webbrowser benötigt, um auf die Web GUI von i-doit zugr
     | **MySQL**                            | 5.7<br>8.0                                                 |
     | **MariaDB**                          | 10.2 <br>10.3  <br>10.4  <br>10.5 <br>==10.6== (empfohlen) |
     | **Update kann übersprungen werden?** | Ja                                                         |
-    | **Setzt i-doit Version voraus**      | v20,21,22,23,24 oder 25                                    |
+    | **Setzt i-doit Version voraus**      | v20                                    |
 
 === "25"
 
