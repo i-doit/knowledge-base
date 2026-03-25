@@ -1,7 +1,7 @@
 ---
 title: Erweiterte ldap-sync Konfiguration
 description: Anleitung zur Konfiguration einer LDAPS Verbindung mit i-doit für Debian
-icon: material/debian
+icon: octicons/person-add-24
 lang: de
 ---
 
@@ -162,8 +162,19 @@ import_rooms=true
 attributes[office]=physicalDeliveryOfficeName
 ```
 
-!!! note "Bug"
-    Aktuell muss das AAttribut in Kleinbuchstaben geschrieben werden `physicaldeliveryofficename`
+* * *
+
+### Die Anrede setzen lassen
+
+Um die Anrede beim Import setzen zu lassen, muss die Option `attributes[salutation]=` in der .INI Datei gesetzt werden. In diesem Beispiel ist es das Attribut `displayNamePrintable` aus dem Active Directory verwendet um die Anrede zu setzen. Die Anrede wird dann automatisch gesetzt, wenn die Synchronisierung durchgeführt wird. Es können natürlich auch andere Attribute verwendet werden, solange diese im AD vorhanden sind.
+
+Der Wert des Attributs `displayNamePrintable` könnte z.B. "Herr","Mr", "Mr." oder "Frau", "Mrs.", "Mrs", "Ms.", "Ms", "Miss" sein. Diese Werte können in der [Verwaltung](../../administration/verwaltung/mandanten-name-verwaltung/einstellungen-mandanten-name.md#ldap) unter [Mandanten-Name] Verwaltung > Einstellungen für [Mandanten-Name] > LDAP Konfiguratiert werden.
+
+``` ini
+attributes[salutation]=displayNamePrintable
+```
+
+Diese Einstellung wurde im Beispiel der kompletten .ini Datei am Ende des Artikels mit aufgenommen.
 
 * * *
 
@@ -335,6 +346,7 @@ attributes[zip_code]=postalCode
 attributes[function]=title
 attributes[service_designation]=title
 attributes[pager]=pager
+attributes[salutation]=displayNamePrintable
 
 ;Category extension for persons. Only has a effect when activated
 attributes[custom_1]=objectSid

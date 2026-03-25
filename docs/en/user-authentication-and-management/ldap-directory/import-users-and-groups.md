@@ -105,6 +105,20 @@ For example, if the users differ by having two objectClass attributes (e.g. pers
 
 * * *
 
+### Set the salutation
+
+To have the salutation set during import, the option `attributes[salutation]=displayNamePrintable` must be set in the .INI file. In this example, the attribute `displayNamePrintable` from Active Directory is used to set the salutation. The salutation is then automatically set when the synchronization is performed. Of course, other attributes can also be used as long as they are present in AD.
+
+The attribute `displayNamePrintable` could have values such as "Herr","Mr", "Mr." or "Frau", "Mrs.", "Mrs", "Ms.", "Ms", "Miss". These values can be configured in the [Administration](../../system-administration/administration/tenant-management/settings-for-tenant.md#ldap) at [Tenant Name] Administration > Settings for [Tenant Name] > LDAP.
+
+``` ini
+attributes[salutation]=displayNamePrintable
+```
+
+This setting has been included in the example of the complete .ini file at the end of the article.
+
+* * *
+
 ## Which other attributes can be imported via ldap.ini
 
 -   The post [ldap.ini Configuration](../../automation-and-integration/cli/index.md#ldap-sync) should be known.
@@ -155,9 +169,6 @@ Rooms are created automatically, but without a location.
 import_rooms=true
 attributes[office]=physicalDeliveryOfficeName
 ```
-
-!!! note "Bug"
-    Actually you will need to write this AD Attribute in lowercase `physicaldeliveryofficename`
 
 * * *
 
