@@ -156,8 +156,8 @@ Dieses Script bekommt folgenden Inhalt:
         test "$(whoami)" != "$APACHE_USER" && prefix="sudo -u $APACHE_USER "
 
         log "Archive i-doit logbook"
-        eval "${prefix}${CONSOLE_BIN} logbook-archive $suffix" || \
-            abort "Command 'logbook-archive' failed"
+        eval "${prefix}${CONSOLE_BIN} logbook:archive $suffix" || \
+            abort "Command 'logbook:archive' failed"
         log ""
 
         log "Cleanup i-doit rights"

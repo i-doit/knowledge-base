@@ -266,7 +266,6 @@ Available commands:
     license-list                        Liste der Lizenzen: ID, Produkt, Typ (Lizenztyp), Von (Lizenzbeginn), Ablaufen (Ablaufdatum der Lizenz), Lizenziert (max. Anzahl lizenzierter Objekte), Mandanten (max. Anzahl Mandanten)
     license-remove                      Lizenz aus i-doit entfernen
     list                                Befehle auflisten
-    logbook-archive                     Archiviert Logbuch-Einträge (Einstellungen werden in der GUI definiert)
     migrate-uploaded-files              Migriert hochgeladene Dateien in i-doit <v1.13 zu v.1.14>
     notifications-list                  Listet alle Benachrichtigungstypen und Benachrichtigungen zur späteren Verwendung auf
     notifications-send                  Versendet E-Mails für Benachrichtigungen, die im Benachrichtigungs Add-on definiert sind
@@ -298,6 +297,8 @@ idoit
     idoit:feature-manager               [idoit:fm] Mit diesem Befehl wird es möglich sein, eine Reihe von Features in i-doit zu aktivieren.
     idoit:set-env-var                   Mit diesem Befehl wird es möglich sein, Umgebungsvariablen für i-doit zu setzen.
     idoit:set-update-capability         Die i-doit-Update-Fähigkeit de- und aktivieren
+logbook
+    logbook:archive                     Archiviert Logbuch-Einträge (Einstellungen werden in der GUI definiert)
 system
     system:tenant-export                Exportieren Sie Ihre Mandantendaten einschließlich hochgeladener Dateien in ein ZIP-Paket.
     system:tenant-import                Importieren Sie Ihre Mandantendaten einschließlich hochgeladener Dateien aus einem ZIP-Paket, das mit dem Befehl system:tenant-export generiert wurde.

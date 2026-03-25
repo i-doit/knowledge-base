@@ -8,6 +8,7 @@ lang: en
 
 Here we find the archive of old hotfix pages.
 
+-   [Version 37](v37.md)
 -   [Version 36](v36.md)
 -   [Version 35](v35.md)
 -   [Version 34](v34.md)

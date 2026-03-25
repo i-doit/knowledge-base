@@ -63,6 +63,7 @@ plugins:
       strict: false
   - redirects:
       redirect_maps:
+        'i-doit-add-ons/isms.md': 'i-doit-add-ons/isms/index.md'
         'maintenance-and-operation/activate-license.md': 'maintenance-and-operation/licensing.md'
         'automation-and-integration/cli/console/options-and-parameters-cli.md': 'automation-and-integration/cli/index.md'
         'automation-and-integration/cli/console/commands-and-options.md': 'automation-and-integration/cli/index.md'
@@ -82,7 +83,7 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.tilde
   - pymdownx.critic:
-      mode: accept
+      mode: view
   - pymdownx.details
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
@@ -143,6 +144,7 @@ nav:
       - version-history/index.md
       - Release notes:
           - version-history/release-notes/index.md
+          - Release notes 38: version-history/release-notes/release-notes-38.md
           - Release notes 37: version-history/release-notes/release-notes-37.md
           - Release Notes 36: version-history/release-notes/release-notes-36.md
           - Release Notes 35: version-history/release-notes/release-notes-35.md
@@ -175,6 +177,7 @@ nav:
           - Release notes 1.7: version-history/release-notes/release-notes-1.7.md
       - Changelogs:
           - version-history/changelogs/index.md
+          - Changelog 38: version-history/changelogs/changelog-38.md
           - Changelog 37: version-history/changelogs/changelog-37.md
           - Changelog 36: version-history/changelogs/changelog-36.md
           - Changelog 35: version-history/changelogs/changelog-35.md
@@ -500,6 +503,7 @@ nav:
           - i-doit 1.13.2 & 1.14 Login im Admin-Center nicht möglich: system-administration/hotfixes/i-doit-1.13.2-1.14-login-admincenter.md
           - Hotfix archive:
               - system-administration/hotfixes/hotfix-archive/index.md
+              - Version 37: system-administration/hotfixes/hotfix-archive/v37.md
               - Version 36: system-administration/hotfixes/hotfix-archive/v36.md
               - Version 35: system-administration/hotfixes/hotfix-archive/v35.md
               - Version 34: system-administration/hotfixes/hotfix-archive/v34.md
@@ -524,6 +528,7 @@ nav:
       - Documentation of databases: use-cases/documentation-of-databases.md
       - Documentation of licenses: use-cases/documentation-of-licenses.md
       - Geo coordinates: use-cases/geo-coordinates.md
+      - i-doit - Patch Manager bridge: use-cases/i-doit-patch-manager-bridge.md
       - IP address management (IPAM): use-cases/ip-adress-management.md
       - Location-based authorization: use-cases/location-bases-authorization.md
       - Locations: use-cases/locations.md
@@ -624,7 +629,13 @@ nav:
           - i-diary Determine the author: i-doit-add-ons/i-diary/determine-the-author.md
           - i-diary Determine the host: i-doit-add-ons/i-diary/determine-the-host.md
       - i-doit QR-Code Printer: i-doit-add-ons/i-doit-qr-code-printer.md
-      - ISMS: i-doit-add-ons/isms.md
+      - ISMS:
+          - i-doit-add-ons/isms/index.md
+          - Configuration: i-doit-add-ons/isms/configuration.md
+          - Risk Management: i-doit-add-ons/isms/risk-assessment.md
+          - Reports: i-doit-add-ons/isms/reports.md
+          - Object types and categories: i-doit-add-ons/isms/object-types-and-categories.md
+          - Releases: i-doit-add-ons/isms/releases.md
       - JDisc Connector: i-doit-add-ons/jdisc-connector/index.md
       - Maintenance: i-doit-add-ons/maintenance.md
       - Nagios: i-doit-add-ons/nagios.md
@@ -635,6 +646,7 @@ nav:
           - i-doit-add-ons/sm-view-connect/index.md
           - Telekom-Adapter: i-doit-add-ons/sm-view-connect/telekom-adapter.md
           - Baramundi-Adapter: i-doit-add-ons/sm-view-connect/baramundi-adapter.md
+      - URL-Router: i-doit-add-ons/url-router.md
       - VIVA:
           - i-doit-add-ons/viva/index.md
           - Introduction to VIVA: i-doit-add-ons/viva/introduction-to-viva.md
@@ -647,7 +659,18 @@ nav:
           - Object category VIVA: i-doit-add-ons/viva/object-category-viva.md
           - VIVA-Widget: i-doit-add-ons/viva/viva-widget.md
           - Workflow with VIVA: i-doit-add-ons/viva/workflow-with-viva.md
-      - VIVA2: i-doit-add-ons/viva2.md
+      - VIVA2 (IT-Grundschutz):
+          - i-doit-add-ons/viva2/index.md
+          - Installation and Setup: i-doit-add-ons/viva2/setup.md
+          - IT-Grundschutz-Profile: i-doit-add-ons/viva2/it-grundschutz-profiles.md
+          - Object types and categories: i-doit-add-ons/viva2/objecttypes-categories.md
+          - Structural analysis: i-doit-add-ons/viva2/structural-analysis.md
+          - Protection needs assessment: i-doit-add-ons/viva2/assessment-of-protection.md
+          - Modeling the information scope: i-doit-add-ons/viva2/modeling.md
+          - IT-Grundschutz check: i-doit-add-ons/viva2/it-grundschutz-check.md
+          - Reports: i-doit-add-ons/viva2/reports.md
+          - Migration from VIVA to VIVA 2: i-doit-add-ons/viva2/migration.md
+          - Changelog: i-doit-add-ons/viva2/changelog.md
       - Workflow: i-doit-add-ons/workflow.md
       - Rights Documentation: i-doit-add-ons/rights-documentation.md
   - i-doit cloud:

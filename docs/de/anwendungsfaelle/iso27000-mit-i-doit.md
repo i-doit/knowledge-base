@@ -1,10 +1,8 @@
 # ISO 27000 mit i-doit
 
 !!! attention "Neues Add-on "ISMS""
-
     Der Inhalt dieses Artikels ist **veraltet** und wird zukünftig **gelöscht**.
-
-    Stattdessen steht das **neue Add-on [ISMS (beta)](../i-doit-add-ons/isms.md)** zur Verfügung, um ein Information Security Management System (ISMS) nach ISO 27001 aufzubauen.
+    Stattdessen steht das **neue Add-on [ISMS (beta)](../i-doit-add-ons/isms/index.md)** zur Verfügung, um ein Information Security Management System (ISMS) nach ISO 27001 aufzubauen.
 
 In Deutschland beschäftigen sich dieser Tage die Energieversorgungsunternehmen (EVU) umfangreich mit den Anforderungen, die die Bundesnetzagentur (BNetzA) ihnen im Rahmen des sogenannten [IT-Sicherheitskatalogs](https://www.bsi.bund.de/grundschutz/) diktiert. Das von der Bundesregierung initiierte [IT-Sicherheitsgesetz](https://www.secupedia.info/wiki/IT-Sicherheitsgesetz) regelt die Informationssicherheit von [kritischen Infrastrukturen](https://www.kritis.bund.de/SubSites/Kritis/DE/Einfuehrung/einfuehrung_node.html), wozu EVU in der Regel zählen. Durch dieses Gesetz wird ihnen vorgeschrieben, geeignete Maßnahmen zu ergreifen, um sich vor Gefahren zu schützen, die ihre (IT-)Infrastrukturen bedrohen. Um die identifizierten Risiken zu minimieren, wird auf Mechanismen zurückgegriffen, die sich seit vielen Jahren bei zahlreichen KMU und Konzernen etabliert haben: Die Rede ist von der Einführung eines Information Security Management System (ISMS). Um eine Standardisierung eines ISMS bemüht sind Organisationen wie die ISO/IEC, die DIN und das BSI. International weit verbreitet ist die Norm-Familie [ISO/IEC 27000](https://de.wikipedia.org/wiki/ISO/IEC_27000-Reihe) (ISO27k), die die wesentlichen Aspekte berührt und darüber hinaus Normen beinhaltet, die sich speziell mit den Anforderungen von EVU beschäftigen. Sinnvolle Maßnahmen sind beispielsweise in [ISO/IEC 27002](https://de.wikipedia.org/wiki/ISO/IEC_27002) und ISO/IEC TR 27019 (deutsche Übersetzung: DIN SPEC 27009) beschrieben.
 

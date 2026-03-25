@@ -207,17 +207,18 @@ Here you will find tenant related settings. All settings can be expanded using `
 
 ## Notifications
 
-| Option                | Value     |
-| --------------------- | --------- |
-| Skip expired licenses | Yes or No |
+| Option                                   | Value     |
+| ---------------------------------------- | --------- |
+| Skip expired licenses                    | Yes or No |
+| Notify only for exact match of threshold | Yes or No |
 
 ## Installed Add-on related settings
 
 | Option                                                                                                                          | Value                                                                                                                           |
 | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| [ISMS](../../../i-doit-add-ons/isms.md) Filter report views with location based rights                                          | Yes or No                                                                                                                       |
-| [ISMS](../../../i-doit-add-ons/isms.md) Show risk flag                                                                          | Yes or No                                                                                                                       |
-| [ISMS](../../../i-doit-add-ons/isms.md) Show risk title                                                                         | Yes or No                                                                                                                       |
+| [ISMS](../../../i-doit-add-ons/isms/index.md) Filter report views with location based rights                                    | Yes or No                                                                                                                       |
+| [ISMS](../../../i-doit-add-ons/isms/index.md) Show risk flag                                                                    | Yes or No                                                                                                                       |
+| [ISMS](../../../i-doit-add-ons/isms/index.md) Show risk title                                                                   | Yes or No                                                                                                                       |
 | [Documents](../../../i-doit-add-ons/documents/index.md) Comment revisions                                                       | Yes or No                                                                                                                       |
 | [Documents](../../../i-doit-add-ons/documents/index.md) Cache generated documents                                               | Yes or No                                                                                                                       |
 | [Maintenance](../../../i-doit-add-ons/maintenance.md) Get email addresses from                                                  | Resolve contact groups and notify each person individually<br>Simply use the selected contacts without resolving contact groups |

@@ -49,9 +49,21 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 ## i-doit core
 
-### Use the unique identifier to match persons via LDAP sync when it is set (ID-11944)
+### Load category folders (ID-12359)
 
-[i-doit_37_hotfix_ID-11944_bc4eddf.zip :material-file-download:](../../assets/downloads/hotfixes/37/i-doit_37_hotfix_ID-11944_bc4eddf.zip){ .md-button .md-button--primary }
+[i-doit_38_hotfix_ID-12359_2328dd6.zip :material-file-download:](../../assets/downloads/hotfixes/38/i-doit_38_hotfix_ID-12359_2328dd6.zip){ .md-button .md-button--primary }
+
+### Enable URL encoded variables in category Access (ID-12361)
+
+[i-doit_38_hotfix_ID-12361.zip :material-file-download:](../../assets/downloads/hotfixes/38/i-doit_38_hotfix_ID-12361.zip){ .md-button .md-button--primary }
+
+### Prevent creation of orphaned relation when duplicating object (ID-12367)
+
+[i-doit_35-38_hotfix_ID-12367_01bc42c.zip :material-file-download:](../../assets/downloads/hotfixes/38/i-doit_35-38_hotfix_ID-12367_01bc42c.zip){ .md-button .md-button--primary }
+
+### Fix file list for old import files with special characters (ID-12376)
+
+[i-doit_38_hotfix_ID-12376_4fd97c7.zip :material-file-download:](../../assets/downloads/hotfixes/38/i-doit_35-38_hotfix_ID-12367_01bc42c.zip){ .md-button .md-button--primary }
 
 * * *
 

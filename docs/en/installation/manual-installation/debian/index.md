@@ -1,6 +1,6 @@
 ---
-title: Debian 12 GNU/Linux
-description: i-doit installation on Debian 12
+title: Debian 13 GNU/Linux
+description: i-doit installation on Debian 13
 icon: material/debian
 status:
 lang: en
@@ -17,7 +17,7 @@ In this article we explain in just a few steps which packages need to be install
 
 The general [system requirements](../../system-requirements.md) apply.
 
-This article refers to [**Debian GNU/Linux 12 "bookworm"**](https://www.debian.org/index.en.html). In order to find out which Debian version is used you can carry out the following command:
+This article refers to [**Debian GNU/Linux 13 "trixie"**](https://www.debian.org/index.en.html). In order to find out which Debian version is used you can carry out the following command:
 
 ```shell
 cat /etc/debian_version
@@ -36,8 +36,8 @@ uname -m
 The default package repositories of Debian GNU/Linux already supply the necessary packages to install:
 
 -   the **Apache** web server 2.4
--   the script language **PHP** 8.2
--   the database management system **MariaDB** 10.11 and
+-   the script language **PHP** 8.4
+-   the database management system **MariaDB** 11.8 and
 -   the caching server **memcached**
 
 ```shell
@@ -54,7 +54,7 @@ The installed packages for Apache web server, PHP and MariaDB already supply con
 First of all, a new file is created and filled with the required settings:
 
 ```shell
-sudo nano /etc/php/8.2/mods-available/i-doit.ini
+sudo nano /etc/php/8.4/mods-available/i-doit.ini
 ```
 
 !!! example "This file contains the following content specified by us. For more information about the parameters, have a look at [PHP.net](https://www.php.net/manual/de/ini.core.php)"
@@ -104,30 +104,170 @@ sudo nano /etc/apache2/sites-available/i-doit.conf
 ```
 
 !!! example "This file contains the following content specified by us. For more information about the parameters, see [httpd.apache.org](https://httpd.apache.org/docs/2.4/en/mod/core.html)"
-
+<!-- cSpell:disable -->
 ```shell
 <VirtualHost *:80>
         ServerAdmin i-doit@example.net
 
         DocumentRoot /var/www/html/
-        <Directory /var/www/html/>
-                AllowOverride All
-                Require all granted
-        </Directory>
+DirectoryIndex index.php
+DocumentRoot /var/www/html
 
-        LogLevel warn
-        ErrorLog ${APACHE_LOG_DIR}/error.log
-        CustomLog ${APACHE_LOG_DIR}/access.log combined
+    <Directory /var/www/html>
+        ## See https://httpd.apache.org/docs/2.2/mod/core.html#allowoverride
+        AllowOverride None
+
+        ## Apache Web server configuration file for i-doit
+        ##
+        ## This file requires:
+        ##
+        ## - Apache HTTPD >= 2.4 with enabled modules:
+        ##   - rewrite
+        ##   - expires
+        ##   - headers
+        ##   - authz_core
+        ##
+        ## For performance and security reasons we put these settings
+        ## directly into the VirtualHost configuration and explicitly set
+        ## "AllowOverride None". After each i-doit update check if the .htaccess file, in the i-doit directory,
+        ## has changed and add the changes in the VirtualHost configuration.
+        ##
+        ## See the i-doit Knowledge Base for more details:
+        ## <https://kb.i-doit.com/>
+
+        ## Disable directory indexes:
+        Options -Indexes +SymLinksIfOwnerMatch
+
+        <IfModule mod_authz_core.c>
+            RewriteCond %{REQUEST_METHOD}  =GET
+            RewriteRule "^$" "/index.php"
+
+            ## Deny access to meta files:
+            <Files "*.yml">
+                Require all denied
+            </Files>
+
+            ## Deny access to hidden files:
+            <FilesMatch "^\.">
+                Require all denied
+            </FilesMatch>
+
+            ## Deny access to bash scripts:
+            <FilesMatch "^(controller|.*\.sh)$">
+                Require all denied
+            </FilesMatch>
+
+            ## Deny access to all PHP files…
+            <Files "*.php">
+                Require all denied
+            </Files>
+
+            ## Deny access to wrongly created config backup files like ...inc.php.0123123 instead of ...inc.012341.php
+            <FilesMatch "\.php\.\d+$">
+                Require all denied
+            </FilesMatch>
+
+            ## …except some PHP files in root directory:
+            <FilesMatch "^(index\.php|controller\.php|proxy\.php)$">
+                <IfModule mod_auth_kerb.c>
+                    Require valid-user
+                </IfModule>
+                <IfModule !mod_auth_kerb.c>
+                    Require all granted
+                </IfModule>
+            </FilesMatch>
+
+            ## …except some PHP files in src/:
+            <Files "jsonrpc.php">
+                Require all granted
+            </Files>
+
+            ## …except some PHP files in src/tools/php/:
+            <FilesMatch "^(rt\.php|barcode_window\.php|barcode\.php)$">
+                Require all granted
+            </FilesMatch>
+
+            ## …except some PHP files in src/tools/php/qr/:
+            <FilesMatch "^(qr\.php|qr_img\.php)$">
+                Require all granted
+            </FilesMatch>
+
+            ## …except some PHP files in src/tools/js/:
+            <FilesMatch "^js\.php$">
+                Require all granted
+            </FilesMatch>
+        </IfModule>
+
+        ## Deny access to some directories:
+        <IfModule mod_alias.c>
+            RedirectMatch 403 /imports/.*$
+            RedirectMatch 403 /log/.*$
+            RedirectMatch 403 /temp/.*(?<!\.(css|xsl))$
+            RedirectMatch 403 /upload/files/.*$
+            RedirectMatch 403 /upload/images/.*$
+            RedirectMatch 403 /vendor/.*$
+        </IfModule>
+
+        ## Cache static files:
+        <IfModule mod_expires.c>
+            ExpiresActive On
+            # A2592000 = 30 days
+            ExpiresByType image/svg+xml A2592000
+            ExpiresByType image/gif A2592000
+            ExpiresByType image/png A2592000
+            ExpiresByType image/jpg A2592000
+            ExpiresByType image/jpeg A2592000
+            ExpiresByType image/ico A2592000
+            ExpiresByType text/css A2592000
+            ExpiresByType text/javascript A2592000
+            ExpiresByType image/x-icon "access 1 year"
+            ExpiresDefault "access 2 week"
+
+            <IfModule mod_headers.c>
+                Header append Cache-Control "public"
+            </IfModule>
+        </IfModule>
+
+        ## Pretty URLs:
+        <IfModule mod_rewrite.c>
+            RewriteEngine On
+            RewriteRule favicon\.ico$ images/favicon.ico [L]
+            RewriteCond %{REQUEST_FILENAME} !-l
+            RewriteCond %{REQUEST_FILENAME} !-f
+            RewriteCond %{REQUEST_FILENAME} !-d
+            RewriteRule .* index.php [L,QSA]
+        </IfModule>
+
+        ## Deny access to all ini files…
+        <Files "*.ini">
+            Require all denied
+        </Files>
+
+    </Directory>
+
+    TimeOut 600
+    ProxyTimeout 600
+
+    <FilesMatch "\\.php$">
+        <If "-f %{REQUEST_FILENAME}">
+            SetHandler "proxy:unix:/var/run/php/php8.4-fpm.sock|fcgi://localhost"
+        </If>
+    </FilesMatch>
+
+    LogLevel warn
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 ```
+<!-- cSpell:enable -->
+!!! note "i-doit includes differing Apache settings in files with the name **.htaccess**. The setting has to checked after each update and added to the Apache configuration if necessary. The .htaccess file is located in the i-doit directory, e.g. `/var/www/html/.htaccess`."
 
-i-doit includes differing Apache settings in files with the name **.htaccess**. The setting **AllowOverride All** is required so that these settings are taken into account.<br>
 With the next step you activate the new VHost and the necessary Apache module **rewrite** and the Apache web server is restarted:
 
 ```shell
 sudo a2ensite i-doit
-sudo a2enmod rewrite
-sudo systemctl restart apache2
+sudo a2enmod rewrite proxy_fcgi setenvif
+sudo systemctl restart apache2 php8.4-fpm
 ```
 
 ### MariaDB
@@ -135,21 +275,8 @@ sudo systemctl restart apache2
 To ensure that MariaDB delivers good performance and can be operated securely, you should not only follow our instructions, but also inform yourself further. Starting with a secure installation where the recommendations should be followed. In addition, the user **root** should be given a secure password.
 
 ```shell
-sudo mysql_secure_installation
+sudo mariadb-secure-installation
 ```
-
-Activate the MariaDB shell so that i-doit is enabled to apply the **root** user during setup:
-
-```shell
-sudo mysql -uroot
-```
-
-!!! attention annotate "If the MariaDB installation has already been carried out without setting the password, log in via `mysql -u root` and set a password via (1)"
-    ```sql
-    ALTER USER 'root'@'localhost' IDENTIFIED VIA mysql_native_password USING PASSWORD('YOUR_PASSWORD');
-    ```
-
-1. Für mehr Informationen zum Befehl schauen Sie hier -> <https://mariadb.com/kb/en/alter-user/>
 
 The mode for shutting down InnoDB still needs to be changed. The value `0` causes a complete cleanup and a merge of the change buffers to be performed before MariaDB is shut down:
 
@@ -205,12 +332,8 @@ sql-mode = ""
 Finally, MariaDB is restarted:
 
 ```shell
-sudo systemctl restart mysql.service
+sudo systemctl restart mysql
 ```
-
-!!! bug "[Warning] You need to use --log-bin to make --expire-logs-days or --binlog-expire-logs-seconds work."
-    If this message appears in the log, simply comment out `expire_logs_days = 10` in the file `/etc/mysql/mariadb.conf.d/50-server.cnf`.
-    Bug report for Debian -> <https://salsa.debian.org/mariadb-team/mariadb-server/-/merge_requests/61>
 
 ## Next Step
 
