@@ -63,7 +63,7 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 ### Fix file list for old import files with special characters (ID-12376)
 
-[i-doit_38_hotfix_ID-12376_4fd97c7.zip :material-file-download:](../../assets/downloads/hotfixes/38/i-doit_35-38_hotfix_ID-12367_01bc42c.zip){ .md-button .md-button--primary }
+[i-doit_38_hotfix_ID-12376_4fd97c7.zip :material-file-download:](../../assets/downloads/hotfixes/38/i-doit_38_hotfix_ID-12376_4fd97c7.zip){ .md-button .md-button--primary }
 
 * * *
 
