@@ -10,7 +10,7 @@ mkdocs-minify-plugin ~= 0.8.0
 mkdocs-redirects ~= 1.2.2
 mkdocs-video ~= 1.5.0
 pip-audit == 2.10.0
-Pygments ~= 2.19.2
+Pygments ~= 2.20.0
 pymdown-extensions ~= 10.21
 PyOpenSSL ~= 26.0.0
 wheel ~= 0.46.3
