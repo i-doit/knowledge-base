@@ -7,7 +7,7 @@ lang: en
 
 # Hotfixes
 
-!!! success "Hotfixes for version **37**"
+!!! success "Hotfixes for version **38**"
 
 A hotfix fixes a specific error and is usually made available as a ZIP file. The ZIP file is extracted in the **installation directory** of i-doit. The prompt asking whether files should be overwritten when unpacking must be confirmed.
 
