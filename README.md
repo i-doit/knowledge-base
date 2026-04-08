@@ -12,7 +12,7 @@
 With i-doit, you can document all technical and administrative information in your organization together in one place.
 One documentation for all use cases to optimize and automate critical processes.
 Create the digital twin of all things that matter to your business and ensure interoperability between platforms and systems on the basis of a well structured documentation system.
-i-doit is operated by synetics GmbH, located in Düsseldorf/Germany.
+i-doit is operated by i-doit GmbH, located in Düsseldorf/Germany.
 
 ## Contribute!
 
@@ -24,6 +24,6 @@ Do you like to [get in touch with us](SUPPORT.md)?
 
 ## Copyright & License
 
-Copyright (C) 2023 [synetics GmbH](https://i-doit.com/)
+Copyright (C) 2026 [i-doit GmbH](https://i-doit.com/)
 
 This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).

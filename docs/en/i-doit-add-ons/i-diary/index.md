@@ -25,7 +25,7 @@ Documentation
 Copyright & License
 -------------------
 
-Copyright (C) 2020 [synetics GmbH](https://i-doit.com/en)
+Copyright (C) 2020 [i-doit GmbH](https://i-doit.com/en)
 
 [Requirements](#requirements)
 =============================

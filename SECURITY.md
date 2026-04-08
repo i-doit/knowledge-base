@@ -20,7 +20,7 @@ If you find any security issues in an older version of our software application 
 
 ## About us
 
-Both docupike and i-doit are maintained by the [synetics GmbH](https://docupike.com/), located in Düsseldorf/Germany.
+Both docupike and i-doit are maintained by the [i-doit GmbH](https://docupike.com/), located in Düsseldorf/Germany.
 
 ## What are security-related issues?
 

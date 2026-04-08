@@ -23,7 +23,7 @@ Dies ist möglich, indem sie die Anwendung  diary  direkt auf einem Windows-Serv
 [Copyright & License](#copyright-license)
 -----------------------------------------
 
-Copyright (C) 2020 [synetics GmbH](https://i-doit.com/en)
+Copyright (C) 2020 [i-doit GmbH](https://i-doit.com/en)
 
 * * *
 

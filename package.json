@@ -23,7 +23,7 @@
         "url": "https://github.com/i-doit/kb/issues"
     },
     "license": "CC-BY-SA-4.0",
-    "author": "synetics GmbH <info@i-doit.com> (https://i-doit.com/)",
+    "author": "i-doit GmbH <info@i-doit.com> (https://i-doit.com/)",
     "devDependencies": {
         "@cyclonedx/bom": "^4.1.5",
         "@cyclonedx/cyclonedx-npm": "^4.2.1",

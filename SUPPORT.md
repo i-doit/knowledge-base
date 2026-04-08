@@ -4,7 +4,7 @@ Do you like to get in touch with us? No problem. Here is a list of common questi
 
 ## What is i-doit?
 
-i-doit ("I document IT") is a fully-featured Web application for CMDB (Configuration Management Databases), IT asset management (ITAM) and IT documentation. i-doit is maintained by the company synetics GmbH, located in Düsseldorf/Germany.
+i-doit ("I document IT") is a fully-featured Web application for CMDB (Configuration Management Databases), IT asset management (ITAM) and IT documentation. i-doit is maintained by the company i-doit GmbH, located in Düsseldorf/Germany.
 
 ## What is the difference between i-doit `v1` and `v2`?
 
@@ -63,7 +63,7 @@ We have a [growing list of partners][partners] who will support you with [in-hou
 
 ## Where can I get commercial support for i-doit?
 
-You can get commercial support for i-doit either directly [from synetics][help] or from one of [our partners][partners].
+You can get commercial support for i-doit either directly [from i-doit][help] or from one of [our partners][partners].
 
 ## What are the plans for i-doit and its add-ons?
 

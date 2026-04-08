@@ -24,7 +24,7 @@ The script gets the following contents which have to be adapted to your own inst
     ##
 
     ##
-    ## Copyright (C) 2017-18 synetics GmbH, <https://i-doit.com/>
+    ## Copyright (C) 2017-18 i-doit GmbH, <https://i-doit.com/>
     ##
     ## This program is free software: you can redistribute it and/or modify
     ## it under the terms of the GNU Affero General Public License as published by
@@ -118,7 +118,7 @@ This script gets the following contents:
     ##
 
     ##
-    ## Copyright (C) 2017-18 synetics GmbH, <https://i-doit.com/>
+    ## Copyright (C) 2017-18 i-doit GmbH, <https://i-doit.com/>
     ##
     ## This program is free software: you can redistribute it and/or modify
     ## it under the terms of the GNU Affero General Public License as published by
