@@ -34,7 +34,7 @@ Typical use cases:
 - **Inventory and stock management**: Reports can list all SIM cards that are not assigned to any mobile phone -- unused cards that generate costs without being used.
 - **Cost center assignment**: In combination with the Accounting category, SIM cards can be assigned to cost centers and monthly mobile costs can be evaluated per department or project.
 
-[![SIM card](../../assets/images/de/grundlagen/kategorien/cards.png)](../../assets/images/de/grundlagen/kategorien/cards.png)
+
 
 ## Fields
 

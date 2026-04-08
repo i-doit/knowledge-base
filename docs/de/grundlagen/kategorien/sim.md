@@ -28,7 +28,7 @@ Typische Anwendungsfälle:
 - **Kündigungsfristen einhalten**: Das Feld "Datum für Benachrichtigung" ermöglicht automatische Erinnerungen vor Vertragsende — so verpasst du keine Kündigungsfrist.
 - **Kostenzuordnung**: Über den Tarif und die Zuordnung zum Gerät (und damit zur Person/Abteilung) lassen sich Mobilfunkkosten den richtigen Kostenstellen zuordnen.
 
-[![SIM](../../assets/images/de/grundlagen/kategorien/sim.png)](../../assets/images/de/grundlagen/kategorien/sim.png)
+
 
 ## Felder
 

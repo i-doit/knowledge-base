@@ -8,7 +8,7 @@ lang: en
 
 # CMDB Explorer
 
-The CMDB Explorer graphically displays [relationships between objects](../../auswertungen/../grundlagen/objekt-beziehungen.md). Various dependency views can be generated. This provides a quick overview. These views can then be exported to various formats for further processing.
+The CMDB Explorer graphically displays [relationships between objects](../../grundlagen/objekt-beziehungen.md). Various dependency views can be generated. This provides a quick overview. These views can then be exported to various formats for further processing.
 
 ## Accessing the CMDB Explorer
 

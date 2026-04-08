@@ -25,7 +25,7 @@ Typical use cases:
 - **Contract management and lifecycle**: When a mobile contract expires, a report shows all devices with SIM cards from that contract. Conversely, when decommissioning a device, you can quickly check whether the SIM card needs to be returned or assigned to a new device.
 - **IoT and M2M scenarios**: Routers, gateways, and IoT devices frequently use SIM cards for cellular connectivity. The assignment here documents which SIM is in which field device -- critical information during location changes or outages.
 
-[![Assigned SIM cards](../../assets/images/de/grundlagen/kategorien/assigned-sim-cards.png)](../../assets/images/de/grundlagen/kategorien/assigned-sim-cards.png)
+
 
 ## Fields
 

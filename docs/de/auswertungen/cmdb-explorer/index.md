@@ -1,6 +1,6 @@
 ---
 title: CMDB-Explorer
-description: Der CMDB-Explorer stellt [Beziehungen zwischen Objekten](../../auswertungen/../grundlagen/objekt-beziehungen.md) grafisch dar. Verschiedene Ansichten zu Abhängigkeiten können generiert werden. Dadurch gewinnt man einen schnellen Überblick. Anschließend können diese Ansichten in verschiedene Formate exportiert werden, um sie weiter zu bearbeiten.
+description: Der CMDB-Explorer stellt [Beziehungen zwischen Objekten](../../grundlagen/objekt-beziehungen.md) grafisch dar. Verschiedene Ansichten zu Abhängigkeiten können generiert werden. Dadurch gewinnt man einen schnellen Überblick. Anschließend können diese Ansichten in verschiedene Formate exportiert werden, um sie weiter zu bearbeiten.
 icon:
 status:
 lang: de
@@ -8,7 +8,7 @@ lang: de
 
 # CMDB-Explorer
 
-Der CMDB-Explorer stellt [Beziehungen zwischen Objekten](../../auswertungen/../grundlagen/objekt-beziehungen.md) grafisch dar. Verschiedene Ansichten zu Abhängigkeiten können generiert werden. Dadurch gewinnt man einen schnellen Überblick. Anschließend können diese Ansichten in verschiedene Formate exportiert werden, um sie weiter zu bearbeiten.
+Der CMDB-Explorer stellt [Beziehungen zwischen Objekten](../../grundlagen/objekt-beziehungen.md) grafisch dar. Verschiedene Ansichten zu Abhängigkeiten können generiert werden. Dadurch gewinnt man einen schnellen Überblick. Anschließend können diese Ansichten in verschiedene Formate exportiert werden, um sie weiter zu bearbeiten.
 
 ## Aufruf des CMDB-Explorers
 

@@ -25,7 +25,7 @@ Typische Anwendungsfälle:
 !!! tip "Benachrichtigungen bei Ablauf einrichten"
     Unter **Extras → Benachrichtigungen** kannst du eine Benachrichtigung einrichten, die automatisch eine E-Mail versendet, wenn ein Zertifikat in X Tagen abläuft. In Kombination mit einem Report, der alle Zertifikate mit Ablaufdatum auflistet, hast du ein zweistufiges Sicherheitsnetz gegen vergessene Verlängerungen.
 
-[![Zertifikat](../../assets/images/de/grundlagen/kategorien/certificate.png)](../../assets/images/de/grundlagen/kategorien/certificate.png)
+
 
 ## Felder
 

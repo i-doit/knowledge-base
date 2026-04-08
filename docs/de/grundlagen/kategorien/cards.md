@@ -34,7 +34,7 @@ Typische Anwendungsfälle:
 - **Inventur und Bestandsverwaltung**: Per Report lassen sich alle SIM-Karten auflisten, die keinem Mobiltelefon zugewiesen sind -- unbenutzte Karten, die Kosten verursachen, ohne genutzt zu werden.
 - **Kostenstellen-Zuordnung**: In Kombination mit der Buchhaltungs-Kategorie lassen sich SIM-Karten Kostenstellen zuweisen und die monatlichen Mobilfunkkosten je Abteilung oder Projekt auswerten.
 
-[![SIM-Karte](../../assets/images/de/grundlagen/kategorien/cards.png)](../../assets/images/de/grundlagen/kategorien/cards.png)
+
 
 ## Felder
 

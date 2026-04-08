@@ -23,7 +23,7 @@ Typische Anwendungsfälle:
 - **Installationsart dokumentieren**: Das Feld Installationsart unterscheidet zwischen Bereitstellungsmodellen. Bei einem Server-Umzug muss ein lokal installiertes OS neu deployt werden, während ein netzwerkbasiertes PXE-Boot-Image nur eine Konfigurationsänderung erfordert.
 - **Lizenzschlüssel zentral verwalten**: Der Registrierungsschlüssel wird hier am OS-Objekt gepflegt -- nicht an jedem einzelnen Host. Änderungen wie Lizenzverlängerungen müssen so nur an einer Stelle vorgenommen werden.
 
-[![Betriebssysteme (spezifisch)](../../assets/images/de/grundlagen/kategorien/s-operating-system.png)](../../assets/images/de/grundlagen/kategorien/s-operating-system.png)
+
 
 ## Felder
 

@@ -25,7 +25,7 @@ Typical use cases:
 !!! tip "Set up notifications for expiration"
     Under **Extras > Notifications**, you can set up a notification that automatically sends an email when a certificate expires in X days. In combination with a report that lists all certificates with expiration dates, you have a two-stage safety net against forgotten renewals.
 
-[![Certificate](../../assets/images/de/grundlagen/kategorien/certificate.png)](../../assets/images/de/grundlagen/kategorien/certificate.png)
+
 
 ## Fields
 

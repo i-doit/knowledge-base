@@ -25,7 +25,7 @@ Typische Anwendungsfälle:
 - **Vertragsverwaltung und Lifecycle**: Wenn ein Mobilfunkvertrag ausläuft, zeigt ein Report alle Geräte mit SIM-Karten dieses Vertrags. Umgekehrt lässt sich beim Ausmustern eines Geräts schnell prüfen, ob die SIM-Karte zurückgegeben oder einem neuen Gerät zugeordnet werden muss.
 - **IoT- und M2M-Szenarien**: Router, Gateways und IoT-Geräte nutzen häufig SIM-Karten für die Mobilfunkanbindung. Die Zuordnung hier dokumentiert, welche SIM in welchem Feldgerät steckt -- bei Standortwechseln oder Ausfällen eine kritische Information.
 
-[![Zugewiesene SIM-Karten](../../assets/images/de/grundlagen/kategorien/assigned-sim-cards.png)](../../assets/images/de/grundlagen/kategorien/assigned-sim-cards.png)
+
 
 ## Felder
 

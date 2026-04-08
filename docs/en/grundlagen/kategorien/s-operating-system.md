@@ -23,7 +23,7 @@ Typical use cases:
 - **Documenting installation type**: The installation Type field distinguishes between deployment models. During a server migration, a locally installed OS needs to be redeployed, while a network-based PXE boot image only requires a configuration change.
 - **Centralized license key management**: The registration key is maintained here on the OS object -- not on every individual host. Changes such as license renewals only need to be made in one place.
 
-[![Operating Systems (specific)](../../assets/images/de/grundlagen/kategorien/s-operating-system.png)](../../assets/images/de/grundlagen/kategorien/s-operating-system.png)
+
 
 ## Fields
 

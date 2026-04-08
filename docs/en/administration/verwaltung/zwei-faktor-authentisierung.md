@@ -11,7 +11,6 @@ lang: en
 This administration page allows administrators to help users who no longer have access to their configured 2FA.
 
 
-[![verwaltung/zwei-faktor-auth.png](../../../../assets/images/de/administration/verwaltung/zwei-faktor-auth.png)](../../../../assets/images/de/administration/verwaltung/zwei-faktor-auth.png)
 
 Via the **Action** column, you deactivate 2FA for the respective user. Via the **Link** button, you open the associated person object.
 

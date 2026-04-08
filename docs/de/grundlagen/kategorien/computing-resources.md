@@ -22,7 +22,7 @@ Typische Anwendungsfälle:
 - **Kosten- und Lizenzrechnung**: In Cloud- und Hosting-Umgebungen bestimmen die zugewiesenen Ressourcen direkt die Kosten. Ein Report, der alle VMs eines Mandanten mit ihren Rechenressourcen auflistet, ist die Basis für die interne Leistungsverrechnung.
 - **Migrations- und Change-Planung**: Vor einer VM-Migration zeigt die Kategorie sofort, welche Ressourcen auf dem Zielhost bereitstehen müssen. In Kombination mit der Kategorie [Virtuelle Maschine](virtual-machine--root.md) ist auch die aktuelle Hostzuordnung ersichtlich.
 
-[![Rechenressourcen](../../assets/images/de/grundlagen/kategorien/computing-resources.png)](../../assets/images/de/grundlagen/kategorien/computing-resources.png)
+
 
 ## Felder
 

@@ -22,7 +22,7 @@ Typical use cases:
 - **Cost and license accounting**: In cloud and hosting environments, the assigned resources directly determine costs. A report listing all VMs of a tenant with their computing resources is the basis for internal charge-back.
 - **Migration and change planning**: Before a VM migration, the category immediately shows which resources must be available on the target host. In combination with the [Virtual machine](virtual-machine--root.md) category, the current host assignment is also visible.
 
-[![Computing resources](../../assets/images/de/grundlagen/kategorien/computing-resources.png)](../../assets/images/de/grundlagen/kategorien/computing-resources.png)
+
 
 ## Fields
 

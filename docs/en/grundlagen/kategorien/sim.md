@@ -28,7 +28,7 @@ Typical use cases:
 - **Meet cancellation periods**: The field "Date for notification" enables automatic reminders before contract end — so you never miss a cancellation period.
 - **Cost allocation**: Via the tariff and the assignment to the device (and thus to the person/department), you can allocate mobile costs to the correct cost centers.
 
-[![SIM](../../assets/images/de/grundlagen/kategorien/sim.png)](../../assets/images/de/grundlagen/kategorien/sim.png)
+
 
 ## Fields
 
