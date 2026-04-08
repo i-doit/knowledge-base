@@ -245,7 +245,7 @@ On the **test server** (import, 30 min after export):
 
 ## See also
 
-- [Backup and Restore Data](../wartung-und-betrieb/daten-sichern-und-wiederhfirstllen/index.md) -- Backup strategy and `system:tenant-export`
+- [Backup and Restore Data](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) -- Backup strategy and `system:tenant-export`
 - [Setting Up Cronjobs](../wartung-und-betrieb/cronjobs-einrichten.md) -- Automation with cron
 - [Migrating an installation on Linux](../upgrades-und-umzuege/umzug-einer-installation-unter-linux.md) -- Complete migration
 - [i-doit Console -- Commands and Options](../automatisierung-und-integration/cli/befehle-und-optionen.md) -- All console commands

@@ -21,7 +21,7 @@ Extract the ZIP file in the i-doit installation directory and confirm overwritin
 !!! attention "Please note"
 
     Use this hotfix exclusively with version 1.13.2 or 1.14.
-    Create a [backup of i-doit](../../wartung-und-betrieb/daten-sichern-und-wiederhfirstllen/index.md) beforehand.
+    Create a [backup of i-doit](../../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) beforehand.
     If you contact support afterwards, mention that you have applied the hotfix.
 
 ### Login to Admin Center no longer works (versions 1.13.2 and 1.14 only)

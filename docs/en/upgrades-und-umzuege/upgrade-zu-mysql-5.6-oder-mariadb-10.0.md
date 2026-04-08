@@ -25,7 +25,7 @@ The following table shows the recommended upgrade paths per operating system:
 | SUSE Linux Enterprise Server (SLES) | 12        | MariaDB 10.0                      | MariaDB 10.0            |
 | Windows Server                      | 2008/2012 | Depending on XAMPP version             | MariaDB 10.0            |
 
-!!! attention "It is absolutely essential that the [data is backed up](../wartung-und-betrieb/daten-sichern-und-wiederhfirstllen/index.md) before changes are made to the system. Since the upgrade procedure can take varying amounts of time depending on the operating system, users of _i-doit_ should be informed in advance."
+!!! attention "It is absolutely essential that the [data is backed up](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) before changes are made to the system. Since the upgrade procedure can take varying amounts of time depending on the operating system, users of _i-doit_ should be informed in advance."
 
 Debian GNU/Linux 8
 ------------------
@@ -134,7 +134,7 @@ Windows Server 2008/2012
 
 If Windows Server 2008/2012 is used, XAMPP is recommended. This distribution provided by [Apache Friends](https://www.apachefriends.org/) includes, among other things, the Apache web server, PHP, and MariaDB. Care should be taken to always use the current version.
 
-!!!attention "Since XAMPP has neither official documentation nor an update mechanism, the upgrade path may be very complicated and error-prone. A **current [backup](../wartung-und-betrieb/daten-sichern-und-wiederhfirstllen/index.md)** **and thorough testing** after the upgrade are therefore indispensable."
+!!!attention "Since XAMPP has neither official documentation nor an update mechanism, the upgrade path may be very complicated and error-prone. A **current [backup](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md)** **and thorough testing** after the upgrade are therefore indispensable."
 
 If a XAMPP version with MariaDB 10.0 is not already in use, the following steps are necessary:
 

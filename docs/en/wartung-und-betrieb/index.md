@@ -11,6 +11,6 @@ For performant and secure operation, you should maintain i-doit regularly. The f
 
 *   [Activate license](lizenzierung.md) -- Install and manage license tokens
 *   [Set up cronjobs](cronjobs-einrichten.md) -- Automate recurring tasks
-*   [Back up and restore data](daten-sichern-und-wiederhfirstllen/index.md) -- Backup and recovery
+*   [Back up and restore data](daten-sichern-und-wiederherstellen/index.md) -- Backup and recovery
 *   [Install update](update-einspielen.md) -- Keep i-doit up to date
 *   [Security and protection](sicherheit-und-schutz.md) -- Secure and harden your installation

@@ -21,7 +21,7 @@ Extract the ZIP file in the i-doit installation directory and confirm overwritin
 !!! attention "Please note"
 
     Use this hotfix exclusively with version 1.12.2.
-    Create a [backup of i-doit](../../wartung-und-betrieb/daten-sichern-und-wiederhfirstllen/index.md) beforehand.
+    Create a [backup of i-doit](../../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) beforehand.
     If you contact support afterwards, mention that you have applied the hotfix.
 
 ### The update from i-doit 1.12.2 to 1.12.3 is not possible (version 1.12.2 only)

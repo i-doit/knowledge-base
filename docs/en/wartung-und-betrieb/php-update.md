@@ -13,7 +13,7 @@ New PHP versions bring security fixes, better performance, and new features. At 
 This article describes switching from one PHP version to a newer one on **Debian** and **Ubuntu** -- using official package sources without third-party repositories.
 
 !!! warning "Backup first"
-    Before the PHP update, create a complete [backup](daten-sichern-und-wiederhfirstllen/index.md) -- at minimum of the Apache configuration (`/etc/apache2/`), the PHP configuration (`/etc/php/`), and your i-doit installation.
+    Before the PHP update, create a complete [backup](daten-sichern-und-wiederherstellen/index.md) -- at minimum of the Apache configuration (`/etc/apache2/`), the PHP configuration (`/etc/php/`), and your i-doit installation.
 
 ## Quick Guide (TL;DR)
 

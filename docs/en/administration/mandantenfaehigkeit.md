@@ -56,7 +56,7 @@ Above the list, the following actions are available:
 -   **Add new tenant**: Create a new tenant. i-doit automatically creates a new database.
 -   **Edit**: Configure an existing tenant (name, database, cache directory).
 -   **Activate / Deactivate**: Enable or disable tenants without deleting them. Deactivated tenants no longer appear at login.
--   **Remove**: **Irrevocably** delete a tenant — including its database. Can only be restored from a [backup](../wartung-und-betrieb/daten-sichern-und-wiederhfirstllen/index.md).
+-   **Remove**: **Irrevocably** delete a tenant — including its database. Can only be restored from a [backup](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md).
 -   **Save license settings**: Save the distribution of license objects across tenants.
 
 To configure a tenant, select it via the checkbox. To (de)activate or delete, you can also select multiple tenants at once.
@@ -130,4 +130,4 @@ This only works if your credentials are identical across the respective tenants.
 
 -   [Admin Center](admin-center.md) — cross-tenant management, licenses, add-ons
 -   [Settings](verwaltung/mandanten-name-verwaltung/einstellungen-mandanten-name.md) — tenant-specific configuration
--   [Backup and Restore](../wartung-und-betrieb/daten-sichern-und-wiederhfirstllen/index.md) — backup strategies for multiple tenants
+-   [Backup and Restore](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) — backup strategies for multiple tenants

@@ -39,7 +39,7 @@ Shows the installed i-doit version. Under **Actions** you can download the **i-d
 
 Here you manage tenants — relevant for multi-tenant licenses. You can create new tenants, (de)activate existing ones, or delete them.
 
-!!! warning "A deleted tenant can only be restored from a [backup](../wartung-und-betrieb/daten-sichern-und-wiederhfirstllen/index.md)."
+!!! warning "A deleted tenant can only be restored from a [backup](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md)."
 
 [![Tenants](../assets/images/de/administration/admin-center/4-ac.png)](../assets/images/de/administration/admin-center/4-ac.png)
 

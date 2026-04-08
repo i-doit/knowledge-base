@@ -144,11 +144,11 @@ Both errors are related to the InnoDB storage format. Solutions:
 
 ### How do I back up i-doit?
 
-Three areas need to be backed up: databases, files, and system configuration. Starting with version 38, the easiest way is with `system:tenant-export`. The complete guide: [Backing up and restoring data](wartung-und-betrieb/daten-sichern-und-wiederhfirstllen/index.md)
+Three areas need to be backed up: databases, files, and system configuration. Starting with version 38, the easiest way is with `system:tenant-export`. The complete guide: [Backing up and restoring data](wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md)
 
 ### How do I restore a backup?
 
-With `system:tenant-import` (from v38) or manually via `mysql` import and copying files back. Important: Test the restore regularly on a test system. Details: [Backing up and restoring data](wartung-und-betrieb/daten-sichern-und-wiederhfirstllen/index.md)
+With `system:tenant-import` (from v38) or manually via `mysql` import and copying files back. Important: Test the restore regularly on a test system. Details: [Backing up and restoring data](wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md)
 
 ### Can I copy the production database to a test system?
 

@@ -24,7 +24,7 @@ You have two ways to update:
         If version 1.13.1 is currently installed and version 1.13.3 is already available, only the next higher version -- 1.13.2 -- is displayed. However, minor releases can generally be skipped. Nevertheless, via this method all minor releases are installed individually until the latest version is reached. If you want to jump directly to version 1.13.3, you can download the latest package from the [customer portal](../administration/kundenportal.md) and extract it on the _i-doit_ host. The necessary steps can be found [here](#prepare-update-via-the-console).
 
 !!! warning "Backup"
-    Before the update, you should always create a [backup](daten-sichern-und-wiederhfirstllen/index.md).
+    Before the update, you should always create a [backup](daten-sichern-und-wiederherstellen/index.md).
 
 !!! attention "Missing write permissions"
     If an error message appears during download and extraction, it is often the case that the Apache web server does not have write permissions for the path where i-doit is installed. More details [here](#prepare-update-via-the-console)
@@ -69,7 +69,7 @@ The system database and all tenants are usually already selected. Leave the chec
 
 ### Step 4: File Update
 
-At this point you should have a [backup](daten-sichern-und-wiederhfirstllen/index.md). Click **Yes, I did a backup! - Start the update** to start the update.
+At this point you should have a [backup](daten-sichern-und-wiederherstellen/index.md). Click **Yes, I did a backup! - Start the update** to start the update.
 
 [![Update-Files](../assets/images/de/wartung-und-betrieb/update/7-update.png)](../assets/images/de/wartung-und-betrieb/update/7-update.png)
 
@@ -130,7 +130,7 @@ Now continue with the [update via the web interface](#update-via-the-web-interfa
 ## Update via the Console Using console.php
 
 !!! attention "Backup"
-    Always create a [backup](daten-sichern-und-wiederhfirstllen/index.md) before the update.
+    Always create a [backup](daten-sichern-und-wiederherstellen/index.md) before the update.
 
 You can also perform the update entirely via the [console.php](../automatisierung-und-integration/cli/index.md). Switch to the i-doit directory:
 

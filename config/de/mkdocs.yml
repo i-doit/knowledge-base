@@ -353,7 +353,7 @@ nav:
           - Erweiterte Einstellungen: grundlagen/objekt-liste/erweiterte-einstellungen.md
       - Attributfelder: grundlagen/attributfelder.md
       - Dialog-Admin: grundlagen/dialog-admin.md
-      - Objekttypen: grundlagen/objekttypen.md
+      - Objekttyp-Konfiguration: grundlagen/objekttyp-konfiguration.md
       - Zuordnung von Kategorien zu Objekttypen: grundlagen/zurodnung-von-kategorien-zu-objekttypen.md
       - Kategorien und Attribute: grundlagen/kategorien-und-attribute.md
       - Kategorie-Referenz:

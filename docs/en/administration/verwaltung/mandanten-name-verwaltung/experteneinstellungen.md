@@ -21,7 +21,7 @@ The expert settings under **Administration → [Tenant Name] Administration → 
 [![Expert Settings](../../../assets/images/de/administration/mandanten-verwaltung/experteneinstellungen.png)](../../../assets/images/de/administration/mandanten-verwaltung/experteneinstellungen.png)
 
 !!! warning "Before every change: Create a backup!"
-    **Always** create a [backup](../../../wartung-und-betrieb/daten-sichern-und-wiederhfirstllen/index.md) before changing values. At the bottom of the table, you can add new keys via the input field.
+    **Always** create a [backup](../../../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) before changing values. At the bottom of the table, you can add new keys via the input field.
 
 ## Tenant settings (Tenant-wide)
 

@@ -24,7 +24,7 @@ _i-doit_ offers [significantly more features](https://www.i-doit.org/cmdb-it-doc
 
 ## Preparation
 
-!!! warning "This process cannot be undone. Create a working [backup](../wartung-und-betrieb/daten-sichern-und-wiederhfirstllen/index.md)!"
+!!! warning "This process cannot be undone. Create a working [backup](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md)!"
 
 After the upgrade, you will need a valid [license for i-doit](../wartung-und-betrieb/lizenzierung.md). Make sure that the [system requirements](../installation/systemvoraussetzungen.md) and [settings](../installation/manual-installation/systemeinstellungen.md) are met.
 
@@ -72,7 +72,7 @@ Then configure the permissions for other persons and person groups.
 
 Make sure the following items are completed:
 
-*   [Set up and test backup and restore](../wartung-und-betrieb/daten-sichern-und-wiederhfirstllen/index.md)
+*   [Set up and test backup and restore](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md)
 *   [Set up cron jobs](../automatisierung-und-integration/cli/index.md) (with the controller)
 *   [Optionally update to the current pro version:](../wartung-und-betrieb/update-einspielen.md) With a valid license, it is possible and highly recommended to always update to the latest version of i-doit.
 

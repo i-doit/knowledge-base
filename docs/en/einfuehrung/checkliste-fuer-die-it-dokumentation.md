@@ -30,7 +30,7 @@ This checklist guides you step by step from planning to productive use of your I
 - [ ] [Install i-doit](../installation/index.md)
 - [ ] Apply the license in the [Admin Center](../administration/admin-center.md)
 - [ ] [Set up cronjobs](../automatisierung-und-integration/cli/index.md) (search, notifications, workflows)
-- [ ] [Set up and test backup and recovery](../wartung-und-betrieb/daten-sichern-und-wiederhfirstllen/index.md)
+- [ ] [Set up and test backup and recovery](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md)
 - [ ] Set up a test system (optional, recommended for larger environments)
 
 ## 4. Configuring i-doit

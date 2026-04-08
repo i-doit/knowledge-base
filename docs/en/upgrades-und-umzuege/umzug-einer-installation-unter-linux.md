@@ -178,6 +178,6 @@ If different passwords are used for the database, the following additional steps
 2. **DNS entries**, **IP addresses**, **hostnames**, etc. should be adjusted afterwards so that i-doit is accessible as usual.
 3. **Interfaces** to third-party systems can now be reactivated. The functions should be tested.
 4. **Cron jobs** should be reactivated and tested.
-5. [**Backups**](../wartung-und-betrieb/daten-sichern-und-wiederhfirstllen/index.md) should be set up and tested.
+5. [**Backups**](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) should be set up and tested.
 6. If the WebGUI also responds as usual and all data in i-doit is apparently present, the migration was **successful**.
 7. Perform standard [security measures](../wartung-und-betrieb/sicherheit-und-schutz.md).

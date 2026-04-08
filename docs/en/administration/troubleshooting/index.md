@@ -114,7 +114,7 @@ Database problems are among the most common sources of errors. Here are the most
 If an update fails or errors occur after the update, you can find a maintained list of known problems with workarounds in [Known Update Problems](bekannte-update-probleme.md). Also check:
 
 - Were the [system requirements](../../installation/systemvoraussetzungen.md) for the new version met?
-- Was a complete backup created before the update? If so, you can [restore](../../wartung-und-betrieb/daten-sichern-und-wiederhfirstllen/index.md) in an emergency.
+- Was a complete backup created before the update? If so, you can [restore](../../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) in an emergency.
 - Are [hotfixes](../hotfixes/index.md) available for the new version?
 
 ### Location problems

@@ -32,7 +32,7 @@ To successfully update to MariaDB 10.11, we need the [MariaDB Server 10.11.1 RC 
 
 ## Update MariaDB and PHP
 
-!!! warning "Make sure to create a [backup](../wartung-und-betrieb/daten-sichern-und-wiederhfirstllen/index.md) or a snapshot before the following steps!"
+!!! warning "Make sure to create a [backup](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) or a snapshot before the following steps!"
 
 ### Stop Apache Service
 

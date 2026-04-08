@@ -47,7 +47,7 @@ After each step, you are prompted for the next one. If all are successful, the W
 
 After the update, perform the following steps:
 
-*   [Configure backup](../wartung-und-betrieb/daten-sichern-und-wiederhfirstllen/index.md)
+*   [Configure backup](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md)
 *   [Set up cron jobs](../automatisierung-und-integration/cli/index.md)
 
 ## Troubleshooting

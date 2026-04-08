@@ -12,7 +12,7 @@ edit_uri: edit/main/docs/en
 strict: false
 theme:
   name: material
-  custom_dir: 'overrides/'
+  custom_dir: '../../overrides/'
   palette:
     - scheme: default
       primary: grey
@@ -93,7 +93,7 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
       options:
         custom_icons:
-          - overrides/.icons
+          - ../../overrides/.icons
   - pymdownx.highlight:
       linenums: true
       linenums_style: table
@@ -105,7 +105,7 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
 extra:
-  manifest: overrides/manifest.webmanifest
+  manifest: ../../overrides/manifest.webmanifest
   social:
     - name: i-doit on Twitter
       link: https://twitter.com/i_doit
@@ -136,7 +136,7 @@ extra_css:
   - assets/custom.css
 use_directory_urls: false
 watch:
-  - overrides/
+  - ../../overrides/
 nav:
   - Overview: index.md
   - Introduction:
@@ -435,7 +435,7 @@ nav:
           - VRRP/HSRP Cluster: grundlagen/objekttypen/vrrp-hsrp-cluster.md
           - WAN-Leitung: grundlagen/objekttypen/wan-leitung.md
           - Wireless Access Point: grundlagen/objekttypen/wireless-access-point.md
-      - Object Type Configuration: grundlagen/objekttypen.md
+      - Object Type Configuration: grundlagen/objekttyp-konfiguration.md
       - Assigning Categories to Object Types: grundlagen/zurodnung-von-kategorien-zu-objekttypen.md
       - Categories and Attributes: grundlagen/kategorien-und-attribute.md
       - Category Reference:

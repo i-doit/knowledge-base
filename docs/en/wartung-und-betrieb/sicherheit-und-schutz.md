@@ -139,7 +139,7 @@ sudo systemctl restart apache2.service
 
 ### Backup and Restore
 
-Backups are your last line of defense -- against attacks, human error, and hardware failures. Read the article on [backing up and restoring data](daten-sichern-und-wiederhfirstllen/index.md).
+Backups are your last line of defense -- against attacks, human error, and hardware failures. Read the article on [backing up and restoring data](daten-sichern-und-wiederherstellen/index.md).
 
 Equally important: **Test restores regularly.** A backup that cannot be restored is worthless.
 

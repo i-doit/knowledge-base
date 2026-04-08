@@ -14,7 +14,7 @@ A hotfix fixes a specific bug and is provided as a ZIP file. You extract the ZIP
 Hotfixes for older versions can be found in the [Hotfix Archive](hotfix-archiv/index.md).
 
 !!! tip "Recommendation"
-    Only apply hotfixes if they are necessary for the proper operation of your installation or if support requests you to do so. Always create a [backup of i-doit](../../wartung-und-betrieb/daten-sichern-und-wiederhfirstllen/index.md) beforehand. If you contact support after applying a hotfix, please mention that you have done so.
+    Only apply hotfixes if they are necessary for the proper operation of your installation or if support requests you to do so. Always create a [backup of i-doit](../../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) beforehand. If you contact support after applying a hotfix, please mention that you have done so.
 
 !!! warning "**Consent**"
     By downloading a hotfix, you confirm that you have fully read and understood the above notices.

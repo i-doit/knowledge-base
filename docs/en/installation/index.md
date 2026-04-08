@@ -30,4 +30,4 @@ Regardless of the installation method, you should check the [system requirements
 1.  Apply license in the [Admin Center](../administration/admin-center.md)
 2.  Perform [first login](../grundlagen/erstanmeldung.md)
 3.  [Set up cron jobs](../automatisierung-und-integration/cli/index.md) (if not done automatically)
-4.  [Configure backup](../wartung-und-betrieb/daten-sichern-und-wiederhfirstllen/index.md)
+4.  [Configure backup](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md)
