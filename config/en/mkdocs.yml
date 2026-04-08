@@ -644,8 +644,8 @@ nav:
       - Replacement: i-doit-add-ons/replacement.md
       - SHD Connect:
           - i-doit-add-ons/shd-connect/index.md
-          - Telekom-Adapter: i-doit-add-ons/shd-view-connect/telekom-adapter.md
-          - Baramundi-Adapter: i-doit-add-ons/shd-view-connect/baramundi-adapter.md
+          - Telekom-Adapter: i-doit-add-ons/shd-connect/telekom-adapter.md
+          - Baramundi-Adapter: i-doit-add-ons/shd-connect/baramundi-adapter.md
       - URL-Router: i-doit-add-ons/url-router.md
       - VIVA:
           - i-doit-add-ons/viva/index.md
