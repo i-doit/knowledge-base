@@ -59,7 +59,7 @@ Displays a list of installed add-ons
             "key": "api",
             "version": "1.14.1",
             "author": {
-              "name": "synetics GmbH"
+              "name": "i-doit GmbH"
             },
             "licensed": true,
             "active": true,
@@ -70,7 +70,7 @@ Displays a list of installed add-ons
             "key": "pro",
             "version": "25",
             "author": {
-              "name": "synetics GmbH"
+              "name": "i-doit GmbH"
             },
             "licensed": true,
             "active": true,

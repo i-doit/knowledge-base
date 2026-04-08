@@ -113,7 +113,7 @@ Das Bindeglied zwischen i-doit und VMware stellt folgendes Script dar:
      *
      * Licensed under the MIT License (MIT), <https://opensource.org/licenses/mit-license.php>.
      *
-     * Copyright (c) 2016 synetics GmbH
+     * Copyright (c) 2016 i-doit GmbH
      *
      * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
      * associated documentation files (the "Software"), to deal in the Software without restriction,

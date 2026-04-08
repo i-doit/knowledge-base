@@ -22,7 +22,7 @@ Das Script bekommt folgenden Inhalt, der an die eigene Installation angepasst we
     ##
 
     ##
-    ## Copyright (C) 2017-18 synetics GmbH, <https://i-doit.com/>
+    ## Copyright (C) 2017-18 i-doit GmbH, <https://i-doit.com/>
     ##
     ## This program is free software: you can redistribute it and/or modify
     ## it under the terms of the GNU Affero General Public License as published by
@@ -117,7 +117,7 @@ Dieses Script bekommt folgenden Inhalt:
     ##
 
     ##
-    ## Copyright (C) 2017-18 synetics GmbH, <https://i-doit.com/>
+    ## Copyright (C) 2017-18 i-doit GmbH, <https://i-doit.com/>
     ##
     ## This program is free software: you can redistribute it and/or modify
     ## it under the terms of the GNU Affero General Public License as published by

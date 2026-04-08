@@ -8,7 +8,7 @@ Hier finden wir unter anderem den Add-on-Namen, Identifikator, Autor, Beschreibu
         "title": "Example add-on",
         "name": "LC__MODULE__EXAMPLE",
         "identifier": "example",
-        "author": "synetics GmbH",
+        "author": "i-doit GmbH",
         "version": "1.0",
         "description": "Example add-on for i-doit",
         "type": "addon",

@@ -5,8 +5,8 @@ docs_dir: '../../docs/en'
 site_dir: '../../generated/en'
 site_url: https://kb.i-doit.com/en/
 site_description: Knowledge Base
-site_author: synetics GmbH
-copyright: Copyright &copy; 2025 synetics GmbH
+site_author: i-doit GmbH
+copyright: Copyright &copy; 2026 i-doit GmbH
 repo_url: https://github.com/i-doit/knowledge-base
 edit_uri: edit/main/docs/en
 strict: true
