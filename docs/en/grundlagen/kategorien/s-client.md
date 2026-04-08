@@ -16,10 +16,10 @@ Typical use cases:
 
 - **Document client type**: Distinguish between desktop, laptop, tablet, thin client or other form factors. The Dialog+ field allows the addition of custom types — such as `Kiosk Terminal` or `Ruggedized Notebook`.
 - **Record keyboard layout**: Record whether a device is equipped with a German (`QWERTZ`), English (`QWERTY`) or another layout. Helpful during device replacement and for IT support, especially in international organizations.
-- **Reporting and filtering**: The Report Manager can filter by client type — e.g. "all laptops with Windows 11" or "all thin clients at the Berlin location". In combination with the categories [Model](modell.md) and [Operating system](betriebssystem.md), this creates a comprehensive end device profile.
+- **Reporting and filtering**: The Report Manager can filter by client type — e.g. "all laptops with Windows 11" or "all thin clients at the Berlin location". In combination with the categories [Model](model.md) and [Operating system](operating-system.md), this creates a comprehensive end device profile.
 
 !!! note "Distinction from the Model category"
-    The Desktop category is specific to client objects and offers a dedicated Dialog+ field for the client type. General hardware attributes such as manufacturer and model belong in the category [Model](modell.md).
+    The Desktop category is specific to client objects and offers a dedicated Dialog+ field for the client type. General hardware attributes such as manufacturer and model belong in the category [Model](model.md).
 
 [![Desktop](../../assets/images/de/grundlagen/kategorien/s-client.png)](../../assets/images/de/grundlagen/kategorien/s-client.png)
 

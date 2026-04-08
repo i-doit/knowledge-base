@@ -25,7 +25,7 @@ Every object has:
 
 An **object type** is the template that determines what kind of object you create. The object type "Server" says: *This object is a server and has these categories.*
 
-i-doit comes with over 70 [predefined object types](../grundlagen/objekttypen/index.md) — from Server, Client, and Switch to Room, Building, and Rack, all the way to Person, Organization, and Contract. You can [create your own object types](../grundlagen/benutzerdefinede-objekttypen.md) and [configure](../grundlagen/objekttyp-konfiguration.md) existing ones.
+i-doit comes with over 70 [predefined object types](../grundlagen/objekttypen/index.md) — from Server, Client, and Switch to Room, Building, and Rack, all the way to Person, Organization, and Contract. You can [create your own object types](../grundlagen/benutzerdefinierte-objekttypen.md) and [configure](../grundlagen/objekttyp-konfiguration.md) existing ones.
 
 Object types are organized into **groups** that structure the main menu:
 

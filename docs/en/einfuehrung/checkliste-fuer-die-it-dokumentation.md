@@ -39,7 +39,7 @@ This checklist guides you step by step from planning to productive use of your I
 - [ ] Change default passwords (admin, reader, editor, author)
 - [ ] Activate relevant [object types](../grundlagen/objekttyp-konfiguration.md), deactivate unneeded ones
 - [ ] [Assign categories to object types](../grundlagen/zurodnung-von-kategorien-zu-objekttypen.md)
-- [ ] If needed, create [custom object types](../grundlagen/benutzerdefinede-objekttypen.md) and [categories](../grundlagen/benutzerdefinede-kategorien.md)
+- [ ] If needed, create [custom object types](../grundlagen/benutzerdefinierte-objekttypen.md) and [categories](../grundlagen/benutzerdefinierte-kategorien.md)
 - [ ] Pre-configure [object lists](../grundlagen/objekt-liste/index.md) for the teams
 - [ ] Set up the [dashboard](../grundlagen/dashboard-und-widgets.md)
 - [ ] Integrate and test third-party applications ([JDisc](../daten-konsolidieren/jdisc/index.md), [Monitoring](../automatisierung-und-integration/network-monitoring/index.md), [Service Desk](../automatisierung-und-integration/service-desk/index.md))

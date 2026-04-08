@@ -25,7 +25,7 @@ IT workstations can be documented in i-doit. This way, you always have an overvi
 
 A tenant's contract has passed the last cancellation date and needs to be renewed. To renew the contract, we use the `extend-contracts` command.
 
-## [Custom Translations](./benutzerdefinede-uebersetzungen.md)
+## [Custom Translations](./benutzerdefinierte-uebersetzungen.md)
 
 Using custom translations, you can change the labels of desired fields or add new languages with just a few mouse clicks.
 

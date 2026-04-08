@@ -41,7 +41,7 @@ Editing is done from left to right:
 
 In the columns for object type groups and object types, you can also add custom entries in the lower area. Self-created entries receive a pencil icon for editing or deleting. For extensive configuration of an object type, we recommend the object type configuration.
 
-Via the **Create custom category** button, you can go directly to creating [custom categories](benutzerdefinede-kategorien.md).
+Via the **Create custom category** button, you can go directly to creating [custom categories](benutzerdefinierte-kategorien.md).
 
 ## Data structure profiles
 

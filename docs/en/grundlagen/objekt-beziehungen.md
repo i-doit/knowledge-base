@@ -89,7 +89,7 @@ All parallel relationships can be found under **Extras â†’ Predefined content â†
 
 ## Object relationship in custom category
 
-In [custom categories](benutzerdefinede-kategorien.md), object relationships can be documented. A distinction must be made between two field types:
+In [custom categories](benutzerdefinierte-kategorien.md), object relationships can be documented. A distinction must be made between two field types:
 
 -   **Object browser**: No relationship object is created. The relationship between two objects documented here is not listed in the Relationships category and the [CMDB Explorer](../auswertungen/cmdb-explorer/index.md) does not evaluate this relationship.
 -   **Object relationship**: Only an implicit relationship type can be specified as **Additional**. Explicit relationships are not displayed here.
@@ -101,4 +101,4 @@ In [custom categories](benutzerdefinede-kategorien.md), object relationships can
 
 ### Direction of the relationship
 
-In `v35`, the direction of the relationship is determined by the object type configuration. There it is configured whether an object is the [relationship master](./benutzerdefinede-objekttypen.md#felder-in-der-konfiguration) or not. This setting will override the [default direction](#object-relationship-types) setting.
+In `v35`, the direction of the relationship is determined by the object type configuration. There it is configured whether an object is the [relationship master](./benutzerdefinierte-objekttypen.md#felder-in-der-konfiguration) or not. This setting will override the [default direction](#object-relationship-types) setting.

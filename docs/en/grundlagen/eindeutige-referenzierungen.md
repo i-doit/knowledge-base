@@ -102,4 +102,4 @@ In the Web GUI, you can neither view nor edit these constants. Access is via SQL
 ## Additional uniqueness
 
 -   Attributes can be [defined as unique](eindeutige-referenzierungen.md) globally, per object type or (for list categories) per object. Multiple occurrences are flagged by i-doit when saving.
--   If the above-mentioned attributes are not sufficient, additional ones can be [created](benutzerdefinede-kategorien.md).
+-   If the above-mentioned attributes are not sufficient, additional ones can be [created](benutzerdefinierte-kategorien.md).

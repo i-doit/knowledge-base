@@ -10,7 +10,7 @@ lang: en
 Every object type in i-doit can be individually configured -- from the name and icon to the assigned categories. Here you will learn how to customize existing object types and which settings have which effects.
 
 !!! tip "All standard object types in detail"
-A complete description of all predefined object types with usage examples and assigned categories can be found in the [Object type reference](objekttypen/index.md). If you want to create your own object types, read [Custom object types](benutzerdefinede-objekttypen.md).
+A complete description of all predefined object types with usage examples and assigned categories can be found in the [Object type reference](objekttypen/index.md). If you want to create your own object types, read [Custom object types](benutzerdefinierte-objekttypen.md).
 
 ## How to access the configuration
 

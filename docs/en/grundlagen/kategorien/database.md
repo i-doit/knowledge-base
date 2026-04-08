@@ -17,7 +17,7 @@ The **Database hierarchy** category (in the English UI labeled "DBMS information
 
 Typical use cases:
 
-- **Inventorying DBMS instances**: Record the name, type, and version of each database instance on a server. Together with [Software assignment](software-assignment.md), a complete picture emerges of which DBMS in which version runs where.
+- **Inventorying DBMS instances**: Record the name, type, and version of each database instance on a server. Together with [Software assignment](application.md), a complete picture emerges of which DBMS in which version runs where.
 - **Documenting network access**: Via the Port and Port Name fields, it is recorded under which network port the instance is reachable -- indispensable for firewall rules and monitoring configurations.
 - **Tracing installation paths**: The Path field documents where the instance is installed in the filesystem. During troubleshooting or migrations, this saves searching on the server.
 - **Version management and lifecycle**: Reports can evaluate which servers still use old DBMS versions. This allows end-of-life risks to be identified early and upgrade plans to be created.
@@ -29,7 +29,7 @@ Typical use cases:
 
 ### DBMS
 
-Link to the database management system that operates this instance. A DBMS object (e.g. "MySQL" or "PostgreSQL") is selected via the object browser. This DBMS object must be created beforehand and assigned to the server via [Software assignment](software-assignment.md). Through this link, i-doit knows which DBMS product stands behind the instance.
+Link to the database management system that operates this instance. A DBMS object (e.g. "MySQL" or "PostgreSQL") is selected via the object browser. This DBMS object must be created beforehand and assigned to the server via [Software assignment](application.md). Through this link, i-doit knows which DBMS product stands behind the instance.
 
 ### Instance name
 

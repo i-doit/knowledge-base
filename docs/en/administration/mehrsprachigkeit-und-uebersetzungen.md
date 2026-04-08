@@ -80,7 +80,7 @@ Language profiles are the way to go beyond German and English in i-doit — or t
 
 Navigate to **Administration → Data View → Language Profiles** and click **New**. Assign a name, select a flag, and save. The new language is immediately available for selection but initially contains the German texts. You then translate individual fields directly in the language profile editor — you can filter by language constants or existing text and enter the translation.
 
-A detailed step-by-step guide can be found under [Custom Translations](../anwendungsfaelle/benutzerdefinede-uebersetzungen.md).
+A detailed step-by-step guide can be found under [Custom Translations](../anwendungsfaelle/benutzerdefinierte-uebersetzungen.md).
 
 ---
 
@@ -132,11 +132,11 @@ In the tenant database, the table `isys_obj_type_group` contains the language co
 
 ### Object types
 
-Under **Administration → Data Structure → Object Types → [Group] → [Object Type] → Language Constant / Label**, you can give each [object type](../grundlagen/struktur-it-dokumentation.md) a multilingual name — this applies equally to standard and [custom object types](../grundlagen/benutzerdefinede-objekttypen.md).
+Under **Administration → Data Structure → Object Types → [Group] → [Object Type] → Language Constant / Label**, you can give each [object type](../grundlagen/struktur-it-dokumentation.md) a multilingual name — this applies equally to standard and [custom object types](../grundlagen/benutzerdefinierte-objekttypen.md).
 
 ### Categories and attributes
 
-You translate standard [categories](../grundlagen/struktur-it-dokumentation.md) and their attributes by overriding the associated language constant in the `custom` files. For [custom categories](../grundlagen/benutzerdefinede-kategorien.md), you enter a language constant as the title directly when creating them and then translate it in the `custom` files for each language.
+You translate standard [categories](../grundlagen/struktur-it-dokumentation.md) and their attributes by overriding the associated language constant in the `custom` files. For [custom categories](../grundlagen/benutzerdefinierte-kategorien.md), you enter a language constant as the title directly when creating them and then translate it in the `custom` files for each language.
 
 ---
 

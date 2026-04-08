@@ -51,7 +51,7 @@ Object type       →  What is it?          (Server, Client, Switch, Person, Con
        └── Categories  →  What details?   (IP address, CPU, Location, Contact person)
 ```
 
-- **Object types** define the kind: Server, Client, Room, Person, Contract. i-doit comes with over 70 [predefined object types](../grundlagen/objekttypen/index.md), and you can [create your own](../grundlagen/benutzerdefinede-objekttypen.md).
+- **Object types** define the kind: Server, Client, Room, Person, Contract. i-doit comes with over 70 [predefined object types](../grundlagen/objekttypen/index.md), and you can [create your own](../grundlagen/benutzerdefinierte-objekttypen.md).
 - **Objects** are the actual entries: *web server-01*, *Room 3.14*, *John Doe*.
 - **Categories** contain the data fields: IP address, model, serial number, location. i-doit has over 120 [predefined categories](../grundlagen/kategorien/index.md).
 

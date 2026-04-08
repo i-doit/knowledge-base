@@ -15,15 +15,15 @@ You create and edit custom object types under **Administration → CMDB settings
 
 Alternatively, click on the name of the [object type group](../glossar.md) in the [tree menu](../glossar.md) on the left side above the [object type list](../glossar.md). This takes you directly to the listing of object types in this group, where you can edit them.
 
-[![object-view](../assets/images/de/grundlagen/benutzerdefinede-objekttypen/1-bo.png)](../assets/images/de/grundlagen/benutzerdefinede-objekttypen/1-bo.png)
+[![object-view](../assets/images/de/grundlagen/benutzerdefinierte-objekttypen/1-bo.png)](../assets/images/de/grundlagen/benutzerdefinierte-objekttypen/1-bo.png)
 
 In the list view of the object type configuration, click the **New** button to create a custom object type.
 
-[![list-object-type-configuration](../assets/images/de/grundlagen/benutzerdefinede-objekttypen/2-bo.png)](../assets/images/de/grundlagen/benutzerdefinede-objekttypen/3-bo.png)
+[![list-object-type-configuration](../assets/images/de/grundlagen/benutzerdefinierte-objekttypen/2-bo.png)](../assets/images/de/grundlagen/benutzerdefinierte-objekttypen/3-bo.png)
 
 Then configure your object type.
 
-[![object-type-configuration](../assets/images/de/grundlagen/benutzerdefinede-objekttypen/3-bo.png)](../assets/images/de/grundlagen/benutzerdefinede-objekttypen/3-bo.png)
+[![object-type-configuration](../assets/images/de/grundlagen/benutzerdefinierte-objekttypen/3-bo.png)](../assets/images/de/grundlagen/benutzerdefinierte-objekttypen/3-bo.png)
 
 ## Fields in the configuration
 

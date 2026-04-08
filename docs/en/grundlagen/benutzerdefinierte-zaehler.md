@@ -13,7 +13,7 @@ Custom counters allow you to define your own sequential numbering and use it in 
 
 You can find custom counters under **Administration → Predefined content → Custom counters**. There you see all configured counters in a list. Use the button at the top to add new counters.
 
-[![Custom-counter](../assets/images/de/grundlagen/benutzerdefinede-zaehler/1-bz.png)](../assets/images/de/grundlagen/benutzerdefinede-zaehler/1-bz.png)
+[![Custom-counter](../assets/images/de/grundlagen/benutzerdefinierte-zaehler/1-bz.png)](../assets/images/de/grundlagen/benutzerdefinierte-zaehler/1-bz.png)
 
 ## Structure of a counter
 
@@ -29,7 +29,7 @@ The following elements are available per counter:
 !!! attention "Important"
     After saving, you can no longer change the name of a counter. The text field is deactivated to prevent inconsistencies.
 
-[![Custom-counter](../assets/images/de/grundlagen/benutzerdefinede-zaehler/2-bz.png)](../assets/images/de/grundlagen/benutzerdefinede-zaehler/2-bz.png)
+[![Custom-counter](../assets/images/de/grundlagen/benutzerdefinierte-zaehler/2-bz.png)](../assets/images/de/grundlagen/benutzerdefinierte-zaehler/2-bz.png)
 
 !!! attention ""
     When you hover over the info icon, a note appears: Resetting sets the counter back to 1. All future uses will then use the new count. Returning to the previous value is not possible.

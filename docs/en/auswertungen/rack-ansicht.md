@@ -35,7 +35,7 @@ In this box, you can also specify how many **vertical slots** are available for 
 
 ## Positioning Objects in the Rack
 
-To populate racks with [objects](../grundlagen/struktur-it-dokumentation.md), two prerequisites apply: First, each object must specify in its **Form Factor** category how many **rack units** it occupies, and additionally the **Form Factor** of **19"** should be specified. Second, in the [object type configuration](../grundlagen/benutzerdefinede-objekttypen.md), the checkbox must be set indicating that objects of this type are **positionable in the rack**. If the entry in the **Form Factor** category is missing, i-doit assumes it is a 19" component with 1 RU.
+To populate racks with [objects](../grundlagen/struktur-it-dokumentation.md), two prerequisites apply: First, each object must specify in its **Form Factor** category how many **rack units** it occupies, and additionally the **Form Factor** of **19"** should be specified. Second, in the [object type configuration](../grundlagen/benutzerdefinierte-objekttypen.md), the checkbox must be set indicating that objects of this type are **positionable in the rack**. If the entry in the **Form Factor** category is missing, i-doit assumes it is a 19" component with 1 RU.
 
 The assignment of object to rack takes place in the **Location** category, where physical locations are put into [relationship](../grundlagen/objekt-beziehungen.md) with each other. First, the rack is selected in the **Location** attribute. Then additional attributes appear that need to be filled in:
 

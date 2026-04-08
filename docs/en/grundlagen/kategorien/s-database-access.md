@@ -15,7 +15,7 @@ The **Database Access** category documents which applications or system services
 Typical use cases:
 
 - **Make dependencies visible**: Record which applications or services use a specific database schema. This information is crucial for change and incident management — in the event of a database outage, it is immediately apparent which applications are affected.
-- **Document the database chain**: Together with the categories [DBMS](s-dbms.md), [Database instance](s-database-instance.md), and [Database schema](s-database-schema.md), the complete database chain is formed: DBMS software > instance > schema > access. The Database Access category forms the last link in this chain.
+- **Document the database chain**: Together with the categories [DBMS](database-sa.md), [Database instance](database.md), and [Database schema](s-database-schema.md), the complete database chain is formed: DBMS software > instance > schema > access. The Database Access category forms the last link in this chain.
 - **Impact analysis in the Report Manager**: Using reports, you can evaluate which schemas are used by how many applications — helpful for consolidation projects or license audits.
 - **Service modeling**: In ITSM scenarios, the accessing applications can be modeled as part of an IT service. The Database Access category provides the connection between service component and database.
 
@@ -27,7 +27,7 @@ Typical use cases:
     3. **Database schema** — an individual schema/database within the instance
     4. **Database access** — the applications that access the schema
 
-    This category documents level 4. See also: [DBMS](s-dbms.md), [Database instance](s-database-instance.md), [Database schema](s-database-schema.md).
+    This category documents level 4. See also: [DBMS](database-sa.md), [Database instance](database.md), [Database schema](s-database-schema.md).
 
 [![Database Access](../../assets/images/de/grundlagen/kategorien/s-database-access.png)](../../assets/images/de/grundlagen/kategorien/s-database-access.png)
 

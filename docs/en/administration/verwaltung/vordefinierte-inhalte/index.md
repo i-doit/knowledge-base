@@ -11,7 +11,7 @@ lang: en
 
 -   [CMDB Status](./cmdb-status.md) — You can organize and edit the existing statuses with the CMDB status function.
 -   [Contact Assignment Roles](./kontaktzuweisungsrollen.md) — In i-doit, contact assignment roles provide the ability to define the type of function during contact assignment.
--   [Custom Counters](./benutzerdefinede-zaehler.md) — Here you can add custom counters to your i-doit.
+-   [Custom Counters](./benutzerdefinierte-zaehler.md) — Here you can add custom counters to your i-doit.
 -   [Dialog Admin](./dialog-admin.md) — With the Dialog Admin, you can organize and edit the content templates of all Dialog+ fields.
 -   [Object Relationship Types](./objekt-beziehungsarten.md) — With the object relationships function, you can organize and edit all relationships within i-doit.
 -   [QR Code](./qr-code.md) — Configure the QR code settings in this dialog.

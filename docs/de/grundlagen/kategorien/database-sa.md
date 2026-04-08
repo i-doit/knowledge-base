@@ -17,7 +17,7 @@ Die Kategorie **DBMS-Informationen** (im englischen UI als "Databases" bezeichne
 
 Typische Anwendungsfälle:
 
-- **Datenbankinventar aufbauen**: Erfasse alle Datenbanken eines Servers mit Name, zugehörigem DBMS und Instanz. Zusammen mit der [Softwarezuweisung](software-assignment.md) entsteht ein vollständiges Bild der Datenbanklandschaft.
+- **Datenbankinventar aufbauen**: Erfasse alle Datenbanken eines Servers mit Name, zugehörigem DBMS und Instanz. Zusammen mit der [Softwarezuweisung](application.md) entsteht ein vollständiges Bild der Datenbanklandschaft.
 - **Kapazitätsplanung**: Die Felder Größe und Maximale Größe zeigen auf einen Blick, wie viel Speicher eine Datenbank aktuell belegt und welches Limit konfiguriert ist. Reports über diese Felder warnen frühzeitig vor Engpässen.
 - **Schema-Zuordnung**: Über das Feld Schemata werden Datenbankschema-Objekte (Objekttyp "Datenbankschema") zugewiesen. So entsteht die Verbindung zur spezifischen Kategorie [Datenbankschema](database-assignment.md), in der Schema-Details wie Storage Engine dokumentiert werden.
 - **Impact-Analyse**: Wenn eine Datenbank gewartet oder migriert wird, zeigt die Verkettung Server --> Instanz --> Datenbank --> Tabellen sofort, welche Anwendungen und Tabellen betroffen sind.
@@ -29,7 +29,7 @@ Typische Anwendungsfälle:
 
 ### Zugewiesenes DBMS
 
-Verknüpfung zum DBMS, das diese Datenbank verwaltet. Auswahlfeld -- die verfügbaren Werte stammen aus den DBMS-Einträgen, die auf dem aktuellen Server über die [Softwarezuweisung](software-assignment.md) installiert sind. Damit i-doit weiss, welches Datenbankmanagementsystem für diese Datenbank zuständig ist.
+Verknüpfung zum DBMS, das diese Datenbank verwaltet. Auswahlfeld -- die verfügbaren Werte stammen aus den DBMS-Einträgen, die auf dem aktuellen Server über die [Softwarezuweisung](application.md) installiert sind. Damit i-doit weiss, welches Datenbankmanagementsystem für diese Datenbank zuständig ist.
 
 ### Instanz
 

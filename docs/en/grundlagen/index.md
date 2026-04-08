@@ -34,7 +34,7 @@ Object types determine what an object is -- server, client, room, person. i-doit
 
 -   [Object type reference](objekttypen/index.md) -- All standard object types in detail
 -   [Object type configuration](objekttyp-konfiguration.md) -- Customize and configure object types
--   [Custom object types](benutzerdefinede-objekttypen.md) -- Create your own object types
+-   [Custom object types](benutzerdefinierte-objekttypen.md) -- Create your own object types
 -   [Assigning categories to object types](zurodnung-von-kategorien-zu-objekttypen.md) -- Which categories belong to which object type?
 
 ## Categories and attributes
@@ -45,5 +45,5 @@ Categories contain the actual data of an object -- IP addresses, model, location
 -   [Categories and attributes (overview)](kategorien-und-attribute.md) -- Compact overview of all fields
 -   [Attribute fields](attributfelder.md) -- Field types and their meaning
 -   [Dialog-Admin](dialog-admin.md) -- Manage and extend selection lists
--   [Custom categories](benutzerdefinede-kategorien.md) -- Create your own categories
--   [Custom counters](benutzerdefinede-zaehler.md) -- Automatic numbering
+-   [Custom categories](benutzerdefinierte-kategorien.md) -- Create your own categories
+-   [Custom counters](benutzerdefinierte-zaehler.md) -- Automatic numbering

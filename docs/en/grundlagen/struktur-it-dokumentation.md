@@ -39,7 +39,7 @@ In our example, we look at the object type group "Hardware".
 
 An object type is the grouping of all objects of the same type -- for example "Router", "Server" or "Applications". In other contexts, this is also called a "class" or in ITIL a "CI Type".
 
-i-doit already contains a large number of preconfigured object types in the standard installation. If these are not sufficient, you can [create your own object types](benutzerdefinede-objekttypen.md).
+i-doit already contains a large number of preconfigured object types in the standard installation. If these are not sufficient, you can [create your own object types](benutzerdefinierte-objekttypen.md).
 
 Each object type has an [object list](objekt-liste/index.md) that lists all assigned objects with selected attributes. As an example, we use the object list for the object type "Virtualization server".
 
@@ -65,7 +65,7 @@ Categories group thematically related attributes per object. There are three typ
 
 - **Global categories** -- can be assigned to any object type
 - **Specific categories** -- are intended for specific object types
-- **[Custom categories](benutzerdefinede-kategorien.md)** -- created by you
+- **[Custom categories](benutzerdefinierte-kategorien.md)** -- created by you
 
 Additionally, a distinction is made between single-value and multi-value categories (list categories). Some categories are backward, others serve as views. Some are permanently assigned to every object type, while others can be flexibly selected or deselected.
 
@@ -117,7 +117,7 @@ When the attributes of a category can be documented multiple times per object, i
 
 #### Custom category
 
-A category that was created by a user and configured with one or more attribute fields is marked as [custom](benutzerdefinede-kategorien.md) in i-doit.
+A category that was created by a user and configured with one or more attribute fields is marked as [custom](benutzerdefinierte-kategorien.md) in i-doit.
 
 #### Backward category
 

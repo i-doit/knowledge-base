@@ -19,4 +19,4 @@ A detailed guide can be found under [Dialog Admin](../../../grundlagen/dialog-ad
 
 - [Dialog Admin (detailed)](../../../grundlagen/dialog-admin.md)
 - [Structure of IT Documentation](../../../grundlagen/struktur-it-dokumentation.md)
-- [Custom Categories](../../verwaltung/datenstruktur/benutzerdefinede-kategorien.md)
+- [Custom Categories](../../verwaltung/datenstruktur/benutzerdefinierte-kategorien.md)

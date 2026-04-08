@@ -17,7 +17,7 @@ The **DBMS information** category (in the English UI labeled "Databases") docume
 
 Typical use cases:
 
-- **Building a database inventory**: Record all databases on a server with name, associated DBMS, and instance. Together with [Software assignment](software-assignment.md), a complete picture of the database landscape emerges.
+- **Building a database inventory**: Record all databases on a server with name, associated DBMS, and instance. Together with [Software assignment](application.md), a complete picture of the database landscape emerges.
 - **Capacity planning**: The Size and Maximum Size fields show at a glance how much storage a database currently occupies and what limit is configured. Reports on these fields warn early of capacity bottlenecks.
 - **Schema assignment**: Via the Schemas field, database schema objects (object type "Database schema") are assigned. This creates the connection to the specific [Database schema](database-assignment.md) category, where schema details such as storage engine are documented.
 - **Impact analysis**: When a database is maintained or migrated, the chain Server --> Instance --> Database --> Tables immediately shows which applications and tables are affected.
@@ -29,7 +29,7 @@ Typical use cases:
 
 ### Assigned DBMS
 
-Link to the DBMS that manages this database. Selection field -- the available values come from the DBMS entries installed on the current server via [Software assignment](software-assignment.md). This tells i-doit which database management system is responsible for this database.
+Link to the DBMS that manages this database. Selection field -- the available values come from the DBMS entries installed on the current server via [Software assignment](application.md). This tells i-doit which database management system is responsible for this database.
 
 ### Instance
 

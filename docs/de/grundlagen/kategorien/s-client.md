@@ -16,10 +16,10 @@ Typische Anwendungsfälle:
 
 - **Client-Typ dokumentieren**: Unterscheide zwischen Desktop, Laptop, Tablet, Thin Client oder anderen Formfaktoren. Das Dialog+-Feld erlaubt die Ergänzung eigener Typen – etwa `Kiosk-Terminal` oder `Ruggedized Notebook`.
 - **Tastaturlayout erfassen**: Halte fest, ob ein Gerät mit deutschem (`QWERTZ`), englischem (`QWERTY`) oder einem anderen Layout ausgestattet ist. Hilfreich beim Gerätetausch und für den IT-Support, insbesondere in internationalen Organisationen.
-- **Reporting und Filterung**: Der Report Manager kann nach Client-Typ filtern – z.B. "alle Laptops mit Windows 11" oder "alle Thin Clients im Standort Berlin". In Kombination mit der Kategorie [Modell](modell.md) und [Betriebssystem](betriebssystem.md) entsteht ein umfassendes Endgeräte-Profil.
+- **Reporting und Filterung**: Der Report Manager kann nach Client-Typ filtern – z.B. "alle Laptops mit Windows 11" oder "alle Thin Clients im Standort Berlin". In Kombination mit der Kategorie [Modell](model.md) und [Betriebssystem](operating-system.md) entsteht ein umfassendes Endgeräte-Profil.
 
 !!! note "Abgrenzung zur Kategorie Modell"
-    Die Kategorie Desktop ist spezifisch für Client-Objekte und bietet ein dediziertes Dialog+-Feld für den Client-Typ. Allgemeine Hardware-Attribute wie Hersteller und Modell gehören in die Kategorie [Modell](modell.md).
+    Die Kategorie Desktop ist spezifisch für Client-Objekte und bietet ein dediziertes Dialog+-Feld für den Client-Typ. Allgemeine Hardware-Attribute wie Hersteller und Modell gehören in die Kategorie [Modell](model.md).
 
 [![Desktop](../../assets/images/de/grundlagen/kategorien/s-client.png)](../../assets/images/de/grundlagen/kategorien/s-client.png)
 

@@ -11,7 +11,7 @@ Attribute fields are the form elements in the Web GUI of i-doit, through which y
 
 ## Overview
 
-Each editable attribute is represented by a form field -- both in standard categories and in [custom categories](benutzerdefinede-kategorien.md). Almost every attribute field can be [declared as a mandatory field and/or provided with validation options](../effizientes-dokumentieren/attributvalidierung-und-pflichtfelder.md).
+Each editable attribute is represented by a form field -- both in standard categories and in [custom categories](benutzerdefinierte-kategorien.md). Almost every attribute field can be [declared as a mandatory field and/or provided with validation options](../effizientes-dokumentieren/attributvalidierung-und-pflichtfelder.md).
 
 [![Overview](../assets/images/de/grundlagen/attributfelder/1-af.png)](../assets/images/de/grundlagen/attributfelder/1-af.png)
 

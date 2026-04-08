@@ -15,7 +15,7 @@ Die Kategorie **Datenbankzugriff** dokumentiert, welche Anwendungen oder Systemd
 Typische Anwendungsfälle:
 
 - **Abhängigkeiten sichtbar machen**: Erfasse, welche Applikationen oder Services ein bestimmtes Datenbankschema nutzen. Diese Information ist entscheidend für Change- und Incident-Management – bei einem Datenbank-Ausfall ist sofort ersichtlich, welche Anwendungen betroffen sind.
-- **Datenbank-Kette dokumentieren**: Zusammen mit den Kategorien [DBMS](s-dbms.md), [Datenbankinstanz](s-database-instance.md) und [Datenbankschema](s-database-schema.md) entsteht die vollständige Datenbank-Kette: DBMS-Software > Instanz > Schema > Zugriff. Die Kategorie Datenbankzugriff bildet dabei das letzte Glied.
+- **Datenbank-Kette dokumentieren**: Zusammen mit den Kategorien [DBMS](database-sa.md), [Datenbankinstanz](database.md) und [Datenbankschema](s-database-schema.md) entsteht die vollständige Datenbank-Kette: DBMS-Software > Instanz > Schema > Zugriff. Die Kategorie Datenbankzugriff bildet dabei das letzte Glied.
 - **Impact-Analyse im Report Manager**: Über Reports lässt sich auswerten, welche Schemas von wie vielen Anwendungen genutzt werden – hilfreich für Konsolidierungsprojekte oder Lizenzprüfungen.
 - **Service-Modellierung**: In ITSM-Szenarien können die zugreifenden Anwendungen als Teil eines IT-Service modelliert werden. Der Datenbankzugriff liefert die Verbindung zwischen Service-Komponente und Datenbank.
 
@@ -27,7 +27,7 @@ Typische Anwendungsfälle:
     3. **Datenbankschema** – ein einzelnes Schema/eine Datenbank innerhalb der Instanz
     4. **Datenbankzugriff** – die Anwendungen, die auf das Schema zugreifen
 
-    Diese Kategorie dokumentiert Stufe 4. Siehe auch: [DBMS](s-dbms.md), [Datenbankinstanz](s-database-instance.md), [Datenbankschema](s-database-schema.md).
+    Diese Kategorie dokumentiert Stufe 4. Siehe auch: [DBMS](database-sa.md), [Datenbankinstanz](database.md), [Datenbankschema](s-database-schema.md).
 
 [![Datenbankzugriff](../../assets/images/de/grundlagen/kategorien/s-database-access.png)](../../assets/images/de/grundlagen/kategorien/s-database-access.png)
 

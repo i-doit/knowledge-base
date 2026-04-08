@@ -17,7 +17,7 @@ Die Kategorie **Datenbank-Hierarchie** (im englischen UI als "DBMS information" 
 
 Typische Anwendungsfälle:
 
-- **DBMS-Instanzen inventarisieren**: Erfasse Name, Typ und Version jeder Datenbankinstanz auf einem Server. Zusammen mit der [Softwarezuweisung](software-assignment.md) entsteht ein vollständiges Bild, welches DBMS in welcher Version wo läuft.
+- **DBMS-Instanzen inventarisieren**: Erfasse Name, Typ und Version jeder Datenbankinstanz auf einem Server. Zusammen mit der [Softwarezuweisung](application.md) entsteht ein vollständiges Bild, welches DBMS in welcher Version wo läuft.
 - **Netzwerkzugang dokumentieren**: Über die Felder Port und Port-Name wird festgehalten, unter welchem Netzwerkport die Instanz erreichbar ist -- unverzichtbar für Firewall-Regeln und Monitoring-Konfigurationen.
 - **Installationspfade nachvollziehen**: Das Pfad-Feld dokumentiert, wo die Instanz im Dateisystem installiert ist. Bei Fehleranalysen oder Migrationen spart das die Suche auf dem Server.
 - **Versionsmanagement und Lifecycle**: Über Reports lässt sich auswerten, welche Server noch alte DBMS-Versionen verwenden. So lassen sich End-of-Life-Risiken frühzeitig erkennen und Upgrade-Plaene erstellen.
@@ -29,7 +29,7 @@ Typische Anwendungsfälle:
 
 ### DBMS
 
-Verknüpfung zum Datenbankmanagementsystem, das diese Instanz betreibt. Über den Objekt-Browser wird ein DBMS-Objekt (z.B. "MySQL" oder "PostgreSQL") ausgewählt. Dieses DBMS-Objekt muss vorher angelegt und über die [Softwarezuweisung](software-assignment.md) dem Server zugewiesen sein. Durch diese Verknüpfung weiss i-doit, welches DBMS-Produkt hinter der Instanz steht.
+Verknüpfung zum Datenbankmanagementsystem, das diese Instanz betreibt. Über den Objekt-Browser wird ein DBMS-Objekt (z.B. "MySQL" oder "PostgreSQL") ausgewählt. Dieses DBMS-Objekt muss vorher angelegt und über die [Softwarezuweisung](application.md) dem Server zugewiesen sein. Durch diese Verknüpfung weiss i-doit, welches DBMS-Produkt hinter der Instanz steht.
 
 ### Instanzname
 

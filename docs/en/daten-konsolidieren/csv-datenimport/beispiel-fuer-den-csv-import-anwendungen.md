@@ -51,4 +51,4 @@ For detailed instructions on the CSV import process, see [CSV Data Import](index
 - [CSV Data Import](index.md) — General CSV import documentation
 - [CSV Import Example: Workstations](beispiel-fuer-den-csv-import-arbeitsplaetze.md)
 - [CSV Import Example: Licenses](beispiel-fuer-den-csv-import-lizenzen.md)
-- [CSV Import Example: Creating Locations](beispiel-fuer-den-csv-import-standorte-firstllen.md)
+- [CSV Import Example: Creating Locations](beispiel-fuer-den-csv-import-standorte-erstellen.md)

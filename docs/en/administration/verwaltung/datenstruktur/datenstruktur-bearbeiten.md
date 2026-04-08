@@ -32,13 +32,13 @@ You can hide unneeded groups via the checkboxes or the ==Customize== button. At 
 
 The middle column shows the ==object types== of the selected group. Grayed-out object types are already assigned to other groups but can be reassigned.
 
-Here you can also create [custom object types](../../../grundlagen/benutzerdefinede-objekttypen.md). For comprehensive configuration, we recommend the [Object Type Configuration](../../../grundlagen/benutzerdefinede-objekttypen.md).
+Here you can also create [custom object types](../../../grundlagen/benutzerdefinierte-objekttypen.md). For comprehensive configuration, we recommend the [Object Type Configuration](../../../grundlagen/benutzerdefinierte-objekttypen.md).
 
 ### Column 3: Categories
 
 Click on an object type in the middle column to activate the right column. Here you see the assigned categories and change the assignments via the checkboxes.
 
-The ==Create custom categories== button takes you directly to the function for creating [custom categories](../../../grundlagen/benutzerdefinede-kategorien.md).
+The ==Create custom categories== button takes you directly to the function for creating [custom categories](../../../grundlagen/benutzerdefinierte-kategorien.md).
 
 ## Editing data structure profiles
 

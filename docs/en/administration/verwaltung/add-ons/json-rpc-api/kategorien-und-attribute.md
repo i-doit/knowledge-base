@@ -19,4 +19,4 @@ Detailed API documentation can be found under [JSON-RPC API](../../../../i-doit-
 
 - [JSON-RPC API (detailed)](../../../../i-doit-add-ons/api/index.md)
 - [Structure of IT Documentation](../../../../grundlagen/struktur-it-dokumentation.md)
-- [Custom Categories](../../datenstruktur/benutzerdefinede-kategorien.md)
+- [Custom Categories](../../datenstruktur/benutzerdefinierte-kategorien.md)

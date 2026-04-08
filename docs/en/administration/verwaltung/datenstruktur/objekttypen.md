@@ -13,10 +13,10 @@ You can reach this setting under **Administration → Data Structure → Object 
 
 [![Object Types](../../../assets/images/de/administration/verwaltung/datenstruktur/objekttypen.png)](../../../assets/images/de/administration/verwaltung/datenstruktur/objekttypen.png)
 
-A detailed guide can be found under [Custom Object Types](../../../grundlagen/benutzerdefinede-objekttypen.md).
+A detailed guide can be found under [Custom Object Types](../../../grundlagen/benutzerdefinierte-objekttypen.md).
 
 ## See also
 
-- [Custom Object Types (detailed)](../../../grundlagen/benutzerdefinede-objekttypen.md)
+- [Custom Object Types (detailed)](../../../grundlagen/benutzerdefinierte-objekttypen.md)
 - [Object Type Configuration](../../../grundlagen/objekttyp-konfiguration.md)
-- [Custom Categories](benutzerdefinede-kategorien.md)
+- [Custom Categories](benutzerdefinierte-kategorien.md)

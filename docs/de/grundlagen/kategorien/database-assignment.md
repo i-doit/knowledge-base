@@ -14,7 +14,7 @@ Die Kategorie **Datenbankschema** (im englischen UI als "Database assignment" be
     Anders als die globalen Datenbank-Kategorien ([Datenbank-Hierarchie](database.md), [DBMS-Informationen](database-sa.md), [Datenbanktabellen](database-table.md)) ist diese Kategorie **nicht** auf Servern zu finden, sondern auf Objekten vom Typ "Datenbankschema". Ein Schema-Objekt repräsentiert z.B. das Schema `public` in PostgreSQL oder `dbo` in SQL Server. Die Verknüpfung zurück zur Datenbank-Kette erfolgt über das Feld "Datenbankinstanz".
 
 !!! tip "Wann braucht man Schema-Objekte?"
-    Schema-Objekte lohnen sich, wenn eine differenzierte Dokumentation nötig ist -- etwa bei Datenbanken mit mehreren Schemata (PostgreSQL, Oracle), bei Compliance-Anforderungen (welches Schema enthält personenbezogene Daten?) oder wenn Anwendungen über die Kategorie [Softwarezuweisung](software-assignment.md) gezielt einem Schema zugeordnet werden sollen.
+    Schema-Objekte lohnen sich, wenn eine differenzierte Dokumentation nötig ist -- etwa bei Datenbanken mit mehreren Schemata (PostgreSQL, Oracle), bei Compliance-Anforderungen (welches Schema enthält personenbezogene Daten?) oder wenn Anwendungen über die Kategorie [Softwarezuweisung](application.md) gezielt einem Schema zugeordnet werden sollen.
 
 ## Verwendung
 

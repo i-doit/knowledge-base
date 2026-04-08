@@ -15,7 +15,7 @@ These fields are used in many [categories](../glossar.md) of the [IT documentati
 
 You can find the Dialog-Admin under **Administration → Predefined content → Dialog-Admin**. In the left navigation tree, all [attributes](../glossar.md) of the **Dialog+** field type are sorted alphabetically by their associated categories.
 
-If you have created a [custom category](benutzerdefinede-kategorien.md) with a **Dialog+** attribute, this attribute also appears in the navigation tree -- under the **Custom Dialog+** section.
+If you have created a [custom category](benutzerdefinierte-kategorien.md) with a **Dialog+** attribute, this attribute also appears in the navigation tree -- under the **Custom Dialog+** section.
 
 [![custom-dialog+](../assets/images/de/grundlagen/dialog-admin/1-da.png)](../assets/images/de/grundlagen/dialog-admin/1-da.png)
 

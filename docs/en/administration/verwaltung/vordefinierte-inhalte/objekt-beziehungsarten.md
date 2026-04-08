@@ -17,4 +17,4 @@ You can reach this setting under **Administration → Predefined Content → Obj
 
 - [Object Relationships](../../../grundlagen/objekt-beziehungen.md)
 - [Structure of IT Documentation](../../../grundlagen/struktur-it-dokumentation.md)
-- [Custom Categories](../../verwaltung/datenstruktur/benutzerdefinede-kategorien.md)
+- [Custom Categories](../../verwaltung/datenstruktur/benutzerdefinierte-kategorien.md)

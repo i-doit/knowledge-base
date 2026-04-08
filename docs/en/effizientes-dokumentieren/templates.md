@@ -54,6 +54,6 @@ You can also access the functions for creating new templates and creating object
 
 ## Default Template in the Object Type Configuration
 
-In the [object type configuration](../grundlagen/benutzerdefinede-objekttypen.md), you can select a default template. Any template you have created can be used here. If you specify a default template, all newly created objects will be populated according to this template. Of course, you can adjust objects created this way at any time and change the populated values.
+In the [object type configuration](../grundlagen/benutzerdefinierte-objekttypen.md), you can select a default template. Any template you have created can be used here. If you specify a default template, all newly created objects will be populated according to this template. Of course, you can adjust objects created this way at any time and change the populated values.
 
 [![templates-default](../assets/images/de/effizientes-dokumentieren/templates/7-temp.png)](../assets/images/de/effizientes-dokumentieren/templates/7-temp.png)

@@ -20,7 +20,7 @@ The configuration of the respective object list is accessed via the [![system-se
 
 Similar to the [Report Manager](../../auswertungen/report-manager.md), columns are defined by selecting a category and the attribute contained therein.
 
-First, a [global, specific](../struktur-it-dokumentation.md) or [custom](../benutzerdefinede-kategorien.md) category is selected in the drop-down menu. A text field allows filtering the list of categories.
+First, a [global, specific](../struktur-it-dokumentation.md) or [custom](../benutzerdefinierte-kategorien.md) category is selected in the drop-down menu. A text field allows filtering the list of categories.
 
 When a category is selected, the attributes that can be defined as columns appear. Clicking the [![plus](../../assets/images/de/grundlagen/listenansicht-konfigurieren/3-lk.svg)](../../assets/images/de/grundlagen/listenansicht-konfigurieren/3-lk.svg) button adds the attribute to the selected attributes.
 

@@ -30,7 +30,7 @@ The following permissions are available:
 
 ## Additional Configuration
 
-The add-on makes the [category](../../grundlagen/struktur-it-dokumentation.md) "Documents" available for all [object types](../../grundlagen/struktur-it-dokumentation.md). You link the category to the desired object types via the [object type configuration](../../grundlagen/benutzerdefinede-objekttypen.md) or via [Edit data structure](../../administration/verwaltung/datenstruktur/datenstruktur-bearbeiten.md). This way, only the object types you have specified appear during document creation.
+The add-on makes the [category](../../grundlagen/struktur-it-dokumentation.md) "Documents" available for all [object types](../../grundlagen/struktur-it-dokumentation.md). You link the category to the desired object types via the [object type configuration](../../grundlagen/benutzerdefinierte-objekttypen.md) or via [Edit data structure](../../administration/verwaltung/datenstruktur/datenstruktur-bearbeiten.md). This way, only the object types you have specified appear during document creation.
 
 !!! note "Documents Category"
     For a document to be created for an object, the "Documents" category must be linked to the object type. If the object type does not have this category, no documents can be created for the objects it contains, as they will not appear in the selection.

@@ -17,7 +17,7 @@ Every uploaded file in i-doit is automatically an object. This has the advantage
 *   **Files** and
 *   **Emergency Plan**.
 
-These can be extended with additional [custom object types](../grundlagen/benutzerdefinede-objekttypen.md), for example for operating manuals.
+These can be extended with additional [custom object types](../grundlagen/benutzerdefinierte-objekttypen.md), for example for operating manuals.
 
 The actual functionality (uploading, linking, etc.) can be found in the [category folder](../grundlagen/struktur-it-dokumentation.md) **Files**. This consists of the following subcategories:
 
@@ -25,7 +25,7 @@ The actual functionality (uploading, linking, etc.) can be found in the [categor
 *   **File Versions**: Any number of versions can exist for each file. Re-uploading the file creates a new version.
 *   **Assigned Objects**: Which objects is this file linked to? (view only, no functionality)
 
-The **Files** category folder belongs to the [specific categories](../grundlagen/struktur-it-dokumentation.md) and can be assigned to any object type via the [object type configuration](../grundlagen/benutzerdefinede-objekttypen.md).
+The **Files** category folder belongs to the [specific categories](../grundlagen/struktur-it-dokumentation.md) and can be assigned to any object type via the [object type configuration](../grundlagen/benutzerdefinierte-objekttypen.md).
 
 [![Current file](../assets/images/de/anwendungsfaelle/dateien-hochladen-und-verknuepfen/1-dhuv.png)](../assets/images/de/anwendungsfaelle/dateien-hochladen-und-verknuepfen/1-dhuv.png)
 
@@ -41,7 +41,7 @@ Several [reverse categories](../grundlagen/struktur-it-dokumentation.md) handle 
 *   Manual assignment
 *   Emergency plan assignment
 
-These [global categories](../grundlagen/struktur-it-dokumentation.md) can be [assigned to any object type](../grundlagen/benutzerdefinede-objekttypen.md) and serve similar functions, namely assigning files.
+These [global categories](../grundlagen/struktur-it-dokumentation.md) can be [assigned to any object type](../grundlagen/benutzerdefinierte-objekttypen.md) and serve similar functions, namely assigning files.
 
 [![Global categories](../assets/images/de/anwendungsfaelle/dateien-hochladen-und-verknuepfen/5-dhuv.png)](../assets/images/de/anwendungsfaelle/dateien-hochladen-und-verknuepfen/5-dhuv.png)
 
@@ -67,7 +67,7 @@ The **File Browser** lists all available files. These can be classified via the 
 Linking Files in Custom Categories
 ----------------------------------------------------
 
-To link a file to an object, you are not limited to the standard categories of i-doit. In a [custom category](../grundlagen/benutzerdefinede-kategorien.md), you can add attributes with the **File Browser** field type.
+To link a file to an object, you are not limited to the standard categories of i-doit. In a [custom category](../grundlagen/benutzerdefinierte-kategorien.md), you can add attributes with the **File Browser** field type.
 
 !!! success "Documents Module"
 

@@ -14,7 +14,7 @@ The **Database schema** category (in the English UI labeled "Database assignment
     Unlike the global database categories ([Database hierarchy](database.md), [DBMS information](database-sa.md), [Database tables](database-table.md)), this category is **not** found on servers but on objects of type "Database schema". A schema object represents e.g. the `public` schema in PostgreSQL or `dbo` in SQL Server. The link back to the database chain is established via the "Database instance" field.
 
 !!! tip "When do you need schema objects?"
-    Schema objects are worthwhile when differentiated documentation is needed -- for example with databases that have multiple schemas (PostgreSQL, Oracle), for compliance requirements (which schema contains personal data?), or when applications should be specifically assigned to a schema via the [Software assignment](software-assignment.md) category.
+    Schema objects are worthwhile when differentiated documentation is needed -- for example with databases that have multiple schemas (PostgreSQL, Oracle), for compliance requirements (which schema contains personal data?), or when applications should be specifically assigned to a schema via the [Software assignment](application.md) category.
 
 ## Usage
 

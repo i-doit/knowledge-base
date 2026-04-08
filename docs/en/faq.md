@@ -181,7 +181,7 @@ Keep the API key secret, restrict access by IP, create a dedicated API user with
 
 ### Can I create custom object types and categories?
 
-Yes. Custom object types: [Custom object types](grundlagen/benutzerdefinede-objekttypen.md). Custom categories: [Custom categories](grundlagen/benutzerdefinede-kategorien.md). Configuring existing object types: [Object type configuration](grundlagen/objekttyp-konfiguration.md).
+Yes. Custom object types: [Custom object types](grundlagen/benutzerdefinierte-objekttypen.md). Custom categories: [Custom categories](grundlagen/benutzerdefinierte-kategorien.md). Configuring existing object types: [Object type configuration](grundlagen/objekttyp-konfiguration.md).
 
 ### How do I create a report?
 
