@@ -1,3 +1,10 @@
+---
+title: "Risikoanalyse nach IT-Grundschutz"
+description: "Teilweise beruhen die nötigen Informationen auf zusätzlich zu dokumentierenden Daten, teilweise auf Daten, die bereits im Rahmen der Vorgehensweise mit..."
+icon:
+status:
+lang: de
+---
 # Risikoanalyse nach IT-Grundschutz
 
 Teilweise beruhen die nötigen Informationen auf zusätzlich zu dokumentierenden Daten, teilweise auf Daten, die bereits im Rahmen der [Vorgehensweise mit VIVA](./vorgehensweise-mit-viva.md) nach BSI-Standard 100-2 erhoben wurden.

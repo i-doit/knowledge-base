@@ -6,17 +6,19 @@ status: published
 lang: de
 ---
 
+[![Benachrichtigungen](../assets/images/de/auswertungen/benachrichtigungen.png)](../assets/images/de/auswertungen/benachrichtigungen.png)
+
 ## Voraussetzung
 
-Damit Benachrichtigungen überhaupt verschickt werden können, muss [SMTP Konfiguriert](../administration/verwaltung/import-und-schnittstellen/smtp-konfiguration-email.md) werden. Außerdem ist es notwendig die den [i-doit console utility](../automatisierung-und-integration/cli/index.md) Befehl regelmäßig auszuführen.
+Damit Benachrichtigungen überhaupt verschickt werden können, muss [SMTP konfiguriert](../administration/verwaltung/import-und-schnittstellen/smtp-konfiguration-email.md) werden. Außerdem ist es notwendig, den [i-doit console utility](../automatisierung-und-integration/cli/index.md) Befehl regelmäßig auszuführen.
 
 ## Benachrichtigungen
 
-Das Benachrichtigungsmodul ist ein leistungsstarkes Werkzeug, um Ihre IT-Dokumentation proaktiv zu überwachen. Anstatt reaktiv auf Probleme zu stoßen, können Sie sich automatisch per E-Mail informieren lassen, wenn bestimmte Ereignisse eintreten. So verpassen Sie keine ablaufenden Verträge, Zertifikate oder Wartungsfristen mehr und können die Datenqualität nachhaltig sichern.
+Das Benachrichtigungsmodul ist ein leistungsstarkes Werkzeug, um deine IT-Dokumentation proaktiv zu überwachen. Anstatt reaktiv auf Probleme zu stoßen, kannst du dich automatisch per E-Mail informieren lassen, wenn bestimmte Ereignisse eintreten. So verpasst du keine ablaufenden Verträge, Zertifikate oder Wartungsfristen mehr und kannst die Datenqualität nachhaltig sichern.
 
 In diesem Artikel beschreiben wir den gesamten Prozess von der Auswahl der passenden **[Benachrichtigungsart](#benachrichtigungsarten)** über die detaillierte **[Einrichtung](#einrichtung-einer-benachrichtigung)** und Anpassung der **[E-Mail-Vorlagen](#e-mail-vorlagen-anpassen)** bis hin zur automatisierten Ausführung über die **[i-doit console utility](#konfiguration-des-aufrufs-mit-cli)**.
 
-!!! info "Ein Praxisbeispiel für Benachrichtigungen und Eskalationsstufen finden Sie auch auf unserem [Blog](https://www.i-doit.com/blog/benachrichtigungen-und-eskalationsstufen-mit-i-doit/)"
+!!! info "Ein Praxisbeispiel für Benachrichtigungen und Eskalationsstufen findest du auch auf unserem [Blog](https://www.i-doit.com/blog/benachrichtigungen-und-eskalationsstufen-mit-i-doit/)"
 
 ---
 
@@ -47,7 +49,7 @@ Die Konfiguration einer neuen Benachrichtigung erfolgt durch einen Klick auf den
 
 ### Allgemeine Einstellungen
 
-Hier definieren Sie das grundsätzliche Verhalten der Benachrichtigung.
+Hier definierst du das grundsätzliche Verhalten der Benachrichtigung.
 
 | Einstellung                                     | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | :---------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -64,20 +66,20 @@ Hier definieren Sie das grundsätzliche Verhalten der Benachrichtigung.
 
 ### Domänen (Was wird geprüft?)
 
-In diesem Bereich legen Sie fest, welche Objekte von der Benachrichtigung überwacht werden sollen.
+In diesem Bereich legst du fest, welche Objekte von der Benachrichtigung überwacht werden sollen.
 
 | Domäne                              | Beschreibung                                                                                                                                                                                 |
 | :---------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Objekte**                         | Direkte Auswahl eines oder mehrerer spezifischer Objekte.                                                                                                                                    |
 | **Objekttypen**                     | Überwacht alle Objekte eines oder mehrerer ausgewählter Objekttypen.                                                                                                                         |
-| **Reports**                         | Die flexibelste Methode: Verwenden Sie einen Report aus dem Report-Manager, um den Objekt-Scope präzise zu definieren. Beispiel: Nur Lizenzen überwachen, deren Stückpreis über 150 € liegt. |
+| **Reports**                         | Die flexibelste Methode: Verwende einen Report aus dem Report-Manager, um den Objekt-Scope präzise zu definieren. Beispiel: Nur Lizenzen überwachen, deren Stückpreis über 150 € liegt. |
 | **Nur Objekte mit Status "Normal"** | Eine zusätzliche Filteroption, die nur Objekte im Zustand "Normal" berücksichtigt und andere (z. B. "archiviert", "gelagert") ignoriert.                                                     |
 
 !!! info "Je nach Benachrichtigungstyp sind die Domänen eingeschränkt. Eine "Lizenzablauf"-Benachrichtigung kann beispielsweise nur auf Lizenz-Objekte angewendet werden."
 
 ### Empfänger (Wer wird benachrichtigt?)
 
-Hier konfigurieren Sie, wer die Benachrichtigungs-E-Mail erhalten soll.
+Hier konfigurierst du, wer die Benachrichtigungs-E-Mail erhalten soll.
 
 | Empfänger                                  | Beschreibung                                                                                                                                                                                                                                 |
 | :----------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -98,7 +100,7 @@ Die Strategie zur Auflösung von Personengruppen bietet folgende Optionen:
 
 ## E-Mail-Vorlagen anpassen
 
-Im linken Navigationsbaum unter **E-Mail-Vorlagen** können Sie den Inhalt der Benachrichtigungen global anpassen. Die Auswahl der Sprache (Deutsch/Englisch) richtet sich nach der im Kontaktobjekt eingestellten Sprache des Empfängers.
+Im linken Navigationsbaum unter **E-Mail-Vorlagen** kannst du den Inhalt der Benachrichtigungen global anpassen. Die Auswahl der Sprache (Deutsch/Englisch) richtet sich nach der im Kontaktobjekt eingestellten Sprache des Empfängers.
 
 | Einstellungen         | Beschreibung                                                                                                                                           |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |

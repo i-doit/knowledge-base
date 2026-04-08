@@ -8,38 +8,36 @@ lang: de
 
 # Documents
 
-Mit dem i-doit [Add-on](../index.md) "Dokumente" können Freitext, Textelemente und Inhalte der Dokumentation in Vorlagen kombiniert werden um mit diesen vollständige Dokumente erstellen. Auf diesem Weg lassen sich bequem Betriebshandbücher, Übergabeprotokolle, Notfallpläne und vieles mehr erzeugen und exportieren. Diese Übersichten lassen es so zu, dass die Inhalte der Dokumentation bequem aufgefunden, verwendet und weitergegeben werden können.
+Mit dem i-doit [Add-on](../index.md) "Dokumente" kombinierst du Freitext, Textelemente und Inhalte der Dokumentation in Vorlagen, um daraus vollständige Dokumente zu erstellen. So erzeugst und exportierst du bequem Betriebshandbücher, Übergabeprotokolle, Notfallpläne und vieles mehr. Die Inhalte der Dokumentation lassen sich damit einfach auffinden, verwenden und weitergeben.
 
-## Die Dokumentation des Add-ons ist in die folgenden Bereiche unterteilt
+[![Documents](../../assets/images/de/i-doit-add-ons/documents/documents-uebersicht.png)](../../assets/images/de/i-doit-add-ons/documents/documents-uebersicht.png)
 
--   [Vorbereitung (Add-on Dokumente)](./vorbereitung-add-on-dokumente.md)
+## Bereiche der Dokumentation
 
-In der Vorbereitung wird beschrieben, wie das Add-on installiert und aktualisiert werden kann. Außerdem sind sämtliche Möglichkeiten zur Konfiguration ausführlich beschrieben, sodass sich die Funktionen des Add-ons optimal nutzen lassen.
+- **[Vorbereitung (Add-on Dokumente)](./vorbereitung-add-on-dokumente.md)**
+    Hier erfährst du, wie du das Add-on installierst und aktualisierst. Außerdem sind sämtliche Konfigurationsoptionen beschrieben, damit du die Funktionen des Add-ons optimal nutzen kannst.
 
--   [Dokumentenvorlagen erstellen & bearbeiten](./dokumentenvorlagen.md)
+- **[Dokumentenvorlagen erstellen & bearbeiten](./dokumentenvorlagen.md)**
+    Dokumentenvorlagen sind das zentrale Element, auf dessen Basis du Dokumente erstellst. Hier wird beschrieben, wie du Vorlagen erstellst, bearbeitest und weiterverwendest -- inklusive aller Parameter und Möglichkeiten des WYSIWYG-Editors.
 
-Die Dokumentenvorlagen sind das zentrale Element, auf deren Basis Dokumente erstellt werden. Hier wird beschrieben, wie diese Vorlagen erstellt, bearbeitet und weiterverwendet werden können. Es wird auf sämtliche Parameter der Vorlagen, die Möglichkeiten des WYSIWYG Editors eingegangen.
+- **[Platzhalter im Add-on Dokumente](./platzhalter-im-add-on-dokumente.md)**
+    Dynamische Inhalte der Dokumentation bindest du mit Platzhaltern ein. Hier findest du alle vorhandenen Platzhalter und eine Anleitung zu ihrer Verwendung.
 
--   [Platzhalter im Add-on Dokumente](./platzhalter-im-add-on-dokumente.md)
-
-Die Einbindung dynamischer Inhalte der Dokumentation erfolgt mit Platzhaltern. Hier werden alle vorhandenen Platzhalter und wie diese zu verwenden sind ausführlich beschrieben.
-
--   [Dokumente erzeugen](./dokumenterstellung.md)
-
-Erstellte Vorlagen können genutzt werden, um für Objekte in der Dokumentation Dokumente zu erstellen. In diesem Bereich steht eine Beschreibung zur Verfügung, die ausführlich auf die Erstellung, Aktualisierung und den Export dieser Dokumente eingeht.
+- **[Dokumente erzeugen](./dokumenterstellung.md)**
+    Erstellte Vorlagen nutzt du, um für Objekte in der Dokumentation Dokumente zu erstellen. Dieser Bereich beschreibt die Erstellung, Aktualisierung und den Export von Dokumenten.
 
 ## CLI Console Commands und Optionen
 
 | Command                                 | Interne Beschreibung                                     |
 | --------------------------------------- | -------------------------------------------------------- |
-| [compile-documents](#compile-documents) | Erlaubt es dir ein oder mehrere Dokumente zu kompilieren |
+| [compile-documents](#compile-documents) | Kompiliert ein oder mehrere Dokumente |
 | documents                               | Dokumente und Revisionen erzeugen und exportieren        |
 
 !!! info "Diese Befehle sind erst nach Installation des Documents-Add-ons verfügbar."
 
 ### compile-documents
 
-Erlaubt es dir ein oder mehrere Dokumente zu kompilieren
+Kompiliert ein oder mehrere Dokumente.
 
 **Optionen:**
 
@@ -64,7 +62,7 @@ sudo -u www-data php console.php CompileDocuments --user admin --password admin 
 
 ### documents
 
-Ermöglicht die Erstellung von Revisionen oder den Export eines oder mehrerer Dokumente
+Erstellt Revisionen oder exportiert ein oder mehrere Dokumente.
 
 **Optionen:**
 

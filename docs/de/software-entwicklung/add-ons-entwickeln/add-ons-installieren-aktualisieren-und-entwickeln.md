@@ -1,3 +1,10 @@
+---
+title: "Add-ons installieren, aktualisieren und aktivieren"
+description: "Damit ein Add-on in i-doit installiert, aktualisiert und aktiviert werden kann, ist eine bestimmte Ordnerhierarchie einzuhalten."
+icon:
+status:
+lang: de
+---
 # Add-ons installieren, aktualisieren und aktivieren
 
 Damit ein Add-on in i-doit installiert, aktualisiert und aktiviert werden kann, ist eine bestimmte Ordnerhierarchie einzuhalten. Innerhalb des Add-on-Ordners werden Dateien, wie z.B. init.php, vorausgesetzt, um einen einheitlichen Programmablauf zu gewährleisten.

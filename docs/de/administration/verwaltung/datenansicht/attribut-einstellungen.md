@@ -1,15 +1,21 @@
+---
+title: Attribut Einstellungen
+description: "Mit den Attribut Einstellungen legst du Pflichtfelder fest, definierst erweiterte Inhaltsvorgaben und steuerst die Sichtbarkeit von Attributen."
+icon:
+status:
+lang: de
+---
 # Attribut Einstellungen
 
-Die Attribut Einstellungen finden Sie in der [Datenansicht](../index.md).
-Mit dieser Funktion können Sie Pflichtfelder festlegen und verwalten. Sie können auch erweiterte Inhaltsdefinitionen für die jeweiligen Pflichtfelder festlegen und deren Sichtbarkeit einstellen.
+Mit den Attribut Einstellungen legst du Pflichtfelder fest, definierst erweiterte Inhaltsvorgaben und steuerst die Sichtbarkeit von Attributen. Du findest diese Funktion in der [Datenansicht](../index.md).
 
 [![Attribut Einstellungen](../../../assets/images/de/administration/verwaltung/datenansicht/attribut-einstellungen/as-1.png)](../../../assets/images/de/administration/verwaltung/datenansicht/attribut-einstellungen/as-1.png)
 
 ## Attributsichtbarkeit
 
 Die Sichtbarkeit von [Attributen](../../../grundlagen/attributfelder.md) kann in den Attribut Einstellungen angepasst werden.
-Es ist damit möglich bestimmte Attribute in [Kategorien](../../../grundlagen/kategorien-und-attribute.md) und/oder auf der [Übersichtsseite von Objekttypen](../../../grundlagen/objekttypen.md) aus- oder einzublenden.
-Klicken Sie dafür beim jeweiligen Attributnamen auf **Bearbeiten** und wählen Sie dort die gewünschte Einstellung unter **Sichtbarkeit** aus.
+Es ist damit möglich bestimmte Attribute in [Kategorien](../../../grundlagen/kategorien-und-attribute.md) und/oder auf der [Übersichtsseite von Objekttypen](../../../grundlagen/objekttyp-konfiguration.md) aus- oder einzublenden.
+Klicke dafür beim jeweiligen Attributnamen auf **Bearbeiten** und wähle dort die gewünschte Einstellung unter **Sichtbarkeit** aus.
 
 Die konfigurierte Sichtbarkeit wird für alle Benutzer übernommen.
 
@@ -23,13 +29,13 @@ Die [Rechte](../berechtigungen.md) zur Ansicht und zum Bearbeiten der Attributsi
 
 ## Verwendung
 
-Wenn ein Attribut über die **Hinzufügen** Schaltfläche ergänzt wird, können alle Kategorien (global, spezifisch und benutzerdefiniert) ausgewählt werden. Wenn diese Schaltfläche verwendet wird, wird die Kategorie als unterster Eintrag hinzugefügt.
+Über die Schaltfläche **Hinzufügen** wählst du Kategorien aus (global, spezifisch oder benutzerdefiniert). Die neue Kategorie wird als unterster Eintrag hinzugefügt.
 
-Um die Einstellungen zu editieren, wird das Stift Symbol verwendet, mit dem die Sichtbarkeit und die Validierung eingestellt werden kann. Standardmäßig ist die Sichtbarkeit für alle Attribute aktiviert<br>
+Über das Stift-Symbol editierst du die Sichtbarkeit und Validierung eines Attributs. Standardmäßig sind alle Attribute sichtbar.
 
 [![button-angezeigt](../../../assets/images/de/administration/verwaltung/datenansicht/attribut-einstellungen/as-4.png)](../../../assets/images/de/administration/verwaltung/datenansicht/attribut-einstellungen/as-4.png)<br>
 In diesem Zustand ist die Sichtbarkeit auf der Übersichtsseite mit **Sichtbar**  beschriftet.
-Wenn Sie die Sichtbarkeit auf **Versteckt** setzen, wird auch die Anzeige angepasst<br>
+Wenn du die Sichtbarkeit auf **Versteckt** setzt, wird auch die Anzeige angepasst<br>
 [![button-ausgeblendet](../../../assets/images/de/administration/verwaltung/datenansicht/attribut-einstellungen/as-5.png)](../../../assets/images/de/administration/verwaltung/datenansicht/attribut-einstellungen/as-5.png)<br>
 
 **Objekt Bezeichnung**, **Zustand** und **CMDB-Status** können **nicht** ausgeblendet werden. In den entsprechenden Spalten steht ein Hinweis "Kann nicht versteckt werden".
@@ -47,6 +53,6 @@ Durch eine Ja/Nein-Auswahl wird diese Änderung bestätigt oder verworfen. -->
 
 Die dritte Auswahl erlaubt es, die ausgewählten Attribute nur auf Übersichtsseiten auszublenden, in den regulären Kategorien werden diese Attribute jedoch weiterhin angezeigt. Diese wird auf der Übersichtsseite auch so beschriftet:
 
-[![button-auf-uebersicht-ausgeblendet](../../../assets/images/de/administration/verwaltung/datenansicht/attribut-einstellungen/as-6.png)](../../../assets/images/de/administration/verwaltung/datenansicht/attribut-einstellungen/as-1.png)
+[![button-auf-übersicht-ausgeblendet](../../../assets/images/de/administration/verwaltung/datenansicht/attribut-einstellungen/as-6.png)](../../../assets/images/de/administration/verwaltung/datenansicht/attribut-einstellungen/as-1.png)
 
-Zuletzt können wir unerwünschte Einträge nun auch wieder löschen indem wir diese auswählen und auf **Entfernen** drücken.
+Unerwünschte Einträge entfernst du, indem du sie auswählst und auf **Entfernen** klickst.

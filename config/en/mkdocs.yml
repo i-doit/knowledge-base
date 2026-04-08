@@ -121,10 +121,10 @@ extra:
       icon: fontawesome/brands/github
   alternate:
     - name: English
-      link: /en/
+      link: https://kb.i-doit.com/en/
       lang: en
     - name: Deutsch
-      link: /de/
+      link: https://kb.i-doit.com/de/
       lang: de
   status:
     new: Recently added

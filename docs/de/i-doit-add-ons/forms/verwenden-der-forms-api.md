@@ -1,6 +1,6 @@
 ---
 title: Verwendung der Forms API
-description: Verwendung der Forms API
+description: "Das Forms-Addon besteht aus einem i-doit-kompatiblen Add-on und einer Backend-Applikation."
 icon:
 status:
 lang: de
@@ -10,22 +10,18 @@ lang: de
 
 ## Einführung
 
-Das Forms-Addon besteht aus einem i-doit kompatiblen Add-on und einer Backend-Applikation. Das Backend ist hierbei verantwortlich für die Datenhaltung und kann über eine
+Das Forms-Addon besteht aus einem i-doit-kompatiblen Add-on und einer Backend-Applikation. Das Backend ist für die Datenhaltung verantwortlich und wird über eine REST-API bedient.
 
-REST-API bedient werden. Es besteht weiterhin die Möglichkeit i-doit als Proxy zu verwenden, um mit dem Forms-Backend zu kommunizieren. Dies setzt jedoch eine valide
-Benutzersession in i-doit voraus. Sofern dies nicht gegeben ist kann die Forms-Backend-API auch direkt angesprochen werden. Dieses Dokument geht von einer direkten Kommunikation aus.
+Du kannst i-doit als Proxy verwenden, um mit dem Forms-Backend zu kommunizieren. Das setzt jedoch eine valide Benutzersession in i-doit voraus. Alternativ sprichst du die Forms-Backend-API direkt an. Dieses Dokument geht von einer direkten Kommunikation aus.
 
-> Es ist zu beachten, dass das Backend keinerlei logische Validierungen enthält. Diese Aufgabe übernimmt ausschließlich das Frontend.
-> Eine unmittelbare Nutzung der API bringt daher einen kompletten Verzicht auf Kontrollstrukturen mit sich.
-> Dies sollte bei einer derartigen Nutzung daher immer beachtet werden.
+!!! warning "Keine serverseitige Validierung"
+    Das Backend enthält keinerlei logische Validierungen -- diese Aufgabe übernimmt ausschließlich das Frontend. Bei einer direkten API-Nutzung verzichtest du vollständig auf Kontrollstrukturen. Beachte das bei der Nutzung.
 
-Es muss ferner berücksichtigt werden, dass für die Nutzung von i-doit Attributen zusätzlich die Forms-Addon-API vorausgesetzt wird, um auf essentielle Attributinformationen
-zuzugreifen.
+Für die Nutzung von i-doit-Attributen setzt du zusätzlich die Forms-Addon-API voraus, um auf essentielle Attributinformationen zuzugreifen.
 
 ## Authentifizierung
 
-Die Authentifizierung gegen das Forms-Backend erfolgt auf Basis von Benutzername und API Schlüssel. Bei diesen Informationen geht es um eben jene Konfigurationsparameter,
-die auch schon in der i-doit Konfiguration hinterlegt wurden:
+Die Authentifizierung gegen das Forms-Backend erfolgt mit Benutzername und API-Schlüssel -- dieselben Konfigurationsparameter, die du in der i-doit-Konfiguration hinterlegt hast:
 
 ```
 POST http://localhost:3000/login
@@ -37,7 +33,7 @@ Content-Type: application/json
 }
 ```
 
-Bei einer erfolgreichen Authentifizierung erhält man anschließend einen JSON Web Token:
+Bei erfolgreicher Authentifizierung erhältst du einen JSON Web Token:
 
 ```
 {
@@ -45,15 +41,14 @@ Bei einer erfolgreichen Authentifizierung erhält man anschließend einen JSON W
 }
 ```
 
-Der Token muss fortan in jedem Request angegeben werden, sofern Endpunkte angesprochen werden, die eine Authentifizierung voraussetzen. Dies erfolgt über den Authorization Header. Im Folgenden ein Beispiel:
+Den Token gibst du fortan in jedem Request im Authorization-Header an, sofern der Endpunkt eine Authentifizierung voraussetzt. Beispiel:
 
 ```
 GET http://localhost:3000/api/form
 Authorization: bearer {JWT_TOKEN}
 ```
 
-Standardmäßig hat ein Token nach seiner Erstellung eine Gültigkeit von 60 Minuten. Nach Ablauf dieser Zeit verliert es seine Gültigkeit und es muss ein erneutes Login  
-erfolgen.
+Ein Token ist standardmäßig 60 Minuten gültig. Nach Ablauf musst du dich erneut einloggen.
 
 ## Endpunkte
 
@@ -208,7 +203,7 @@ Die Rückgabe sieht beispielhaft, wie folgt aus:
 
 ### DELETE /api/form/{ID}
 
-Über das DELETE Verb kann ein bestimmtes Form gelöscht werden. Die Rückgabe enthält die Formular-Daten.
+Über das DELETE-Verb löschst du ein bestimmtes Formular. Die Rückgabe enthält die Formular-Daten.
 
 ```
 DELETE http://localhost:3000/api/form/6245bf4f36f695945b3df9be
@@ -217,11 +212,11 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWU2YThlN
 
 ### PUT /api/form/{ID}
 
-Dieser Endpunkt ermöglicht das Bearbeiten eines Formulars. Hierbei müssen im JSON-Body lediglich, die zu verändernden Attribute angegeben werden.
+Über diesen Endpunkt bearbeitest du ein Formular. Im JSON-Body gibst du lediglich die zu ändernden Attribute an.
 
 ### POST /api/form
 
-Zur Erstellung neuer Formulare muss dieser Endpunkt genutzt werden. Die Definition erfolgt über JSON und muss folgende Struktur aufweisen:
+Über diesen Endpunkt erstellst du neue Formulare. Die Definition erfolgt über JSON mit folgender Struktur:
 
 ```
 {
@@ -236,7 +231,7 @@ Zur Erstellung neuer Formulare muss dieser Endpunkt genutzt werden. Die Definiti
 }
 ```
 
-Die Struktur des Forms wird unter shape angegeben. Generell wurde sie entworfen, um eine normalisierte und hierarchische Struktur abbilden zu können. Dazu enthält sie auf der ersten Ebene alle verfügbaren Knoten-Elemente. Hierzu zählen nicht nur Überschriften, Texte, Trennlinien, i-doit Kategorie-Attribute sondern auch Seiten.
+Die Struktur des Formulars gibst du unter `shape` an. Sie bildet eine normalisierte und hierarchische Struktur ab. Auf der ersten Ebene enthält sie alle verfügbaren Knoten-Elemente: Überschriften, Texte, Trennlinien, i-doit-Kategorie-Attribute und Seiten.
 
 > Es ist sicherzustellen, dass die Knoten-IDs (root, SEITE\_1, SEITE\_2,…) einzigartig sind und keine Wiederholungen aufweisen.
 
@@ -267,7 +262,7 @@ Die Struktur des Forms wird unter shape angegeben. Generell wurde sie entworfen,
 }
 ```
 
-Die verfügbaren Konfigurationsparameter eines Knotens sind typen-abhängig. Generell kann folgende Datenstruktur ausgemacht werden:
+Die verfügbaren Konfigurationsparameter eines Knotens sind typabhängig. Die allgemeine Datenstruktur sieht so aus:
 
 ```
 {
@@ -294,7 +289,7 @@ Die verfügbaren Konfigurationsparameter eines Knotens sind typen-abhängig. Gen
 }
 ```
 
-Besonders wichtig hierbei ist der Knoten root. Dieser stellt den Einstiegspunkt dar auf deren Basis ein Form hierarchisch aufgebaut wird.
+Besonders wichtig ist der Knoten `root`. Er stellt den Einstiegspunkt dar, auf dessen Basis du das Formular hierarchisch aufbaust.
 
 ```
                     ┌──────ROOT──────┐
@@ -318,9 +313,7 @@ Besonders wichtig hierbei ist der Knoten root. Dieser stellt den Einstiegspunkt 
                                                                         Text 2
 ```
 
-Im folgenden ist eine vollständige Struktur eines Forms, welches aus zwei Seiten ("SEITE\_1" und "SEITE\_2") besteht. Dabei beinhaltet jede Seite eine Überschrift und eine
-
-Textbeschreibung.
+Im Folgenden siehst du eine vollständige Struktur eines Formulars, das aus zwei Seiten ("SEITE\_1" und "SEITE\_2") besteht. Jede Seite beinhaltet eine Überschrift und eine Textbeschreibung.
 
 ```
 {
@@ -425,7 +418,7 @@ Textbeschreibung.
 
 ## Typen
 
-Im folgenden Abschnitt werden alle verfügbaren Knotentypen behandelt und deren Konfigurationen beschrieben.
+Im folgenden Abschnitt findest du alle verfügbaren Knotentypen und deren Konfigurationen.
 
 ### Trennlinie
 
@@ -489,9 +482,9 @@ Im folgenden Abschnitt werden alle verfügbaren Knotentypen behandelt und deren 
 
 ### i-doit Kategorieattribute
 
-Dieser Typ ist im Vergleich zu den vorherigen Typen komplexer und enthält daher eine größere Anzahl an Konfigurationsparametern. Zu dem können sich eben diese Parameter je nach Typ des Kategorieattributes noch weiter unterscheiden.
+Dieser Typ ist komplexer als die vorherigen und enthält daher mehr Konfigurationsparameter. Die Parameter unterscheiden sich je nach Typ des Kategorieattributs.
 
-Die grundlegende Datenstruktur wird im folgenden am Beispiel des Attributes Allgemein > Bezeichnung beschrieben:
+Die grundlegende Datenstruktur wird am Beispiel des Attributs Allgemein > Bezeichnung beschrieben:
 
 ```
 {
@@ -527,7 +520,7 @@ Die grundlegende Datenstruktur wird im folgenden am Beispiel des Attributes Allg
 
 ### Metainformationen zu Attributen
 
-Einige Konfiguratiosparameter werden von der Forms-Addon-API vorgegeben. Sie können sowohl aus statischen aber auch dynamischen Werten bestehen:
+Einige Konfigurationsparameter werden von der Forms-Addon-API vorgegeben. Sie bestehen aus statischen oder dynamischen Werten:
 
 *   **attribute**\*: statischer Wert
 *   **type**\* : statischer Wert, gibt den Attributtypen wieder
@@ -541,14 +534,13 @@ Einige Konfiguratiosparameter werden von der Forms-Addon-API vorgegeben. Sie kö
 > führen, sofern **required** nicht _true_ ist.
 > **defaultValue** ist nicht zwingend notwendig, sofern die Werte aus dem Default-Template nicht berücksichtigt werden sollen.
 
-All diese Informationen können, wie bereits erwähnt, über die Forms-Addon-API ermittelt werden:
+All diese Informationen ermittelst du über die Forms-Addon-API:
 
 ```
 GET https://idoit-instance/forms/api/attribute?category=C__CATG__GLOBAL,C__CATG__ACCOUNTING&class=C__OBJTYPE__SERVER
 ```
 
-Hierbei enthält category eine kommaseparierte Liste an Kategoriekonstanten.
-class hingegen enthält die Objekttypkonstante und wird benötigt, um **defaultValue** zu ermitteln. Die Rückgabe sieht beispielhaft wie folgt aus:
+`category` enthält eine kommaseparierte Liste an Kategoriekonstanten. `class` enthält die Objekttypkonstante und wird benötigt, um **defaultValue** zu ermitteln. Beispielhafte Rückgabe:
 
 ```
 [
@@ -620,13 +612,11 @@ class hingegen enthält die Objekttypkonstante und wird benötigt, um **defaultV
 
 ### Sonderfall: Feldabhängigkeiten
 
-i-doit verfügt über Attribute, welche eine Abhängigkeit zu einem anderen Attribut innerhalb der Kategorie aufweist. Ein sehr einfaches Beispiel ist hierbei das
-Attribut Modell > Modell, welches von Modell > Hersteller abhängt.
+i-doit verfügt über Attribute, die eine Abhängigkeit zu einem anderen Attribut innerhalb der Kategorie aufweisen. Ein einfaches Beispiel ist Modell > Modell, das von Modell > Hersteller abhängt.
 
-Hierfür enthält das Forms-Addon Frontend Kontrollmechanismen, um beispielsweise die Nutzung von Modell > Modell (Child) ohne
-Modell > Hersteller erkennt und in diesem Fall das Parentattribut automatisch hinzufügt.
+Das Forms-Addon-Frontend enthält Kontrollmechanismen, die erkennen, wenn du Modell > Modell (Child) ohne Modell > Hersteller nutzt, und das Parentattribut automatisch hinzufügen.
 
-Diese Attribute lassen sich aufgrund ihrer Metadaten identifizieren. Hierbei enthält das Childattribut eine **parent**\- und das Parentattribut eine **children**\-Information:
+Diese Attribute identifizierst du anhand ihrer Metadaten: Das Childattribut enthält eine **parent**- und das Parentattribut eine **children**-Information:
 
 ```
 GET https://idoit-instance/forms/api/attribute?category=C__CATG__MODEL&class=C__OBJTYPE__SERVER
@@ -708,3 +698,9 @@ Die Definition der Knoten für solche Abhängigkeitsstrukturen sieht hingegen wi
 }
 }
 ```
+
+## Siehe auch
+
+- [Forms Add-on](index.md) — Übersicht zum Forms Add-on
+- [i-doit Add-ons](../index.md) — Alle verfügbaren Add-ons
+- [API Add-on](../api/index.md) — Schnittstelle für externe Zugriffe

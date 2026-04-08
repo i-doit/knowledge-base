@@ -1,3 +1,10 @@
+---
+title: API erweitern
+description: "Mit der API-Version 2.0 haben wir eine neue Möglichkeit eingeführt, um Endpunkte zu erweitern."
+icon:
+status:
+lang: de
+---
 # API erweitern
 
 Mit der API-Version 2.0 haben wir eine neue Möglichkeit eingeführt, um Endpunkte zu erweitern.
@@ -72,8 +79,8 @@ isys_application::instance()->container->get('api.endpoints')
 
 ### Registrierung über tagged service
 
-Wenn Sie in Ihrem Add-on eigene Services definieren, die dem Dependency Injection Container hinzugefügt werden,
-können Sie Ihre Endpunkte automatisch registrieren lassen, indem Sie das Tag `'api.endpoint'` verwenden:
+Wenn du in deinem Add-on eigene Services definieren, die dem Dependency Injection Container hinzugefügt werden,
+kannst du deine Endpunkte automatisch registrieren lassen, indem du das Tag `'api.endpoint'` verwenden:
 
 ```yaml
 services:
@@ -239,3 +246,9 @@ Es wird die Klasse isys\_api\_model\_cmdb initialisiert und innerhalb der "route
 
         return $this;
     }
+
+## Siehe auch
+
+- [Add-ons entwickeln](index.md) — Leitfaden zur Add-on-Entwicklung
+- [Software-Entwicklung](../index.md) — Übersicht der Entwickler-Dokumentation
+- [API Add-on](../../i-doit-add-ons/api/index.md) — Schnittstelle für externe Zugriffe

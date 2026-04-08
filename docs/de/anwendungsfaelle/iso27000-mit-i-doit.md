@@ -1,3 +1,10 @@
+---
+title: "ISO 27000 mit i-doit"
+description: "In Deutschland beschäftigen sich dieser Tage die Energieversorgungsunternehmen (EVU) umfangreich mit den Anforderungen, die die Bundesnetzagentur (BNetzA)..."
+icon:
+status:
+lang: de
+---
 # ISO 27000 mit i-doit
 
 !!! attention "Neues Add-on "ISMS""

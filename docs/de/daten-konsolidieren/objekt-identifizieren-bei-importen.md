@@ -1,50 +1,63 @@
+---
+title: Objekte identifizieren bei Importen
+description: "Beim Datenimport erkennt i-doit bereits vorhandene Objekte anhand bestimmter Attribute und aktualisiert sie, anstatt Duplikate zu erzeugen."
+icon:
+status:
+lang: de
+---
 # Objekte identifizieren bei Importen
 
-!!! warning "Bitte erstellen Sie vor jeder Änderung an einer Schnittstelle/Import einen vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist kann dieses dann wiederhergestellt werden"
+!!! warning "Bitte erstelle vor jeder Änderung an einer Schnittstelle/Import ein vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist, kann dieses dann wiederhergestellt werden"
 
-i-doit verfügt über diverse Datenimporte. Bestehende Daten in der [IT-Dokumentation](../glossar.md) können dabei aktualisiert werden, anstatt meist unnötige Redundanzen zu erzeugen. Damit dies funktioniert, versucht i-doit bestehende [Objekte](../grundlagen/struktur-it-dokumentation.md) anhand von verschiedenen [Attributen](../grundlagen/struktur-it-dokumentation.md) zu identifizieren.
+Beim Datenimport erkennt i-doit bereits vorhandene [Objekte](../grundlagen/struktur-it-dokumentation.md) anhand bestimmter [Attribute](../grundlagen/struktur-it-dokumentation.md) und aktualisiert sie, anstatt Duplikate zu erzeugen. Dieser Artikel beschreibt, wie diese Identifizierung funktioniert und wie du sie konfigurierst.
 
 ## Betroffene Datenimporte
 
-Betrachtet werden in diesem Artikel folgende Datenimporte:
+Die hier beschriebene Identifizierung gilt fur folgende Importwege:
 
 *   [CSV-Datenimport](csv-datenimport/index.md)
 *   [JDisc Discovery](jdisc/index.md)
 *   [OCS Inventory NG](../i-doit-add-ons/ocs-inventory-ng.md)
 *   [h-inventory](h-inventory.md)
 
-Weitere Datenimporte verfolgen mitunter andere Vorgehensweisen.
+Andere Importwege verwenden unter Umstanden eigene Verfahren.
 
 ## Vorgehensweise
 
-Die Identifizierung von Objekten erfolgt zweistufig:
+Die Identifizierung erfolgt in zwei Stufen:
 
-1. Die höchste Priorität genießen die eindeutigen Attribute der jeweiligen Datenquellen:
+**Stufe 1 -- Eindeutige Attribute der Datenquelle:**
+
+Jede Datenquelle liefert ein eigenes eindeutiges Attribut, das i-doit beim ersten Import speichert:
 
 *   CSV-Datenimport: _nicht anwendbar_<br>
 *   JDisc: Device ID<br>
 *   OCS Inventory NG: _nicht anwendbar_<br>
 *   h-inventory: Seriennummer<br>
 
-Diese Attribute werden beim ersten Datenimport gespeichert und können bei folgenden Datenimporten als Identifizierungsmerkmal verwendet werden. Falls diese Attribute nicht zur Verfügung stehen, folgt Schritt 2.
+Bei Folgeimporten greift i-doit zuerst auf dieses Attribut zuruck. Steht es nicht zur Verfugung, folgt Stufe 2.
 
-2. Anhand von Profilen erfolgt ein sogenanntes Objekt-Matching (siehe unten).
+**Stufe 2 -- Objekt-Matching uber Profile:**
+
+Hier vergleicht i-doit die zu importierenden Daten mit vorhandenen Objekten anhand eines konfigurierbaren Profils (siehe unten).
 
 ## Profile bilden
 
-Einige Attribute sind geeignet, um Objekte [eindeutig zu referenzieren](../grundlagen/eindeutige-referenzierungen.md). Diesen Umstand kann man sich zu nutze machen, wenn es um den Import von Daten aus Drittapplikationen geht, wo ähnliche Eindeutigkeiten existieren. Um für verschiedene Import-Fälle gewappnet zu sein, können in i-doit sogenannte Objekt-Matching Profile gebildet werden, die beim Import berücksichtigt werden sollen. Die zentrale Konfiguration befindet sich unter **Verwaltung → Import und Schnittstellen → Import Matching Profile**. Es können beliebig viele Profile erstellt werden.
+Bestimmte Attribute eignen sich, um Objekte [eindeutig zu referenzieren](../grundlagen/eindeutige-referenzierungen.md). Dieses Prinzip nutzt du beim Import aus Drittapplikationen: Du legst ein Objekt-Matching-Profil an, das festlegt, anhand welcher Attribute i-doit bestehende Objekte erkennt.
+
+Die zentrale Konfiguration findest du unter **Verwaltung → Import und Schnittstellen → Import Matching Profile**. Du kannst beliebig viele Profile erstellen.
 
 [![Objekt-Matching Profile Liste](../assets/images/de/daten-konsolidieren/objekt-import/1-obji.png)](../assets/images/de/daten-konsolidieren/objekt-import/1-obji.png)
 
 In der Standard-Installation von i-doit ist bereits ein Profil mit dem Namen **Default** enthalten, das nicht bearbeitet oder gelöscht werden darf. Über den Button **Neu** kann ein neues erstellt, über **Editieren** eines bearbeitet und über **Purge** ein Profil unwiderruflich gelöscht werden.
 
-Pro Profil sind mehrere Angaben zu machen:
+Jedes Profil besteht aus folgenden Einstellungen:
 
-*   **Name**:<br> eine aussagekräftige Beschreibung des Profils
-*   **Matchings**:<br> Hier stehen verschiedene Attribute und andere Felder zur Auswahl. Anhand dieser werden bereits dokumentierte Objekte gesucht und mit den zu importierenden Daten verglichen. Die Reihenfolge ist irrelevant und kann nicht verändert werden.
-*   **Minimum Match**:<br> Beim Abgleich von zu importierenden Daten und Objekten in i-doit wird überprüft, wie viele Attribute eines Objektes übereinstimmen müssen. Die auswählbare Zahl richtet sich nach der Anzahl der Attribute unter **Matchings**.
-*   **Filter für neue Objekte (JDISC)**:<br>**Die Option Neuer Objektfilter betrifft nur NEUE Objekte beim JDisc-Import.** Objekte vom Import ausschließen, welche nicht über konfigurierte Attribute verfügen. Möglich sind Hostname, Seriennummer, Objekt-Titel, MAC und IP-Adresse.
-*   **Minimale Filterübereinstimmung (JDISC)**:<br>Mindestanzahl fehlender Attribute, um **NEUE** Importobjekte zu ignorieren.
+*   **Name:** Vergib eine aussagekraftige Bezeichnung fur das Profil.
+*   **Matchings:** Wahle die Attribute aus, anhand derer i-doit bestehende Objekte sucht und mit den Importdaten vergleicht. Die Reihenfolge spielt keine Rolle.
+*   **Minimum Match:** Lege fest, wie viele der gewahlten Attribute ubereinstimmen mussen, damit i-doit ein Objekt als identisch erkennt.
+*   **Filter fur neue Objekte (JDisc):** Diese Option betrifft nur **neue** Objekte beim JDisc-Import. Du kannst Objekte vom Import ausschließen, denen bestimmte Attribute fehlen (Hostname, Seriennummer, Objekt-Titel, MAC oder IP-Adresse).
+*   **Minimale Filterubereinstimmung (JDisc):** Lege die Mindestanzahl fehlender Attribute fest, ab der **neue** Importobjekte ignoriert werden.
 
 [![Objekt-Matching Profile](../assets/images/de/daten-konsolidieren/objekt-import/2-obji.png)](../assets/images/de/daten-konsolidieren/objekt-import/2-obji.png)
 

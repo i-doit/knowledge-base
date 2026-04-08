@@ -1,6 +1,6 @@
 ---
 title: Kundenportal
-description: Kundenportal
+description: "Das Kundenportal ist die zentrale Anlaufstelle für i-doit-Benutzer."
 icon:
 status:
 lang: de
@@ -8,36 +8,38 @@ lang: de
 
 # Kundenportal
 
-Für Benutzer von i-doit existiert eine zentrale Anlaufstelle. Dort befinden sich zum Beispiel [Installationspakete](../installation/index.md) und die derzeit gültige [offline token](../wartung-und-betrieb/lizenzierung.md) zum Download. Zudem werden die Subskriptions- bzw. Kauf-Produkte (beispielsweise [i-doit Add-ons](../i-doit-add-ons/i-diary.md)) aufgelistet. Erreicht werden kann das Kundenportal unter folgender Adresse:
+Das Kundenportal ist die zentrale Anlaufstelle für i-doit-Benutzer. Hier findest du [Installationspakete](../installation/index.md), die derzeit gültige [Offline-Lizenz](../wartung-und-betrieb/lizenzierung.md) zum Download sowie eine Übersicht deiner Subskriptions- und Kauf-Produkte (z. B. [i-doit Add-ons](../i-doit-add-ons/i-diary.md)).
+
+Du erreichst das Kundenportal unter:
 
 **[Add-on & Subscription Center](https://center.i-doit.com/)**
 
-Für das Add-on & Subscription Center wird der Lizenz Token benötigt. i-doit Kunden erhalten während des Bestellprozesses einen Token um sich im Kundenportal anzumelden.
+Für die Anmeldung benötigst du deinen Lizenz-Token. Diesen erhältst du während des Bestellprozesses.
 
-Nach dem Aufruf von <https://center.i-doit.com/> landet man auf der Login Seite.
+Nach dem Aufruf von <https://center.i-doit.com/> landest du auf der Login-Seite.
 
 [![login](../assets/images/de/administration/kundenportal/login.png)](../assets/images/de/administration/kundenportal/login.png)
 
-Nach dem Login wird das Dashboard dargestellt.
+Nach dem Login siehst du das Dashboard.
 
 [![dashboard](../assets/images/de/administration/kundenportal/dashboard.png)](../assets/images/de/administration/kundenportal/dashboard.png)
 
-Informationen zur Subskription findet man unter **Subscription**.
+Unter **Subscription** findest du Informationen zu deiner Subskription.
 
 [![subscription](../assets/images/de/administration/kundenportal/subscription.png)](../assets/images/de/administration/kundenportal/subscription.png)
 
-Rechnungen und Rechnungsdetails sind unter **Invoice** einzusehen.
+Unter **Invoice** siehst du Rechnungen und Rechnungsdetails.
 
 [![invoice](../assets/images/de/administration/kundenportal/invoice.png)](../assets/images/de/administration/kundenportal/invoice.png)
 
-Hilfreiche Links und eine Kontaktformular für den Support ist unter **Help** zu finden.
+Unter **Help** findest du hilfreiche Links und ein Kontaktformular für den Support.
 
 [![help](../assets/images/de/administration/kundenportal/help.png)](../assets/images/de/administration/kundenportal/help.png)
 
-Unter **Advanced** ist die Offline Lizenz zu finden. Diese wird benötigt wenn die i-doit Instanz keinen Internetzugriff hat.
+Unter **Advanced** findest du die Offline-Lizenz. Diese benötigst du, wenn deine i-doit-Instanz keinen Internetzugriff hat.
 
 [![advanced](../assets/images/de/administration/kundenportal/advanced.png)](../assets/images/de/administration/kundenportal/advanced.png)
 
-Der Menüeintrag **Downloads** listet alle verfügbaren Downloads auf.
+Unter **Downloads** listet das Portal alle verfügbaren Downloads auf.
 
 [![downloads](../assets/images/de/administration/kundenportal/downloads.png)](../assets/images/de/administration/kundenportal/downloads.png)

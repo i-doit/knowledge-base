@@ -35,7 +35,7 @@ ISB, Security- und Compliance-Verantwortliche, Administratoren, Auditoren.
   siehe [Installation und Einrichtung](setup.md#installation-und-einrichtung).
 
 !!! warning "Das VIVA2 Add-on verbraucht lizenzpflichtige Objekte"
-    Der Import des IT-Grundschutz-Kompendiums erzeugt ~**2927** lizenzpflichtige Objekte, zieht man entfallene Anforderungen ab bleiben ~**2637** übrig. Stelle sicher, dass deine i-doit-Lizenz ausreichend lizenzpflichtige Objekte umfasst, um das Add-on nutzen zu können.
+    Der Import des IT-Grundschutz-Kompendiums erzeugt ~**2927** lizenzpflichtige Objekte, ziehst du entfallene Anforderungen ab, bleiben ~**2637** übrig. Stelle sicher, dass deine i-doit-Lizenz ausreichend lizenzpflichtige Objekte umfasst, um das Add-on nutzen zu können.
     Mit dem Import des IT-Grundschutz-Kompendiums werden auch inzwischen obsolete Anforderungen mit importiert. Das BSI hat diese Anforderungen mit dem Titel "ENTFALLEN" versehen. Aus Gründen der Abwärtskompatibilität werden diese Anforderungen alle mit importiert, können aber problemlos hinterher alle gelöscht werden.
 
 ## Arbeitsablauf in 5 Schritten

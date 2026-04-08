@@ -1,3 +1,10 @@
+---
+title: CMDB (Rechteverwaltung)
+description: "Innerhalb der IT-Dokumentation in i-doit können zahlreiche Rechte vergeben werden, um sehr feingranular zu bestimmen, wer was sehen und bearbeiten darf."
+icon:
+status:
+lang: de
+---
 # CMDB (Rechteverwaltung)
 
 Innerhalb der [IT-Dokumentation](../../glossar.md) in i-doit können zahlreiche [Rechte](../../effizientes-dokumentieren/rechteverwaltung/index.md) vergeben werden, um sehr feingranular zu bestimmen, wer was sehen und bearbeiten darf. Hierzu ist es nützlich, die [Struktur der IT-Dokumentation](../../grundlagen/struktur-it-dokumentation.md) zu kennen.

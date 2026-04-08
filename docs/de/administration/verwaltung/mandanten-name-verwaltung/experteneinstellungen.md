@@ -1,68 +1,64 @@
+---
+title: Experteneinstellungen
+description: Mandanten-spezifische Experteneinstellungen in der i-doit Verwaltung
+icon:
+status:
+lang: de
+---
+
 # Experteneinstellungen
 
-Die Experteneinstellungen sind so etwas wie die "Registry" von i-doit. Hier können viele Einstellungen gesetzt werden, die teilweise nicht über die Web GUI erreichbar sind.
+Die Experteneinstellungen unter **Verwaltung → [Mandanten-Name] Verwaltung → Experteneinstellungen** enthalten mandanten-spezifische Konfigurationsschlüssel. Jede Einstellung besteht aus einem **Key**, einem **Value** und einem **Type** (Tenant-wide oder User).
 
-!!! attention "Vorsicht"
-    In der Regel ist es nicht nötig, in den Experteneinstellungen Werte hinzuzufügen oder zu verändern. Für den normalen Gebrauch bringt die Web GUI an den entsprechenden Stellen Funktionen mit, um das Verhalten von i-doit zu steuern.
-    Vor der Änderung an den Experteneinstellungen sollte **unbedingt ein [Backup](../../../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) angefertigt** werden. Einige der aufgelisteten Einstellungen haben einen gravierenden Einfluss auf die Applikation. Im Zweifel hilft der [Support](../../kundenportal.md) gerne weiter.
+!!! info "Aufteilung seit i-doit v25"
+    Seit Version 25 sind die Experteneinstellungen auf zwei Orte aufgeteilt:
 
-## Konfiguration
+    - **Hier** (Verwaltung → Experteneinstellungen): Einstellungen die nur den **aktuellen Mandanten** betreffen — API-Verhalten, GUI-Darstellung, interne Caches.
+    - **[Admin Center → System settings](../../admin-center.md)**: Einstellungen die die **gesamte Installation** betreffen — Login, Proxy, SMTP, Sicherheit, Rechtesystem. Dort findest du auch die system-weiten Experteneinstellungen über den Link "Expert settings" oben rechts.
 
-Zu erreichen sind die Einstellungen unter **Verwaltung → [Mandanten-Name] Verwaltung → Experteneinstellungen**.
+    Wenn du eine Einstellung suchst die hier nicht aufgeführt ist (z.B. `auth.active`, `security.passwort.minlength`, `cmdb.quickpurge`), findest du sie im [Admin Center](../../admin-center.md).
 
-Jede Einstellung besteht aus drei Teilen:
+[![Experteneinstellungen](../../../assets/images/de/administration/mandanten-verwaltung/experteneinstellungen.png)](../../../assets/images/de/administration/mandanten-verwaltung/experteneinstellungen.png)
 
-| Key                                                                                                                                                        | Standard Wert                                                                                                         | Beschreibung                                                                                                                                                                                                                                                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Der Schlüssel (**Key**) gibt der Einstellung einen eindeutigen Namen. Sollte ein Schlüssel noch nicht existieren, kann er nachträglich hinzugefügt werden. | Der Wert (**Value**) ist in der Regel eine Zeichenkette bzw. ein längerer Text (String) oder eine Ganzzahl (Integer). | Über den Typ (**Type**) wird die Reichweite der Einstellung angegeben. Eine Einstellung mit dem Typ **Tenant-wide** wirkt sich nur auf denjenigen Mandanten aus, mit dem der Benutzer derzeit angemeldet ist. **System-wide** bedeutet, dass sich die Einstellung auf das gesamte i-doit auswirkt, also unabhängig von den verfügbaren Mandanten. |
+!!! warning "Vor jeder Änderung: Backup erstellen!"
+    Erstelle **immer** ein [Backup](../../../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) bevor du Werte änderst. Am Ende der Tabelle kannst du über das Eingabefeld neue Schlüssel hinzufügen.
 
-## Liste der Einstellungen
-<!-- cSpell:disable -->
-| Key                                           | Standard Wert                               | Beschreibung                                                                                                                                                                                      |
-| --------------------------------------------- | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| auth.active                                   | 1                                           | Aktivierung/Deaktivierung des Rechtesystems                                                                                                                                                       |
-| auth.logging                                  | 1                                           | Aktiviert/Deaktiviert das loggen von Rechtesystem-Meldungen                                                                                                                                       |
-| auth.use-in-cmdb-explorer                     | 0                                           | Aktiviert die Berücksichtigung von Rechten im CMDB-Explorer. Objekte auf die nicht verrechtet sind werden nicht dargestellt / weiter iteriert                                                     |
-| auth.use-in-cmdb-explorer-service-browser     | 0                                           | Aktiviert die Berücksichtigung von Rechten im CMDB-Explorer Service Popup. Der User sieht nur die Services, auf die er Rechte hat.                                                                |
-| auth.use-in-object-browser                    | 0                                           | Aktiviert die Berücksichtigung von Rechten im Objekt Browser. Objekte die nicht verrechtet sind werden nicht dargestellt. Bereits ausgewählte Objekte werden mit "\[Ausgeblendet\]" dargestellt   |
-| auth.use-in-file-browser                      | 0                                           | Aktiviert die Berücksichtigung von Rechten im File Browser. Objekte auf die nicht verrechtet sind werden nicht dargestellt. Bereits ausgewählte Objekte werden mit "\[Ausgeblendet\]" dargestellt |
-| auth.use-in-location-tree                     | 0                                           | Aktiviert die Berücksichtigung von Rechten im Standort Baum. Objekte die nicht verrechtet sind werden nicht dargestellt / aufgeklappt.                                                            |
-| cache.default-expiration-time                 | 86400                                       | Legt die Zeit in Sekunden fest, für welche bestimmte Systeminterne Caches behalten werden (z.B. Rechtesystem, Analyse Ergebnisse)                                                                 |
-| ckeditor.font_names                           | Arial;Courier New;Times New Roman;Helvetica | Verwendbare Schriftarten im WYSIWYG Editor                                                                                                                                                        |
-| cmdb.limits.order-threshhold                  | 10000                                       | Limit an Zeilen für die TableComponent ab wann nur noch indexierte Felder sortiert und gefiltert werden können                                                                                    |
-| cmdb.limits.obj-browser.objects-in-viewmode   | 8                                           | Maximale Anzahl darzustellender Objekte im Objektbrowser im Viewmode                                                                                                                              |
-| cmdb.limits.object-table-columns              | 10                                          | Legt fest, wie viele Spalten in den Objektlisten angezeigt werden dürfen.                                                                                                                         |
-| cmdb.limits.port-lists-layer2                 | 5                                           | Limitierung der aufgeführten Layer2-Netze in der Portliste                                                                                                                                        |
-| cmdb.limits.port-lists-vlans                  | 10                                          | Limitierung der aufgeführten VLANs in der Portliste                                                                                                                                               |
-| cmdb.limits.port-overview-default-vlan-only   | 0                                           | In der Portübersicht soll lediglich das Standard-VLAN angezeigt werden                                                                                                                            |
-| cmdb.multiedit.text-size-in-px                | 120                                         | Textgröße in der Listeneditierung                                                                                                                                                                 |
-| cmdb.objtype.OBJECT_TYPE_ID.auto-inventory-no |                                             | Muster für die Generierung automatischer Inventarnummern in der Buchhaltungskategorie                                                                                                             |
-| cmdb.only-show-ranked-entries-as-such         | 0                                           | Option zur Festlegung, ob Beziehungen zu einem archivierten Objekt als archiviert oder normal angezeigt werden sollen                                                                             |
-| cmdb.quickpurge                               | 0                                           | Aktivieren/Deaktivieren der Quickpurge-Funktionalität                                                                                                                                             |
-| cmdb.registry.sysid_readonly                  | 0                                           | Aktiviert/Deaktiviert das editieren der SYS-ID                                                                                                                                                    |
-| cmdb.skip-unidirectional-connection-ranking   | 0                                           | Option um festzulegen, ob Verknüpfungen zu einem archivierten Objekt als archiviert oder normal dargestellt werden sollen                                                                         |
-| cmdb.unique.hostname                          |                                             | Aktivieren/Deaktivieren von einzigartigen Hostnamen                                                                                                                                               |
-| cmdb.unique.ip-address                        |                                             | Aktivieren/Deaktivieren von einzigartigen Ips                                                                                                                                                     |
-| cmdb.unique.layer-2-net                       |                                             | Aktivieren/Deaktivieren von einzigartigen Layer-2 Ids                                                                                                                                             |
-| cmdb.unique.object-title                      |                                             | Aktivieren/Deaktivieren von einzigartigen Objekt-Titel                                                                                                                                            |
-| gui.empty_value                               |                                             | Definiert die Darstellung eines Leerwerts in der Oberfläche                                                                                                                                       |
-| gui.nat-sort.port-list                        | 1                                           | Lexikografische Sortierung der Portliste                                                                                                                                                          |
-| import.csv.overwrite-objecttype               | 0                                           | Aktiviert/Deaktiviert das überschreiben von Objekttypen wenn ein Objekttyp ausgewählt wurde                                                                                                       |
-| jdisc.import-unidentified-devices             | false                                       | Aktivieren/Deaktivieren von Imports unidentifizierter JDisc-Objekte                                                                                                                               |
-| maxlength.dialog_plus                         | 110                                         | Maximale Zeichenlänge für Einträge in Dialoglisten                                                                                                                                                |
-| maxlength.list.placeholder                    |                                             | Maximale Anzahl von referenzierten Objekten in Listen                                                                                                                                             |
-| maxlength.location.objects                    | 16                                          | Maximale Anzahl darzustellender Objekte                                                                                                                                                           |
-| maxlength.location.path                       | 40                                          | Maximale Länge von Standortpfaden                                                                                                                                                                 |
-| maxlength.object.lists                        | 55                                          | Maximale Anzahl darzustellender Objekte in Objektlisten                                                                                                                                           |
-| search.global.autostart-deep-search           | 0                                           | Automatische Deep Search Suche                                                                                                                                                                    |
-| security.passwort.minlength                   | 4                                           | Mindestlänge für Benutzerpasswörter                                                                                                                                                               |
-| qrcode.config                                 |                                             | QR-Code Konfiguration                                                                                                                                                                             |
-<!-- cSpell:enable -->
-## Liste der Einstellungen (Benutzer)
-<!-- cSpell:disable -->
-| Key                             | Standard Wert | Beschreibung                                                                                                                                                                                                     |
-| ------------------------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| gui.leftcontent.width           | 235           | Definiert die Breite des linken Baumbereichs in Pixeln                                                                                                                                                           |
-| workflows.max-checklist-entries | 7             | Maximale Einträge in Checklisten                                                                                                                                                                                 |
-| gui.login.display               | user-name     | Darstellung des Namens im "logged in as" Bereich:<br>- user-name: lfischer<br>- full-name: Dr. Leonard Fischer<br>- full-name-plus: Dr. Leonard Fischer (lfischer)<br>- first-last-name-abbreviation: L. Fischer |
-<!-- cSpell:enable -->
+## Mandanten-Einstellungen (Tenant-wide)
+
+Diese Einstellungen gelten für alle Benutzer des aktuellen Mandanten.
+
+### API-Verhalten
+
+| Key | Standard | Was passiert wenn du es änderst? |
+|-----|----------|----------------------------------|
+| `api.status` | `1` | Bei `0` wird die [JSON-RPC API](../../../i-doit-add-ons/api/index.md) für diesen Mandanten **deaktiviert**. Alle API-Anfragen werden mit einem Fehler beantwortet. Externe Systeme (JDisc, Monitoring, Ticketsystem) die über die API angebunden sind, verlieren sofort die Verbindung. |
+| `api.validation` | `1` | Bei `0` werden API-Eingaben nicht validiert. Das beschleunigt Massenimporte, kann aber zu inkonsistenten Daten führen — z.B. Text in einem Zahlenfeld oder ungültige Datumsformate. Nur temporär für Migrationen deaktivieren. |
+| `api.log-level` | `100` | Steuert die Ausführlichkeit des API-Logs. `100` = DEBUG (alles loggen), `400` = ERROR (nur Fehler). In Produktion auf `200` (INFO) oder `300` (WARNING) setzen, um das Log-Volumen zu reduzieren. |
+
+### GUI-Darstellung
+
+| Key | Standard | Was passiert wenn du es änderst? |
+|-----|----------|----------------------------------|
+| `gui.category.padding` | Zeilenabstände | Steuert den vertikalen Abstand zwischen Feldern in Kategorien. Die vier Zeilen (title, type, options, default) gehören zusammen — ändere nur den `default`-Wert. |
+| `gui.tree.spacing` | Abstände in Menübäumen | Steuert den Abstand zwischen Einträgen in der linken Sidebar (Standortbaum, Kategorie-Baum). Kleinere Werte = kompaktere Darstellung, aber schwerer zu treffen. |
+| `gui.category.spacer` | Abstandhalter darstellen | Bei `1` werden Trennlinien zwischen Feldgruppen in Kategorien angezeigt. Bei `0` wirkt die Kategorie kompakter, aber weniger strukturiert. |
+| `gui.default-tree-view` | `1008` | Bestimmt welcher Baum in der linken Sidebar standardmäßig angezeigt wird. `1008` = Objektsicht. Ändere diesen Wert nicht, es sei denn du weißt welche View-ID du setzen willst. |
+| `gui.tree.hide-empty-categories` | `1` | Bei `1` werden Kategorien ohne Einträge in der Sidebar ausgeblendet. Bei `0` werden alle zugeordneten Kategorien angezeigt — auch leere. Hilfreich wenn Benutzer nicht finden wo sie Daten eingeben sollen, weil die Kategorie "verschwunden" ist. |
+
+### Interne Einstellungen
+
+| Key | Standard | Was passiert wenn du es änderst? |
+|-----|----------|----------------------------------|
+| `cmdb.refresh-table-configurations` | `0` | Bei `1` werden die Tabellenkonfigurationen (Objektlisten-Spalten) beim nächsten Laden neu aufgebaut. Nützlich nach einem Update wenn Spalten fehlen oder falsch dargestellt werden. Setzt sich nach der Ausführung automatisch auf `0` zurück. |
+| `cmdb.renew-properties` | `0` | Bei `1` werden die internen Property-Definitionen neu generiert. Wie `cmdb.refresh-table-configurations` ein einmaliger Reparaturmechanismus der sich selbst zurücksetzt. |
+| `synetics_admin.news.subscription-and-addons` | `1` | Bei `0` werden die News-Hinweise zu Add-ons und Subscriptions im Dashboard ausgeblendet. |
+
+## Benutzer-Einstellungen (User)
+
+Diese Einstellungen gelten nur für den aktuell angemeldeten Benutzer.
+
+| Key | Standard | Was passiert wenn du es änderst? |
+|-----|----------|----------------------------------|
+| `gui.leftcontent.width` | `235` | Breite der linken Sidebar in Pixeln. Erhöhe den Wert wenn lange Objektnamen abgeschnitten werden, z.B. auf `300` oder `350`. Jeder Benutzer kann seinen eigenen Wert haben. |
+| `gui.login.display` | `user-name` | Wie dein Name oben rechts angezeigt wird: `user-name` (lfischer), `full-name` (Dr. Leonard Fischer), `full-name-plus` (Dr. Leonard Fischer (lfischer)), `first-last-name-abbreviation` (L. Fischer). |
+| `workflows.max-checklist-entries` | `7` | Maximale Einträge in Workflow-Checklisten. |

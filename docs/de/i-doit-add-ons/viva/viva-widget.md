@@ -1,3 +1,10 @@
+---
+title: "VIVA-Widget"
+description: "i-doit verfügt über ein Dashboard mit konfigurierbaren Widgets, die den Anwender bereits beim ersten Aufruf von i-doit mit allerhand Informationen..."
+icon:
+status:
+lang: de
+---
 # VIVA-Widget
 
 i-doit verfügt über ein [Dashboard](../../grundlagen/dashboard-und-widgets.md) mit konfigurierbaren Widgets, die den Anwender bereits beim ersten Aufruf von i-doit mit allerhand Informationen versorgen, um schneller einen Überblick über die IT-Dokumentation zu gewinnen. Doch Widgets eignen sich nicht nur dafür, sondern auch für Informationen aus dem [Add-on](../index.md) **VIVA**. Es bringt ein eigenes Widget mit, dass die [Berichte](./berichte-mit-viva.md) beinhaltet.

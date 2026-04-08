@@ -1,3 +1,10 @@
+---
+title: Release Notes 1.18
+description: "We're happy to announce that the latest major version 1.18 of i-doit has been released."
+icon:
+status:
+lang: de
+---
 # Release Notes 1.18
 
 We're happy to announce that the latest major version 1.18 of i-doit has been released. This update contains a lot of bug fixes, which can be found in the [changelog](../release-notes-1.18/index.md) and new features which have been highly requested by our customers.

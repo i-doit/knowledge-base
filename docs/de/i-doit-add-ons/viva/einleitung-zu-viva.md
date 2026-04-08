@@ -1,3 +1,10 @@
+---
+title: Einleitung zu VIVA
+description: "VIVA steht für Verfügbarkeit, Integrität, Vertraulichkeit, Authentizität und ist als Add-on verfügbar."
+icon:
+status:
+lang: de
+---
 # Einleitung zu VIVA
 
 **VIVA** steht für **V**erfügbarkeit, **I**ntegrität, **V**ertraulichkeit, **A**uthentizität und ist als [Add-on](../index.md) verfügbar.

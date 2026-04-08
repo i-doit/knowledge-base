@@ -1,165 +1,175 @@
 ---
 title: Maintenance Add-on
-description: Maintenance Add-on
+description: "With the Maintenance add-on, maintenance schedules can be planned, coordinated, and managed."
 icon: addons/maintenance
 status:
 lang: en
 ---
 
-You can plan, coordinate and control maintenance dates with help of the **Maintenance intervals**  [add-on](./index.md). Planned maintenance works can be linked to any [objects](../basics/structure-of-the-it-documentation.md). You will receive notifications automatically via e-mail so that you do not miss the maintenance works.
+With the [add-on](./index.md) **Maintenance**, maintenance appointments can be planned, coordinated, and managed. Planned maintenance activities are linked to any [objects](../grundlagen/struktur-it-dokumentation.md). To avoid missing deadlines, notifications are automatically sent via email.
 
-Download and Installation
+!!! info "You can find a practical example in our **[Blog](https://www.i-doit.com/blog/status-und-wartungsplanung-with-i-doit/)**"
 
-You can subsequently install the **Maintenance intervals** add-on. The article "[i-doit Add-ons](./index.md)" provides detailed descriptions regarding download, installation, updates etc.
+## Download and installation
+
+This add-on can be installed additionally. Details on download, installation, and updates can be found in the article "[i-doit Add-ons](./index.md)".
 
 ## Configuration
 
-A separate configuration is not planned.
+No separate configuration is required.
 
-## Rights management
+## Assigning rights
 
-You can set [rights for persons and person groups](../efficient-documentation/rights-management/index.md) under **Administration → User permissions → Maintenance**.
+Under **Administration → Permissions → Wartung** can [permissions for persons and person groups](../effizientes-dokumentieren/rechteverwaltung/index.md) be adjusted.
 
-| Condition              | Description                                    |
-| ---------------------- | ---------------------------------------------- |
-| **Planning**           | Enables handling of maintenance works          |
-| **Planning (archive)** | Enables handling of archived maintenance works |
-| **Email template**     | Enables handling of e-mail templates           |
-| **Overview**           | Enables the generation of an overview          |
-| **Send emails**        | Enables the creation of a report               |
+| Condition                    | Description                                        |
+| ---------------------------- | --------------------------------------------------- |
+| **Upcoming maintenance**     | Allows handling of upcoming maintenance  |
+| **All maintenance**           | Allows handling of all maintenance            |
+| **Completed maintenance** | Allows handling of archived maintenance |
+| **Email templates**          | Allows handling of email templates        |
+| **Report (Export)**         | Allows exporting maintenance activities                 |
+| **Send emails**           | Allows creating a report             |
 
-## Planning maintenance works
+## Planning maintenance
 
-You can create and edit maintenance works under **Add-ons → Maintenance → All maintenances**.
+Maintenance activities can be created and edited under **Add-ons → Maintenance → All maintenance**.
 
-[![Planning](../assets/images/en/i-doit-add-ons/maintenance/1-main.png)](../assets/images/en/i-doit-add-ons/maintenance/1-main.png)
+[![Wartung](../assets/images/de/i-doit-add-ons/maintenance/1-main.png)](../assets/images/de/i-doit-add-ons/maintenance/1-main.png)
 
-The action bar contains the following functions:
+The action bar provides the following functions:
 
-| Button         | Action                                                            |
-| -------------- | ----------------------------------------------------------------- |
-| **New**        | Create a new maintenance work                                     |
-| **Edit**       | Edit selected maintenance works                                   |
-| **Delete**     | Delete selected maintenance works irrevocably                     |
-| **Finish**     | Mark selected maintenance works as successfully completed         |
-| **Send email** | Inform persons in question via e-mail about the maintenance works |
+| Button                 | Action                                                        |
+| ---------------------- | ------------------------------------------------------------- |
+| **Neu**                | Create new maintenance                                        |
+| **Editieren**          | Edit selected maintenance                                |
+| **Delete**             | Irrevocably delete selected maintenance                  |
+| **Complete**           | Mark selected maintenance as successfully completed       |
+| **E-Mails abschicken** | Inform affected persons about the maintenance via email |
 
-[![action bar](../assets/images/en/i-doit-add-ons/maintenance/2-main.png)](../assets/images/en/i-doit-add-ons/maintenance/2-main.png)
+[![Wartung](../assets/images/de/i-doit-add-ons/maintenance/2-main.png)](../assets/images/de/i-doit-add-ons/maintenance/2-main.png)
 
-When you create a new maintenance work, you can select the following options:
+When creating a new maintenance activity, the following options are available:
 
-| Option                   | Description                                                                                                                                                                                                                                            |
-| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Finish maintenance**   | Is this maintenance work already marked as completed?                                                                                                                                                                                                  |
-| **Email dispatched**     | Was an e-mail sent to the persons concerned?                                                                                                                                                                                                           |
-| **Objects**              | List of objects concerned by maintenance works                                                                                                                                                                                                         |
-| **Maintenance type**     | Here you can categorize maintenance works                                                                                                                                                                                                              |
-| ****Maintenance date**** | Date/ period of the planned maintenance works                                                                                                                                                                                                          |
-| **Comment**              | Further details                                                                                                                                                                                                                                        |
-| **Recipient**            | Persons who the maintenance works are assigned to. They receive an e-mail if a corresponding e-mail address is assigned to them (**Persons → Master data** category). If person groups are the recipients, the members of the groups will be notified. |
-| **Assigned roles**       | As an alternative or in parallel with the recipients the assigned contacts can be notified by means of their roles (**Contact assignment** category).                                                                                                  |
-| **Email template**       | Which text do you want to send via e-mail (see below)?                                                                                                                                                                                                 |
+| Option                     | Description                                                                                                                                                                                                                                    |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Maintenance completed**  | Has this maintenance already been marked as completed?                                                                                                                                                                                         |
+| **Email sent**     | Has an email already been sent to the affected persons?                                                                                                                                                                                |
+| **objects**                | List of objects affected by the maintenance                                                                                                                                                                                                       |
+| **Maintenance type**            | Maintenance activities can be categorized via this.                                                                                                                                                                                                 |
+| **Maintenance schedule**         | Time period of the planned maintenance.                                                                                                                                                                                                                 |
+| **Recurring maintenance** | Configuration of recurring maintenance. Daily, weekly, monthly, or yearly.                                                                                                                                                     |
+| **Description**           | Further details                                                                                                                                                                                                                                 |
+| **Recipients**              | Persons to whom the maintenance is assigned; they receive an email if a corresponding email address is assigned to them (category Persons → Master data). For person groups as recipients, their members are notified. |
+| **Assigned roles**     | Alternatively or in parallel to the recipients, the assigned contacts can be notified based on their roles (category Contact assignment).                                                                                             |
+| **Email template**         | Which text should be sent via email (see below)?                                                                                                                                                                                    |
 
-[![maintenance work](../assets/images/en/i-doit-add-ons/maintenance/3-main.png)](../assets/images/en/i-doit-add-ons/maintenance/3-main.png)
+[![Wartung](../assets/images/de/i-doit-add-ons/maintenance/3-main.png)](../assets/images/de/i-doit-add-ons/maintenance/3-main.png)
 
-## Finished maintenance works
+## Upcoming maintenance
 
-If a maintenance work is marked as completed, it will not appear in the **Planning View** section anymore (see above). Instead, it will be listed under **Add-ons → Maintenance → Finished maintenances**.
+Here you can send emails for maintenance activities, complete maintenance, or create and edit them.
 
-[![Archived Maintenance Works](../assets/images/en/i-doit-add-ons/maintenance/4-main.png)](../assets/images/en/i-doit-add-ons/maintenance/4-main.png)
+[![Upcoming maintenance](../assets/images/de/i-doit-add-ons/maintenance/4-main.png)](../assets/images/de/i-doit-add-ons/maintenance/4-main.png)
 
-## Create an overview
+## Completed maintenance
 
-A detailed overview of all objects for which maintenance works have been planned or already completed can be found at **Add-ons → Maintenance → Planning View**. You can define a time period for filtering purposes (option **From** and **To**).
+When a maintenance activity is marked as completed, it no longer appears under **Upcoming maintenance** (see above). Instead, you can find it under **Add-ons → Maintenance → Completed maintenance**.
 
-[![Create an Overview](../assets/images/en/i-doit-add-ons/maintenance/5-main.png)](../assets/images/en/i-doit-add-ons/maintenance/5-main.png)
+[![Completed maintenance](../assets/images/de/i-doit-add-ons/maintenance/5-main.png)](../assets/images/de/i-doit-add-ons/maintenance/5-main.png)
 
-## Create a Report
+## Planning view
 
-You can create a report listing the planned and completed maintenance works and download it as PDF file. This function can be found under **Add-ons → Maintenance → Report (Export)**. Alternatively, you can reach this function at **Extras → Report Manager → Views → Maintenance report (Export)**. You can choose from the following options:
+A detailed overview of all objects for which maintenance has been planned or already performed can be found under **Add-ons → Maintenance → Planning view**. For filtering, you define the time period via the **From** and **To** options.
 
-| Option                        | Description                                                                                                                                                      |
-| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Headline**                  | Headline of the report                                                                                                                                           |
-| **Maintenance type  <br>**    | Restriction to a certain type                                                                                                                                    |
-| **From**                      | Start date                                                                                                                                                       |
-| **To**                        | End date                                                                                                                                                         |
-| **Logo for PDF header  <br>** | Additional picture which is included in each page; the picture has to be available as [file object](../use-cases/upload-and-link-files.md) in i-doit beforehand. |
+[![Planungsansicht](../assets/images/de/i-doit-add-ons/maintenance/6-main.png)](../assets/images/de/i-doit-add-ons/maintenance/6-main.png)
 
-With the **PDF Export & Download** button you can create the PDF file and download it.
+## Creating a report
 
-[![PDF Export & Download](../assets/images/en/i-doit-add-ons/maintenance/6-main.png)](../assets/images/en/i-doit-add-ons/maintenance/6-main.png)
+From the previously planned and performed maintenance activities, you can create a report that can be downloaded as a PDF file. You can find the function under **Add-ons → Wartung → Report (Export)** or alternatively under **Extras → Report Manager → Views → Wartung Report (Export)**. The following options are available:
 
-## Maintenance information for each Object
+| Option           | Description                                                                                                                                                                      |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Heading**  | Report heading                                                                                                                                                          |
+| **Maintenance type**  | Restriction to a specific type                                                                                                                                            |
+| **Von**          | Start date                                                                                                                                                                      |
+| **Bis**          | End date                                                                                                                                                                          |
+| **Logo for PDF** | Additional image integrated into every page; the image must first be available as a [file object](../anwendungsfaelle/dateien-hochladen-und-verknuepfen.md) in i-doit. |
 
-During the performance of maintenance works for an object you can find a symbolic representation within the object. On every page of an object, i.e. the overview page or within the categories, you can see the information that the objects is **In maintenance** at the moment.
+The PDF file is generated via the **PDF Export & Download** button and offered for download.
 
-[![Maintenance Information for each Object](../assets/images/en/i-doit-add-ons/maintenance/7-main.png)](../assets/images/en/i-doit-add-ons/maintenance/7-main.png)
+[![Wartungs-Bericht Create](../assets/images/de/i-doit-add-ons/maintenance/7-main.png)](../assets/images/de/i-doit-add-ons/maintenance/7-main.png)
 
-## Maintenance works on the dashboard
+## Maintenance overview in the object
 
-You can display the dates of scheduled and completed maintenance works in the calendar widget on the [dashboard](../basics/dashboard-and-widgets.md) and highlight these dates.
+If an object is under maintenance, this is indicated symbolically. On every page of the object -- on the overview page or within categories -- the note **In maintenance** appears.
 
-[![calendar widget](../assets/images/en/i-doit-add-ons/maintenance/8-main.png)](../assets/images/en/i-doit-add-ons/maintenance/8-main.png)
+You can add the **Maintenance overview** category to the object type via the [object type configuration](../grundlagen/zurodnung-von-kategorien-zu-objekttypen.md) to also display maintenance activities directly in the object.
 
-## Create E-mail templates
+[![Maintenance overview in object](../assets/images/de/i-doit-add-ons/maintenance/8-main.png)](../assets/images/de/i-doit-add-ons/maintenance/8-main.png)
 
-You can generate an e-mail for scheduled maintenance works to inform the persons involved. The persons are either specified as recipient or via their assigned roles. Under **Add-ons → Maintenance → Email templates** you can define which text is to be send via e-mail to the persons in question. Any number of templates is possible which can be assigned to each single scheduled maintenance work (see above).
+## Maintenance on the dashboard
 
-[![Create E-mail Templates](../assets/images/en/i-doit-add-ons/maintenance/9-main.png)](../assets/images/en/i-doit-add-ons/maintenance/9-main.png)
+On the [Dashboard](../grundlagen/dashboard-und-widgets.md) you display planned and completed maintenance activities in the calendar widget. These are highlighted.
 
-Use the **New** button to create a new e-mail template and the **Edit** button to change an existing template. With **Delete** you can delete e-mail templates irrevocably.
+[![Kalender-Widget](../assets/images/de/i-doit-add-ons/maintenance/9-main.png)](../assets/images/de/i-doit-add-ons/maintenance/9-main.png)
 
-The form to create or edit e-mail templates offers the following options:
+## Creating email templates
 
-| Option    | Description                |
-| --------- | -------------------------- |
-| **Title** | Subject line of the e-mail |
-| **Text**  | Text of the e-mail         |
+For each planned maintenance activity, you can generate an email to notify the affected persons. You specify them either as recipients or via their assigned role. You define the email text under **Add-ons → Maintenance → Email templates**. You can create any number of templates and assign them to individual planned maintenance activities (see above).
 
-You can use placeholders for both the **Title** and the **Text** which are then replaced before the sending process. The list of available placeholders can also be found on this page.
+[![E-Mail-Vorlage](../assets/images/de/i-doit-add-ons/maintenance/10-main.png)](../assets/images/de/i-doit-add-ons/maintenance/10-main.png)
 
-[![placeholders](../assets/images/en/i-doit-add-ons/maintenance/10-main.png)](../assets/images/en/i-doit-add-ons/maintenance/10-main.png)
+Using the **New** button, you create a new template; using **Edit**, you modify an existing one. Using **Delete**, you irrevocably remove templates.
 
-## Automatic sending of E-mails
+The form for creating and editing offers the following Options:
 
-Actually, the e-mails are sent via the [console](../automation-and-integration/cli/index.md), the CLI Tool of i-doit, in the background. For this purpose, the **maintenance** handler is used. We recommend setting up a Cronjob for the automated sending of e-mails.
+| Option     | Description       |
+| ---------- | ------------------ |
+| **Titel**  | Subject of the email |
+| **Inhalt** | Text of the email    |
 
-Example:
+You can populate both the **Title** and the **Content** with placeholders that are replaced before sending. The list of available placeholders can also be found on the page.
+
+[![E-Mail-Vorlage](../assets/images/de/i-doit-add-ons/maintenance/11-main.png)](../assets/images/de/i-doit-add-ons/maintenance/11-main.png)
+
+## Sending emails automatically
+
+The actual sending of emails takes place in the background via the [Console](../automatisierung-und-integration/cli/index.md), the CLI tool of i-doit. For this, you use the **maintenance** command. It is best to set up a cron job to send emails automatically. Example call:
 
 ```shell
 sudo -u www-data php console.php --user admin --password admin maintenance
 ```
 
-Thus, you can automate the process and do not have to send e-mails manually anymore (**Send emails** button under **Add-ons → Maintenance → Upcoming Maintenance** and at **Add-ons → Maintenance → Finished Maintenance** as well as **Add-ons → Maintenance → All Maintenances**).
+This automates the manual sending of emails (**Send emails** button under **Add-ons → Maintenance → All maintenance**).
 
 ## CLI console commands and options
 
-| Command                     | Internal system description                                              |
-| --------------------------- | ------------------------------------------------------------------------ |
-| [maintenance](#maintenance) | Sends notifications of scheduled maintenance from the Maintenance Add-on |
+| Command     | Internal description                                                     |
+| ----------- | ------------------------------------------------------------------------ |
+| maintenance | Sends notifications for planned maintenance from the Maintenance add-on |
 
-!!! info "This command is only available if the Maintenance add-on is installed"
+!!! info "This command is only available after installation of the Maintenance add-on."
 
-### Maintenance
+### maintenance
 
-Sends e-mails with scheduled maintenance according to the time periods specified in the [Maintenance add-on](#maintenance).
+Sends emails with planned maintenance according to defined time periods.
 
-**Options:**
+**Optionen:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
-| ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID     | Tenant ID of the tenant to be used (default: 1)                                              |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| parameter (Kurzform) | parameter (Langform)   | Description                                                                                     |
+| -------------------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
+| -u                   | --user=[USERNAME]      | Username of a user authorized for execution                                      |
+| -p                   | --password=[PASSWORD]  | Password for authentication of the previously specified user                                   |
+| -i                   | --tenantId=[TENANT-ID] | Tenant ID of the tenant to be used (default: 1)                              |
+| -h                   | --help                 | Help message for displaying further information                                            |
+| -q                   | --quiet                | Quiet mode to disable output                                                       |
+| -V                   | --version              | Display the version of the i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi    | Force ANSI output (or disable with --no-ansi)                                             |
+| -n                   | --no-interaction       | Disables all interaction questions of the i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose              | Increases the output verbosity. (1 = Normal output, 2 = Detailed output, 3 = Debug level) |
 
-**Example of use**
+**Usage example**
 
 ```shell
 sudo -u www-data php console.php maintenance --user admin --password admin --tenantId 1
@@ -167,18 +177,19 @@ sudo -u www-data php console.php maintenance --user admin --password admin --ten
 
 ## Releases
 <!-- cSpell:disable -->
-| Version | Date       | Changelog                                                                                                                                                                                                                                                                                                                 |
-| ------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1.7     | 2025-09-09 | [Task] PHP 8.4 compatibility<br>[Bug] SQL error when installing via console                                                                                                                                                                                                                                               |  | 1.6 | 2025-02-26 | [Task] Make symfony 6.4 compatible<br>[Bug] Option 'Send multiple notifications for each maintenance?' automatically sets to 'Yes' after finishing an upcoming maintenance |
-| 1.5     | 2024-10-10 | [Bug] Fix autoload issue during add-on installation                                                                                                                                                                                                                                                                       |
-| 1.4     | 2024-07-09 | [Improvement] Send an email with all the objects within the maintenance<br>[Bug] Only one role can be selected to be notified                                                                                                                                                                                             |
-| 1.3     | 2023-11-07 | [Task] Use new routes to display object and object type images / move add-on related files                                                                                                                                                                                                                                |
-| 1.2.2   | 2023-08-22 | [Improvement] PHP 8.1 Compatibility<br>[Bug] Filter in list views not working<br>[Bug] Creating a new E-Mail template does not work when the object type constant of client,server or switch or not available                                                                                                             |
-| 1.2.1   | 2023-01-24 | [Bug] Error when sending multiple mails                                                                                                                                                                                                                                                                                   |
-| 1.2     | 2022-09-05 | [Task] PHP 8.0 Compatibility  <br>[Task] Design Compatibility  <br>[Bug] HTML code in browser message                                                                                                                                                                                                                     |
-| 1.1.4   | 2021-01-18 | [Improvement] Compatibility with i-doit 1.16                                                                                                                                                                                                                                                                              |
-| 1.1.3   | 2020-10-20 | [Bug] Maintenance without an object can be completed despite the error message  <br>[Bug] Keeping the filters in add-on "Maintenance"  <br>[Bug] Maintenance report shows the wrong period  <br>[Bug] Placeholder model>manufacturer is swapped with model>title  <br>[Bug] Email notification notifies archived contacts |
-| 1.1.2   | 2019-07-31 | [Bug] Column 'Person (Role)' is empty when exporting<br>[Bug] Maintenance report: periods underneath each other to save space[Bug] Export of corrects duplicates objects<br>[Bug] Double mailing possible for recurring maintenance<br>[Bug] Maintenance can not be completed                                             |
-| 1.1.1   | 2018-12-05 | [Bug] Export does not report assigned contacts in the report<br>[Bug] Object browser for recipients shows no results                                                                                                                                                                                                      |
-| 1.1     | 2018-04-16 | [Improvement] Multiple selection of types in the report view<br>[Improvement] Definition of times for beginning and end of maintenance<br>[Improvement] Recurring maintenances<br>[Improvement] Maintenance handler redirects to command and create command with logic from handler                                       |
-| 1.0.3   | 2017-12-18 | Initial release                                                                                                                                                                                                                                                                                                           |
+| Version | Date      | Changelog                                                                                                                                                                                                                                                                                                                           |
+| ------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1.7     | 09.09.2025 | [Task] PHP 8.4 compatibility<br>[Bug] SQL error when installing via console                                                                                                                                                                                                                                                         |
+| 1.6     | 26.02.2025 | [Task] Make symfony 6.4 compatible<br>[Bug] Option 'Send multiple notifications for each maintenance?' automatically sets to 'Yes' after finishing an upcoming maintenance                                                                                                                                                          |
+| 1.5     | 10.10.2024 | [Bug] Fix autoload issue during add-on installation                                                                                                                                                                                                                                                                                 |
+| 1.4     | 09.07.2024 | **Improvement** Send an email with all the objects within the maintenance<br>**Bug** Only one role can be selected to be notified                                                                                                                                                                                                   |
+| 1.3     | 07.11.2023 | **Task** Use new routes to display object and object type images / move add-on related files                                                                                                                                                                                                                                        |
+| 1.2.2   | 22.08.2023 | **Improvement** PHP 8.1 Compatibility<br>**Bug** Filter in list views not working<br>**Bug** Creating a new E-Mail template does not work when the object type constant of client,server or switch or not available                                                                                                                 |
+| 1.2.1   | 24.01.2023 | **Bug** Error when sending multiple mails                                                                                                                                                                                                                                                                                           |
+| 1.2     | 05.09.2022 | **Task** PHP 8.0 Compatibility  <br>**Task** Design Compatibility  <br>**Bug**  HTML code in browser message                                                                                                                                                                                                                        |
+| 1.1.4   | 18.01.2021 | **Improvement** Compatibility with i-doit 1.16                                                                                                                                                                                                                                                                                      |
+| 1.1.3   | 20.10.2020 | **Bug** Maintenance without an object can be completed despite the error message  <br>**Bug** Keeping the filters in add-on "Maintenance"  <br>**Bug** Maintenance report shows the wrong period  <br>**Bug** Placeholder model>manufacturer is swapped with model>title  <br>**Bug** Email notification notifies archived contacts |
+| 1.1.2   | 31.07.2019 | **Bug** Column 'Person (Role)' is empty when exporting**Bug** Maintenance report: periods underneath each other to save space<br>**Bug** Export of corrects duplicates objects<br>**Bug** Double mailing possible for recurring maintenance<br>**Bug** Maintenance can not be completed<br>                                         |
+| 1.1.1   | 05.12.2018 | **Bug** Export does not report assigned contacts in the report<br>**Bug** Object browser for recipients shows no results<br>                                                                                                                                                                                                        |
+| 1.1     | 16.04.2018 | **Improvement**  Multiple selection of types in the report view<br>**Improvement**  Definition of times for start and end of maintenance<br>**Improvement**  Recurring maintenance<br>**Improvement**  Redirect Maintenance Handler to Command and create Command with logic from Handler<br>                            |
+| 1.0.3   | 18.12.2017 | Initial release                                                                                                                                                                                                                                                                                                                   |

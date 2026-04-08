@@ -1,6 +1,6 @@
 ---
 title: console
-description: console
+description: "Get a list of the tenants."
 icon: material/api
 #status: updated
 lang: de
@@ -65,3 +65,9 @@ Get a list of the tenants.
       }
     }
     ```
+
+## Siehe auch
+
+- [API v1 Methoden](index.md) — Übersicht aller API v1 Methoden
+- [API Add-on](../../index.md) — Einstieg in das API Add-on
+- [i-doit Add-ons](../../../index.md) — Alle verfügbaren Add-ons

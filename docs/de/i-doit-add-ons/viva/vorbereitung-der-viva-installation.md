@@ -1,3 +1,10 @@
+---
+title: "Vorbereitung der VIVA-Installation"
+description: "Vor der ersten Nutzung des i-doit Add-ons VIVA steht die Installation an."
+icon:
+status:
+lang: de
+---
 # Vorbereitung der VIVA-Installation
 
 Vor der ersten Nutzung des [i-doit Add-ons](../index.md) **VIVA** steht die Installation an.

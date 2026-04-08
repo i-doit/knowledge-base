@@ -8,7 +8,7 @@ lang: de
 
 # ISMS Objekttypen
 
-Das ISMS-Add-on ergänzt i-doit um mehrere Objekttypen in der Objekttyp-Gruppe "ISMS". Die folgenden Abschnitte beschreiben Zweck, typische Kategorien und Besonderheiten je Objekttyp.
+Das ISMS-Add-on ergänzt i-doit um mehrere Objekttypen in der Objekttyp-Gruppe "ISMS". Die folgenden Abschnitte beschreiben dir Zweck, typische Kategorien und Besonderheiten je Objekttyp.
 
 * * *
 
@@ -16,7 +16,7 @@ Das ISMS-Add-on ergänzt i-doit um mehrere Objekttypen in der Objekttyp-Gruppe "
 
 [![Audit](../../assets/images/de/i-doit-add-ons/isms/object-types-and-categories/isms_audit.jpg)](../../assets/images/de/i-doit-add-ons/isms/object-types-and-categories/isms_audit.jpg)
 
-Mit dem Objekttyp Audit lassen sich Audits dokumentieren, inklusive Ergebnissen und festgestellten Abweichungen.
+Mit dem Objekttyp Audit kannst du Audits dokumentieren, inklusive Ergebnissen und festgestellten Abweichungen.
 
 **Kategorien:**
 
@@ -36,12 +36,12 @@ Der Objekttyp Bedrohung beschreibt Risikoquellen für Risikoeinschätzungen.
 
   - **Allgemein** (i-doit Standardkategorie): Gehört zu jedem Objekt.
   - **Bedrohung:** Kennzeichnung, Kategorie, Katalog, Kapitel und Abschnitt. Diese Angaben sind hilfreich, wenn die Bedrohung aus einem Katalog stammt, zum Beispiel dem IT-Grundschutz-Kompendium. Zusätzlich können die Schutzziele Vertraulichkeit, Integrität und Verfügbarkeit dokumentiert werden.
-  - **Empfehlungen nach ISO27002:** Zwei Textfelder zur Dokumentation von Empfehlungen. Importpakete sind aus Lizenzgründen nicht enthalten.
+  - **Empfehlungen nach ISO 27002:** Zwei Textfelder zur Dokumentation von Empfehlungen. Importpakete sind aus Lizenzgründen nicht enthalten.
   - **ISMS: Wird verwendet in:** Variabler Report, der alle Objekte auflistet, die diese Bedrohung verwenden.
   - **Typische Schwachstellen:** Multivalue-Kategorie zur Auswahl vorhandener Schwachstellen.
   - **Zugriff** (i-doit Standardkategorie): Verlinkung auf Quellen, zum Beispiel Beschreibungen im IT-Grundschutz-Kompendium des BSI.
 
-!!! tip "Für den Import von Bedrohungen aus dem IT-Grundschutz-Kompendium eignet sich diese Struktur besonders gut."
+!!! tip "Diese Struktur eignet sich besonders gut für den Import von Bedrohungen aus dem IT-Grundschutz-Kompendium."
 
 * * *
 
@@ -62,7 +62,7 @@ Bewertungskriterien bilden die Grundlage für die Berechnung der Risikohöhe.
 
 [![Ereignis](../../assets/images/de/i-doit-add-ons/isms/object-types-and-categories/isms_event.jpg)](../../assets/images/de/i-doit-add-ons/isms/object-types-and-categories/isms_event.jpg)
 
-Mit dem Objekttyp Ereignis lassen sich Risikoereignisse für eine ereignisbasierte Risikoidentifikation anlegen.
+Mit dem Objekttyp Ereignis kannst du Risikoereignisse für eine ereignisbasierte Risikoidentifikation anlegen.
 
 **Kategorien:**
 
@@ -132,7 +132,7 @@ Der Objekttyp Sicherheitsvorfall dient der strukturierten Dokumentation von Inci
 
 [![Schwachstelle](../../assets/images/de/i-doit-add-ons/isms/object-types-and-categories/isms_vulnerability.jpg)](../../assets/images/de/i-doit-add-ons/isms/object-types-and-categories/isms_vulnerability.jpg)
 
-Schwachstellen werden für Risikoeinschätzungen verwendet. Der Objekttyp kann optional sein, wenn Bedrohungen aus Katalogen bereits Bedrohung und Schwachstelle kombinieren, zum Beispiel im IT-Grundschutz.
+Schwachstellen werden für Risikoeinschätzungen verwendet. Der Objekttyp ist optional, wenn deine Bedrohungen aus Katalogen bereits Bedrohung und Schwachstelle kombinieren, zum Beispiel im IT-Grundschutz.
 
 **Kategorien:**
 
@@ -147,12 +147,12 @@ Schwachstellen werden für Risikoeinschätzungen verwendet. Der Objekttyp kann o
 
 [![SOA-Maßnahme](../../assets/images/de/i-doit-add-ons/isms/object-types-and-categories/isms_control.jpg)](../../assets/images/de/i-doit-add-ons/isms/object-types-and-categories/isms_control.jpg)
 
-SOA-Maßnahmen enthalten die im Unternehmen angewandten oder geplanten Maßnahmen. Maßnahmen können aus Katalogen importiert und mit Maßnahmen Anhang A verknüpft werden.
+SOA-Maßnahmen enthalten die im Unternehmen angewandten oder geplanten Maßnahmen. Du kannst Maßnahmen aus Katalogen importieren und mit Maßnahmen Anhang A verknüpfen.
 
 **Kategorien:**
 
   - **Allgemein** (i-doit Standardkategorie): Gehört zu jedem Objekt.
-  - **Empfehlungen nach ISO27002:** Zwei Textfelder für Empfehlungen. Importpakete sind aus Lizenzgründen nicht enthalten.
+  - **Empfehlungen nach ISO 27002:** Zwei Textfelder für Empfehlungen. Importpakete sind aus Lizenzgründen nicht enthalten.
   - **Maßnahme:** Kennzeichnung, Referenz, Stammdaten, Genehmigung, Kapitel und Abschnitt. Für die SoA sind Anwendbarkeit und Begründung der Anwendbarkeit relevant. Dokumentation des Umsetzungsstatus sowie einer Bemerkung. Für den Umsetzungsstatus sind im Auslieferungszustand keine Werte vordefiniert.
   - **ISMS: Wird verwendet in:** Variabler Report, der alle Objekte auflistet, die diese SOA-Maßnahme verwenden.
   - **Zugriff** (i-doit Standardkategorie): Referenz auf externe Quellen.
@@ -163,9 +163,9 @@ SOA-Maßnahmen enthalten die im Unternehmen angewandten oder geplanten Maßnahme
 
 [![Virtueller ISMS Standort](../../assets/images/de/i-doit-add-ons/isms/object-types-and-categories/isms_virtual_location.jpg)](../../assets/images/de/i-doit-add-ons/isms/object-types-and-categories/isms_virtual_location.jpg)
 
-Der virtuelle ISMS Standort ist ein Hilfsobjekt zur Strukturierung des Standortbaums, insbesondere bei aktivierten Standortrechten. SOA-Maßnahmen lassen sich diesem virtuellen Standort zuweisen. Dadurch bleibt der Standortbaum für Infrastruktur übersichtlich.
+Der virtuelle ISMS Standort ist ein Hilfsobjekt zur Strukturierung des Standortbaums, insbesondere bei aktivierten Standortrechten. Du kannst SOA-Maßnahmen diesem virtuellen Standort zuweisen. Dadurch bleibt der Standortbaum für Infrastruktur übersichtlich.
 
-Standardmäßig ist der Objekttyp ausgeblendet. Er kann bei Bedarf über die Objekttyp-Konfiguration eingeblendet werden.
+Standardmäßig ist der Objekttyp ausgeblendet. Du kannst ihn bei Bedarf über die Objekttyp-Konfiguration einblenden.
 
 **Kategorien:**
 

@@ -32,7 +32,7 @@ Folgende Fehler sind behoben:<br>
 -   Nach Änderung der sysop-Passwortes erscheint das Menü nicht mehr<br>
 -   Datumsüberschreitung Arbeitsaufträge<br>
 -   Löschen von Arbeitsaufträgen<br>
--   Einträge in der Kategorie "Arbeitsauftraege" sind nicht richtig verlinkt<br>
+-   Einträge in der Kategorie "Arbeitsaufträge" sind nicht richtig verlinkt<br>
 -   Suche-Funktion durchsucht zu wenig Felder<br>
 -   main.php: Link zu IT-Elementen in "Letzte Updates"<br>
 -   menu.php: Suchfunktion meldet "Kein Suchbegriff eingegeben" bei fehlendem<br>
@@ -75,7 +75,7 @@ Dateiverwaltung implementiert.<br>
 0.8.2<br>
 
 -   Allgemein: Windows-Version ist jetzt als Stable verfügbar<br>
--   Arbeitsaufträge: 'Zurueck'-Button funktionierte in Auftragsansicht nicht<br>
+-   Arbeitsaufträge: 'Zurück'-Button funktionierte in Auftragsansicht nicht<br>
 -   Wartungsverträge: SQL-Aufruf gefixt<br>
 -   CMDB: Normale Benutzer konnten Datensätze löschen<br>
 -   Allgemein: Installationsanleitung (INSTALL) um einige wichtige Punkte<br>

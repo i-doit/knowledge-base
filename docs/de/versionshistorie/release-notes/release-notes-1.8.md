@@ -1,3 +1,10 @@
+---
+title: Release Notes 1.8
+description: "> Systemvoraussetzungen"
+icon:
+status:
+lang: de
+---
 # Release Notes 1.8
 
 > Systemvoraussetzungen

@@ -1,3 +1,10 @@
+---
+title: Release Notes 28
+description: "We’re happy to announce i-doit 28 - 2023’s final release which focuses on security and quality."
+icon:
+status:
+lang: de
+---
 # Release Notes 28
 
 We’re happy to announce i-doit 28 - 2023’s final release which focuses on **security and quality**.

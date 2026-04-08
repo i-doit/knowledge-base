@@ -14,12 +14,12 @@ Mit dem **ISMS-Add-on** lassen sich Risikoeinschätzungen direkt an Objekten in 
 
 ## Risikoeinschätzung vornehmen
 
-Nach der Installation erscheint an jedem Objekt der Kategorie-Ordner **"ISMS"**. In der zugehörigen Ansicht lassen sich **ISMS-Relevanz** und **Anwendungsbereich** des Objekts festlegen.
+Nach der Installation erscheint an jedem Objekt der Kategorie-Ordner **"ISMS"**. In der zugehörigen Ansicht legst du **ISMS-Relevanz** und **Anwendungsbereich** des Objekts fest.
 
-Die Kategorie **Risikoeinschätzung** öffnet eine **Multi-Value-Kategorie**, in der vorhandene Bewertungen eingesehen und bearbeitet werden können.
+Die Kategorie **Risikoeinschätzung** öffnet eine **Multi-Value-Kategorie**, in der du vorhandene Bewertungen einsehen und bearbeiten kannst.
 
 !!! note
-    Ab Version **1.4** des ISMS-Add-ons können zusätzliche Attribute der Risikoeinschätzung in die **Listenansicht** aufgenommen werden.
+    Ab Version **1.4** des ISMS-Add-ons kannst du zusätzliche Attribute der Risikoeinschätzung in die **Listenansicht** aufnehmen.
 
 ### Neue Risikoeinschätzung erstellen
 
@@ -27,20 +27,20 @@ Die Kategorie **Risikoeinschätzung** öffnet eine **Multi-Value-Kategorie**, in
 
 1. **Bedrohung** und **Schwachstelle** auswählen – beide zusammen bilden das Risiko.
 2. **Schutzziele** hinterlegen (Standard: *Vertraulichkeit*, *Integrität*, *Verfügbarkeit*).
-      - Weitere Werte (z.B. *Authentizität*) lassen sich unter
+      - Weitere Werte (z.B. *Authentizität*) kannst du unter
         `Verwaltung -> Vordefinierte Inhalte -> Dialog-Admin -> ISMS -> Schutzziele` hinzufügen.
-3. Im Abschnitt **Risikobewertung** die **Schadensszenarien** per **Schieberegler** bewerten.
-4. Die **Eintrittswahrscheinlichkeit** ebenfalls per Schieberegler festlegen.
-5. **Vorhandene Maßnahmen** zuordnen (falls vorhanden) und einen **Kommentar** zur Bewertung dokumentieren.
-6. **Datum der Risikobewertung** sowie **Wiedervorlage** setzen (für Auswertungen nutzbar).
+3. Bewerte im Abschnitt **Risikobewertung** die **Schadensszenarien** per **Schieberegler**.
+4. Lege die **Eintrittswahrscheinlichkeit** ebenfalls per Schieberegler fest.
+5. Ordne **vorhandene Maßnahmen** zu (falls vorhanden) und dokumentiere einen **Kommentar** zur Bewertung.
+6. Setze **Datum der Risikobewertung** sowie **Wiedervorlage** (für Auswertungen nutzbar).
 
 [![Risikobewertung - Schadensszenarien & Eintrittswahrscheinlichkeit](../../assets/images/de/i-doit-add-ons/isms/risk-assessment/create-ra2.png)](../../assets/images/de/i-doit-add-ons/isms/risk-assessment/create-ra2.png)
 
 ### Risikobehandlung
 
-- Im Attribut **Risikobehandlung** einen Wert nach **ISO 31000** auswählen.
-- Unter **Maßnahmen zur Risikobehandlung** passende **SOA-Maßnahmen** verlinken.
-- Zusätzlich festhalten:
+- Wähle im Attribut **Risikobehandlung** einen Wert nach **ISO 31000** aus.
+- Verlinke unter **Maßnahmen zur Risikobehandlung** passende **SOA-Maßnahmen**.
+- Halte zusätzlich fest:
     - **Begründung** der Auswahl
     - **Zuständig für die Umsetzung** (Platzhalter für den eingeloggten Benutzer ab i-doit **1.14.2** verfügbar)
     - **Ressourcen** und **Kosten**, **spätestes Umsetzungsdatum**
@@ -56,14 +56,14 @@ Die Kategorie **Risikoeinschätzung** öffnet eine **Multi-Value-Kategorie**, in
 ## Risikoeinschätzungen für Objektgruppen
 
 Risikoeinschätzungen sind auch für **Objektgruppen** möglich (in der Objekttyp-Gruppe "Andere").
-Damit die Bewertungen an den einzelnen Objekten der Gruppe sichtbar werden, empfiehlt sich die Konfiguration der benutzerdefinierten Kategorie **"Risikoeinschätzung-Gruppe"** unter:
+Damit die Bewertungen an den einzelnen Objekten der Gruppe sichtbar werden, konfiguriere die benutzerdefinierte Kategorie **"Risikoeinschätzung-Gruppe"** unter:
 `Verwaltung -> Vordefinierte Inhalte -> Benutzerdefinierte Kategorien -> ISMS Risikoeinschätzung (Gruppe)`.
 
 * * *
 
 ## Risikoeinschätzungen importieren (CSV)
 
-Liegt die Risikoeinschätzung z.B. bereits in **Excel** vor, kann sie per **CSV** importiert werden. Für ausgewählte Attribute der Multivalue-Kategorie **"Risikoeinschätzung"** stehen spezielle Importmethoden bereit:
+Wenn deine Risikoeinschätzung z.B. bereits in **Excel** vorliegt, kannst du sie per **CSV** importieren. Für ausgewählte Attribute der Multivalue-Kategorie **"Risikoeinschätzung"** stehen spezielle Importmethoden bereit:
 
 ### Auswirkung / Auswirkung nach Risikobehandlung
 

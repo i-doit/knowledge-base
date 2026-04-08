@@ -1,14 +1,25 @@
-In _i-doit_ kann ein Objekt schnell und einfach kopiert werden.
+---
+title: Objekte duplizieren
+description: "Mit der Duplikatfunktion erstellst du in i-doit schnell eine Kopie eines bestehenden Objekts -- inklusive der gewuenschten Kategorie-Inhalte."
+icon:
+status:
+lang: de
+---
+# Objekte duplizieren
 
-Du kannst Objekte duplizieren, indem du die zum Objekt gehörende Checkbox in der Objektliste aktivierst und die Schaltfläche **Duplizieren** verwendest. Auf diesem Weg öffnet sich ein Dialogfenster, welches dich die Parameter für die Duplikation definieren lässt.
+Mit der Duplikatfunktion erstellst du in i-doit schnell eine Kopie eines bestehenden [Objekts](../grundlagen/struktur-it-dokumentation.md) -- inklusive der gewünschten Kategorie-Inhalte.
 
-Vergib im ersten Schritt einen neuen Namen für das Objekt. Über die Auswahl **Aktualisieren** legst du fest, ob das Erstellungs- sowie das Änderungsdatum vom ursprünglichen Objekt übernommen werden sollen oder für das neue Objekt das aktuelle Datum verwendet werden soll.
+## So duplizierst du ein Objekt
 
-Um festzulegen, welche Inhalte auf das neue Objekt übertragen werden sollen, kannst du angeben, ob der Inhalt der [spezifische Kategorie](../glossar.md) (falls vorhanden) und die Inhalte der einzelnen, mit dem Objekttyp verknüpften, [Kategorien](../glossar.md) ebenfalls dupliziert werden sollen.
+1. Aktiviere die Checkbox des gewünschten Objekts in der Objektliste.
+2. Klicke auf die Schaltfläche **Duplizieren**. Es öffnet sich ein Dialogfenster.
+3. Vergib einen neuen Namen für das Objekt.
+4. Wähle über **Aktualisieren**, ob das Erstellungs- und Änderungsdatum vom Original übernommen oder das aktuelle Datum verwendet werden soll.
+5. Lege fest, welche Inhalte übertragen werden: die [spezifische Kategorie](../glossar.md) (falls vorhanden) sowie die mit dem Objekttyp verknüpften [Kategorien](../glossar.md).
+6. Optional kannst du das Duplikat (de)virtualisieren und die Checkbox **Neu erstelltes Objekt öffnen** aktivieren.
+7. Klicke auf **Duplizieren**, um den Vorgang auszuführen.
 
-Über die Optionen ist es dir möglich, das Duplikat zu (de)virtualisieren. Um das Objekt direkt nach Abschluss der Duplikation zu öffnen und anzuzeigen aktiviere die Checkbox **Neu erstelltes Objekt öffnen**.
-
-Der Vorgang wird über die Schaltfläche **Duplizieren** innerhalb des Dialogfensters ausgeführt. Nach dessen Abschluss steht dir ein Duplikat des ausgewählten Objekts inklusive der gewünschten Inhalte zur Verfügung.
+Nach Abschluss steht dir ein Duplikat des ausgewählten Objekts inklusive der gewünschten Inhalte zur Verfügung.
 
 !!! info "Hinweis"
 

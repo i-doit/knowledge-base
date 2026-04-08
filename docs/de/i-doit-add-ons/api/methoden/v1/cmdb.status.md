@@ -1,6 +1,6 @@
 ---
 title: cmdb.status
-description: cmdb.status
+description: "Read all available states."
 icon: material/api
 #status: updated
 lang: de
@@ -282,3 +282,9 @@ Purge a state.
       }
     }
     ```
+
+## Siehe auch
+
+- [API v1 Methoden](index.md) — Übersicht aller API v1 Methoden
+- [API Add-on](../../index.md) — Einstieg in das API Add-on
+- [i-doit Add-ons](../../../index.md) — Alle verfügbaren Add-ons

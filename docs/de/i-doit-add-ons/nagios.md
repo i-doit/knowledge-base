@@ -1,6 +1,6 @@
 ---
 title: Nagios
-description: Nagios
+description: "Nagios ist eine Software für Network Monitoring, die du aus den Daten deiner IT-Dokumentation heraus konfigurierst."
 icon: addons/nagios
 status:
 lang: de
@@ -8,16 +8,19 @@ lang: de
 
 # Nagios
 
-!!! warning "Bitte erstellen Sie vor jeder Änderung an einer Schnittstelle/Import einen vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist kann dieses dann wiederhergestellt werden"
+!!! warning "Bitte erstelle vor jeder Änderung an einer Schnittstelle oder einem Import ein vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist, kannst du es dann wiederherstellen."
 
-Nagios ist eine Software für [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md), das aus den Daten der [IT-Dokumentation](../glossar.md) heraus konfiguriert werden kann. Dadurch lassen sich eine doppelte Pflege von Daten vermeiden und Fehler minimieren. Der in i-doit verfügbare Export erlaubt es, vollständige oder partielle Konfigurationen zu erzeugen. Dazu werden in der i-doit-Oberfläche Nagios-Konfigurationen manuell angelegt oder automatisiert mit Werten unterfüttert.
+Nagios ist eine Software für [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md), die du aus den Daten deiner [IT-Dokumentation](../glossar.md) heraus konfigurierst. So vermeidest du doppelte Datenpflege und minimierst Fehler. Der Export erzeugt vollständige oder partielle Konfigurationen -- entweder manuell angelegt oder automatisiert mit Werten aus i-doit befuellt.
 
 !!! info "Kompatibilität"
     Die exportierten Daten sind mit der Version 3 von Nagios und Version 1 von Icinga kompatibel. Version 4 von Nagios ist nicht vollständig kompatibel. Weitere Derivate von Nagios werden nicht unterstützt.
 
 ## Grundkonfiguration
 
-Unter **Verwaltung → Import und Schnittstellen → Monitoring → Exportkonfiguration** wird die Konfiguration hinterlegt. Der **Lokale Pfad** definiert einen absoluten oder relativen Pfad zur i-doit Installation im Dateisystem, in dem die von i-doit erzeugte Konfiguration abgelegt werden soll. Der **Link zum Monitoring Tool** gibt einen Basislink an, um aus i-doit heraus Links auf die Monitoring-Instanz zu generieren.
+Richte die Konfiguration unter **Verwaltung → Import und Schnittstellen → Monitoring → Exportkonfiguration** ein:
+
+- **Lokaler Pfad** -- Absoluter oder relativer Pfad, in dem die erzeugte Konfiguration abgelegt wird.
+- **Link zum Monitoring Tool** -- Basislink, um aus i-doit Links auf die Monitoring-Instanz zu generieren.
 
 [![Nagios-verwalten](../assets/images/de/automatisierung-und-integration/network-monitoring/nagios/1-nag.png)](../assets/images/de/automatisierung-und-integration/network-monitoring/nagios/1-nag.png)
 
@@ -31,30 +34,31 @@ Dazu gehört die Hauptkonfiguration, Service- und Host-Templates sowie weitere g
 
 ## Konfiguration in Objekten
 
-Alle weiteren Konfigurationen werden innerhalb der [Objekte](../grundlagen/struktur-it-dokumentation.md) vorgenommen. Der einfachste Fall ist die Konfiguration von Host Parameter. Hierzu muss über [Datenstruktur bearbeiten](../administration/verwaltung/datenstruktur/datenstruktur-bearbeiten.md) der [Kategorie](../grundlagen/struktur-it-dokumentation.md) Ordner **Nagios (Host)** zu den gewünschten [Objekttypen](../grundlagen/struktur-it-dokumentation.md) zugewiesen werden.
+Alle weiteren Konfigurationen nimmst du innerhalb der [Objekte](../grundlagen/struktur-it-dokumentation.md) vor. Für Host-Parameter gehst du so vor:
 
-In der Kategorie **Host Definition** kann dann entweder über ein Nagios Template oder durch individuelle Konfiguration eine Hostdefinition für Nagios hinterlegt werden.
+1. Weise über [Datenstruktur bearbeiten](../administration/verwaltung/datenstruktur/datenstruktur-bearbeiten.md) den gewünschten [Objekttypen](../grundlagen/struktur-it-dokumentation.md) den [Kategorie](../grundlagen/struktur-it-dokumentation.md)-Ordner **Nagios (Host)** zu.
+2. Hinterlege in der Kategorie **Host Definition** eine Hostdefinition -- entweder über ein Nagios-Template oder durch individuelle Konfiguration.
 
 [![Nagios-konfiguration](../assets/images/de/automatisierung-und-integration/network-monitoring/nagios/3-nag.png)](../assets/images/de/automatisierung-und-integration/network-monitoring/nagios/3-nag.png)
 
-Das Prinzip der Host- und Service Templates ist mit der Nagios-Konfiguration deckungsgleich.
-Über die Kategorie **Servicezuweisung** werden in der Basiskonfiguration definierte Servicechecks einem Host zugewiesen.
-Als Ergebnis bildet sich später hieraus die Konfiguration einer klassischen Host-zu-Service-Zuweisung. Es gibt zusätzlich einen zweiten Weg, wie Services zu Hosts zugewiesen werden können. Dies geschieht über die Vererbung über ein Softwareobjekt.<br>
-in einem Softwareobjekt in der Kategorie **Nagios (Anwendungen)** wird ein Servicecheck zugewiesen, analog zu der Zuweisung zu einem Host.
-Ist diese Anwendung nun über die Kategorie **Softwarezuweisung** auf einem Host installiert, wird der Servicecheck auf den Host automatisch vererbt.
-Weitere Nagios-Konfigurationen innerhalb von Objekten finden sich in Objekten vom Typ **Personen sowie in Personengruppen und Objektgruppen**.
+Host- und Service-Templates entsprechen dem Nagios-Prinzip. Über die Kategorie **Servicezuweisung** weist du einem Host Servicechecks zu.
+
+Es gibt zwei Wege, Services mit Hosts zu verknüpfen:
+
+1. **Direkte Zuweisung** -- Über die Kategorie **Servicezuweisung** im Host-Objekt.
+2. **Vererbung über Software** -- Weise in einem Softwareobjekt (Kategorie **Nagios (Anwendungen)**) einen Servicecheck zu. Ist die Software über die Kategorie **Softwarezuweisung** auf einem Host installiert, erbt der Host den Servicecheck automatisch.
+
+Weitere Nagios-Konfigurationen findest du in Objekten vom Typ **Personen**, **Personengruppen** und **Objektgruppen**.
 
 ## Export der Nagios Konfiguration
 
-Unter **Verwaltung → Import und Schnittstellen → Monitoring → Exportkonfiguration** können die Nagios-Konfigurationen manuell exportiert werden. Dazu wird eine Exportkonfiguration ausgewählt und optional eine Validierung der Parameter angewählt.
+Den Export startest du manuell unter **Verwaltung → Import und Schnittstellen → Monitoring → Exportkonfiguration**. Wähle eine Exportkonfiguration und aktiviere optional die Validierung.
 
 [![Nagios-export](../assets/images/de/automatisierung-und-integration/network-monitoring/nagios/4-nag.png)](../assets/images/de/automatisierung-und-integration/network-monitoring/nagios/4-nag.png)
 
-Die Validierung überprüft grundlegende Abhängigkeiten, ob beispielsweise eine IP-Adresse für einen Host eingetragen ist. Diese Überprüfung soll davor schützen, korrupte Nagios-Konfigurationen zu erzeugen, allerdings ist es kein 100-prozentiger Schutz. Zur Sicherheit sollte immer ein Test mit der Nagios Binary über die erzeugte Konfiguration gefahren werden.
+Die Validierung prüft grundlegende Abhängigkeiten -- z. B. ob eine IP-Adresse für einen Host eingetragen ist. Sie schützt vor korrupten Konfigurationen, bietet aber keinen 100-prozentigen Schutz. Teste die erzeugte Konfiguration daher immer zusätzlich mit der Nagios-Binary.
 
-Die Konfigurationsdateien werden gemäß dem konfigurierten Pfad auf dem Dateisystem abgelegt und entsprechen den in den Kategorien konfigurierten Werten.
-
-Selbstverständlich lässt sich der Export der Dateien auch über das [i-doit console utility](../automatisierung-und-integration/cli/index.md) automatisieren. Weitere Optionen können über den `--help` Befehl ausgegeben werden.
+Die Konfigurationsdateien werden im konfigurierten Pfad abgelegt. Den Export kannst du auch über das [i-doit console utility](../automatisierung-und-integration/cli/index.md) automatisieren (`--help` zeigt alle Optionen).
 
 ## CLI Console Commands und Optionen
 

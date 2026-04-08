@@ -1,57 +1,41 @@
 ---
-title: PHP aktualisieren Debian/Ubuntu
-description: Dinge die beachtet werden müssen wenn PHP aktualisiert wurde
+title: PHP aktualisieren (Debian/Ubuntu)
+description: PHP-Version für i-doit aktualisieren — Schritt für Schritt mit mod_php oder PHP-FPM
 icon:
 status:
 lang: de
 ---
 
-## Einleitung
+# PHP aktualisieren (Debian/Ubuntu)
 
-Die Aktualisierung der PHP-Version auf einem Webserver ist ein wichtiger Schritt, um Sicherheit, Leistung und Kompatibilität moderner Webanwendungen zu gewährleisten. Dieser Artikel konzentriert sich auf die Verwendung der PHP-Versionen, die direkt von Ihrer aktuellen Ubuntu- oder Debian-Distribution bereitgestellt werden.
+Neue PHP-Versionen bringen Sicherheitsfixes, bessere Performance und neue Funktionen. Gleichzeitig setzt i-doit bestimmte PHP-Versionen voraus — prüfe vor dem Update immer die [Systemvoraussetzungen](../installation/systemvoraussetzungen.md), welche Versionen aktuell unterstützt werden.
 
-### Warum PHP aktualisieren?
+Dieser Artikel beschreibt den Wechsel von einer PHP-Version auf eine neuere unter **Debian** und **Ubuntu** — mit den offiziellen Paketquellen, ohne Drittanbieter-Repositories.
 
--   **Sicherheit**: Ältere PHP-Versionen erhalten oft keinen aktiven Sicherheitssupport mehr von den PHP-Entwicklern. Die Distributionen (Ubuntu, Debian) können zwar für die von ihnen bereitgestellten Versionen länger Sicherheitsupdates liefern, aber der Wechsel auf eine neuere, aktiv unterstützte Version ist generell sicherer.
--   **Performance**: Neuere PHP-Versionen bringen oft signifikante Leistungsverbesserungen mit sich.
--   **Neue Funktionen**: Jede neue PHP-Hauptversion führt neue Sprachfunktionen und Verbesserungen ein.
+!!! warning "Backup zuerst"
+    Erstelle vor dem PHP-Update ein vollständiges [Backup](daten-sichern-und-wiederherstellen/index.md) — mindestens der Apache-Konfiguration (`/etc/apache2/`), der PHP-Konfiguration (`/etc/php/`) und deiner i-doit-Installation.
 
-### Was dieser Artikel behandelt
+## Kurzanleitung (TL;DR)
 
-Dieser Hilfeartikel führt schrittweise durch den Prozess der PHP-Aktualisierung (oder Installation der neuesten, von der Distribution unterstützten Version) auf Servern mit Ubuntu oder Debian. Ein Schwerpunkt liegt auf der anschließenden Konfiguration des Apache Webservers. Dabei werden die zwei gängigsten Integrationsmethoden detailliert erläutert:
+Am Beispiel eines Wechsels von PHP 8.2 auf PHP 8.3 mit PHP-FPM:
 
--   **mod_php**: PHP wird als direktes Modul in den Apache-Prozess eingebettet.
--   **PHP-FPM**: PHP läuft als separater Dienst, und Apache leitet PHP-Anfragen an diesen Dienst weiter.
-
-!!!warning "Wichtiger Hinweis: **Backups**!"
-    Bevor mit jeglichen Aktualisierungsarbeiten begonnen wird, ist es unerlässlich, ein vollständiges Backup des Systems oder zumindest aller relevanten Konfigurationsdateien (`/etc/apache2/`, `/etc/php/`) und Webseiten-Daten zu erstellen.
-
-## Wichtige Vorbemerkung: PHP-Versionen in offiziellen Repositories
-
-Dieser Artikel beschreibt die Aktualisierung von PHP unter ausschließlicher Verwendung der offiziellen Paketquellen Ihrer aktuellen Ubuntu/Debian-Distribution. Das bedeutet:
-
--   Sie können nur auf die PHP-Version aktualisieren (oder diese installieren), die Ihre spezifische Distributionsversion (z.B. Ubuntu 22.04 LTS, Debian 12 "Bookworm") offiziell unterstützt und in ihren Standard-Repositories anbietet.
--   Um eine PHP-Version zu erhalten, die neuer ist als die in Ihrer aktuellen Distribution verfügbare, wäre in der Regel ein Upgrade der gesamten Distribution auf eine neuere Version erforderlich (z.B. von Ubuntu 22.04 auf Ubuntu 24.04). Ein Distributionsupgrade ist ein umfangreicherer Prozess und wird in diesem Artikel nicht behandelt.
-
-Beispiele für PHP-Versionen in offiziellen Repositories (Stand kann sich ändern):
-
--   Ubuntu 22.04 LTS ("Jammy Jellyfish"): Bietet typischerweise PHP **8.1**.
--   Ubuntu 24.04 LTS ("Noble Numbat"): Bietet typischerweise PHP **8.3**.
--   Debian 11 ("Bullseye"): Bietet typischerweise PHP **7.4** (nicht mehr supported).
--   Debian 12 ("Bookworm"): Bietet typischerweise PHP **8.2**.
-
-Sie müssen die für Ihre spezifische Systemversion verfügbare PHP-Version ermitteln.
-
-## TL;DR aka. too long; didn't read
 <div class="steps" markdown>
 1. Backup erstellen
-2. Neue Pakete installieren `sudo apt install libapache2-mod-fcgid php8.3-{bcmath,cli,common,curl,fpm,gd,imagick,ldap,mbstring,memcached,mysql,pgsql,soap,xml,zip}`
-3. PHP-FPM starten etc. `sudo systemctl start php8.3-fpm && sudo systemctl enable php8.3-fpm`
-4. PHP Konfiguration kopieren oder neu erstellen `sudo nano /etc/php/8.3/mods-available/i-doit.ini`
+2. Neue Pakete installieren:
+    ```shell
+    sudo apt install libapache2-mod-fcgid php8.3-{bcmath,cli,common,curl,fpm,gd,imagick,ldap,mbstring,memcached,mysql,pgsql,soap,xml,zip}
+    ```
+3. PHP-FPM starten und aktivieren:
+    ```shell
+    sudo systemctl enable --now php8.3-fpm
+    ```
+4. i-doit PHP-Konfiguration für die neue Version erstellen:
+    ```shell
+    sudo nano /etc/php/8.3/mods-available/i-doit.ini
+    ```
     ```ini title="i-doit.ini"
     allow_url_fopen = Yes
     file_uploads = On
-    magic_quotes_gpc = Off
     max_execution_time = 300
     max_file_uploads = 42
     max_input_time = 60
@@ -59,7 +43,6 @@ Sie müssen die für Ihre spezifische Systemversion verfügbare PHP-Version ermi
     memory_limit = 256M
     post_max_size = 128M
     register_argc_argv = On
-    register_globals = Off
     short_open_tag = On
     upload_max_filesize = 128M
     display_errors = Off
@@ -73,181 +56,193 @@ Sie müssen die für Ihre spezifische Systemversion verfügbare PHP-Version ermi
     session.cookie_lifetime = 0
     mysqli.default_socket = /var/lib/mysql/mysql.sock
     ```
-5. Handler in der VirtualHost-Konfiguration umstellen `nano /etc/apache2/sites-available/i-doit.conf` und so ändern `SetHandler "proxy:unix:/var/run/php/php8.3-fpm.sock|fcgi://localhost/"`
-6. Aktivieren der erforderlichen Apache-Module `sudo a2enmod proxy_fcgi setenvif rewrite`
-7. PHP-FPM und Apache2 neu starten `sudo systemctl restart php8.3-fpm apache2`
+    ```shell
+    sudo phpenmod -v 8.3 i-doit
+    ```
+5. Apache VirtualHost auf die neue PHP-Version umstellen — den Socket-Pfad in `/etc/apache2/sites-available/i-doit.conf` anpassen:
+    ```apache
+    SetHandler "proxy:unix:/run/php/php8.3-fpm.sock|fcgi://localhost/"
+    ```
+6. Apache-Module aktivieren und Dienste neu starten:
+    ```shell
+    sudo a2enmod proxy_fcgi setenvif rewrite
+    sudo systemctl restart php8.3-fpm apache2
+    ```
+7. i-doit-Cache leeren unter **Verwaltung → Systemreparatur und Bereinigung**
 </div>
+
+---
+
+## Welche PHP-Version liefert meine Distribution?
+
+Du kannst nur die PHP-Version installieren, die deine Distribution in ihren offiziellen Repositories anbietet. Für eine neuere Version müsstest du die Distribution selbst upgraden.
+
+| Distribution | PHP-Version |
+|-------------|-------------|
+| Debian 12 "Bookworm" | PHP **8.2** |
+| Ubuntu 22.04 LTS "Jammy" | PHP **8.1** |
+| Ubuntu 24.04 LTS "Noble" | PHP **8.3** |
+
+Prüfe, welche Version verfügbar ist:
+
+```shell
+apt-cache search php8
+```
+
+---
 
 ## Vorbereitungen
 
-:material-numeric-1-circle-outline: System aktualisieren
-
-Stellen Sie sicher, dass Ihr System auf dem neuesten Stand ist:
+### 1. System aktualisieren
 
 ```shell
-sudo apt update
-sudo apt upgrade
+sudo apt update && sudo apt upgrade
 ```
 
-:material-numeric-2-circle-outline: Aktuelle PHP-Umgebung ermitteln
-
-Kommandozeilenversion (CLI):
+### 2. Aktuelle PHP-Version ermitteln
 
 ```shell
+# Kommandozeile:
 php -v
+
+# Geladene Module:
+php -m
+
+# Aktive Konfigurationsdateien:
+php --ini
 ```
 
-Webserver PHP-Version (mittels `phpinfo()`): Erstellen Sie eine Datei (z.B. info.php) im Document Root Ihrer Webseite (oft `/var/www/html/`) mit folgendem Inhalt:
+### 3. Apache-Integrationsmethode prüfen
 
-```PHP title="info.php"
-<?php
-phpinfo();
-?>
-```
+Es gibt zwei Wege, wie Apache PHP-Dateien verarbeitet:
 
-:material-numeric-3-circle-outline: Backups erstellen
+| Methode | Beschreibung | Empfehlung |
+|---------|-------------|------------|
+| **mod_php** | PHP läuft direkt im Apache-Prozess. Einfach, aber weniger performant. Erfordert `mpm_prefork`. | Für kleine Installationen |
+| **PHP-FPM** | PHP läuft als eigener Dienst. Apache leitet Anfragen über einen Socket weiter. Erlaubt `mpm_event`. | **Empfohlen** für Produktion |
 
-Sichern Sie mindestens:
-
-*   Apache-Konfiguration: `/etc/apache2/`
-*   PHP-Konfiguration: `/etc/php/` (falls vorhanden)
-*   Ihre Webseiten-Daten (z.B. `/var/www/html/`)
-
-## PHP aktualisieren
-
-:material-numeric-1-circle-outline: Verfügbare PHP-Version in den offiziellen Repositories prüfen
-
-Um die PHP-Hauptversion zu finden, die Ihre Distribution anbietet, können Sie die Paketlisten durchsuchen. Der generische Paketname php installiert oft die Standardversion. Für spezifischere Suchen (z.B. nach Modulen für eine bestimmte Version):
+Welche Methode aktuell aktiv ist:
 
 ```shell
-sudo apt-cache search php
-# Oder spezifischer, z.B. für Debian 12 (Bookworm), das PHP 8.2 enthält:
-sudo apt-cache search php8.2
-# Für Ubuntu 22.04 (Jammy), das PHP 8.1 enthält:
-sudo apt-cache search php8.1
+# mod_php aktiv?
+apache2ctl -M | grep php
+
+# PHP-FPM aktiv?
+systemctl status php*-fpm
 ```
 
-Notieren Sie sich die verfügbare Hauptversion (z.B. 8.2, 8.3). Im Folgenden wird diese als X.Y bezeichnet.
+---
 
-:material-numeric-2-circle-outline: Installation der PHP-Kernpakete und Erweiterungen
+## PHP-Pakete installieren
 
-Installieren Sie die PHP-Kernpakete für die ermittelte Version X.Y. Dies umfasst typischerweise die CLI, das Apache-Modul (für mod_php) oder FPM.
-
-Basispakete:
+Installiere die Pakete für die neue Version. Im folgenden Beispiel wird PHP 8.2 durch PHP 8.3 ersetzt — passe die Versionsnummern an deine Situation an.
 
 ```shell
-sudo apt install phpX.Y-cli
+sudo apt install php8.3-{bcmath,cli,common,curl,fpm,gd,imagick,ldap,mbstring,memcached,mysql,pgsql,soap,xml,zip}
 ```
 
-(Ersetzen Sie X.Y durch die tatsächliche Version, z.B. php8.2-cli oder php8.3-cli). Für mod_php Integration:
+Falls du mod_php statt PHP-FPM verwendest, installiere zusätzlich:
 
 ```shell
-sudo apt install libapache2-mod-phpX.Y
+sudo apt install libapache2-mod-php8.3
 ```
 
-(z.B. libapache2-mod-php8.2). Für PHP-FPM Integration:
+---
+
+## PHP-Konfiguration migrieren
+
+!!! warning "Nicht die alte php.ini kopieren"
+    Jede PHP-Version kann geänderte oder entfernte Direktiven haben. Übertrage deine Anpassungen manuell in die neue Konfiguration.
+
+### i-doit Konfiguration erstellen
+
+Der sauberste Weg: Erstelle eine eigene `.ini`-Datei mit den i-doit-spezifischen Einstellungen:
 
 ```shell
-sudo apt install phpX.Y-fpm
+sudo nano /etc/php/8.3/mods-available/i-doit.ini
 ```
 
-(z.B. php8.1-fpm). Installieren Sie die für Ihre Anwendungen notwendigen Erweiterungen. Die Paketnamen folgen dem Muster phpX.Y-<erweiterungsname>.
+```ini title="i-doit.ini"
+allow_url_fopen = Yes
+file_uploads = On
+max_execution_time = 300
+max_file_uploads = 42
+max_input_time = 60
+max_input_vars = 10000
+memory_limit = 256M
+post_max_size = 128M
+register_argc_argv = On
+short_open_tag = On
+upload_max_filesize = 128M
+display_errors = Off
+display_startup_errors = Off
+error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT
+log_errors = On
+default_charset = "UTF-8"
+default_socket_timeout = 60
+date.timezone = Europe/Berlin
+session.gc_maxlifetime = 604800
+session.cookie_lifetime = 0
+mysqli.default_socket = /var/lib/mysql/mysql.sock
+```
+
+Aktiviere die Konfiguration für alle SAPIs (CLI und FPM):
 
 ```shell
-sudo apt install phpX.Y-{bcmath,cli,common,curl,fpm,gd,imagick,ldap,mbstring,memcached,mysql,pgsql,soap,xml,zip}
+sudo phpenmod -v 8.3 i-doit
 ```
 
-Passen Sie die Liste und X.Y an die verfügbare Version an.
+Die vollständigen Einstellungen findest du unter [Systemeinstellungen](../installation/manuelle-installation/systemeinstellungen.md).
 
+### Wo liegen die php.ini-Dateien?
 
-## Apache für die neue PHP-Version konfigurieren
+| SAPI | Pfad |
+|------|------|
+| CLI | `/etc/php/8.3/cli/php.ini` |
+| Apache (mod_php) | `/etc/php/8.3/apache2/php.ini` |
+| PHP-FPM | `/etc/php/8.3/fpm/php.ini` |
 
-### Apache mit mod_php
+---
 
-:material-numeric-1-circle-outline: Alte mod_php Version deaktivieren (falls vorhanden): Wenn Sie von einer älteren PHP-Version (z.B. A.B) mit mod_php aktualisieren, deaktivieren Sie zuerst das alte Modul:
+## Apache konfigurieren
+
+### Variante A: PHP-FPM (empfohlen)
+
+**1. Sicherstellen, dass mod_php deaktiviert ist:**
 
 ```shell
-sudo a2dismod phpA.B
+sudo a2dismod php8.2   # alte Version
+sudo a2dismod php8.3   # auch die neue — FPM braucht kein mod_php
 ```
 
-:material-numeric-2-circle-outline: Neue mod_php Version aktivieren: Aktivieren Sie das Modul für die neue PHP-Version X.Y:
+**2. Apache-Module für FPM aktivieren:**
 
 ```shell
-sudo a2enmod phpX.Y
+sudo a2enmod proxy_fcgi setenvif rewrite
 ```
 
-Überprüfen Sie, ob die Modulkonfigurationsdateien (z.B. `/etc/apache2/mods-enabled/phpX.Y.conf` und `phpX.Y.load`) existieren.
-
-:material-numeric-3-circle-outline: Apache MPM (Multi-Processing Module) sicherstellen: `mod_php` ist typischerweise nicht thread-sicher und erfordert das mpm_prefork-Modul. Wenn ein anderes MPM (wie mpm_event oder mpm_worker) aktiv ist, wechseln Sie:
-
-```shell
-sudo a2dismod mpm_event # oder mpm_worker
-sudo a2enmod mpm_prefork
-```
-
-:material-numeric-4-circle-outline: Apache Neustart:
-
-```shell
-sudo systemctl restart apache2
-```
-
-### Apache mit php-fpm
-
-:material-numeric-1-circle-outline: Sicherstellen, dass mod_php deaktiviert ist:
-
-Deaktivieren Sie alle aktiven mod_php-Versionen:
-
-```shell
-sudo a2dismod phpX.Y # Für jede mod_php Version (alt und neu)
-```
-
-:material-numeric-2-circle-outline: Benötigte Apache-Module für PHP-FPM aktivieren:
-
-```shell
-sudo a2enmod proxy_fcgi setenvif
-```
-
-Das Modul actions kann ebenfalls nützlich sein, ist aber nicht immer zwingend erforderlich.
-
-:material-numeric-3-circle-outline: Apache MPM wechseln (empfohlen):
-
-Für PHP-FPM wird mpm_event empfohlen:
+**3. MPM auf event umstellen** (bessere Performance als prefork):
 
 ```shell
 sudo a2dismod mpm_prefork
 sudo a2enmod mpm_event
 ```
 
-:material-numeric-4-circle-outline: PHP-FPM Konfiguration für Apache aktivieren (globale Methode):
+**4. VirtualHost anpassen:**
 
-Viele Distributionen liefern eine Konfigurationsdatei mit, die PHP-FPM global für Apache einrichtet. Aktivieren Sie diese für Ihre PHP-Version X.Y:
+Ändere den Socket-Pfad in `/etc/apache2/sites-available/i-doit.conf`:
 
-```shell
-sudo a2enconf phpX.Y-fpm
-```
-
-Diese Konfiguration (z.B. in `/etc/apache2/conf-available/phpX.Y-fpm.conf`) leitet .php-Anfragen an den PHP-FPM Unix-Socket (z.B. `/run/php/phpX.Y-fpm.sock`).
-
-:material-numeric-5-circle-outline: Apache VirtualHost für PHP-FPM anpassen (pro-Seite Methode, falls globale Methode nicht ausreicht oder spezifische Pools genutzt werden):
-
-Wenn Sie die globale Konfiguration nicht verwenden oder feinere Kontrolle benötigen (z.B. für verschiedene PHP-Versionen oder FPM-Pools pro Seite), passen Sie Ihren VirtualHost an. Stellen Sie sicher, dass die globale Konfiguration (falls aktiv) nicht mit Ihrer VHost-spezifischen Konfiguration kollidiert.
-
-Beispiel für einen VirtualHost mit Unix Socket (z.B. `/run/php/phpX.Y-fpm.sock`):
-
-```Apache title="/etc/apache2/sites-available/i-doit.conf"
+```apache title="/etc/apache2/sites-available/i-doit.conf"
 <VirtualHost *:80>
-    ServerName ihre-domain.de
+    ServerName cmdb.firma.de
     DocumentRoot /var/www/html/
 
     <FilesMatch \.php$>
-        # Stellt sicher, dass Apache die Anfrage an den FPM-Prozess weiterleitet
-        # Der Socket-Pfad muss mit dem in der FPM-Pool-Konfiguration übereinstimmen
-        SetHandler "proxy:unix:/run/php/phpX.Y-fpm.sock|fcgi://localhost/"
+        SetHandler "proxy:unix:/run/php/php8.3-fpm.sock|fcgi://localhost/"
     </FilesMatch>
 
-    <Directory /var/www/html>
-        AllowOverride None
-        # Hier den Inhalt der i-doit .htaccess Datei hinzufügen (i-doit Ordner) siehe i-doit Installation
+    <Directory /var/www/html/>
+        AllowOverride All
     </Directory>
 
     ErrorLog ${APACHE_LOG_DIR}/error.log
@@ -255,66 +250,105 @@ Beispiel für einen VirtualHost mit Unix Socket (z.B. `/run/php/phpX.Y-fpm.sock`
 </VirtualHost>
 ```
 
-Ersetzen Sie X.Y und Pfade entsprechend. Der Teil `fcgi://localhost/` ist bei Unix-Sockets oft ein Platzhalter, aber wichtig für die korrekte Übergabe von SCRIPT_FILENAME.
+!!! tip "Socket-Pfad prüfen"
+    Der Pfad `/run/php/php8.3-fpm.sock` muss mit der `listen`-Direktive in `/etc/php/8.3/fpm/pool.d/www.conf` übereinstimmen. Ein Mismatch ist die häufigste Fehlerursache.
 
-:material-numeric-6-circle-outline: PHP-FPM und Apache Dienste neustarten:
+**5. PHP-FPM und Apache neu starten:**
 
 ```shell
-sudo systemctl restart phpX.Y-fpm  # Ersetzen Sie X.Y durch die neue PHP-Version
+sudo systemctl restart php8.3-fpm apache2
+```
+
+### Variante B: mod_php
+
+**1. Alte Version deaktivieren, neue aktivieren:**
+
+```shell
+sudo a2dismod php8.2
+sudo a2enmod php8.3
+```
+
+**2. MPM auf prefork** (mod_php erfordert dies):
+
+```shell
+sudo a2dismod mpm_event
+sudo a2enmod mpm_prefork
+```
+
+**3. Apache neu starten:**
+
+```shell
 sudo systemctl restart apache2
 ```
 
-## Konfiguration migrieren und überprüfen
+---
 
-:material-numeric-1-circle-outline: Migration der php.ini Einstellungen
+## Installation prüfen
 
-!!! note "Wichtig: Nicht einfach die alte php.ini kopieren! Jede PHP-Version kann geänderte Direktiven haben."
-
--   **Finden Sie die neuen php.ini-Dateien**:
-    -   CLI: `/etc/php/X.Y/cli/php.ini`
-    -   Apache (mod_php): `/etc/php/X.Y/apache2/php.ini`
-    -   PHP-FPM: `/etc/php/X.Y/fpm/php.ini`
--   **Vergleichen Sie die Dateien**: Nutzen Sie diff oder vergleichen Sie manuell die neue php.ini mit Ihrer alten.
--   **Übertragen Sie benutzerdefinierte Einstellungen sorgfältig**. Typische Anpassungen: memory_limit, upload_max_filesize, post_max_size, max_execution_time, error_reporting, date.timezone.
-
-:material-numeric-2-circle-outline: Überprüfung der Installation
-
--   **Kommandozeile**:
-    -   `php -v`
-    -   `php -m` (zeigt geladene Module)
-    -   `php --ini` (zeigt geladene php.ini für CLI)
--   **Webserver**:
-    -   Verwenden Sie das info.php-Skript.
-    -   Überprüfen Sie PHP-Version, Server API und geladene php.ini.
-    -   **Löschen Sie info.php** danach!
-
-## Alte PHP-Versionen entfernen
-
-Wenn Sie von einer älteren Version A.B aktualisiert haben und diese nicht mehr benötigt wird:
+### PHP-Version verifizieren
 
 ```shell
-sudo apt purge phpA.B*
+# Kommandozeile:
+php -v
+
+# Webserver — welche Version Apache verwendet:
+php -r 'echo php_sapi_name();'
+```
+
+### i-doit prüfen
+
+1. Öffne i-doit im Browser und prüfe ob alles funktioniert
+2. Gehe zu **Verwaltung → Systemreparatur und Bereinigung** und leere den Cache
+3. Prüfe die Systemübersicht unter **Verwaltung → Systemübersicht** — dort siehst du die aktive PHP-Version
+
+### Alte PHP-Version entfernen
+
+Wenn alles funktioniert, entferne die alte Version:
+
+```shell
+sudo apt purge php8.2*
 sudo apt autoremove
 ```
 
-Seien Sie vorsichtig, um nicht versehentlich die gerade installierte Version zu entfernen.
+!!! warning "Vorsicht"
+    Prüfe vor dem Entfernen, dass kein anderer Dienst auf dem Server die alte PHP-Version benötigt.
 
-## Häufige Probleme und deren Ursachen/Lösungen
+---
 
-*   **HTTP 500 Internal Server Error:** Dies ist ein generischer Fehler, der auf ein serverseitiges Problem hinweist.
-    *   **Logs prüfen:** Untersuchen Sie die Apache-Fehlerprotokolle (üblicherweise `/var/log/apache2/error.log`) und die PHP-FPM-Protokolle (z.B. `/var/log/php/8.2/fpm.log`, Version anpassen) auf detailliertere Fehlermeldungen.
-    *   **Dateiberechtigungen:** Falsche Berechtigungen für PHP-Skriptdateien oder den PHP-FPM Unix-Socket können diesen Fehler verursachen. Der Apache-Benutzer (`www-data`) muss Lesezugriff auf die Skripte und Schreib-/Lesezugriff auf den Socket haben (falls so konfiguriert).
-    *   **Konfigurationsfehler:** Syntaxfehler in `.htaccess`-Dateien oder Apache-Konfigurationsdateien (`httpd.conf`, VirtualHost-Dateien) sind eine häufige Ursache.[30] Verwenden Sie `apache2ctl configtest` zur Überprüfung.
-    *   **Fehlende PHP-Module:** Wenn i-doit eine Funktion verwendet, deren PHP-Erweiterung nicht installiert oder aktiviert ist.
-    *   **PHP-Limits überschritten:** Zu niedrige Werte für `memory_limit` oder `max_execution_time` in der `php.ini` können Skripte zum Absturz bringen.
-    *   **Socket-Pfad-Mismatch:** Ein sehr häufiger Fehler bei PHP-FPM-Konfigurationen ist eine Nichtübereinstimmung zwischen dem in der FPM-Pool-Konfiguration (`listen`-Direktive) definierten Socket-Pfad und dem in der Apache VirtualHost-Konfiguration (`SetHandler` oder `ProxyPassMatch`) verwendeten Pfad. Beide müssen exakt übereinstimmen.
-*   **PHP-Code wird als Text angezeigt / Download der PHP-Datei:** Dies deutet darauf hin, dass Apache die `.php`-Dateien nicht an den PHP-Interpreter weiterleitet.
-    *   **Fehlender Handler:** Die Apache-Konfiguration (VirtualHost) enthält keinen korrekten Handler für PHP-Dateien (z.B. der `<FilesMatch \.php$>` Block fehlt oder ist fehlerhaft).
-    *   **PHP-FPM-Dienst:** Der PHP-FPM-Dienst für die konfigurierte Version läuft nicht oder ist für Apache nicht erreichbar (Socket-Problem).
-    *   **Konkurrierende Module:** `mod_php` ist möglicherweise noch aktiv und stört die FPM-Verarbeitung. Stellen Sie sicher, dass `mod_php` deaktiviert ist, wenn FPM verwendet wird.
-*   **Fehlermeldungen bezüglich fehlender Erweiterungen:**
-    *   Überprüfen Sie mit `php -m` oder der `phpinfo()`-Seite, ob alle für i-doit erforderlichen PHP-Erweiterungen (siehe Tabelle 2) installiert und geladen sind.
-    *   Stellen Sie sicher, dass die Erweiterungen in der korrekten `php.ini`-Datei aktiviert sind oder via `phpenmod` für die entsprechende SAPI (FPM) und Version aktiviert wurden.
-*   **Probleme nach `php.ini`-Änderungen:**
-    *   **Falsche Datei bearbeitet:** Vergewissern Sie sich, dass Sie die `php.ini`-Datei für die korrekte SAPI (FPM oder CLI) und PHP-Version bearbeitet haben.
-    *   **Dienstneustart vergessen:** Änderungen an der `php.ini` für FPM erfordern einen Neustart des PHP-FPM-Dienstes (z.B. `sudo systemctl restart php8.2-fpm`). Änderungen für `mod_php` erfordern einen Apache-Neustart.
+## Häufige Probleme
+
+### HTTP 500 Internal Server Error
+
+- **Logs prüfen**: `tail -50 /var/log/apache2/error.log` und `journalctl -u php8.3-fpm`
+- **Socket-Mismatch**: Der häufigste Fehler — der Pfad im VirtualHost stimmt nicht mit der FPM-Konfiguration überein
+- **Fehlende Module**: `php -m` zeigt, welche Module geladen sind. Vergleiche mit den [Systemvoraussetzungen](../installation/systemvoraussetzungen.md)
+- **Dateiberechtigungen**: `www-data` braucht Lesezugriff auf die PHP-Dateien
+- **Konfigurationsfehler**: `apache2ctl configtest` prüft die Apache-Syntax
+
+### PHP-Code wird als Text angezeigt
+
+Apache leitet die `.php`-Dateien nicht an den PHP-Interpreter weiter:
+
+- Bei PHP-FPM: Fehlt der `<FilesMatch>` Block im VirtualHost?
+- Läuft der FPM-Dienst? `systemctl status php8.3-fpm`
+- Ist mod_php und FPM gleichzeitig aktiv? Das führt zu Konflikten — deaktiviere mod_php.
+
+### Fehlermeldungen über fehlende Erweiterungen
+
+Prüfe die geladenen Module und vergleiche mit den benötigten:
+
+```shell
+php -m | sort
+```
+
+Fehlende Module nachinstallieren:
+
+```shell
+sudo apt install php8.3-<modulname>
+```
+
+### Änderungen an php.ini wirken nicht
+
+- **Falsche Datei bearbeitet?** CLI, FPM und mod_php haben jeweils eigene php.ini-Dateien
+- **Dienst nicht neu gestartet?** Nach Änderungen an der FPM-Konfiguration: `sudo systemctl restart php8.3-fpm`
+- **Eigene .ini überschrieben?** Prüfe mit `php --ini` welche Dateien geladen werden und in welcher Reihenfolge

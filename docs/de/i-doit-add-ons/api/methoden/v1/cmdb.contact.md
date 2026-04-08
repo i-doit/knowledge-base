@@ -1,6 +1,6 @@
 ---
 title: cmdb.contact
-description: cmdb.contact
+description: "Retrieves all assigned objects by contact."
 icon: material/api
 #status: updated
 lang: de
@@ -69,3 +69,9 @@ Retrieves all assigned objects by contact.
         }
     }
     ```
+
+## Siehe auch
+
+- [API v1 Methoden](index.md) — Übersicht aller API v1 Methoden
+- [API Add-on](../../index.md) — Einstieg in das API Add-on
+- [i-doit Add-ons](../../../index.md) — Alle verfügbaren Add-ons

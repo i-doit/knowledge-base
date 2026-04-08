@@ -1,10 +1,33 @@
+---
+title: Installation
+description: "Bevor du mit der IT-Dokumentation loslegst, muss i-doit installiert werden."
+icon:
+status:
+lang: de
+---
 # Installation
 
-Die [IT-Dokumentation](../glossar.md) sollte auf einem soliden Fundament fußen - auch technisch. Es stehen drei Arten der Installation von i-doit zur Verfügung.
+Bevor du mit der IT-Dokumentation loslegst, muss i-doit installiert werden. Wähle die Installationsart, die am besten zu deiner Umgebung passt:
 
-|     | [Automatische Installation](automatische-installation.md) | [Manuelle Installation](manuelle-installation/index.md) | [i-doit Virtual Eval Appliance](i-doit-virtual-eval-appliance/index.md) |
-| --- | --- | --- | --- |
-| Worum geht es? | Auf einem frisch installierten GNU/Linux-Betriebssystem werden alle nötigen Konfigurationsschritte durchgeführt und i-doit installiert. Zusätzlich werden Cronjobs, Backups und weitere nützliche CLI-Werkzeuge mitgeliefert. Dazu wird lediglich ein Script ausgeführt. | Die nötigen Software-Pakete werden selbstständig installiert und konfiguriert. Danach wird i-doit heruntergeladen und installiert. Die nötigen Schritte für Cronjobs und Backups obliegen ebenfalls dem Benutzer. | Benutzern von i-doit steht in der Evaluierungsphase eine VM zur Verfügung, auf der ein aktuelles i-doit bereits vorinstalliert ist. Als Betriebssystem kommt Debian GNU/Linux zum Einsatz. |
-| Umfang | ✔ Software-Pakete installieren  <br>✔ Software-Pakete konfigurieren  <br>✔ i-doit installieren  <br>✔ Cronjobs einrichten  <br>✔ Backups einrichten  <br>✔ Restore einrichten | ✔ Software-Pakete installieren  <br>✔ Software-Pakete konfigurieren  <br>✔ i-doit installieren  <br>✔ Cronjobs einrichten  <br>✔ Backups einrichten  <br>✔ Restore einrichten | ✔ Software-Pakete installieren  <br>✔ Software-Pakete konfigurieren  <br>✔ i-doit installieren  <br>✔ Cronjobs einrichten  <br>✔ Backups einrichten  <br>✔ Restore einrichten |
-| Für wen geeignet? | - Basis-Kenntnisse im Umgang mit GNU/Linux | - Gute Kenntnisse in der Administration von GNU/Linux<br>- Alternativ: Wenn Microsoft Windows Server verwendet wird | - Keine Kenntnisse im Umfang mit GNU/Linux<br>- Appliance wird nur während der Evaluierungsphase vom Support abgedeckt |
-| Anleitung | [Weiter zur automatischen Installation](automatische-installation.md) | [Weiter zur manuellen Installation](manuelle-installation/index.md) | [Weiter zur i-doit Virtual Eval Appliance](i-doit-virtual-eval-appliance/index.md) |
+## Welche Installationsart passt zu dir?
+
+| | [Automatische Installation](automatische-installation.md) | [Manuelle Installation](manuelle-installation/index.md) | [Eval Appliance](i-doit-virtual-eval-appliance/index.md) |
+|---|---|---|---|
+| **Beschreibung** | Ein Script installiert und konfiguriert alles auf einem frischen Linux-System — inklusive Cronjobs, Backups und CLI-Werkzeuge. | Du installierst und konfigurierst alle Komponenten selbst. Volle Kontrolle über jeden Schritt. | Fertige VM mit vorinstalliertem i-doit zum Testen und Evaluieren. |
+| **Geeignet für** | Produktivbetrieb, Standard-Setup | Produktivbetrieb, individuelle Anforderungen, Windows Server | Evaluierung und Tests |
+| **Voraussetzungen** | Linux-Grundkenntnisse | Gute Linux- oder Windows-Server-Kenntnisse | Keine — einfach VM importieren |
+| **Umfang** | Komplett: Installation, Konfiguration, Cronjobs, Backup | Alles manuell konfigurierbar | Komplett vorinstalliert |
+
+!!! tip "Empfehlung"
+    Für die meisten Anwender ist die **automatische Installation** der schnellste und einfachste Weg. Du brauchst lediglich ein frisches [Debian oder Ubuntu](systemvoraussetzungen.md) und das Installationsscript erledigt den Rest.
+
+## Voraussetzungen
+
+Unabhängig von der Installationsart solltest du vorab die [Systemvoraussetzungen](systemvoraussetzungen.md) prüfen. Dort findest du die unterstützten Betriebssysteme, PHP- und Datenbankversionen sowie Hardware-Empfehlungen.
+
+## Nächste Schritte nach der Installation
+
+1.  Lizenz im [Admin Center](../administration/admin-center.md) einspielen
+2.  [Erstanmeldung](../grundlagen/erstanmeldung.md) durchführen
+3.  [Cronjobs einrichten](../automatisierung-und-integration/cli/index.md) (falls nicht automatisch geschehen)
+4.  [Backup konfigurieren](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md)

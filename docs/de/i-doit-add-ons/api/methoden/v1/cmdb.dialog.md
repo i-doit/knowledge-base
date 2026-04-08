@@ -1,6 +1,6 @@
 ---
 title: cmdb.dialog
-description: cmdb.dialog
+description: "Read dialog information."
 icon: material/api
 #status: updated
 lang: de

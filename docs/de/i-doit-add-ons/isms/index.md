@@ -8,7 +8,9 @@ lang: de
 
 ## Was ist das ISMS Add-on?
 
-Das **ISMS Add-on** für die **i-doit CMDB** ist eine leistungsstarke Erweiterung für das **Informationssicherheits-Management**. Es unterstützt Unternehmen bei der Umsetzung der **ISO 27001-Zertifizierung** und bietet umfassende Funktionen für **Risikomanagement**, **Maßnahmenverwaltung** und **Compliance**.
+Das **ISMS Add-on** für die **i-doit CMDB** ist eine leistungsstarke Erweiterung für das **Informationssicherheits-Management**. Es unterstützt dich bei der Umsetzung der **ISO 27001-Zertifizierung** und bietet umfassende Funktionen für **Risikomanagement**, **Maßnahmenverwaltung** und **Compliance**.
+
+[![ISMS](../../assets/images/de/i-doit-add-ons/isms/isms-uebersicht.png)](../../assets/images/de/i-doit-add-ons/isms/isms-uebersicht.png)
 
 ### Vorteile des ISMS Add-ons
 
@@ -23,7 +25,7 @@ Das **ISMS Add-on** für die **i-doit CMDB** ist eine leistungsstarke Erweiterun
 Das ISMS-Add-on setzt eine funktionsfähige i-doit-Installation voraus. Diese Dokumentation bezieht sich, sofern nicht anders angegeben, auf die aktuelle Version des Add-ons.
 
 !!! warning "Das ISMS Add-on verbraucht lizenzpflichtige Objekte"
-    Das ISMS Add-on verwendet etwa **2015** lizenzpflichtige Objekte, siehe [Import](configuration.md#4-manahmen-hinzufugen). Stellen Sie sicher, dass Ihre i-doit-Lizenz ausreichend lizenzpflichtige Objekte umfasst, um das Add-on nutzen zu können.
+    Das ISMS Add-on verwendet etwa **2015** lizenzpflichtige Objekte, siehe [Import](configuration.md#4-manahmen-hinzufugen). Stelle sicher, dass deine i-doit-Lizenz ausreichend lizenzpflichtige Objekte enthält, um das Add-on nutzen zu können.
 
 * * *
 
@@ -33,7 +35,7 @@ Dieses Add-on kann nachträglich installiert werden. Detaillierte Beschreibungen
 
 * * *
 
-## Verwendung des ISMS Add-ons
+## So verwendest du das ISMS Add-on
 
 1.  **Bewertungskriterien** festlegen
 2.  **Schadensszenarien** definieren
@@ -55,7 +57,8 @@ Mit der Installation des ISMS-Add-ons wird in i-doit eine neue Objekttyp-Gruppe 
 
 ### CSV-Import und Anpassung
 
-Für mehrere dieser Objekttypen stehen CSV-Importdateien zur Verfügung, um die Daten schnell und effizient zu übernehmen. Alle Objekte und Objekttypen können wie gewohnt in i-doit an die individuellen Anforderungen angepasst werden.
+Für mehrere dieser Objekttypen stehen CSV-Importdateien zur Verfügung, um die Daten schnell und effizient zu übernehmen. Alle Objekte und Objekttypen kannst du wie gewohnt in i-doit an deine individuellen Anforderungen anpassen.
+
 Das ISMS-Add-on unterstützt dabei auch die [Berücksichtigung von Standortrechten](configuration.md#optionale-einstellungen), um eine sichere und flexible Rechteverwaltung zu gewährleisten.
 
 ### Reports für Auswertung und Dokumentation
@@ -66,7 +69,7 @@ Zusätzlich installiert das ISMS-Add-on mehrere [Reports](reports.md), die eine 
 
 ## Rechtevergabe
 
-Das ISMS Add-on bringt neue Rechte mit, die in der [i-doit Rechteverwaltung](../../administration/verwaltung/berechtigungen.md) konfiguriert werden können. Diese Rechte steuern den Zugriff auf die Risikoklassen und die Risikoberechnung.
+Das ISMS Add-on bringt neue Rechte mit, die du in der [i-doit Rechteverwaltung](../../administration/verwaltung/berechtigungen.md) konfigurieren kannst. Diese Rechte steuern den Zugriff auf die Risikoklassen und die Risikoberechnung.
 
 * * *
 

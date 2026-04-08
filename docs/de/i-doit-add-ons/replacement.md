@@ -1,12 +1,12 @@
 ---
 title: Replacement Add-on
-description: Replacement Add-on
+description: "Du nimmst einen neuen Switch in Betrieb und moechtest alle bestehenden Verbindungen übernehmen?"
 icon: addons/replacement
 status:
 lang: de
 ---
 
-Ein neuer Switch wird in Betrieb genommen, doch alle Verbindungen sollen erhalten bleiben. Wer hier nicht im Anschluss z.B. alle Anschlüsse neu dokumentieren will, nutzt das [Add-on](./index.md) **Replacement**. Diese erlaubt den Austausch von [Objekten](../grundlagen/struktur-it-dokumentation.md) bei konfigurierbarer Übernahme der bestehenden Verbindungen.
+Du nimmst einen neuen Switch in Betrieb und möchtest alle bestehenden Verbindungen übernehmen? Mit dem [Add-on](./index.md) **Replacement** tauschst du [Objekte](../grundlagen/struktur-it-dokumentation.md) aus und konfigurierst dabei, welche Verbindungen und Kategoriedaten übernommen werden.
 
 !!! note "Das Add-on hieß zuvor **SwapCI** bis zur Version 1.3.1."
 
@@ -16,7 +16,7 @@ Dieses Add-on kann nachträglich installiert werden. Detaillierte Beschreibungen
 
 ## Konfiguration
 
-Die Konfiguration befindet sich unter **Verwaltung → Add-ons → Gerätetausch → Konfiguration**. Sie dient größtenteils für die Definition von Standardwerten, um häufiges Tauschen zu standardisieren und zu beschleunigen.
+Unter **Verwaltung → Add-ons → Gerätetausch → Konfiguration** definierst du Standardwerte, um häufige Tauschvorgaenge zu standardisieren und zu beschleunigen.
 
 | Option                                              | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                              |
 | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -68,13 +68,17 @@ Nach der Auswahl der beiden Objekte können die Optionen angepasst werden. Durch
 
 ## Tausch nach Arbeitsplatzsystemen
 
-Ein Vorauswahl für den Tausch kann über zugeordnete Arbeitsplätze erfolgen. Unter **Add-ons → Gerätetausch → Tausch nach Arbeitsplatzsystemen** wird zuerst ein Objekttyp ausgewählt. Danach erscheinen alle Objekte vom Typ **Arbeitsplatz**, in deren Kategorie **Arbeitsplatzkomponenten** Objekte diesen Typs zugeordnet sind. Von jeweils einem Arbeitsplatz wird ein Objekt zum Tauschen ausgewählt. Über den Button **Ausgewählte Objekte tauschen** gelangt man zur Oberfläche **Add-ons → Gerätetausch → Objekte tauschen**.
+Unter **Add-ons → Gerätetausch → Tausch nach Arbeitsplatzsystemen** triffst du eine Vorauswahl über zugeordnete Arbeitsplätzee:
+
+1. Wähle einen Objekttyp aus.
+2. Es erscheinen alle **Arbeitsplatz**-Objekte, deren **Arbeitsplatzkomponenten** Objekte dieses Typs enthalten.
+3. Wähle pro Arbeitsplatz ein Objekt zum Tauschen und klicke auf **Ausgewählte Objekte tauschen**.
 
 [![Tausch nach Arbeitsplatzsystemen](../assets/images/de/i-doit-add-ons/replacement/4-rp.png)](../assets/images/de/i-doit-add-ons/replacement/4-rp.png)
 
 ## Tausch-Report
 
-Ein Bericht über bisher durchgeführte Tauschaktionen wird unter **Add-ons → Gerätetausch → Tausch-Report** generiert. Die Oberfläche ist alternativ über **Extras → Report Manager → Views → Tausch-Report** zu erreichen.
+Einen Bericht über bisherige Tauschaktionen findest du unter **Add-ons → Gerätetausch → Tausch-Report** (alternativ über **Extras → Report Manager → Views → Tausch-Report**).
 
 [![Tausch-Report](../assets/images/de/i-doit-add-ons/replacement/5-rp.png)](../assets/images/de/i-doit-add-ons/replacement/5-rp.png)
 

@@ -1,6 +1,16 @@
+---
+title: "JSON-RPC API"
+description: "i-doit ermöglicht den externen Zugriff auf die IT-Dokumentation über eine application programming interface (API)."
+icon:
+status:
+lang: de
+---
 # JSON-RPC API
 
 i-doit ermöglicht den externen Zugriff auf die [IT-Dokumentation](../../../../glossar.md) über eine [application programming interface (API)](https://en.wikipedia.org/wiki/Application_programming_interface). Mit der API können Daten gelesen, erstellt, aktualisiert und gelöscht werden. Die API bietet also ähnliche Funktionen wie die Web-GUI, mit dem zusätzlichen Vorteil, dass man sie problemlos automatisieren kann.
+
+
+[![api-konfiguration](../../../../assets/images/de/administration/api-konfiguration.png)](../../../../assets/images/de/administration/api-konfiguration.png)
 
 ## Konfiguration
 
@@ -13,3 +23,5 @@ i-doit ermöglicht den externen Zugriff auf die [IT-Dokumentation](../../../../g
 | Log Level | ERROR<br>WARNING<br>INFO<br>DEBUG |
 
 Für mehr Informationen -> [WEITERLESEN](../../../../i-doit-add-ons/api/index.md)
+
+-   [Kategorien und Attribute](kategorien-und-attribute.md) — Hier werden alle verfügbaren Attribute für die ausgewählte Kategorie von i-doit aufgelistet.

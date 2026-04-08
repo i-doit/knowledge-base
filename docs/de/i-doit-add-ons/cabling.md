@@ -8,15 +8,15 @@ lang: de
 
 # Cabling
 
-Mit dem [Add-on](../i-doit-add-ons/index.md) **Verkabelungsansicht** erhalten Sie eine detaillierte Anzeige von Verkabelungen. Egal ob Sie einen Kabelweg nachverfolgen wollen oder Patch Aufträge ausdrucken möchten.
+Mit dem [Add-on](../i-doit-add-ons/index.md) **Verkabelungsansicht** erhältst du eine detaillierte Anzeige von Verkabelungen -- ob du einen Kabelweg nachverfolgen oder Patch-Aufträge ausdrucken möchtest.
 
 ## Download und Installation
 
-Dieses Add-on kann nachträglich installiert werden. Detaillierte Beschreibungen bezüglich Download, Installation, Updates usw. liefert der Artikel "[Add-ons](../i-doit-add-ons/index.md)".
+Dieses Add-on kann nachträglich installiert werden. Details zu Download, Installation und Updates findest du im Artikel "[Add-ons](../i-doit-add-ons/index.md)".
 
 ## Konfiguration
 
-Eine technische Konfiguration des Add-ons ist nach der [Installation](../i-doit-add-ons/index.md) nicht notwendig. Falls die Verkabelungsansicht immer direkt geöffnet werden soll kann dies unter **Verwaltung → Benutzereinstellungen → Benutzeroberfläche** konfiguriert werden. Die Verkabelungsansicht kann auch über die Kategorie Verkabelung in Objekten aufgerufen werden.
+Nach der [Installation](../i-doit-add-ons/index.md) ist keine weitere technische Konfiguration nötig. Möchtest du die Verkabelungsansicht immer direkt öffnen, aktiviere das unter **Verwaltung → Benutzereinstellungen → Benutzeroberfläche**. Alternativ rufst du die Verkabelungsansicht über die Kategorie "Verkabelung" in einem Objekt auf.
 
 ## Rechtevergabe
 

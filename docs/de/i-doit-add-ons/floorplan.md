@@ -6,9 +6,9 @@ status:
 lang: de
 ---
 
-Praxisbeispiele finden Sie auf unserem [Blog](https://www.i-doit.com/blog/floorplan-add-on-1-5-der-neue-grundriss-editor/)
+Praxisbeispiele findest du auf unserem [Blog](https://www.i-doit.com/blog/floorplan-add-on-1-5-der-neue-grundriss-editor/).
 
-Über das [Add-on](./index.md) **Raumplan** ist es möglich, allen [Objekten](../grundlagen/struktur-it-dokumentation.md), die ein Standort-Objekt sind, grafische Pläne zuzuweisen, diese mit einem Maßstab zu versehen und die dem Objekt räumlich zugewiesenen Objekte in diesem Plan zu positionieren.
+Mit dem [Add-on](./index.md) **Raumplan** weist du Standort-[Objekten](../grundlagen/struktur-it-dokumentation.md) grafische Pläne zu, versiehst sie mit einem Maßstab und positionierst die räumlich zugewiesenen Objekte darin.
 
 [![Raumplan](../assets/images/de/i-doit-add-ons/floorplan/1-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/1-fp.png)
 
@@ -26,23 +26,32 @@ Unter **Verwaltung → Berechtigungen → Raumplan** können [Rechte für Person
 
 [![Raumplan erstellen](../assets/images/de/i-doit-add-ons/floorplan/4-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/4-fp.png)
 
-Um einen Raumplan zu erstellen klickst du in der Standortsicht auf das **Plus** Symbol, bei dem jeweiligen Standort Objekt und speichere den Raumplan anschließend. Nach einem klick auf **Editieren** kann über die Schaltfläche **Hintergrund ändern** lassen sich Grafiken wie zum Beispiel der Grundriss eines Raumes in den Hintergrund des Raumplanes legen. Über den  **Grundriss-Editor** kann ein Grundriss erstellt und gespeichert werden. Mit der Schaltfläche **Maßstab setzen** kann dieser Grafik ein Maßstab hinzugefügt werden. Die Bemaßung des Raumes hilft für das spätere Positionieren von Objekten, dass diese entsprechend ihres definierten Formfaktors maßstabsgerecht dargestellt werden können. Für den Raumplan werden die folgenden Grafikformate unterstützt : `bmp`, `png`, `jpg`, `jpeg`, `gif`. Die maximale Dateigröße ist auf **5 MB** beschränkt. Außerdem ist es möglich verschiedene **Ebenen** zu erstellen und einblenden oder auszublenden.
+So erstellst du einen Raumplan:
+
+1. Klicke in der Standortsicht auf das **Plus**-Symbol beim gewünschten Standort-Objekt und speichere den Raumplan.
+2. Klicke auf **Editieren**, um den Plan zu bearbeiten.
+3. Über **Hintergrund ändern** legst du eine Grafik (z. B. einen Grundriss) in den Hintergrund. Alternativ erstellst du einen Grundriss direkt im **Grundriss-Editor**.
+4. Mit **Maßstab setzen** fügst du der Grafik einen Maßstab hinzu. So werden Objekte später gemäß ihrem Formfaktor maßstabsgerecht dargestellt.
+
+Unterstützte Grafikformate: `bmp`, `png`, `jpg`, `jpeg`, `gif` (max. **5 MB**). Du kannst außerdem verschiedene **Ebenen** erstellen und ein- oder ausblenden.
 
 ## Objekte zuordnen und platzieren
 
-Mit Hilfe der Standort Liste lassen sich alle räumlich zugeordneten Objekte anzeigen:
+Über die Standortliste zeigst du alle räumlich zugeordneten Objekte an:
 
 [![zugeordneten Objekte](../assets/images/de/i-doit-add-ons/floorplan/9-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/9-fp.png)
 
-Alle Objekte können über das grüne **Plus**-Symbol, welches dargestellt wird sobald die Maus über die Zeile gesteuert wird, auf dem Raumplan platziert werden. Es ist möglich alle zugewiesenen Objekte direkt zu platzieren, indem in der Raum Zeile auf den entsprechenden Button geklickt wird.
+So platzierst du Objekte auf dem Raumplan:
 
-Befinden sich die Objekte einmal auf dem Plan, kannst du diese per klick anwählen und dann verschieben. Nicht vergessen vorher auf **Editieren** zu klicken.
+1. Fahre mit der Maus über ein Objekt in der Liste -- das gruene **Plus**-Symbol erscheint.
+2. Klicke auf das **Plus**-Symbol, um das Objekt zu platzieren. Alternativ platzierst du alle zugewiesenen Objekte auf einmal über den Button in der Raum-Zeile.
+3. Klicke auf **Editieren**, um bereits platzierte Objekte per Klick auszuwählen und zu verschieben.
 
 ## Objekte auf dem Raumplan anpassen und formen
 
-Im linken Bereich findest du die Möglichkeit, Objekte weiter anzupassen und zu formen. Sobald ein Objekt ausgewählt wurde, kann dies bearbeitet werden:
+Im linken Bereich passt du ausgewählte Objekte an. Wähle ein Objekt aus, um folgende Optionen zu nutzen:
 
-Ausrichtung: Hier kann eine Ausrichtung definiert werden. Oben, unten, rechts und links. Dadurch wird dann ein Dreieck erzeugt welches in die ausgewählte Richtung zeigt.
+**Ausrichtung**: Definiere die Ausrichtung (oben, unten, rechts, links). Ein Dreieck zeigt in die gewählte Richtung.
 
 [![Change position](../assets/images/de/i-doit-add-ons/floorplan/15-fp.svg)](../assets/images/de/i-doit-add-ons/floorplan/15-fp.svg) **Objektform auswählen und erstellen**: Die Form des Objektes kann beliebig angepasst werden. Es können selbst definierte Formen abgespeichert werden.
 
@@ -52,22 +61,21 @@ Ausrichtung: Hier kann eine Ausrichtung definiert werden. Oben, unten, rechts un
 
 [![Unposition object](../assets/images/de/i-doit-add-ons/floorplan/18-fp.svg)](../assets/images/de/i-doit-add-ons/floorplan/18-fp.svg) **Positionierung lösen**: Das Objekt verschwindet wieder aus dem Raumplan, kann aber über die Objektliste erneut hinzugefügt werden.
 
-[![radius](../assets/images/de/i-doit-add-ons/floorplan/19-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/19-fp.png) Über diese Schaltfläche öffnet sich ein Popup bei dem Sie den Objektradius definieren können. Der Radius kann eingefärbt, transparent dargestellt sowie in verschiedenen Maßeinheiten konfiguriert werden.
+[![radius](../assets/images/de/i-doit-add-ons/floorplan/19-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/19-fp.png) **Objektradius definieren**: Öffne ein Popup, um den Radius einzufaerben, transparent darzustellen und in verschiedenen Masseinheiten zu konfigurieren.
 
-[![icon](../assets/images/de/i-doit-add-ons/floorplan/20-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/20-fp.png) Über diese Schaltfläche werden die Daten des Objektes übernommen, die dort unter der [Kategorie](../grundlagen/struktur-it-dokumentation.md) **Formfaktor** angegeben sind. Das Objekt wird entsprechend des gesetzten Maßstabes des Raumplanes in seiner Größe skaliert und abgebildet.
+[![icon](../assets/images/de/i-doit-add-ons/floorplan/20-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/20-fp.png) **Formfaktor übernehmen**: Übernimmt die Daten aus der [Kategorie](../grundlagen/struktur-it-dokumentation.md) **Formfaktor** und skaliert das Objekt massstabsgerecht.
 
-[![icon](../assets/images/de/i-doit-add-ons/floorplan/21-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/21-fp.png) Über die Auswahlliste im unteren Bereich können hier bestimmte Objekttypen innerhalb des Raumplanes angezeigt oder ausgeblendet werden.
+[![icon](../assets/images/de/i-doit-add-ons/floorplan/21-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/21-fp.png) **Objekttypen filtern**: Blende bestimmte Objekttypen im Raumplan ein oder aus.
 
-[![icon](../assets/images/de/i-doit-add-ons/floorplan/22-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/22-fp.png) Über diese Schaltfläche wird das innerhalb des Raumplanes ausgewählte Objekt in einem neuen Tab des Browsers geöffnet.
+[![icon](../assets/images/de/i-doit-add-ons/floorplan/22-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/22-fp.png) **Objekt öffnen**: Öffnet das ausgewählte Objekt in einem neuen Browser-Tab.
 
-Wenn das Objekt im Editiermodus ausgewählt wird es durch einen blinkenden Umriss hervorgehoben und es stehen weitere Optionen zum verändern der Form sowie freies drehen zur Verfügung. Außerdem kann die Beschriftung dadurch gedreht werden.
+Im Editiermodus wird ein ausgewähltes Objekt durch einen blinkenden Umriss hervorgehoben. Zusätzlich stehen Optionen zum Ändern der Form, freies Drehen und Drehen der Beschriftung zur Verfügung.
 
 [![Editiermodus](../assets/images/de/i-doit-add-ons/floorplan/23-fp.gif)](../assets/images/de/i-doit-add-ons/floorplan/23-fp.gif)
 
 ## Zusammenführung von Raumplänen
 
-Es sollte möglich sein, Raumpläne zu einem Raumplan hinzuzufügen - denken wir an ein Stockwerk, das mehrere Räume enthält. In diesem "Stockwerk"-Raumplan wollen wir die "Raum"-Pläne positionieren.
-Wir müssen hier einige Grundregeln festlegen - zum Beispiel zeigen wir nur drei Ebenen von Grundrissen an, das heißt:
+Du kannst Raumplaene ineinander verschachteln -- z. B. ein Stockwerk, das mehrere Räume enthält. Dabei gelten folgende Regeln: Es werden maximal drei Ebenen von Grundrissen angezeigt.
 
 ```text
 Base Raumplan:
@@ -84,41 +92,44 @@ Base Raumplan:
         -   obj H
 ```
 
-Nehmen wir an, wir sehen gerade den "Base" Raumplan. Wir sollten in der Lage sein, den verschachtelten "Raumplan A" zu sehen, und innerhalb dieses Raumplan sollten wir "Raumplan B" sehen können (einschließlich "obj E" und "obj F"). Der "Raumplan C" wird jedoch nicht als Raumplan angezeigt, sondern sieht wie ein Basisobjekt aus, da wir die verschachtelten Raumplan auf drei Ebenen beschränken (um Rekursionen, Speicher- und Leistungsprobleme zu vermeiden).
+Im "Base"-Raumplan siehst du den verschachtelten "Raumplan A", und darin "Raumplan B" (inklusive "obj E" und "obj F"). "Raumplan C" wird dagegen nur als einfaches Objekt dargestellt -- die Verschachtelung ist auf drei Ebenen beschraenkt, um Rekursionen und Leistungsprobleme zu vermeiden.
 
 ### Wie es funktioniert
 
-Wenn Sie den "Base"-Raumplan" betrachten, können Sie "Raumplan A" und "Raumplan B" wie die anderen Objekte ("obj A" und "obj B") verschieben - Sie können nichts innerhalb dieses importierten Objekts bearbeiten.
+Im "Base"-Raumplan verschiebst du "Raumplan A" und "Raumplan B" wie andere Objekte -- den Inhalt der verschachtelten Raumplaene kannst du hier jedoch nicht bearbeiten.
 
 ### Wann kann ein verschachtelter Raumplan angezeigt werden?
 
-Um "Raumplan A" als Raumplan innerhalb des "Base"-Raumplan anzuzeigen, muss er eine der folgenden Bedingungen erfüllen:
+Damit "Raumplan A" als Raumplan innerhalb des "Base"-Raumplans erscheint, muss er eine der folgenden Bedingungen erfuellen:
 
 -   ein Hintergrundbild haben
 -   ein Layout haben
 
-Wenn eine dieser Bedingungen erfüllt ist, sehen Sie beim Bearbeiten eines Grundrissobjekts (innerhalb eines anderen Grundrisses) das Floorplan Symbol: [![icon](../assets/images/de/i-doit-add-ons/floorplan/add-on-icon.svg)](../assets/images/de/i-doit-add-ons/floorplan/add-on-icon.svg)
+Ist eine Bedingung erfuellt, erscheint beim Bearbeiten das Floorplan-Symbol: [![icon](../assets/images/de/i-doit-add-ons/floorplan/add-on-icon.svg)](../assets/images/de/i-doit-add-ons/floorplan/add-on-icon.svg)
 
-Der Raumplan sollte auf die vorherige Objektgröße skaliert werden, das Layout/Hintergrundbild wird zur Bestimmung des Maßstabs verwendet.
+Der Raumplan wird auf die vorherige Objektgröße skaliert. Das Layout bzw. Hintergrundbild bestimmt den Massstab.
 
 ## Raumplan Profile
 
 [![Profil](../assets/images/de/i-doit-add-ons/floorplan/24-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/24-fp.png)
 
-Es können Profile angelegt werden damit nur bestimmte Objekte oder Attribute der Objekte angezeigt werden. Es wird ein Profil mitgeliefert.
+Mit Profilen steuerst du, welche Objekte und Attribute im Raumplan angezeigt werden. Ein Standardprofil wird mitgeliefert.
 
 [![Profil](../assets/images/de/i-doit-add-ons/floorplan/25-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/25-fp.png)
 
-Um ein neues Profil zu erstellen klickst du auf den **Neues Profil anlegen** Button. Es ist außerdem möglich ein Profil zu duplizieren.
-Nach dem klicken auf **Neues Profil anlegen** gelangen wir in die bearbeitungsansicht. Hier vergeben wir als erstes die Bezeichnung des Profiles. Dann können wir noch wählen ob **Bei klick auf Objekt Objektsicht öffnen** aktiviert sein soll und ob ein **Doppelklick auf Objekt öffnet dies in neuem Tab** aktiviert sein soll.
+So erstellst du ein neues Profil:
+
+1. Klicke auf **Neues Profil anlegen** (oder dupliziere ein bestehendes).
+2. Vergib eine **Bezeichnung**.
+3. Lege fest, ob **Bei Klick auf Objekt Objektsicht öffnen** und **Doppelklick auf Objekt öffnet dies in neuem Tab** aktiviert sein sollen.
 
 ### Visualisierungsoptionen
 
 [![Visualisierungsoptionen](../assets/images/de/i-doit-add-ons/floorplan/27-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/27-fp.png)
 
-**Highlight-Farbe**: Hier können Sie per klick eine Farbe wählen die das Objekt umrandet wenn es angeklickt wird.
+**Highlight-Farbe**: Hier wählst du per Klick eine Farbe, die das Objekt umrandet, wenn es angeklickt wird.
 
-**Objektradius darstellen**: Hier wird definiert ob der Objektradius standardmäßig angezeigt wird.
+**Objektradius darstellen**: Hier legst du fest, ob der Objektradius standardmäßig angezeigt wird.
 
 ### Standardwerte
 
@@ -128,13 +139,13 @@ Nach dem klicken auf **Neues Profil anlegen** gelangen wir in die bearbeitungsan
 
 [![Attribute](../assets/images/de/i-doit-add-ons/floorplan/30-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/30-fp.png)
 
-Diese Objektinformationen werden dann in der Objektsicht unter Objektinformationen angezeigt.
+Diese Objektinformationen werden in der Objektsicht unter **Objektinformationen** angezeigt.
 
 [![Objektinformationen](../assets/images/de/i-doit-add-ons/floorplan/31-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/31-fp.png)
 
 ### Einstellungen
 
-Unter Einstellungen können Sie das Profil, global oder für bestimmte Benutzer als Standard definieren.
+Unter **Einstellungen** kannst du das Profil global oder für bestimmte Benutzer als Standard definieren.
 
 [![Einstellungen](../assets/images/de/i-doit-add-ons/floorplan/32-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/32-fp.png)
 

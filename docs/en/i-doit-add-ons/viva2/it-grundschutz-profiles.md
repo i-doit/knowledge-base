@@ -1,52 +1,54 @@
 ---
-title: IT-Grundschutz templates
-description: Verwaltung von IT-Grundschutz-Profilen zum Export, Import und zur Anwendung
+title: IT-Grundschutz Profiles
+description: Administration of IT-Grundschutz profiles for export, import, and application
+icon:
+status:
 lang: en
 ---
 
-# IT-Grundschutz templates
+# IT-Grundschutz Profiles
 
-With templates, you bundle a defined selection of modules including associated requirements and threats. Templates can be created, exported, imported, and applied.
+With profiles, you bundle a defined selection of modules including their associated requirements and threats. Profiles can be created, exported, imported, and applied.
 
-### Open template management
+### Opening Profile Management
 
-Menu: Add-ons → IT-Grundschutz → Templates. The overview page shows all existing templates.
+Menu: Add-ons → IT-Grundschutz → Profiles. The overview page shows all existing profiles.
 
-[![profile-overview](../../assets/images/en/i-doit-add-ons/viva2/it-grundschutz-profiles/profile-overview.png)](../../assets/images/en/i-doit-add-ons/viva2/it-grundschutz-profiles/profile-overview.png){:target="_blank"}
+[![Profile overview](../../assets/images/de/i-doit-add-ons/viva2/it-grundschutz-profiles/profil-uebersicht.png)](../../assets/images/de/i-doit-add-ons/viva2/it-grundschutz-profiles/profil-uebersicht.png){:target="_blank"}
 
-### Create a new template
+### Creating a New Profile
 
 1. Click New
 2. Assign a name
 3. Select modules
-4. Save. Then all associated requirements and threats are displayed
+4. Save. Afterward, all associated requirements and threats are displayed.
 
-[![profile-create](../../assets/images/en/i-doit-add-ons/viva2/it-grundschutz-profiles/profile-create.png)](../../assets/images/en/i-doit-add-ons/viva2/it-grundschutz-profiles/profile-create.png){:target="_blank"}
+[![Create profile](../../assets/images/de/i-doit-add-ons/viva2/it-grundschutz-profiles/profil-anlegen.png)](../../assets/images/de/i-doit-add-ons/viva2/it-grundschutz-profiles/profil-anlegen.png){:target="_blank"}
 
-### Export template
+### Exporting a Profile
 
-- Click Export template in the template. A ZIP package is downloaded. Export is also possible from the overview page
+- In the profile, click Export Profile. A ZIP package will be downloaded. Exporting is also possible from the overview page.
 
-### Import template
+### Importing a Profile
 
-- In the template overview, select Import template and import a previously exported ZIP
+- In the profile overview, select Import Profile and import a previously exported ZIP file.
 
-### Apply template
+### Applying a Profile
 
-1. Select the desired template in the list
-2. Click Apply template
-3. Carefully read and confirm the warning message
+1. Select the desired profile in the list
+2. Click Apply Profile
+3. Read the warning carefully and confirm
 
-[![profile-apply](../../assets/images/en/i-doit-add-ons/viva2/it-grundschutz-profiles/profile-apply.png)](../../assets/images/en/i-doit-add-ons/viva2/it-grundschutz-profiles/profile-apply.png){:target="_blank"}
+[![Apply profile](../../assets/images/de/i-doit-add-ons/viva2/it-grundschutz-profiles/profil-anwenden.png)](../../assets/images/de/i-doit-add-ons/viva2/it-grundschutz-profiles/profil-anwenden.png){:target="_blank"}
 
-!!! danger
-    When applying, all existing modules, threats, and requirements are deleted and then replaced by the contents of the template. Create a backup beforehand and test the effects in a test environment.
+!!! danger "Caution"
+    When applying a profile, all existing modules, threats, and requirements are deleted and then replaced with the contents of the profile. Create a backup and verify the effects in a test environment first.
 
 ### Best Practices
 
-- Establish naming conventions for templates, for example "BSI-Standardtemplate-2025-Q1"
-- Version export files, for example `template-bsi-standardtemplate-2025-01.zip`
-- Document the application of templates (time, client, user)
+- Define naming conventions for profiles, for example "BSI-standard-profile-2025-Q1"
+- Version export files, for example `profile-bsi-standard-profile-2025-01.zip`
+- Document profile applications (timestamp, tenant, user)
 
 
-[<- Back](setup.md){ .md-button } · [Object types and categories ->](objecttypes-categories.md){ .md-button .md-button--primary }
+[<- Back](setup.md){ .md-button } · [Object Types and Categories ->](objecttypes-categories.md){ .md-button .md-button--primary }

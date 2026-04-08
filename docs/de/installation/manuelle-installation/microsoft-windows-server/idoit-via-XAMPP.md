@@ -1,3 +1,10 @@
+---
+title: "i-doit via XAMPP"
+description: "Wie i-doit unter dem Betriebssystem Windows installiert wird, beschreiben wir in diesem Artikel."
+icon:
+status:
+lang: de
+---
 # i-doit via XAMPP
 
 Wie i-doit unter dem Betriebssystem Windows installiert wird, beschreiben wir in diesem Artikel.
@@ -12,7 +19,7 @@ Wie i-doit unter dem Betriebssystem Windows installiert wird, beschreiben wir in
 ![type:video](../../../assets/images/de/installation/microsoft-windows/xampp/xampp-installation-unter-windows.mp4)
 
 Zuerst wird das XAMPP-Paket unter [https://www.apachefriends.org/de/index.html](https://www.apachefriends.org/de/index.html) herunter.<br>
-Andere Pakete funktionieren jedoch auch. Beispielweise kann das gepackte Packet (.zip) auch einfach unter C:\\ entpackt werden.<br>
+Andere Pakete funktionieren jedoch auch. Beispielweise kann das gepackte Paket (.zip) auch einfach unter C:\\ entpackt werden.<br>
 Wichtig ist bei der Installation von XAMPP, dass der Installationspfad unbedingt "C:\\xampp" ist, weil auf das Verzeichnis "C:\\Program Files (x86)" nicht genug Rechte vorhanden sind und somit die Installation mit hoher Wahrscheinlichkeit nicht richtig funktionieren wird.
 
 Hierbei müssen die [Systemvoraussetzungen](../../systemvoraussetzungen.md) der jeweiligen i-doit Version beachtet werden. Deshalb wird in diesem Beispiel das Installationspaket → xampp-windows-x64-8.2.12-0-VS16-installer.exe mit PHP 8.2 welches seit i-doit 30 unterstützt wird.
@@ -24,7 +31,7 @@ Als Ordner wird der Standard belassen → **C:\xampp**
 
 [![Installationspfad](../../../assets/images/de/installation/microsoft-windows/xampp/schritt-1-installation-pfad.png)](../../../assets/images/de/installation/microsoft-windows/xampp/schritt-1-installation-pfad.png)
 
-Dann wählen wir noch die Sprache aus, ich belasse diese bei **English**.
+Dann wählen wir noch die Sprache aus, wir belassen diese bei **Englisch**.
 
 [![Installationssprache](../../../assets/images/de/installation/microsoft-windows/xampp/schritt-1-installation-sprache.png)](../../../assets/images/de/installation/microsoft-windows/xampp/schritt-1-installation-sprache.png)
 
@@ -40,7 +47,7 @@ Somit wäre die Installations nun abgeschlossen und wir lassen mit Klick auf Fin
 
 ### PHP
 
-Nun Konfigurieren wir PHP. Dazu Klicken wir auf den Button Config → PHP (php.ini) um die php.ini zu öffnen.
+Nun konfigurieren wir PHP. Dazu Klicken wir auf den Button Config → PHP (php.ini) um die php.ini zu öffnen.
 
 [![Konfiguration-PHP](../../../assets/images/de/installation/microsoft-windows/xampp/schritt-2-php.png)](../../../assets/images/de/installation/microsoft-windows/xampp/schritt-2-php.png)
 
@@ -80,7 +87,7 @@ Gesonderte Einstellungen für den Apache Webserver sind hier nicht notwendig.
 
 ### MySQL/MariaDB
 
-Nun Konfigurieren wir MySQL/MariaDB. Dazu Klicken wir auf den Button Config → my.ini.
+Nun konfigurieren wir MySQL/MariaDB. Dazu Klicken wir auf den Button Config → my.ini.
 
 [![Konfiguration-MySQL](../../../assets/images/de/installation/microsoft-windows/xampp/schritt-2-mysql.png)](../../../assets/images/de/installation/microsoft-windows/xampp/schritt-2-mysql.png)
 

@@ -1,3 +1,10 @@
+---
+title: "Standort-basierte Benutzerrechte"
+description: "In i-doit sind sehr feingranulare Benutzerrechte definierbar, um bestimmten Benutzergruppen nur eingeschränkten Zugriff auf die IT-Dokumentation zu..."
+icon:
+status:
+lang: de
+---
 # Standort-basierte Benutzerrechte
 
 In i-doit sind [sehr feingranulare Benutzerrechte](../effizientes-dokumentieren/rechteverwaltung/index.md) definierbar, um bestimmten Benutzergruppen nur eingeschränkten Zugriff auf die IT-Dokumentation zu ermöglichen. Dazu gehören Benutzerrechte, die sich nur auf bestimmte [Standorte](../anwendungsfaelle/standorte.md) auswirken.

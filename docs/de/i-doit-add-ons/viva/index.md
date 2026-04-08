@@ -1,3 +1,10 @@
+---
+title: VIVA
+description: "Das Add-on VIVA widmet sich dem Thema Informationssicherheit auf Basis von IT-Grundschutz."
+icon:
+status:
+lang: de
+---
 # VIVA
 
 !!! warning "Veraltet"

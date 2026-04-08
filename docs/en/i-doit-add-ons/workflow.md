@@ -1,6 +1,6 @@
 ---
 title: Workflow
-description: Workflow
+description: "With the workflow system you create one-time tasks and recurring checklists and assign them to responsible persons and objects."
 icon: addons/workflow
 status:
 lang: en
@@ -8,38 +8,34 @@ lang: en
 
 # Workflow
 
-The workflow system in i-doit is an extensible module that generates workflows. Thus, one-time TASKS, but also recurring CHECKLISTS can be created and assigned to the responsible persons and objects. Involved persons are informed via status-based notifications.
+With the workflow system, you create one-time tasks and recurring checklists and assign them to responsible persons and objects. Involved persons are informed via status-based notifications.
 
 ## Workflow types
 
-The WORKFLOW-TYPE behaves like a template and includes all necessary parameters which are required for execution. This template can be edited via an administration interface. New templates can also be created via this interface.
+A workflow type is a template with all necessary parameters. You edit existing templates or create new ones via the administration interface.
 
 ## The workflow
 
-A workflow describes a scheduled action to be performed by the user, such as replacing the tape media of a specific backup server. Any workflow assignment must be accepted by the appropriate people. After successful completion, a status report can be submitted.
+A workflow describes a scheduled action -- e.g., replacing the tape medium of a backup server. Each workflow assignment must be accepted by the responsible persons. Upon completion, a status report can be submitted.
 
 ## Predefined workflow types
 
-**Checklist**:
+### Work order
+
 A work order is a scheduled action to be performed by selectable users.
 
-**Task**:
-The special workflow type CHECKLISTS can be used to generate daily, weekly and yearly recurring workflows by specifying a periodic time sequence to the pure start date and selecting the corresponding recurrence option.
-These recurring workflows can also be terminated in a scheduled manner.
+### Checklist
 
-The name and the key for a new workflow type can be freely chosen, the order specifies in which order the fields are displayed one below the other.
-Check for empty field gives an error message if the field is not filled in and an attempt is made to save the workflow.
+With checklists, you generate daily, weekly, or yearly recurring tasks. To do this, specify a periodic time sequence for the start date and select the repeat option. Recurring workflows can also be terminated on a scheduled basis.
 
-## Parameters of the templates
+## Template parameters
 
-For the two workflow types TASK (work order) and CHECKLIST there are already predefined parameters, which are taken into account when a new workflow is created.
-The two date types for start and end date are automatically created for each newly created workflow type.
-The other parameters can be created and assigned to a new type as desired:
+For the workflow types **TASK** (work order) and **CHECKLIST**, pre-built parameters are available. Start and end dates are created automatically. You create additional parameters as needed:
 
 *   Text
-*   Single line text field
+*   Single-line text field
 *   Full text
-*   Multiline text field
+*   Multi-line text field
 *   Numeric
 *   Numeric text field
 *   Date
@@ -47,41 +43,43 @@ The other parameters can be created and assigned to a new type as desired:
 *   Yes / No
 *   Two radio buttons for selection
 
+You freely choose the name and key of a new workflow type. The **order** determines the display position of the fields. **Check for empty field** displays an error message if a required field is empty when saving.
+
 ## Workflows in the object
 
-Workflows can also be displayed in the object via the **Workflows** category. This must be added beforehand via the [object type configuration](../basics/assignment-of-categories-to-object-types.md).
+**Workflows** can also be displayed in the object via the **Workflows** category. This must first be added via the [object type configuration](../grundlagen/zurodnung-von-kategorien-zu-objekttypen.md) 
 
-[![workflow](../assets/images/en/i-doit-add-ons/workflow/1-wf.png)](../assets/images/en/i-doit-add-ons/workflow/1-wf.png)
+[![Workflows in the object](../assets/images/de/i-doit-add-ons/workflow/1-wf.png)](../assets/images/de/i-doit-add-ons/workflow/1-wf.png)
 
 ## CLI console commands and options
 
-| Command                                 | Internal system description                                                  |
-| --------------------------------------- | ---------------------------------------------------------------------------- |
-| [workflows-process](#workflows-process) | Processes all workflows, sends e-mails and creates new tasks from checklists |
+| Command                                 | Internal description                                                                          |
+| --------------------------------------- | --------------------------------------------------------------------------------------------- |
+| [workflows-process](#workflows-process) | Processes all workflows, sends emails, and creates new tasks from checklists |
 
-!!! info "This command is only available if the Workflow add-on is installed"
+!!! info "This command is only available after installation of the Workflow add-on."
 
 ### workflows-process
 
-Processes all workflows, sends e-mails and creates new tasks from checklists
+Processes all workflows, sends emails, and creates new tasks from checklists
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
-| ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -t                        | --types=TYPES            | Workflow types (multiple values allowed)                                                     |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID     | Tenant ID of the tenant to be used (default: 1)                                              |
-| -c                        | --config=CONFIG-FILE     | Specifying the path to the configuration file                                                |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| Parameter (short) | Parameter (long)       | Description                                                                                     |
+| ------------------ | ---------------------- | ------------------------------------------------------------------------------------------------ |
+| -t                 | --types=TYPES          | Workflow types (multiple values are possible)                                                      |
+| -u                 | --user=[USERNAME]      | Username of a user authorized for execution                                      |
+| -p                 | --password=[PASSWORD]  | Password for authentication of the previously specified user                                   |
+| -i                 | --tenantId=[TENANT-ID] | Tenant ID of the tenant to be used (default: 1)                              |
+| -c                 | --config=[CONFIG-FILE] | Specification of the path to the configuration file                                                        |
+| -h                 | --help                 | Help message for displaying further information                                            |
+| -q                 | --quiet                | Quiet mode to disable output                                                       |
+| -V                 | --version              | Display the version of the i-doit Console                                                           |
+|                    | --ansi<br>--no-ansi    | Force ANSI output (or disable with --no-ansi)                                             |
+| -n                 | --no-interaction       | Disables all interaction questions of the i-doit Console                                      |
+| -v / -vv / -vvv    | --verbose              | Increases the output verbosity. (1 = Normal output, 2 = Detailed output, 3 = Debug level) |
 
-**Example of use**
+**Usage example**
 
 ```shell
 sudo -u www-data php console.php workflows-process --user admin --password admin --tenantId 1 --types task --types checklist
@@ -89,19 +87,19 @@ sudo -u www-data php console.php workflows-process --user admin --password admin
 
 ## Releases
 <!-- cSpell:disable -->
-| Version | Datum      | Changelog                                                                                                                                                                                                                                       |
+| Version | Date      | Changelog                                                                                                                                                                                                                                       |
 | ------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1.6     | 2025-09-09 | [Task] PHP 8.4 compatibility                                                                                                                                                                                                                    |
-| 1.5     | 2025-02-26 | [Task] Make symfony 6.4 compatible<br>[Task] Make Smarty 5 compatible<br>[Bug] Workflow Checklist is inaccessible after workflow is accepted                                                                                                    |
-| 1.4     | 2024-10-10 | [Bug] Fix autoload issue during add-on installation                                                                                                                                                                                             |
-| 1.3     | 2024-07-09 | [Bug] Workflow Add-on User Permissions are not available<br>[Bug] This task is part of the following checklist link does not work<br>[Bug] Dependent tasks are not displayed in checklists                                                      |
-| 1.2     | 2023-11-07 | [Task] Use new routes to display object and object type images / move add-on related files                                                                                                                                                      |
-| 1.1.1   | 2023-08-22 | [Improvement] PHP 8.1 Compatibility                                                                                                                                                                                                             |
-| 1.1     | 2022-09-05 | [Task] PHP 8.0 Compatibility  <br>[Task] Design Compatibility                                                                                                                                                                                   |
-| 1.0.6   | 2022-07-27 | [Bug] Error message when a workflow is accepted  <br>[Bug] The frequency of checklists cannot be used because the value is not saved                                                                                                            |
-| 1.0.5   | 2021-01-18 | [Improvement] Compatibility with i-doit 1.16                                                                                                                                                                                                    |
-| 1.0.4   | 2020-08-10 | [Bug] Only the creator of a checklist is able to edit it                                                                                                                                                                                        |
-| 1.0.3   | 2019-07-05 | [Bug] Error Update Workflow Add-on 1.0.2                                                                                                                                                                                                        |
-| 1.0.2   | 2019-05-20 | [Bug] I-doit is also displayed in the sidebar via My-doit link<br>[Bug] Console.php command workflows-process<br>[Bug] ModuleID is missing in the notification<br>[Bug] ModuleID is missing in the links of the Workflow category to the module |
-| 1.0.1   | 2019-01-09 | [Bug] I-doit is also displayed in the sidebar                                                                                                                                                                                                   |
-| 1.0     | 2018-12-17 | [Improvement] Add-onizing the workflows                                                                                                                                                                                                         |
+| 1.6     | 09.09.2025 | [Task] PHP 8.4 compatibility                                                                                                                                                                                                                    |
+| 1.5     | 26.02.2025 | [Task] Make symfony 6.4 compatible<br>[Task] Make Smarty 5 compatible<br>[Bug] Workflow Checklist is inaccessible after workflow is accepted                                                                                                    |
+| 1.4     | 10.10.2024 | [Bug] Fix autoload issue during add-on installation                                                                                                                                                                                             |
+| 1.3     | 09.07.2024 | [Bug] Workflow Add-on User Permissions are not available<br>[Bug] This task is part of the following checklist link does not work<br>[Bug] Dependent tasks are not displayed in checklists                                                      |
+| 1.2     | 07.11.2023 | [Task] Use new routes to display object and object type images / move add-on related files                                                                                                                                                      |
+| 1.1.1   | 22.08.2023 | [Improvement] PHP 8.1 Compatibility                                                                                                                                                                                                             |
+| 1.1     | 05.09.2022 | [Task] PHP 8.0 Compatibility  <br>[Task] Design Compatibility                                                                                                                                                                                   |
+| 1.0.6   | 27.07.2022 | [Bug] Error message when a workflow is accepted  <br>[Bug] The frequency of checklists cannot be used because the value is not saved                                                                                                            |
+| 1.0.5   | 18.01.2021 | [Improvement] Compatibility with i-doit 1.16                                                                                                                                                                                                    |
+| 1.0.4   | 10.08.2020 | [Bug] Only the creator of a checklist is able to edit it                                                                                                                                                                                        |
+| 1.0.3   | 05.07.2019 | [Bug] Error Update Workflow Add-on 1.0.2                                                                                                                                                                                                        |
+| 1.0.2   | 20.05.2019 | [Bug] I-doit is also displayed in the sidebar via My-doit link<br>[Bug] Console.php command workflows-process<br>[Bug] ModuleID is missing in the notification<br>[Bug] ModuleID is missing in the links of the Workflow category to the module |
+| 1.0.1   | 08.01.2019 | [Bug] I-doit is also displayed in the sidebar                                                                                                                                                                                                   |
+| 1.0     | 17.12.2018 | [Improvement] Add-onizing the workflows                                                                                                                                                                                                         |

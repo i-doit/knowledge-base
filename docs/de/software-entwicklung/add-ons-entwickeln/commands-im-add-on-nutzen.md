@@ -1,3 +1,10 @@
+---
+title: "Commands im Add-on nutzen"
+description: "Commands müssen im Add-on unter folgender Ordnerstruktur angelegt werden:"
+icon:
+status:
+lang: de
+---
 # Commands im Add-on nutzen
 
 Commands müssen im Add-on unter folgender Ordnerstruktur angelegt werden:
@@ -32,3 +39,9 @@ Die execute Methode eines Command muss (seit i-doit 1.16) immer einen Status zur
 *   \Symfony\Component\Console\Command\Command::FAILURE (oder 1) für "Fehlschlag"
 
 Wenn diese Rückgabe fehlt wird eine Fehlermeldung ausgegeben.
+
+## Siehe auch
+
+- [Add-ons entwickeln](index.md) — Leitfaden zur Add-on-Entwicklung
+- [Software-Entwicklung](../index.md) — Übersicht der Entwickler-Dokumentation
+- [API Add-on](../../i-doit-add-ons/api/index.md) — Schnittstelle für externe Zugriffe

@@ -1,6 +1,6 @@
 ---
 title: cmdb.category_info
-description: cmdb.category_info
+description: "Zeigt Informationen einer Kategorie und deren Felder an."
 icon: material/api
 #status: updated
 lang: de
@@ -2155,3 +2155,9 @@ Einer der Keys muss mitgegeben werden.
       }
     }
     ```
+
+## Siehe auch
+
+- [API v1 Methoden](index.md) — Übersicht aller API v1 Methoden
+- [API Add-on](../../index.md) — Einstieg in das API Add-on
+- [i-doit Add-ons](../../../index.md) — Alle verfügbaren Add-ons

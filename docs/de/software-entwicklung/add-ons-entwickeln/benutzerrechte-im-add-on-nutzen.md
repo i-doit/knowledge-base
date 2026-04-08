@@ -1,3 +1,10 @@
+---
+title: Benutzerrechte im add on nutzen
+description: "Um das Rechtesystem im eigenen Add-on zu nutzen, muss nicht viel Logik geschrieben werden."
+icon:
+status:
+lang: de
+---
 # Benutzerrechte im add on nutzen
 
 Um das Rechtesystem im eigenen Add-on zu nutzen, muss nicht viel Logik geschrieben werden. Es ist lediglich eine "auth"-Klasse isys_auth_example mit etwas Boilerplate-Code nötig. Zusätzlich muss die Add-on-Basis Klasse das Interface "\idoit\AddOn\AuthableInterface" implementieren und die definierte Methode "getAuth" mitliefern.
@@ -216,3 +223,9 @@ public function example_action($right, $id)
 ```
 
 Durch die zugrunde liegende Architektur können eigene Rechte-Methoden zwar direkt aufgerufen werden, anstatt über "is_allowed_to()" oder "check()", doch davon raten wir unbedingt ab!
+
+## Siehe auch
+
+- [Add-ons entwickeln](index.md) — Leitfaden zur Add-on-Entwicklung
+- [Software-Entwicklung](../index.md) — Übersicht der Entwickler-Dokumentation
+- [API Add-on](../../i-doit-add-ons/api/index.md) — Schnittstelle für externe Zugriffe

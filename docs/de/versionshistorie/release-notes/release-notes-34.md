@@ -1,3 +1,10 @@
+---
+title: Release Notes 34
+description: "We are happy to announce the release of i-doit 34."
+icon:
+status:
+lang: de
+---
 # Release Notes 34
 <!-- cSpell:disable -->
 We are happy to announce the release of i-doit 34. With our first Release 2025 we introduce the next steps for our Add-on & Subscription Center. Explore and trial Add-ons, learn more about the potential of i-doit and get the most value out of your documentation.

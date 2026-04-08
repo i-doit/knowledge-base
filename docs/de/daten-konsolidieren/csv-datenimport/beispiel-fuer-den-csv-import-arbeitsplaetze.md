@@ -1,24 +1,30 @@
+---
+title: Beispiel Arbeitsplätze
+description: Dieses Beispiel baut auf dem CSV Import von Standorten auf.
+icon:
+status:
+lang: de
+---
 # Beispiel Arbeitsplätze
 
-!!! warning "Bitte erstellen Sie vor jeder Änderung an einer Schnittstelle/Import einen vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist kann dieses dann wiederhergestellt werden"
+!!! warning "Bitte erstelle vor jeder Änderung an einer Schnittstelle/Import ein vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist, kann dieses dann wiederhergestellt werden"
 
-In diesem Beispiel bauen wir auf den [CSV Import von Standorten](beispiel-fuer-den-csv-import-standorte-erstellen.md) auf, und wollen Arbeitsplätze importieren.
-Diese sollen einem Raum als Standort zugewiesen werden und weiterhin wollen wir den Arbeitsplätzen Clients, Bildschirme und Drucker zuweisen.
+Dieses Beispiel baut auf dem [CSV Import von Standorten](beispiel-fuer-den-csv-import-standorte-erstellen.md) auf. Du importierst Arbeitsplätzee, weist sie einem Raum zu und verknüpfst sie mit Clients, Bildschirmen und Druckern.
 
 !!! note "Dieser Artikel wurde zuletzt für i-doit Version 1.16.2 geprüft"
 
-Für den Import benötigen wir folgende Informationen:
+### Benötigte Informationen
 
--   Objektname → den Namen des Arbeitsplatzes, des Clients, des Bildschirms  oder des Druckers
--   Standort → unterhalb welcher Lokation soll sich das Objekt befinden
--   Objekttyp → Um welchen Objekttypen soll es sich Handeln
--   Arbeitsplatz Zuweisung → Welchem Arbeitsplatz soll die Komponente zugewiesen werden
+-   Objektname → Name des Arbeitsplatzes, Clients, Bildschirms oder Druckers
+-   Standort → Unter welcher Lokation soll sich das Objekt befinden?
+-   Objekttyp → Welcher Objekttyp wird angelegt?
+-   Arbeitsplatz-Zuweisung → Welchem Arbeitsplatz wird die Komponente zugeordnet?
 
 Beispiel CSV Datei für diesen Import:
 
-[Import-Arbeitsplaetze.csv :material-file-download:](../../assets/images/de/daten-konsolidieren/csv-import/csv-arbeitsplaetze/Import-Arbeitsplaetze.csv){ .md-button .md-button--primary }
+[Import-Arbeitsplätzee.csv :material-file-download:](../../assets/images/de/daten-konsolidieren/csv-import/csv-arbeitsplaetze/Import-Arbeitsplaetze.csv){ .md-button .md-button--primary }
 
-??? example "Import-Arbeitsplaetze.csv"
+??? example "Import-Arbeitsplätzee.csv"
     ```text
     ObjektName;Standort;Objekttyp;AP Zuweisung
     AP0001;RAUM 1.001;C__OBJTYPE__WORKSTATION;
@@ -103,18 +109,24 @@ Beispiel CSV Datei für diesen Import:
     PRNT020;;C__OBJTYPE__PRINTER;AP0020
     ```
 
-Auch bei diesem Beispiel ergeben sich Abhängigkeiten. Die Standorte sind schon vorhanden, sie wurden über das Beispiel zur [Standortanlage](beispiel-fuer-den-csv-import-standorte-erstellen.md) angelegt.
-Als nächstes kommen nun die Arbeitsplätze selber, wir müssen diese als erstes erstellen, damit wir danach direkt die einzelnen Komponenten wie Clients, Bildschirm und Drucker diesen zuweisen können.
-Deshalb stehen die einzelnen Arbeitsplätze in der CSV Datei auch an erster Stelle.
+### Reihenfolge beachten
 
-Für den Import begeben wir uns wieder in den CSV Import Bereich. Die Einstellungen im oberen Bereich bleiben auf den Standard Einstellungen und wir klicken auf Mapping vorbereiten.
+Dieser Import hat Abhängigkeiten: Die Standorte müssen bereits existieren (siehe [Standortanlage](beispiel-fuer-den-csv-import-standorte-erstellen.md)). Ausserdem müssen die Arbeitsplätzee **vor** den Komponenten angelegt werden, damit Clients, Bildschirme und Drucker direkt zugewiesen werden können. Deshalb stehen die Arbeitsplätzee in der CSV-Datei an erster Stelle.
+
+### Schritt-fur-Schritt-Anleitung
+
+1. Navigiere zum CSV-Import unter **Extras → Import → CSV Import**
+2. Lade die CSV-Datei hoch und klicke auf **Fur Import verwenden**
+3. Belasse die Einstellungen auf den Standardwerten und klicke auf **Mapping vorbereiten**
 
 [![CSV Mapping](../../assets/images/de/daten-konsolidieren/csv-import/csv-arbeitsplaetze/1-csvap.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-arbeitsplaetze/1-csvap.png)
 
-Jetzt können wir im unteren Bereich die Import Konfiguration wie folgt vornehmen, und danach den Import Vorgang starten:
+4. Konfiguriere die Zuweisungen wie im Screenshot gezeigt und starte den Import
 
 [![CSV Mapping](../../assets/images/de/daten-konsolidieren/csv-import/csv-arbeitsplaetze/2-csvap.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-arbeitsplaetze/2-csvap.png)
 
-Sollten wir alles richtig gemacht haben, erscheinen nun die einzelnen Arbeitsplätze, sind einem Standort zugeordnet und unter jedem Arbeitsplatz finden wir einen zugeordneten Client, Bildschirm und Drucker.
+### Ergebnis
+
+Nach dem Import sind die Arbeitsplätzee einem Standort zugeordnet. Unter jedem Arbeitsplatz findest du den zugehörigen Client, Bildschirm und Drucker.
 
 [![CSV Mapping](../../assets/images/de/daten-konsolidieren/csv-import/csv-arbeitsplaetze/3-csvap.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-arbeitsplaetze/3-csvap.png)

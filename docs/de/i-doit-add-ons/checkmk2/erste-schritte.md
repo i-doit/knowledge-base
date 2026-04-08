@@ -1,37 +1,31 @@
+---
+title: Erste Schritte
+description: "Du moechtest Checkmk und i-doit integrieren?"
+icon:
+status:
+lang: de
+---
 # Erste Schritte
 
-Sie sind neu in diesem Thema und möchten sowohl checkmk als auch i-doit integrieren? Folgen Sie diesen einfachen Schritten:
+Du möchtest Checkmk und i-doit integrieren? Folge diesen Schritten:
 
-1. [Alle Anforderungen erfüllen](./anforderungen.md)
-2. [Herunterladen und installieren](./installation.md) das Add-on mit dem integrierten Befehlszeilenwerkzeug idoitcmk
-3. Sicherstellen, dass auf checkmk und i-doit über ihre APIs zugegriffen werden kann
-4. Erstelle deine eigene Konfiguration:
+[![Checkmk](../../assets/images/de/i-doit-add-ons/checkmk2/checkmk-hauptseite.png)](../../assets/images/de/i-doit-add-ons/checkmk2/checkmk-hauptseite.png)
 
-    idoitcmk init ([mehr dazu](./konfiguration.md))
-
+1. [Anforderungen erfuellen](./anforderungen.md)
+2. Add-on mit dem CLI-Tool `idoitcmk` [herunterladen und installieren](./installation.md)
+3. Sicherstellen, dass Checkmk und i-doit über ihre APIs erreichbar sind
+4. Eigene Konfiguration erstellen: `idoitcmk init` ([mehr dazu](./konfiguration.md))
 5. [Rechte für Benutzer oder Gruppen setzen](../../effizientes-dokumentieren/rechteverwaltung/index.md)
-6. Kategorie Checkmk Host und Checkmk Tag dem gewünschtem [Objekttyp zuordnen](../../grundlagen/zurodnung-von-kategorien-zu-objekttypen.md)
-7. [Probieren Sie einige grundlegende Befehle aus](./verwendung.md)
-8. Synchronisierung einiger grundlegender Informationen zwischen checkmk und i-doit:
+6. Kategorien **Checkmk Host** und **Checkmk Tag** dem gewünschten [Objekttyp zuordnen](../../grundlagen/zurodnung-von-kategorien-zu-objekttypen.md)
+7. [Grundlegende Befehle ausprobieren](./verwendung.md)
+8. Grundlegende Informationen synchronisieren:
+    - `idoitcmk sync-agents` ([Agenten](./synchronisierung-der-checkmk-agenten.md))
+    - `idoitcmk sync-contact-groups` ([Kontaktgruppen](./kontaktgruppen-synchronisieren.md))
+    - `idoitcmk sync-folders` ([WATO-Ordner](./wato-ordner-synchronisieren.md))
+    - `idoitcmk sync-sites` ([Sites](./checkmk-sites-synchronisieren.md))
+    - `idoitcmk sync-tags` ([Host-Tags](./host-tags-synchronisieren.md))
+9. Checkmk auf Basis von i-doit konfigurieren: `idoitcmk push` ([mehr dazu](./wato-konfiguration-auf-basis-von-cmdb-daten-generieren.md))
+10. Inventardaten von Checkmk nach i-doit übertragen: `idoitcmk pull` ([mehr dazu](./bestandsdaten-in-die-cmdb-importieren.md))
+11. Alle Schritte automatisieren!
 
-    idoitcmk sync-agents ([mehr dazu](./synchronisierung-der-checkmk-agenten.md))
-
-    idoitcmk sync-contact-groups ([mehr dazu](./kontaktgruppen-synchronisieren.md))
-
-    idoitcmk sync-folders ([mehr dazu](./wato-ordner-synchronisieren.md))
-
-    idoitcmk sync-sites ([mehr dazu](./checkmk-sites-synchronisieren.md))
-
-    idoitcmk sync-tags ([mehr dazu](./host-tags-synchronisieren.md))
-
-9. Oder checkmk auf der Grundlage von i-doit konfigurieren:
-
-    idoitcmk push ([mehr dazu](./wato-konfiguration-auf-basis-von-cmdb-daten-generieren.md))
-
-10. Oder nützliche Informationen über Ihre Infrastruktur von checkmk an i-doit übermitteln:
-
-    idoitcmk pull ([mehr dazu](./bestandsdaten-in-die-cmdb-importieren.md))
-
-11. Automatisieren Sie alle diese Dinge!
-
-Haben Sie Fragen? Lesen Sie unser [FAQ](./faq.md)
+Hast du Fragen? Lies das [FAQ](./faq.md).

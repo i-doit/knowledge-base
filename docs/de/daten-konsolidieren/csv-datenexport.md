@@ -8,32 +8,36 @@ lang: de
 
 # CSV-Datenexport
 
-Viele Daten lassen sich direkt aus der [IT-Dokumentation](../glossar.md) im CSV-Format exportieren, um diese mit einer Tabellenkalkulation o. ä. zu verarbeiten.
+Du kannst Daten direkt aus der [IT-Dokumentation](../glossar.md) im CSV-Format exportieren und in einer Tabellenkalkulation weiterverarbeiten. Dafür stehen dir drei Wege zur Verfügung.
 
-## Objekt-Liste
+## Objekt-Liste exportieren
 
-Objekte und deren Attribute lassen sich über die [Objekt-Liste](../grundlagen/objekt-liste/index.md) exportieren. Hierzu dient der Button **CSV** in der Aktionsleiste. Die Spalten entsprechen den [in der Listenansicht konfigurierten Attributen](../grundlagen/objekt-liste/listenansicht-konfigurieren.md). Eine aktive [Filterung der Objekt-Liste](../grundlagen/objekt-liste/navigieren-und-filtern.md) wird beim Export berücksichtigt.
+Öffne die [Objekt-Liste](../grundlagen/objekt-liste/index.md) und klicke auf den Button **CSV** in der Aktionsleiste. Die exportierten Spalten entsprechen den [konfigurierten Attributen der Listenansicht](../grundlagen/objekt-liste/listenansicht-konfigurieren.md).
+
+Hast du einen [Filter](../grundlagen/objekt-liste/navigieren-und-filtern.md) gesetzt, exportierst du nur die gefilterten Ergebnisse.
 
 [![CSV-Export in der Aktionsleiste](../assets/images/de/daten-konsolidieren/csv-datenexport/1-csv-de.png)](../assets/images/de/daten-konsolidieren/csv-datenexport/1-csv-de.png)
 
-## Kategorie-Listen
+## Kategorie-Listen exportieren
 
-Derzeit unterstützt der CSV-Export viele der [Kategorie-Listen](../glossar.md) (Multi-Value). Die in deren Liste aufgeführten Einträge und [Attribute](../glossar.md) werden nach Druck auf den Button **CSV** zum Download angeboten. Als Spaltenüberschriften dienen die Attribut Namen. Beim Exportieren einer Kategorie-Liste als CSV werden die "multi-value" Daten nun immer Kommasepariert exportiert.
+Der CSV-Export unterstützt viele [Kategorie-Listen](../glossar.md) (Multi-Value). Klicke innerhalb einer Kategorie-Liste auf den Button **CSV**, um alle Einträge und [Attribute](../glossar.md) herunterzuladen.
+
+Die Attributnamen dienen als Spaltenüberschriften. Multi-Value-Daten exportiert i-doit kommasepariert.
 
 [![Multi-Value Kategorie](../assets/images/de/daten-konsolidieren/csv-datenexport/2-csv-de.png)](../assets/images/de/daten-konsolidieren/csv-datenexport/2-csv-de.png)
 
-## Reports
+## Reports exportieren
 
-Der [Report Manager](../auswertungen/report-manager.md) verfügt ebenfalls über einen Export ins CSV-Format. In einem Report klickt man dazu auf den Button **CSV**.
+Auch der [Report Manager](../auswertungen/report-manager.md) bietet CSV-Export an. Öffne einen Report und klicke auf **CSV**.
 
 [![Report Darstellung](../assets/images/de/daten-konsolidieren/csv-datenexport/3-csv-de.png)](../assets/images/de/daten-konsolidieren/csv-datenexport/3-csv-de.png)
 
 ## CSV-Format
 
-CSV-Dateien sind einfache Textdateien, in der pro Zeile Komma-separierte Spalten hinterlegt sind. In diesem Fall dient ein Semikolon als Trennzeichen von Spalten. Die Daten sind im Zeichensatz Unicode (UTF-8) kodiert.
+Die exportierte Datei ist eine einfache Textdatei. Pro Zeile stehen die Werte durch ein **Semikolon** getrennt. Die Kodierung ist **Unicode (UTF-8)**.
 
 !!! info "Microsoft Excel"
-    Es kann vorkommen, dass Microsoft Excel die Daten in der exportierten CSV-Datei nicht korrekt darstellt. Insbesondere Encoding-Fehler sind zu beobachten. Um dies zu verhindern, sollte die CSV-Datei nicht direkt geöffnet, sondern erst importiert werden:
+    Excel stellt CSV-Dateien manchmal nicht korrekt dar -- besonders Umlaute und Sonderzeichen gehen verloren. Öffne die Datei deshalb nicht direkt, sondern importiere sie:
 
     1.  CSV-Datei exportieren und speichern
     2.  Excel öffnen

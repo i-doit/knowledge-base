@@ -1,14 +1,21 @@
+---
+title: Dashboard und Widgets
+description: "Das Dashboard ist deine persönliche Startseite in _i-doit_, auf der du die wichtigsten Informationen per Widgets zusammenstellst."
+icon:
+status:
+lang: de
+---
 # Dashboard und Widgets
 
-Damit du nach der Anmeldung in _i-doit_ deine wichtigsten Informationen auf einen Blick erhältst, kannst du dir dein Dashboard mit sinnvollen Widgets einrichten. Jeder Benutzer in _i-doit_ hat sein eigenes Dashboard und kann damit seine eigene Sicht auf die Daten einrichten. Solltest du aber das "ultimative" Dashboard eingerichtet haben, kannst du dies auch als Standard definieren oder einzelnen Benutzern übergeben.
+Das Dashboard ist deine persönliche Startseite in _i-doit_, auf der du die wichtigsten Informationen per Widgets zusammenstellst.
 
-Aufruf
-------
+Jeder Benutzer hat sein eigenes Dashboard und kann damit seine individuelle Sicht auf die Daten einrichten. Hast du ein besonders gutes Dashboard zusammengestellt, kannst du es als Standard für alle definieren oder einzelnen Benutzern zuweisen.
 
-Das Dashboard erreichst du automatisch nach der Anmeldung in _i-doit_. Alternativ kannst du auf das ![Haus](../assets/images/de/grundlagen/desktop-und-widgets/home_breadcrump.png)\-Symbol in der Brotkrumen-Navigation (Breadcrumb-Navigation) oder das _i-doit_\-Logo im oberen, linken Bereich klicken.
+## Aufruf
 
-Verfügbare Widgets
-------------------
+Das Dashboard erscheint automatisch nach der Anmeldung in _i-doit_. Alternativ klickst du auf das ![Haus](../assets/images/de/grundlagen/desktop-und-widgets/home_breadcrump.png)-Symbol in der Brotkrumen-Navigation oder das _i-doit_-Logo oben links.
+
+## Verfügbare Widgets
 
 !!! success "Mehrfachauswahl"
 
@@ -146,7 +153,7 @@ Die Konsistenzprüfung schaut, ob es bei Objekten, die Teil eines Services sind,
 
 !!! attention "Hinweis"
 
-    Bitte beachten Sie, dass bei vielen Services und vielen dokumentierten Beziehungen die Performance des Dashboards beeinträchtigt werden kann.
+    Bitte beachte, dass bei vielen Services und vielen dokumentierten Beziehungen die Performance des Dashboards beeinträchtigt werden kann.
 
 [![hinweis](../assets/images/de/grundlagen/desktop-und-widgets/26-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/26-duw.png)
 

@@ -1,15 +1,28 @@
+---
+title: Kategorieordner
+description: Mit Kategorieordnern organisierst du Kategorien innerhalb von Objekttypen in einer eigenen Ordnerstruktur.
+icon:
+status:
+lang: de
+---
 # Kategorieordner
 
-Mit der Kategorieordner Funktion können eigene Kategorieordner erstellt werden. Außerdem lassen sich damit Kategorien, in jedem Objekttyp, verschieben. Sie können auch bestehende Kategorieordner bearbeiten und jede Kategorien beliebig verschieben.
+Mit Kategorieordnern organisierst du Kategorien innerhalb von Objekttypen in einer eigenen Ordnerstruktur. Du kannst eigene Ordner erstellen, Kategorien verschieben und die Reihenfolge anpassen.
+
+
+[![kategorieordner](../../../assets/images/de/administration/kategorieordner.png)](../../../assets/images/de/administration/kategorieordner.png)
 
 ## Rechte
 
-Um die Kategorieordner anzuzeigen oder zu bearbeiten, benötigen Sie die Berechtigung **Kategorieordner** im Bereich **Administration**. Wie üblich hat die Personengruppe **admin** die Berechtigungen standardmäßig hinzugefügt.
+Du benötigst die Berechtigung **Kategorieordner** im Bereich **Administration**. Die Personengruppe **admin** hat diese Berechtigung standardmäßig.
 
-## Wie die Kategorieordner Funktion verwendet wird
+## Verwendung
 
-Zunächst muss ein Objekttyp ausgewählt werden, dann besteht die Möglichkeit, entweder die Schaltfläche **Neu anordnen** zu verwenden, mit der jede Kategorie an die gewünschte Stelle gesetzt werden kann. Außerdem kann, wenn der Mauszeiger über eine Kategorie bewegt wird, die Schaltfläche **Element verschieben** genutzt werden. Die Schaltfläche **Element verschieben** öffnet ein Popup-Fenster, in dem ein Ort zum Verschieben der ausgewählten Kategorie ausgewählt wird.
-Mit der Schaltfläche **Hinzufügen** werden Kategorieordner mit benutzerdefinierten Ordnernamen erstellt.
+1. Wähle zunächst einen Objekttyp aus.
+2. Nutze eine der folgenden Optionen:
+    -   **Neu anordnen**: Verschiebe jede Kategorie per Drag and Drop an die gewünschte Stelle.
+    -   **Element verschieben**: Fahre mit der Maus über eine Kategorie und klicke auf die Schaltfläche. Ein Popup öffnet sich, in dem du den Zielort auswählst.
+    -   **Hinzufügen**: Erstelle einen neuen Kategorieordner mit benutzerdefiniertem Namen.
 
 !!! tip "Schaltfläche Neu anordnen"
     Mit der Schaltfläche **Neu anordnen** werden Kategorien oder Ordner schnell an eine beliebige Position via **drag&drop** verschoben. Es kann auch die Schaltfläche **Verschieben** verwenden werden, um das Popup **Element verschieben** zu öffnen.

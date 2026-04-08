@@ -1,44 +1,54 @@
+---
+title: Attributfelder
+description: "Attributfelder sind die Formularelemente in der Web GUI von i-doit, über die du Attribute liest und bearbeitest."
+icon:
+status:
+lang: de
+---
 # Attributfelder
 
-Nachdem wir uns mit der [Struktur der IT-Dokumentation](struktur-it-dokumentation.md) vertraut gemacht haben, betrachten wir etwas detaillierter die Attributfelder, die i-doit in der Web GUI zur Verfügung stellt.
+Attributfelder sind die Formularelemente in der Web GUI von i-doit, über die du [Attribute](struktur-it-dokumentation.md) liest und bearbeitest. Dieser Artikel stellt dir alle verfügbaren Feldtypen vor.
 
 ## Überblick
 
-Jedes Attribut, dass bearbeitet werden kann, wird durch ein Formularfeld repräsentiert. Dies betrifft sowohl die Standard-Kategorien, als auch die [benutzerdefinierten Kategorien](benutzerdefinierte-kategorien.md). Fast jedes Attributfeld kann als [Pflichtfeld deklariert und/oder mit Validierungsoptionen belegt](../effizientes-dokumentieren/attributvalidierung-und-pflichtfelder.md) werden.
+Jedes bearbeitbare Attribut wird durch ein Formularfeld repräsentiert -- sowohl in Standard-Kategorien als auch in [benutzerdefinierten Kategorien](benutzerdefinierte-kategorien.md). Fast jedes Attributfeld kannst du als [Pflichtfeld deklarieren und/oder mit Validierungsoptionen belegen](../effizientes-dokumentieren/attributvalidierung-und-pflichtfelder.md).
 
 [![Überblick](../assets/images/de/grundlagen/attributfelder/1-af.png)](../assets/images/de/grundlagen/attributfelder/1-af.png)
 
-Attribute, die nicht bearbeitet werden können, erhalten in der Editier-Ansicht kein Attributfeld oder eines mit Nur-Lesen-Option (Read-only).
+Nicht bearbeitbare Attribute erscheinen in der Editier-Ansicht entweder gar nicht oder als Nur-Lesen-Feld (Read-only).
 
-Ein Beispiel für ein dynamisch erstelltes Attribut ohne Attributfeld ist die **FQDN** in der Kategorie **Hostadresse**. Die **FQDN** setzt sich aus den Attributen **Hostname** und **DNS Domäne** zusammen.
+**Beispiel: Dynamisch berechnetes Attribut** -- Die **FQDN** in der Kategorie **Hostadresse** setzt sich automatisch aus den Attributen **Hostname** und **DNS Domäne** zusammen und hat daher kein eigenes Eingabefeld.
 
 [![fqdn](../assets/images/de/grundlagen/attributfelder/2-af.png)](../assets/images/de/grundlagen/attributfelder/2-af.png)
 
-Ein Beispiel für ein Nur-Lesen-Attributfeld ist die **Objekt ID**, die von MySQL/MariaDB automatisch erzeugt wird.
+**Beispiel: Nur-Lesen-Feld** -- Die **Objekt ID** wird von MySQL/MariaDB automatisch erzeugt und kann nicht bearbeitet werden.
 
 [![objekt-id](../assets/images/de/grundlagen/attributfelder/3-af.png)](../assets/images/de/grundlagen/attributfelder/3-af.png)
 
 ## Einzeilige Textfelder
 
-Einzeilige Textfelder nehmen beliebigen Text entgegen. Die Zeichenlänge ist begrenzt auf ca. 255 Zeichen. Ein Beispiel ist die **Seriennummer** in der Kategorie **Modell**.
+Einzeilige Textfelder nehmen beliebigen Text mit maximal ca. 255 Zeichen entgegen. Beispiel: die **Seriennummer** in der Kategorie **Modell**.
 
 [![Seriennummer](../assets/images/de/grundlagen/attributfelder/4-af.png)](../assets/images/de/grundlagen/attributfelder/4-af.png)
 
 ## HTML-Editor/Mehrzeilige Textfelder
 
-Mehrzeilige Textfelder können beliebigen Text in mehreren Zeilen enthalten. Die Zeichenlänge ist auf ca. 65000 Zeichen begrenzt. Aus einem schlichten Textfeld lässt sich in einen HTML-Editor wechseln, um den Text zu formatieren. Dies geschieht unter **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name] → CMDB → WYSIWYG Editor in Kategorien**. "WYSIWYG" steht für "What You See Is What You Get".
+Mehrzeilige Textfelder nehmen beliebigen Text mit maximal ca. 65.000 Zeichen auf. Du kannst sie optional in einen HTML-Editor (WYSIWYG -- "What You See Is What You Get") umwandeln, um Text zu formatieren.
 
-Der HTML-Editor verfügt über weitere Formatierungsoptionen, die unter **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name] → CMDB → Aktiviere alle WYSIWYG Editor Funktionen** aktiviert werden können.
+So aktivierst du den HTML-Editor:
 
-Fast jeder Kategorie-Eintrag verfügt am Ende über das Attribut Beschreibung, das standardmäßig als HTML-Editor dargestellt wird.
+- **WYSIWYG aktivieren**: **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name] → CMDB → WYSIWYG Editor in Kategorien**
+- **Erweiterte Formatierungsoptionen**: **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name] → CMDB → Aktiviere alle WYSIWYG Editor Funktionen**
+
+Fast jeder Kategorie-Eintrag enthält am Ende ein **Beschreibung**-Attribut, das standardmäßig als HTML-Editor dargestellt wird.
 
 [![Beschreibung](../assets/images/de/grundlagen/attributfelder/5-af.png)](../assets/images/de/grundlagen/attributfelder/5-af.png)
 
 ## Dialog-Feld (Drop Down)
 
-Das Dialog-Feld ist ein Auswahlfeld (Drop Down). Die Werte, aus denen einer ausgewählt werden kann, sind vorgegeben und können in der Regel nicht bearbeitet werden. Soll keiner der Werte ausgewählt werden, kann wenn möglich der einfache Strich (**-**) ausgewählt werden.
+Das Dialog-Feld ist ein Auswahlfeld (Drop-Down) mit vorgegebenen Werten, die du in der Regel nicht bearbeiten kannst. Wenn du keinen Wert auswählen möchtest, wähle -- sofern verfügbar -- den einfachen Strich (**-**).
 
-Als Beispiel dient der [Zustand](lebens-und-dokumentationszyklus.md) in der Kategorie **Allgemein**.
+Beispiel: der [Zustand](lebens-und-dokumentationszyklus.md) in der Kategorie **Allgemein**.
 
 [![zustand](../assets/images/de/grundlagen/attributfelder/6-af.png)](../assets/images/de/grundlagen/attributfelder/6-af.png)
 
@@ -46,13 +56,13 @@ Ein Beispiel für ein Attribut, das zentral bearbeitet werden darf, ist der [**C
 
 ## Dialog-Plus-Feld (erweitertes Drop Down)
 
-Ähnlich wie das Dialog-Feld ist das Dialog-Plus-Feld. Darüber hinaus können zusätzliche Werte vorgegeben werden. Dazu nutzt man entweder das Icon rechts vom Attributfeld oder den [Dialog-Admin](dialog-admin.md).
+Das Dialog-Plus-Feld funktioniert wie ein Dialog-Feld, erlaubt dir aber zusätzlich, eigene Werte hinzuzufügen. Dazu nutzt du entweder das Icon rechts vom Attributfeld oder den [Dialog-Admin](dialog-admin.md).
 
 Beispiele sind die Attribute **Kategorie** und **Einsatzzweck** in der Kategorie **Allgemein**.
 
 [![einsatzzweck](../assets/images/de/grundlagen/attributfelder/7-af.png)](../assets/images/de/grundlagen/attributfelder/7-af.png)
 
-Klickt man auf das Icon, öffnet sich der **Listenbrowser**, über den sich weitere Werte hinzufügen und bestehende ändern lassen.
+Klickst du auf das Icon, öffnet sich der **Listenbrowser**, über den du weitere Werte hinzufügen und bestehende ändern kannst.
 
 [![listenbrowser](../assets/images/de/grundlagen/attributfelder/8-af.png)](../assets/images/de/grundlagen/attributfelder/8-af.png)
 
@@ -61,7 +71,7 @@ Klickt man auf das Icon, öffnet sich der **Listenbrowser**, über den sich weit
 
 ## Multi-Dialog-Plus-Feld (Mehrfachauswahl)
 
-Bei den oben genannten Auswahlfeldern lässt sich stets nur ein Wert selektieren. Um mehrere gleichzeitig auswählen zu können, gibt es das Multi-Dialog-Plus-Feld. Aus einem Drop-Down-Menü lassen sich weitere Werte hinzufügen. In einigen Fällen gibt es zusätzliche Buttons zum (De-)Selektieren aller Werte oder zur Umkehr der Auswahl.
+Die bisherigen Auswahlfelder erlauben nur die Auswahl eines einzelnen Werts. Das Multi-Dialog-Plus-Feld ermöglicht dir die gleichzeitige Auswahl mehrerer Werte aus einem Drop-Down-Menü. In einigen Fällen stehen zusätzliche Buttons zum (De-)Selektieren aller Werte oder zur Umkehr der Auswahl bereit.
 
 Als Beispiel dient das Attribut **DNS Domäne** in der Kategorie **Hostadresse**.
 
@@ -69,7 +79,7 @@ Als Beispiel dient das Attribut **DNS Domäne** in der Kategorie **Hostadresse**
 
 ## Datumsfeld
 
-Für Datumsangaben dient das Datumsfeld. Klickt man auf das einzeilige Textfeld, öffnet sich ein Kalender. Klickt man auf das gewünschte Datum, wird dieses im Textfeld übernommen. Alternativ kann das Datum manuell im Format tt.mm.jjjj angeben werden.
+Das Datumsfeld dient zur Eingabe von Datumsangaben. Klicke auf das Textfeld, um einen Kalender zu öffnen, und wähle das gewünschte Datum aus. Alternativ gibst du das Datum manuell im Format **tt.mm.jjjj** ein.
 
 In der Kategorie **Buchhaltung** gibt es das Beispiel-Attribut **Lieferdatum**.
 
@@ -77,7 +87,7 @@ In der Kategorie **Buchhaltung** gibt es das Beispiel-Attribut **Lieferdatum**.
 
 ## Einheiten und Intervalle
 
-Um Einheiten oder Intervalle zu dokumentieren, gibt es neben solchen Attributfeldern ein Drop-Down-Feld, um diese festzulegen. Hierbei kann es sich um Zeiteinheiten, Maßeinheiten, Gewichtseinheiten, Zeiträume usw. handeln.
+Manche Attributfelder werden durch ein zusätzliches Drop-Down-Feld ergänzt, über das du die Einheit oder das Intervall festlegst -- z. B. Zeiteinheiten, Maßeinheiten, Gewichtseinheiten oder Zeiträume.
 
 Das Attribut **Garantiezeitraum** in der Kategorie **Buchhaltung** ist ein Beispiel.
 
@@ -85,7 +95,7 @@ Das Attribut **Garantiezeitraum** in der Kategorie **Buchhaltung** ist ein Beisp
 
 ## Kosten
 
-Kosten werden als Dezimalzahlen (oder vereinfacht als reelle Zahlen ohne Nachkommastellen) dokumentiert. Als Trenner zu den Nachkommastellen dürfen Punkt und Komma genutzt werden. Das Attributfeld zeigt zudem die konfigurierte Währung an. Diese wird unter **Verwaltung → [Mandanten-Name] Verwaltung → Allgemeine Einstellungen → Währungsformat** festgelegt.
+Kosten gibst du als Dezimalzahlen ein -- sowohl Punkt als auch Komma sind als Dezimaltrenner erlaubt. Das Feld zeigt die konfigurierte Währung an. Diese legst du unter **Verwaltung → [Mandanten-Name] Verwaltung → Allgemeine Einstellungen → Währungsformat** fest.
 
 Das Attribut **Investitionskosten** in der Kategorie **Buchhaltung** ist ein Beispiel.
 
@@ -93,7 +103,7 @@ Das Attribut **Investitionskosten** in der Kategorie **Buchhaltung** ist ein Bei
 
 ## Link
 
-Manche einzeiligen Textfelder sind dafür gedacht, URIs einzugeben. Daraus wird ein Link generiert, den der Benutzer anklicken kann, um ihn aufzurufen.
+Manche einzeiligen Textfelder sind für die Eingabe von URIs vorgesehen. i-doit generiert daraus einen klickbaren Link.
 
 Die Kategorie **Zugriff** bietet beispielsweise dieses Attributfeld an.
 
@@ -101,17 +111,18 @@ Die Kategorie **Zugriff** bietet beispielsweise dieses Attributfeld an.
 
 ## Objekt-Beziehungen
 
-Um eine Beziehung zwischen zwei oder mehreren Objekten herzustellen, existiert für allgemeine Fälle der Objektbrowser und für spezielle weitere Browser. Das einzeilige Textfeld wird durch zwei Icons auf der rechten Seite ergänzt.
+Um Beziehungen zwischen Objekten herzustellen, stehen dir der Objektbrowser und spezielle Browser zur Verfügung. Das Textfeld wird durch zwei Icons ergänzt:
 
-Wenn eine 1-zu-1-Beziehung zwischen zwei Objekten hergestellt werden kann, ist das Textfeld beschreibbar. Dabei werden bereits beim Tippen Vorschläge gemacht. Wenn eine 1-zu-n-Beziehung hergestellt werden kann, ist das Textfeld im Nur-Lesen-Modus.
+- **Lupen-Icon**: Öffnet den passenden Browser zur Auswahl
+- **Klammer-Icon mit Sperrzeichen**: Löst bestehende oder ausgewählte Beziehungen
 
-Wird auf das Lupen-Icon geklickt, öffnet sich der passende Browser. Das Icon daneben, eine Klammer mit Sperrzeichen, löst bestehende oder gerade ausgewählte Beziehungen.
+Bei **1-zu-1-Beziehungen** kannst du direkt ins Textfeld tippen -- i-doit macht bereits beim Eintippen Vorschläge. Bei **1-zu-n-Beziehungen** ist das Textfeld schreibgeschützt, und du wählst über den Browser aus.
 
 [![objekt-beziehung](../assets/images/de/grundlagen/attributfelder/14-af.png)](../assets/images/de/grundlagen/attributfelder/14-af.png)
 
 ### Objekt-Browser
 
-Der Objekt-Browser ist individuell aufgebaut, je nachdem, welche Beziehungsart dokumentiert werden soll. Daher stehen nicht alle Funktionen, die hier beschrieben werden, immer zur Verfügung. Oftmals ist die Auswahl an Filtern eingeschränkt, weil beispielsweise nur Objekte von bestimmten Objekttypen ausgewählt werden dürfen.
+Der Objekt-Browser passt sich an die jeweilige Beziehungsart an -- nicht alle hier beschriebenen Funktionen stehen immer zur Verfügung. Oft ist die Auswahl an Filtern eingeschränkt, weil nur Objekte bestimmter Objekttypen zugelassen sind.
 
 Wenn die Auswahl des referenzierten Objekts über Radio-Buttons erfolgt, ist lediglich eine einfache Auswahl möglich. Stehen hingegen die [![bild](../assets/images/de/grundlagen/attributfelder/hinzufuegen.png)](../assets/images/de/grundlagen/attributfelder/hinzufuegen.png)-Schaltflächen zur Verfügung, ist eine Mehrfachauswahl möglich.
 
@@ -130,7 +141,7 @@ Im oberen Bereich befinden sich mehrere Tabs:
 
 Im Log werden alle derzeitigen Änderungen aufgelistet.
 
-Aus Beispiel dient der **Kontakt-Browser**, der in der Kategorie **Buchhaltung** dem Attribut **Eingekauft bei** zur Verfügung steht.
+Als Beispiel dient der **Kontakt-Browser**, der in der Kategorie **Buchhaltung** dem Attribut **Eingekauft bei** zur Verfügung steht.
 
 [![Kontakt Browser](../assets/images/de/grundlagen/attributfelder/15-af.png)](../assets/images/de/grundlagen/attributfelder/15-af.png)
 

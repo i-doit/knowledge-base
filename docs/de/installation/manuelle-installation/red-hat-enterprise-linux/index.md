@@ -69,7 +69,7 @@ sudo systemctl restart firewalld.service
 ```
 <!-- cSpell:enable -->
 
-!!! success "If you want to use i-doit via HTTPS, you have to create a corresponding VirtualHost configuration for port 443. [This is not described here.](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10/html/deploying_web_servers_and_reverse_proxies/setting-up-the-apache-http-web-server#configuring-tls-encryption-on-an-apache-http-server)"
+!!! success "Wenn du i-doit via HTTPS nutzen möchtest, musst du eine entsprechende VirtualHost-Konfiguration für Port 443 erstellen. [Dies wird hier nicht beschrieben.](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10/html/deploying_web_servers_and_reverse_proxies/setting-up-the-apache-http-web-server#configuring-tls-encryption-on-an-apache-http-server)"
 
 ## Konfiguration
 
@@ -83,7 +83,7 @@ Zunächst wird eine neue Datei erstellt und mit den nötigen Einstellungen befü
 sudo nano /etc/php.d/i-doit.ini
 ```
 <!-- cSpell:enable -->
-!!! example "Diese Datei erhält folgende von uns vorgegebenen Inhalt. Für mehr Informationen zu den Parametern, schauen Sie auf [PHP.net](https://www.php.net/manual/en/install.fpm.configuration.php) vorbei"
+!!! example "Diese Datei erhält folgende von uns vorgegebenen Inhalt. Für mehr Informationen zu den Parametern, schaue dir auf [PHP.net](https://www.php.net/manual/en/install.fpm.configuration.php) vorbei"
 <!-- cSpell:disable -->
 ```ini
 allow_url_fopen = Yes
@@ -111,9 +111,9 @@ session.cookie_lifetime = 0
 mysqli.default_socket = /var/lib/mysql/mysql.sock
 ```
 <!-- cSpell:enable -->
-Das `memory_limit` muss bei bedarf z.B. bei sehr großen Reports oder umfangreichen Dokumenten erhöht werden.
+Das `memory_limit` muss bei Bedarf z.B. bei sehr großen Reports oder umfangreichen Dokumenten erhöht werden.
 Der Wert (in Sekunden) von **session.gc_maxlifetime** sollte größer oder gleich dem **Session Timeout** in den [Systemeinstellungen](../systemeinstellungen.md) von i-doit sein.
-Der Parameter **date.timezone** sollte auf die lokale Zeitzone anpasst werden (siehe [Liste unterstützter Zeitzonen](http://php.net/manual/de/timezones.php)).
+Der Parameter **date.timezone** sollte auf die lokale Zeitzone angepasst werden (siehe [Liste unterstützter Zeitzonen](http://php.net/manual/de/timezones.php)).
 
 ### Apache HTTP Server Konfiguration
 

@@ -1,6 +1,6 @@
 ---
 title: Umzug von Linux zu Windows
-description: Umzug von Linux zu Windows
+description: "Dieser Artikel beschreibt, wie du deine i-doit-Installation von Linux auf einen Windows Server migrierst."
 icon: fontawesome/brands/linux
 status:
 lang: de
@@ -8,30 +8,29 @@ lang: de
 
 # Umzug von Linux zu Windows
 
-In diesem Artikel wird erklärt, wie man seine i-doit Installation unter Linux zu einem Windows Server migriert. i-doit wurde auf dem Windows Server mit dem [i-doit Windows Installer](../installation/manuelle-installation/microsoft-windows-server/index.md) erstellt.
+Dieser Artikel beschreibt, wie du deine i-doit-Installation von Linux auf einen Windows Server migrierst. Voraussetzung: Der Windows Server wurde mit dem [i-doit Windows Installer](../installation/manuelle-installation/microsoft-windows-server/index.md) eingerichtet.
 
 ## Vorbereitungen und Annahmen
 
 !!! warning "Beide Systeme müssen auf der gleichen i-doit Version sein!"
 
-Bevor es los geht, sollten ein paar Dinge beachtet werden. Ziel soll sein, ohne lange Downtime und vor allem ohne Datenverlust den Umzug zu wagen. Jeder, der mit den Daten von i-doit arbeitet, sollte rechtzeitig über den Umzug informiert werden. Nichts ist schlimmer als wütende Kollegen, deren Arbeit unterbrochen wurde.
+Bevor du startest:
 
-Zudem sollte identifiziert werden, welche Schnittstellen von i-doit genutzt werden. Konkret: Welche Drittsysteme wie [Nagios](../i-doit-add-ons/nagios.md), [((OTRS)) Community Edition](../automatisierung-und-integration/service-desk/otrscommunity-help-desk.md) & [Co.](../daten-konsolidieren/index.md) greifen auf i-doit zu? Während des Umzugs sollte der Datenzugriff abgeschaltet werden. Ähnliches gilt für laufende [Tasks](../automatisierung-und-integration/cli/index.md), [Backups](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) und das Monitoring, welches überwacht, dass auf dem Windows-System auf Port 80/443 ein laufender Webserver HTTP-Anfragen beantwortet.
-
-Da die Installation von i-doit auf dem Windows Server per [i-doit Windows Installer](../installation/manuelle-installation/microsoft-windows-server/index.md) durchgeführt wurde, sind apache2, PHP und MariaDB bereits ausreichend konfiguriert. Im Folgenden sprechen wir nur noch von MySQL, auch wenn MariaDB zum Einsatz kommt. Wenn Änderungen an der Konfiguration unter Linux vorgenommen worden sind, sollten diese eventuell auch auf dem neuen System ergänzt werden.
-Auf dem neuen System sollten alle Dienste erreichbar sein, die i-doit erwartet: DNS, SMTP, LDAP/AD. Funktioniert alles? Okay, es kann losgehen.
-
-Eines noch: Wir sollten alle System-Benutzerkonten und deren Passwörter parat haben, die auf dem alten und neuen System verwendet werden. Dazu zählen MySQL-Systembenutzer (root) und der i-doit-Benutzer für MySQL (standardmäßig idoit).
+*   **Benutzer informieren** -- Klaere alle Kollegen rechtzeitig über den Umzug und die geplante Downtime auf.
+*   **Schnittstellen identifizieren** -- Welche Drittsysteme ([Nagios](../i-doit-add-ons/nagios.md), [((OTRS)) Community Edition](../automatisierung-und-integration/service-desk/otrscommunity-help-desk.md), [weitere](../daten-konsolidieren/index.md)) greifen auf i-doit zu? Deaktiviere während des Umzugs den Datenzugriff, laufende [Tasks](../automatisierung-und-integration/cli/index.md), [Backups](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) und Monitoring.
+*   **Windows-Seite** -- Apache, PHP und MariaDB sind durch den Windows Installer bereits konfiguriert. Im Folgenden verwenden wir "MySQL" auch für MariaDB. Übernimm ggf. Linux-Konfigurationsanpassungen auf das neue System.
+*   **Dienste prüfen** -- DNS, SMTP und LDAP/AD müssen auf dem neuen System erreichbar sein.
+*   **Zugangsdaten** -- Halte die Passwörter für den MySQL-Systembenutzer (`root`) und den i-doit-Benutzer (`idoit`) bereit.
 
 ## Verzeichnis aus Linux exportieren
 
-Um die Dateien nicht einzeln übertragen zu müssen und die ein ein Archiv zu packen, verwenden wir den **zip** Befehl:
+Packe das i-doit-Verzeichnis in ein Archiv:
 
 ```shell
 sudo zip -r i-doit.zip /var/www/html/
 ```
 
-Wenn Ihre i-doit Instanz unter einem anderen Pfad liegt, passen Sie den Befehl entsprechend an. Jetzt muss nur noch die ZIP Datei heruntergeladen oder auf den Windows Server transferiert werden. Für den Transfer der ZIP Datei kann scp verwendet werden. Den folgenden Befehl führen wir auf dem Windows Server aus:
+Passe den Pfad an deine Installation an. Transferiere die ZIP-Datei auf den Windows Server, z. B. per `scp` (Befehl auf dem Windows Server ausführen):
 
 ```shell
 scp -r user@linuxsystem:/var/www/html/i-doit.zip C:\
@@ -39,7 +38,7 @@ scp -r user@linuxsystem:/var/www/html/i-doit.zip C:\
 
 ## Datenbank aus Linux exportieren
 
-!!! warning "Bitte beachten Sie, dass bei einem SQL Dump unter Verwendung der folgenden MariaDB-Versionen zu einem Fehler beim importieren des Dumps unter Windows kommen wird:"
+!!! warning "Bei folgenden MariaDB-Versionen führt der SQL-Dump zu einem Import-Fehler unter Windows:"
     - 10.5.25
     - 10.6.18
     - 10.11.8
@@ -52,52 +51,49 @@ scp -r user@linuxsystem:/var/www/html/i-doit.zip C:\
     Dadurch kann dieser Dump dann nur noch mit den gelisteten MariaDB Versionen importiert werden, da die mitgelieferte MariaDB Version vom Windows installer keine der gelisteten Versionen ist, wird man beim Import auf den Fehler **`ERROR at line 1: Unknown command '\-'`** stoßen.
     Wir empfehlen daher für den Dump eine andere MariaDB Version zu nutzen, welche nicht oben aufgelistet ist!
 
-Als nächstes müssen wir die Datenbank exportieren und ebenfalls auf den Windows Server transferieren. Um die Datenbank erfolgreich zu exportieren müssen folgende Befehle ausgeführt werden:
+Exportiere die Datenbanken und transferiere sie auf den Windows Server:
 
 ```shell
 mysqldump -uroot -p idoit_system > /tmp/idoit_system.sql
 mysqldump -uroot -p idoit_data > /tmp/idoit_data.sql
 ```
 
-Sind die zwei Datenbanken exportiert, müssen wir anschließend die beiden SQL Dateien ebenfalls auf den Windows Server transferieren:
+Transferiere die SQL-Dateien:
 
 ```shell
 scp -r user@linuxsystem:/tmp/idoit_system.sql C:\
 scp -r user@linuxsystem:/tmp/idoit_data.sql C:\
 ```
 
-Damit liegen die SQL Dateien nun auf dem Windows Server unter C:\
+Die SQL-Dateien liegen nun unter `C:\`.
 
-## MariaDB Pfad in Windows setzen
+## MariaDB-Pfad in Windows setzen
 
-Damit wir in den nächsten Schritten die MySQL Befehle in der Eingabeaufforderung ausführen können, ohne uns vorher in die MySQL Oberfläche anmelden zu müssen, werden wir den Pfad zu MariaDB in die Umgebungsvariablen eintragen.
+Damit du MySQL-Befehle direkt in der Eingabeaufforderung ausführen kannst, trage den MariaDB-Pfad in die Umgebungsvariablen ein:
 
-Zuerst suchen Sie über die Windows Suche nach "Erweiterte Systemeinstellungen" und klicken Sie auf den "Umgebungsvariablen..." Button.
+1. Suche über die Windows-Suche nach "Erweiterte Systemeinstellungen" und klicke auf **"Umgebungsvariablen..."**.
 
 [![Umgebungsvariablen](../assets/images/de/upgrades-und-umzuege/umzug-von-linux-zu-windows/1-uvlzw.png)](../assets/images/de/upgrades-und-umzuege/umzug-von-linux-zu-windows/1-uvlzw.png)
 
-Danach sollte sich ein neues Fenster öffnen in welchem oben die Benutzervariablen und unten die Systemvariablen angezeigt werden.
-Wählen Sie anschließend die Variable "Path" aus und klicken Sie auf "Bearbeiten":
+2. Wähle im neuen Fenster die Variable **"Path"** unter den Systemvariablen aus und klicke auf **"Bearbeiten"**:
 
 [![Umgebungsvariablen](../assets/images/de/upgrades-und-umzuege/umzug-von-linux-zu-windows/2-uvlzw.png)](../assets/images/de/upgrades-und-umzuege/umzug-von-linux-zu-windows/2-uvlzw.png)
 
-Dadurch öffnet sich eine Liste an Umgebungsvariablen. Erstellen Sie einen neuen Eintrag und fügen Sie dort den Pfad zu dem **bin** Ordner von MariaDB ein.
-Der i-doit Windows installer sollte diesen Ordner unter dem Pfad **C:\ProgramData\MariaDB\bin** angelegt haben.
+3. Erstelle einen neuen Eintrag mit dem Pfad zum **bin**-Ordner von MariaDB: **C:\ProgramData\MariaDB\bin**.
 
 [![Umgebungsvariablen](../assets/images/de/upgrades-und-umzuege/umzug-von-linux-zu-windows/3-uvlzw.png)](../assets/images/de/upgrades-und-umzuege/umzug-von-linux-zu-windows/3-uvlzw.png)
 
-Nachdem der Pfad gesetzt ist sollten Sie nun die SQL Befehle auch in der Eingabeaufforderung nutzen können.
-Eventuell muss das Fenster erst einmal neugestartet werden.
+Nach dem Setzen des Pfads kannst du SQL-Befehle in der Eingabeaufforderung nutzen. Starte das Fenster ggf. neu.
 
 ## Daten nach Windows umziehen
 
-Entpacken Sie zuerst die von Ihnen erstellte ZIP Datei unter dem folgenden Pfad und überschreiben Sie alle Dateien falls notwendig:
+Entpacke die ZIP-Datei in folgendes Verzeichnis und überschreibe alle Dateien:
 
 ```shell
 C:\ProgramData\i-doit\apache-2.4\htdocs
 ```
 
-Anschließend muss die Datenbank eingespielt werden. Um Fehler zu vermeiden löschen wir zuerst die bereits bestehenden Datenbanken auf unserem Windows Server:
+Spiele anschließend die Datenbank ein. Lösche zuerst die bestehenden Datenbanken auf dem Windows Server:
 
 !!! info "Die SQL Befehle können über den MySQL Client (über die Windowssuche zu finden) ausgeführt werden"
 
@@ -106,14 +102,14 @@ DROP Database idoit_data;
 DROP Database idoit_system;
 ```
 
-Danach erstellen wir die Datenbanken neu:
+Erstelle die Datenbanken neu:
 
 ```shell
 CREATE DATABASE idoit_data;
 CREATE DATABASE idoit_system;
 ```
 
-Jetzt können wir die Datenbanken aus der alten Instanz einspielen:
+Importiere die Datenbanken aus der alten Instanz:
 
 !!! info "Hierzu wechseln wir auf die normale Eingabeaufforderung von Windows"
 
@@ -123,21 +119,23 @@ mysql -uroot -p idoit_system < C:\idoit_system.sql
 ```
 
 !!! danger "Wenn der Fehler **`ERROR at line 1: Unknown command '\-'`** auftritt:"
-    Wenn der obige Fehler auftritt, haben Sie den SQL Dump mit einer MariaDB Version durchgeführt, welche ein "Sandbox Command" in die erste Zeile des Dumps schreibt.
+    Wenn der obige Fehler auftritt, hast du den SQL Dump mit einer MariaDB Version durchgeführt, welche ein "Sandbox Command" in die erste Zeile des Dumps schreibt.
     Diese Zeile kann nur von bestimmten MariaDB Versionen interpretiert werden, was auf die mitgelieferte MariaDB Version des Windows installers nicht zutrifft (Siehe [Liste](#datenbank-aus-linux-exportieren)).
-    Die Fehler-verursachende Zeile ist `/*!999999\- enable the sandbox mode */`, diese muss entweder manuell aus dem Dump entfernt werden oder Sie wechseln auf eine andere MariaDB Version und führen den Dump erneut durch.
+    Die Fehler-verursachende Zeile ist `/*!999999\- enable the sandbox mode */`, diese muss entweder manuell aus dem Dump entfernt werden oder du wechseln auf eine andere MariaDB Version und führen den Dump erneut durch.
 
-Zusätzlich berechtigen wir den idoit User für die neuen Datenbanken:
+Berechtige den `idoit`-Benutzer für die neuen Datenbanken:
 
 ```shell
 grant all privileges on idoit_system.* to idoit@localhost identified by 'mypasswd';
 grant all privileges on idoit_data.* to idoit@localhost identified by 'mypasswd';
 ```
 
-Damit ist dann die Instanz erfolgreich von Linux auf Windows migriert.
+Die Instanz ist nun erfolgreich von Linux auf Windows migriert.
 
 ### Nacharbeiten
 
-Nach diesem Umzug sollten verschiedene Tests durchgeführt werden und die Schnittstellen zwischen i-doit und Dritt-Tools wieder aktiviert werden. Auch ganz wichtig ist, dass die [Backups](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) laufen. Sollten alle Tests erfolgreich sein (davon ist hoffentlich auszugehen), können alle Kollegen benachrichtigt werden, dass die IT-Dokumentation wieder verfügbar ist.
+1. Führe Tests durch und aktiviere die Schnittstellen zu Dritt-Tools wieder.
+2. Stelle sicher, dass die [Backups](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) laufen.
+3. Informiere alle Kollegen, dass die IT-Dokumentation wieder verfügbar ist.
 
-Wie lange dauert solch ein Umzug? Wenn wir die Vor- und Nachbereitungen außen vor lassen, dauert ein Umzug nicht länger als zwei Stunden. Es lohnt sich also. Viel Erfolg!
+Der eigentliche Umzug (ohne Vor- und Nachbereitung) dauert in der Regel nicht länger als zwei Stunden.

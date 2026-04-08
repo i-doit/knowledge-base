@@ -1,29 +1,33 @@
 ---
-title: Modeling the information scope
-description: When modeling the information scope, the modules from the IT-Grundschutz Compendium are mainly assigned to the scope and its target objects or target object groups.
+title: Modeling the Information Domain
+description: Assigning modules from the Grundschutz Compendium to the information domain and its target objects
+icon:
+status:
 lang: en
 ---
 
-# Modeling the information scope
+# Modeling the Information Domain
 
-When modeling the information scope, the modules from the IT-Grundschutz Compendium are mainly assigned to the scope and its target objects or target object groups. A distinction is made between assigning process modules to the scope and (mostly system) modules to target objects or target object groups.
+When modeling the information domain, you assign the modules from the Grundschutz Compendium to the information domain and its target objects or target object groups. A distinction is made between assigning process modules to the information domain and assigning (primarily system) modules to target objects or target object groups.
 
-Process modules are assigned to the scope via the "Process modules" category on the information scope.
+You assign process modules to the information domain via the "Process Modules" category.
 
-[![Process modules](../../assets/images/en/i-doit-add-ons/viva2/modeling/process-modules.png)](../../assets/images/en/i-doit-add-ons/viva2/modeling/process-modules.png){:target="_blank"}
+[![Assigning process modules](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/zielobjektgruppe-beispiel.png)](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/zielobjektgruppe-beispiel.png){:target="_blank"}
 
-All relevant process modules must be assigned to the scope here. Modules are assigned to target objects/target object groups via the "Assigned modules" category on the target object/target object group.
+Here you assign all relevant process modules to the information domain.
 
-[![Assigned modules](../../assets/images/en/i-doit-add-ons/viva2/modeling/assigned-modules.png)](../../assets/images/en/i-doit-add-ons/viva2/modeling/assigned-modules.png){:target="_blank"}
+You assign modules for target objects/target object groups via the "Assigned Modules" category on the respective target object or target object group.
 
-All system modules relevant for this target object/target object group must be assigned here. Process modules can also be assigned if this makes sense (for example, different backup concepts for individual objects).
+[![Assigning modules](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/zielobjektgruppe-beispiel.png)](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/zielobjektgruppe-beispiel.png){:target="_blank"}
 
-## Contact assignments
+Here you assign all system modules relevant to this target object or target object group. You can also assign process modules if this is appropriate at this point (e.g., differing backup concepts for individual objects).
 
-For each used module, responsibilities should be recorded via the "Contact assignment" category.
+## Contact Assignments
+
+For each module used, enter the responsibilities via the "Contact Assignment" category.
 
 ## Order
 
-You can define a processing order for modules using the "Order" column.
+In the "Order" column, you enter a processing order for the modules.
 
-[<- Back](assessment-of-protection.md){ .md-button } · [IT-Grundschutz check ->](it-grundschutz-check.md){ .md-button .md-button--primary }
+[<- Back](assessment-of-protection.md){ .md-button } · [IT-Grundschutz Check ->](it-grundschutz-check.md){ .md-button .md-button--primary }

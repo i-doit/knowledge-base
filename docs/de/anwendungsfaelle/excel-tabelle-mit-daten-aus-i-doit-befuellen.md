@@ -1,3 +1,10 @@
+---
+title: "Excel-Tabelle mit Daten aus i-doit befüllen"
+description: "Mit wenigen Zeilen Visual Basic lassen sich beliebige Inhalte aus i-doit auslesen und in Microsoft Excel darstellen."
+icon:
+status:
+lang: de
+---
 # Excel-Tabelle mit Daten aus i-doit befüllen
 
 Mit wenigen Zeilen Visual Basic lassen sich beliebige Inhalte aus i-doit auslesen und in Microsoft Excel darstellen. In diesem Artikel erklären wir die Vorgehensweise anhand von [Reports](../auswertungen/report-manager.md).

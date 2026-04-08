@@ -1,3 +1,10 @@
+---
+title: "Relocate-CI"
+description: "Das Add-on CI-Umzug dient zum einfachen Dokumentieren von Standort-Wechseln von IT-Komponenten."
+icon:
+status:
+lang: de
+---
 # Relocate-CI
 
 Das [Add-on](./index.md) **CI-Umzug** dient zum einfachen Dokumentieren von Standort-Wechseln von IT-Komponenten. Im Vordergrund stehen klassische Arbeitsplatzkomponenten wie Desktop-PCs, Telefone oder Monitore. Unterstützt werden auch logische Gruppierungen durch den [Objekttyp](../grundlagen/struktur-it-dokumentation.md) Arbeitsplatz.
@@ -6,19 +13,21 @@ Die Funktionen sind über **Add-ons → CI-Umzug** zu finden.
 
 [![CI-Umzug](../assets/images/de/i-doit-add-ons/relocate-ci/1-rci.png)](../assets/images/de/i-doit-add-ons/relocate-ci/1-rci.png)
 
-Es öffnen sich zwei Standortbrowser. Hier kann manuell zu einem Objekt navigiert werden oder bequem über eine integrierte Suche.
+Es öffnen sich zwei Standortbrowser. Navigiere manuell zum gewünschten Objekt oder nutze die integrierte Suche.
 
 [![Standortbrowser](../assets/images/de/i-doit-add-ons/relocate-ci/2-rci.png)](../assets/images/de/i-doit-add-ons/relocate-ci/2-rci.png)
 
-In einem konkreten Beispiel wird der Arbeitsplatz **Hans Olo** von Raum **1.06 Open-plan Office** nach Raum **1.03** umgezogen.
+**Beispiel:** Du ziehst den Arbeitsplatz **Hans Olo** von Raum **1.06 Open-plan Office** nach Raum **1.03** um.
 
 [![Umzug](../assets/images/de/i-doit-add-ons/relocate-ci/3-rci.png)](../assets/images/de/i-doit-add-ons/relocate-ci/3-rci.png)
 
-Dafür wird der Arbeitsplatz **Hans Olo** per Drag and Drop von seinem alten Standort auf den neuen Standort gezogen. Die Ziellokation wird zur besseren Sichtbarkeit grün hervorgehoben.
+So gehst du vor:
 
-Nach dem Klicken auf Umzug Starten öffnet sich ein Umzugsdialog, der links den derzeitigen Standort und rechts den zukünftigen Standort anzeigt. Hier kann ausgewählt werden, welche Komponenten umgezogen werden und welche am alten Standort verbleiben.
+1. Ziehe den Arbeitsplatz **Hans Olo** per Drag-and-Drop auf den neuen Standort. Die Ziellokation wird gruen hervorgehoben.
+2. Klicke auf **Umzug starten** -- der Umzugsdialog zeigt links den aktuellen und rechts den neuen Standort.
+3. Wähle aus, welche Komponenten umgezogen werden und welche am alten Standort verbleiben.
 
-Es werden alle Objekte angezeigt, die hierarchisch "unterhalb" des ausgewählten Objektes liegen, im konkreten Fall also alle Arbeitsplatzkomponenten von **Hans Olo**. Umgezogen wird sein PC und sein Monitor, das Telefon wird abgewählt, da es im alten Raum verbleibt.
+Es werden alle hierarchisch untergeordneten Objekte angezeigt -- im Beispiel also alle Arbeitsplatzkomponenten von **Hans Olo**. PC und Monitor ziehen mit um, das Telefon wird abgewählt, da es im alten Raum verbleibt.
 
 [![Objekt](../assets/images/de/i-doit-add-ons/relocate-ci/4-rci.png)](../assets/images/de/i-doit-add-ons/relocate-ci/4-rci.png)
 
@@ -26,11 +35,11 @@ Ist der Umzug abgeschlossen, wird die Baumansicht aktualisiert.
 
 [![Umzugsdialog](../assets/images/de/i-doit-add-ons/relocate-ci/5-rci.png)](../assets/images/de/i-doit-add-ons/relocate-ci/5-rci.png)
 
-Der Umzug wird im [Logbuch](../grundlagen/logbuch.md) von **i-doit** vermerkt, für jedes Objekt welches für den Arbeitsplatz **Hans Olo** umgezogen wurde.
+Der Umzug wird im [Logbuch](../grundlagen/logbuch.md) für jedes umgezogene Objekt vermerkt.
 
 [![Baumansicht](../assets/images/de/i-doit-add-ons/relocate-ci/6-rci.png)](../assets/images/de/i-doit-add-ons/relocate-ci/6-rci.png)
 
-Um im Nachhinein genauere Informationen über die einzelnen umgezogenen Komponenten zu bekommen, wird der Umzug zusätzlich im Detail im Umzugslogbuch unter **Add-ons → CI-Umzug → Logbuch** verzeichnet. Hier wird jede einzelne betroffenen Komponente aufgeführt.
+Detaillierte Informationen zu den einzelnen umgezogenen Komponenten findest du im Umzugslogbuch unter **Add-ons → CI-Umzug → Logbuch**.
 
 [![Logbuch](../assets/images/de/i-doit-add-ons/relocate-ci/7-rci.png)](../assets/images/de/i-doit-add-ons/relocate-ci/7-rci.png)
 

@@ -280,7 +280,7 @@ search:
 [Bug]          In der Druckansicht wird anstatt der primären IP-Adresse der Name des Netzes angezeigt<br>
 [Bug]          Download eines Templates verwendet ausschließlich Kategorie "Allgemein"<br>
 [Bug]          Quickpurge Button bei IT Servicekomponenten fehlerhaft<br>
-[Bug]          Fehlermeldung "Dieses Modul unterstuetzt leider keine Bookmarks" beim Anlegen von Bookmarks<br>
+[Bug]          Fehlermeldung "Dieses Modul unterstützt leider keine Bookmarks" beim Anlegen von Bookmarks<br>
 [Bug]          Langsamer LDAP Sync bei größeren Datenbanken<br>
 [Bug]          Berechtigungsproblem bei Cache Dateien, wenn diese über das CLI (Controller) Interface erzeugt wurden<br>
 [Bug]          OCS Import zeigt Objekte nicht als bereits importiert an<br>
@@ -312,7 +312,7 @@ search:
 [Bug]          JDisc erkennt nicht alle Ports als "Ethernet", dadurch werden beim Import teilweise nicht alle Ports importiert<br>
 [Bug]          JDisc Import bricht in sehr großen Netzumgebungen ohne Fehler ab<br>
 [Bug]          Manuelle Sortierung über Drag'n'Drop im QCW wird nicht gespeichert<br>
-[Bug]          Es koennen nicht alle Objekttypen via QCW bearbeitet werden<br>
+[Bug]          Es können nicht alle Objekttypen via QCW bearbeitet werden<br>
 [Bug]          Schlechte Formatierung der Listen in einem PDF aus Report Manager<br>
 [Bug]          Report View: Geräte in einem Standort - Icons fehlen<br>
 [Bug]          Softwarezuweisungen werden beim JDisc Import nicht als Änderungen im Logbuch aufgeführt<br>

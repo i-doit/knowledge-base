@@ -1,70 +1,77 @@
-# Frequently asked questions (FAQ)
+---
+title: Frequently Asked Questions (FAQ)
+description: Here you can find some of the most frequently asked questions about idoitcmk.
+icon:
+status:
+lang: en
+---
+# Frequently Asked Questions (FAQ)
 
-We have collected some of the most asked questions about idoitcmk.
+Here you can find some of the most frequently asked questions about idoitcmk.
 
-## Access hardware/software inventory
+[![Checkmk](../../assets/images/de/i-doit-add-ons/checkmk2/checkmk-hauptseite.png)](../../assets/images/de/i-doit-add-ons/checkmk2/checkmk-hauptseite.png)
 
-In a multi-site environment sites are able to collect hardware/software information from their monitored hosts. If you have configured idoitcmk to fetch information about your hosts from one site this site will need access to the other sites hardware/software inventory. To do so please make sure you have the following settings:
+## Access to Hardware/Software Inventory
 
-1. Go to `WATO > Distributed Monitoring > Edit slave site > Livestatus settings > Connection`
-2. Select `Use Livestatus Proxy Daemon`
-3. Select option `CP port to connect to` for `Connect to`
-4. Add FQDN/IP and port for the selected slave which other sites can use
-5. Uncheck `Allow access via TCP`
+In a multi-site environment, sites can retrieve hardware/software information from their monitored hosts. If you have configured idoitcmk to retrieve information about your hosts from a site, that site needs access to the hardware/software inventory of the other sites. Please make sure you have made the following settings:
+
+1. Go to `**WATO > Distributed Monitoring > Edit slave site > Livestatus settings > Connection**`
+2. Select `**Use Livestatus Proxy Daemon**`
+3. Select the option `**TCP port to connect to**` for `**Connect to**`
+4. Add FQDN/IP and port for the selected slave that other sites can use
+5. Deactivate `**Allow access via TCP**`
 6. Save and activate your changes
 
-Now you will see inside the Web GUI a button called **Inventory** on each status page of a host. This is a good indicator that idoitcmk may access inventory information via Web API as well.
+Now you will see a button labeled **Inventory** on every host status page in the web GUI. This is a good indicator that idoitcmk can also access inventory information via the web API.
 
-## Multi-tenants
+## Multi-Tenants
 
-The add-on supports more than one tenants provided by i-doit. For each i-doit tenant you need to configure an unique API key.
+The add-on supports more than one tenant provided by i-doit. For each i-doit tenant, you need to configure a unique API key.
 
-For example, you already have created 2 or more tenants in i-doit. Create for each tenant a slightly different configuration file and add each tenants API key to the setting i-doit.key. The setting i-doit.url is always the same but the settings i-doit.username and i-doit.password may differ. For each tenant call idoitcmk and add the option --config:
+For example, you have already created 2 or more tenants in i-doit. Create a slightly different configuration file for each tenant and add the API key of each tenant to the i-doit.key setting. The i-doit.url setting is always the same, but the i-doit.username and i-doit.password settings may differ. For each tenant, you call idoitcmk and add the --config option:
 
 ```shell
 idoitcmk --config tenant1.json
 idoitcmk --config tenant2.json
 ```
 
-You can even mix-up configuration files: One file contains common settings and the others are tenant-specific. For example:
+You can even mix the configuration files: One file contains general settings and the others are tenant-specific. For example:
 
 ```shell
 idoitcmk --config common.js --config tenant1.json
 idoitcmk --config common.js --config tenant2.json
 ```
 
-## Compare host tags between checkmk and i-doit
+## Comparing Host Tags between Checkmk and i-doit
 
-Host tags are grouped in checkmk. This is an example for a tag group with all its tags:
+Host tags are grouped in Checkmk. This is an example of a tag group with all its tags:
 
-```shell
-Internal ID: criticality
-Title: Criticality
-Topic: -
-Choices:
-    1
-        Tag ID: prod
-        Description: Productive system
-    2
-        Tag ID: critical
-        Description: Business critical
-    3
-        Tag ID: test
-        Description: Test system
-    4
-        Tag ID: offline
-        Description: Do not monitor this host
-```
+    Internal ID: criticality
+    Title: Criticality
+    Topic: -
+    Choices:
+        1
+            Tag ID: prod
+            Description: Productive system
+        2
+            Tag ID: critical
+            Description: Business critical
+        3
+            Tag ID: test
+            Description: Test system
+        4
+            Tag ID: offline
+            Description: Do not monitor this host
 
-Via checkmk Web API you receive for the tag prod this key-value pair:
+Via the Checkmk Web API, you get this key-value pair for the tag prod:
 
 ```shell
 tag_criticality: prod
 ```
 
-As you can see, the key of a tag group is prefixed by tag_ followed by its Internal ID, here: criticality. The Tag ID is used as the value.
+As you can see, the key of a tag group is prefixed with tag_, followed by its internal ID, here: criticality. The tag ID is used as the value.
 
-On i-doit side these grouped tags are named static host tags. You find them in **Extras > Check_MK 2 > Tags (static)**. This is the representation of the tag prod mentioned above:
+On the i-doit side, these grouped tags are referred to as static host tags. You can find them under `Extras > Check_MK 2 > Tags (static)`. Here is the representation of the tag prod mentioned above:
 
 ```shell
 Host tag (id): prod
@@ -73,9 +80,9 @@ Host group: criticality
 Description: Criticality
 ```
 
-Here is a direct comparison between checkmk and i-doit:
+Here is a direct comparison between Checkmk and i-doit:
 
-| checkmk     | i-doit        | i-doit key | Example           |
+| Checkmk     | i-doit        | i-doit key | Example          |
 | ----------- | ------------- | ---------- | ----------------- |
 | Internal ID | Host group    | group      | criticality       |
 | Title       | Description   | -          | Criticality       |
@@ -83,30 +90,30 @@ Here is a direct comparison between checkmk and i-doit:
 | Tag ID      | Host tag (ID) | const      | prod              |
 | Description | Display name  | val        | Productive system |
 
-## Self-signed certificates and other problems with TLS connections
+## Self-Signed Certificates and Other TLS Connection Issues
 
-It is common practice to enforce TLS-encrypted HTTPS connections between idoitcmk, i-doit and checkmk - even in firewalled private networks. Often self-signed x.509 certificates are used. That will no problem at all, if you take care of these steps:
+It is common practice to enforce TLS-encrypted HTTPS connections between idoitcmk, i-doit, and Checkmk -- even in private networks with firewalls. Self-signed x.509 certificates are often used in this context. This is no problem at all, as long as you follow these steps:
 
--   The host idoitcmk runs on (precisely: OpenSSL which is used by cURL which is used by PHP) needs to verify the complete certificate chain, especially the root certificate. Therefore, import your root certificate on that host. You should test if everything works by running the status command:
+*   The host running idoitcmk (more specifically: OpenSSL, used by cURL, which in turn is used by PHP) must be able to verify the complete certificate chain, particularly the root certificate. Therefore, import your root certificate on this host. You should test whether everything works by running the status command:
 
 ```shell
 idoitcmk status -v
 ```
 
--   Alternatively, but strictly not recommended just disable this certificate verification. You must disable it for both connections to i-doit and checkmk by adding two new configuration settings. Example:
+*   Alternatively, but not recommended, you can also disable certificate verification. You need to disable it for both connections to i-doit and Checkmk by adding two new configuration settings. Example:
 
 ```shell
 idoitcmk status -v -s "i-doit.bypassSecureConnection=true" -s "check_mk.webAPI.bypassSecureConnection=true"
 ```
 
-Please keep in mind that disabling verification does not protect your setup from man-in-the-middle attacks. This weakens your IT security significantly. You will be warned.
+Please keep in mind that disabling verification does not protect your setup from man-in-the-middle attacks. This significantly weakens your IT security. You have been warned.
 
-## checkmk responds with HTTP status code 2414"
+## Checkmk Responds with HTTP Status Code "414"
 
-Sometimes checkmk responds with HTTP status code 414 URI too long while requesting the hardware/software inventory API. For example, this could happen while executing the command pull:
+Sometimes Checkmk responds with HTTP status code 414 URI too long when requesting the hardware/software inventory API. This could happen, for example, when running the pull command:
 
 ```shell
-idoitcmk pull
+$ idoitcmk pull
 Import inventory data into CMDB
 
 Looking for hosts in checkmk…
@@ -116,10 +123,10 @@ Read hardware/software inventory data for each host…
 Web server responded with HTTP status code "414"
 ```
 
-To prevent this error you should decrease the configuration setting `i-doit.limitBatchRequests`. Default value is 500. A value of 100 should be working.
+To avoid this error, you should decrease the configuration setting `i-doit.liwithBatchRequests`. The default value is 500. A value of 100 should work.
 
-## Duplicated Objects after pulling to i-doit
+## Duplicated Objects After Pulling to i-doit
 
-If the Matching seems not working properly, get sure that the categories "Checkmk Host" and "Checkmk Tags" are assigned to the Object types you pull to i-doit.For this you can use [Edit data structure](../../basics/assignment-of-categories-to-object-types.md)
+If the matching does not seem to work correctly, make sure that the "Checkmk Host" and "Checkmk Tags" categories are assigned to the object types that you are pulling to i-doit. Use [Edit data structure](../../administration/verwaltung/datenstruktur/datenstruktur-bearbeiten.md) for this.
 
-It might also be necessary to reduce the [pull identifiers](./configuration.md) to e.g. hostname.
+It may also be necessary to reduce the [pull identifiers](./konfiguration.md) to, for example, just the hostname.

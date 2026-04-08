@@ -1,6 +1,6 @@
 ---
 title: Attribut-Definition
-description: Attribut-Definition
+description: "Die zentrale Funktion einer CMDB wie i-doit ist das Dokumentieren. Zusammenhängende Datensätze werden hierbei in Kategorien gruppiert."
 icon:
 status:
 lang: de

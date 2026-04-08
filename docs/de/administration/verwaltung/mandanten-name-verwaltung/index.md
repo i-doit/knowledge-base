@@ -1,8 +1,15 @@
+---
+title: "[Mandanten-Name] Verwaltung"
+description: Hier kannst du deine Mandanten verwalten und systembezogene Konfigurationen einsehen.
+icon:
+status:
+lang: de
+---
 # [Mandanten-Name] Verwaltung
 
 Hier kannst du deine Mandanten verwalten und systembezogene Konfigurationen einsehen. Alle Einstellungen lassen sich über `Alles ausklappen` ausklappen und über `Alles einklappen` wieder einklappen.
 
-[![Mandanten übersicht](../../../assets/images/de/administration/verwaltung/mandanten-name-verwaltung/1-mv.png)](../../../assets/images/de/administration/verwaltung/mandanten-name-verwaltung/1-mv.png)
+[![Mandanten übersicht](../../../assets/images/de/administration/mandanten-verwaltung/uebersicht.png)](../../../assets/images/de/administration/mandanten-verwaltung/uebersicht.png)
 
 ## Unterseiten
 

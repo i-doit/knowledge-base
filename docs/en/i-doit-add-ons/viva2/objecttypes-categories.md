@@ -1,110 +1,112 @@
 ---
-title: Object types and categories
-description: The VIVA2 add-on introduces six new object types, all grouped under the "IT-Grundschutz" object type group.
+title: Object Types and Categories
+description: The VIVA2 add-on introduces six new object types, all organized in the object type group "IT-Grundschutz"
+icon:
+status:
 lang: en
 ---
 
-# Object types and categories
+# Object Types and Categories
 
-The VIVA2 add-on introduces six new object types, all grouped under the "IT-Grundschutz" object type group:
+The VIVA2 add-on introduces six new object types, all organized in the object type group "IT-Grundschutz":
 
 ## Module
 
-[![Module](../../assets/images/en/i-doit-add-ons/viva2/objecttypes-categories/module.jpg)](../../assets/images/en/i-doit-add-ons/viva2/objecttypes-categories/module.jpg){:target="_blank"}
+[![Module](../../assets/images/de/i-doit-add-ons/viva2/objecttypes-categories/module.jpg)](../../assets/images/de/i-doit-add-ons/viva2/objecttypes-categories/module.jpg){:target="_blank"}
 
-The "Module" object type represents the modules from the IT-Grundschutz Compendium. In the default configuration, the following categories belong to objects of type Module:
+The object type "Module" represents the modules from the Grundschutz Compendium. In the default configuration, the following categories belong to objects of the Module type:
 
 **Categories**:
 
-- **Access** (i-doit standard category): The access category links the module to the module description on the BSI IT-Grundschutz Compendium website.
-- **Contact assignment** (i-doit standard category): The relevant contacts for the module must be entered here.
-- **File assignment** (i-doit standard category): Additional files can be linked to this module here.
 - **General** (i-doit standard category): Belongs to every object.
-- **Module**: This category contains the textual descriptions of the module from the IT-Grundschutz Compendium, such as number, title, introduction, objective, and scope.
-- **Requirements**: This is a multivalue category that links all requirements belonging to this module.
-- **Target objects/groups**: This is a multivalue category that links all objects to which this module is assigned (either via the "Process modules" category or the "Assigned modules" category).
-- **Threat scenario**: This is a multivalue category that links all threats belonging to this module.
+- **Requirements**: This is a multi-value category in which all requirements linked to this module are listed.
+- **Module**: This category contains the textual descriptions of the module from the Grundschutz Compendium, such as number, title, introduction, objective, and scope.
+- **Files** (i-doit standard category): Here you link additional files to this module.
+- **Threat Landscape**: This is a multi-value category in which all threats linked to this module are listed.
+- **Contact Assignment** (i-doit standard category): Here the corresponding contacts for the module must be entered.
+- **Target Objects/Groups**: This is a multi-value category in which all objects linked to this module are listed (either via the "Process Modules" category or via the "Assigned Modules" category).
+- **Access** (i-doit standard category): Via the access category, the module is linked to the module description on the BSI IT-Grundschutz Compendium website.
 
 ## Requirement
 
-[![Requirement](../../assets/images/en/i-doit-add-ons/viva2/objecttypes-categories/requirement.jpg)](../../assets/images/en/i-doit-add-ons/viva2/objecttypes-categories/requirement.jpg){:target="_blank"}
+[![Requirement](../../assets/images/de/i-doit-add-ons/viva2/objecttypes-categories/requirement.jpg)](../../assets/images/de/i-doit-add-ons/viva2/objecttypes-categories/requirement.jpg){:target="_blank"}
 
-The "Requirement" object type represents the requirements from the modules of the IT-Grundschutz Compendium. In the default configuration, the following categories belong to objects of type Requirement:
+The object type "Requirement" represents the requirements from the modules of the Grundschutz Compendium. In the default configuration, the following categories belong to objects of the Requirement type:
 
 **Categories**:
 
-- **Access** (i-doit standard category): The access category links the requirement to the associated module description on the BSI IT-Grundschutz Compendium website.
 - **General** (i-doit standard category): Belongs to every object.
-- **Modules**: This category links the requirement with the associated module. Although this is a multivalue category, assigning it to multiple modules usually does not make sense.
-- **Requirement**: This category contains the textual descriptions of the requirement from the IT-Grundschutz Compendium, such as number, title, requirement type, and description.
+- **Requirement**: This category contains the textual descriptions of the requirement from the Grundschutz Compendium, such as number, title, requirement type, and description.
+- **Modules**: This category links the requirement with the associated module. Although this is a multi-value category, assigning it to multiple modules usually does not make sense.
+- **Access** (i-doit standard category): Via the access category, the requirement is linked to the corresponding module description on the BSI IT-Grundschutz Compendium website.
 
 ## Threat
 
-[![Threat](../../assets/images/en/i-doit-add-ons/viva2/objecttypes-categories/threat.jpg)](../../assets/images/en/i-doit-add-ons/viva2/objecttypes-categories/threat.jpg){:target="_blank"}
+[![Threat](../../assets/images/de/i-doit-add-ons/viva2/objecttypes-categories/threat.jpg)](../../assets/images/de/i-doit-add-ons/viva2/objecttypes-categories/threat.jpg){:target="_blank"}
 
-The "Threat" object type represents the threats from the modules of the IT-Grundschutz Compendium. In the default configuration, the following categories belong to objects of type Threat:
+The object type "Threat" represents the threats from the modules of the Grundschutz Compendium. In the default configuration, the following categories belong to objects of the Threat type:
 
-- **Access** (i-doit standard category): The access category links the threat to the associated module description on the BSI IT-Grundschutz Compendium website.
 - **General** (i-doit standard category): Belongs to every object.
-- **Modules**: This multivalue category links the threat with the associated modules.
-- **Threat**: This category contains the textual descriptions of the threat from the IT-Grundschutz Compendium, such as number (only for elemental threats), title, and description.
+- **Modules**: This multi-value category links the threat with the associated modules.
+- **Threat**: This category contains the textual descriptions of the threat from the Grundschutz Compendium, such as number (only for elementary threats), title, and description.
+- **Access** (i-doit standard category): Via the access category, the threat is linked to the corresponding module description on the BSI IT-Grundschutz Compendium website.
 
-## Scope
+## Information Domain
 
-[![Scope](../../assets/images/en/i-doit-add-ons/viva2/objecttypes-categories/scope.jpg)](../../assets/images/en/i-doit-add-ons/viva2/objecttypes-categories/scope.jpg){:target="_blank"}
+[![Information Domain](../../assets/images/de/i-doit-add-ons/viva2/objecttypes-categories/scope.jpg)](../../assets/images/de/i-doit-add-ons/viva2/objecttypes-categories/scope.jpg){:target="_blank"}
 
-For each Scope, there is exactly one object of type "Scope". Typically, there is only one Scope object, but the VIVA2 add-on also allows documenting multiple Scopes. In the default configuration, the following categories belong to objects of type Scope:
+For each information domain, there is exactly one object of the type "Information Domain". Typically, there is only one Information Domain object, but the VIVA2 add-on also offers the possibility to document multiple information domains. In the default configuration, the following categories belong to objects of the Information Domain type:
 
 **Categories**:
 
-- **Contact assignment** (i-doit standard category): The relevant roles for the entire Scope must be entered here, especially the information security officer (ISB).
 - **General** (i-doit standard category): Belongs to every object.
-- **IT-Grundschutz (Scope)**: This is a category group that includes the following four categories:
-  - **Scope**: The basic information for the Scope is documented here, such as the cleaned network diagram and the information security policy.
-  - **Infrastructure analysis**: This multivalue category shows all objects linked directly to this Scope via the reverse category "Scopes". See [Structural analysis](structural-analysis.md) for more.
-  - **IT-Grundschutz Check**: The overview page shows all requirements assigned via modules, sorted by module and requirement number. See [IT-Grundschutz check](it-grundschutz-check.md) for more.
-  - **Process modules**: Assign the process modules that apply to the entire Scope here. From a technical perspective, system modules can also be assigned, but in general these are assigned to the respective target objects or target object groups. See [Structural analysis](structural-analysis.md) for more.
+- **IT-Grundschutz (Information Domain)**: This is a category group containing the following four categories:
+  Information Domain: Here the basic information about the information domain is documented, such as the cleaned network plan and the information security policy.
+  - **Infrastructure Analysis**: This multi-value category shows all objects directly linked to this information domain via the reverse category "Information Domains". You can find more details under [Structural Analysis](structural-analysis.md).
+  - **IT-Grundschutz Check**: The overview page shows all requirements assigned through modules, sorted by module and requirement number. You can find more details under [IT-Grundschutz Check](it-grundschutz-check.md).
+  - **Process Modules**: Here you assign the process modules that apply to the entire information domain. Technically, you can also assign system modules, but these are usually assigned to the respective target objects or target object groups. You can find more details under [Structural Analysis](structural-analysis.md).
+- **Contact Assignment**: (i-doit standard category) Here the corresponding roles for the complete information domain must be entered, above all the Information Security Officer (ISO).
 
 **Reports**:
 
-- **Applications without installation**: This variable report shows all applications that are not installed on any machine (according to the documentation in i-doit). It checks all applications that are either directly assigned to this Scope or are members of a target object group assigned to this Scope.
-- **IT-Grundschutz check**: This variable report shows all requirements and their implementation status that are assigned to this Scope via modules. It considers not only the requirements from directly assigned modules, but also those from modules assigned to the assigned target objects/target object groups.
-- **Physical hardware without location**: This variable report shows all objects that have the "Location" category assigned but not maintained. It checks all objects that are either directly assigned to this Scope or are members of a target object group assigned to this Scope.
-- **Rooms without buildings**: This variable report shows all rooms where the location category is not maintained or the location object has no address entered. It checks all rooms that are either directly assigned to this Scope or are members of a target object group assigned to this Scope.
-- **Rooms without room number**: This variable report shows all rooms where no room number is entered. It checks all rooms that are either directly assigned to this Scope or are members of a target object group assigned to this Scope.
-- **Covered by Scope**: This variable report shows all objects that are either directly assigned to this Scope or are members of a target object group assigned to this Scope.
+- **Applications without installation**: This variable report shows all applications that are not installed on any machine (according to documentation in i-doit). All applications are checked that are either directly assigned to this information domain or are members of a target object group assigned to this information domain.
+- **IT-Grundschutz Check**: This variable report shows all requirements and their implementation status that are assigned to this information domain via modules. It considers not only the requirements from directly assigned modules, but also those from modules assigned to the assigned target objects/target object groups.
+- **Physical Hardware without Location**: This variable report shows all objects that have the "Location" category assigned but not maintained. All objects are checked that are either directly assigned to this information domain or are members of a target object group assigned to this information domain.
+- **Rooms without Building**: This variable report shows all rooms where the location category is not maintained or where the location object has no address entered. All rooms are checked that are either directly assigned to this information domain or are members of a target object group assigned to this information domain.
+- **Rooms without Room Number**: This variable report shows all rooms where no room number is entered. All rooms are checked that are either directly assigned to this information domain or are members of a target object group assigned to this information domain.
+- **Covered by Information Domain**: This variable report shows all objects that are either directly assigned to this information domain or are members of a target object group assigned to this information domain.
 
-## Target object group
+## Target Object Group
 
-[![Target object group](../../assets/images/en/i-doit-add-ons/viva2/objecttypes-categories/targetgroup.jpg)](../../assets/images/en/i-doit-add-ons/viva2/objecttypes-categories/targetgroup.jpg){:target="_blank"}
+[![Target Object Group](../../assets/images/de/i-doit-add-ons/viva2/objecttypes-categories/targetgroup.jpg)](../../assets/images/de/i-doit-add-ons/viva2/objecttypes-categories/targetgroup.jpg){:target="_blank"}
 
-As part of the structural analysis, "similar" target objects should be grouped to reduce complexity. The target object group object type represents this grouping. In the default configuration, the following categories belong to objects of type Target object group:
+As part of the structural analysis, "similar" target objects should be grouped to reduce complexity. The Target Object Group object type serves to represent this grouping of target objects. In the default configuration, the following categories belong to objects of the Target Object Group type:
 
 **Categories**:
 
-- **Contact assignment (i-doit standard category)**: The relevant contacts or other roles for this target object group can be entered here.
 - **General (i-doit standard category)**: Belongs to every object.
-- **IT-Grundschutz (target objects)**: This is a category group that includes the following seven categories:
-  - **Scopes**: This multivalue category shows all Scopes to which this target object group is assigned (via the reverse category "Infrastructure analysis"). Even though it is technically possible to assign the target object group to multiple Scopes, it should generally be assigned to only one Scope. See [Structural analysis](structural-analysis.md) for more.
-  - **IT-Grundschutz check**: The overview page shows all requirements assigned via modules, sorted by module and requirement number. See [IT-Grundschutz check](it-grundschutz-check.md) for more.
-  - **Classification of information**: This is where information classification is recorded, which according to BSI Standard 200-2 is part of the documentation of the security process.
-  - **Protection needs assessment**: The protection needs for this object or object group can be defined and justified here in the defined basic values. See [Protection needs assessment](assessment-of-protection.md) for more.
-  - **Assigned modules**: Assign the modules that should apply to this object or object group here. Typically system modules are assigned, but you can also assign process modules if there are deviations for this object or object group from the process modules assigned at the Scope. See [Structural analysis](structural-analysis.md) for more.
-  - **Assigned requirements**: This is a virtual category that shows all requirements assigned via the assigned modules.
-  - **Assigned threats**: This is a virtual category that shows all threats assigned via the assigned modules.
-- **Object group (i-doit standard category)**: Defines which objects are assigned to this target object group. Note that the type must be set to "static" for the reports to work.
+- **IT-Grundschutz (Target Objects)**: This is a category group containing the following seven categories:
+- **Information Domains**: This multi-value category shows all information domains to which this target object group is assigned (via the reverse category "Infrastructure Analysis"). Although you can technically assign the target object group to multiple information domains, you should usually assign it to only one information domain. You can find more details under [Structural Analysis](structural-analysis.md).
+- **IT-Grundschutz Check**: The overview page shows all requirements assigned through modules, sorted by module and requirement number. You can find more details under [IT-Grundschutz Check](it-grundschutz-check.md).
+- **Classification of Information**: Here the classification of information can be performed, which according to BSI default 200-2 is part of the documentation of the security process.
+- **Protection Needs Assessment**: Here the protection needs for this object or object group can be defined and justified according to the defined basic values. You can find more details under [Protection Needs Assessment](assessment-of-protection.md).
+- **Assigned Modules**: Here you assign the modules that should apply to this object or object group. Usually, system modules are assigned here, but it is also possible to assign process modules if there are deviations from the process modules assigned in the information domain for this object or object group. You can find more details under [Structural Analysis](structural-analysis.md).
+- **Assigned Requirements**: This is a virtual category that shows all requirements assigned through the assigned modules.
+- **Assigned Threats**: This is a virtual category that shows all threats assigned through the assigned modules.
+- **Contact Assignment (i-doit standard category)**: Here you enter the corresponding contacts or other roles for this target object group.
+- **Object Group (i-doit standard category)**: Here it is defined which objects are assigned to this target object group. Please note that the type must be set to "static" for the reports to function properly.
 
-## Communication link
+## Communication Link
 
-[![Communication link](../../assets/images/en/i-doit-add-ons/viva2/objecttypes-categories/communication_link.jpg)](../../assets/images/en/i-doit-add-ons/viva2/objecttypes-categories/communication_link.jpg){:target="_blank"}
+[![Communication Link](../../assets/images/de/i-doit-add-ons/viva2/objecttypes-categories/communication_link.jpg)](../../assets/images/de/i-doit-add-ons/viva2/objecttypes-categories/communication_link.jpg){:target="_blank"}
 
-The "Communication link" object type is used to document communication links relevant to the Scope. In the default configuration, the following categories belong to objects of type Communication link:
+The object type "Communication Link" serves to document the communication links relevant to the information domain. In the default configuration, the following categories belong to objects of the Communication Link type:
 
 **Categories**:
 
-- **Contact assignment (i-doit standard category)**: The main contacts for the communication link should be documented here.
 - **General** (i-doit standard category): Belongs to every object.
-- **IT-Grundschutz (target objects)**: This category grouping is used for assignment to the Scope, protection needs assessment, module assignment, and the IT-Grundschutz check (see target object group for a more detailed description).
-- **Communication link**: Document which objects or object groups use this communication link. The protection needs from these objects are inherited (using the maximum principle) to the communication link. You can also link the network diagram with the communication link highlighted for illustration.
+- **IT-Grundschutz (Target Objects)**: This category group serves for assignment to the information domain, protection needs assessment, assignment of modules, and the IT-Grundschutz check (see Target Object Group for a more detailed description).
+- **Communication Link**: Here it can be documented which objects or object groups use this communication link. The protection needs are then inherited from these objects (according to the maximum principle) to the communication link. Additionally, the network plan with the highlighted communication link can be linked for illustration purposes.
+- **Contact Assignment (i-doit standard category)**: Here the main contacts for the communication link should be documented.
 
-[<- Back](it-grundschutz-profiles.md){ .md-button } · [Structural analysis ->](structural-analysis.md){ .md-button .md-button--primary }
+[<- Back](it-grundschutz-profiles.md){ .md-button } · [Structural Analysis ->](structural-analysis.md){ .md-button .md-button--primary }

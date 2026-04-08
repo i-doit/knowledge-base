@@ -1,6 +1,6 @@
 ---
 title: Systemeinstellungen
-description: Systemeinstellungen
+description: "Für die Konfiguration des Betriebssystems empfehlen wir eine Reihe von Einstellungen bezogen auf PHP, Apache Webserver und MySQL/MariaDB."
 icon: material/wrench-cog
 status:
 lang: de

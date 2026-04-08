@@ -1,6 +1,6 @@
 ---
 title: Routing in i-doit
-description: Routing in i-doit
+description: "In diesem Artikel wird darauf eingegangen, wie das i-doit-interne routing funktioniert und wir damit eine eigene GUI realisieren können."
 icon:
 status:
 lang: de

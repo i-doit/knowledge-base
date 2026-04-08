@@ -1,3 +1,10 @@
+---
+title: Komplexe Reports
+description: "Im Report Manager lassen sich über den Abfrage-Editor bereits viele, nützliche Reports generieren."
+icon:
+status:
+lang: de
+---
 # Komplexe Reports
 
 Im Report Manager lassen sich über den Abfrage-Editor bereits viele, nützliche Reports generieren. Für komplexere Fälle kann das dahinter liegende SQL bearbeitet werden. Hierbei lassen sich MySQL-/MariaDB-eigene Funktionen nutzen, um beispielsweise Zeitintervalle abzufragen.

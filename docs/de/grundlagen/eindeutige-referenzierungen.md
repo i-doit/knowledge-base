@@ -1,6 +1,13 @@
+---
+title: Eindeutige Referenzierungen
+description: "Eindeutige Referenzierungen ermöglichen dir, jedes Objekt in der IT-Dokumentation zweifelsfrei zu identifizieren -- sei es innerhalb von i-doit oder für..."
+icon:
+status:
+lang: de
+---
 # Eindeutige Referenzierungen
 
-Referenzierungen sind wichtig, um innerhalb der [IT-Dokumentation](../glossar.md) Eindeutigkeiten zu schaffen. Sollen beispielsweise [Objekte](struktur-it-dokumentation.md) für Drittsysteme referenziert werden, bieten sich verschiedene [Attribute](struktur-it-dokumentation.md) an.
+Eindeutige Referenzierungen ermöglichen dir, jedes [Objekt](struktur-it-dokumentation.md) in der [IT-Dokumentation](../glossar.md) zweifelsfrei zu identifizieren -- sei es innerhalb von i-doit oder für die Anbindung an Drittsysteme. Dafür stehen dir verschiedene [Attribute](struktur-it-dokumentation.md) zur Verfügung.
 
 !!! info "Datenimporte"
     Um bereits bestehende Daten zu erkennen, existieren für die [Datenimporte](../daten-konsolidieren/index.md) entsprechende Strategien. Diese beziehen sich größtenteils auf die nachfolgend erwähnten Attribute. Details sind den jeweiligen Artikeln zu entnehmen.
@@ -23,15 +30,15 @@ Objekt-IDs werden vor allem zu internen Zwecken verwendet, können aber auch dem
 
 ## SYS-ID
 
-Das Attribut **SYS-ID** ermöglicht keine eindeutige Referenzierung, wenn automatisierte Importe verwendet werden. Für die **SYS-ID** wird beim Anlegen eines neuen Objekts eine mindestens 10-stellige, positive Zahl generiert, die sich aus dem [UNIX-Timestamp](https://de.wikipedia.org/wiki/Unixzeit) ableitet. Dargestellt wird sie in der Kategorie **Allgemein**. Synonym wird auch **SYSID** ohne Bindestrich verwendet.
+Die **SYS-ID** (auch **SYSID** ohne Bindestrich) ist ein weiteres Identifikationsmerkmal, eignet sich aber nicht zuverlässig für eindeutige Referenzierung bei automatisierten Importen. Beim Anlegen eines neuen Objekts generiert i-doit eine mindestens 10-stellige, positive Zahl, die sich aus dem [UNIX-Timestamp](https://de.wikipedia.org/wiki/Unixzeit) ableitet. Du findest sie in der Kategorie **Allgemein**.
 
 [![sysid](../assets/images/de/grundlagen/eindeutige-referenzierungen/2-er.png)](../assets/images/de/grundlagen/eindeutige-referenzierungen/2-er.png)
 
-Pro [Objekttyp](struktur-it-dokumentation.md) kann ein Präfix angegeben werden, der der automatisch generierten Zahl voran gestellt wird. Konfiguriert wird der Präfix unter **Verwaltung → Datenstruktur  → Objekttypen → [Objekttyp gruppe] → [Objekttyp] → SYSID Präfix**. Wird dort nichts angegeben, beginnt eine SYS-ID mit dem Präfix SYSID_. Durch die Angabe eines alternativen Präfixes ändert sich die Generierung der Zahl: Statt des UNIX-Timestamps wird die Objekt-ID verwendet.
+Pro [Objekttyp](struktur-it-dokumentation.md) kannst du ein Präfix angeben, das der automatisch generierten Zahl vorangestellt wird. Du konfigurierst den Präfix unter **Verwaltung → Datenstruktur → Objekttypen → [Objekttyp gruppe] → [Objekttyp] → SYSID Präfix**. Ohne Angabe beginnt eine SYS-ID mit dem Präfix SYSID_. Gibst du ein alternatives Präfix an, ändert sich die Generierung: Statt des UNIX-Timestamps verwendet i-doit die Objekt-ID.
 
 [![sysid-präfix](../assets/images/de/grundlagen/eindeutige-referenzierungen/3-er.png)](../assets/images/de/grundlagen/eindeutige-referenzierungen/3-er.png)
 
-Standardmäßig ist die SYS-ID vom Benutzer nachträglich nicht veränderbar. Sollen Änderungen möglich sein, wird dies unter **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name] → CMDB → SYS-ID readonly** aktiviert.
+Standardmäßig kannst du die SYS-ID nachträglich nicht verändern. Möchtest du Änderungen ermöglichen, aktiviere dies unter **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name] → CMDB → SYS-ID readonly**.
 
 ## Objekt-Titel
 
@@ -68,9 +75,9 @@ MAC-Adressen sind in der Regel weltweit eindeutig, weil sie von den Herstellern 
 
 ## Inventarnummer
 
-Die Inventarisierung von Eigentümern erfolgt meist Organisations-übergreifend, ist also kein rein IT-bezogenes Thema (Asset Management). Jedes materielle Gut, das im Fokus der Inventarisierung steht, erhält eine eindeutige Nummer. Diese Nummer lässt sich in i-doit Objekt dokumentieren - und zwar in der Kategorie **Buchhaltung** im Attribut **Inventarnummer**.
+Die Inventarnummer dient der organisationsübergreifenden Inventarisierung (Asset Management). Jedes materielle Gut erhält eine eindeutige Nummer. In i-doit dokumentierst du diese in der Kategorie **Buchhaltung** im Attribut **Inventarnummer**.
 
-Wenn Inventarnummern automatisch generiert werden sollen, kann dies unter **Verwaltung → Datenstruktur → Objekttypen → [Objekttyp gruppe] → [Objekttyp]** konfiguriert werden. Hierbei stehen verschiedene Platzhalter zur Verfügung, um ein Namensschema pro Objekttyp zu erzeugen.
+Möchtest du Inventarnummern automatisch generieren, konfiguriere dies unter **Verwaltung → Datenstruktur → Objekttypen → [Objekttyp gruppe] → [Objekttyp]**. Dort stehen verschiedene Platzhalter zur Verfügung, um ein Namensschema pro Objekttyp zu erzeugen.
 
 [![Inventarnummer](../assets/images/de/grundlagen/eindeutige-referenzierungen/7-er.png)](../assets/images/de/grundlagen/eindeutige-referenzierungen/7-er.png)
 
@@ -85,9 +92,9 @@ Daten aus Dritt-Systemen, beispielsweise aus den Bereichen Inventory/Discovery, 
 
 ## Konstanten
 
-Intern arbeitet i-doit mit Konstanten, die allerlei Datensätze eindeutig referenzieren. Eine Konstante besteht aus Großbuchstaben (A-Z) und Unterstrichen (_). Bei einigen Objekten, die in i-doit bereits bei der Standard-Installation mitgeliefert werden, sind solche Konstanten vergeben. Beispielsweise erhält das **Personen**-Objekt "admin" die Konstante C__OBJ__PERSON_ADMIN.
+i-doit arbeitet intern mit Konstanten, um Datensätze eindeutig zu referenzieren. Eine Konstante besteht aus Großbuchstaben (A-Z) und Unterstrichen (_). Einige Objekte aus der Standard-Installation haben bereits Konstanten zugewiesen -- beispielsweise hat das **Personen**-Objekt "admin" die Konstante C__OBJ__PERSON_ADMIN.
 
-In der Web GUI lassen sich diese Konstanten nicht betrachten, geschweige denn editieren. Daher geschieht dies in SQL auf der Datenbank. Jeder Mandant hat eine separate Datenbank, in der die Tabelle isys_obj existiert. Dort werden alle Objekte gespeichert. Die Spalte für die Konstante heißt `isys_obj__const`.
+In der Web GUI kannst du diese Konstanten weder betrachten noch editieren. Der Zugriff erfolgt per SQL auf der Datenbank. Jeder Mandant hat eine separate Datenbank mit der Tabelle isys_obj, in der alle Objekte gespeichert sind. Die Spalte für die Konstante heißt `isys_obj__const`.
 
 !!! attention "Datenbank-Manipulation"
     Manipulationen an der Datenbank gefährden die Funktionalität von i-doit. Daher können wir bei Fehlern, die auf eigenständige Manipulationen zurückzuführen sind, keine Gewährleistung übernehmen. Jede Aktivität sollte daher wohlüberlegt und ggf. mit uns abgestimmt sein.

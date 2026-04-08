@@ -1,3 +1,10 @@
+---
+title: Release Notes 23
+description: "We're happy to announce i-doit 23."
+icon:
+status:
+lang: de
+---
 We're happy to announce i-doit 23. As usual, we prepared a bunch of bugfixes to improve the experience when using i-doit and create your documentation. Additionally, new features are added alongside. We encourage you to update to this release as soon as possible.
 
 ## Highlights in this release

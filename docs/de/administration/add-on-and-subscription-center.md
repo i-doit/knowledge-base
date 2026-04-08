@@ -1,6 +1,6 @@
 ---
 title: Add-on & Subscription Center
-description: Add-on & Subscription Center
+description: "Das Add-on & Subscription Center ist die zentrale Anlaufstelle, um Add-ons in i-doit zu verwalten."
 icon: add-on-and-subscription-center
 status:
 lang: de
@@ -8,11 +8,16 @@ lang: de
 
 # Add-on & Subscription Center
 
-Add-on & Subscription Center ermöglicht die umfassende Verwaltung von Add-ons. Benutzer können Add-ons **installieren**, **aktualisieren** und **deinstallieren**, wobei spezifische Berechtigungen erforderlich sind, um diese Aktionen durchzuführen. Die Funktion bietet zudem eine Übersicht über die aktuellen und neuesten Versionen der installierten Add-ons sowie Informationen zu den erforderlichen i-doit-Versionen für jede Add-on-Version. Wir stellen dir kommerzielle Infos bereit, damit du weißt, was die einzelnen Add-ons kosten oder welche Lizenzanforderungen es gibt.
+Das Add-on & Subscription Center ist die zentrale Anlaufstelle, um Add-ons in i-doit zu verwalten. Du kannst Add-ons **installieren**, **aktualisieren** und **deinstallieren** -- vorausgesetzt, du besitzt die entsprechenden Berechtigungen.
 
-!!! info "**Um die Seite Add-on & Subscription Center aufzurufen, darf die Lizenz nur einen Mandanten umfassen. Außerdem ist eine Verbindung <https:center.i-doit.com></https:center.i-doit.com> notwendig.**"
+Außerdem siehst du hier auf einen Blick, welche Versionen installiert sind, ob Updates verfügbar sind und welche i-doit-Version ein Add-on mindestens voraussetzt. Auch kommerzielle Informationen wie Preise und Lizenzanforderungen findest du hier.
 
-Die Seite kann über die Login Seite des Admin-Center aufgerufen werden. Zusätzlich lässt sich die Seite auch aufrufen, wenn man in i-doit auf den Avatar klickt und Add-on & Subscription Center auswählt.
+!!! info "Um das Add-on & Subscription Center aufzurufen, darf die Lizenz nur einen Mandanten umfassen. Außerdem ist eine Verbindung zu <https://center.i-doit.com> notwendig."
+
+Du erreichst das Center auf zwei Wegen:
+
+-   Über die Login-Seite des Admin-Centers
+-   Innerhalb von i-doit über den Avatar-Klick und den Menüeintrag **Add-on & Subscription Center**
 
 [![Add-on & Subscription Center](../assets/images/de/administration/add-on-and-subscription-center/asc-1.png)](../assets/images/de/administration/add-on-and-subscription-center/asc-1.png)
 
@@ -51,7 +56,7 @@ Auf dieser Seite gibt es die Möglichkeit **Hilfe** zu erhalten. Es werden Links
 
 [![Help](../assets/images/de/administration/add-on-and-subscription-center/asc-5.png)](../assets/images/de/administration/add-on-and-subscription-center/asc-5.png)
 
-Wenn kein Support Paket gekauft wurde erscheint diese Seite und Support Ticket müssen das Help Center <help.i-doit.com></help.i-doit.com> oder via <help@i-doit.com> eröffnet werden.
+Wenn du kein Support-Paket gekauft hast, erscheint stattdessen diese Seite. Support-Tickets erstellst du dann über das Help Center unter <https://help.i-doit.com> oder per E-Mail an <help@i-doit.com>.
 
 [![Help](../assets/images/de/administration/add-on-and-subscription-center/asc-5-1.png)](../assets/images/de/administration/add-on-and-subscription-center/asc-5-1.png)
 

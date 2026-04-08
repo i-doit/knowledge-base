@@ -1,18 +1,18 @@
 ---
 title: Upgrade zu MySQL 5.6 oder MariaDB 10.0
-description: Upgrade zu MySQL 5.6 oder MariaDB 10.0
+description: "Ab i-doit Version 1.7 benötigst du mindestens MySQL 5.6 oder MariaDB 10.0 (vorher: MySQL 5.5 / MariaDB 5.5)."
 icon: fontawesome/brands/linux
 status:
 lang: de
 ---
 
-Ab der Version 1.7 von _i-doit_ ändern sich die [Systemvoraussetzungen](../installation/systemvoraussetzungen.md) für das Datenbank-Backend. Wurde in der Version 1.6 noch mindestens MySQL 5.5 oder MariaDB 5.5 vorausgesetzt, sind es ab Version 1.7 mindestens MySQL 5.6 oder MariaDB 10.0. Dies bedingt unter Umständen Änderungen an denjenigen [Betriebssystemen](../installation/manuelle-installation/index.md), die von synetics unterstützt werden. Dieser Artikel beschreibt die wichtigsten Details, damit _i-doit_ auch weiterhin vollständig funktioniert.
+Ab i-doit Version 1.7 benötigst du mindestens **MySQL 5.6** oder **MariaDB 10.0** (vorher: MySQL 5.5 / MariaDB 5.5). Dieser Artikel beschreibt die Upgrade-Schritte für die verschiedenen [unterstützten Betriebssysteme](../installation/manuelle-installation/index.md).
 
-Um festzustellen, welche Version im Einsatz ist, kann man folgenden Befehl auf der Kommandozeile ausführen (funktioniert sowohl mit MySQL, als auch MariaDB):
+Prüfe deine aktuelle Version:
 
     mysql --version
 
-Es existieren pro Betriebssystem teilweise mehrere Upgrade-Pfade. Wir empfehlen daher diejenigen, die aus unserer Sicht den geringsten Einfluss auf das System haben:
+Die folgende Tabelle zeigt die empfohlenen Upgrade-Pfade je Betriebssystem:
 
 | Betriebssystem                      | Version   | Altes Datenbank-Backend           | Neues Datenbank-Backend |
 | ----------------------------------- | --------- | --------------------------------- | ----------------------- |

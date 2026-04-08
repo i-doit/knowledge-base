@@ -8,56 +8,58 @@ lang: en
 
 # Forms
 
-With this add-on you can create forms that you can send to other employees to fill in. This add-on can create a form that, for example, helps new employees document computers in your company.
+With the Forms Add-on you create forms and send them via link to employees for filling out. New colleagues can thus document, for example, computers in the company without needing to know the entire i-doit interface.
 
-When entering new objects, it is often the case that several categories are displayed, but only individual fields from each category need to be maintained. In this case it is easier for the user (especially if they are new colleagues) if only the attributes that actually need to be filled in are displayed.
+The advantage: Instead of all categories with all fields, you only show the attributes that actually need to be filled out.
 
-We have also a [Blog article](https://www.i-doit.com/en/blog/the-new-i-doit-pro-forms-add-on/) with a lot of Information.
+More about this can be found in our [Blog](https://www.i-doit.com/blog/das-new-i-doit-pro-forms-add-on/) and in the [Video](https://www.youtube.com/watch?v=3jpzrK_cR0M).
 
-[![Overview](../../assets/images/en/i-doit-add-ons/forms/1-forms.png)](../../assets/images/en/i-doit-add-ons/forms/1-forms.png)
+!!! info "The Forms Add-on is currently provided in English. Translations originating from i-doit are also translated into German."
+
+[![Forms view](../../assets/images/de/i-doit-add-ons/forms/1-forms.png)](../../assets/images/de/i-doit-add-ons/forms/1-forms.png)
 
 ## Requirements
 
 The Forms add-on requires:
 
-*   i-doit Version **\>=23**
+*   i-doit Version **\>= v23**
 *   MongoDB Server Version **\>=8**
-*   NodeJS Version **\>=22.x**
+*   NodeJS Version **\>= v22.x**
 
-Also the system requirements of [MongoDB](https://docs.mongodb.com/manual/administration/production-notes/#mongodb-binaries) must be observed. Also, MongoDB has a [checklist for use in operations](https://docs.mongodb.com/manual/administration/production-checklist-operations/#operations-checklist).
+The system requirements of [MongoDB](https://docs.mongodb.com/manual/administration/production-notes/#mongodb-binaries) must be observed. Furthermore, MongoDB provides a [checklist for production deployment](https://docs.mongodb.com/manual/administration/production-checklist-operations/#operations-checklist).
 
-[NodeJS](https://nodejs.org/en/download/current/) has its dependencies documented [here](https://nodejs.org/en/docs/).
+[NodeJS](https://nodejs.org/en/download/current/) has its [dependencies documented here](https://nodejs.org/en/docs/).
 
 ## Installation
 
-The following steps are necessary to use the add-on:
+To install the add-on:
 
-*   Installing the Forms add-on via the [Admin-Center](../../system-administration/admin-center.md)
-*   [MongoDB Server **v8**](https://docs.mongodb.com/manual/installation/) installation
-*   then [NodeJS **v22**](https://nodejs.org/en/download/current/) via [nvm Package Manager](https://nodejs.org/en/download/package-manager/) installed
-*   the Form backend configured
-*   and i-doit configured
+1. Install the Forms Add-on via the [Admin Center](../../administration/admin-center.md).
+2. Install [MongoDB Server **v8**](https://docs.mongodb.com/manual/installation/).
+3. Install [NodeJS **v22**](https://nodejs.org/en/download/current/) via the [nvm Package Manager](https://github.com/nvm-sh/nvm).
+4. Configure the Forms backend.
+5. Configure i-doit.
 
-[Continue to the installation of the Forms add-on](install-forms-addon.md){ .md-button .md-button--primary }
+[Continue to the Forms Add-on installation](forms-installation.md){ .md-button .md-button--primary }
 
-## Assignment of rights
+## Assigning rights
 
-In order for users to be able to create forms, it is necessary to assign appropriate rights. This is possible in the i-doit administration under Authorization System > Rights > Forms, if the add-on is installed.
+For users to be able to create forms, assign the corresponding [permissions](../../effizientes-dokumentieren/rechteverwaltung/index.md) under **Administration → Authorization system → Rights → Forms**.
 
-[![Assignment of rights](../../assets/images/en/i-doit-add-ons/forms/2-forms.png)](../../assets/images/en/i-doit-add-ons/forms/2-forms.png)
+[![Permission assignment](../../assets/images/de/i-doit-add-ons/forms/2-forms.png)](../../assets/images/de/i-doit-add-ons/forms/2-forms.png)
 
-!!! attention "Clear cache for the rights system"
-    After the rights have been assigned or changed, it is necessary to clear the [cache](../../system-administration/administration/tenant-management/repair-and-clean-up.md) in the i-doit [administration](../../system-administration/administration/index.md) at **Administration → [Tenant-Name] Management → Repair and clean up** so that the changes are adopted by the system.
+!!! attention "Clear the authorization system cache"
+    After you have assigned or changed the permissions, clear the [cache](../../administration/verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md) in the i-doit [administration](../../administration/verwaltung/index.md) under **Administration > [tenant-name] Administration > System repair and cleanup**, so that the changes are applied by the system.
 
-## Calling the add-on
+## Accessing the add-on
 
-Once all preparations have been completed, the add-on can be accessed via **Add-ons → Forms**. The view of the "Add-ons" menu may differ due to different rights and/or other installed add-ons.
+After completing all preparations, you can access the add-on under **Add-ons → Forms**.
 
-## Using Forms Add-on API
+## Using the API
 
-This document contains a rudimentary description of the Forms API.
+This document contains a basic description of the Forms API.
 
-!!! info "[Using the Forms API](using-forms-api.md)"
+!!! info "[Using the Forms API](verwenden-der-forms-api.md)"
 
 ## Releases
 

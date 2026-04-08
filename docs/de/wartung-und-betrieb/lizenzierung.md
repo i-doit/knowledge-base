@@ -11,7 +11,7 @@ Die Lizenzierung von i-doit und Add-ons erfolgt über einen license Token. Der l
 
 * * *
 
-## Wie erhalte ich den lizenz Token und die offline Lizenz?
+## Wie erhalte ich den Lizenz Token und die offline Lizenz?
 
 !!! hint "Wenn du i-doit evaluierst, kontaktiere uns bitte über [help.i-doit.com](https://help.i-doit.com){: target="_blank" } oder <mailto:help@i-doit.com>, um die **offline License** zu erhalten"
 
@@ -25,7 +25,7 @@ Der **license Token** wird per E-Mail zugeschickt. Die **offline License** wird 
 -   [Wie ändere oder aktualisiere ich den i-doit license Token, wenn i-doit **Zugriff auf das Internet hat**?](#wie-andere-oder-aktualisiere-ich-den-i-doit-license-token-online)
 -   [Wie ändere oder aktualisiere ich den i-doit license Token, wenn i-doit **keinen Zugriff auf das Internet hat**?](#wie-andere-oder-aktualisiere-ich-den-i-doit-license-token-offline)
 
--   [Häufig gestellte fragen](#faq)
+-   [Häufig gestellte Fragen](#faq)
 
 * * *
 
@@ -33,9 +33,9 @@ Der **license Token** wird per E-Mail zugeschickt. Die **offline License** wird 
 
 <div class="steps" markdown>
 
-1. Rufe die i-doit Installation über den Browser auf und logge dich mit den standard Benutzerdaten ein. Infos unter [Erstanmeldung](../grundlagen/erstanmeldung.md)
+1. Rufe die i-doit Installation über den Browser auf und logge dich mit den Standard-Benutzerdaten ein. Infos unter [Erstanmeldung](../grundlagen/erstanmeldung.md)
 
-2. Nach dem Login erscheint ein Popup Fenster, dort wird der license Token eingetragen, der per E-Mail erhalten wurde.
+2. Nach dem Login erscheint ein Popup-Fenster, dort wird der license Token eingetragen, der per E-Mail erhalten wurde.
 
     [![Eval Token popup](../assets/images/de/wartung-und-betrieb/lizenzierung/eval-license-popup-online.png)](../assets/images/de/wartung-und-betrieb/lizenzierung/eval-license-popup-online.png)
 
@@ -47,9 +47,9 @@ Der **license Token** wird per E-Mail zugeschickt. Die **offline License** wird 
 
 <div class="steps" markdown>
 
-1. Rufe die i-doit Installation über den Browser auf und logge dich mit den standard Benutzerdaten ein. Infos unter [Erstanmeldung](../grundlagen/erstanmeldung.md)
+1. Rufe die i-doit Installation über den Browser auf und logge dich mit den Standard-Benutzerdaten ein. Infos unter [Erstanmeldung](../grundlagen/erstanmeldung.md)
 
-2. Nach dem Login erscheint ein Popup Fenster, dort wird der license Token eingetragen, der per E-Mail erhalten wurde.
+2. Nach dem Login erscheint ein Popup-Fenster, dort wird der license Token eingetragen, der per E-Mail erhalten wurde.
     [![Eval Token popup](../assets/images/de/wartung-und-betrieb/lizenzierung/eval-license-popup-online.png)](../assets/images/de/wartung-und-betrieb/lizenzierung/eval-license-popup-online.png)
 
 3. Nach kurzer Zeit erkennt i-doit, dass keine Internetverbindung verfügbar ist und fordert zusätzlich zum **license Token** den **offline license** an.
@@ -95,7 +95,7 @@ Der **license Token** wird per E-Mail zugeschickt. Die **offline License** wird 
 1. Logge dich in das [Kundenportal](https://center.i-doit.com/portal/advanced) ein und kopiere die **offline License** im Reiter **Advanced**.
     [![01-update-get-offline-token](../assets/images/de/wartung-und-betrieb/lizenzierung/01-update-get-offline-token.png)](../assets/images/de/wartung-und-betrieb/lizenzierung/01-update-get-offline-token.png)
 
-2. Rufe die i-doit Installation über den Browser auf. Um in das [Admin-Center](../administration/admin-center.md) zu gelangen klicke Sie auf den Link in der Anmeldemaske.
+2. Rufe die i-doit Installation über den Browser auf. Um in das [Admin-Center](../administration/admin-center.md) zu gelangen klicke auf den Link in der Anmeldemaske.
     [![02-update-login](../assets/images/de/wartung-und-betrieb/lizenzierung/02-update-login.png)](../assets/images/de/wartung-und-betrieb/lizenzierung/02-update-login.png)
 
 3. Als nächstes müssen die Anmeldedaten eingeben werden, die bei der Installation von i-doit für das [Admin-Center](../administration/admin-center.md) vergeben wurden.
@@ -116,7 +116,7 @@ Der **license Token** wird per E-Mail zugeschickt. Die **offline License** wird 
 7. Nachdem der License Token gespeichert wurde, klicke auf den **Install new license** Button.
     [![07-update-offline-install-new-license](../assets/images/de/wartung-und-betrieb/lizenzierung/07-update-offline-install-new-license.png)](../assets/images/de/wartung-und-betrieb/lizenzierung/07-update-offline-install-new-license.png)
 
-8. Hier wird das Feld angezeigt, in das die gesamte **offline License** kopiert werden muss. Woher du die **offline License** bekommst. kannst du [hier](#wie-erhalte-ich-den-lizenz-token-und-die-offline-lizenz) nachlesen.
+8. Hier wird das Feld angezeigt, in das die gesamte **offline License** kopiert werden muss. Woher du die **offline License** bekommst, kannst du [hier](#wie-erhalte-ich-den-lizenz-token-und-die-offline-lizenz) nachlesen.
     [![08-update-offline-insert-offline-license](../assets/images/de/wartung-und-betrieb/lizenzierung/08-update-offline-insert-offline-license.png)](../assets/images/de/wartung-und-betrieb/lizenzierung/08-update-offline-insert-offline-license.png)
 
 9. Anschließend auf den **Add license** Button klicken.
@@ -132,15 +132,15 @@ Der **license Token** wird per E-Mail zugeschickt. Die **offline License** wird 
 ## FAQ
 
 !!! attention "Kompatibilität der Token"
-    Der Lizenz Token können ab **i-doit Version 1.12.2** verwendet werden
-    Der offline Lizenz kann erst mit **i-doit Version 1.15** verwendet werden
+    Der Lizenz Token kann ab **i-doit Version 1.12.2** verwendet werden
+    Die offline Lizenz kann erst mit **i-doit Version 1.15** verwendet werden
 
 !!! info "Neuanmeldung nötig"
     Wird eine Lizenz erfolgreich eingespielt, kann es dennoch vorkommen, dass beim Weiterarbeiten mit i-doit ein Hinweis erscheint, es sei keine gültige Lizenz aktiviert. Hier hilft es, sich mit dem derzeitigen Benutzer ab- und wieder anzumelden.
 
-### Firewall freigaben um das Add-on & Subscription Center in i-doit zu verwenden
+### Firewall-Freigaben um das Add-on & Subscription Center in i-doit zu verwenden
 
-Um das Add-on & Subscription Center in i-doit zu verwenden sind womöglich einige Freigaben in der Firewall notwendig. Welche Hostnamen und IP-Adressen i-doit verwendet, wird im Artikel [Sicherheit und Schutz](../wartung-und-betrieb/sicherheit-und-schutz.md#firewall-und-offene-ports) beschrieben.
+Um das Add-on & Subscription Center in i-doit zu verwenden sind womöglich einige Freigaben in der Firewall notwendig. Welche Hostnamen und IP-Adressen i-doit verwendet, wird im Artikel [Sicherheit und Schutz](../wartung-und-betrieb/sicherheit-und-schutz.md#firewall-und-netzwerk) beschrieben.
 
 ### Die Lizenz ist gültig aber i-doit zeigt an, dass es nicht lizenziert ist?
 

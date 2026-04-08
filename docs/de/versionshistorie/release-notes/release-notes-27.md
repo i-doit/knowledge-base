@@ -1,3 +1,10 @@
+---
+title: Release Notes 27
+description: "We're happy to announce i-doit 27."
+icon:
+status:
+lang: de
+---
 # Release Notes 27
 
 We're happy to announce i-doit 27. This release of 2023's autumn will add features to i-doit that have been highly awaited and help you to efficiently use your documentation.

@@ -1,70 +1,133 @@
+---
+title: Mandantenfähigkeit
+description: "Mandantenfähigkeit (Multi-Tenancy) bedeutet, dass du mit einer einzigen i-doit-Installation mehrere vollständig voneinander getrennte IT-Dokumentationen..."
+icon:
+status:
+lang: de
+---
 # Mandantenfähigkeit
 
-i-doit ist mandantenfähig. Das bedeutet, dass über eine Installation ein oder mehrere eigenständige [IT-Dokumentationen](../glossar.md) abgebildet werden können. Die Anwendungsfälle sind vielfältig: von Sub-Organisationen, die getrennt voneinander dokumentieren sollen, über Systemhäuser, die Kunden-IT in dedizierten Instanzen dokumentieren, bis hin zu Hosting-Providern, die i-doit als Dienstleistung bereitstellen.
+## Was ist Mandantenfähigkeit?
+
+Mandantenfähigkeit (Multi-Tenancy) bedeutet, dass du mit einer einzigen i-doit-Installation mehrere vollständig voneinander getrennte [IT-Dokumentationen](../glossar.md) betreiben kannst. Jeder Mandant arbeitet in seinem eigenen, abgeschotteten Datenbestand — als wäre es eine separate i-doit-Instanz, nur ohne den Aufwand, mehrere Installationen zu pflegen.
+
+Typische Gründe, warum du Mandanten einsetzen würdest:
+
+-   **Organisatorische Trennung:** Tochtergesellschaften, Standorte oder Abteilungen sollen jeweils eine eigene, unabhängige IT-Dokumentation führen, ohne dass Daten vermischt werden.
+-   **Kundentrennung bei Dienstleistern:** Systemhäuser oder Managed-Service-Provider dokumentieren die IT ihrer Kunden in dedizierten Mandanten — sauber getrennt und bei Bedarf einzeln übergebbar.
+-   **Staging-Umgebungen:** Du betreibst neben dem produktiven Mandanten einen Test- oder Entwicklungsmandanten, um Änderungen an Kategorien, Templates oder Workflows gefahrlos auszuprobieren, bevor du sie produktiv übernimmst.
 
 !!! info "Lizenzierung"
     Für die Fähigkeit, mehrere Mandanten mit einer Installation zu betreiben, ist eine spezielle Lizenz notwendig. Nähere Informationen sind [auf Anfrage](https://www.i-doit.com/kontakt/) erhältlich.
 
-## Hintergrund
+## Technischer Aufbau
 
-Pro Mandant existiert in i-doit eine separate Datenbank. In dieser Datenbank werden alle Inhalte gespeichert, aber auch die Konfigurationen. So können über eine Instanz von i-doit völlig unterschiedliche IT-Dokumentationen gepflegt werden. Ein Austausch zwischen Mandanten ist nicht vorgesehen. Diese strikte Trennung ist auch ein Grund dafür, dass das [Admin-Center](../administration/admin-center.md) als übergeordnete Verwaltungsinstanz zur Verfügung steht.
+i-doit setzt Mandantenfähigkeit über eine strikte Datenbanktrennung um:
 
-## Konfiguration
+-   **Eine Installation, mehrere Datenbanken:** Jeder Mandant erhält eine eigene MySQL-/MariaDB-Datenbank (z.B. `idoit_data`, `idoit_data_kunde_b`, `idoit_data_test`). Darin liegen sämtliche Objekte, Kategorien, Beziehungen, Reports und mandantenspezifische Einstellungen.
+-   **Gemeinsame System-Datenbank:** Daneben existiert eine mandantenübergreifende System-Datenbank (`idoit_system`), die unter anderem die Mandantenliste selbst, globale Einstellungen und Add-on-Registrierungen enthält.
+-   **Gemeinsame Codebasis:** Alle Mandanten teilen sich dieselbe PHP-Codebasis und denselben Webserver. Updates und Patches installierst du daher nur einmal.
 
-Die Verwaltung von Mandanten geschieht im Admin-Center. Im Bereich **Tenants** werden alle derzeit angelegten Mandanten aufgelistet.
+Durch diese Architektur ist ein versehentlicher Datenaustausch zwischen Mandanten technisch ausgeschlossen. Es gibt keine mandantenübergreifenden Abfragen, Reports oder Objektverknüpfungen.
+
+## Mandantenfähigkeit vs. Rechteverwaltung
+
+Nicht jede Form der Datentrennung erfordert einen eigenen Mandanten. Bevor du einen neuen Mandanten anlegst, prüfe, ob die [Rechteverwaltung](../benutzerauthentifizierung-und-verwaltung/integrierte-authentifizierung/index.md) innerhalb eines Mandanten ausreicht:
+
+| Kriterium | Rechteverwaltung im Mandant | Eigener Mandant |
+|---|---|---|
+| Sichtbarkeit einzelner Objekte einschränken | Ja — über Objektrechte und Personengruppen | Nicht nötig |
+| Kategorien pro Benutzergruppe beschränken | Ja — über Kategorierechte | Nicht nötig |
+| Komplett getrennte Objektbestände ohne jede Überschneidung | Schwierig und fehleranfällig | Empfohlen |
+| Eigene Objekttyp-Konfiguration je Bereich | Nein | Ja |
+| Getrennte CMDB-Strukturen (z.B. unterschiedliche Lebenszyklen, Workflows) | Nein | Ja |
+| Daten müssen an einen externen Dritten übergeben werden können | Nur mit manuellem Export | Ja — Datenbank einzeln sicherbar |
+
+**Faustregel:** Wenn sich zwei Bereiche lediglich nicht gegenseitig sehen sollen, reicht die Rechteverwaltung. Wenn sie komplett unabhängige Konfigurationen, Objekttypen oder Kategoriedefinitionen benötigen, nutze separate Mandanten.
+
+## Mandanten anlegen und verwalten
+
+Du verwaltest Mandanten im [Admin-Center](admin-center.md) unter dem Reiter **Tenants**. Dort sind alle angelegten Mandanten aufgelistet.
 
 [![Konfiguration](../assets/images/de/administration/mandantenfaehigkeit/1-mand.png)](../assets/images/de/administration/mandantenfaehigkeit/1-mand.png)
 
-Oberhalb der Auflistung stehen verschiedene Optionen zur Verfügung:
+Oberhalb der Auflistung stehen folgende Aktionen zur Verfügung:
 
--   **Add new tenant**: ein neuer Mandant wird erstellt
--   **Edit**: ein bestehender Mandant wird konfiguriert
--   **Activate**: ein bestehender Mandant wird aktiviert, falls dieser vorher deaktiviert war
--   **Deactivate**: ein bestehender Mandant wird deaktiviert, falls dieser vorher aktiviert war
--   **Remove**: ein bestehender Mandant wird **unwiderruflich** gelöscht
--   **Save license settings**: die Verteilung der Lizenzobjekte wird gespeichert
+-   **Add new tenant**: Einen neuen Mandanten erstellen. i-doit legt dabei automatisch eine neue Datenbank an.
+-   **Edit**: Einen bestehenden Mandanten konfigurieren (Name, Datenbank, Cache-Verzeichnis).
+-   **Activate / Deactivate**: Mandanten ein- oder ausschalten, ohne sie zu löschen. Deaktivierte Mandanten erscheinen nicht mehr beim Login.
+-   **Remove**: Einen Mandanten **unwiderruflich** löschen — inklusive seiner Datenbank. Nur über ein [Backup](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) wiederherstellbar.
+-   **Save license settings**: Die Verteilung der Lizenzobjekte auf die Mandanten speichern.
 
-Zum Konfigurieren wird ein Mandant über die Checkboxen ausgewählt. Zum (De-)Aktivieren oder Löschen wird ein oder mehrere Mandanten ausgewählt.
+Zum Konfigurieren wählst du einen Mandanten über die Checkbox aus. Zum (De-)Aktivieren oder Löschen kannst du auch mehrere Mandanten gleichzeitig auswählen.
 
 [![Konfiguration](../assets/images/de/administration/mandantenfaehigkeit/2-mand.png)](../assets/images/de/administration/mandantenfaehigkeit/2-mand.png)
 
-Pro Mandant müssen verschiedene Eigenschaften angegeben werden (Pflichtfelder):
+Pro Mandant gibst du folgende Eigenschaften an:
 
--   **Tenant GUI title**: Name des Mandanten (wird unter anderem beim Login angezeigt)
--   **Description**: Beschreibung (hat bis auf den informellen Charakter keine Auswirkung auf die Funktionalität)
--   **Sort value**: Sortierreihenfolge als Ganzzahl angeben (je niedriger der Wert, desto höher steht der Mandant in der Reihenfolge)
--   **Cache dir**: i-doit speichert aus Performance-Gründen viele Daten zwischen. Pro Mandant wird unterhalb des Verzeichnisses temp/ im Installationsverzeichnis von i-doit ein dediziertes Cache-Verzeichnis angelegt.
--   **MySQL settings**: Hierbei ist es von Vorteil, den Database Name mit Prefix `idoit_` zu benennen. Der erste Mandant erhält bei der [Installation](../installation/manuelle-installation/setup.md) standardmäßig den Datenbanknamen idoit_data.
+-   **Tenant GUI title**: Name des Mandanten — wird unter anderem beim Login und in der Hauptnavigation angezeigt.
+-   **Description**: Freitext-Beschreibung (rein informell, hat keine funktionale Auswirkung).
+-   **Sort value**: Sortierreihenfolge als Ganzzahl. Je niedriger der Wert, desto weiter oben erscheint der Mandant.
+-   **Cache dir**: Dediziertes Cache-Verzeichnis unterhalb von `temp/` im Installationsverzeichnis. i-doit legt es automatisch an.
+-   **MySQL settings**: Datenbankname, Host, Benutzer und Passwort. Es empfiehlt sich, den Datenbanknamen mit dem Prefix `idoit_` zu benennen. Der erste Mandant heißt nach der [Installation](../installation/manuelle-installation/setup.md) standardmäßig `idoit_data`.
 
 ## Objektlimitierung pro Mandant
 
-Pro Mandant kann eingestellt werden, wie viele lizenzpflichtige Objekte maximal dokumentiert werden dürfen. Dies geschieht im Admin-Center unter **Tenants**. Dort gibt es pro Mandant den Parameter **Assigned object licenses** (Ganzzahl).
+Du kannst festlegen, wie viele lizenzpflichtige Objekte ein Mandant maximal enthalten darf. Das konfigurierst du im Admin-Center unter **Tenants** über den Parameter **Assigned object licenses** (Ganzzahl). So verteilst du dein Lizenzvolumen gezielt auf die einzelnen Mandanten.
 
 [![Objektlimitierung pro Mandant](../assets/images/de/administration/mandantenfaehigkeit/3-mand.png)](../assets/images/de/administration/mandantenfaehigkeit/3-mand.png)
 
+## Was ist gemeinsam, was ist getrennt?
+
+| Aspekt | Gemeinsam (installationsweit) | Getrennt (pro Mandant) |
+|---|---|---|
+| **PHP-Code und Webserver** | Ja | — |
+| **System-Datenbank** | Ja | — |
+| **Add-on-Dateien** | Ja (eine Installation) | Aktivierung pro Mandant steuerbar |
+| **Admin-Center-Zugang** | Ja (ein Passwort) | — |
+| **Mandanten-Datenbank** | — | Ja — eigene DB pro Mandant |
+| **Objekte, Kategorien, Beziehungen** | — | Ja |
+| **Objekttyp-Konfiguration** | — | Ja |
+| **Reports und Dashboards** | — | Ja |
+| **Benutzer und Rechte** | — | Ja — eigene Personen-Objekte |
+| **LDAP-/SSO-Konfiguration** | — | Pro Mandant konfigurierbar |
+| **Mandantenspezifische Einstellungen** | — | Ja — siehe [Einstellungen](verwaltung/mandanten-name-verwaltung/einstellungen-mandanten-name.md) |
+
 ## Add-ons pro Mandant
 
-Bei der [Installation und beim Update von Add-ons](../i-doit-add-ons/i-diary.md) kann ausgewählt werden, ob diese Aktion für einen einzelnen Mandanten oder für alle Mandanten durchgeführt werden soll. Im Admin-Center unter **Modules** werden alle installierten Add-ons pro Mandant aufgeführt. Sie können pro Mandant (de-)aktiviert werden. Das Löschen erfolgt für alle Mandanten.
+Add-on-Dateien installierst du einmalig über das Admin-Center. Bei der [Installation und beim Update](../i-doit-add-ons/i-diary.md) wählst du aus, ob die Aktion für einen einzelnen Mandanten oder alle Mandanten gelten soll.
+
+Im Admin-Center unter **Modules** siehst du alle installierten Add-ons pro Mandant und kannst sie gezielt (de-)aktivieren. Das Löschen von Add-on-Dateien erfolgt immer installationsweit für alle Mandanten.
 
 [![Add-ons pro Mandant](../assets/images/de/administration/mandantenfaehigkeit/4-mand.png)](../assets/images/de/administration/mandantenfaehigkeit/4-mand.png)
 
 !!! attention "Update von i-doit"
-    Während des [Updates von i-doit](../wartung-und-betrieb/update-einspielen.md) wird abgefragt, welche Mandanten-Datenbanken aktualisiert werden sollen. Standardmäßig sind alle als ausgewählt markiert. Es wird dringend empfohlen, alle Mandanten-Datenbanken beim Update zu berücksichtigen. Eine Abweichung gilt nur in gut begründeten Ausnahmefällen (beispielsweise durch den [Support](../administration/troubleshooting/index.md)).
+    Während des [Updates von i-doit](../wartung-und-betrieb/update-einspielen.md) wird abgefragt, welche Mandanten-Datenbanken aktualisiert werden sollen. Standardmäßig sind alle ausgewählt. Es wird dringend empfohlen, immer alle Mandanten-Datenbanken beim Update zu berücksichtigen. Abweichungen davon gelten nur in gut begründeten Ausnahmefällen — beispielsweise auf Anweisung des [Supports](../administration/troubleshooting/index.md).
 
 ## Benutzerverwaltung
 
-Die [Benutzerverwaltung](../grundlagen/erstanmeldung.md) wird pro Mandant konfiguriert, d. h., Personen-Objekte mit Login-Daten können je nach Mandant abweichen.
+Die [Benutzerverwaltung](../grundlagen/erstanmeldung.md) konfigurierst du pro Mandant. Personen-Objekte mit Login-Daten können je nach Mandant unterschiedlich sein — ein Benutzer kann also in Mandant A Administrator und in Mandant B gar nicht vorhanden sein.
 
-Sind mehrere Mandanten aktiviert, wird beim Login abgefragt, in welchen Mandanten man sich anmelden möchte. Dies geschieht allerdings nur, wenn die Zugangsdaten des Benutzers in mehreren Mandanten dieselben sind. Andernfalls wird automatisch derjenige Mandant geladen, für den die Zugangsdaten gültig sind.
+Sind mehrere Mandanten aktiviert, fragt i-doit beim Login, in welchem Mandanten du dich anmelden möchtest. Das passiert allerdings nur, wenn deine Zugangsdaten in mehreren Mandanten identisch sind. Andernfalls wählt i-doit automatisch den Mandanten, für den die Zugangsdaten gültig sind.
 
 [![Benutzerverwaltung](../assets/images/de/administration/mandantenfaehigkeit/5-mand.png)](../assets/images/de/administration/mandantenfaehigkeit/5-mand.png)
 
-Wird für die Authentifizierung und Autorisierung ein [LDAP-Verzeichnis/Active Directory (AD)](../benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md) angebunden, werden beim Login die konfigurierten Server nacheinander abgefragt, ob die Zugangsdaten gültig sind. Danach wird ermittelt, für welche Mandanten die Zugangsdaten gültig sind (siehe oben).
+Wenn du ein [LDAP-Verzeichnis oder Active Directory](../benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md) anbindest, fragt i-doit beim Login die konfigurierten Server nacheinander ab und ermittelt dann, für welche Mandanten die Zugangsdaten gültig sind.
 
-Ist [Single Sign On (SSO)](../benutzerauthentifizierung-und-verwaltung/sso-vergleich/index.md) aktiv, kann ein Mandant als Standard gewählt werden. Dies geschieht im [Admin-Center](admin-center.md#system-settings). Beim Aufruf von i-doit wird der Benutzer automatisch zu diesem Mandanten verbunden, falls die Zugangsdaten korrekt sind.
+Bei aktivem [Single Sign On (SSO)](../benutzerauthentifizierung-und-verwaltung/sso-vergleich/index.md) kannst du im [Admin-Center](admin-center.md#system-settings) einen Standard-Mandanten festlegen. i-doit verbindet den Benutzer dann automatisch mit diesem Mandanten, ohne dass eine Auswahl nötig ist.
 
 ## Mandanten-Wechsel
 
-Zwischen verschiedenen Mandanten kann gewechselt werden, ohne sich vorher abmelden zu müssen. In der oberen [Hauptnavigationsleiste](../grundlagen/struktur-it-dokumentation.md) wird angegeben, mit welchem Benutzer man derzeit in welchem Mandanten angemeldet ist. Fährt man mit der Maus über den Mandanten-Namen, entsteht automatisch ein Drop-Down-Menü. Zur Auswahl stehen dann die weiteren Mandanten. Klickt man auf einen, wird der Benutzer für den derzeitigen Mandanten abgemeldet und automatisch im neuen angemeldet. Dies funktioniert allerdings nur, wenn die Zugangsdaten des Benutzers in den Mandanten dieselben sind.
+Du kannst zwischen Mandanten wechseln, ohne dich vorher abzumelden.
+
+In der oberen [Hauptnavigationsleiste](../grundlagen/struktur-it-dokumentation.md) siehst du, mit welchem Benutzer du in welchem Mandanten angemeldet bist. Fahre mit der Maus über den Mandanten-Namen — es erscheint ein Drop-Down-Menü mit den weiteren verfügbaren Mandanten. Ein Klick wechselt dich direkt dorthin.
+
+Dies funktioniert nur, wenn deine Zugangsdaten in den jeweiligen Mandanten identisch sind.
 
 [![Mandanten-Wechsel](../assets/images/de/administration/mandantenfaehigkeit/6-mand.png)](../assets/images/de/administration/mandantenfaehigkeit/6-mand.png)
+
+## Weiterführende Themen
+
+-   [Admin-Center](admin-center.md) — mandantenübergreifende Verwaltung, Lizenzen, Add-ons
+-   [Einstellungen](verwaltung/mandanten-name-verwaltung/einstellungen-mandanten-name.md) — mandantenspezifische Konfiguration
+-   [Daten sichern und wiederherstellen](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) — Backup-Strategien bei mehreren Mandanten

@@ -1,9 +1,16 @@
+---
+title: "Backup-Script für Daten und Dateien"
+description: Folgendes Backup Script dient als Beispiel wie eine einfache Datensicherung eingerichtet werden kann.
+icon:
+status:
+lang: de
+---
 # Backup-Script für Daten und Dateien
 
 Folgendes Backup Script dient als **Beispiel** wie eine einfache Datensicherung eingerichtet werden kann. Es ersetzt keine professionelle Lösung!
 
 !!! danger "Auf eigene Gefahr"
-    Dieses Script löscht Dateien! Bitte auf eigene Gefahr anwenden! synetics übernimmt weder Garantie noch Support und schließt eine Haftung für Folgeschäden aus.
+    Dieses Script löscht Dateien! Bitte auf eigene Gefahr anwenden! i-doit GmbH übernimmt weder Garantie noch Support und schließt eine Haftung für Folgeschäden aus.
 
 **bbbs.sh**
 
@@ -115,7 +122,7 @@ Folgendes Backup Script dient als **Beispiel** wie eine einfache Datensicherung 
                 
                 if [ $copy_ftp -eq 1 ];
                 then
-                    echo "Copying ${tmp_filesfile} to FTp server ${ftp_host}"
+                    echo "Copying ${tmp_filesfile} to FTP server ${ftp_host}"
                     /usr/bin/ncftpput -u ${ftp_user} -p ${ftp_pass} ${ftp_host} ${ftp_path} ${tmp_filesfile}
                 fi
                 
@@ -159,3 +166,9 @@ Folgendes Backup Script dient als **Beispiel** wie eine einfache Datensicherung 
         echo "umounting CIFS share ${cifs_mount}"
         umount ${cifs_mount}
     fi
+
+## Siehe auch
+
+- [Wartung und Betrieb](../index.md) — Übersicht zu Wartung und Betrieb
+- [Installation](../../installation/index.md) — i-doit installieren
+- [Systemvoraussetzungen](../../installation/systemvoraussetzungen.md) — Hardware- und Softwareanforderungen

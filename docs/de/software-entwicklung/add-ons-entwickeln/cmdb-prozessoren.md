@@ -1,6 +1,6 @@
 ---
 title: CMDB-Prozessoren
-description: CMDB-Prozessoren
+description: "Bei den CMDB-Prozessoren handelt es sich um interne Schnittstellen, um mit Objekten, Objekttypen und Objekttyp-Gruppen zu arbeiten."
 icon:
 status:
 lang: de

@@ -1,45 +1,60 @@
+---
+title: "Dialog-Admin"
+description: "Der Dialog-Admin ist die zentrale Verwaltungsstelle für alle Dialog+-Felder in _i-doit_ -- also Dropdown-Felder, deren Auswahlwerte du selbst bearbeiten..."
+icon:
+status:
+lang: de
+---
 # Dialog-Admin
 
-In _i-doit_ kommt oftmals das [Attributfeld](../glossar.md) **Dialog+** zum Einsatz, ein Dropdown-Feld, dessen Werte sich bearbeiten lassen. Diese Felder verteilen sich auf viele [Kategorien](../glossar.md) in der [IT-Dokumentation](../glossar.md) oder andere Features von _i-doit_. Die zentrale Administration der Werte findet über den **Dialog-Admin** in der **Verwaltung** statt.
+Der Dialog-Admin ist die zentrale Verwaltungsstelle für alle **Dialog+**-Felder in _i-doit_ -- also Dropdown-Felder, deren Auswahlwerte du selbst bearbeiten kannst.
+
+Diese Felder kommen in vielen [Kategorien](../glossar.md) der [IT-Dokumentation](../glossar.md) zum Einsatz. Über den Dialog-Admin verwaltest du alle Werte an einer zentralen Stelle.
 
 ## Übersicht
 
-Eine Übersicht über alle [Attribute](../glossar.md) vom Feldtyp **Dialog+** ist unter **Verwaltung → Vordefinierte Inhalte → Dialog-Admin** zu finden. Im linken Navigationsbaum sind diese alphabetisch nach den zugehörigen Kategorien sortiert. Wenn eine [benutzerdefinierte Kategorie](benutzerdefinierte-kategorien.md) mit einem Attribut vom Feldtyp **Dialog+** angelegt ist, erscheint dieses Attribut mit der zugehörigen Kategorie ebenfalls im Navigationsbaum unter **Benutzerdefinierte Dialog+**.
+Du findest den Dialog-Admin unter **Verwaltung → Vordefinierte Inhalte → Dialog-Admin**. Im linken Navigationsbaum sind alle [Attribute](../glossar.md) vom Feldtyp **Dialog+** alphabetisch nach ihren zugehörigen Kategorien sortiert.
+
+Wenn du eine [benutzerdefinierte Kategorie](benutzerdefinierte-kategorien.md) mit einem **Dialog+**-Attribut angelegt hast, erscheint dieses Attribut ebenfalls im Navigationsbaum -- unter dem Abschnitt **Benutzerdefinierte Dialog+**.
 
 [![benutzerdefinierte-dialog+](../assets/images/de/grundlagen/dialog-admin/1-da.png)](../assets/images/de/grundlagen/dialog-admin/1-da.png)
 
 ## Werte anzeigen
 
-Klickt man im linken Navigationsbaum innerhalb des Bereichs **Dialog-Admin** auf ein Attribut, wird im Hauptbereich eine Übersicht der bisher dokumentierten Werte (falls vorhanden) geladen.
+Klicke im linken Navigationsbaum auf ein Attribut, um im Hauptbereich die bisher dokumentierten Werte zu sehen.
 
 [![werte-anzeigen](../assets/images/de/grundlagen/dialog-admin/2-da.png)](../assets/images/de/grundlagen/dialog-admin/2-da.png)
 
 ## Werte anlegen
 
-Um einen neuen Wert anzulegen klickt man oberhalb der Übersicht auf den Button **Neu**. Es öffnet sich ein Formularfeld, das ausgefüllt werden kann:
+So legst du einen neuen Wert an:
 
--   **ID**:<br> Jeder Wert in einem **Dialog+**-Attribut erhält von _i-doit_ einen eindeutigen Identifier. Dieser ist beispielsweise beim Umgang mit der [API](../i-doit-add-ons/api/index.md) hilfreich.
--   **Bezeichnung**:<br> Hier wird der Wert angegeben, der in der Web GUI von _i-doit_ angezeigt werden soll, wenn man das **Dialog+**-Attribut betrachtet oder editiert.
--   **Konstante**:<br> Neben einem eindeutigen Identifier kann ein Wert eine eindeutige Konstante erhalten. Im Gegensatz zum Identifier besteht dieser in der Regel aus einem aussagekräftigen String, der bei der Verwendung der API sehr hilfreich sein kann.
--   **Status**:<br> Jeder Wert kann einen Zustand einnehmen. Um ihn bei der Dokumentation zu verwenden, sollte der Zustand Normal (2) gewählt werden.
-
-Gespeichert wird der Wert, wie gewohnt, über den Button **Speichern**.
+1. Klicke oberhalb der Übersicht auf den Button **Neu**.
+2. Fülle das Formular aus:
+    - **ID**: _i-doit_ vergibt automatisch einen eindeutigen Identifier. Dieser ist z. B. beim Umgang mit der [API](../i-doit-add-ons/api/index.md) hilfreich.
+    - **Bezeichnung**: Der Wert, der in der Web GUI angezeigt wird, wenn du das **Dialog+**-Attribut betrachtest oder editierst.
+    - **Konstante**: Ein eindeutiger, aussagekräftiger String -- besonders hilfreich bei der Verwendung der API.
+    - **Status**: Jeder Wert hat einen Zustand. Wähle **Normal (2)**, damit der Wert in der Dokumentation verwendbar ist.
+3. Klicke auf **Speichern**.
 
 [![werte-anlegen](../assets/images/de/grundlagen/dialog-admin/3-da.png)](../assets/images/de/grundlagen/dialog-admin/3-da.png)
 
 ## Werte bearbeiten
 
-Zum Bearbeiten der Attributs klickt man in der Übersicht auf den Wert, der bearbeitet werden soll. Das Formular entspricht der oben erklärten Oberfläche zum Anlegen eines neuen Wertes.
+Um einen bestehenden Wert zu bearbeiten, klicke in der Übersicht auf den gewünschten Wert. Das Formular entspricht dem beim Anlegen.
 
 !!! info "Auswirkungen"
-    -   Das Ändern und Löschen von Werten wirkt sich unmittelbar auf die IT-Dokumentation aus: Wird ein Wert im **Dialog-Admin** geändert, ändert er sich überall automatisch. Ebenso wird beim Löschen des Wertes dieser auch überall dort gelöscht, wo er verwendet wurde. Vor dem Löschen empfiehlt es sich, über einen [Report](../auswertungen/report-manager.md) diejenigen Objekte zu suchen, bei denen dieser Wert verwendet wird. Mit Hilfe dieses Reports kann für alle aufgelisteten Objekte - beispielsweise über die [Listeneditierung](../effizientes-dokumentieren/listeneditierung.md) - ein alternativer Wert ausgewählt werden.
+    Änderungen und Löschungen wirken sich unmittelbar auf die gesamte IT-Dokumentation aus: Änderst du einen Wert im Dialog-Admin, ändert er sich überall automatisch. Löschst du einen Wert, wird er überall entfernt, wo er verwendet wurde. Prüfe daher vor dem Löschen über einen [Report](../auswertungen/report-manager.md), welche Objekte diesen Wert nutzen. Über die [Listeneditierung](../effizientes-dokumentieren/listeneditierung.md) kannst du dann für alle betroffenen Objekte einen alternativen Wert setzen.
 
 ## Werte löschen
 
-Zum Löschen eines Wertes markiert man innerhalb der Übersicht die Checkbox des Wertes und klickt anschließend auf den Button **Purge**. Der Wert wird unwiderruflich gelöscht.
+So löschst du einen Wert:
 
-In dieser tabellarischen Übersicht wird zu jedem Wert angezeigt, ob dieser gelöscht werden kann. Dies ist dadurch bedingt, dass manche Werte von _i-doit_ als gegeben vorausgesetzt sind, um bestimmte Funktionalitäten zu gewährleisten.
+1. Markiere in der Übersicht die Checkbox des Wertes.
+2. Klicke auf den Button **Purge**.
+
+Der Wert wird unwiderruflich gelöscht. In der tabellarischen Übersicht siehst du zu jedem Wert, ob er gelöscht werden kann. Manche Werte setzt _i-doit_ als gegeben voraus, um bestimmte Funktionalitäten zu gewährleisten -- diese lassen sich nicht entfernen.
 
 ## Rechte setzen
 
-Auf jedes **Dialog+**-Attribut kann pro Benutzer(-gruppe) Rechte vergeben werden. So ist es beispielsweise möglich und oft auch ratsam, dass nur bestimmte Benutzergruppen Werte anlegen, ändern oder löschen können, andere Benutzergruppen diese aber nur verwenden können.
+Du kannst pro Benutzer oder Benutzergruppe Rechte auf jedes **Dialog+**-Attribut vergeben. So stellst du sicher, dass nur bestimmte Gruppen Werte anlegen, ändern oder löschen dürfen, während andere Gruppen die Werte lediglich verwenden können.

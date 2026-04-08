@@ -1,3 +1,10 @@
+---
+title: Beispiele zur Nutzung der API
+description: "Um den Umgang mit der Programmierschnittstelle (API) von i-doit zu erleichtern, haben wir einige typische Beispiele zusammengetragen."
+icon:
+status:
+lang: de
+---
 # Beispiele zur Nutzung der API
 
 Um den Umgang mit der [Programmierschnittstelle (API)](../../administration/verwaltung/add-ons/json-rpc-api/index.md) von i-doit zu erleichtern, haben wir einige typische Beispiele zusammengetragen.

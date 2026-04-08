@@ -1,24 +1,24 @@
 ---
 title: i-doit cloud
-description: Alle Informationen und Services rund um Ihre i-doit in der Cloud. Sicher, gewartet und performant.
+description: Alle Informationen und Services rund um deine i-doit in der Cloud. Sicher, gewartet und performant.
 icon: material/cloud
 lang: de
 ---
 
 # Willkommen in der i-doit cloud
 
-Entdecken Sie die Vorteile unserer gemanagten i-doit Cloud-Lösung. Wir kümmern uns um die Technik im Hintergrund, damit Sie sich voll und ganz auf Ihre IT-Dokumentation konzentrieren können. Sicher, performant und immer aktuell.
+Entdecke die Vorteile unserer gemanagten i-doit Cloud-Lösung. Wir kümmern uns um die Technik im Hintergrund, damit du dich voll und ganz auf deine IT-Dokumentation konzentrieren kannst. Sicher, performant und immer aktuell.
 
 ---
 
 ## Leistungsumfang & Technische Details
 
-Hier finden Sie die wichtigsten Eckdaten zu Ihrer i-doit Cloud Instanz.
+Hier findest du die wichtigsten Eckdaten zu deiner i-doit Cloud Instanz.
 
 * **Instanz-Größe**: Ausgelegt für bis zu 50.000 Objekte.
 * **Speicherplatz**: 1 GB dedizierter Datenspeicherplatz.
-* **Sicherheit**: Ihre Daten werden verschlüsselt gespeichert.
-* **Domain**: Der Name Ihrer Subdomain ist frei wählbar (z.B. `firmenname.i-doit.cloud`).
+* **Sicherheit**: deine Daten werden verschlüsselt gespeichert.
+* **Domain**: Der Name deiner Subdomain ist frei wählbar (z.B. `firmenname.i-doit.cloud`).
 * **Bereitstellung**: Die Bereitstellung dauert ungefähr 15 Minuten.
 * **Backup**: Automatisierte und engmaschige Backups.
 * **Add-on Kompatibilität**: Ein Großteil der [i-doit Add-ons](https://www.i-doit.com/i-doit/add-ons/){:target="_blank"} ist kompatibel.
@@ -31,7 +31,7 @@ Hier finden Sie die wichtigsten Eckdaten zu Ihrer i-doit Cloud Instanz.
 
 ## Support & Service-Zeiten
 
-Unser Experten-Team steht Ihnen für alle Anliegen rund um Ihre Cloud-Instanz zur Verfügung.
+Unser Experten-Team steht dir für alle Anliegen rund um deine Cloud-Instanz zur Verfügung.
 
 * **Service-Zeiten**: Montag bis Freitag von 10:00 bis 16:00 Uhr (ausgenommen bundesweite Feiertage).
 * **Erreichbarkeit**:
@@ -42,7 +42,7 @@ Unser Experten-Team steht Ihnen für alle Anliegen rund um Ihre Cloud-Instanz zu
 
 **Diese Leistungen sind im Support enthalten:**
 
-* Einspielen Ihrer Lizenz
+* Einspielen deiner Lizenz
 * Installation und Updates von kompatiblen Add-ons
 * Anpassung von serverseitigen Systemeinstellungen
 * Einspielen von Backups auf Anfrage
@@ -54,14 +54,14 @@ Unser Experten-Team steht Ihnen für alle Anliegen rund um Ihre Cloud-Instanz zu
 
 ## Migration: Umzug in die Cloud
 
-Wir unterstützen Sie aktiv beim Umzug Ihrer bestehenden On-Premise Installation in die i-doit Cloud.
+Wir unterstützen dich aktiv beim Umzug deiner bestehenden On-Premise Installation in die i-doit Cloud.
 
 **Ablauf der Migration:**
 
 1.  **Terminvereinbarung**: Wir vereinbaren einen ersten Termin, um die Voraussetzungen für die Migration zu prüfen.
-2.  **Vorbereitung**: Wenn alle Voraussetzungen erfüllt sind, bereiten wir Ihre persönliche Cloud-Instanz vor.
-3.  **Datenexport**: In einem zweiten gemeinsamen Termin exportieren wir die Daten aus Ihrem aktuellen System.
-4.  **Datenimport**: Anschließend migrieren wir Ihre Daten sicher in die vorbereitete Cloud-Instanz.
+2.  **Vorbereitung**: Wenn alle Voraussetzungen erfüllt sind, bereiten wir deine persönliche Cloud-Instanz vor.
+3.  **Datenexport**: In einem zweiten gemeinsamen Termin exportieren wir die Daten aus deinem aktuellen System.
+4.  **Datenimport**: Anschließend migrieren wir deine Daten sicher in die vorbereitete Cloud-Instanz.
 
 ---
 
@@ -79,31 +79,31 @@ Für jede Cloud-Instanz erstellen wir automatisch und regelmäßig Backups.
 -   **Event-basiert**: Vor jedem System-Update (die letzten 10 Backups werden aufbewahrt)
 
 !!! info "Backup-Wiederherstellung anfordern"
-    Ein Restore auf einen früheren Zeitpunkt können Sie jederzeit über unser [Help Center](https://help.i-doit.com){:target="_blank"} oder per [E-Mail](mailto:help@i-doit.com) beantragen.
+    Ein Restore auf einen früheren Zeitpunkt kannst du jederzeit über unser [Help Center](https://help.i-doit.com){:target="_blank"} oder per [E-Mail](mailto:help@i-doit.com) beantragen.
 
 ---
 
 ## Netzwerkanbindung und Schnittstellen
 
-Damit Sie externe Systeme wie LDAP, JDisc oder eigene APIs sicher mit Ihrer i-doit Cloud-Instanz verbinden können, müssen Sie unter Umständen Ihre Firewall anpassen. Hier finden Sie alle notwendigen technischen Informationen.
+Damit du externe Systeme wie LDAP, JDisc oder eigene APIs sicher mit deiner i-doit Cloud-Instanz verbinden kannst, musst du unter Umständen deine Firewall anpassen. Hier findest du alle notwendigen technischen Informationen.
 
 ### VPN-Anbindung (OpenVPN)
 
-Für eine dedizierte und sichere Verbindung zwischen Ihrem Netzwerk und Ihrer Cloud-Instanz bieten wir die Anbindung über OpenVPN an.
+Für eine dedizierte und sichere Verbindung zwischen deinem Netzwerk und deiner Cloud-Instanz bieten wir die Anbindung über OpenVPN an.
 
 !!! warning "Beta-Phase / Erstanwendung"
 
     Die Anbindung via OpenVPN nutzt eine Benutzer- und Zertifikatsauthentifizierung. Dieses Feature wurde intern erfolgreich getestet, befindet sich aber noch nicht im produktiven Einsatz bei Kunden.
 
-    Wenn Sie diese Option nutzen möchten, definieren Sie bitte Ihre Anforderungen und kontaktieren Sie unseren [Support](#support-service-zeiten), um den Einrichtungsprozess gemeinsam zu starten.
+    Wenn du diese Option nutzen möchtest, definiere bitte deine Anforderungen und kontaktiere unseren [Support](#support-service-zeiten), um den Einrichtungsprozess gemeinsam zu starten.
 
 ### Feste IP-Adressen für Firewall-Regeln
 
-Ihre i-doit Cloud-Instanz ist unter festen IP-Adressen erreichbar (Ingress) und kommuniziert auch von festen IP-Adressen aus mit Ihren Systemen (Egress).
+Deine i-doit Cloud-Instanz ist unter festen IP-Adressen erreichbar (Ingress) und kommuniziert auch von festen IP-Adressen aus mit deinen Systemen (Egress).
 
-#### Ingress: Erreichbarkeit Ihrer Instanz von außen
+#### Ingress: Erreichbarkeit deiner Instanz von außen
 
-Wenn Sie in Ihrem Netzwerk den Zugriff auf `*.i-doit.cloud` einschränken, geben Sie bitte die folgenden IP-Adressen für eingehende Verbindungen frei:
+Wenn du in deinem Netzwerk den Zugriff auf `*.i-doit.cloud` einschränkst, gib bitte die folgenden IP-Adressen für eingehende Verbindungen frei:
 
 * **IPv4:**
     * `159.69.103.121`
@@ -112,9 +112,9 @@ Wenn Sie in Ihrem Netzwerk den Zugriff auf `*.i-doit.cloud` einschränken, geben
     * `2a01:4f8:c01f:289a::`
     * `2a01:4f8:1c17:a07c::`
 
-#### Egress: Ausgehende Verbindungen von i-doit zu Ihnen
+#### Egress: Ausgehende Verbindungen von i-doit zu dir
 
-Damit Ihre Cloud-Instanz Ihre lokalen Systeme (z.B. APIs, LDAP, JDisc) erreichen kann, geben Sie bitte die jeweils zutreffenden IP-Adressen in Ihrer Firewall für ausgehende Verbindungen frei:
+Damit deine Cloud-Instanz deine lokalen Systeme (z.B. APIs, LDAP, JDisc) erreichen kann, gib bitte die jeweils zutreffenden IP-Adressen in deiner Firewall für ausgehende Verbindungen frei:
 
 * **Für `i-doit eval` Instanzen:**
     * **IPv4:**
@@ -138,9 +138,71 @@ Damit Ihre Cloud-Instanz Ihre lokalen Systeme (z.B. APIs, LDAP, JDisc) erreichen
 
 ## Software-Updates
 
-Wir halten Ihre Instanz aktuell. Updates auf eine neue i-doit Version werden in der Regel **innerhalb von 7 Tagen** nach der offiziellen Veröffentlichung durchgeführt. Während des Updates wird Ihre Instanz kurzzeitig in den Wartungsmodus versetzt.
+Wir halten deine Instanz aktuell. Updates auf eine neue i-doit Version werden in der Regel **innerhalb von 7 Tagen** nach der offiziellen Veröffentlichung durchgeführt. Während des Updates wird deine Instanz kurzzeitig in den Wartungsmodus versetzt.
 
-Den aktuellen Status können Sie hier einsehen: [i-doit cloud status](https://status.docupike.com/affected/i-doit/){:target="_blank"}
+Den aktuellen Status kannst du hier einsehen: [i-doit cloud status](https://status.docupike.com/affected/i-doit/){:target="_blank"}
+
+---
+
+## Unterschiede zur On-Premise-Version
+
+Die Cloud-Version bietet denselben Funktionsumfang wie die On-Premise-Variante — mit einigen Unterschieden bei Administration und Zugriff:
+
+| Funktion | On-Premise | Cloud |
+|----------|-----------|-------|
+| Hosting | Eigener Server | Von i-doit betrieben |
+| Updates | Eigenverantwortlich | Durch i-doit (innerhalb von 7 Tagen nach Release) |
+| Backup | Eigenverantwortlich | Automatisch (stündlich bis jährlich) |
+| Admin-Center | Voller Zugang | Nicht verfügbar |
+| Add-on-Installation | Manuell per ZIP oder Subscription Center | Nicht möglich — im Paket enthalten |
+| Server-Zugang (SSH) | Ja | Nein |
+| Console-Befehle (CLI) | Ja | Nein — stattdessen [Flows Lite](#automatisierung-mit-flows-lite) |
+| Eigene PHP-Anpassungen | Möglich | Nicht möglich |
+| SSO (SAML, Azure AD) | Über Apache konfigurierbar | Noch nicht verfügbar (geplant) |
+| Mandanten | Mehrere möglich | Einer pro Instanz |
+| API-Zugriff | Ja | Ja (Firewall-Konfiguration beachten) |
+
+### Add-ons in der Cloud
+
+Add-ons können in der Cloud nicht eigenständig installiert werden. Die verfügbaren Add-ons richten sich nach dem gebuchten Paket — die im Vertrag enthaltenen Add-ons sind auf deiner Instanz bereits vorinstalliert.
+
+Ein Großteil der [i-doit Add-ons](../i-doit-add-ons/index.md) ist mit der Cloud kompatibel. Bei Fragen zu verfügbaren Add-ons oder zur Erweiterung des Pakets wende dich an das Sales-Team unter [sales@i-doit.com](mailto:sales@i-doit.com).
+
+---
+
+## Automatisierung mit Flows Lite
+
+In der On-Premise-Version richtest du wiederkehrende Aufgaben über [Cronjobs](../wartung-und-betrieb/cronjobs-einrichten.md) und die `console.php` ein. In der Cloud gibt es keinen Shell-Zugang — stattdessen steht dir **Flows Lite** zur Verfügung.
+
+Flows Lite ist eine eingeschränkte Version des [Flows Add-ons](../i-doit-add-ons/flows/index.md), die ohne separate Lizenz funktioniert und die zeitgesteuerte Ausführung von Console-Befehlen ermöglicht.
+
+### Flows Lite vs. Flows (Vollversion)
+
+| Funktion | Flows Lite | Flows (Vollversion) |
+|----------|-----------|-------------------|
+| Zeitbasierte Trigger | Ja | Ja |
+| Button-Trigger | Nein | Ja |
+| API-Aufrufe | Nein | Ja |
+| E-Mail versenden | Nein | Ja |
+| Objekte erstellen/ändern | Nein | Ja |
+| Bedingungen (UND/ODER) | Nein | Ja |
+
+### Verfügbare Console-Befehle in Flows Lite
+
+Folgende Befehle kannst du über Flows Lite zeitgesteuert ausführen:
+
+| Befehl | Beschreibung |
+|--------|-------------|
+| `ldap-sync` / `ldap-syncdn` | [LDAP-Synchronisation](../benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md) |
+| `import-jdisc` | [JDisc-Import](../daten-konsolidieren/jdisc/index.md) |
+| `import-csv` / `import-xml` | [CSV-](../daten-konsolidieren/csv-datenimport/index.md) und XML-Import |
+| `notifications-send` | [Benachrichtigungen](../auswertungen/benachrichtigungen.md) versenden |
+| `search-index` | Suchindex aktualisieren |
+| `report-export` | Reports exportieren |
+| `extend-contracts` | Vertragslaufzeiten automatisch verlängern |
+| `sync-dynamic-groups` | Dynamische Gruppen synchronisieren |
+
+Flows Lite ersetzt damit die manuelle [Cronjob-Konfiguration](../wartung-und-betrieb/cronjobs-einrichten.md), die bei On-Premise über die Server-Konsole erfolgt.
 
 ---
 
@@ -148,11 +210,11 @@ Den aktuellen Status können Sie hier einsehen: [i-doit cloud status](https://st
 
 ???+ question "**Kann ich die i-doit Schnittstellen (z.B. für LDAP, JDisc) nutzen?**"
 
-    Ja, die API-Schnittstellen Ihrer i-doit Cloud-Instanz sind von außen erreichbar. Sie müssen lediglich sicherstellen, dass die Kommunikation von der Cloud-Instanz zu Ihrem lokalen System (z.B. durch Ihre Firewall) möglich ist. Selbstsignierte Zertifikate für TLS-Verbindungen können in der Schnittstellen-Konfiguration hinterlegt werden.
+    Ja, die API-Schnittstellen deiner i-doit Cloud-Instanz sind von außen erreichbar. Du musst lediglich sicherstellen, dass die Kommunikation von der Cloud-Instanz zu deinem lokalen System (z.B. durch deine Firewall) möglich ist. Selbstsignierte Zertifikate für TLS-Verbindungen können in der Schnittstellen-Konfiguration hinterlegt werden.
 
 ???+ question "**Kann ich meine Daten aus der Cloud wieder auf eine On-Prem-Variante umziehen?**"
 
-    Ja, ein Export Ihrer Daten aus der Cloud ist jederzeit möglich. Diese können problemlos in eine andere i-doit Installation migriert werden.
+    Ja, ein Export deiner Daten aus der Cloud ist jederzeit möglich. Diese können problemlos in eine andere i-doit Installation migriert werden.
 
 ???+ question "**Ist ein Single Sign-On (SSO), z.B. mit Azure AD, möglich?**"
 
@@ -160,4 +222,16 @@ Den aktuellen Status können Sie hier einsehen: [i-doit cloud status](https://st
 
 ???+ question "**Sind mehrere Mandanten in einer Instanz möglich?**"
 
-    Derzeit ist pro Instanz nur ein Mandant möglich. Sie können jedoch bei Bedarf jederzeit weitere, separate Instanzen buchen.
+    Derzeit ist pro Instanz nur ein Mandant möglich. Du kannst jedoch bei Bedarf jederzeit weitere, separate Instanzen buchen.
+
+???+ question "**Kann ich Cronjobs einrichten?**"
+
+    Nein, in der Cloud gibt es keinen Shell-Zugang. Stattdessen nutzt du [Flows Lite](#automatisierung-mit-flows-lite) für zeitgesteuerte Aufgaben wie LDAP-Sync, JDisc-Import oder Suchindex-Aktualisierung.
+
+???+ question "**Kann ich Add-ons selbst installieren?**"
+
+    Nein, Add-ons werden durch das i-doit-Team bereitgestellt. Die im Vertrag enthaltenen Add-ons sind auf deiner Instanz vorinstalliert. Für zusätzliche Add-ons wende dich an [sales@i-doit.com](mailto:sales@i-doit.com).
+
+???+ question "**Wie kann ich von On-Premise in die Cloud wechseln (und umgekehrt)?**"
+
+    Der Wechsel ist in beide Richtungen möglich. Ein vollständiger Datenexport steht jederzeit zur Verfügung. Kontaktiere unseren [Support](#support-service-zeiten) um den Migrationsprozess zu starten. Details: [Migration](#migration-umzug-in-die-cloud)

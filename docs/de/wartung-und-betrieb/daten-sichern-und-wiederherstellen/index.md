@@ -1,105 +1,183 @@
+---
+title: Daten sichern und wiederherstellen
+description: Backup und Restore von i-doit — Datenbanken, Dateien und die neue console.php-Methode
+icon:
+status:
+lang: de
+---
+
 # Daten sichern und wiederherstellen
 
-Da sich in der [IT-Dokumentation](../../glossar.md) wichtige, für die tägliche Arbeit benötigte Daten befinden, ist ein Backup und Recovery von _i-doit_ unablässig. Daher sollte _i-doit_ bei der bereits bestehenden Backup-Strategie berücksichtigt werden.
+Die [IT-Dokumentation](../../glossar.md) enthält geschäftskritische Daten — Netzwerkpläne, Vertragsinformationen, Zugangsdaten und Konfigurationen. Ein Datenverlust durch Hardwareausfall, Fehlbedienung oder einen Angriff kann schwerwiegende Folgen haben. Deshalb gehört i-doit in jede Backup-Strategie.
 
-Hierbei müssen drei Bereiche abgedeckt werden: die [Datenbanken](#backup-und-recovery-der-datenbanken), die [Dateien](#backup-und-recovery-der-dateien) von _i-doit_ und die [Systemkonfiguration](#backup-und-recovery-der-systemkonfiguration).
+Drei Bereiche müssen gesichert werden:
 
-!!! note "Sollte i-doit aus einem kompletten Backup wiederhergestellt werden müssen, dann nutzen Sie bitte die [Migrations Artikel](../../upgrades-und-umzuege/umzug-einer-installation-unter-linux.md)"
+1. **Datenbanken** — System- und Mandantendatenbank(en)
+2. **Dateien** — das i-doit-Installationsverzeichnis inkl. hochgeladener Dokumente
+3. **Systemkonfiguration** — Apache, PHP, MariaDB
 
-## Backup und Recovery der Datenbanken
+!!! tip "Einfachster Weg: `system:tenant-export`"
+    Seit i-doit v38 gibt es den console-Befehl [`system:tenant-export`](#backup-uber-die-console-empfohlen), der Datenbank und Dateien in einem Schritt als ZIP exportiert. Für regelmäßige automatisierte Backups ist das die empfohlene Methode.
 
-Hierzu kann das Kommandozeilen-Tool `mysqldump` verwendet werden. Ein einfaches Beispiel zum Sichern aller Daten:
+---
 
-```sh
-mysqldump -hlocalhost -uroot -p --all-databases > backup.sql
+## Backup über die Console (empfohlen)
+
+Seit Version 38 bietet die i-doit console die Befehle `system:tenant-export` und `system:tenant-import`. Sie exportieren bzw. importieren einen kompletten Mandanten — Datenbank und hochgeladene Dateien — in einem ZIP-Paket. Das ist der einfachste und sicherste Weg für ein vollständiges Backup.
+
+### Export (Backup erstellen)
+
+```shell
+sudo -u www-data php /var/www/html/console.php system:tenant-export \
+    --user admin --password admin --tenantId 1
 ```
 
-Das entsprechende Recovery:
+Das erzeugt ein ZIP-Archiv im i-doit-Verzeichnis, das sowohl den Datenbank-Dump als auch alle hochgeladenen Dateien enthält.
 
-```sh
-mysql -hlocalhost -uroot -p < backup.sql
+### Import (Backup wiederherstellen)
+
+```shell
+sudo -u www-data php /var/www/html/console.php system:tenant-import \
+    --file /pfad/zum/backup.zip \
+    --tenant-database-name idoit_data \
+    --tenant-title "Mein Mandant" \
+    --db-root-user root \
+    --db-root-pass geheim \
+    --db-host localhost
 ```
 
-Während eines Backups sollte _i-doit_ nicht verwendet werden, um die Backups nicht zu korrumpieren. Für die Zeit des Backups bzw. des Wiederherstellens kann der Webserver deaktiviert werden. Auf Debian-basierten Linux-Distributionen führt man
+**Optionen:**
 
-```sh
-sudo service apache2 stop
+| Parameter | Beschreibung |
+|-----------|-------------|
+| `--file` | Pfad zur ZIP-Datei aus dem Export |
+| `--tenant-database-name` | Name der Mandanten-Datenbank |
+| `--tenant-title` | Anzeigename des Mandanten |
+| `--with-system-settings` | Systemweite Einstellungen mit importieren |
+| `--with-tenant-settings` | Mandantenspezifische Einstellungen importieren |
+| `--db-root-user` / `--db-root-pass` | Datenbank-Root-Zugangsdaten (nötig um die Datenbank anzulegen) |
+| `--db-host` / `--db-port` | Datenbank-Host und Port (Standard: `localhost:3306`) |
+
+### Als Cronjob einrichten
+
+Für tägliche automatische Backups:
+
+```shell
+# Mandant täglich um 02:00 exportieren
+0 2 * * *  php /var/www/html/console.php system:tenant-export --user admin --password admin --tenantId 1 > /var/www/html/log/tenant-export.log 2>&1
 ```
 
-aus. Nach dem Backup/Recovery kann mit
+!!! warning "Backup extern sichern"
+    Ein Backup, das nur auf demselben Server liegt, schützt nicht vor Hardwareausfällen. Kopiere die ZIP-Dateien regelmäßig auf ein externes System — per `rsync`, `scp` oder auf ein Netzlaufwerk.
 
-```sh
-sudo service apache2 start
+---
+
+## Manuelles Backup
+
+Falls du eine ältere i-doit-Version einsetzt oder mehr Kontrolle über den Backup-Prozess brauchst, kannst du Datenbank und Dateien auch manuell sichern.
+
+### Datenbanken sichern
+
+Verwende `mysqldump` für den Datenbank-Export. Während des Backups sollte niemand mit i-doit arbeiten — stoppe dazu am besten den Webserver:
+
+```shell
+# Webserver stoppen
+sudo systemctl stop apache2
+
+# Alle i-doit-Datenbanken sichern
+mysqldump -hlocalhost -uroot -p --all-databases | gzip -9 > /backup/idoit_$(date +%F).sql.gz
+
+# Webserver wieder starten
+sudo systemctl start apache2
 ```
 
-der Webserver wieder aktiviert werden. Sind [Cronjobs](../../automatisierung-und-integration/cli/index.md) für _i-doit_ eingerichtet, sollten diese ebenfalls während der Sicherung deaktiviert und nach Abschluss wieder aktiviert werden.
+Deaktiviere auch [Cronjobs](../cronjobs-einrichten.md) während der Sicherung.
 
-!!! success "Komprimieren"
+**Wiederherstellen:**
 
-    Viel Speicherplatz kann man sparen, indem die SQL-Dumps komprimiert werden. Die obigen Befehle könnten demnach so aussehen
-
-    # Backup:
-    ```sh
-    mysqldump -hlocalhost -uroot -p --all-databases | gzip -9 > backup.sql.gz
-    ```
-
-    # Recovery:
-    ```sh
-    gunzip < backup.sql.gz | mysql -hlocalhost -uroot -p
-    ```
+```shell
+gunzip < /backup/idoit_2026-04-07.sql.gz | mysql -hlocalhost -uroot -p
+```
 
 !!! attention "Foreign Key Constraints"
+    Beim Wiederherstellen kann MariaDB mit `errno: 150 "Foreign key constraint is incorrectly formed"` abbrechen. Das passiert, weil Tabellen einzeln wiederhergestellt werden und dabei Referenzen auf noch nicht existierende Tabellen entstehen.
 
-    Beim Wiederherstellen von Datenbank-Inhalten kann es vorkommen, dass MySQL/MariaDB mit einer Fehlermeldung abbricht, etwa: `errno: 150 "Foreign key constraint is incorrectly formed"`
+    **Lösung:** Lösche die Datenbanken vor der Wiederherstellung:
 
-    Dies liegt daran, dass die Daten und Strukturen nacheinander, d. h., Tabelle für Tabelle wiederhergestellt werden. Zwischenzeitlich existieren demnach alte neben neuen (wiederhergestellten) Daten. Das Datenbank-Modell von i-doit enthält sehr viele Verknüpfungen von Tabellen untereinander, für die Foreign Keys Constraints verwendet werden. Diese Referenzierung von beispielsweise einem Datensatz A in Tabelle 1 auf Datensatz B in Tabelle 2 unterliegt bestimmten Automatismen, wenn A oder B aktualisiert oder gar gelöscht werden. Die Reihenfolge spielt dabei eine wichtige Rolle, wann A und wann B wiederhergestellt werden. Alte und neue Referenzen können allerdings dieselben Indizes verwenden, auch wenn sie unterschiedliche Referenzierungen ausdrücken. Dadurch kann es zu oben genannten Fehlern kommen.
-
-    Als Workaround bietet es sich an, die Datenbanken vor der Wiederherstellung explizit zu löschen:
-
-    -- Standard-Name der System-Datenbank:
     ```sql
     DROP DATABASE idoit_system;
-    ```
-
-    -- Standard-Name der ersten Mandanten-Datenbank:
-    ```sql
     DROP DATABASE idoit_data;
     ```
 
-## Backup und Recovery der Dateien
+### Dateien sichern
 
-Es empfiehlt sich, das gesamte Verzeichnis von _i-doit_ zu sichern und bei Bedarf wiederherzustellen. Mittels
+Sichere das gesamte i-doit-Verzeichnis:
 
-```sh
-tar -czvf i-doit.tar.gz /pfad/zu/i-doit
+```shell
+tar -czf /backup/idoit_files_$(date +%F).tar.gz /var/www/html/
 ```
 
-kann ein komprimiertes Tar-Archiv erstellt werden.
+**Wiederherstellen:**
 
-Das entsprechende Recovery:
-
-```sh
-tar -xzv i-doit.tar.gz
+```shell
+tar -xzf /backup/idoit_files_2026-04-07.tar.gz -C /
 ```
 
-## Backup und Recovery der Systemkonfiguration
+Danach die Dateiberechtigungen prüfen:
 
-Wichtig für den unmittelbaren Betrieb von _i-doit_ ist es, die Konfigurations-Dateien vom Apache Webserver, von PHP und von MySQL/MariaDB zu sichern und bei Bedarf wiederherzustellen. Bestenfalls hast du bereits bei der [Installation](../../installation/index.md) von _i-doit_ die entsprechenden Anpassungen an den Konfigurationsdateien dokumentiert und sicher hinterlegt.
-
-## Backup mittels VM-Snapshots
-
-Häufig wird _i-doit_ auf einer virtuellen Maschine (VM) installiert. Für ein Backup und Recovery reicht es allerdings nicht aus, schlicht Snapshots der VMs im laufenden Betrieb zu erstellen. Das Problem liegt in der Konsistenz der Datenbanken: Die Daten liegen eventuell im Arbeitsspeicher und befinden sich (noch) nicht im nichtflüchtigen Speicher. Sie werden demnach durch die Sicherung oftmals nicht erfasst und gingen im Fall des Falles verloren.
-
-Soll auf Snapshots dennoch nicht verzichtet werden, muss vorher das DBMS MySQL/MariaDB gestoppt werden. Auf Debian-basierten Linux-Betriebssystemen erledigt dies der Befehl:
-
-```sh
-sudo service mysql stop
+```shell
+sudo chown -R www-data:www-data /var/www/html/
 ```
 
-Nach dem Snapshot wird das DBMS wieder gestartet:
+### Systemkonfiguration sichern
 
-```sh
-sudo service mysql start
+Sichere die Konfigurationsdateien von Apache, PHP und MariaDB:
+
+```shell
+tar -czf /backup/idoit_config_$(date +%F).tar.gz \
+    /etc/apache2/ \
+    /etc/php/ \
+    /etc/mysql/
 ```
 
-Sicherlich hinreichend bekannt, aber dennoch wichtig zu erwähnen: **Backups sollten niemals auf dem System verbleiben, das gesichert wird.**
+Idealerweise hast du die Anpassungen bereits bei der [Installation](../../installation/index.md) dokumentiert und sicher hinterlegt.
+
+---
+
+## Backup-Script
+
+Für eine einfache, automatisierte Sicherung kannst du ein Bash-Script verwenden. Ein Beispiel findest du unter [Backup-Script für Daten und Dateien](backup-script-fuer-daten-und-dateien.md).
+
+!!! tip "Empfehlung"
+    Für neue Installationen (ab v38) ist `system:tenant-export` als Cronjob die einfachere und zuverlässigere Lösung, weil Datenbank und Dateien in einem konsistenten Paket gesichert werden.
+
+---
+
+## VM-Snapshots
+
+Häufig läuft i-doit auf einer virtuellen Maschine. Ein Snapshot im laufenden Betrieb ist allerdings **kein zuverlässiges Backup** — die Datenbank hält Daten im Arbeitsspeicher, die beim Snapshot möglicherweise nicht auf der Festplatte angekommen sind.
+
+Wenn du Snapshots nutzen willst, stoppe vorher die Datenbank:
+
+```shell
+# Vor dem Snapshot:
+sudo systemctl stop mysql
+
+# Nach dem Snapshot:
+sudo systemctl start mysql
+```
+
+VM-Snapshots sind eine gute **Ergänzung**, aber kein Ersatz für ein reguläres Backup.
+
+---
+
+## Best Practices
+
+- **Regelmäßigkeit** — sichere täglich, mindestens vor jedem [Update](../update-einspielen.md)
+- **Restore testen** — ein Backup ist nur so gut wie der letzte erfolgreiche Restore-Test. Stelle regelmäßig auf einem Testsystem wieder her
+- **Extern lagern** — Backups gehören nicht auf denselben Server. Kopiere sie auf ein Netzlaufwerk, einen Backup-Server oder verschlüsselt in die Cloud
+- **Verschlüsseln** — wenn Backups das Haus verlassen, verschlüssele sie (z.B. mit `gpg`). Deine CMDB enthält sensible Infrastrukturdaten
+- **Aufbewahrungsfrist** — halte mehrere Generationen vor (z.B. 7 Tages-Backups + 4 Wochen-Backups), damit du auch ältere Stände wiederherstellen kannst
+- **Dokumentieren** — halte den Restore-Prozess schriftlich fest, damit auch Kollegen im Notfall eine Wiederherstellung durchführen können
+
+Für die komplette Migration auf einen anderen Server lies den Artikel [Umzug einer Installation unter Linux](../../upgrades-und-umzuege/umzug-einer-installation-unter-linux.md).

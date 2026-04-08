@@ -1,3 +1,10 @@
+---
+title: "Signal-Slot System"
+description: "Das Signal-Slot System kann benutzt werden, um in i-doit auf bestimmte _Ereignisse_ zu reagieren."
+icon:
+status:
+lang: de
+---
 # Signal-Slot System
 
 Das [Signal-Slot System](https://de.wikipedia.org/wiki/Signal-Slot-Konzept) kann benutzt werden, um in i-doit auf bestimmte _Ereignisse_ zu reagieren. Darunter fallen sowohl CMDB Ereignisse, wie "Objekt wurde erstellt", "Datensatz wurde geändert" oder "Datensatz wurde archiviert", als auch technische Ereignisse, wie "Kategorie wurde initialisiert", "GUI wird gerendert" oder "CSS wird zusammengefasst".

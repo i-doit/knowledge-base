@@ -1,18 +1,20 @@
+---
+title: SSO über Active Directory mit GSSAPI
+description: "Für die automatische Anmeldung an i-doit innerhalb eines Intranets bietet sich Single Sign-On (SSO) an."
+icon:
+status:
+lang: de
+---
 # SSO über Active Directory mit GSSAPI
 
-!!! warning "Bitte erstellen Sie vor jeder Änderung an einer Schnittstelle/Import einen vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist kann dieses dann wiederhergestellt werden"
+!!! warning "Bitte erstelle vor jeder Änderung an einer Schnittstelle/Import ein vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist, kann dieses dann wiederhergestellt werden"
 
-Für die automatische Anmeldung an i-doit innerhalb eines Intranets bietet sich die Authentifizierung über Single Sign On (SSO) an.
+Für die automatische Anmeldung an i-doit innerhalb eines Intranets bietet sich Single Sign-On (SSO) an. Dieser Artikel zeigt dir, wie du SSO mit dem Apache-Modul `mod-auth-gssapi` einrichtest.
 
-Voraussetzungen und Annahmen
-----------------------------
+## Voraussetzungen
 
-Folgende Bedingungen sind die Grundlage dieses Artikels:
-
-*   i-doit ist unter GNU/Linux [installiert](../../../installation/index.md)
+*   i-doit ist unter GNU/Linux [installiert](../../../installation/index.md).
 *   Es wird ein Active Directory (AD) unter Windows Server 2008/2012 für die Authentifizierung eingesetzt.
-
-In diesem Artikel wird beschrieben, wie Single Sign On (SSO) unter Apache Webserver mit mod-auth-gssapi eingerichtet wird.
 
 !!! warning Groß- und Kleinschreibung
 
@@ -21,65 +23,63 @@ In diesem Artikel wird beschrieben, wie Single Sign On (SSO) unter Apache Webser
 Active Directory (AD) konfigurieren
 -----------------------------------
 
-Für den SSO-Zugang wird im AD ein Benutzer generiert. Beispiel:
+Erstelle für den SSO-Zugang einen Benutzer im AD. Beispiel:
 
 *   Servername von i-doit: **idoit.mydomain.local**
 *   AD Domain: **addomain.local**
 *   SSO-Benutzer: **ssouser**
 *   Passwort: **passwort**
 
-Konfiguration des i-doit Servers
---------------------------------
+## Konfiguration des i-doit Servers
 
-Installation aller benötigten Pakete
+Installiere alle benötigten Pakete.
 
-Debian GNU/Linux
-
-```shell
-sudo apt install msktutil libapache2-mod-auth-gssapi krb5-user
-```
-
-Ubuntu Linux:
+**Debian GNU/Linux:**
 
 ```shell
 sudo apt install msktutil libapache2-mod-auth-gssapi krb5-user
 ```
 
-Info:
-Domain"REALM" angeben: addomain.local
-Hostname"Passwortserver" mydomaincontroller
+**Ubuntu Linux:**
 
-Apache neustarten:
+```shell
+sudo apt install msktutil libapache2-mod-auth-gssapi krb5-user
+```
+
+Gib bei der Installation folgende Werte an:
+
+*   Domain/REALM: `addomain.local`
+*   Hostname/Passwortserver: `mydomaincontroller`
+
+Starte Apache neu:
 
 ```shell
 sudo systemctl restart apache2.service
 ```
 
-Erstanmeldung und erstellen der Keytab
---------------------------------------
+## Erstanmeldung und Keytab erstellen
 
-Authentifizierung des Servers:
+Authentifiziere den Server:
 
 ```shell
 kinit <AD Administrator Account>
 ```
 
-Erstellen der Keytab:
+Erstelle die Keytab:
 
 ```shell
 msktutil --server <AD Domain-Controller> --user-creds-only --update --use-service-account --service HTTP/idoit.mydomain.local --keytab /etc/apache2/apache_krb5.keytab --password <SERVICE ACCOUNT PASSWORD> --account-name ssouser
 ```
 
-Berechtigungen für Apache vergeben
+Vergib die Berechtigungen für Apache:
 
 ```shell
 chmod 644 /etc/apache2/apache_krb5.keytab
 ```
 
-Apache Webserver konfigurieren
-------------------------------
+## Apache Webserver konfigurieren
 
-In dieser Datei wird die neue VHost-Konfiguration anpassen:
+Passe die VHost-Konfiguration an:
 
 ```shell
 sudo nano /etc/apache2/sites-available/i-doit.conf
@@ -97,50 +97,45 @@ sudo nano /etc/apache2/sites-available/i-doit.conf
 </Directory>
 ```
 
-Bitte nur den Teil in `<Directory>` `</Directory>` anpassen
+Passe nur den Teil innerhalb von `<Directory>` ... `</Directory>` an.
 
-Im Anschluss einmal den Apache neustarten damit die Änderungen wirksam werden
+Starte den Apache neu, damit die Änderungen wirksam werden:
 
 ```shell
 sudo systemctl restart apache2.service
 ```
 
-Zum Testen der Konfiguration ist folgender Befehl auszuführen:
+Teste die Konfiguration mit folgendem Befehl:
 
 ```shell
 kinit ssouser@ADDOMAIN.LOCAL
 ```
 
-Es wird nach dem Passwort des SSO-Benutzers gefragt. Mit dem Befehl
+Du wirst nach dem Passwort des SSO-Benutzers gefragt. Prüfe mit `klist`, ob ein gueltiges Ticket existiert:
 
 ```shell
 klist
 ```
 
-kann kontrolliert werden, ob ein gültiges Ticket existiert.
+## i-doit konfigurieren
 
-i-doit konfigurieren
---------------------
+Die SSO-Einstellung findest du im Admin-Center unter **System settings > Single Sign on**. Aktiviere dort **SSO**.
 
-Ab Version 1.5 kann SSO über die Web GUI von i-doit konfiguriert werden. Die entsprechende Einstellung befindet sich im Admin-Center unter **System settings → Single Sign on**. Dort ist **SSO** zu aktivieren.
+## Browser clientseitig konfigurieren
 
-Browser Client-seitig konfigurieren
------------------------------------
-
-Zuletzt muss jeder Browser konfiguriert werden, damit SSO automatisch genutzt wird.
+Damit SSO automatisch genutzt wird, muss jeder Browser entsprechend konfiguriert werden.
 
 ### Microsoft Internet Explorer (IE)
 
-In den IE-Einstellungen muss man den i-doit-Server zu den lokalen Intranet Sites hinzufügen. Danach muss man unter **Stufe anpassen** den Punkt **Automatisches Anmelden mit aktuellem Benutzernamen und Kennwort** unter dem Eintrag **Benutzerauthentifizierung** anhaken. Zusätzlich muss noch sichergestellt werden, dass unter dem Reiter **Erweitert** der **Internetoptionen** der Haken **Integrierte Windows-Authentifizierung** aktiviert ist.
+Fuege den i-doit-Server in den IE-Einstellungen zu den lokalen Intranet Sites hinzu. Aktiviere unter **Stufe anpassen > Benutzerauthentifizierung** die Option **Automatisches Anmelden mit aktuellem Benutzernamen und Kennwort**. Stelle zudem sicher, dass unter **Erweitert > Internetoptionen** der Haken **Integrierte Windows-Authentifizierung** gesetzt ist.
 
 ### Mozilla Firefox und Google Chrome
 
 SSO ist für diese Browser ebenfalls möglich. Details zur Konfiguration finden sich zu Hauf im Internet, für Firefox beispielsweise [hier](https://superuser.com/questions/664656/how-to-configure-firefox-for-ntlm-sso-single-sign-on).
 
-Troubleshooting
----------------
+## Troubleshooting
 
-Falls ein Problem bei der Authentifizierung auftreten sollte, helfen eventuell folgende Fragen und Hinweise:
+Falls bei der Authentifizierung Probleme auftreten, prüfe folgende Punkte:
 
 *   Zeiteinstellungen auf Linux und Windows DC vergleichen: Sind diese gleich?
 *   Der Server ist in den meisten Fällen nur über den vollen FQDN idoit.mydomain.local erreichbar

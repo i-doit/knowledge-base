@@ -1,6 +1,13 @@
+---
+title: "Software-Entwicklung"
+description: "Du moechtest für, mit oder in _i-doit_ entwickeln?"
+icon:
+status:
+lang: de
+---
 # Software-Entwicklung
 
-Für, mit oder in _i-doit_ enwicklen: Wie geht das? _i-doit_ ist eine Webapplikation, basierend auf der Skriptsprache PHP und der Datenbank MySQL/MariaDB. Die Web GUI ist in HTML/CSS/JS realisiert. Wir verraten, wie die Software "unter der Haube tickt". Das ist nicht nur nützlich, um _i-doit_ funktional zu erweitern, sondern auch hilfreich, um die [API](../i-doit-add-ons/api/index.md) anzusprechen oder Daten direkt aus der Datenbank zu lesen.
+Du möchtest für, mit oder in _i-doit_ entwickeln? _i-doit_ ist eine Webapplikation auf Basis von PHP und MySQL/MariaDB. Die Web GUI nutzt HTML/CSS/JS. In diesem Bereich erfährst du, wie die Software unter der Haube funktioniert -- nuetzlich sowohl für funktionale Erweiterungen als auch für die Nutzung der [API](../i-doit-add-ons/api/index.md) oder den direkten Zugriff auf die Datenbank.
 
-*   [Datenbank-Modell](datenbank-modell/index.md)
-*   [Add-ons entwickeln](add-ons-entwickeln/index.md)
+*   [Datenbank-Modell](datenbank-modell/index.md) — i-doit speichert die meisten Inhalte und Einstellungen in einem Database Management System (DBMS) ab.
+*   [Add-ons entwickeln](add-ons-entwickeln/index.md) — Add-ons sind eigenstaendige Applikationsteile, die den Funktionsumfang von i-doit erweitern.

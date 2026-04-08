@@ -1,10 +1,17 @@
+---
+title: Report views
+description: "Die Report Views werden in i-doit für spezifische Anwendungsfälle verwendet, die sich mit Hilfe des \"Report Manager\" nicht abbilden lassen oder z.B."
+icon:
+status:
+lang: de
+---
 # Report views
 
 Die Report Views werden in i-doit für spezifische Anwendungsfälle verwendet, die sich mit Hilfe des "Report Manager" nicht abbilden lassen oder z.B. über interaktive Elemente verfügen.
 
 Der Vorteil einer Report View ist, dass diese mittels PHP Logik und einem spezifischen Template Daten der CMDB verarbeiten und ausgeben kann, anstatt wie bei "klassischen" Reports nur eine SQL Query auszuführen und als Tabelle darzustellen.
 
-Daher eignen Sie sich ausgezeichnet für die Abbildung komplexer Abfragen, welche optional parametrisiert werden können, um eine große Variation an ähnlichen Sachverhalten abzudecken. Ferner bieten Report Views die Möglichkeit der Auswahl von anderen Visualisierungsformen als eine einfache Tabelle.
+Daher eignen du dich ausgezeichnet für die Abbildung komplexer Abfragen, welche optional parametrisiert werden können, um eine große Variation an ähnlichen Sachverhalten abzudecken. Ferner bieten Report Views die Möglichkeit der Auswahl von anderen Visualisierungsformen als eine einfache Tabelle.
 
 Für eine Report View müssen drei Dinge gegeben sein:
 

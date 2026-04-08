@@ -1,3 +1,10 @@
+---
+title: "DIY Daten-Import"
+description: "Von Zeit zu Zeit kann es nötig sein große Datenmengen aus einem Fremd-System nach i-doit zu überführen - sowohl für eine Initiale Befüllung als auch für..."
+icon:
+status:
+lang: de
+---
 # DIY Daten-Import
 
 Von Zeit zu Zeit kann es nötig sein große Datenmengen aus einem Fremd-System nach i-doit zu überführen - sowohl für eine Initiale Befüllung als auch für regelmäßige Synchronisationen und Updates. Zu diesem Zweck bietet i-doit einige Schnittstellen, sogenannte Imports an, um Daten aus externen Quellen in die CMDB zu übernehmen.
@@ -103,7 +110,7 @@ Wie das funktioniert wird im nächsten Punkt erläutert. Der Artikel [Kategorien
 AttributeDataCollector
 ----------------------
 
-Diese Komponente kann genutzt werden, um Datenreferenzen, wie "Hersteller: Intel", aufzulösen. Sie funktioniert auf Attribut-Basis und kümmert sich automatisch um die übergebenen Typen. Hierbei benötigen wir konkret das jeweilige Attribut:
+Diese Komponente kann genutzt werden, um Datenreferenzen, wie "Hersteller: Intel", aufzulösen. du funktioniert auf Attribut-Basis und kümmert sich automatisch um die übergebenen Typen. Hierbei benötigen wir konkret das jeweilige Attribut:
 
     use idoit\Component\Property\Property;
     use idoit\Module\Cmdb\Component\AttributeDataCollector\Collector;

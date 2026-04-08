@@ -1,17 +1,22 @@
-# DNS Documentation
+---
+title: DNS Documentation
+description: Article for the DNS Documentation add-on
+icon:
+status:
+lang: en
+---
 
-The "DNS Documentation" [add-on](./index.md) was designed and created as the first add-on with the [Add-on Packager](./add-on-packager.md). The idea behind the DNS Documentation is to easily document DNS entries in i-doit. The add-on creates the necessary object types and categories.
+With the "DNS Documentation" add-on, you document DNS entries directly in i-doit. The add-on was created with the [Add-on Packager](./add-on-packager.md) and automatically includes all necessary object types and categories.
 
-Installation and license
----------------------------
+## installation and license
 
-The "DNS Documentation" add-on is installed like any other add-on via the [Admin-Center](../system-administration/admin-center.md). The add-on does not require a license. However, it can only be used with the pro variant.
+Install the add-on as usual via the [Admin Center](../administration/admin-center.md). It does not require a license but requires the pro variant of i-doit.
 
-Add-on content
+## Contents of the add-on
 
-The "DNS Documentation" add-on brings the following object types, categories and Dialog+ entries:
+The "DNS Documentation" add-on includes the following object types, categories, and Dialog+ entries:
 
-| Objekt-type | Category | Dialog+ Field | Dialog+ Entry |
+| Object type | Category | Dialog+ field | Dialog+ entries |
 | --- | --- | --- | --- |
 | DNS Server | DNS Zones | \-  | \-  |
 | DNS Zone | Authoritative Nameservers | Role | Primary |
@@ -32,57 +37,49 @@ The "DNS Documentation" add-on brings the following object types, categories and
 |     |     |     | CH (Chaosnet) |
 |     |     |     | HS (Hesoid) |
 
-DNS Server
-----------
+## DNS Server
 
-The delivered object type "DNS Server" is based on a normal server object, with the additional category "DNS Zones" assigned.
-In the add-on, an explicit object type is used so that a smooth integration can be ensured. The automatically assigned category "DNS Zones" contains an overview of all assigned DNS zones. (This is a backward category, which is why the information cannot be edited here).
+The "DNS Server" object type is based on a normal server object, supplemented with the "DNS Zones" category. This category displays an overview of all assigned DNS zones.
 
-[![DNS Server](../assets/images/en/i-doit-add-ons/dns-documentation/1-dns.png)](../assets/images/en/i-doit-add-ons/dns-documentation/1-dns.png)
+!!! info "'DNS Zones' is a backward category -- you can only read the information here, not edit it."
 
-DNS Zone
---------
+[![DNS Server](../assets/images/de/i-doit-add-ons/dns-documentation/1-dns.png)](../assets/images/de/i-doit-add-ons/dns-documentation/1-dns.png)
 
-In the new object type "DNS Zone" all information about the zone entries is documented.
-Three additional categories are available here:
+## DNS Zone
 
-*   Authoritative Nameservers → the associated name servers are entered here and can be distinguished between "Primary" and "Secondary".
-*   DNS Records → the "individual lines" of a zone file can be entered here. These can be created suitably over the supplied "Types".
-*   SOA Record → here the SOA record can be explicitly documented.
+In the "DNS Zone" object type, you document all zone information. Three categories are available:
 
-### Authorizing name servers
+*   **Authoritative Nameservers** -- Enter the associated nameservers and distinguish between "Primary" and "Secondary".
+*   **DNS Records** -- Document the individual lines of a zone file. The included "Types" help you create entries correctly.
+*   **SOA Record** -- Document the SOA record separately and in detail.
 
-The category "Authoritative Nameservers" is a multi-value category.
+### Authoritative Nameservers
 
-[![Authorizing name servers](../assets/images/en/i-doit-add-ons/dns-documentation/2-dns.png)](../assets/images/en/i-doit-add-ons/dns-documentation/2-dns.png)
+The "Authoritative Nameservers" category is a multi-value category -- you can create any number of entries.
 
-Two pieces of information are documented in one entry:
+[![Authoritative Nameservers](../assets/images/de/i-doit-add-ons/dns-documentation/2-dns.png)](../assets/images/de/i-doit-add-ons/dns-documentation/2-dns.png)
 
-*   DNS Server Object
-*   Role
+Each entry contains two pieces of information:
 
-[![DNS Server Object](../assets/images/en/i-doit-add-ons/dns-documentation/3-dns.png)](../assets/images/en/i-doit-add-ons/dns-documentation/3-dns.png)
+1. **DNS Server Object** -- Select the server via the object browser.
+2. **Role** -- Assign the "Primary" or "Secondary" role to the server.
 
-An object browser is available for the "DNS server object" attribute. The corresponding DNS server can then be selected here. In addition, the corresponding "role" can also be specified for each server. Available here are → Primary and Secondary
+[![DNS Server Object](../assets/images/de/i-doit-add-ons/dns-documentation/3-dns.png)](../assets/images/de/i-doit-add-ons/dns-documentation/3-dns.png)
 
-DNS Records
------------
+### DNS Records
 
-The "DNS Records" category is also a multi-value category.
+"DNS Records" is also a multi-value category. This way you document a DNS file line by line and maintain an overview.
 
-[![DNS Records](../assets/images/en/i-doit-add-ons/dns-documentation/4-dns.png)](../assets/images/en/i-doit-add-ons/dns-documentation/4-dns.png)
+[![DNS Records](../assets/images/de/i-doit-add-ons/dns-documentation/4-dns.png)](../assets/images/de/i-doit-add-ons/dns-documentation/4-dns.png)
 
-The category was designed as a multi-value category so that a DNS file can be documented "line by line". This allows an overview of all entries.
+[![DNS Records](../assets/images/de/i-doit-add-ons/dns-documentation/5-dns.png)](../assets/images/de/i-doit-add-ons/dns-documentation/5-dns.png)
 
-[![DNS Records](../assets/images/en/i-doit-add-ons/dns-documentation/5-dns.png)](../assets/images/en/i-doit-add-ons/dns-documentation/5-dns.png)
+Each entry consists of the text fields **Name**, **Time to live**, and **Data** as well as the Dialog+ fields **Class** and **Type**. Predefined entries are included for "Class" and "Type".
 
-An entry consists of the text fields "Name", "Time to live", "Data" and the Dialog+ fields "Class" and "Type". Predefined entries are supplied for the Dialog+ fields "Class" and "Type".
+### SOA Records
 
-SOA Records
------------
+In the "SOA Records" category, you document the "Start of Authority" in detail. Since the SOA record is unique per zone, this is a single-value category.
 
-In addition to the simple DNS records, there is the category "SOA Records". This category allows the so-called "Start of Authority" to be documented in more detail. Since the SOA record is unique, the category is also not available as a multi-value category.
+[![SOA Records](../assets/images/de/i-doit-add-ons/dns-documentation/6-dns.png)](../assets/images/de/i-doit-add-ons/dns-documentation/6-dns.png)
 
-[![SOA Records](../assets/images/en/i-doit-add-ons/dns-documentation/6-dns.png)](../assets/images/en/i-doit-add-ons/dns-documentation/6-dns.png)
-
-Apart from the dialog+ field "Class", all fields are available as text fields. All necessary information of the SOA record can be documented here.
+Except for the Dialog+ field "Class", all fields are available as text fields.

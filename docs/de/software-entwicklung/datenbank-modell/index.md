@@ -1,3 +1,10 @@
+---
+title: "Datenbank-Modell"
+description: "i-doit speichert die meisten Inhalte und Einstellungen in einem Database Management System (DBMS) ab."
+icon:
+status:
+lang: de
+---
 # Datenbank-Modell
 
 i-doit speichert die meisten Inhalte und Einstellungen in einem Database Management System (DBMS) ab. Als DBMS kommen [MySQL oder MariaDB](../../installation/systemvoraussetzungen.md) zum Einsatz. Doch wie ist das Datenbank-Modell von i-doit aufgebaut?

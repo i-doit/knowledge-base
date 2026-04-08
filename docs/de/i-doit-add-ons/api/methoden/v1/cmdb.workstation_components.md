@@ -1,6 +1,6 @@
 ---
 title: cmdb.workstation_components.read
-description: cmdb.workstation_components.read
+description: "Fetches workplace components for a Person."
 icon: material/api
 #status: updated
 lang: de
@@ -191,3 +191,9 @@ Fetches workplace components for a Person.
       }
     }
     ```
+
+## Siehe auch
+
+- [API v1 Methoden](index.md) — Übersicht aller API v1 Methoden
+- [API Add-on](../../index.md) — Einstieg in das API Add-on
+- [i-doit Add-ons](../../../index.md) — Alle verfügbaren Add-ons

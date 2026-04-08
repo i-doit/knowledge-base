@@ -1,6 +1,6 @@
 ---
 title: Report Manager
-description: Report Manager
+description: "Das Berichtswesen ist ein geeignetes Mittel, um Daten zu verdichten, aufzubereiten und an Dritte weiterzugeben."
 icon: report-manager
 status:
 lang: de
@@ -14,11 +14,11 @@ Das Berichtswesen ist ein geeignetes Mittel, um Daten zu verdichten, aufzubereit
 
 Der Report Manager ist über die Hauptnavigationsleiste unter **Extras → Report Manager** zu erreichen. Im Navigationsbaum auf der linken Seite erscheinen die Punkte **Reports**, **Online Repository** und **Views**, auf die im folgenden eingegangen wird. Sollte der Report Manager bzw. die Punkte im Navigationsbaum nicht oder nur unvollständig erscheinen, liegt das an fehlenden Berechtigungen.
 
-[![Ueberblick](../assets/images/de/auswertungen/report-manager/1-rm.png)](../assets/images/de/auswertungen/report-manager/1-rm.png)
+[![Überblick](../assets/images/de/auswertungen/report-manager/1-rm.png)](../assets/images/de/auswertungen/report-manager/1-rm.png)
 
 ## Report-Special Add-on
 
-Mit dem Report-Special Add-on werden ca. 50 vorgefertigte Reports importiert. Mehr Informationen zum Add-on finden Sie im [Kundenportal](../administration/kundenportal.md).
+Mit dem Report-Special Add-on werden ca. 50 vorgefertigte Reports importiert. Mehr Informationen zum Add-on findest du im [Kundenportal](../administration/kundenportal.md).
 
 ## Report auswerten
 
@@ -26,17 +26,17 @@ Die selbst erstellten Reports befinden sich unter dem Punkt **Reports**. Nach de
 
 [![report-auswerten](../assets/images/de/auswertungen/report-manager/2-rm.png)](../assets/images/de/auswertungen/report-manager/2-rm.png)
 
-Beim Klicken auf einen Report in der Liste, wird dieser mit den aktuellen Daten ausgeführt. Die Ergebnisliste eines Reports ist in _i-doit_ tabellarisch aufgebaut. Reports fokussieren sich stets auf Objekte und deren Attribute. Pro Ergebniszeile steht daher ein Hauptobjekt im Fokus, zu dem beliebige Attribute wie Beziehungen zu anderen Objekten angegeben sein können. Durch einen Klick auf eine Zeile wird das dementsprechende Objekt geladen.
+Klicke auf einen Report in der Liste, um ihn mit den aktuellen Daten auszuführen. Die Ergebnisliste ist tabellarisch aufgebaut. Reports fokussieren sich stets auf Objekte und deren Attribute -- pro Ergebniszeile steht ein Hauptobjekt im Fokus, zu dem beliebige Attribute wie Beziehungen zu anderen Objekten angegeben sein können. Durch einen Klick auf eine Zeile öffnest du das entsprechende Objekt.
 
 [![report-auswerten2](../assets/images/de/auswertungen/report-manager/3-rm.png)](../assets/images/de/auswertungen/report-manager/3-rm.png)
 
 Die Tabelle bietet verschiedene Funktionalitäten (Spaltensortierung, nach einer Spalte filtern, Pagination). Weiterhin lässt sich ein Report in verschiedene Formate exportieren (Klartext, CSV, XML und PDF). Für die Weiterverarbeitung mit einem Tabellenkalkulationsprogramm o. ä. bietet sich der Export ins CSV-Format an.
 
-Aus einem Report lässt sich ein Objekt vom Typ **Objektgruppe** generieren. Deren gleichnamige Kategorie sind die Objekte aus dem Report statisch zugeordnet. Alternativ ist es möglich, eine Objekt vom Typ **Objektgruppe** anzulegen, deren Objektzuweisung dynamisch sind. Dazu wählt man in der Kategorie **Typ** die entsprechende Einstellung aus und wählt einen Report. Von nun an enthält diese Objektgruppe immer die aktuelle Liste an Objekten, die der zugeordnete Report als Ergebnis liefert. Dies geschieht also zur Laufzeit.
+Aus einem Report kannst du ein Objekt vom Typ **Objektgruppe** generieren. Die Objekte aus dem Report sind der gleichnamigen Kategorie statisch zugeordnet. Alternativ legst du eine **Objektgruppe** mit dynamischer Zuweisung an: Wähle dazu in der Kategorie **Typ** die entsprechende Einstellung und verknüpfe einen Report. Die Objektgruppe enthält dann immer die aktuelle Ergebnisliste des Reports -- zur Laufzeit ermittelt.
 
 ## Reports kategorisieren
 
-Reports können kategorisiert werden. Standardmäßig werden sie der Kategorie **Global** zugeordnet, die standardmäßig zur Verfügung steht und nicht gelöscht werden kann. Der Vorteil der Kategorisierung liegt im Berechtigungskonzept: Pro Kategorie kann angegeben werden, wer darauf zugreifen darf. Befindet man sich auf der Seite Reports, können über den Punkt **Kategorien** neue Kategorien erstellt oder bestehende bearbeitet werden. Hilfreich hierbei ist das optionale Beschreibungsfeld.
+Reports lassen sich in Kategorien einordnen. Standardmäßig werden sie der Kategorie **Global** zugeordnet, die nicht gelöscht werden kann. Der Vorteil: Pro Kategorie kannst du festlegen, wer darauf zugreifen darf. Auf der Seite **Reports** erstellst oder bearbeitest du Kategorien über den Punkt **Kategorien**. Das optionale Beschreibungsfeld hilft bei der Orientierung.
 
 [![reports-kategorisieren](../assets/images/de/auswertungen/report-manager/4-rm.png)](../assets/images/de/auswertungen/report-manager/4-rm.png)
 
@@ -45,7 +45,7 @@ Reports können kategorisiert werden. Standardmäßig werden sie der Kategorie *
 
 ## Report erstellen oder bearbeiten
 
-Reports können kopiert werden. Hierzu markiert man einen Report und klickt auf den Button **Duplizieren**. Gelöscht wird ein Report über den Button **Purge**. Dieser Schritt ist unwiderruflich.
+Du kannst Reports kopieren, indem du einen Report markierst und auf **Duplizieren** klickst. Über den Button **Purge** löschst du einen Report unwiderruflich.
 
 [![reports-erstellen-oder-bearbeiten](../assets/images/de/auswertungen/report-manager/5-rm.png)](../assets/images/de/auswertungen/report-manager/5-rm.png)
 
@@ -53,7 +53,7 @@ Zum Erstellen eines Reports bieten sich zwei Arten an, die im folgenden näher e
 
 ### Abfrage-Editor
 
-Der Abfrage-Editor bietet eine grafische Oberfläche, um einen neuen Report zu erstellen oder einen bestehenden zu bearbeiten. Er wird über den Button **Neu** aufgerufen. Alternativ findet man neben diesem Button in dem Drop-Down-Feld den Button **Abfrage-Editor**. Soll ein bestehender Report bearbeitet werden, muss die Checkbox neben dem Report ausgewählt und einer der oben genannten Buttons geklickt werden.
+Der Abfrage-Editor bietet eine grafische Oberfläche, um Reports zu erstellen oder zu bearbeiten. Rufe ihn über den Button **Neu** auf oder wähle im Drop-Down-Feld daneben **Abfrage-Editor**. Um einen bestehenden Report zu bearbeiten, aktiviere die Checkbox neben dem Report und klicke auf einen der genannten Buttons.
 
 [![abfrage-editor](../assets/images/de/auswertungen/report-manager/6-rm.png)](../assets/images/de/auswertungen/report-manager/6-rm.png)
 
@@ -79,21 +79,21 @@ Es gibt folgende erweiterte Optionen.
 
 [![Ausgabe](../assets/images/de/auswertungen/report-manager/8-rm.png)](../assets/images/de/auswertungen/report-manager/8-rm.png)
 
-Im Bereich **Ausgabe** hat man die Möglichkeit, die Spalten der Ergebnisliste zu definieren. Dazu wählt man die gewünschten Attribute aus den drei Kategorietypen **Global**, **Spezifisch** und **Benutzerdefiniert** aus. Jedes Attribut definiert eine Spalte. Die Reihenfolge der Spalten lässt sich per Drag'n'Drop festlegen.
+Im Bereich **Ausgabe** definierst du die Spalten der Ergebnisliste. Wähle die gewünschten Attribute aus den drei Kategorietypen **Global**, **Spezifisch** und **Benutzerdefiniert** aus. Jedes Attribut definiert eine Spalte, deren Reihenfolge du per Drag'n'Drop festlegst.
 
-Nach einigen ausgewählten Attributen kann automatisch sortiert werden, sobald der Report ausgeführt wird. Dazu dient die Radiobox neben dem ausgewählten Attribut. Ist kein Attribut ausgewählt, wird nach der Objekt-ID sortiert.
+Über die Radiobox neben einem Attribut aktivierst du die automatische Sortierung. Ist kein Attribut ausgewählt, wird nach der Objekt-ID sortiert.
 
-Wird als Attribut eine Objektreferenzierung ausgewählt, können über die eingeblendete Lupe weitere Attribute des in Beziehung stehenden Objekts ausgewählt werden. Dazu öffnet sich beim Klick auf die Lupe eine weitere Abfrage nach dem oben beschriebenen Prinzip. Diese Unterabfragen können selbstverständlich wiederum zu Unterabfragen gemacht werden (rekursiv).
+Wählst du als Attribut eine Objektreferenzierung, kannst du über die eingeblendete Lupe weitere Attribute des verknüpften Objekts hinzufügen. Diese Unterabfragen lassen sich beliebig verschachteln (rekursiv).
 
 #### Bedingungen
 
 [![Bedingungen](../assets/images/de/auswertungen/report-manager/9-rm.png)](../assets/images/de/auswertungen/report-manager/9-rm.png)
 
-Über den Punkt **Bedingungen** können gewünschte Konditionen angegeben werden. Um auf ein bestimmtes Attribut zu prüfen, wird dieses mit der passenden Kategorie ausgewählt. Daraufhin wird die logische Abfrage konstruiert: Welchem Wert muss das Attribut entsprechen (oder nicht)? Typische Angaben wie =, !=, <, > usw. sind hier möglich und richten sich nach dem Feldtypen des Attributs. Ebenfalls richtet sich die Auswahl nach dem ausgewählten Attribut.
+Über den Punkt **Bedingungen** gibst du die gewünschten Filterkriterien an. Wähle das zu prüfende Attribut mit der passenden Kategorie aus und konstruiere die logische Abfrage: Welchem Wert muss das Attribut entsprechen (oder nicht)? Typische Operatoren wie `=`, `!=`, `<`, `>` stehen je nach Feldtyp zur Verfügung.
 
-Einfache Verschachtelungen mit und oder oder sind möglich, indem über den **+**\-Button und Konditionsblöcke weitere Bedingungen angegeben werden. Über den **-**\-Button werden Bedingungen entfernt. Leere Konditionsblöcke werden automatisch entfernt.
+Über den **+**-Button fuegest du weitere Bedingungen hinzu und verschachtelst sie mit **und** oder **oder**. Über den **-**-Button entfernst du Bedingungen. Leere Konditionsbloecke werden automatisch entfernt.
 
-Möchte man Bedingungen setzen, die auf Attribute von Objekten, die in Beziehung stehen, abzielen, wählt man das Attribut mit der Objektbeziehung aus und setzt die Bedingung auf **Verknüpftes Attribut**. Daraufhin kann man in einem Unterkonditionsblock weitere Bedingungen angeben.
+Um Bedingungen auf Attribute verknüpfter Objekte zu setzen, wähle das Attribut mit der Objektbeziehung aus und setze die Bedingung auf **Verknüpftes Attribut**. In einem Unterkonditionsblock gibst du dann die weiteren Bedingungen an.
 
 #### Aktualisieren der Reports nach einem Update
 
@@ -103,14 +103,14 @@ Durch i-doit updates kann sich auch der Abfrage-Editor ändern, sodass Abfragen 
 
 ### SQL-Editor
 
-Jeder Report lässt sich über den SQL-Editor erstellen oder bearbeiten - also auch diejenigen, die mit dem Abfrage-Editor erstellt worden sind. Auf der Übersichtsseite der **Reports** klickt man entweder das Drop-Down-Feld neben **Neu** oder selektiert einen bestehenden Report und klickt das Drop-Down-Feld neben **Bearbeiten** an und wählt den Punkt **SQL-Editor**.
+Jeden Report kannst du über den SQL-Editor erstellen oder bearbeiten -- auch solche, die mit dem Abfrage-Editor erstellt wurden. Klicke auf der Übersichtsseite der **Reports** das Drop-Down-Feld neben **Neu** oder selektiere einen bestehenden Report, klicke das Drop-Down-Feld neben **Bearbeiten** und wähle **SQL-Editor**.
 
 !!! info "Wechsel zwischen Abfrage- und SQL-Editor"
     Wird ein Report mit dem SQL-Editor erstellt oder bearbeitet, ist die nachträgliche Bearbeitung mit dem Abfrage-Editor nicht mehr möglich. Hintergrund: Im SQL-Editor steht das volle Spektrum von SQL zur Verfügung. Da der Abfrage-Editor auf ein Subset von SQL beschränkt ist (was in den meisten Fällen reicht), könnte durch diese Differenz die erstellt Abfrage zerstört werden.
 
 [![sql-editor](../assets/images/de/auswertungen/report-manager/10-rm.png)](../assets/images/de/auswertungen/report-manager/10-rm.png)
 
-Im Formularfeld **SQL-Abfrage** wird die Abfrage in SQL geschrieben. Kenntnisse über die Datenbank-Struktur von i-doit sind hier vonnöten. Wichtig ist, dass man immer Objekte abfragt und als erste (unsichtbare) Spalte die ID des Objektes selektiert:
+Im Formularfeld **SQL-Abfrage** schreibst du die Abfrage in SQL. Kenntnisse über die Datenbank-Struktur von i-doit sind hier erforderlich. Wichtig: Du musst immer Objekte abfragen und als erste (unsichtbare) Spalte die ID des Objektes selektieren:
 
 ```sql
 SELECT obj_main.isys_obj__id AS '__id__' FROM isys_obj AS obj_main;
@@ -133,13 +133,13 @@ obj_main.isys_obj__title AS 'LC__UNIVERSAL__TITLE###1'
 
 ## Report exportieren/importieren
 
-Reports können auch exportiert bzw. importiert werden. Wenn der gewünschte Report über die Checkbox gewählt wurde, kann er über die Schaltfläche oben in eine Datei exportiert werden. Diese Datei kann in einer anderen Instanz oder einem anderen Mandanten importiert werden, sodass der Report dort ebenfalls genutzt werden kann. Die Bearbeitung ist, wenn der Report ursprünglich über den Abfrage-Editor erstellt wurde, auch weiterhin über den Abfrage-Editor möglich.
+Du kannst Reports exportieren und importieren. Wähle den gewünschten Report über die Checkbox und klicke auf die Export-Schaltfläche. Die exportierte Datei lässt sich in einer anderen Instanz oder einem anderen Mandanten importieren. Reports, die mit dem Abfrage-Editor erstellt wurden, bleiben auch nach dem Import über den Abfrage-Editor bearbeitbar.
 
-Beim Transfer eines Reports ist zu beachten, dass Bedingungen und Ausgaben, die sich auf individuelle Inhalte (z.B. eine Objekt-ID oder eine benutzerdefinierte Kategorie) beziehen, nachbearbeitet werden müssen, wenn diese nicht in der Ziel-Instanz identisch sind, da sie andernfalls ein Ergebnis liefern, das von der Erwartung abweicht.
+Beachte beim Transfer: Bedingungen und Ausgaben, die sich auf individuelle Inhalte beziehen (z.B. eine Objekt-ID oder eine benutzerdefinierte Kategorie), musst du nachbearbeiten, wenn diese in der Ziel-Instanz nicht identisch sind.
 
 ## Online Repository
 
-Im Internet sind bereits einige vorgefertigte Reports zum Download verfügbar. Über den Punkt **Online Repository** kann man diese direkt ausführen oder erst lokal speichern. Eine bestehende Internetverbindung ist dazu nötig.
+Im Internet stehen vorgefertigte Reports zum Download bereit. Über den Punkt **Online Repository** kannst du diese direkt ausführen oder lokal speichern. Eine bestehende Internetverbindung ist dafür erforderlich.
 
 [![online-repository](../assets/images/de/auswertungen/report-manager/11-rm.png)](../assets/images/de/auswertungen/report-manager/11-rm.png)
 
@@ -196,7 +196,7 @@ Die Automatisierung kann beispielsweise durch einen Cronjob erledigt werden.
 
 ## Rechte vergeben
 
-Benutzern und Benutzergruppen (in i-doit vertreten durch die Objekttypen **Personen** und **Personengruppen**) können Rechte für den Report Manager vergeben werden. Konfigurieren lässt sich dies über **Verwaltung → Berechtigungen → Report Manager**. Folgende Rechte lassen sich vergeben:
+Benutzern und Benutzergruppen (Objekttypen **Personen** und **Personengruppen**) kannst du Rechte für den Report Manager vergeben. Die Konfiguration findest du unter **Verwaltung > Berechtigungen > Report Manager**. Folgende Rechte stehen zur Verfügung:
 
 *   **Online Repository**
 *   **Report Views**

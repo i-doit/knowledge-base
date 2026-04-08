@@ -183,3 +183,8 @@ Inhalt:
 ```
 
 Damit ist auch die Nachbereitung abgeschlossen. Nun können wieder alle Automatismen gestartet werden. Die Downtime ist beendet und i-doit kann wieder von den Benutzern wie gewohnt aufgerufen werden.
+
+## Siehe auch
+
+- [Upgrades und Umzuege](../upgrades-und-umzuege/index.md) — Aktuelle Upgrade-Anleitungen
+- [Installation](../installation/index.md) — i-doit installieren

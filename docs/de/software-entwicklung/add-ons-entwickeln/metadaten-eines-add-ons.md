@@ -1,3 +1,10 @@
+---
+title: "Metadaten eines Add-ons"
+description: "Die package.json\\-Datei kann in etwa mit einer composer.json verglichen werden."
+icon:
+status:
+lang: de
+---
 # Metadaten eines Add-ons
 
 Die package.json\-Datei kann in etwa mit einer composer.json verglichen werden. Der Inhalt dieser Datei gibt Aufschluss über die Inhalte des Add-ons, die Version und Abhängigkeiten. 

@@ -21,7 +21,7 @@ Der Objekttyp "Baustein" bildet die Bausteine aus dem Grundschutzkompendium ab. 
 - **Allgemein** (i-doit Standardkategorie): Gehört zu jedem Objekt.
 - **Anforderungen**: Dies ist eine Multivalue-Kategorie, in der alle Anforderungen verknüpft sind, die zu diesem Baustein gehören.
 - **Baustein**: Diese Kategorie enthält die textuellen Beschreibungen des Bausteins aus dem Grundschutzkompendium, wie z.B. Nummer, Titel, Einleitung, Zielsetzung und Abgrenzung.
-- **Dateien** (i-doit Standardkategorie): Hier können zusätzlich Dateien zu diesem Baustein verlinkt werden.
+- **Dateien** (i-doit Standardkategorie): Hier verlinkst du zusätzlich Dateien zu diesem Baustein.
 - **Gefährdungslage**: Dies ist eine Multivalue-Kategorie, in der alle Gefährdungen verknüpft sind, die zu diesem Baustein gehören.
 - **Kontaktzuweisung** (i-doit Standardkategorie): Hier müssen die entsprechenden Ansprechpartner für den Baustein eingetragen werden.
 - **Zielobjekte/-gruppen**: Dies ist eine Multivalue-Kategorie, in der alle Objekte verknüpft sind, denen dieser Baustein zugewiesen (entweder über die Kategorie "Prozessbausteine" oder über die Kategorie "Zugeordnete Bausteine").
@@ -62,9 +62,9 @@ Für jeden Informationsverbund gibt es genau ein Objekt vom Typ "Informationsver
 - **Allgemein** (i-doit Standardkategorie): Gehört zu jedem Objekt.
 - **IT-Grundschutz (Informationsverbund)**: Dies ist eine Kategorien-Gruppe, die die folgenden vier Kategorien beinhaltet:
 Informationsverbund: Hier werden die grundlegenden Informationen zum Informationsverbund dokumentiert wie der bereinigte Netzplan und die Leitlinie zur Informationssicherheit
-  - **Infrastrukturanalyse**: Diese Multivalue-Kategorie zeigt alle mit diesem Informationsverbund über die rückwärtige Kategorie "Informationsverbünde" direkt verknüpften Objekte an. Mehr dazu findet man unter [Strukturanalyse](structural-analysis.md).
-  - **IT-Grundschutz Check**: Die Übersichtsseite zeigt alle durch die Bausteine zugewiesenen Anforderungen, sortiert nach Baustein und Anforderungsnummer. Mehr dazu findet man unter [IT-Grundschutz-Check](it-grundschutz-check.md).
-  - **Prozessbausteine**: Hier können die Prozessbausteine zugewiesen werden, die für den gesamten Informationsverbund gelten. Aus technischer Sicht können auch Systembausteine zugewiesen werden, in der Regel werden diese jedoch den jeweiligen Zielobjekten bzw. Zielobjektgruppen zugewiesen. Mehr dazu findet man unter [Strukturanalyse](structural-analysis.md).
+  - **Infrastrukturanalyse**: Diese Multivalue-Kategorie zeigt alle mit diesem Informationsverbund über die rückwärtige Kategorie "Informationsverbünde" direkt verknüpften Objekte an. Mehr dazu findest du unter [Strukturanalyse](structural-analysis.md).
+  - **IT-Grundschutz Check**: Die Übersichtsseite zeigt alle durch die Bausteine zugewiesenen Anforderungen, sortiert nach Baustein und Anforderungsnummer. Mehr dazu findest du unter [IT-Grundschutz-Check](it-grundschutz-check.md).
+  - **Prozessbausteine**: Hier weist du die Prozessbausteine zu, die für den gesamten Informationsverbund gelten. Technisch kannst du auch Systembausteine zuweisen, in der Regel werden diese jedoch den jeweiligen Zielobjekten bzw. Zielobjektgruppen zugeordnet. Mehr dazu findest du unter [Strukturanalyse](structural-analysis.md).
 - **Kontaktzuweisung**: (i-doit Standardkategorie) Hier müssen die entsprechenden Rollen für den kompletten Informationsverbund eingetragen werden, allen voran natürlich der Informationssicherheitsbeauftragte (ISB).
 
 **Reports**:
@@ -86,14 +86,14 @@ Im Rahmen der Strukturanalyse sollen "ähnliche" Zielobjekte zur Komplexitätsre
 
 - **Allgemein (i-doit Standardkategorie)**: Gehört zu jedem Objekt.
 - **IT-Grundschutz (Zielobjekte)**: Dies ist eine Kategorien-Gruppe, die die folgenden sieben Kategorien beinhaltet:
-- **Informationsverbünde**: Diese Multivalue-Kategorie zeigt alle Informationsverbünde an, denen diese Zielobjektgruppe zugewiesen ist (über die rückwärtige Kategorie "Infrastrukturanalyse"). Auch wenn es technisch möglich ist, die Zielobjektgruppe mehreren Informationsverbünden zuzuweisen, sollte eine Zielobjektgruppe in der Regel nur einem Informationsverbund zugeordnet werden. Mehr dazu findet man unter [Strukturanalyse](structural-analysis.md).
-- **IT-Grundschutz-Check**: Die Übersichtsseite zeigt alle durch die Bausteine zugewiesenen Anforderungen, sortiert nach Baustein und Anforderungsnummer. Mehr dazu findet man unter [IT-Grundschutz-Check](it-grundschutz-check.md).
+- **Informationsverbünde**: Diese Multivalue-Kategorie zeigt alle Informationsverbünde an, denen diese Zielobjektgruppe zugewiesen ist (über die rückwärtige Kategorie "Infrastrukturanalyse"). Auch wenn du die Zielobjektgruppe technisch mehreren Informationsverbünden zuweisen kannst, solltest du sie in der Regel nur einem Informationsverbund zuordnen. Mehr dazu findest du unter [Strukturanalyse](structural-analysis.md).
+- **IT-Grundschutz-Check**: Die Übersichtsseite zeigt alle durch die Bausteine zugewiesenen Anforderungen, sortiert nach Baustein und Anforderungsnummer. Mehr dazu findest du unter [IT-Grundschutz-Check](it-grundschutz-check.md).
 - **Klassifikation von Informationen**: Hier kann die Klassifikation der Informationen vorgenommen werden, die laut BSI Standard 200-2 Teil der Dokumentation des Sicherheitsprozesses ist.
-- **Schutzbedarfsfeststellung**: Hier kann der Schutzbedarf für dieses Objekt oder diese Objektgruppe in den definierten Grundwerten festgelegt und begründed werden. Mehr dazu findet man unter [Schutzbedarfsfeststellung](assessment-of-protection.md).
-- **Zugeordnete Bausteine**: Hier können die Bausteine zugeordneten werden, die für dieses Objekt oder diese Objektgruppe gelten sollen. In der Regel werden hier Systembausteine zugeordnet, es ist aber auch möglich hier Prozessbausteine zuzuweisen, wenn es für dieses Objekt oder diese Objektgruppe Abweichungen von den im Informationsverbund zugewiesenen Prozessbausteinen gibt. Mehr dazu findet man unter [Strukturanalyse](structural-analysis.md).
+- **Schutzbedarfsfeststellung**: Hier kann der Schutzbedarf für dieses Objekt oder diese Objektgruppe in den definierten Grundwerten festgelegt und begründet werden. Mehr dazu findest du unter [Schutzbedarfsfeststellung](assessment-of-protection.md).
+- **Zugeordnete Bausteine**: Hier ordnest du die Bausteine zu, die für dieses Objekt oder diese Objektgruppe gelten sollen. In der Regel werden hier Systembausteine zugeordnet, es ist aber auch möglich hier Prozessbausteine zuzuweisen, wenn es für dieses Objekt oder diese Objektgruppe Abweichungen von den im Informationsverbund zugewiesenen Prozessbausteinen gibt. Mehr dazu findest du unter [Strukturanalyse](structural-analysis.md).
 - **Zugewiesene Anforderungen**: Dies ist eine virtuelle Kategorie, die alle Anforderungen anzeigt, die durch die zugeordneten Bausteine zugewiesen werden.
 - **Zugewiesene Gefährdungen**: Dies ist eine virtuelle Kategorie, die alle Gefährdungen anzeigt, die durch die zugeordneten Bausteine zugewiesen werden.
-- **Kontaktzuweisung (i-doit Standardkategorie)**:Hier können die entsprechenden Ansprechpartner oder andere Rollen für diese Zielobjektgruppe eingetragen werden.
+- **Kontaktzuweisung (i-doit Standardkategorie)**: Hier trägst du die entsprechenden Ansprechpartner oder andere Rollen für diese Zielobjektgruppe ein.
 - **Objektgruppe (i-doit Standardkategorie)**: Hier wird definiert, welche Objekte dieser Zielobjektgruppe zugeordnet sind. Bitte beachten, dass der Typ auf "statisch" gestellt sein muss, damit die ganzen Reports funktionieren.
 
 ## Kommunikationsverbindung

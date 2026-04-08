@@ -6,12 +6,12 @@ lang: de
 
 # Reports im ISMS-Add-on
 
-Diese Seite beschreibt die mit dem ISMS-Add-on bereitgestellten Auswertungen in **i-doit**. Eine allgemeine Einführung in Berichte sowie deren Ort in i-doit finden Sie im [Report-Manager](../../auswertungen/report-manager.md).
+Diese Seite beschreibt die mit dem ISMS-Add-on bereitgestellten Auswertungen in **i-doit**. Eine allgemeine Einführung in Berichte sowie deren Ort in i-doit findest du im [Report-Manager](../../auswertungen/report-manager.md).
 
 **Kurzüberblick**
 
 * Das Add-on liefert **einen variablen Report** sowie **neun Report-Views** des Typs *ISMS* aus.
-* Alle Inhalte sind so gestaltet, dass sie sich in der Praxis schnell filtern und anpassen lassen.
+* Alle Inhalte sind so gestaltet, dass du sie in der Praxis schnell filtern und anpassen kannst.
 * Bei aktivierter Option können die Views **nach Standortrechten** gefiltert werden (siehe *Optionale Einstellungen* in der Konfiguration).
 
 * * *
@@ -36,12 +36,12 @@ Diese Seite beschreibt die mit dem ISMS-Add-on bereitgestellten Auswertungen in 
 ## Details und Best Practices
 
 ### Variabler Report: ISMS Risikoeinschätzung (Gruppe)
-**Zweck.** Risikoeinschätzungen aller **Objektgruppen** zum gerade ausgewählten Objekt. ideal, um gruppenbasierte Risiken schnell zu überblicken.
+**Zweck.** Risikoeinschätzungen aller **Objektgruppen** zum gerade ausgewählten Objekt. Ideal, um gruppenbasierte Risiken schnell zu überblicken.
 
-**Anpassbarkeit.** Der Report ist im **Abfrage-Editor** frei änderbar. Ein typisches Muster ist die **Duplikation** für Servicekomponenten: Erstellen Sie "ISMS-Risikoeinschätzung (Servicekomponente)" und passen Sie die Bedingung an:
+**Anpassbarkeit.** Der Report ist im **Abfrage-Editor** frei änderbar. Ein typisches Muster ist die **Duplikation** für Servicekomponenten: Erstelle "ISMS-Risikoeinschätzung (Servicekomponente)" und passe die Bedingung an:
 
-1. Kategorie **"Service Komponenten (Service)"** wählen
-2. Beim Attribut **"Zugewiesenes Objekt"** den Feld-Platzhalter **Objekt-ID** setzen
+1. Wähle die Kategorie **"Service Komponenten (Service)"**
+2. Setze beim Attribut **"Zugewiesenes Objekt"** den Feld-Platzhalter **Objekt-ID**
 
 !!! note "Hinweis"
     Der Report ist an die gleichnamige **benutzerdefinierte Kategorie** gebunden und kann unterschiedlichen Objekttypen zugewiesen werden.
@@ -78,7 +78,7 @@ Diese Seite beschreibt die mit dem ISMS-Add-on bereitgestellten Auswertungen in 
 
 [![Risikomatrix Beispiel](../../assets/images/de/i-doit-add-ons/isms/reports/matrix.png)](../../assets/images/de/i-doit-add-ons/isms/reports/matrix.png)
 
-!!! tip "Die Achsen und Farben ergeben sich aus den in der [**Konfiguration**](configuration.md) definierten Bewertungskriterien, Risikoformel und Risikoklassen. Passen Sie diese zuerst an, um die Matrix sinnvoll zu nutzen."
+!!! tip "Die Achsen und Farben ergeben sich aus den in der [**Konfiguration**](configuration.md) definierten Bewertungskriterien, Risikoformel und Risikoklassen. Passe diese zuerst an, damit du die Matrix sinnvoll nutzen kannst."
 
 * * *
 
@@ -99,7 +99,7 @@ Diese Seite beschreibt die mit dem ISMS-Add-on bereitgestellten Auswertungen in 
 * * *
 
 ### Report-View: ISMS Geltungsbereich
-**Zweck:** Auflistung aller Objekte (inkl. Objekttyp und Standort), bei denen **ISMS-Relevanz = "Ja"** gesetzt ist, sind ideal für Scope-Definition und Audits.
+**Zweck:** Auflistung aller Objekte (inkl. Objekttyp und Standort), bei denen **ISMS-Relevanz = "Ja"** gesetzt ist. Ideal für Scope-Definition und Audits.
 
 **Filter:** *Anwendungsbereich* und *Standort*.
 

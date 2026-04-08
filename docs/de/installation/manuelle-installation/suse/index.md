@@ -1,6 +1,6 @@
 ---
 title: SUSE Linux Enterprise Server 15 SP6
-description: SUSE Linux Enterprise Server 15 SP6
+description: "Welche Pakete zu installieren und zu konfigurieren sind, erklären wir in wenigen Schritten in diesem Artikel."
 icon: simple/suse
 status:
 lang: de
@@ -122,7 +122,7 @@ Zunächst wird eine neue Datei erstellt und mit den nötigen Einstellungen befü
 sudo vi /etc/php8/conf.d/i-doit.ini
 ```
 
-!!! example "Diese Datei erhält folgende von uns vorgegebenen Inhalt. Für mehr Informationen zu den Parametern, schauen Sie auf [PHP.net](https://www.php.net/manual/en/install.fpm.configuration.php) vorbei"
+!!! example "Diese Datei erhält folgende von uns vorgegebenen Inhalt. Für mehr Informationen zu den Parametern, schaue dir auf [PHP.net](https://www.php.net/manual/en/install.fpm.configuration.php) vorbei"
 
 Diese Datei erhält folgenden Inhalt:
 
@@ -152,13 +152,13 @@ session.cookie_lifetime = 0
 mysqli.default_socket = /var/run/mysql/mysql.sock
 ```
 
-Das `memory_limit` muss bei bedarf z.B. bei sehr großen Reports oder umfangreichen Dokumenten erhöht werden.
+Das `memory_limit` muss bei Bedarf z.B. bei sehr großen Reports oder umfangreichen Dokumenten erhöht werden.
 Der Wert (in Sekunden) von `session.gc_maxlifetime` sollte größer oder gleich dem **Session Timeout** in den [Systemeinstellungen](../systemeinstellungen.md) von i-doit sein.
-Der Parameter `date.timezone` sollte auf die lokale Zeitzone anpasst werden (siehe [Liste unterstützter Zeitzonen](http://php.net/manual/de/timezones.php)).
+Der Parameter `date.timezone` sollte auf die lokale Zeitzone angepasst werden (siehe [Liste unterstützter Zeitzonen](http://php.net/manual/de/timezones.php)).
 
 ### Apache HTTP Server
 
-Ein wird eine neue VHost-Konfiguration erzeugt:
+Es wird eine neue VHost-Konfiguration erzeugt:
 
 ```sh
 sudo vi /etc/apache2/vhosts.d/i-doit.conf
@@ -338,7 +338,7 @@ sudo systemctl restart apache2 php-fpm
 
 ### MariaDB
 
-Damit MariaDB eine gute Performance liefert und sicher betrieben werden kann, sind einige, wenige Schritte nötig, die penibel ausgeführt werden sollten. Dies fängt an mit einer sicheren Installation. **Den Empfehlungen sollte gefolgt werden sollten**. Der Benutzer **root** sollte ein sicheres Passwort erhalten:
+Damit MariaDB eine gute Performance liefert und sicher betrieben werden kann, sind einige, wenige Schritte nötig, die penibel ausgeführt werden sollten. Dies fängt an mit einer sicheren Installation. **Den Empfehlungen sollte gefolgt werden**. Der Benutzer **root** sollte ein sicheres Passwort erhalten:
 
 ```sh
 sudo mysql_secure_installation
@@ -413,7 +413,7 @@ innodb_stats_on_metadata = 0
 sql-mode = ""
 ```
 
-Abschließend wird MariaDB neugestartet:
+Abschließend wird MariaDB neu gestartet:
 
 ```sh
 sudo systemctl restart mysql

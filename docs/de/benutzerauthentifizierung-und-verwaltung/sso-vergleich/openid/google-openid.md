@@ -1,42 +1,51 @@
+---
+title: Google Authentifizierung via OpenID
+description: "Diese Anleitung zeigt dir, wie du i-doit mit Google OpenID Connect absicherst."
+icon:
+status:
+lang: de
+---
 # Google Authentifizierung via OpenID
 
-!!! warning "Bitte erstellen Sie vor jeder Änderung an einer Schnittstelle/Import einen vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist kann dieses dann wiederhergestellt werden"
+!!! warning "Bitte erstelle vor jeder Änderung an einer Schnittstelle/Import ein vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist, kann dieses dann wiederhergestellt werden"
+
+Diese Anleitung zeigt dir, wie du i-doit mit Google OpenID Connect absicherst. Benutzer melden sich dann über ihr Google-Konto an.
 
 ## OAuth Anmeldedaten erstellen
 
-Gehe auf [https://console.developers.google.com/](https://console.developers.google.com/)
+Öffne die [Google API Console](https://console.developers.google.com/) und führe folgende Schritte aus:
 
-1. Auf den Homebildschirm gehen
-2. Anmeldedaten auswählen
-3. Anmeldedaten erstellen
-4. OAuth-Client-ID auswählen
+1. Gehe auf den Homebildschirm.
+2. Wähle **Anmeldedaten**.
+3. Klicke auf **Anmeldedaten erstellen**.
+4. Wähle **OAuth-Client-ID**.
 
 [![OAuth Anmeldedaten erstellen](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/google-openid/1-oid.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/google-openid/1-oid.png)
 
-1. Webanwendung auswählen
-2. Als Namen eine wiedererkennbare Bezeichnung eingeben
-3. Als Autorisierte Weiterleitungs-URL eine URL angebe, die hinter der zu sichernden Webressource liegt, aber auf keinen Inhalt zeigt (!).
-    Die hier exemplarisch angegebene URL soll ab [https://gauth.i-doit.com/i-doit/](https://gauth.i-doit.com/i-doit/) mit der Authentifizierung abgesichert werden.
-    Die angehangene **Ressource "redirect_uri" existiert nicht** auf dem Webserver!
+1. Wähle **Webanwendung** als Typ.
+2. Vergib einen wiedererkennbaren Namen.
+3. Trage als **Autorisierte Weiterleitungs-URL** eine URL ein, die hinter der zu schützenden Webressource liegt, aber auf keinen existierenden Inhalt zeigt.
+    Im Beispiel wird ab `https://gauth.i-doit.com/i-doit/` abgesichert -- die angehaengte Ressource `redirect_uri` existiert dabei nicht auf dem Webserver.
 
 [![OAuth Anmeldedaten erstellen](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/google-openid/2-oid.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/google-openid/2-oid.png)
 
-1. Client-ID kopieren, diese wird später benötigt
-2. Client Secret kopieren, dieses wird später benötigt
-3. Den OAuth Zustimmungsbildschirm konfigurieren
-    (Dies ist **für einen ersten Test nicht notwendig**, aber für einen Produktionsbetrieb)
+1. Kopiere die **Client-ID** -- du benötigst sie später.
+2. Kopiere das **Client Secret** -- du benötigst es später.
+3. Konfiguriere den **OAuth-Zustimmungsbildschirm** (für einen ersten Test nicht notwendig, aber für den Produktionsbetrieb).
 
 [![OAuth Anmeldedaten erstellen](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/google-openid/3-oid.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/google-openid/3-oid.png)
 
 ## Webserver einrichten
 
-### Unter **Debian 10** das Paket **mod_auth_openidc** für Apache installieren
+### Paket installieren (Debian 10)
 
 ```shell
     sudo apt install libapache2-mod-auth-openidc
 ```
 
-### In der Apache Config folgenden Code einfügen
+### Apache-Konfiguration anpassen
+
+Fuege folgenden Code in die Apache-Config ein:
 
 ```ini
 OIDCProviderMetadataURL https://accounts.google.com/.well-known/openid-configuration
@@ -60,11 +69,11 @@ OIDCScope "email"
 </Location>
 ```
 
-### So sieht es im Test live aus
+### Live-Ansicht im Test
 
 [![live](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/google-openid/4-oid.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/google-openid/4-oid.png)
 
-### Den Webserver neu starten
+### Webserver neu starten
 
 ```shell
 sudo systemctl restart apache2
@@ -72,7 +81,7 @@ sudo systemctl restart apache2
 
 ### Authentifizierung testen und finalisieren
 
-Eine Datei identity.php anlegen. In diesem Fall /var/www/html/i-doit/identity.php.
+Lege eine Datei `identity.php` an (in diesem Fall unter `/var/www/html/i-doit/identity.php`):
 
 ```php
 <?php
@@ -81,11 +90,11 @@ echo $_SERVER['REMOTE_USER'];
 ?>
 ```
 
-1. Die Datei im Browser aufrufen
-2. Per Google anmelden
+1. Rufe die Datei im Browser auf.
+2. Melde dich per Google an.
     [![Google anmelden](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/google-openid/5-oid.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/google-openid/5-oid.png)
-3. Die erscheinende ID überprüfen (Es sollte der E-Mail entsprechen)
-4. In i-doit einloggen und für den gewünschten i-doit User als Login Namen eintragen.
+3. Überprüfe die erscheinende ID (sie sollte der E-Mail entsprechen).
+4. Logge dich in i-doit ein und trage die ID als Login-Name für den gewünschten Benutzer ein.
 
     !!! warning
          Wichtig ist, dass der Domain Part ab dem @ Zeichen von i-doit nicht berücksichtigt wird. Daher muss der Name auf den vorderen Teil gekürzt werden:Aus "testaccount@[i-doit.com](http://i-doit.com)" wird "testaccount".
@@ -96,11 +105,11 @@ echo $_SERVER['REMOTE_USER'];
 
 ## SSO in i-doit aktivieren
 
-1. Die i-doit Administration aufrufen
-2. Systemeinstellungen auswählen
-3. Unter Single-SignOn Active auf **yes** setzen
-4. Abspeichern
+1. Rufe die i-doit-Administration auf.
+2. Wähle **Systemeinstellungen**.
+3. Setze unter **Single Sign-On** die Option **Active** auf **yes**.
+4. Speichere die Einstellung.
 
 [![SSO in i-doit aktivieren](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/google-openid/8-oid.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/google-openid/8-oid.png)
 
-Fertig! Wird i-doit nun aufgerufen, erscheint zunächst die Google Authentifizierung. Nach erfolgreicher Authentifizierung ist der Anwender direkt mit dem über den mit dem User Name verknüpften Konto eingelogged.
+Die Einrichtung ist abgeschlossen. Beim Aufruf von i-doit erscheint jetzt zuerst die Google-Authentifizierung. Nach erfolgreicher Anmeldung ist der Benutzer direkt mit dem über den Login-Namen verknüpften Konto eingeloggt.

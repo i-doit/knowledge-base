@@ -1,106 +1,105 @@
-# i-doit QR Code Printer
+---
+title: "i-doit QR-Code Printer"
+description: "In i-doit, you automatically generate barcodes or QR codes for all objects."
+icon:
+status:
+lang: en
+---
+# i-doit QR-Code Printer
 
-The [i-doit QR code printer](./i-doit-qr-code-printer.md) allows you to print labels comfortably using your label printer. A configuration is provided for you to ensure that the formats match your requirements. If you scan the QR code with a smartphone or a tablet, for example, then you will be forwarded to the overview page of the labelled [object](../glossary.md).
+!!! info "You can find a practical example on our [Blog](https://www.i-doit.com/blog/inventarisierung-in-i-doit-with-qr-codes/)"
 
-[![](../assets/images/en/i-doit-add-ons/qr-code/1-qrc.png)](../assets/images/en/i-doit-add-ons/qr-code/1-qrc.png)
+In i-doit, you automatically generate barcodes or QR codes for all objects. You can use these, for example, to [print machine-readable labels](./i-doit-qr-code-printer.md). After configuration, the code appears in the upper right corner as soon as you select an object.
 
-Barcode
--------
+[![Overview page](../assets/images/de/i-doit-add-ons/qr-code-printer/1-qr.png)](../assets/images/de/i-doit-add-ons/qr-code-printer/1-qr.png)
 
-[![Barcode](../assets/images/en/i-doit-add-ons/qr-code/2-qrc.png)](../assets/images/en/i-doit-add-ons/qr-code/2-qrc.png)
+## Barcode
 
-A barcode or bar code is a method of representing data in a visual, machine-readable form. Initially, barcodes represented data by varying the widths and spacings of parallel lines. These barcodes, now commonly referred to as linear or one-dimensional, can be scanned by special optical scanners, called barcode readers, of which there are several types
+[![Barcode](../assets/images/de/i-doit-add-ons/qr-code-printer/2-qr.png)](../assets/images/de/i-doit-add-ons/qr-code-printer/2-qr.png)
 
-QR-Code
--------
+A barcode is an optoelectronically readable font made of bars and gaps of varying widths. The disadvantage: A barcode can only store relatively little information.
 
-[![QR-Code](../assets/images/en/i-doit-add-ons/qr-code/3-qrc.png)](../assets/images/en/i-doit-add-ons/qr-code/3-qrc.png)
+## QR code
 
-A QR code (an initialism for Quick Response code) is a type of matrix barcode (or two-dimensional barcode) invented in 1994 by the Japanese automotive company Denso Wave. A barcode is a machine-readable optical label that contains information about the item to which it is attached. In practice, QR codes often contain data for a locator, identifier, or tracker that points to a website or application. A QR code uses four standardized encoding modes (numeric, alphanumeric, byte/binary, and kanji) to store data efficiently; extensions may also be used.
+[![QR code](../assets/images/de/i-doit-add-ons/qr-code-printer/3-qr.png)](../assets/images/de/i-doit-add-ons/qr-code-printer/3-qr.png)
 
-Configuration QR code or barcode
---------------------------------
+The QR code (Quick Response) is a two-dimensional code with automatic error correction. Its advantage over the barcode: It stores significantly more information.
 
-You can find the configuration within i-doit under Administration → System Settings → Tenantsettings → QR-Code
+## QR code or barcode configuration
 
-[![Configuration QR code or barcode](../assets/images/en/i-doit-add-ons/qr-code/4-qrc.png)](../assets/images/en/i-doit-add-ons/qr-code/4-qrc.png)
+The configuration within i-doit can be found under **Administration → Predefined content → QR code**
 
-Configuration of the QR-Code content
-------------------------------------
+[![QR code or barcode configuration](../assets/images/de/i-doit-add-ons/qr-code-printer/4-qr.png)](../assets/images/de/i-doit-add-ons/qr-code-printer/4-qr.png)
 
-Which information from i-doit should be stored in the QR code can be configured here Administration → CMDB Settings → QR-Code
+Here you activate or deactivate the code display and choose between barcode and QR code.
 
-[![Configuration of the QR-Code content](../assets/images/en/i-doit-add-ons/qr-code/5-qrc.png)](../assets/images/en/i-doit-add-ons/qr-code/5-qrc.png)
+## QR code content configuration
 
-Global definition
------------------
+You configure which information is stored in the QR code under **Administration → Predefined content → QR code**:
 
-If global definition is selected, it is possible to fill the information stored in the QR code with the following placeholders:
+[![QR code content configuration](../assets/images/de/i-doit-add-ons/qr-code-printer/5-qr.png)](../assets/images/de/i-doit-add-ons/qr-code-printer/5-qr.png)
 
-[![Global definition](../assets/images/en/i-doit-add-ons/qr-code/6-qrc.png)](../assets/images/en/i-doit-add-ons/qr-code/6-qrc.png)
+### Global definition
 
-Primary access URL
-------------------
+With the global definition, you fill the QR code information using the following placeholders:
 
-If Primary access URL is selected, the URL stored in the object flows into the QR code as the only information.
+[![Global definition](../assets/images/de/i-doit-add-ons/qr-code-printer/6-qr.png)](../assets/images/de/i-doit-add-ons/qr-code-printer/6-qr.png)
 
-QR code linking
----------------
+### Primary access URL
 
-Here you can select which function is triggered when you click on the respective code.  
-You can choose between the [i-doit QR-Code Printer Tool](./i-doit-qr-code-printer.md) or a POP UP with the standard print function of the respective operating system.
+With this option, only the URL stored in the object is included in the QR code.
 
-Text template
--------------
+### QR code linking
 
-Here it is possible to use free text, but also with the placeholders information from i-doit and format the label accordingly.
+Specify what happens when clicking on the code: Either the [QR Code Printer](./i-doit-qr-code-printer.md) tool opens or a popup with the standard print function of your operating system.
 
-Logo for print view
--------------------
+### Text template
 
-Here you can upload and link an image file, this will be used automatically when creating the label.
+Here you combine free text with placeholders from i-doit and format the label to your requirements.
 
-i-doit QR Code Printer
-----------------------
+### Logo for print view
 
-With the i-doit QR-Code Printer you can easily print labels on your label printer.  
-For this purpose, a configuration is available so that the formats correspond exactly to your specifications.  
-If the QR code is scanned with a smartphone or tablet, for example, you will be redirected to the overview page of the labeled [object](../glossary.md).
+Upload an image file -- it is automatically integrated into every label.
 
-Start and Configuration
------------------------
+### i-doit QR-Code Printer
 
-You can download the QR code printer in our [customer portal](../system-administration/customer-portal.md). The i-doit QR code printer is a Windows application which can be run immediately. No installation is needed.
+With the QR Code Printer, you conveniently print labels on your label printer. You configure the formats to match your specifications. When someone scans the QR code with a smartphone or tablet, they are redirected directly to the overview page of the [object](../glossar.md).
 
-The first step upon starting the application is to set up a connection to your i-doit installation, so that the tool can read the information. The possibility to set the connection is provided in the **i-doit API settings** area at **File →** **Options**. The URL to your i-doit _i_nstallation, the API key as well as the credentials of an i-doit user with the corresponding permissions are needed for [access via the API](./api/index.md).
+### Start and configuration
 
-The i-doit API key
+Download the QR Code Printer from the [customer portal](../administration/kundenportal.md). The Windows application starts directly -- no installation is required.
 
-You can find the API key of your installation in i-doit at **Administration → Interfaces / external data → JSON-RPC API**.
+To set up the connection:
 
-Configuration of the Print Parameters
--------------------------------------
-  
-At **File → Options**you can find the possibility to adjust any settings needed for your printer.  
-Here you can set the margins as well as the size of the label.
+1. Open **File → Options → i-doit API Settings**.
+2. Enter the URL of your i-doit installation, the API key, and the credentials of a user with [API permission](./api/index.md).
 
-You can also define the positioning of the QR code via spacing in pixels and the size of the QR code.  
-If you want to use a different font, font size and font direction, you can adjust these values according to your wishes at **QR-code positioning**.  
-You can also specify the logo for your labels in the options.  
-Choose the desired logo using a common image format via **Path** and position it using the corresponding parameters.  
-It makes sense to define the Dymo label writer as default printer and to change the default paper orientation for printing to horizontal.
+!!! info "The i-doit API key"
+    You can find the API key of your installation in i-doit under **Administration → Add-ons → JSON-RPC API**
 
-Printing of Labels
+### Print parameter configuration
 
-Once the connection was configured successfully and the settings meet your requirements, you can start printing your labels. To do so, enter the object ID of the object for which you want to print a label. Now the contents of the bar code information will be carried over according to the contents of i-doit. Of course, you can edit this information at any time.
+Under **File → Options**, you configure all print parameters:
 
-Once the information has been loaded, you can either print, save or export the QR code using the icons or via the **File** item in the context menu. The export takes place using the .bmp image format.
+- **Margins and label size** -- Adjust the dimensions to your label format.
+- **QR-Code Positioning** -- Define position (in pixels), size, font, and font size.
+- **Logo** -- Select a logo in a common image format under **Path** and position it via the parameters.
 
-[![Configuration of the Print Parameters](../assets/images/en/i-doit-add-ons/qr-code/7-qrc.png)](../assets/images/en/i-doit-add-ons/qr-code/7-qrc.png)
+!!! tip "Tip"
+    Define the Dymo Label Writer as the default printer and set the paper format to horizontal.
 
-Releases
---------
+## Printing labels
 
-| Version | Datum | Changelog |
+To print a label:
+
+1. Enter the **object ID** of the desired object.
+2. The barcode information is automatically loaded from i-doit -- you can edit it if needed.
+3. Print, save, or export the QR code via the icons or **File** in the context menu. Export is in `.bmp` format.
+
+[![Printing labels](../assets/images/de/i-doit-add-ons/qr-code-printer/7-qr.png)](../assets/images/de/i-doit-add-ons/qr-code-printer/7-qr.png)
+
+## Releases
+
+| Version | Date | Changelog |
 | --- | --- | --- |
-| 1.5 | 2023-01-24 | \[Bug\]  Fix the configuration of the Text margin |
+| 1.5 | 24.01.2023 | [Bug] Fix the configuration of the Text margin |

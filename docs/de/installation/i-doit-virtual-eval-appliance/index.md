@@ -1,6 +1,13 @@
+---
+title: "i-doit Virtual Eval Appliance"
+description: "i-doit GmbH stellt eine voll funktionstüchtige Appliance von i-doit zur Verfügung."
+icon:
+status:
+lang: de
+---
 # i-doit Virtual Eval Appliance
 
-synetics stellt eine voll funktionstüchtige Appliance von i-doit zur Verfügung. Diese kann als virtuelle Maschine heruntergeladen werden.
+i-doit GmbH stellt eine voll funktionstüchtige Appliance von i-doit zur Verfügung. Diese kann als virtuelle Maschine heruntergeladen werden.
 
 Diese virtuelle Appliance bringt den Vorteil, dass man möglichst schnell die Funktionen von i-doit evaluieren kann. Man benötigt weder Kenntnisse zum darunter liegenden [LAMP Stack](../index.md), noch muss man die Software installieren, sondern kann gleich mit einem fertigen Grundgerüst starten.
 
@@ -127,7 +134,7 @@ Weitere erste Schritte mit i-doit sind ebenfalls in der Knowledge Base unter [Gr
     ```
 
 !!! attention "VSphere < 6.5.0"
-    Unsere Virtual Appliance wird aus Sicherheitsgründen mit einem SHA265 Hash verschlüsselt.
+    Unsere Virtual Appliance wird aus Sicherheitsgründen mit einem SHA256 Hash verschlüsselt.
     Leider unterstützt vSphere dies erst ab der Version 6.5.0.
-    [Hier](https://kb.vmware.com/s/article/2151537) finden Sie den offiziellen Eintrag von VMware.
-    Dort wird auch beschrieben, wie Sie bei Versionen vor vSphere Version 6.5.0 mit virtuelle Maschinen welche einen SHA265 Hash nutzen arbeiten können.
+    [Hier](https://kb.vmware.com/s/article/2151537) findest du den offiziellen Eintrag von VMware.
+    Dort wird auch beschrieben, wie du bei Versionen vor vSphere Version 6.5.0 mit virtuelle Maschinen welche einen SHA256 Hash nutzen arbeiten können.

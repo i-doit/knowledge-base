@@ -1,14 +1,26 @@
+---
+title: "Update i-doit"
+description: "Halte _i-doit_ immer auf dem neuesten Stand."
+icon:
+status:
+lang: de
+---
 # Update i-doit
 
-_i-doit_ sollte immer in der aktuellsten Version betrieben werden. In Minor-Releases befinden sich immer zahlreiche Bugfixes, in Major-Releases dazu dann noch neue Funktionen und Verbesserungen von bestehenden Funktionen. Minor-Releases erscheinen ungefähr alle vier Wochen, Major-Releases alle sechs Monate. Das Update kann [über die Web-Oberfläche von i-doit durchgeführt werden](#update-uber-die-web-oberflache), setzt jedoch einen Internetzugang (gegebenenfalls über einen HTTP-Proxy) voraus. Alternativ kann das Update [über die Konsole vorbereitet](#update-uber-die-konsole-vorbereiten) und anschließend über die Web-Oberfläche fortgeführt werden.
+Halte _i-doit_ immer auf dem neuesten Stand. Minor-Releases (ca. alle vier Wochen) enthalten Bugfixes, Major-Releases (ca. alle sechs Monate) bringen zusätzlich neue Funktionen.
 
-=== "Release überspringen ab version 20"
-    !!! attention "Release überspringen ab version 20"
+Du hast zwei Wege für das Update:
+
+*   [Update über die Web-Oberfläche](#update-uber-die-web-oberflache) -- setzt Internetzugang (ggf. über HTTP-Proxy) voraus
+*   [Update über die Konsole vorbereiten](#update-uber-die-konsole-vorbereiten) -- Paket manuell hochladen, dann über die Web-Oberfläche fortfahren
+
+=== "Release überspringen ab Version 20"
+    !!! attention "Release überspringen ab Version 20"
         Wenn du direkt auf eine neuere Version, z.B. 26, springen möchtest, kannst du das neueste Update-Paket aus dem [Kundenportal](../administration/kundenportal.md) herunterladen und im i-doit Ordner entpacken. Die notwendigen Schritte findest du unter [updates über die Konsole vorbereiten](#update-uber-die-konsole-vorbereiten).
-        Ab Version **25** mit [Hotfix](../administration/hotfixes/hotfix-archiv/index.md), wird auch die Version 27 beim update check für den download angeboten.
+        Ab Version **25** mit [Hotfix](../administration/hotfixes/hotfix-archiv/index.md), wird auch die Version 27 beim Update-Check für den Download angeboten.
 
-=== "Releases überspringen vor version 20"
-    !!! attention "Releases überspringen vor version 20"
+=== "Releases überspringen vor Version 20"
+    !!! attention "Releases überspringen vor Version 20"
         Wenn aktuell die Version 1.13.1 installiert und schon die Version 1.13.3 verfügbar ist, wird trotzdem nur die nächsthöhere Version - also 1.13.2 - angezeigt. Allerdings können Minor-Releases grundsätzlich übersprungen werden. Dennoch werden über diesen Weg trotzdem alle Minor-Releases einzeln installiert, bis die aktuellste Version erreicht ist. Wenn du direkt auf die Version 1.13.3 springen möchtest, kannst du das neueste Paket im [Kundenportal](../administration/kundenportal.md) herunterladen und auf dem _i-doit_\-Host entpacken. Die notwendigen Schritte dafür kannst du [hier](#update-uber-die-konsole-vorbereiten) finden.
 
 !!! warning "Backup"
@@ -19,11 +31,15 @@ _i-doit_ sollte immer in der aktuellsten Version betrieben werden. In Minor-Rele
 
 ## Update über die Web-Oberfläche
 
-Das Update erreichst du entweder unter **Verwaltung → [Mandanten-Name] Verwaltung → i-doit Update**, über das Quicklaunch-Widget auf dem Dashboard oder über die URL <http://i-doit-host/i-doit/?load=update>
+Öffne das Update über einen der folgenden Wege:
+
+*   **Verwaltung → [Mandanten-Name] Verwaltung → i-doit Update**
+*   Quicklaunch-Widget auf dem Dashboard
+*   Direkt-URL: `http://i-doit-host/i-doit/?load=update`
 
 [![Update via Dashboard](../assets/images/de/wartung-und-betrieb/update/1-update.png)](../assets/images/de/wartung-und-betrieb/update/1-update.png)
 
-Nach dem Aufruf öffnet sich eine eigene Oberfläche, in der geprüft wird, wie der aktuelle Zustand des Systems ist. Bei Problemen schau am besten in unsere [Systemvoraussetzungen](../installation/systemvoraussetzungen.md) bzw. in unsere [Systemeinstellungen](../installation/manuelle-installation/systemeinstellungen.md). Nach der Anpassung der Umgebung sollte alles grün abgehakt bzw. auf "OK" stehen.
+i-doit prüft den aktuellen Systemzustand. Falls etwas nicht stimmt, gleiche die [Systemvoraussetzungen](../installation/systemvoraussetzungen.md) und [Systemeinstellungen](../installation/manuelle-installation/systemeinstellungen.md) ab. Nach Anpassung sollte alles gruen bzw. "OK" sein.
 
 ### Schritt 1: i-doit update und Kompatibilität check
 
@@ -31,35 +47,35 @@ Nach dem Aufruf öffnet sich eine eigene Oberfläche, in der geprüft wird, wie 
 
 ### Schritt 2: Available updates
 
-In diesem Schritt werden alle verfügbaren Update-Pakete angezeigt. In unserem Beispiel ist i-doit Version 25 installiert und kann daher nur auf die gleiche Version aktualisiert werden.
+Hier siehst du alle verfügbaren Update-Pakete.
 
 [![Update-Available-Check](../assets/images/de/wartung-und-betrieb/update/3-update.png)](../assets/images/de/wartung-und-betrieb/update/3-update.png)
 
-Nach einem Klick auf **Check for a new version** wird nach der höchsten Version geprüft, die installiert werden kann.<br>
-Nach einem Klick auf **Download** wird das Update-Paket heruntergeladen und entpackt.<br>
-Wenn du eine URL für das Update-Paket hast, kannst du den Link einfügen und auf **Download and extract** klicken.
+*   **Check for a new version** -- prüft, welche hoechste Version verfügbar ist.
+*   **Download** -- lädt das Update-Paket herunter und entpackt es.
+*   Hast du eine URL, fuege sie ein und klicke auf **Download and extract**.
 
 [![Update-Available-Download](../assets/images/de/wartung-und-betrieb/update/4-update.png)](../assets/images/de/wartung-und-betrieb/update/4-update.png)
 
-Nun steht die neue Version für das Update bereit. Es kann ausgewählt und mit einem Klick auf **Next** gestartet werden. Wer sich für die Änderungen interessiert, die das Paket mit sich bringt, findet dazu unter **see changelog** eine Auflistung.
+Wähle die neue Version aus und klicke auf **Next**. Unter **see changelog** findest du eine Auflistung der Änderungen.
 
 [![Update-Available-Donwload](../assets/images/de/wartung-und-betrieb/update/5-update.png)](../assets/images/de/wartung-und-betrieb/update/5-update.png)
 
 ### Schritt 3: Database(s)
 
-In der Regel sind die Haken bereits, wie im Bild erkennbar, gesetzt, sodass die Systemdatenbank und die dazugehörigen Mandanten schon für das Update ausgewählt sind. Sollte es keinen Grund geben, einzelne Mandanten nicht zu aktualisieren, sollten die Haken gesetzt bleiben.
+Die Systemdatenbank und alle Mandanten sind in der Regel bereits ausgewählt. Lass die Haken gesetzt, sofern du keinen Grund hast, einzelne Mandanten auszuschließen.
 
 [![Update-DB](../assets/images/de/wartung-und-betrieb/update/6-update.png)](../assets/images/de/wartung-und-betrieb/update/6-update.png)
 
 ### Schritt 4: File-Update
 
-Allerspätestens jetzt solltest du ein [Backup](daten-sichern-und-wiederherstellen/index.md) anfertigen. Wenn du ein Backup hast, kannst du über den Button **Yes, I did a backup! - Start the update** das Update einspielen.
+Spätestens jetzt solltest du ein [Backup](daten-sichern-und-wiederherstellen/index.md) haben. Klicke auf **Yes, I did a backup! - Start the update**, um das Update zu starten.
 
 [![Update-Files](../assets/images/de/wartung-und-betrieb/update/7-update.png)](../assets/images/de/wartung-und-betrieb/update/7-update.png)
 
 ### Schritt 5: Overview (Log)
 
-Jede Änderung kann Auswirkungen auf Dateien und Datenbanken haben. Wenn etwas schief geht (typischerweise wegen fehlender Schreibrechte), erscheint eine rote "ERROR" Meldung. Wenn für jede Änderung ein grünes "DONE" angezeigt wird, kannst du mit dem nächsten Schritt fortfahren, indem du auf **Next** klickst.
+Prüfe das Protokoll: Gruenes "DONE" bedeutet Erfolg, rotes "ERROR" deutet auf ein Problem hin (häufig fehlende Schreibrechte). Bei durchgehend gruenen Einträgen klicke auf **Next**.
 
 [![Update-Overview](../assets/images/de/wartung-und-betrieb/update/8-update.png)](../assets/images/de/wartung-und-betrieb/update/8-update.png)
 
@@ -77,32 +93,30 @@ Nach der sogenannten "Property Migration" sollte hier ebenfalls alles grün ange
 
 ### Schritt 8: Completion
 
-Nun ist das Update abgeschlossen. Wer detaillierte Informationen zum Update nachlesen möchte, kann dies in der verlinkten Log-Datei tun. Über **Run i-doit v.[VERSION]** kann zu _i-doit_ zurückgekehrt werden. Es ist sehr zu empfehlen, den Browser und den _i-doit_-Cache unter **Verwaltung → [Mandanten-Name] Verwaltung → Systemreparatur und Bereinigung** zu löschen.
+Das Update ist abgeschlossen. Details findest du in der verlinkten Log-Datei. Klicke auf **Run i-doit v.[VERSION]**, um zurückzukehren. Lösche anschließend den Browser- und i-doit-Cache unter **Verwaltung → [Mandanten-Name] Verwaltung → Systemreparatur und Bereinigung**.
 
 [![Update-Complete](../assets/images/de/wartung-und-betrieb/update/11-update.png)](../assets/images/de/wartung-und-betrieb/update/11-update.png)
 
 ## Update über die Konsole vorbereiten
 
-Das Update kann über die Konsole vorbereitet werden. Für die Vorbereitung muss aus dem [Kundenportal](../administration/kundenportal.md) das neuste Update-Paket heruntergeladen werden.
-
-Das Update-Paket kann (beispielsweise per [WinSCP](https://winscp.net/eng/docs/lang:de)) auf dem Server abgelegt werden. Verschiebe danach das Paket in das Hauptverzeichnis von _i-doit_, wenn du es nicht schon direkt dort abgelegt hast.  Das geht mit diesem Befehl:
+Lade das neueste Update-Paket aus dem [Kundenportal](../administration/kundenportal.md) oder von der Seite [Download Links](../download-links.md) herunter und übertrage es auf den Server (z. B. per [WinSCP](https://winscp.net/eng/docs/lang:de)). Verschiebe das Paket ins i-doit-Hauptverzeichnis:
 
 ```shell
-mv idoit-26-update.zip /var/www/html/
+mv idoit-38-update.zip /var/www/html/
 ```
 
-Dann muss das Paket entpackt und alle bestehenden Dateien überschrieben werden.
+Entpacke das Paket und überschreibe bestehende Dateien:
 
 ```shell
 cd /var/www/html/
-unzip idoit-26-update.zip
+unzip idoit-38-update.zip
 ```
 
-Jetzt werden die Dateirechte angepasst, sodass der Webserver lesend wie schreibend Zugriff auf _i-doit_ hat.
+Passe die Dateirechte an, damit der Webserver Lese- und Schreibzugriff hat:
 
 !!! info ""
     Die hier genutzte Benutzer:Gruppen Kombination **www-data:www-data** bezieht sich auf **Debian** **GNU/Linux oder Ubuntu Linux.
-    **Sollten ein anderes Betriebssystem genutzt werden, muss die genutzte Benutzer:Gruppen Kombination angepasst werden.
+    **Sollte ein anderes Betriebssystem genutzt werden, muss die genutzte Benutzer:Gruppen Kombination angepasst werden.
 
 ```shell
 cd /var/www/html/
@@ -111,36 +125,35 @@ sudo find . -type d -name \* -exec chmod 775 {} \;
 sudo find . -type f -exec chmod 664 {} \;
 ```
 
-Nun kannst du in unserer Anleitung für das [Update über die Web-Oberfläche](#update-uber-die-web-oberflache) weiterschauen und dabei die Schritte für den Download des neuesten Pakets überspringen.
+Fahre nun mit dem [Update über die Web-Oberfläche](#update-uber-die-web-oberflache) fort und überspringe die Download-Schritte.
 
 ## Update über die Konsole via console.php
 
 !!! attention "Backup"
-    Vor dem Update sollte unbedingt ein [Backup](daten-sichern-und-wiederherstellen/index.md) angefertigt werden.
+    Erstelle vor dem Update unbedingt ein [Backup](daten-sichern-und-wiederherstellen/index.md).
 
-Möchte man das Update über die Konsole ausführen wird die console.php verwendet.
-Dazu verwenden wir den den Update Befehl der [console.php](../automatisierung-und-integration/cli/index.md).
-
-Zuerst wechseln wir in das i-doit root Verzeichnis:
+Du kannst das Update auch vollständig über die [console.php](../automatisierung-und-integration/cli/index.md) ausführen. Wechsle dazu ins i-doit-Verzeichnis:
 
 ```shell
 cd /var/www/html/
 ```
 
-Dann führen wir den Update Befehl aus und müssen noch Interaktiv einige Fragen beantworten davor das Update durchgeführt werden kann:
+Führe den Update-Befehl aus und beantworte die interaktiven Fragen:
 
 ```shell
 sudo -u www-data php console.php update
 ```
 
-Wir können dem Befehl auch direkt alle notwendigen Parameter mitgeben. Für ein Update von i-doit Version **35** auf Version **36** sieht der Befehl wie folgt aus:
+Alternativ gibst du alle Parameter direkt mit. Beispiel für ein Update auf Version **38**:
 
 ```shell
-sudo -u www-data php console.php update -u {benutzername} -p {passwort} -z /var/www/html/idoit-36-update.zip --v 36
+sudo -u www-data php console.php update -u {benutzername} -p {passwort} -z /var/www/html/idoit-38-update.zip --v 38
 ```
 
 ## Nach dem Update
 
-Nach dem Update den [Cache](../administration/verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md) leeren und den [Suche-index](../administration/verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md) erneuern.
+Führe nach jedem Update folgende Schritte aus:
 
-Außerdem sollten die Reporte aktualisiert werden. Mehr dazu ist unter [Report Manager](../auswertungen/report-manager.md#aktualisieren-der-reports-nach-einem-update) zu finden.
+1. [Cache leeren](../administration/verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md)
+2. [Suchindex erneuern](../administration/verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md)
+3. [Reporte aktualisieren](../auswertungen/report-manager.md#aktualisieren-der-reports-nach-einem-update)

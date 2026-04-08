@@ -1,9 +1,9 @@
 ---
 title: Profile im CMDB-Explorer
-description:
+description: "Um die Ansicht individuell zu gestalten kannst du im CMDB-Explorer Profile erzeugen, die dir die bestmögliche Übersicht über die Abhängigkeiten in..."
 icon:
 status:
-lang: en
+lang: de
 ---
 
 # Profile im CMDB-Explorer

@@ -1,39 +1,53 @@
+---
+title: "i-doit Web GUI"
+description: "Die meisten Benutzerinteraktionen basieren auf dem Legacy-Checkmk-Add-on von i-doit, das derzeit mit i-doit/open ausgeliefert wird."
+icon:
+status:
+lang: de
+---
 # i-doit Web GUI
 
-Die meisten Benutzerinteraktionen basieren auf dem [legacy checkmk add-on](./index.md) von i-doit, das derzeit mit i-doit/open ausgeliefert wird. Dieses Legacy-Add-on muss [über das i-doit Admin-Center](../index.md) aktiviert werden (es ist standardmäßig aktiviert).
+Die meisten Benutzerinteraktionen basieren auf dem [Legacy-Checkmk-Add-on](./index.md) von i-doit, das derzeit mit i-doit/open ausgeliefert wird. Dieses Legacy-Add-on muss [über das i-doit Admin-Center](../index.md) aktiviert werden (es ist standardmäßig aktiviert).
+
+[![Checkmk](../../assets/images/de/i-doit-add-ons/checkmk2/checkmk-hauptseite.png)](../../assets/images/de/i-doit-add-ons/checkmk2/checkmk-hauptseite.png)
 
 ## Echtzeit-Aufrufe aktivieren
 
-Lassen Sie i-doit den Status von Host- und Service-Checks über Livestatus in Echtzeit abrufen. Die Konfiguration erfolgt über **Verwaltung → Import und interfaces → Monitoring → Livestatus / NDO**.
+Lass i-doit den Status von Host- und Service-Checks über Livestatus in Echtzeit abrufen. Die Konfiguration erfolgt über **Verwaltung > Import und Interfaces > Monitoring > Livestatus / NDO**.
 
-Diese Statusabfrage können in jedem Objekt oder in den Objektlisten für jeden Typ angezeigt werden. Fügen Sie diesen Objekt-Typen die Kategorie "Monitoring" über "Verwaltung > CMDB-Einstellungen > Schnellkonfigurationsassistent" hinzu.
+Diese Statusabfragen können in jedem Objekt oder in den Objektlisten für jeden Typ angezeigt werden. Fuege diesen Objekttypen die Kategorie "Monitoring" über "Verwaltung > CMDB-Einstellungen > Schnellkonfigurationsassistent" hinzu.
 
-Aktivieren Sie Statusaufrufe innerhalb dieser Kategorie manuell für jedes Objekt oder [idoitcmk pull](bestandsdaten-in-die-cmdb-importieren.md) wird dies durch [Konfigurationseinstellung](./konfiguration.md) `pull.enableLivestatus` erledigen.
+Aktiviere Statusaufrufe innerhalb dieser Kategorie manuell für jedes Objekt oder [idoitcmk pull](bestandsdaten-in-die-cmdb-importieren.md) erledigt dies durch die [Konfigurationseinstellung](./konfiguration.md) `pull.enableLivestatus`.
 
 ## Verwalten von Host-Tags
 
-Mit i-doit können Sie Host-Tags verwalten. Es gibt "statische" und "dynamische" Host-Tags: - "static" means you manually create tags in Extras > Check_MK 2 > Tags (static) and add them to host in category Check_MK Tags. - "dynamic" means this is done automatically via rule sets in Extras > Check_MK 2 > Tags (dynamic).
+Mit i-doit kannst du Host-Tags verwalten. Es gibt "statische" und "dynamische" Host-Tags:
 
-Sowohl "statische" als auch "dynamische" Host-Tags werden in der Kategorie Check_MK Tags angezeigt. Sie werden über [idoitcmk push](./wato-konfiguration-auf-basis-von-cmdb-daten-generieren.md) nach checkmk exportiert.
+- **Statisch** bedeutet, dass du Tags manuell unter Extras > Check_MK 2 > Tags (statisch) erstellst und sie einem Host in der Kategorie Check_MK Tags hinzufügst.
+- **Dynamisch** bedeutet, dass dies automatisch über Regelsätze unter Extras > Check_MK 2 > Tags (dynamisch) geschieht.
 
-## Aufruf von idoitcmk über Web GUI
+Sowohl "statische" als auch "dynamische" Host-Tags werden in der Kategorie Check_MK Tags angezeigt. Sie werden über [idoitcmk push](./wato-konfiguration-auf-basis-von-cmdb-daten-generieren.md) nach Checkmk exportiert.
 
-Die Kategorie Check_MK Host bietet mehrere Schaltflächen, die idoitcmk im Hintergrund auslösen:
+## Aufruf von idoitcmk über die Web GUI
 
-*   Existiert der Host in checkmk?: Identifizierung des Hosts in checkmk anhand seines Hostnames
-*   Objekt von checkmk aktualisieren": Holt Daten vom checkmk-Host, um dieses Objekt zu aktualisieren.
-*   Host in checkmk erstellen/aktualisieren": Die Objektdaten werden nach checkmk übertragen. Entweder wird ein neuer Host in checkmk erstellt oder ein bestehender aktualisiert.
-*   Host in checkmk löschen": Wenn dieses Objekt als Host in checkmk existiert, wird es gelöscht.
+Die Kategorie Check_MK Host bietet mehrere Schaltflächen, die idoitcmk im Hintergrund ausloesen:
 
-Bevor Sie oder ein anderer Benutzer eine dieser Schaltflächen betätigen, führen Sie sie bitte manuell über die Befehlszeilenschnittstelle aus, um sicherzustellen, dass sie das tun, was sie tun sollen.
+*   **Existiert der Host in Checkmk?** -- Identifizierung des Hosts in Checkmk anhand seines Hostnamens
+*   **Objekt von Checkmk aktualisieren** -- Holt Daten vom Checkmk-Host, um dieses Objekt zu aktualisieren
+*   **Host in Checkmk erstellen/aktualisieren** -- Die Objektdaten werden nach Checkmk übertragen. Entweder wird ein neuer Host erstellt oder ein bestehender aktualisiert
+*   **Host in Checkmk löschen** -- Wenn dieses Objekt als Host in Checkmk existiert, wird es gelöscht
 
-Die Konfiguration erfolgt über **Verwaltung → Add-ons → Check_MK**. Durch die Einstellung App idoitcmk aufrufen muss i-doit wissen, wo sich idoitcmk befindet. Wenn Sie die [Installationsschritte](./installation.md) sorgfältig befolgt haben, verwenden Sie dies:
+Bevor du oder ein anderer Benutzer eine dieser Schaltflächen betaetigt, führe sie bitte manuell über die Befehlszeilenschnittstelle aus, um sicherzustellen, dass sie das tun, was sie tun sollen.
+
+## Konfiguration
+
+Die Konfiguration erfolgt über **Verwaltung > Add-ons > Check_MK**. Durch die Einstellung "App idoitcmk aufrufen" muss i-doit wissen, wo sich idoitcmk befindet. Wenn du die [Installationsschritte](./installation.md) sorgfältig befolgt hast, verwende:
 
 ```shell
 /usr/local/bin/idoitcmk
 ```
 
-Tipp: Möglicherweise möchten Sie Standardoptionen hinzufügen, wenn eine der Schaltflächen ausgelöst wird. In einer Multi-Mandanten-Umgebung können Sie beispielsweise Mandanten spezifische Konfigurationseinstellungen bereitstellen:
+Tipp: Möglicherweise möchtest du Standardoptionen hinzufügen, wenn eine der Schaltflächen ausgelöst wird. In einer Multi-Mandanten-Umgebung kannst du beispielsweise mandantenspezifische Konfigurationseinstellungen bereitstellen:
 
 ```shell
 /usr/local/bin/idoitcmk -c /etc/idoitcmk/tenant-one.json
@@ -41,10 +55,12 @@ Tipp: Möglicherweise möchten Sie Standardoptionen hinzufügen, wenn eine der S
 
 Die Protokollierung ist standardmäßig aktiviert. Für die ersten Schritte ist es immer gut zu wissen, was gerade passiert.
 
-Um Benutzern/Benutzergruppen die Berechtigung zu erteilen, diese Schaltflächen auszulösen, gehen Sie zu "Verwaltung > Berechtigungssystem > Rechte > CMDB", laden Sie einen Benutzer/eine Gruppe und aktivieren Sie das Recht "Ausführen" für eine oder mehrere Bedingungen:
+## Berechtigungen
 
-*   Kategorie,
-*   Kategorie in Objekt-Typen,
-*   Kategorie in Objekten,
+Um Benutzern/Benutzergruppen die Berechtigung zu erteilen, diese Schaltflächen auszuloesen, gehst du zu "Verwaltung > Berechtigungssystem > Rechte > CMDB", laedst einen Benutzer/eine Gruppe und aktivierst das Recht "Ausführen" für eine oder mehrere Bedingungen:
+
+*   Kategorie
+*   Kategorie in Objekttypen
+*   Kategorie in Objekten
 *   Kategorie in Objekten unterhalb einer Lokation und/oder
-*   Kategorien in von mir erstellten Objekten
+*   Kategorien in von dir erstellten Objekten

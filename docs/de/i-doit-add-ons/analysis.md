@@ -1,19 +1,28 @@
+---
+title: Analysis
+description: "Das Add-on Analyse bietet dir zwei zentrale Funktionen:"
+icon:
+status:
+lang: de
+---
 # Analysis
 
-Das [Add-on](index.md) **Analyse** ermöglicht im Schwerpunkt zwei Anwendungen: Zum Einen untersucht es die Daten- und Dokumentationsqualität und liefert eine interaktive Ergebnisansicht mit dem ermittelten Status. Zum Anderen dient es der Simulation von Ausfällen. So können "Was passiert wenn"-Szenarien durchgespielt und in ihren Auswirkungen auf die Infrastruktur analysiert werden. Bei kombinierter Nutzung mit der Schnittstelle zur Monitoring-Lösung [Checkmk](../i-doit-add-ons/checkmk2/index.md) können auch Live-Ausfälle entsprechend ihrer Auswirkung direkt untersucht werden.
+Das [Add-on](index.md) **Analyse** bietet dir zwei zentrale Funktionen:
 
-Download und Installation
--------------------------
+1. **Datenqualität prüfen** -- Untersuche, wie vollständig deine IT-Dokumentation ausgefüllt ist, und erhalte eine interaktive Ergebnisansicht.
+2. **Ausfälle simulieren** -- Spiele "Was passiert wenn"-Szenarien durch und analysiere die Auswirkungen auf deine Infrastruktur.
 
-Dieses Add-on kann nachträglich installiert werden. Detaillierte Beschreibungen bezüglich Download, Installation, Updates usw. liefert der Artikel "[i-doit Add-ons](./index.md)".
+In Kombination mit der Schnittstelle zu [Checkmk](../i-doit-add-ons/checkmk2/index.md) kannst du auch tatsächliche Live-Ausfälle direkt untersuchen.
 
-Konfiguration
--------------
+## Download und Installation
 
-Eine gesonderte Konfiguration ist nicht vorgesehen.
+Dieses Add-on kann nachträglich installiert werden. Details zu Download, Installation und Updates findest du im Artikel "[i-doit Add-ons](./index.md)".
 
-Rechtevergabe
--------------
+## Konfiguration
+
+Eine gesonderte Konfiguration ist nicht nötig.
+
+## Rechtevergabe
 
 Unter **Verwaltung → Rechtesystem → Rechtevergabe → Analyse** können [Rechte für Personen und Personengruppen](../effizientes-dokumentieren/rechteverwaltung/index.md) angepasst werden.
 
@@ -22,10 +31,9 @@ Unter **Verwaltung → Rechtesystem → Rechtevergabe → Analyse** können [Rec
 | **Analysen** | Analysen durchführen |
 | **Datenqualität-Profile verwalten** | Profile für die **Datenqualität** erstellen, bearbeiten und/oder unwiderruflich löschen |
 
-Ausfallsimulation
------------------
+## Ausfallsimulation
 
-Möchte man herausfinden, welche Auswirkungen ein Ausfall eines bestimmten Objekts auf dokumentierte Services hat, hilft die passende Simulation unter **Extras → Analyse → Ausfallsimulation** weiter. Über den Tab **Manuelle Objektauswahl** kann man mehrere Optionen angeben:
+Du möchtest herausfinden, welche Auswirkungen der Ausfall eines bestimmten Objekts auf deine dokumentierten Services hat? Nutze dafür die Simulation unter **Extras → Analyse → Ausfallsimulation**. Über den Tab **Manuelle Objektauswahl** stehen dir folgende Optionen zur Verfügung:
 
 | Option | Beschreibung |
 | --- | --- |
@@ -34,45 +42,64 @@ Möchte man herausfinden, welche Auswirkungen ein Ausfall eines bestimmten Objek
 | **Ansicht** | Servicebaum vereinfacht darstellen |
 | **Anzeigefilter** | Nachträgliche Filterung |
 
-Nach Klick auf den Button **Simulation starten** wird unterhalb der Optionen das Ergebnis präsentiert: Erst folgt eine Auflistung der betroffenen Services, wobei auch in der Hierarchie übergeordnete Services aufgelistet sein können. Dies hängt vom gewählten **Servicefilter** ab. Pro Service wird eine **Ausfallschwere** angegeben und je nach Schweregrad von grün (leicht) bis rot (schwer) dargestellt. Hierbei wird die Gewichtung von [Objekt-Beziehungen](../grundlagen/objekt-beziehungen.md) ausgewertet. Folgt hinter dem numerischen Feld ein **C**, weißt dies darauf hin, dass das ausgefallene Objekt Teil eines Clusters ist.
+Klicke auf **Simulation starten**, um das Ergebnis zu erhalten. Das Ergebnis umfasst:
 
-Unter **Baumansicht** wird ein Servicebaum aufgebaut, um den Ausfall auf diese Art zu visualisieren.
+- Eine **Auflistung der betroffenen Services** -- je nach Servicefilter auch übergeordnete Services in der Hierarchie.
+- Pro Service eine **Ausfallschwere**, farblich von grün (leicht) bis rot (schwer) dargestellt. Grundlage ist die Gewichtung der [Objekt-Beziehungen](../grundlagen/objekt-beziehungen.md).
+- Ein **C** hinter dem Wert zeigt an, dass das ausgefallene Objekt Teil eines Clusters ist.
+
+Unter **Baumansicht** wird der Ausfall als Servicebaum visualisiert.
 
 [![Ausfallsimulation](../assets/images/de/i-doit-add-ons/analysis/1-ans.png)](../assets/images/de/i-doit-add-ons/analysis/1-ans.png)
 
-Über den Tab **Report Objektauswahl** hat man zusätzlich die Möglichkeit, basierend auf einem [Report](../auswertungen/report-manager.md) Objekte auszuwählen, die von einem Ausfall betroffen sind.
+Über den Tab **Report Objektauswahl** kannst du die Objekte alternativ auf Basis eines [Reports](../auswertungen/report-manager.md) auswählen.
 
-Ausfälle live
--------------
+## Ausfälle live
 
-Eine Variante der oben beschriebenen Ausfallsimulation befindet sich unter **Extras → Analyse → Ausfälle live**. i-doit greift hierbei auf die Schnittstelle zu einem konfigurierten [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md) (beispielsweise [Checkmk](../i-doit-add-ons/checkmk.md)) zurück. Aus zu analysierenden Soll-Daten werden Ist-Daten: Fällt tatsächlich ein Host aus, kann nun simuliert werden, welche Auswirkungen dieser Ausfall auf die dokumentierten Services hat.
+Unter **Extras → Analyse → Ausfälle live** greift i-doit auf die Schnittstelle zu einem konfigurierten [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md) (z. B. [Checkmk](../i-doit-add-ons/checkmk.md)) zurück. Fällt tatsächlich ein Host aus, siehst du direkt, welche Auswirkungen dieser Ausfall auf deine dokumentierten Services hat.
 
-Datenqualität
--------------
+## Datenqualität
 
-Über den Punkt **Extras → Analyse → Datenqualität** kann gemessen werden, inwiefern die IT-Dokumentation ausgefüllt ist. Hier liegt der Anspruch, dass [zu jedem sichtbaren Objekttypen jede zugeordnete Kategorie](../grundlagen/zurodnung-von-kategorien-zu-objekttypen.md) eines jeden Objekts ausgefüllt ist. Dies definiert die Marke 100 Prozent.
+Unter **Extras → Analyse → Datenqualität** misst du, wie vollständig deine IT-Dokumentation ausgefüllt ist. Der Maßstab: [Zu jedem sichtbaren Objekttyp muss jede zugeordnete Kategorie](../grundlagen/zurodnung-von-kategorien-zu-objekttypen.md) jedes Objekts ausgefüllt sein -- das entspricht 100 Prozent.
 
-Beispiel: Es existieren 21 Objekte vom Typ **Client**. Diesem Objekttypen sind 20 Kategorien zugeordnet. Um 100 Prozent zu erreichen, müssten für alle 21 Objekte alle Kategorien ausgefüllt sein. Besteht eine Lücke, verringert sich die prozentuale Angabe.
+**Beispiel:** Du hast 21 Objekte vom Typ **Client** mit 20 zugeordneten Kategorien. Nur wenn bei allen 21 Objekten sämtliche Kategorien ausgefüllt sind, erreichst du 100 %. Jede Lücke verringert den Wert.
 
-Zu jedem Objekttypen können weitere Details über den Button Detaillierte Informationen darstellen eingeblendet werden. Wenn Lücken bestehen, kann über die Lupe zu jeder Kategorie eine Liste von betroffenen Objekten generiert werden.
+Über den Button **Detaillierte Informationen darstellen** blendest du Details pro Objekttyp ein. Bei Lücken kannst du über die Lupe eine Liste der betroffenen Objekte pro Kategorie generieren.
 
 [![Datenqualität](../assets/images/de/i-doit-add-ons/analysis/2-ans.png)](../assets/images/de/i-doit-add-ons/analysis/2-ans.png)
 
-Sollten Objekttypen und/oder Kategorien das Ergebnis verfälschen, kann man sie jeweils ausblenden. Daraufhin wird das Ergebnis neu berechnet. Solche Anpassungen kann in Profilen gespeichert werden, um sie später wieder aufzurufen. Dazu klickt man auf den Button **Speichern**. Anschließend vergibt man unter **Name** einen aussagekräftigen Titel. Unter **Benutzerspezifisch** gibt man an, ob nur der jeweilige Benutzer das Profil aufrufen darf oder ob es für alle Benutzer freigegeben ist. Bereits gespeicherte Profile erscheinen im linken Navigationsbaum unterhalb von **Datenqualität**.
+Objekttypen oder Kategorien, die das Ergebnis verfälschen, kannst du ausblenden. Das Ergebnis wird dann neu berechnet.
+
+So speicherst du solche Anpassungen als Profil:
+
+1. Klicke auf **Speichern**.
+2. Vergib unter **Name** einen aussagekräftigen Titel.
+3. Lege unter **Benutzerspezifisch** fest, ob nur du oder alle Benutzer das Profil nutzen dürfen.
+
+Gespeicherte Profile erscheinen im linken Navigationsbaum unterhalb von **Datenqualität**.
 
 [![Profil zur Datenqualität erstellen](../assets/images/de/i-doit-add-ons/analysis/3-ans.png)](../assets/images/de/i-doit-add-ons/analysis/3-ans.png)
 
-Objektkatalog
--------------
+## Objektkatalog
 
-Um sich auflisten zu lassen, welche Objekte zu einem Service gehören, dient der Punkt unter **Extras → Analyse → Objektkatalog**. Über **Objektauswahl** wählt man ein Objekt vom Typ **Service** aus. Danach grenzt man die Analyse optional über den **Servicefilter** ein. Ähnlich wie im [Report Manager](../auswertungen/report-manager.md) kann man die Anzeige der Objekte variieren, indem man aus [globalen und spezifischen Kategorien](../grundlagen/struktur-it-dokumentation.md) die passenden [Attribute](../grundlagen/struktur-it-dokumentation.md) wählt. Ein Klick auf **Objektdaten laden** generiert das tabellarische Ergebnis.
+Unter **Extras → Analyse → Objektkatalog** listest du alle Objekte auf, die zu einem Service gehören.
+
+1. Wähle unter **Objektauswahl** ein Objekt vom Typ **Service** aus.
+2. Grenze die Analyse optional über den **Servicefilter** ein.
+3. Wähle aus [globalen und spezifischen Kategorien](../grundlagen/struktur-it-dokumentation.md) die gewünschten [Attribute](../grundlagen/struktur-it-dokumentation.md) -- ähnlich wie im [Report Manager](../auswertungen/report-manager.md).
+4. Klicke auf **Objektdaten laden**, um das tabellarische Ergebnis zu erzeugen.
 
 [![Objektkatalog](../assets/images/de/i-doit-add-ons/analysis/4-ans.png)](../assets/images/de/i-doit-add-ons/analysis/4-ans.png)
 
-Servicekosten
--------------
+## Servicekosten
 
-Was kostet die Erbringung einer Dienstleistung? Diese Frage beantwortet der Punkt unter **Extras → Analyse → Servicekosten** auf Basis der IT-Dokumentation. Zuerst wählt man unter **Objektauswahl** ein Objekt vom Typ **Service** aus. Danach grenzt man die Analyse optional über den **Servicefilter** ein. Durch Klick auf den Button **Servicekosten berechnen** werden die Daten analysiert und aufbereitet. Das Ergebnis wird über den Punkt **Kosten Zusammenfassung** komprimiert dargestellt:
+Unter **Extras → Analyse → Servicekosten** berechnest du die Kosten einer Dienstleistung auf Basis deiner IT-Dokumentation.
+
+1. Wähle unter **Objektauswahl** ein Objekt vom Typ **Service** aus.
+2. Grenze optional über den **Servicefilter** ein.
+3. Klicke auf **Servicekosten berechnen**.
+
+Die **Kosten Zusammenfassung** zeigt folgende Werte:
 
 | Kategorie | Beschreibung |
 | --- | --- |
@@ -81,16 +108,15 @@ Was kostet die Erbringung einer Dienstleistung? Diese Frage beantwortet der Punk
 | **Jährliche Betriebskosten** | Siehe Kategorie **Buchhaltung** |
 | **Vertragskosten** | Siehe Kategorie **Vertragszuweisung** |
 
-Unter **Weitere Zusammenfassungen** wird der maximale Energiebedarf von Hardware-Objekten zusammengefasst (siehe Kategorie **Stromverbraucher**).
+Unter **Weitere Zusammenfassungen** findest du den maximalen Energiebedarf der Hardware-Objekte (Kategorie **Stromverbraucher**).
 
-Nach einem Tortendiagramm der oben genannten Kosten folgt eine detaillierte Aufschlüsselung, welche Daten pro **Kategorie** und analysiertes Objekt ausgewertet wurden.
+Darunter folgt ein Tortendiagramm der Kosten sowie eine detaillierte Aufschlüsselung pro Kategorie und analysiertem Objekt.
 
 [![Servicekosten](../assets/images/de/i-doit-add-ons/analysis/5-ans.png)](../assets/images/de/i-doit-add-ons/analysis/5-ans.png)
 
-Kategorie Analyse
------------------
+## Kategorie Analyse
 
-Jedem Objekt ist nach der Aktivierung des **Analyse**\-Add-ons eine Kategorie mit demselben Namen **Analyse** zugeordnet. Über diese Kategorie gelangt man direkt zur **Ausfallsimulation**, wobei unter **Objektauswahl** das jeweilige Objekt bereits vorselektiert.
+Nach der Aktivierung des Add-ons erhält jedes Objekt eine Kategorie namens **Analyse**. Über diese Kategorie gelangst du direkt zur **Ausfallsimulation** -- das jeweilige Objekt ist dabei bereits vorselektiert.
 
 Releases
 --------

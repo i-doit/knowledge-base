@@ -1,3 +1,10 @@
+---
+title: Dashboard Widget programmieren
+description: "Das Dashboard ist der zentrale Einstieg in i-doit und somit das erste das jeder User nach seinem Login sieht - der perfekte Ort, um alle wichtigen..."
+icon:
+status:
+lang: de
+---
 # Dashboard Widget programmieren
 
 Das Dashboard ist der zentrale Einstieg in i-doit und somit das erste das jeder User nach seinem Login sieht - der perfekte Ort, um alle wichtigen Informationen auf einen Blick zu sammeln.

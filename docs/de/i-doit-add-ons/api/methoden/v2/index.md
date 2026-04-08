@@ -1,6 +1,6 @@
 ---
 title: API v2 Endpunkte
-description: API v2 Endpunkte
+description: "Die neue Struktur ist viel strenger und erlaubt eine bessere Validierung der übergebenen Parameter und es ist nun möglich, deutlich strukturiertere und..."
 #icon: material/api
 status: updated
 lang: de
@@ -1473,3 +1473,9 @@ Dies soll sicherstellen, dass die v2 API keine spezielle "eigene" Logik mehr imp
             }
         }
         ```
+
+## Siehe auch
+
+- [API Add-on](../../index.md) — Einstieg in das API Add-on
+- [API v1 Methoden](../v1/index.md) — API v1 Methodenreferenz
+- [i-doit Add-ons](../../../index.md) — Alle verfügbaren Add-ons

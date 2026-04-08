@@ -1,6 +1,6 @@
 ---
 title: cmdb.location_tree
-description: cmdb.location_tree
+description: "This method can be used to build the location tree. Always exactly one level is loaded down."
 icon: material/api
 #status: updated
 lang: de
@@ -76,3 +76,9 @@ This method can be used to build the location tree. Always exactly one level is 
       ]
     }
     ```
+
+## Siehe auch
+
+- [API v1 Methoden](index.md) — Übersicht aller API v1 Methoden
+- [API Add-on](../../index.md) — Einstieg in das API Add-on
+- [i-doit Add-ons](../../../index.md) — Alle verfügbaren Add-ons

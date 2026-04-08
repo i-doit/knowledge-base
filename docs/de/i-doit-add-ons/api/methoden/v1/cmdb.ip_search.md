@@ -1,6 +1,6 @@
 ---
 title: cmdb.ip_search
-description: cmdb.ip_search
+description: "Get all Layer3 Objects (except Global v4/v6, where the IP is in the address range of the Layer3 Network)"
 icon: material/api
 #status: updated
 lang: de
@@ -51,3 +51,9 @@ Get all Layer3 Objects (except Global v4/v6, where the IP is in the address rang
     ```json
     Placeholder
     ```
+
+## Siehe auch
+
+- [API v1 Methoden](index.md) — Übersicht aller API v1 Methoden
+- [API Add-on](../../index.md) — Einstieg in das API Add-on
+- [i-doit Add-ons](../../../index.md) — Alle verfügbaren Add-ons

@@ -1,18 +1,24 @@
+---
+title: Beispiel Standorte
+description: "In diesem Beispiel erstellst du eine komplette Standortstruktur (Gebaeude, Etagen, Raeume) per CSV-Import."
+icon:
+status:
+lang: de
+---
 # Beispiel Standorte
 
-!!! warning "Bitte erstellen Sie vor jeder Änderung an einer Schnittstelle/Import einen vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist kann dieses dann wiederhergestellt werden"
+!!! warning "Bitte erstelle vor jeder Änderung an einer Schnittstelle/Import ein vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist, kann dieses dann wiederhergestellt werden"
 
-Heute wollen wir uns einmal ein praktisches Beispiel für den CSV Import anschauen.
-Unser Anwendungsfall ist das automatische erstellen der Standorte innerhalb von i-doit mithilfe einer CSV Imports.
+In diesem Beispiel erstellst du eine komplette Standortstruktur (Gebäude, Etagen, Räume) per CSV-Import.
 
 !!! note "Dieser Artikel wurde zuletzt für i-doit Version 1.16.2 geprüft"
 
-Wir benötigen für das erstellen der einzelnen Objekte folgende Informationen:
+### Benötigte Informationen
 
--   Den selbst erstellten Objekttyp Etage/Basement mit der Objekttyp Konstante - C__OBJECT_TYPE__FLOOR
--   Objektname → den Namen des Gebäudes, der Etage oder des Raumes
--   Standort → unterhalb welcher Lokation soll sich das Objekt befinden
--   Objekttyp → Um welchen Objekttypen soll es sich Handeln
+-   Den selbst erstellten Objekttyp Etage/Basement mit der Objekttyp-Konstante `C__OBJECT_TYPE__FLOOR`
+-   Objektname → Name des Gebaudes, der Etage oder des Raumes
+-   Standort → Unter welcher Lokation soll sich das Objekt befinden?
+-   Objekttyp → Welcher Objekttyp wird angelegt?
 
 Beispiel CSV Datei für diesen Import:
 
@@ -86,31 +92,40 @@ Der Aufbau der CSV sieht wie folgt aus:
     RAUM 3.014;Third Floor;C__OBJTYPE__ROOM
     ```
 
-Da wir Abhängigkeiten setzen wollen die aufeinander aufbauen, ist es wichtig in der CSV Datei eine entsprechende Reihenfolge bei den Standorten einzuhalten.
-Die Root Lokation ist immer die unterste Stufe und bereits vorhanden. In dieser befinden sich die einzelnen Gebäude, in den Gebäuden die einzelnen Etagen und in den Etagen die jeweiligen Räume:
+### Reihenfolge in der CSV-Datei
 
- Root Lokation → Gebäude → Etage → Raum
+Da die Standorte aufeinander aufbauen, ist die Reihenfolge in der CSV-Datei entscheidend. Die Root-Lokation existiert bereits. Innerhalb davon gilt die Hierarchie:
 
-Also kommen in der CSV Datei auch die Gebäude als erstes, dann die Etagen und als letztes die Räume.
+Root-Lokation → Gebäude → Etage → Raum
+
+In der CSV-Datei stehen daher zuerst die Gebäude, dann die Etagen und zuletzt die Räume.
 
 [![Standortsicht](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/1-csv-standort.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/1-csv-standort.png)
 
-Um zu definieren welcher Objekttyp jeweils angelegt werden soll, geben wir dem Import in jeder Zeile noch die Objekttyp Konstante mit auf den Weg, diese finden wir in der Objekttyp Konfiguration:
+Jede Zeile enthält zusätzlich die Objekttyp-Konstante. Diese findest du in der Objekttyp-Konfiguration:
 
 [![Objekttyp-Konfigurtion](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/2-csv-standort.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/2-csv-standort.png)
 
-Schauen wir uns nun die Konfiguration für den Import an, im oberen Bereich können wir die Einstellungen so lassen, wie sie sind:
+### Schritt-fur-Schritt-Anleitung
+
+1. Navigiere zum CSV-Import unter **Extras → Import → CSV Import**
+2. Lade die CSV-Datei hoch und klicke auf **Fur Import verwenden**
+3. Belasse die Einstellungen im oberen Bereich auf den Standardwerten
 
 [![CSV Import optionen](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/3-csv-standort.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/3-csv-standort.png)
 
-Jetzt auf Mapping vorbereiten klicken, danach können wir die Einstellungen wie folgt anpassen:
+4. Klicke auf **Mapping vorbereiten** und konfiguriere die Zuweisungen wie im Screenshot
 
 [![CSV Objekt Matching Profile](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/4-csv-standort.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/4-csv-standort.png)
 
-Nun sind wir soweit und können den Import starten, in der Standortansicht sollte sich danach folgendes Bild ergeben:
+5. Starte den Import
+
+### Ergebnis
+
+In der Standortansicht siehst du nun die vollständige Hierarchie:
 
 [![Standortsicht](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/5-csv-standort.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/5-csv-standort.png)
 
-Die Konfiguration des neu erstellten Objekttyps Etage
+So sieht die Konfiguration des selbst erstellten Objekttyps **Etage** aus:
 
 [![Objekttyp-Konfigurtion](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/6-csv-standort.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-standorte/6-csv-standort.png)

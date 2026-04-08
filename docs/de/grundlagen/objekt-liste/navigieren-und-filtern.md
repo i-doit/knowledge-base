@@ -1,6 +1,6 @@
 ---
 title: Navigieren und filtern
-description:
+description: "Die Navigations- und Filterfunktionen helfen dir, in Objekt-Listen schnell die gewünschten Objekte zu finden."
 icon:
 status:
 lang: de
@@ -8,7 +8,7 @@ lang: de
 
 # Navigieren und filtern
 
-Durch eine [Objekt-Liste](index.md) zu navigieren und nach bestimmten [Objekten](../struktur-it-dokumentation.md) zu filtern ist keine große Kunst. Und trotzdem lohnt sich ein genauer Blick.
+Die Navigations- und Filterfunktionen helfen dir, in [Objekt-Listen](index.md) schnell die gewünschten [Objekte](../struktur-it-dokumentation.md) zu finden.
 
 [![Alle-Felder](../../assets/images/de/grundlagen/navigation-und-filtern/1-nuf.png)](../../assets/images/de/grundlagen/navigation-und-filtern/1-nuf.png)
 
@@ -34,11 +34,11 @@ Pro Benutzer kann festgelegt werden, [wie viele Objekte pro Seite dargestellt](e
 
 ## Filtern
 
-Die Zeilen einer Objekt-Liste können nach Attributen gefiltert werden. Eines der angezeigten Attribut ist für den [Standardfilter](listenansicht-konfigurieren.md) vorgesehen. Es kann direkt danach gefiltert werden, wobei **ab 3 Zeichen** Vorschläge generiert werden. Wählt man einen dieser Vorschläge aus, wird nicht die Liste danach gefiltert, sondern das Objekt geladen.
+Du kannst die Zeilen einer Objekt-Liste nach Attributen filtern. Eines der angezeigten Attribute dient als [Standardfilter](listenansicht-konfigurieren.md). Tippe direkt in das Filterfeld -- **ab 3 Zeichen** erscheinen Vorschläge. Wählst du einen Vorschlag aus, öffnet i-doit direkt das entsprechende Objekt (statt die Liste zu filtern).
 
-Zudem kann über ein Drop-Down-Menü nach mehreren Attributen gleichzeitig gefiltert werden (Und-Verknüpfung). Bestätigt wird der Filter durch Klick auf den Button **Filtern**. Der ausgewählte Filter wird zudem in einer Text-Leiste angezeigt. Die Filterung kann über den entsprechenden Button wieder zurückgesetzt werden.
+Über das Drop-Down-Menü filterst du nach mehreren Attributen gleichzeitig (Und-Verknüpfung). Bestätige den Filter mit dem Button **Filtern**. Der aktive Filter wird in einer Text-Leiste angezeigt und lässt sich über den entsprechenden Button zurücksetzen.
 
-Seit Version 1.17 kann auch nach leeren Werten gefiltert werden. Dazu muss eine oder mehrere Checkbox/en, hinter dem jeweiligen Wert, markiert werden.
+Ab Version 1.17 kannst du auch nach leeren Werten filtern. Markiere dazu die Checkbox hinter dem jeweiligen Wert.
 
 [![Objekte-markieren](../../assets/images/de/grundlagen/navigation-und-filtern/3-nuf.png)](../../assets/images/de/grundlagen/navigation-und-filtern/3-nuf.png)
 

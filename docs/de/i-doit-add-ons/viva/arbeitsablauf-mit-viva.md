@@ -1,3 +1,10 @@
+---
+title: Arbeitsablauf mit VIVA
+description: "Die Möglichkeiten der IT-Dokumentation sind bereits in i-doit vielfältig und lassen sich an die Vorgaben und Bedürfnisse der jeweiligen..."
+icon:
+status:
+lang: de
+---
 # Arbeitsablauf mit VIVA
 
 Die Möglichkeiten der IT-Dokumentation sind bereits in i-doit vielfältig und lassen sich an die Vorgaben und Bedürfnisse der jeweiligen (Organisations-)Umgebung anpassen. Das [Add-on](../index.md) **VIVA** stellt hier keine Ausnahme dar: Auch wenn die zugrunde liegenden Standards des IT-Grundschutzes viele Vorgaben machen, sind sie an zahlreichen Stellen interpretationsfähig. Dem versucht VIVA gerecht zu werden. Trotz alledem haben sich einige Arbeitsabfolgen in der Praxis etabliert, die in diesem Kapitel näher beschrieben werden. Das Beispiel stellt weder Anspruch auf Vollständigkeit noch Verbindlichkeit. Weitere (Zwischen-)Schritte wie Anpassung der Dokumentation sind wahrscheinlich nötig.

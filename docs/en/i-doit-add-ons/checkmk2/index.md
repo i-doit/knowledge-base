@@ -1,12 +1,22 @@
+---
+title: Checkmk 2
+description: "This version brings important improvements and new features to make using Checkmk 2 more efficient and future-proof."
+icon:
+status:
+lang: en
+---
 # Checkmk 2
 
 ## Release Notes Checkmk 2 Version 1.8.6
 
-This version brings important improvements and new functions to make the use of Checkmk 2 more efficient and future-proof.
 
-!!! tip "This add-on is developed by the [SHD System-Haus-Dresden GmbH](https://www.shd-online.de/)"
+[![checkmk2/checkmk-übersicht.png](../../assets/images/de/i-doit-add-ons/checkmk2/checkmk-uebersicht.png)](../../assets/images/de/i-doit-add-ons/checkmk2/checkmk-uebersicht.png)
 
-!!! hint "This documentation may be outdated"
+This version brings important improvements and new features to make using Checkmk 2 more efficient and future-proof.
+
+!!! tip "This add-on is developed by [SHD System-Haus-Dresden GmbH](https://www.shd-online.de/)"
+
+!!! hint "**This documentation may be outdated**"
 
 ### Compatibility with PHP 8.2
 
@@ -15,87 +25,79 @@ This version brings important improvements and new functions to make the use of 
 ### Compatibility with Checkmk 2.3
 
 -   To use the Checkmk 2 add-on with Checkmk 2.3, the configuration parameter `check_mk.version` must be set to `"2.3"`.
--   The add-on thus supports all versions from Checkmk 1.5.
--   In future, new features will only be implemented for Checkmk >= version 2.2.
+-   The add-on thus supports all versions starting from Checkmk 1.5.
+-   New features will only be implemented for Checkmk >= version 2.2 in the future.
 
-### Extended logging
+### Extended Logging
 
--   Logging has been extended and now also includes the logging of HTTP requests and responses to/from Checkmk.
+-   Logging has been expanded and now also includes the logging of HTTP requests and responses to/from Checkmk.
 -   New parameters for logging:
     -   `check_mk.logging.enableLogging: true|false`: Enables logging of Checkmk responses/requests (disabled by default).
-    -   `check_mk.logging.logFilePath: "/log/path"`: Directory in which the log files are saved. One log file is created per call. The directory must be readable and writable for the user running Checkmk 2 (e.g. www-data).
-    -   An example configuration can be viewed with `idoitcmk print-example-config`.
+    -   `check_mk.logging.logFilePath: "/log/path"`: Directory where log files are stored. One log file is created per call. The directory must be readable and writable by the user running Checkmk 2 (e.g., www-data).
+    -   You can view an example configuration with `idoitcmk print-example-config`.
 
-### Bugfixes/further adjustments
+### Bugfixes/Additional Adjustments
 
--   The merging of host addresses (`pull.updateObjects: true`) no longer overwrites already assigned networks.
--   Activating changes now correctly uses the configuration parameter `push.activateForeignChanges` to check whether other Checkmk users are making changes at the same time.
--   The pushing of objects has been further optimized.
--   Evaluation of the configuration parameter `webAPI|rest.effectiveAttributes` corrected
--   Many other minor adjustments in the "engine room".
+-   Merging of host addresses (`pull.updateObjects: true`) no longer overwrites already assigned networks.
+-   Activating changes now correctly considers based on the configuration parameter `push.activateForeignChanges` whether there are simultaneous changes by other Checkmk users.
+-   Pushing of objects has been further optimized.
+-   Evaluation of the configuration parameter `webAPI|rest.effectiveAttributes` corrected.
+-   Many additional minor adjustments under the hood.
 
-## What is new (v1.8.5)
+## What's New (v1.8.5)
 
-### Dynamic Filtering Using Whitelist and Blacklist
+### Dynamic Filtering via Whitelist and Blacklist (v1.8.5)
 
-With the latest software update, users now have the ability to precisely control the import and synchronization process of software applications. By using regular expressions, users can define exactly which applications should be included or excluded during the process. A whitelist allows users to selectively choose specific software applications for processing. For example, the regular expression `^Windows Update.*$` ensures that all Windows updates are included in the process, while `^python[0-9.]+$` captures all Python versions.
-Complementary to the whitelist, the blacklist provides a function to explicitly exclude applications from the import and synchronization process.
+With the latest software update, you now have the ability to control the import and synchronization process of software applications more precisely. Using regular expressions, you can define exactly which applications are included or excluded during the process. A whitelist allows you to specifically select certain software applications for processing. For example, the regular expression `^Windows Update.*$` ensures that all Windows updates are included in the process, while `^python[0-9.]+$` captures all Python versions.
+In parallel, the blacklist offers a complementary function with which applications can be explicitly excluded from the import and synchronization process.
 
-Additionally, an important change has been made to the configuration structure in this version: The parameter `createUnknownSoftwareApplications,` which was previously located in the main "pull" section, has been moved to the newly created `softwareApplications` subsection. This restructuring improves the clarity and modularity of the configuration settings.
-For users who want to familiarize themselves with the new configuration structure, the command `./idoitcmk print-example-config`provides a convenient way to view an example of the new parameter arrangement.
+In this version, an important change was also made to the configuration structure: The parameter `createUnknownSoftwareApplications`, previously found in the main `pull` section, has been moved to the newly created `softwareApplications` subsection. This restructuring improves the clarity and modularity of the configuration settings.
+If you want to familiarize yourself with the new configuration structure, the command `./idoitcmk print-example-config` provides a convenient way to see an example of the new parameter arrangement.
 
-## What is new (v1.8.2)
+## What's New (v1.8.2)
 
--   With version 1.8.2 CMK2 now supports Checkmk version 2.2.
--   If the config parameter check_mk.version is set to "2.2", the REST API is automatically accessed instead of the Web API.
--   If the config parameter check_mk.version is set to "2.1", the WebAPI is used unless there is a configuration section. "check_mk.rest" that can be used in parallel with the WebAPI configuration. Then the REST API is also used for 2.1.
--   This does not affect the calls to the Inventory API!
+-   As of version 1.8.2, CMK2 now also supports Checkmk 2.2.<br>
+-   If the configuration parameter check_mk.version is set to "2.2", the REST API is automatically used instead of the Web API.<br>
+-   If the configuration parameter check_mk.version is set to "2.1", the Web API is used, unless there is a configuration section "check_mk.rest" that can be used in parallel with the Web API configuration. In that case, the REST API is also used for version 2.1.
+-   This does not affect calls to the Inventory API!
 
 !!! info ""
-    As a Gold Partner of Tribe29, SHD - System-Haus-Dresden GmbH is considered a proven specialist for monitoring with Checkmk. With the takeover and further development of the i-doit add-on Checkmk 2, SHD is now making this expertise available to i-doit users.
+    As a Gold Partner of Tribe29, SHD System-Haus-Dresden GmbH is a recognized specialist for monitoring with Checkmk. By taking over and further developing the i-doit add-on Checkmk 2, SHD now makes this expertise available to i-doit users as well.
 
 !!! attention ""
-    With [Checkmk version 2.1.0b1](https://checkmk.com/werk/12389) the structure of the inventory data has been changed. It is currently not possible to transfer inventory to i-doit with Checkmk 2 add-on <=1.8<br>
-    With version 1.8.1 the [configuration](./configuration.md) must be adjusted.
+    With [Checkmk version 2.1.0b1](https://checkmk.com/werk/12389), the structure of the inventory data was changed. It is currently not possible with Checkmk 2 add-on version <=1.8 to transfer inventory data to i-doit.<br>
+    With version 1.8.1, the [configuration](./konfiguration.md) must be adjusted.
 
-Share information between i-doit and checkmk
+## About the Add-on
 
-## About
+The Checkmk 2 add-on connects [i-doit](https://i-doit.com) (CMDB and IT documentation) with [Checkmk](https://checkmk.com/de) (network monitoring). Together, you can achieve the following goals:
 
-[i-doit](https://i-doit.com) is a Web application for IT documentation and a CMDB (Configuration Management Database). This application is very useful to collect all your knowledge about the IT infrastructure you are dealing with.
+-   **Document once, use many times** -- Maintain documentation and configuration in one place.
+-   **Target/actual comparison** -- Compare the current state with the desired state of your hosts and services.
+-   **Configure monitoring** -- Build network monitoring based on your documentation.
+-   **Feed back inventory data** -- Reuse information collected by Checkmk in the CMDB.
+-   **Automate** -- Handle recurring tasks without manual effort.
 
-[checkmk](https://mathias-kettner.de/checkmk.html) is a software application for network monitoring.
-
-Together both applications do one job very well: collecting and sharing knowledge about what _is_ the current state of all your hosts and services in real-time _and_ in which state each host and service _should_ be. This is often essential for a professional and efficient IT service management (ITSM).
-
-The application idoitcmk closely connects i-doit with checkmk. A lot of information will be shared between them to reach the following goals:
-
--   Write-once, read-many: Keep your documentation and configuration at one place.
--   Easily compare the current state with the target state of all your hosts and services within your documentation.
--   Configure your network monitoring based on your documentation
--   Let your network monitoring collect essential information about hosts and re-use it in your documentation.
--   Automate all the boring tasks a sysadmin doesn't like.
-
-We know each (IT) organization has different requirements and various processes. Due to this it is important to have a [highly customizable](./configuration.md) application.
+The `idoitcmk` application is [highly configurable](konfiguration.md) in this process, allowing you to map different requirements and workflows.
 
 ## Documentation
 
--   [First steps](./first-steps.md)
--   [Requirements](./requirements.md)
+-   [Getting Started](./first-schritte.md)
+-   [Requirements](./anforderungen.md)
 -   [Installation](./installation.md)
--   [Usage](./usage.md)
--   [Configuration](./configuration.md)
--   [Generate WATO configuration based on CMDB data](./generate-wato-configuration-base-on-cmdb-data.md)
--   [Import inventory data into CMDB](./import-inventory-data-into-cmdb.md)
--   [Match objects from i-doit with hosts from checkmk](./match-objects-from-i-doit-with-hosts-from-checkmk.md)
--   [Read information from i-doit and checkmk](./read-information-from-i-doit-and-checkmk.md)
--   [Import agents types from checkmk to i-doit](./sync-checkmk-agents.md)
--   [Sync contact groups between checkmk and i-doit](./sync-contact-groups.md)
--   [Sync WATO folders between checkmk and i-doit](./sync-wato-folder.md)
--   [Import monitoring sites from checkmk to i-doit](./sync-checkmk-sites.md)
--   [Sync host tags between checkmk and i-doit](./sync-host-tags.md)
+-   [Configuration](./konfiguration.md)
+-   [Usage](./verwendung.md)
+-   [Generate WATO Configuration Based on CMDB Data](./wato-konfiguration-auf-basis-von-cmdb-daten-generieren.md)
+-   [Import Inventory Data into the CMDB](./bestandsdaten-in-die-cmdb-importieren.md)
+-   [Match Objects from i-doit with Hosts from Checkmk](./abgleich-von-objekten-aus-i-doit-mit-hosts-aus-checkmk.md)
+-   [Read Information from i-doit and Checkmk](./informationen-aus-i-doit-und-checkmk-lesen.md)
+-   [Import Agent Types from Checkmk to i-doit](./synchronisierung-der-checkmk-agenten.md)
+-   [Synchronize Contact Groups between Checkmk and i-doit](./kontaktgruppen-synchronisieren.md)
+-   [Synchronize WATO Folders between Checkmk and i-doit](./wato-ordner-synchronisieren.md)
+-   [Import Sites from Checkmk to i-doit](./checkmk-sites-synchronisieren.md)
+-   [Synchronize Host Tags between Checkmk and i-doit](./host-tags-synchronisieren.md)
 -   [i-doit Web GUI](./i-doit-web-gui.md)
--   [Frequently asked questions (FAQ)](./faq.md)
+-   [Frequently Asked Questions (FAQ)](./faq.md)
 
 ## Changelog
 
@@ -103,6 +105,8 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+### [1.8.5] - 2024-07-01
 
 ### [1.8.5] - 2024-04-16
 
@@ -118,7 +122,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixes
 
 -   CMK2-99 fix creation of hosts in other folder than main
--   CMK2-88 fix crash with inventory api and config param i-doit.limitBatchRequests
+-   CMK2-88 fix crash with inventory api and config param i-doit.liwithBatchRequests
 -   CMK2-68 fix error at static tag sync
 -   CMK2-67 fix crash when importing drives
 
@@ -205,7 +209,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
--   Tags (static) Dropdown Tag group attributes cannot be deleted
+-   Tags (static) Dropdown 'Tag group' attributes cannot be deleted
 -   Checkmk 2: Tags are not displayed with the tag group in reports
 
 ### [1.6.1] – 2021-06-15
@@ -245,7 +249,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Require PHP modules hash, sockets and SPL
 -   pull: Do not warn about empty host tag IDs because they are allowed in Checkmk
 -   pull: Ignore link local networking addresses and interfaces
--   pull: Do not ignore a networking address which cant be assigned to a networking port
+-   pull: Do not ignore a networking address which can't be assigned to a networking port
 -   push: Create site if it's set in i-doit (category Checkmk Host) but not set in Checkmk
 -   push: Update site if it's set in both i-doit and Checkmk but differs
 -   push: Remove site if it isn't set in i-doit but set in Checkmk
@@ -253,8 +257,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
--   fetch-hosts/pull: Fetch HW/SW inventory data for all hosts if configuration setting i-doit.limitBatchRequests is smaller than the number of hosts.
--   match/pull/push: Use primary category entry from category hostaddress to determine hostname used by Checkmk
+-   fetch-hosts/pull: Fetch HW/SW inventory data for all hosts if configuration setting i-doit.liwithBatchRequests is smaller than the number of hosts.
+-   match/pull/push: Use primary category entry from category host address to determine hostname used by Checkmk
 -   pull: Do not import empty MAC addresses
 -   pull: Prevent validation error caused by unknown property entry
 -   pull: Print link to Checkmk if attribute "site" is available
@@ -323,7 +327,7 @@ This is a bug fix release after we received tons of useful feedback from our use
 -   push: Add or remove alias to/from host properly
 -   push/fetch-objects: Prevent error "Found invalid result for request in batch" if --include-ids filters by unknown objects
 -   sync-tags: Do not forget to strip HTML tags from tag group title before syncing to Checkmk
--   Installation/update: Grant "Admin" group access to Extras > Check_MK 2 in Web GUI
+-   installation/update: Grant "Admin" group access to Extras > Check_MK 2 in Web GUI
 -   Extras > Check_MK 2 > Tags (static): Edit/delete/sort static host tags in i-doit
 -   Administration > Interfaces / external data > Monitoring > Check_MK 2: Fix updating configuration settings
 -   Administration > CMDB settings > Dialog-Admin: Make dialog+ attributes agent, site and WATO folder available
@@ -368,7 +372,7 @@ First public release 🎉
 
 ### [1.4.0] – 2018-11-05
 
-Remember, remember, the fifth of November… 🎃
+Remember, remember, the fifth of November... 🎃
 
 ### Added
 
@@ -391,7 +395,7 @@ Remember, remember, the fifth of November… 🎃
 
 -   push: Validate regular expressions in configuration setting push.autoTagging
 -   status: Test loaded PHP extensions
--   Make it optional to fetch "effective" attributes from hosts in Checkmk, but enable it by default
+-   Make it optionally to fetch "effective" attributes from hosts in Checkmk, but enable it by default
 -   Add new configuration setting check_mk.webAPI.effectiveAttributes (set to true by default)
 -   fetch-objects: Print URL to each i-doit object
 -   fetch-hosts: Print URL to each Checkmk host

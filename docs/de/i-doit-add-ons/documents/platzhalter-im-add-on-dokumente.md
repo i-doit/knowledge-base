@@ -8,29 +8,29 @@ lang: de
 
 # Platzhalter in Dokumenten
 
-Sämtliche Platzhalter dienen dazu, Inhalte der Dokumentation dynamisch in das Dokument einzubinden. Die Platzhalter werden in der [Dokumentenvorlage](./dokumentenvorlagen.md) über den WYSIWYG Editor eingefügt.
+Mit Platzhaltern bindest du Inhalte der Dokumentation dynamisch in das Dokument ein. Du fügst die Platzhalter in der [Dokumentenvorlage](./dokumentenvorlagen.md) über den WYSIWYG-Editor ein.
 
 [![WYSIWYG](../../assets/images/de/i-doit-add-ons/documents/platzhalter/1-ph.png)](../../assets/images/de/i-doit-add-ons/documents/platzhalter/1-ph.png)
 
-Ein eingebundener Platzhalter kann nachträglich bearbeitet werden, indem er per Doppelklick im WYSIWYG Editor angeklickt wird.
+Einen eingebundenen Platzhalter bearbeitest du nachträglich per Doppelklick im WYSIWYG-Editor.
 
 ## Platzhalter Hauptobjekt
 
 [![WYSIWYG](../../assets/images/de/i-doit-add-ons/documents/platzhalter/2-ph.png)](../../assets/images/de/i-doit-add-ons/documents/platzhalter/2-ph.png)
 
-Der Platzhalter zur Einbindung von Informationen aus dem Hauptobjekt ermöglicht es, Inhalte die dem Objekt zugehörig sind, für das das Dokument erstellt wird, in das Dokument einzufügen.
+Mit diesem Platzhalter fügst du Informationen aus dem Hauptobjekt -- also dem Objekt, für das du das Dokument erstellst -- in das Dokument ein.
 
-Hier können die einzelnen Attribute, die im Dokument ausgegeben werden sollen, gruppiert nach ihrer Kategorie, selektiert werden. Dies geschieht über das Plus-Symbol neben dem Attribut. Gewählte Attribute erscheinen auf der rechten Seite und können auch wieder entfernt werden, indem das Minus-Symbol genutzt wird.
+Die einzelnen Attribute wählst du gruppiert nach Kategorie über das Plus-Symbol aus. Gewählte Attribute erscheinen auf der rechten Seite und lassen sich über das Minus-Symbol wieder entfernen.
 
-Wenn eine Objektverknüpfung (Beziehung) ausgewählt wurde, erscheint in der Zeile des Attributs ein Lupen-Symbol. Dies erlaubt die Auswahl von Attributen des verknüpften Objekts in einem weiteren Bereich der unterhalb der Auswahl auftaucht.
+Bei einer Objektverknüpfung (Beziehung) erscheint ein Lupen-Symbol. Darüber wählst du Attribute des verknüpften Objekts in einem zusätzlichen Bereich unterhalb der Auswahl aus.
 
 [![Hauptobjekt](../../assets/images/de/i-doit-add-ons/documents/platzhalter/3-ph.png)](../../assets/images/de/i-doit-add-ons/documents/platzhalter/3-ph.png)
 
-Weiterhin können zusätzliche Parameter festgelegt werden, die bei der Ausgabe berücksichtigt werden. So ist es beispielsweise möglich, nur primäre Einträge (z.B. das primäre Betriebssystem oder den primären Kontakt) auszugeben. Außerdem kann die Ausgabe auf Kategorieeinträge in definierten Zuständen (Normal, Archiviert und Gelöscht) beschränkt werden. Dies ist möglich, wenn die Ausgabe als Tabelle dargestellt wird.
+Zusätzlich legst du Parameter fest, die bei der Ausgabe berücksichtigt werden. Du gibst beispielsweise nur primäre Einträge aus (z.B. das primäre Betriebssystem oder den primären Kontakt). Außerdem beschränkst du die Ausgabe auf Kategorieeinträge in definierten Zuständen (Normal, Archiviert und Gelöscht), wenn die Ausgabe als Tabelle dargestellt wird.
 
-Außerdem können zusätzliche Parameter zur Formatierung der Ausgabe festgelegt werden. So ist es möglich, Texte für Kategorien festzulegen, wenn eine Kategorie keine Einträge hat oder Texte zu ergänzen, wenn eine Kategorie über Einträge verfügt.
+Weiterhin legst du Formatierungsparameter fest: Texte für Kategorien ohne Einträge oder ergänzende Texte für Kategorien mit Einträgen.
 
-Zuletzt ist es möglich, die Darstellung der Spaltenüberschriften, Gitternetzlinien, ungeraden Zeilen und Hintergrundfarben anzupassen.
+Zuletzt passt du die Darstellung der Spaltenüberschriften, Gitternetzlinien, ungeraden Zeilen und Hintergrundfarben an.
 
 [![Darstellung](../../assets/images/de/i-doit-add-ons/documents/platzhalter/4-ph.png)](../../assets/images/de/i-doit-add-ons/documents/platzhalter/4-ph.png)
 
@@ -38,7 +38,7 @@ Zuletzt ist es möglich, die Darstellung der Spaltenüberschriften, Gitternetzli
 
 [![Platzhalter Externes Objekt](../../assets/images/de/i-doit-add-ons/documents/platzhalter/5-ph.png)](../../assets/images/de/i-doit-add-ons/documents/platzhalter/5-ph.png)
 
-Informationen eines fest definierten Objekts können über diesen Platzhalter eingebunden werden. Auch hier entspricht die Attribute Auswahl jener, die für das Hauptobjekt zur Verfügung steht. Die gewählten Attribute beziehen sich jedoch auf das gewählte Objekt. Auch die zusätzlichen Formatierungsmöglichkeiten sind identisch zu jenen in der Auswahl des Hauptobjekts.
+Über diesen Platzhalter bindest du Informationen eines fest definierten Objekts ein. Die Attributauswahl entspricht der des Hauptobjekts, bezieht sich aber auf das gewählte externe Objekt. Die Formatierungsmöglichkeiten sind identisch.
 
 [![Platzhalter Externes Objekt](../../assets/images/de/i-doit-add-ons/documents/platzhalter/6-ph.png)](../../assets/images/de/i-doit-add-ons/documents/platzhalter/6-ph.png)
 
@@ -46,13 +46,13 @@ Informationen eines fest definierten Objekts können über diesen Platzhalter ei
 
 [![Platzhalter Report](../../assets/images/de/i-doit-add-ons/documents/platzhalter/7-ph.png)](../../assets/images/de/i-doit-add-ons/documents/platzhalter/7-ph.png)
 
-Über die Schaltfläche "Report" is es möglich, Ergebnislisten aus zuvor erstellten [Reports](../../auswertungen/report-manager.md) einzubinden. Die Auswahl erfolgt über das Dropdown Feld im oberen Bereich, in dem der Report anhand seines Namens gewählt wird.
+Über die Schaltfläche "Report" bindest du Ergebnislisten aus zuvor erstellten [Reports](../../auswertungen/report-manager.md) ein. Du wählst den Report im Dropdown-Feld anhand seines Namens aus.
 
-Die Ergebnisliste im Dokument entspricht immer der Ausgabe im Report bei der Dokumentenerstellung. Wenn zu erwarten ist, dass die Ergebnisse des Reports sich verändert/aktualisiert haben, muss eine neue Revision des Dokuments auf Basis der Vorlage erstellt werden.
+Die Ergebnisliste im Dokument entspricht immer dem Stand des Reports bei der Dokumentenerstellung. Haben sich die Ergebnisse des Reports verändert, erstellst du eine neue Revision des Dokuments.
 
-Zusätzlich ist es möglich, [Variable Reports](../../anwendungsfaelle/variable-reports.md) in das Dokument einzubinden. Die gewählten Platzhalter entsprechen hier dem Hauptobjekt und geben dynamisch die Inhalte für das Hauptobjekt aus.
+Zusätzlich bindest du [Variable Reports](../../anwendungsfaelle/variable-reports.md) ein. Die Platzhalter beziehen sich auf das Hauptobjekt und geben dynamisch dessen Inhalte aus.
 
-Weiterhin können Formatierungsoptionen genutzt werden um den Titel sowie die Beschreibung des Reports im Dokument optional zu ergänzen. Weiterhin lassen sich Spaltenüberschriften, Schrift- und Hintergrundfarbe, Gitternetz und die Zeilen der Tabelle über die jeweiligen Optionen definieren.
+Über die Formatierungsoptionen ergänzt du optional Titel und Beschreibung des Reports. Außerdem definierst du Spaltenüberschriften, Schrift- und Hintergrundfarbe, Gitternetz und Tabellenzeilen.
 
 [![Platzhalter Report](../../assets/images/de/i-doit-add-ons/documents/platzhalter/8-ph.png)](../../assets/images/de/i-doit-add-ons/documents/platzhalter/8-ph.png)
 
@@ -60,7 +60,7 @@ Weiterhin können Formatierungsoptionen genutzt werden um den Titel sowie die Be
 
 [![Platzhalter Template](../../assets/images/de/i-doit-add-ons/documents/platzhalter/9-ph.png)](../../assets/images/de/i-doit-add-ons/documents/platzhalter/9-ph.png)
 
-Der Platzhalter "Template" erlaubt die Einbindung wiederkehrender, allgemeiner Informationen. Hierzu steht ein Set an Standard-Inhalten zur Verfügung. Weitere Inhalte können über die benutzerdefinierten Felder, die in den allgemeinen Einstellungen zum Dokument angegeben und konfiguriert werden können, ergänzt werden.
+Der Platzhalter "Template" bindet wiederkehrende, allgemeine Informationen ein. Dafür steht ein Set an Standardinhalten zur Verfügung. Weitere Inhalte ergänzt du über die benutzerdefinierten Felder, die du in den allgemeinen Einstellungen zum Dokument konfigurierst.
 
 [![Platzhalter Template](../../assets/images/de/i-doit-add-ons/documents/platzhalter/10-ph.png)](../../assets/images/de/i-doit-add-ons/documents/platzhalter/10-ph.png)
 
@@ -68,7 +68,7 @@ Der Platzhalter "Template" erlaubt die Einbindung wiederkehrender, allgemeiner I
 
 [![Platzhalter Bilder](../../assets/images/de/i-doit-add-ons/documents/platzhalter/11-ph.png)](../../assets/images/de/i-doit-add-ons/documents/platzhalter/11-ph.png)
 
-Bilder, die in der gleichnamigen Kategorie hochgeladen wurden, können über den Platzhalter "Bilder" im Dokument ergänzt werden. Hier können entweder die Bilder des Hauptobjekts, für das das Dokument erstellt wird oder fest definierte Bilder aus anderen Objekten ausgewählt werden. Sollte das Hauptobjekt ausgewählt werden, kann festgelegt werden, ob das erste, das letzte oder alle Bilder aus der Kategorie angezeigt werden.
+Bilder, die in der gleichnamigen Kategorie hochgeladen wurden, ergänzt du über den Platzhalter "Bilder" im Dokument. Du wählst entweder Bilder des Hauptobjekts oder fest definierte Bilder aus anderen Objekten. Beim Hauptobjekt legst du fest, ob das erste, das letzte oder alle Bilder aus der Kategorie angezeigt werden.
 
 [![Platzhalter Bilder](../../assets/images/de/i-doit-add-ons/documents/platzhalter/12-ph.png)](../../assets/images/de/i-doit-add-ons/documents/platzhalter/12-ph.png)
 
@@ -76,6 +76,6 @@ Bilder, die in der gleichnamigen Kategorie hochgeladen wurden, können über den
 
 [![Platzhalter Raumplan](../../assets/images/de/i-doit-add-ons/documents/platzhalter/13-ph.png)](../../assets/images/de/i-doit-add-ons/documents/platzhalter/13-ph.png)
 
-Ein Raumplan, der über das Add-on "[Floorplan](../floorplan.md)" erstellt wurde kann ebenfalls in ein Dokument eingebunden werden. Hier ist es möglich, den Raumplan des Hauptobjekts zu referenzieren oder einen fest definierten, externen Raumplan auszuwählen. Alle bisher erstellten Raumpläne stehen in dieser Auswahl zur Verfügung.
+Einen Raumplan, den du über das Add-on "[Floorplan](../floorplan.md)" erstellt hast, bindest du ebenfalls in ein Dokument ein. Du referenzierst den Raumplan des Hauptobjekts oder wählst einen fest definierten externen Raumplan aus. Alle bisher erstellten Raumpläne stehen in der Auswahl zur Verfügung.
 
 [![Platzhalter Raumplan](../../assets/images/de/i-doit-add-ons/documents/platzhalter/14-ph.png)](../../assets/images/de/i-doit-add-ons/documents/platzhalter/14-ph.png)

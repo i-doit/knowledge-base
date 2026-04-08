@@ -1,135 +1,127 @@
+---
+title: Active Directory Documentation
+description: "With the Active Directory Documentation add-on, you document Microsoft environments directly in i-doit."
+icon:
+status:
+lang: en
+---
 # Active Directory Documentation
 
-The "Active Directory Documentation" add-on was designed and created as the first add-on with the Add-on Packager. The Active Directory Documentation add-on is designed to make it easier for administrators to document Microsoft environments. The add-on creates the necessary object types and categories.
+With the "Active Directory Documentation" add-on, you document Microsoft environments directly in i-doit. The add-on was created with the [Add-on Packager](./add-on-packager.md) and automatically includes all necessary object types and categories.
 
-Installation and License
+## installation and license
 
-The "Active Directory Documentation" add-on is installed like any other add-on via the Admin-Center. The add-on does not require a license. However, it can only be used with the pro variant.
+Install the add-on as usual via the [Admin Center](../administration/admin-center.md). It does not require a license but requires the pro variant of i-doit.
 
-Contents of the add-on
-----------------------
+## Contents of the add-on
 
-The "Active Directory Documentation" add-on brings a collection of object types, categories and Dialog+ entries.
+The add-on includes a collection of object types, categories, and Dialog+ entries. Two new object type groups are created: **Active Directory** and **Windows Systems**.
 
-Two new object type groups "Active Directory" and "Windows Systems" are created with the new object types:
-
-| Active directory | Windows Systems |
+| Active Directory | Windows Systems |
 | --- | --- |
 | Domain | DHCP Server |
 | Forest | DNS Server |
-| Site | Windows client |
-| Certificate authority | Window server |
+| Site | Windows Client |
+| Certificate Authority | Windows Server |
 
-In the following, the individual object types with the newly delivered categories are briefly explained.
+The following sections describe the individual object types and their categories.
 
-Domain
-------
+## Domain
 
-The delivered object type "Domain" allows to document the most common information of a domain.
-The following categories are delivered with the object type:
+With the "Domain" object type, you document the most common information of an Active Directory domain. The following categories are assigned:
 
 | Category |
 | --- |
-| Domain information |
-| Domain schema |
-| Domain structure |
-| FSMO roles |
-| Domain trusts |
-| Assigned domain controller |
-| Directory partitions |
-| Assigned sites |
+| Domain Information |
+| Domain Schema |
+| Domain Structure |
+| FSMO Roles |
+| Trusted Domains |
+| Assigned Domain Controllers |
+| Assigned Partitions |
+| Assigned Sites |
 
-[![Domain](../assets/images/en/i-doit-add-ons/active-directory-documentation/1-adc.png)](../assets/images/en/i-doit-add-ons/active-directory-documentation/1-adc.png)
+[![Domain](../assets/images/de/i-doit-add-ons/active-directory-documentation/1-add.png)](../assets/images/de/i-doit-add-ons/active-directory-documentation/1-add.png)
 
-Forest
-------
+## Forest
 
-The new object type makes it possible with the supplied categories to document all necessary information of a structure.  
-The following categories are delivered with the object type:
+With this object type, you document all relevant information about an Active Directory forest. The following categories are assigned:
 
 | Category |
 | --- |
-| FSMO roles |
-| Forest information |
-| Forest trusts |
-| Assigned catalogue server |
+| FSMO Roles |
+| Structure Information |
+| Trusted Structures |
+| Assigned Catalog Servers |
 
-[![Forest](../assets/images/en/i-doit-add-ons/active-directory-documentation/2-adc.png)](../assets/images/en/i-doit-add-ons/active-directory-documentation/2-adc.png)
+[![Forest](../assets/images/de/i-doit-add-ons/active-directory-documentation/2-add.png)](../assets/images/de/i-doit-add-ons/active-directory-documentation/2-add.png)
 
-Certificate authority
----------------------
+## Certificate Authority
 
-The "Certificate authority" enables the exact documentation of certificates. Here the name-giving object type makes possible to document the issuing certification authority, as well as the issued certificates.  
-The following categories are delivered with the object type:
+With this object type, you document both the issuing certificate authority and the individual issued certificates. The following categories are assigned:
 
 | Category |
 | --- |
-| Issued certificates |
-| Zertifizierungsstelle |
+| Issued Certificates |
+| Certificate Authority |
 
-[![Certificate authority](../assets/images/en/i-doit-add-ons/active-directory-documentation/3-adc.png)](../assets/images/en/i-doit-add-ons/active-directory-documentation/3-adc.png)
+[![Certificate Authority](../assets/images/de/i-doit-add-ons/active-directory-documentation/3-add.png)](../assets/images/de/i-doit-add-ons/active-directory-documentation/3-add.png)
 
-Windows server
---------------
+## Windows Server
 
-The new object type "Windows Server" is fundamentally based on the object type "Server". Here, however, increased emphasis is placed on the benefit and its relationships to the Active Directory.  
-The following categories are delivered with the object type:
+This object type is based on the standard "Server" object type but adds categories specifically designed for the relationship with Active Directory. The following categories are assigned:
 
 | Category |
 | --- |
-| Domain controller |
-| FSMO information |
-| Global catalogue |
+| Domain Controller |
+| FSMO Information |
+| Global Catalog |
 | LDAP |
-| NTFS shares |
-| Server roles |
-| Windows services |
-| Windows events |
-| Windows features |
-| Windows information |
-| Windows server group |
-| Windows update |
+| NTFS Shares |
+| Server Roles |
+| Windows Services |
+| Windows Events |
+| Windows Features |
+| Windows Information |
+| Windows Server Group |
+| Windows Update |
 
-Windows client
---------------
+[![Windows Server](../assets/images/de/i-doit-add-ons/active-directory-documentation/4-add.png)](../assets/images/de/i-doit-add-ons/active-directory-documentation/4-add.png)
 
-The new object type "Windows client" is fundamentally based on the object type "Client". Here, however, as with the Windows Server, increased emphasis is placed on the benefit and its relationships to the Active Directory.  
-The following categories are delivered with the object type:
+## Windows Client
 
-| Category |
-| --- |
-| RDP settings |
-| Windows information |
-
-[![Windows client](../assets/images/en/i-doit-add-ons/active-directory-documentation/4-adc.png)](../assets/images/en/i-doit-add-ons/active-directory-documentation/4-adc.png)
-
-DNS server
-----------
-
-The "DNS Server" object type is fundamentally based on the "Windows Server" object type. This enables separate documentation of DNS information. The "DNS Documentation" DNS add-on is available for special DNS documentation.  
-The following categories are delivered with the object type:
-
-| Kategorie |
-| --- |
-| DNS zone entries |
-| Assigned DNS server |
-
-[![DNS server](../assets/images/en/i-doit-add-ons/active-directory-documentation/5-adc.png)](../assets/images/en/i-doit-add-ons/active-directory-documentation/5-adc.png)
-
-DHCP server
------------
-
-The "DHCP server" object type is fundamentally based on the "Windows Server" object type. This enables separate documentation of DHCP information.
-The following categories are delivered with the object type:
+This object type is based on the standard "Client" object type and adds -- like the Windows Server -- AD-specific categories. The following categories are assigned:
 
 | Category |
 | --- |
-| DHCP zones |
-| Assigned DHCP server |
+| RDP Settings |
+| Windows Information |
 
-[![DHCP server](../assets/images/en/i-doit-add-ons/active-directory-documentation/6-adc.png)](../assets/images/en/i-doit-add-ons/active-directory-documentation/6-adc.png)
+[![Windows Client](../assets/images/de/i-doit-add-ons/active-directory-documentation/5-add.png)](../assets/images/de/i-doit-add-ons/active-directory-documentation/5-add.png)
 
-Changelog
+## DNS Server
+
+This object type is based on "Windows Server" and enables separate documentation of DNS information. For even more detailed DNS documentation, the [DNS Documentation add-on](./dns-documentation.md) is also available. The following categories are assigned:
+
+| Category |
+| --- |
+| DNS Zone Entries |
+| Assigned DNS Servers |
+
+[![DNS Server](../assets/images/de/i-doit-add-ons/active-directory-documentation/6-add.png)](../assets/images/de/i-doit-add-ons/active-directory-documentation/6-add.png)
+
+## DHCP Server
+
+This object type is based on "Windows Server" and enables separate documentation of DHCP information. The following categories are assigned:
+
+| Category |
+| --- |
+| DHCP Scopes |
+| Assigned DHCP Servers |
+
+[![DHCP Server](../assets/images/de/i-doit-add-ons/active-directory-documentation/7-add.png)](../assets/images/de/i-doit-add-ons/active-directory-documentation/7-add.png)
+
+## Changelog
 
 | Version | Date | Changelog |
 | --- | --- | --- |

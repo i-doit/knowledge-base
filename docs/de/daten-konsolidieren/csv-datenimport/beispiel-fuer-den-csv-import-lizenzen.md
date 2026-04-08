@@ -1,38 +1,40 @@
 ---
 title: Beispiel Lizenzen
-description: Beispiel Lizenzen
+description: "Dieses Beispiel baut auf dem CSV Import von Anwendungen auf. Du importierst Lizenzen mit allen relevanten Schluessel- und Laufzeitinformationen."
 icon: 
 status:
 lang: de
 ---
 
-!!! warning "Bitte erstellen Sie vor jeder Änderung an einer Schnittstelle/Import einen vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist kann dieses dann wiederhergestellt werden"
+!!! warning "Bitte erstelle vor jeder Änderung an einer Schnittstelle/Import ein vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist, kann dieses dann wiederhergestellt werden"
 
 !!! note "Dieser Artikel wurde zuletzt für i-doit Version 34 geprüft"
 
-In diesem Beispiel bauen wir auf den [CSV Import von Anwendungen](beispiel-fuer-den-csv-import-anwendungen.md) auf und wollen Lizenzen importieren.
+Dieses Beispiel baut auf dem [CSV Import von Anwendungen](beispiel-fuer-den-csv-import-anwendungen.md) auf. Du importierst Lizenzen mit allen relevanten Schlüssel- und Laufzeitinformationen.
 
-Für den Import benötigen wir folgende Informationen:
+### Benötigte Informationen
 
--   Objekttyp → Um welchen Objekttypen soll es sich Handeln
--   Objektname → den Namen des Clients
--   Lizenzzuweisung: Lizenzschlüssel - Lizenz Typ → Welcher Lizenz Typ wird importiert, Einzel- oder Volumen?
--   Lizenzzuweisung: Lizenzschlüssel - Anzahl → Welche Anzahl an Lizenzen gibt es?
--   Lizenzzuweisung: Lizenzschlüssel - Schlüssel→ Wie lautet der Lizenzschlüssel?
--   Lizenzzuweisung: Lizenzschlüssel - Seriennummer → Welche Seriennummer soll zugeordnet werden?
--   Lizenzzuweisung: Lizenzschlüssel - Startdatum → Ab wann kann die Lizenz verwendet werden?
--   Lizenzzuweisung: Lizenzschlüssel - Ablaufdatum → Wann läuft die Lizenz ab?
+-   Objekttyp → Welcher Objekttyp wird angelegt?
+-   Objektname → Name der Lizenz
+-   Lizenzzuweisung: Lizenzschlüssel - Lizenz Typ → Einzel- oder Volumenlizenz?
+-   Lizenzzuweisung: Lizenzschlüssel - Anzahl → Wie viele Lizenzen?
+-   Lizenzzuweisung: Lizenzschlüssel - Schlüssel → Wie lautet der Lizenzschlüssel?
+-   Lizenzzuweisung: Lizenzschlüssel - Seriennummer → Welche Seriennummer?
+-   Lizenzzuweisung: Lizenzschlüssel - Startdatum → Ab wann gilt die Lizenz?
+-   Lizenzzuweisung: Lizenzschlüssel - Ablaufdatum → Wann läuft sie ab?
 -   Lizenzzuweisung: Lizenzschlüssel - Einzelpreis → Was kostet eine Lizenz?
 
-!!! note "Bei jedem Import müssen auch die Datenformate beachtet werden."
+### Datenformate beachten
 
-Zum Beispiel:
+!!! note "Achte beim Import auf die korrekten Datenformate."
 
 [![Darstellung in i-doit](../../assets/images/de/daten-konsolidieren/csv-import/csv-lizenzen/1-csv-lic.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-lizenzen/1-csv-lic.png)
 
-Es werden Dialog Bezeichnungen in deutscher Sprache erwartet zum Beispiel: Einzel-Lizenz
-Hier wird das Datumsformat DD.MM.YYYY (01.01.2021) erwartet
-Und das Numerische Format: X.XXX,XX (9.999,99) da wir allerdings Multi-Values Kommasepariert angeben verwenden wir den Punkt für die "nachkommastellen" also 1000.99
+Folgende Formate erwartet i-doit:
+
+- **Dialog-Bezeichnungen:** Deutsche Sprache, z.B. `Einzel-Lizenz`
+- **Datumsformat:** `DD.MM.YYYY` (z.B. `01.01.2021`)
+- **Numerisches Format:** `X.XXX,XX` (z.B. `9.999,99`). Da Multi-Values kommasepariert angegeben werden, verwende den Punkt fur Nachkommastellen (z.B. `1000.99`)
 
 Beispiel CSV Datei für diesen Import:
 
@@ -46,21 +48,27 @@ Beispiel CSV Datei für diesen Import:
     C__OBJTYPE__LICENCE;Lizenz-Z;Volumen-Lizenz,Volumen-Lizenz;100,50;Lizenz-Z-311-IGUHOPSD,Lizenz-Z-322-IUHGASD;11123456789,11223456789;01.01.2021,01.05.2021;31.12.2021,30.04.2021;1000.99,500.99
     ```
 
-Bei diesem Import werden keine Abhängigkeiten vorausgesetzt.
+Dieser Import hat keine Abhängigkeiten.
 
-Für den Import begeben wir uns wieder in den CSV Import Bereich. Die Multivalue-Kategorien setzen wir auf Kommasepariert.
+### Schritt-fur-Schritt-Anleitung
+
+1. Navigiere zum CSV-Import unter **Extras → Import → CSV Import**
+2. Lade die CSV-Datei hoch und klicke auf **Fur Import verwenden**
+3. Setze die Multivalue-Kategorien auf **Kommasepariert**
 
 [![Darstellung in i-doit](../../assets/images/de/daten-konsolidieren/csv-import/csv-lizenzen/2-csv-lic.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-lizenzen/2-csv-lic.png)
 
-Jetzt können wir im unteren Bereich die Import Konfiguration wie folgt vornehmen und danach den Import Vorgang starten:
+4. Konfiguriere die Zuweisungen wie im Screenshot gezeigt und starte den Import
 
 [![Darstellung in i-doit](../../assets/images/de/daten-konsolidieren/csv-import/csv-lizenzen/3-csv-lic.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-lizenzen/3-csv-lic.png)
 
-Solltest du alles richtig gemacht haben, erscheinen nun die einzelnen Lizenzen in der Listenansicht.
+### Ergebnis
+
+Die importierten Lizenzen erscheinen in der Listenansicht:
 
 [![Darstellung in i-doit](../../assets/images/de/daten-konsolidieren/csv-import/csv-lizenzen/4-csv-lic.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-lizenzen/4-csv-lic.png)
 
-Außerdem sind die Kategorien Lizenzzuweisung und Lizenzzuweisung: Lizenzschlüssel gefüllt.
+Die Kategorien **Lizenzzuweisung** und **Lizenzzuweisung: Lizenzschlüssel** sind gefullt:
 
 [![Darstellung in i-doit](../../assets/images/de/daten-konsolidieren/csv-import/csv-lizenzen/5-csv-lic.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-lizenzen/5-csv-lic.png)
 
@@ -68,7 +76,7 @@ Außerdem sind die Kategorien Lizenzzuweisung und Lizenzzuweisung: Lizenzschlüs
 
 ## Import von Objekten mit Volumenlizenzen
 
-Wenn Sie ein Objekt importieren möchten, welches eine Volumenlizenz mitsamt Key enthält, dann kann muss man die Lizenz mitsamt dem Key über die Softwarezuweisung Kategorie eintragen. Die Syntax der CSV Datei muss dafür wie folgt aussehen:
+Möchtest du ein Objekt mit einer Volumenlizenz und dem zugehörigen Key importieren, trage die Lizenz uber die Kategorie **Softwarezuweisung** ein. Die CSV-Datei muss folgende Syntax haben:
 
 [Volumen-Lizenz.csv :material-file-download:](../../assets/images/de/daten-konsolidieren/csv-import/csv-lizenzen/Volumen-Lizenz.csv){ .md-button .md-button--primary }
 
@@ -79,12 +87,12 @@ Wenn Sie ein Objekt importieren möchten, welches eine Volumenlizenz mitsamt Key
     DESKTOP-DK2MD9L;"Windows 10 Pro";"Professional;EVT-2024-9931"
     ```
 
-Das Mapping der CSV Datei sollte dann wie folgt in i-doit vorgenommen werden:
+Konfiguriere das Mapping in i-doit wie folgt:
 
 [![Darstellung in i-doit](../../assets/images/de/daten-konsolidieren/csv-import/csv-lizenzen/7-csv-lic.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-lizenzen/7-csv-lic.png)
 
 [![Darstellung in i-doit](../../assets/images/de/daten-konsolidieren/csv-import/csv-lizenzen/8-csv-lic.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-lizenzen/8-csv-lic.png)
 
-Nachdem der Import erfolgreich durchgeführt wurde, ist in der Kategorie Softwarezuweisung des importieren Objektes ein neuer Eintrag zu finden, bei welchem sowohl die Lizenz als auch der Schlüssel angegeben sind.
+Nach dem Import findest du in der Kategorie **Softwarezuweisung** des Objekts einen neuen Eintrag mit Lizenz und Schlüssel:
 
 [![Darstellung in i-doit](../../assets/images/de/daten-konsolidieren/csv-import/csv-lizenzen/9-csv-lic.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-lizenzen/9-csv-lic.png)

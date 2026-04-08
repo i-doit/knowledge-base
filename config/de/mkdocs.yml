@@ -124,10 +124,10 @@ extra:
       icon: fontawesome/brands/github
   alternate:
     - name: English
-      link: /en/
+      link: https://kb.i-doit.com/en/
       lang: en
     - name: Deutsch
-      link: /de/
+      link: https://kb.i-doit.com/de/
       lang: de
   status:
     new: Neu
@@ -356,6 +356,207 @@ nav:
       - Objekttypen: grundlagen/objekttypen.md
       - Zuordnung von Kategorien zu Objekttypen: grundlagen/zurodnung-von-kategorien-zu-objekttypen.md
       - Kategorien und Attribute: grundlagen/kategorien-und-attribute.md
+      - Kategorie-Referenz:
+          - grundlagen/kategorien/index.md
+          - Allgemein: grundlagen/kategorien/global.md
+          - Anschlüsse: grundlagen/kategorien/connector.md
+          - Anschrift: grundlagen/kategorien/address.md
+          - Anwendungen: grundlagen/kategorien/s-application.md
+          - Arbeitsplatzsystem: grundlagen/kategorien/s-client.md
+          - Betriebssystem: grundlagen/kategorien/operating-system.md
+          - Betriebssysteme: grundlagen/kategorien/s-operating-system.md
+          - Beziehung: grundlagen/kategorien/relation.md
+          - Branch: grundlagen/kategorien/s-pdu-branch.md
+          - Buchhaltung: grundlagen/kategorien/accounting.md
+          - Chassis: grundlagen/kategorien/s-chassis.md
+          - Chassis Ansicht: grundlagen/kategorien/s-chassis-view.md
+          - Cluster: grundlagen/kategorien/cluster.md
+          - Cluster (Root): grundlagen/kategorien/cluster-root.md
+          - Clusterdienstzuweisung: grundlagen/kategorien/cluster-service.md
+          - Clustermitglieder: grundlagen/kategorien/cluster-members.md
+          - Clustermitgliedschaften: grundlagen/kategorien/cluster-memberships.md
+          - Controller: grundlagen/kategorien/controller.md
+          - CPU: grundlagen/kategorien/cpu.md
+          - Dateizuweisung: grundlagen/kategorien/file.md
+          - Datenbank Gateway: grundlagen/kategorien/s-database-gateway.md
+          - Datenbanken: grundlagen/kategorien/database-sa.md
+          - Datenbanklinks: grundlagen/kategorien/s-database-links.md
+          - Datenbankobjekte: grundlagen/kategorien/s-database-objects.md
+          - Datenbankschema: grundlagen/kategorien/s-database-schema.md
+          - Datenbanktabelle: grundlagen/kategorien/database-table.md
+          - Datenbankzugriff: grundlagen/kategorien/s-database-access.md
+          - Datenbankzuweisung: grundlagen/kategorien/database-assignment.md
+          - Datensicherung: grundlagen/kategorien/backup.md
+          - Datensicherung (zugewiesene Objekte): grundlagen/kategorien/backup--assigned-objects.md
+          - DBMS Information: grundlagen/kategorien/database.md
+          - DHCP: grundlagen/kategorien/s-net-dhcp.md
+          - Dienste: grundlagen/kategorien/s-service.md
+          - Drucker: grundlagen/kategorien/s-prt.md
+          - E-Mail-Adressen: grundlagen/kategorien/mail-addresses.md
+          - Faser/Ader: grundlagen/kategorien/fiber-lead.md
+          - FC-Port: grundlagen/kategorien/controller-fc-port.md
+          - Formfaktor: grundlagen/kategorien/formfactor.md
+          - Freigabe: grundlagen/kategorien/shares.md
+          - Freigabenzugriff: grundlagen/kategorien/share-access.md
+          - Gastsysteme: grundlagen/kategorien/guest-systems.md
+          - Gerät: grundlagen/kategorien/storage-device.md
+          - Grafikkarte: grundlagen/kategorien/graphic.md
+          - Gruppenmitgliedschaft: grundlagen/kategorien/group-memberships.md
+          - Handbuchzuweisung: grundlagen/kategorien/manual.md
+          - Hostadapter (HBA): grundlagen/kategorien/hba.md
+          - Hostadresse: grundlagen/kategorien/ip.md
+          - Installation: grundlagen/kategorien/s-application-assigned-obj.md
+          - IP-Liste: grundlagen/kategorien/s-net-ip-addresses.md
+          - Kabel: grundlagen/kategorien/cable.md
+          - Karten: grundlagen/kategorien/cards.md
+          - Kontaktzuweisung: grundlagen/kategorien/contact.md
+          - Laufwerk: grundlagen/kategorien/drive.md
+          - Listener: grundlagen/kategorien/net-listener.md
+          - Lizenzschlüssel: grundlagen/kategorien/s-licence-list.md
+          - Logbuch: grundlagen/kategorien/logbook.md
+          - Login: grundlagen/kategorien/s-person-login.md
+          - Logische Geräte (Client): grundlagen/kategorien/ldev-client.md
+          - Logische Geräte (LDEV Server): grundlagen/kategorien/ldev-server.md
+          - Logische Netzwerkports: grundlagen/kategorien/network-log-port.md
+          - Mobilfunk: grundlagen/kategorien/s-cell-phone-contract.md
+          - Modell: grundlagen/kategorien/model.md
+          - Monitor: grundlagen/kategorien/s-monitor.md
+          - Netz: grundlagen/kategorien/s-net.md
+          - Netzbereiche: grundlagen/kategorien/s-net-zone.md
+          - Netzwerk: grundlagen/kategorien/network.md
+          - Netzwerk-Interface: grundlagen/kategorien/network-interface.md
+          - Netzwerk-Listener: grundlagen/kategorien/net-connections-folder.md
+          - Netzwerkport: grundlagen/kategorien/network-port.md
+          - Netzwerkverbindungen: grundlagen/kategorien/net-connector.md
+          - Notfallplanzuweisung: grundlagen/kategorien/emergency-plan.md
+          - Objektbild: grundlagen/kategorien/image.md
+          - Organisation: grundlagen/kategorien/s-organization.md
+          - PDU: grundlagen/kategorien/s-pdu.md
+          - Personen: grundlagen/kategorien/s-person.md
+          - Personengruppen: grundlagen/kategorien/s-person-group.md
+          - Personengruppen Mitglieder: grundlagen/kategorien/s-person-group-members.md
+          - Personengruppenmitgliedschaft: grundlagen/kategorien/s-person-assigned-groups.md
+          - RAID-Verbund: grundlagen/kategorien/raid.md
+          - Raum: grundlagen/kategorien/s-room.md
+          - Rechenressourcen: grundlagen/kategorien/computing-resources.md
+          - Rechnung: grundlagen/kategorien/invoice.md
+          - Remote Management Controller: grundlagen/kategorien/rm-controller.md
+          - Routing: grundlagen/kategorien/s-router.md
+          - Räumlich zugeordnete Objekte: grundlagen/kategorien/object.md
+          - Schnittstelle: grundlagen/kategorien/universal-interface.md
+          - Schrank: grundlagen/kategorien/s-enclosure.md
+          - Servicezuweisung: grundlagen/kategorien/it-service.md
+          - SIM: grundlagen/kategorien/sim.md
+          - Slots: grundlagen/kategorien/s-chassis-slot.md
+          - Softwarezuweisung: grundlagen/kategorien/application.md
+          - Soundkarte: grundlagen/kategorien/sound.md
+          - Speicher: grundlagen/kategorien/memory.md
+          - Stammdaten (Organisation): grundlagen/kategorien/s-organization-master-data.md
+          - Stammdaten (Person): grundlagen/kategorien/s-person-master.md
+          - Stammdaten (Personengruppe): grundlagen/kategorien/s-person-group-master.md
+          - Standort: grundlagen/kategorien/location.md
+          - Status-Planung: grundlagen/kategorien/planning.md
+          - Stromverbraucher: grundlagen/kategorien/power-consumer.md
+          - Switch: grundlagen/kategorien/s-switch-net.md
+          - Varianten: grundlagen/kategorien/s-application-variant.md
+          - Version: grundlagen/kategorien/version.md
+          - Vertragszuweisung: grundlagen/kategorien/contract-assignment.md
+          - Verwaltungsinstanz: grundlagen/kategorien/cluster-adm-service.md
+          - Virtuelle Geräte: grundlagen/kategorien/virtual-device.md
+          - Virtuelle Maschine: grundlagen/kategorien/virtual-machine.md
+          - Virtuelle Maschine (Root): grundlagen/kategorien/virtual-machine--root.md
+          - Virtuelle Switche: grundlagen/kategorien/virtual-switch.md
+          - Virtueller Host: grundlagen/kategorien/virtual-host.md
+          - Virtueller Host (Root): grundlagen/kategorien/virtual-host-root.md
+          - WAN-Verbindung: grundlagen/kategorien/wan.md
+          - Zertifikat: grundlagen/kategorien/certificate.md
+          - Zugewiesene Arbeitsplätze: grundlagen/kategorien/person-assigned-workstation.md
+          - Zugewiesene Geräte: grundlagen/kategorien/s-chassis-devices.md
+          - Zugewiesene Objekte (Organisation): grundlagen/kategorien/s-organization-contact-assignment.md
+          - Zugewiesene Objekte (Person): grundlagen/kategorien/s-person-contact-assignment.md
+          - Zugewiesene Objekte (Personengruppe): grundlagen/kategorien/s-person-group-contact-assignment.md
+          - Zugewiesene Personen (Organisation): grundlagen/kategorien/s-organization-persons.md
+          - Zugewiesene SIM-Karten: grundlagen/kategorien/assigned-sim-cards.md
+          - Zugewiesener Arbeitsplatz: grundlagen/kategorien/assigned-workstation.md
+          - Zugriff: grundlagen/kategorien/access.md
+      - Objekttyp-Referenz:
+          - grundlagen/objekttypen/index.md
+          - Access Point Controller: grundlagen/objekttypen/access-point-controller.md
+          - Anwendung: grundlagen/objekttypen/anwendung.md
+          - Gerät/Appliance: grundlagen/objekttypen/appliance.md
+          - Arbeitsplatz: grundlagen/objekttypen/arbeitsplatz.md
+          - Betriebssystem: grundlagen/objekttypen/betriebssystem.md
+          - Blade Chassis: grundlagen/objekttypen/blade-chassis.md
+          - Blade Server: grundlagen/objekttypen/blade-server.md
+          - Cluster: grundlagen/objekttypen/cluster.md
+          - Clusterdienst: grundlagen/objekttypen/clusterdienst.md
+          - Dateien: grundlagen/objekttypen/dateien.md
+          - Datenbankinstanz: grundlagen/objekttypen/datenbankinstanz.md
+          - Datenbankschema: grundlagen/objekttypen/datenbankschema.md
+          - DBMS: grundlagen/objekttypen/dbms.md
+          - Drucker: grundlagen/objekttypen/drucker.md
+          - Energieversorgungsunternehmen: grundlagen/objekttypen/energieversorgungsunternehmen.md
+          - Fahrzeug: grundlagen/objekttypen/fahrzeug.md
+          - FC-Switch: grundlagen/objekttypen/fc-switch.md
+          - Flugzeug: grundlagen/objekttypen/flugzeug.md
+          - Gebäude: grundlagen/objekttypen/gebaeude.md
+          - Host: grundlagen/objekttypen/host.md
+          - Kabel: grundlagen/objekttypen/kabel.md
+          - Kabeltrasse: grundlagen/objekttypen/kabeltrasse.md
+          - Klimaanlage: grundlagen/objekttypen/klimaanlage.md
+          - Client: grundlagen/objekttypen/client.md
+          - Konverter: grundlagen/objekttypen/konverter.md
+          - Kryptokarte: grundlagen/objekttypen/kryptokarte.md
+          - KVM-Switch: grundlagen/objekttypen/kvm-switch.md
+          - Land: grundlagen/objekttypen/land.md
+          - Layer-2-Netz: grundlagen/objekttypen/layer-2-netz.md
+          - Layer-3-Netz: grundlagen/objekttypen/layer-3-netz.md
+          - Leerrohr: grundlagen/objekttypen/leerrohr.md
+          - Leitungsnetz: grundlagen/objekttypen/leitungsnetz.md
+          - Lizenzen: grundlagen/objekttypen/lizenzen.md
+          - Middleware: grundlagen/objekttypen/middleware.md
+          - Mobiltelefon: grundlagen/objekttypen/mobiltelefon.md
+          - Monitor: grundlagen/objekttypen/monitor.md
+          - Netzbereich: grundlagen/objekttypen/netzbereich.md
+          - Netzersatzanlage: grundlagen/objekttypen/netzersatzanlage.md
+          - Notfallplan: grundlagen/objekttypen/notfallplan.md
+          - Objektgruppe: grundlagen/objekttypen/objektgruppe.md
+          - Organisation: grundlagen/objekttypen/organisation.md
+          - Patchfeld: grundlagen/objekttypen/patchfeld.md
+          - Personen: grundlagen/objekttypen/personen.md
+          - Personengruppen: grundlagen/objekttypen/personengruppen.md
+          - Printbox: grundlagen/objekttypen/printbox.md
+          - Rack-Segment: grundlagen/objekttypen/rack-segment.md
+          - Raum: grundlagen/objekttypen/raum.md
+          - Remote Management Controller: grundlagen/objekttypen/remote-management-controller.md
+          - Replikationsobjekt: grundlagen/objekttypen/replikationsobjekt.md
+          - Router: grundlagen/objekttypen/router.md
+          - SAN Zoning: grundlagen/objekttypen/san-zoning.md
+          - Schrank: grundlagen/objekttypen/schrank.md
+          - Server: grundlagen/objekttypen/server.md
+          - Service: grundlagen/objekttypen/service.md
+          - SIM-Karte: grundlagen/objekttypen/sim-karte.md
+          - Speichersystem: grundlagen/objekttypen/speichersystem.md
+          - Stadt: grundlagen/objekttypen/stadt.md
+          - Steckdosenleiste: grundlagen/objekttypen/steckdosenleiste.md
+          - Supernet: grundlagen/objekttypen/supernet.md
+          - Switch: grundlagen/objekttypen/switch.md
+          - Switch Chassis: grundlagen/objekttypen/switch-chassis.md
+          - Systemdienst: grundlagen/objekttypen/systemdienst.md
+          - Telefon: grundlagen/objekttypen/telefon.md
+          - Telefonanlage: grundlagen/objekttypen/telefonanlage.md
+          - Unterbrechungsfreie Stromversorgung: grundlagen/objekttypen/usv.md
+          - Verstärker: grundlagen/objekttypen/verstaerker.md
+          - Verteilerkasten: grundlagen/objekttypen/verteilerkasten.md
+          - Vertrag: grundlagen/objekttypen/vertrag.md
+          - Virtueller Client: grundlagen/objekttypen/virtueller-client.md
+          - Virtueller Host: grundlagen/objekttypen/virtueller-host.md
+          - Virtueller Server: grundlagen/objekttypen/virtueller-server.md
+          - VoIP-Telefon: grundlagen/objekttypen/voip-telefon.md
+          - VRRP: grundlagen/objekttypen/vrrp.md
+          - VRRP/HSRP Cluster: grundlagen/objekttypen/vrrp-hsrp-cluster.md
+          - WAN-Leitung: grundlagen/objekttypen/wan-leitung.md
+          - Wireless Access Point: grundlagen/objekttypen/wireless-access-point.md
       - Benutzerdefinierte Objekttypen: grundlagen/benutzerdefinierte-objekttypen.md
       - Benutzerdefinierte Kategorien: grundlagen/benutzerdefinierte-kategorien.md
       - Logbuch: grundlagen/logbuch.md

@@ -1,11 +1,17 @@
+---
+title: Suchen
+description: "Die gezielte Recherche in der IT-Dokumentation ist oft der schnellste Weg zum Ziel -- schneller als das Navigieren durch Menustrukturen."
+icon:
+status:
+lang: de
+---
 # Suchen
 
-"Wer suchet, der findet." Die gezielte Recherche in der [IT-Dokumentation](../glossar.md) bedingt eine schnelle und komfortable Suche. Oftmals ist eine gezielte Suche der kürzere Weg als das Klicken durch Menüstrukturen.
+Die gezielte Recherche in der [IT-Dokumentation](../glossar.md) ist oft der schnellste Weg zum Ziel -- schneller als das Navigieren durch Menustrukturen.
 
-Das Suchfeld
-------------
+## Das Suchfeld
 
-Das Suchfeld befindet sich in der Web GUI von i-doit in der oberen rechten Ecke. Dort kann nach beliebigen Begriffen in der IT-Dokumentation gesucht werden. Beim Tippen erscheinen erste Suchergebnisse (Suchvorschläge), die mit der Maus oder Tastatur ausgewählt werden können (Autovervollständigung), um direkt in den gefundenen Datensatz zu springen.
+Das Suchfeld findest du in der Web GUI von i-doit in der oberen rechten Ecke. Gib dort beliebige Begriffe ein. Bereits beim Tippen erscheinen erste Suchergebnisse (Suchvorschläge), die du mit der Maus oder Tastatur auswählen kannst, um direkt zum gefundenen Datensatz zu springen.
 
 [![suche-suchen](../assets/images/de/effizientes-dokumentieren/suche/1-suche.png)](../assets/images/de/effizientes-dokumentieren/suche/1-suche.png)
 
@@ -14,30 +20,27 @@ Neben der Freitextsuche, kann die Suche auf bestimmte [Objekt-Attribute](../glos
 *   Beginnt die Suche mit einer Raute, gefolgt von der [Objekt-ID](../glossar.md) (#123), wird nach Drücken der Return-Taste die Übersichtsseite des Objekts mit ebendieser ID aufgerufen.
 *   Beginnt die Suche mit dem Stichwort title, gefolgt von einem Doppelpunkt und dem Objekt-Titel, wird das entsprechende Objekt angezeigt (title:acme).
 
-Das Suchergebnis
-----------------
+## Das Suchergebnis
 
-Führen die oben genannte Suchvorschläge nicht zum gewünschten Ergebnis, wird nach Drücken der Return-Taste eine Seite mit Suchergebnissen präsentiert. Neben jedem gefundenen Datensatz wird die Quelle genannt, beispielsweise das [Attribut](../glossar.md) einer [Kategorie](../glossar.md) eines [Objekttyps](../glossar.md) im [CMDB](../glossar.md)\-Modul.
+Führen die Suchvorschläge nicht zum gewünschten Ergebnis, drücke die Return-Taste. Du erhältst eine Seite mit Suchergebnissen. Neben jedem gefundenen Datensatz wird die Quelle angezeigt, beispielsweise das [Attribut](../glossar.md) einer [Kategorie](../glossar.md) eines [Objekttyps](../glossar.md) im [CMDB](../glossar.md)-Modul.
 
-[![suche-wegdruecken](../assets/images/de/effizientes-dokumentieren/suche/2-suche.png)](../assets/images/de/effizientes-dokumentieren/suche/2-suche.png)
+[![suche-wegdrücken](../assets/images/de/effizientes-dokumentieren/suche/2-suche.png)](../assets/images/de/effizientes-dokumentieren/suche/2-suche.png)
 
 !!! success "Lesezeichen/Favoriten setzen"
     Jede Suche kann über die URL referenziert werden. Wird nach dem Begriff "acme" gesucht, ergibt das die URL [http://i-doit/i-doit/search?q=acme](http://i-doit/i-doit/search?q=acme). So können Suchergebnisse als Lesezeichen/Favoriten im Webbrowser gespeichert werden, um sie schneller wieder aufzurufen.
 
-Such-Modus
-----------
+## Such-Modus
 
-Für die Suche kann aus zwei Modi ausgewählt werden, die zu unterschiedlichen Ergebnissen führen können:
+Du kannst zwischen zwei Modi wählen, die zu unterschiedlichen Ergebnissen führen können:
 
 *   **Normal**: Für die Suche wird die Indexierung (siehe unten) verwendet. Dies ist die Standard-Einstellung.
 *   **Deep Search**: Es werden nacheinander Attribute durchsucht. Diese Suche nimmt mehr Zeit in Anspruch.
 
-Der Such-Modus kann unter **Extras → Suche** nach der ersten Suche ausgewählt werden. Um einen bestimmten Modus automatisch zu verwenden, kann dieser unter **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name] → Suche → Standard Such-Modus** ausgewählt werden.
+Den Such-Modus wählst du unter **Extras > Suche** nach der ersten Suche aus. Den Standard-Modus legst du unter **Verwaltung > [Mandanten-Name] Verwaltung > Einstellungen für [Mandanten-Name] > Suche > Standard Such-Modus** fest.
 
-Automatische Deep Search
-------------------------
+## Automatische Deep Search
 
-Sollte die Suche im voreingestellten Modus (siehe oben) kein oder ein unzureichendes Ergebnis liefern, kann automatisch die **Deep Search** ausgeführt werden. Dieses Verhalten wird unter **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name] → Suche → Automatische DeepSearch** konfiguriert:
+Liefert die Suche im voreingestellten Modus kein oder ein unzureichendes Ergebnis, kann automatisch die **Deep Search** ausgeführt werden. Konfiguriere dieses Verhalten unter **Verwaltung > [Mandanten-Name] Verwaltung > Einstellungen für [Mandanten-Name] > Suche > Automatische DeepSearch**:
 
 | Option                                           | Beschreibung                                                                                |
 | ------------------------------------------------ | ------------------------------------------------------------------------------------------- |
@@ -45,10 +48,9 @@ Sollte die Suche im voreingestellten Modus (siehe oben) kein oder ein unzureiche
 | **Aktiv, wenn keine Ergebnisse gefunden werden** | Die zusätzliche **Deep Search** wird gestartet, wenn keine Ergebnisse gefunden worden sind. |
 | **Deaktiviert**                                  | Die zusätzliche **Deep Search** wird nicht berücksichtigt.                                  |
 
-Indexierung
------------
+## Indexierung
 
-Initial wird der Suchindex automatisch beim Update und der Installation erzeugt. Nur in sehr großen Datenbanken mit mehr als 500.000 Objekten muss dieser manuell erzeugt werden, damit die Suche performant läuft und gute Ergebnisse liefert. Der Index kann unabhängig von Benutzer-Interaktionen im Hintergrund erstellt bzw. aktualisiert werden. Angestoßen wird diese Aktion über das [i-doit console utility](../automatisierung-und-integration/cli/index.md).
+Der Suchindex wird automatisch bei Installation und Update erzeugt. Nur bei sehr grossen Datenbanken mit mehr als 500.000 Objekten musst du ihn manuell erstellen, damit die Suche performant läuft. Die Indexierung läuft unabhängig von Benutzer-Interaktionen im Hintergrund. Starte sie über das [i-doit console utility](../automatisierung-und-integration/cli/index.md):
 
 ```shell
 php console.php search-index -uadmin -padmin -i 1
@@ -59,10 +61,9 @@ Alternativ kann der Reindex auch in der i-doit Verwaltung unter **Systemtools** 
 !!! info "Speicherbedarf"
     Auf einem Unix-artigen Betriebssystem wird der Index pro 1 Million indizierter Datensätze ca. 500 MByte groß. Die Dauer einer Suchabfrage wird durch große Indizes in der Regel nicht erhöht.
 
-Über die Konsole suchen
------------------------
+## Über die Konsole suchen
 
-Das [i-doit console utility](../automatisierung-und-integration/cli/index.md) erlaubt auch das Suchen über die Kommandozeile.
+Das [i-doit console utility](../automatisierung-und-integration/cli/index.md) erlaubt dir auch das Suchen über die Kommandozeile:
 
 ```shell
     sudo -u www-data php console.php search -uadmin -padmin --searchString=acme
@@ -80,10 +81,9 @@ Das [i-doit console utility](../automatisierung-und-integration/cli/index.md) er
     +------+-------------------------------------------------------+------------------------------------------------------------------------+-------+
 ```
 
-Über die API suchen
--------------------
+## Über die API suchen
 
-Über die [programmierbare Schnittstelle (API)](../i-doit-add-ons/api/index.md) von i-doit kann ebenfalls in der IT-Dokumentation gesucht werden. Die nötige Methode lautet idoit.search:
+Über die [programmierbare Schnittstelle (API)](../i-doit-add-ons/api/index.md) von i-doit kannst du ebenfalls in der IT-Dokumentation suchen. Verwende dazu die Methode `idoit.search`:
 
 ```json
 {
@@ -122,10 +122,9 @@ Die Antwort vom Server sieht folgendermaßen aus:
 }
 ```
 
-Indexierung anpassen
---------------------
+## Indexierung anpassen
 
-Die Indexierung von i-doit beansprucht viele Funktionen, die von MySQL/MariaDB zur Verfügung gestellt werden. Diese lassen sich benutzerdefiniert anpassen. Für einige Einstellungen wird die [Konfigurationsdatei von MySQL/MariaDB](../installation/manuelle-installation/systemeinstellungen.md) angepasst (zum Beispiel unter /etc/mysql/conf.d/i-doit.cnf). Für andere ist das Ausführen von SQL-Statements erforderlich, wofür sich der Client auf der Kommandozeile eignet. Beispiel:
+Die Indexierung nutzt Funktionen von MySQL/MariaDB, die du benutzerdefiniert anpassen kannst. Einige Einstellungen konfigurierst du in der [Konfigurationsdatei von MySQL/MariaDB](../installation/manuelle-installation/systemeinstellungen.md) (z.B. `/etc/mysql/conf.d/i-doit.cnf`). Für andere führst du SQL-Statements aus, z.B. über den Kommandozeilen-Client:
 
 ```shell
 mysql -uroot -p -hlocalhost
@@ -133,7 +132,7 @@ mysql -uroot -p -hlocalhost
 
 ### Wortlänge
 
-Eine wichtige Frage lautet, [wie lang ein Wort mindestens sein muss](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_ft_min_token_size), damit es indexiert wird. Häufig steht dieser Wert auf 3 Zeichen. Begriffe wie "PC 01" werden hiermit nicht gefunden. Geeignet wäre die Angabe von 2 oder sogar 1 Zeichen.
+Eine wichtige Frage ist, [wie lang ein Wort mindestens sein muss](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_ft_min_token_size), damit es indexiert wird. Häufig steht dieser Wert auf 3 Zeichen -- Begriffe wie "PC 01" werden dann nicht gefunden. Ein Wert von 2 oder sogar 1 Zeichen ist oft besser geeignet:
 
 ```ini
 innodb_ft_min_token_size = 2 # minimale Zeichenanzahl eines Suchbegriffes
@@ -147,7 +146,7 @@ Um Wörter voneinander zu unterscheiden, werden verschiedene Zeichen als Worttre
 
 ### Stoppwörter
 
-Als [Stoppwörter](https://de.wikipedia.org/wiki/Stoppwort) gelten Begriffe, die bei einer Suche ignoriert werden. Daher sollte der Index diese nicht berücksichtigen. Zu diesen Wörtern zählen beispielswese "am", "dem" und "mit". MySQL bringt bereits eine Liste an Stoppwörtern mit, die allerdings relativ klein ausfällt und nur englische Begriffe beinhaltet. Diese lässt sich allerdings durch eine eigene Liste ersetzen. Dazu dienen die folgenden SQL Statements:
+[Stoppwoerter](https://de.wikipedia.org/wiki/Stoppwort) sind Begriffe, die bei der Suche ignoriert werden (z.B. "am", "dem", "mit"). MySQL bringt eine kleine, englischsprachige Liste mit, die du durch eine eigene ersetzen kannst. Verwende dazu die folgenden SQL-Statements:
 
 System-Datenbank von i-doit angeben:
 
@@ -174,9 +173,9 @@ INSERT INTO isys_search_stopwords (value)
 VALUES ('aber'), ('als'), ('also'), ('am'), ('an'), ('auch'), ('auf'), ('aus'), ('bei'), ('bin'), ('bis'), ('bist'), ('da'), ('dadurch'), ('daher'), ('darum'), ('das'), ('daß'), ('dass'), ('dein'), ('deine'), ('dem'), ('den'), ('der'), ('des'), ('deshalb'), ('dessen'), ('die'), ('dies'), ('dieser'), ('dieses'), ('doch'), ('dort'), ('du'), ('durch'), ('ein'), ('eine'), ('einem'), ('einen'), ('einer'), ('eines'), ('er'), ('es'), ('euer'), ('eure'), ('für'), ('hatte'), ('hatten'), ('hattest'), ('hattet'), ('hier'), ('hinter'), ('ich'), ('ihr'), ('ihre'), ('im'), ('in'), ('ist'), ('ja'), ('jede'), ('jedem'), ('jeden'), ('jeder'), ('jedes'), ('jener'), ('jenes'), ('jetzt'), ('kann'), ('kannst'), ('können'), ('könnt'), ('machen'), ('mein'), ('meine'), ('mit'), ('muß'), ('müssen'), ('mußt'), ('musst'), ('müßt'), ('nach'), ('nachdem'), ('nein'), ('nicht'), ('nun'), ('oder'), ('seid'), ('sein'), ('seine'), ('sich'), ('sie'), ('sind'), ('soll'), ('sollen'), ('sollst'), ('sollt'), ('sonst'), ('soweit'), ('sowie'), ('über'), ('und'), ('unser'), ('unsere'), ('unter'), ('vom'), ('von'), ('vor'), ('wann'), ('warum'), ('was'), ('weiter'), ('weitere'), ('wenn'), ('wer'), ('werde'), ('werden'), ('werdet'), ('weshalb'), ('wie'), ('wieder'), ('wieso'), ('wir'), ('wird'), ('wirst'), ('wo'), ('woher'), ('wohin'), ('zu'), ('zum'), ('zur');
 ```
 
-Eine Liste von Stoppwörtern in verschiedenen Sprachen können im Internet schnell recherchiert werden.
+Listen von Stoppwoertern in verschiedenen Sprachen findest du schnell im Internet.
 
-Damit diese Liste die von MySQL ersetzt, wird folgende Einstellungen nötig:
+Damit deine Liste die MySQL-eigene ersetzt, trage folgende Einstellung in die MySQL-Konfiguration ein:
 
 ```ini
 innodb_ft_server_stopword_table = 'idoit_system/isys_search_stopwords'
@@ -184,13 +183,13 @@ innodb_ft_server_stopword_table = 'idoit_system/isys_search_stopwords'
 
 ### Änderungen am Index aktivieren
 
-Damit Änderungen am Index-Verhalten wirksam werden, sind drei Schritte erforderlich. Erst sollte der MySQL-Dienst neu gestartet werden. Unter Debian-basierten Betriebssystemen führt man folgenden Befehl aus:
+Damit Änderungen am Index-Verhalten wirksam werden, sind drei Schritte erforderlich. Starte zuerst den MySQL-Dienst neu. Unter Debian-basierten Betriebssystemen:
 
 ```shell
 sudo systemctl restart mysql.service
 ```
 
-Anschließend muss folgendes SQL Statement für jede Mandanten-Datenbank ausgeführt werden:
+Führe anschließend folgendes SQL-Statement für jede Mandanten-Datenbank aus:
 
 ```sql
 OPTIMIZE TABLE isys_search_idx;
@@ -203,14 +202,13 @@ USE idoit_data;
 OPTIMIZE TABLE isys_search_idx;
 ```
 
-Zum Schluss muss eine Neu-Indexing über die i-doit Console oder die i-doit Verwaltung durchgeführt werden (siehe oben).
+Führe zum Schluss ein Neu-Indexing über die i-doit Console oder die i-doit Verwaltung durch (siehe oben).
 
 ### Das Limit von 2500 Ergebnissen erhöhen
 
-Wenn Objekte fortlaufend benannt werden z.B. 123456-00001 bis 123456-99999 so können mit normalen Sucheinstellungen nur Objekte bis 123456-2500 gefunden werden.
-Dieses Limit dient der Performance. Um dieses Limit zu erhöhen muss eine Experteneinstellung hinzugefügt werden.
+Wenn Objekte fortlaufend benannt werden (z.B. 123456-00001 bis 123456-99999), findest du mit den Standard-Sucheinstellungen nur Objekte bis 123456-02500. Dieses Limit dient der Performance. Um es zu erhöhen, fuege die folgende Experteneinstellung hinzu.
 
-Hier ein Beispiel bei dem das Limit auf 5000 Ergebnisse gesetzt wurde.
+Beispiel für ein Limit von 5000 Ergebnissen:
 
 | Key          | Value | Type        |
 | ------------ | ----- | ----------- |

@@ -1,94 +1,96 @@
 ---
 title: Nagios
-description: Nagios
+description: "Nagios is a Network Monitoring software that you configure from the data of your IT documentation."
 icon: addons/nagios
 status:
 lang: en
 ---
+
 # Nagios
 
-Nagios is a software for [Network Monitoring](../automation-and-integration/network-monitoring/index.md) which can be configured from data of the [IT documentation](../glossary.md). By this means, you can avoid that data have to be maintained twice and you can minimize errors. The export function available in i-doit allows the creation of complete or partial configurations. For this purpose, you manually create Nagios configurations in the i-doit interface or you fill it with values automatically.
+!!! warning "Please create a complete backup before making any changes to an interface or import. If the result is not satisfactory, you can then restore it."
+
+Nagios is a [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md) software that you configure from the data of your [IT documentation](../glossar.md). This way you avoid duplicate data maintenance and minimize errors. The export generates complete or partial configurations -- either manually created or automatically populated with values from i-doit.
 
 !!! info "Compatibility"
-    The exported data are compatible with Nagios Version 3 and Icinga Version 1. Nagios Version 4 is not completely compatible. Other Nagios versions are not supported.
+    The exported data is compatible with Nagios version 3 and Icinga version 1. Nagios version 4 is not fully compatible. Other Nagios derivatives are not supported.
 
-## Basic Configuration
+## Basic configuration
 
-You store the configuration under **Administration → Monitoring and interfaces → Monitoring → Export Configuration**. The **Local Path** defines an absolute or relative path to the i-doit installation in the file system in which the configuration created by i-doit is to be stored. The **Link to your monitoring tool** specifies a basic link to generate links to the monitoring instance from i-doit.
+Set up the configuration under **Administration → Import and interfaces → Monitoring → Export configuration** 
 
-[![Basic Configurations](../assets/images/en/automation-and-integration/network-monitoring/nagios/1-nag.png)](../assets/images/en/automation-and-integration/network-monitoring/nagios/1-nag.png)
+- **Local path** -- Absolute or relative path where the generated configuration is stored.
+- **Link to the monitoring tool** -- Base link to generate links from i-doit to the monitoring instance.
 
-## Basic Configurations
+[![Nagios management](../assets/images/de/automatisierung-und-integration/network-monitoring/nagios/1-nag.png)](../assets/images/de/automatisierung-und-integration/network-monitoring/nagios/1-nag.png)
 
-You can create the basic configurations under **Extras → Nagios**.
+## Base configurations
 
-[![Basic Configurations](../assets/images/en/automation-and-integration/network-monitoring/nagios/2-nag.png)](../assets/images/en/automation-and-integration/network-monitoring/nagios/2-nag.png)
+Under **Add-ons → Nagios** the base configurations are created.
 
-This includes the main configuration, service templates and host templates as well as other basic settings. All values are identical to the Nagios configuration.
+[![Nagios extras](../assets/images/de/automatisierung-und-integration/network-monitoring/nagios/2-nag.png)](../assets/images/de/automatisierung-und-integration/network-monitoring/nagios/2-nag.png)
 
-## Configuration in Objects
+This includes the main configuration, service and host templates, and other basic settings. All values are identical to the Nagios configuration.
 
-All further configurations are carried out within the [objects](../basics/structure-of-the-it-documentation.md). The easiest case is the configuration of host parameters. For this purpose, the **Nagios (Host)**[category](../basics/structure-of-the-it-documentation.md) folder has to be assigned to the desired [object type](../basics/structure-of-the-it-documentation.md) via the **[Edit data structure](../basics/assignment-of-categories-to-object-types.md)**.
+## Configuration in objects
 
-In the category **Host Definition** a host definition for Nagios can be set either via a Nagios template or via individual configuration.
+All other configurations are made within the [objects](../grundlagen/struktur-it-dokumentation.md). For host parameters, proceed as follows:
 
-[![Host Definition](../assets/images/en/automation-and-integration/network-monitoring/nagios/3-nag.png)](../assets/images/en/automation-and-integration/network-monitoring/nagios/3-nag.png)
+1. Assign via [Edit data structure](../administration/verwaltung/datenstruktur/datenstruktur-bearbeiten.md) the [category](../grundlagen/struktur-it-dokumentation.md) folder **Nagios (Host)** to the desired [object types](../grundlagen/struktur-it-dokumentation.md).
+2. Enter in the category **Host Definition** a host definition -- either via a Nagios template or through individual configuration.
 
-The concept of host templates and service templates is identical to the original Nagios configuration.
+[![Nagios configuration](../assets/images/de/automatisierung-und-integration/network-monitoring/nagios/3-nag.png)](../assets/images/de/automatisierung-und-integration/network-monitoring/nagios/3-nag.png)
 
-Service checks defined in the basic configuration are assigned to a host via the **Service Assignment** category.
+Host and service templates follow the Nagios principle. Via the **Service assignment** category, you assign service checks to a host.
 
-Later on, this results in the configuration of a classic host/ service assignment. Additionally, there is a second way of assigning services to hosts, namely by inheriting through a software object.
+There are two ways to link services with hosts:
 
-A service check is assigned in a software object in the **Nagios (Applications)** category, analogous to the assignment to a host.
+1. **Direct assignment** -- Via the **Service assignment** category in the host object.
+2. **Inheritance via software** -- In a software object (category **Nagios (Applications)**) assign a service check. If the software is installed on a host via the **Software assignment** category, the host automatically inherits the service check.
 
-If this application is installed on a host via the **Software Assignment** category, then the service check is inherited to the host automatically.
+You can find additional Nagios configurations in objects of the type **Persons**, **Person groups**, and **Object groups**.
 
-Further Nagios configurations within objects can be found in **Persons** objects as well as in **Personen groups** and in **Object groups**.
+## Export of the Nagios configuration
 
-## Export of the Nagios Configuration
+You start the export manually under **Administration → Import and interfaces → Monitoring → Export configuration**. Select an export configuration and optionally enable validation.
 
-The Nagios configurations can be exported manually via **Administration → Monitoring and interfaces → Nagios Export** . For this purpose, you select an export configuration and optionally you can also choose a validation of the parameters.
+[![Nagios export](../assets/images/de/automatisierung-und-integration/network-monitoring/nagios/4-nag.png)](../assets/images/de/automatisierung-und-integration/network-monitoring/nagios/4-nag.png)
 
-[![Export of the Nagios Configuration](../assets/images/en/automation-and-integration/network-monitoring/nagios/4-nag.png)](../assets/images/en/automation-and-integration/network-monitoring/nagios/4-nag.png)
+The validation checks basic dependencies -- e.g. whether an IP address is entered for a host. It protects against corrupt configurations but does not offer 100 percent protection. Therefore, always additionally test the generated configuration with the Nagios binary.
 
-The validation checks basic dependencies, for example, if an IP address has been entered for a host etc. This check is supposed to prevent the generation of corrupt Nagios configurations. This, however, is not a 100% safe protection so you should always run a test with the Nagios binary checking the generated configuration.
-
-The configuration files are stored according to the configured path on the file system and correspond the values that have been configured in the categories.
-
-The export of the files can be automated via the [controller](../automation-and-integration/cli/index.md) of course. For this purpose, the handler **nagios_export** is run while stating the export configuration ID using the parameter **-n ID**.
+The configuration files are stored in the configured path. You can also automate the export via the [i-doit console utility](../automatisierung-und-integration/cli/index.md) (`--help` shows all options).
 
 ## CLI console commands and options
 
-| Command                             | Internal system description                                                  |
-| ----------------------------------- | ---------------------------------------------------------------------------- |
-| [nagios-export](#nagios-export)     | Exports the Nagios settings and i-doit objects to Nagios configuration files |
-| [nagios-ndoutils](#nagios-ndoutils) | Imports monitoring status changes from the NDOUtils into the i-doit logbook. |
+| Command                             | Internal description                                                                   |
+| ----------------------------------- | -------------------------------------------------------------------------------------- |
+| [nagios-export](#nagios-export)     | Exports the Nagios settings and i-doit objects into Nagios configuration files |
+| [nagios-ndoutils](#nagios-ndoutils) | Imports monitoring status changes from NDOUtils into the i-doit logbook          |
 
-!!! info "These commands are only available if the Nagios add-on is installed"
+!!! info "These commands are only available after installation of the Nagios add-on."
 
 ### nagios-export
 
-Exports the Nagios settings and i-doit objects to Nagios configuration files
+Exports the Nagios settings and i-doit objects into Nagios configuration files.
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version)    | Description                                                                                  |
-| ------------------------- | --------------------------- | -------------------------------------------------------------------------------------------- |
-|                           | --nagiosHostId=NAGIOSHOSTID | Specifies the Nagios host to be used for the export                                          |
-|                           | --validate                  | Validates the export files                                                                   |
-| -u                        | --user=USERNAME             | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD         | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID        | Tenant ID of the tenant to be used (default: 1)                                              |
-| -c                        | --config=CONFIG-FILE        | Specifying the path to the configuration file                                                |
-| -h                        | --help                      | Help message for displaying further information                                              |
-| -q                        | --quiet                     | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                   | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi         | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction            | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                   | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| Parameter (short) | Parameter (long)            | Description                                                                                     |
+| ------------------ | --------------------------- | ------------------------------------------------------------------------------------------------ |
+|                    | --nagiosHostId=NAGIOSHOSTID | Specification of the Nagios host to be used for export                                |
+|                    | --validate                  | Validates the export files                                                                      |
+| -u                 | --user=[USERNAME]           | Username of a user authorized for execution                                      |
+| -p                 | --password=[PASSWORD]       | Password for authentication of the previously specified user                                   |
+| -i                 | --tenantId=[TENANT-ID]      | Tenant ID of the tenant to be used (default: 1)                              |
+| -c                 | --config=[CONFIG-FILE]      | Specification of the path to the configuration file                                                        |
+| -h                 | --help                      | Help message for displaying further information                                            |
+| -q                 | --quiet                     | Quiet mode to disable output                                                       |
+| -V                 | --version                   | Display the version of the i-doit Console                                                           |
+|                    | --ansi<br>--no-ansi         | Force ANSI output (or disable with --no-ansi)                                             |
+| -n                 | --no-interaction            | Disables all interaction questions of the i-doit Console                                      |
+| -v / -vv / -vvv    | --verbose                   | Increases the output verbosity. (1 = Normal output, 2 = Detailed output, 3 = Debug level) |
 
-**Example of use**
+**Usage example**
 
 ```shell
 sudo -u www-data php console.php nagios-export --user admin --password admin --tenantId 1 --nagiosHostId 1
@@ -96,24 +98,24 @@ sudo -u www-data php console.php nagios-export --user admin --password admin --t
 
 ### nagios-ndoutils
 
-Imports monitoring status changes from the NDOUtils into the i-doit logbook.
+Imports monitoring status changes from NDOUtils into the i-doit logbook.
 
 **Options:**
 
-| Parameter (short version) | Parameter (long version) | Description                                                                                  |
-| ------------------------- | ------------------------ | -------------------------------------------------------------------------------------------- |
-| -u                        | --user=USERNAME          | Username of a user who is authorized to execute                                              |
-| -p                        | --password=PASSWORD      | Password for authentication of the previously specified user                                 |
-| -i                        | --tenantId=TENANT-ID     | Tenant ID of the tenant to be used (default: 1)                                              |
-| -c                        | --config=CONFIG-FILE     | Specifying the path to the configuration file                                                |
-| -h                        | --help                   | Help message for displaying further information                                              |
-| -q                        | --quiet                  | Quiet-Mode to deactivate output                                                              |
-| -V                        | --version                | Output of the i-doit Console version                                                         |
-|                           | --ansi<br>--no-ansi      | Force (or disable --no-ansi) ANSI output                                                     |
-| -n                        | --no-interaction         | Disables all interaction questions of the i-doit Console                                     |
-| -v / -vv / -vvv           | --verbose                | Increases the scope of the return. (1 = normal output, 2 = detailed output, 3 = debug level) |
+| Parameter (short) | Parameter (long)       | Description                                                                                     |
+| ------------------ | ---------------------- | ------------------------------------------------------------------------------------------------ |
+| -u                 | --user=[USERNAME]      | Username of a user authorized for execution                                      |
+| -p                 | --password=[PASSWORD]  | Password for authentication of the previously specified user                                   |
+| -i                 | --tenantId=[TENANT-ID] | Tenant ID of the tenant to be used (default: 1)                              |
+| -c                 | --config=[CONFIG-FILE] | Specification of the path to the configuration file                                                        |
+| -h                 | --help                 | Help message for displaying further information                                            |
+| -q                 | --quiet                | Quiet mode to disable output                                                       |
+| -V                 | --version              | Display the version of the i-doit Console                                                           |
+|                    | --ansi<br>--no-ansi    | Force ANSI output (or disable with --no-ansi)                                             |
+| -n                 | --no-interaction       | Disables all interaction questions of the i-doit Console                                      |
+| -v / -vv / -vvv    | --verbose              | Increases the output verbosity. (1 = Normal output, 2 = Detailed output, 3 = Debug level) |
 
-**Example of use**
+**Usage example**
 
 ```shell
 sudo -u www-data php console.php nagios-ndoutils --user admin --password admin --tenantId 1
@@ -121,14 +123,14 @@ sudo -u www-data php console.php nagios-ndoutils --user admin --password admin -
 
 ## Changelog
 <!-- cSpell:disable -->
-| Version | Date       | Changelog                                                                                                                                                                                                                       |
-| ------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1.4     | 2025-03-31 | [Task] Remove gettext extension from add-on                                                                                                                                                                                     |
-| 1.3     | 2025-02-25 | [Task] Make symfony 6.4 compatible <br>[Bug] Some attributes are not writable via API in category folder Persons category Nagios                                                                                                |
-| 1.2     | 2024-07-09 | [Bug] Server error when open Nagios category                                                                                                                                                                                    |
-| 1.1.1   | 2023-08-22 | [Improvement] PHP 8.1 Compatibility                                                                                                                                                                                             |
-| 1.1     | 2022-09-05 | [Task] PHP 8.0 Compatibility  <br>[Task] Design Compatibility                                                                                                                                                                   |
-| 1.0.3   |            | [Improvement] Compatibility with i-doit 1.16                                                                                                                                                                                    |
-| 1.0.2   |            | [Bug] The Nagios category cannot be opened among persons  <br>[Bug] Clicking on "Edit" after saving an object, navigates to object list  <br>[Bug] Click on "Edit" in object list should be only possible if object is selected |
-| 1.0.1   |            | [Bug] Creation of Nagios tables is performed in the wrong order                                                                                                                                                                 |
-| 1.0     |            | [Change] Add-onize Nagios                                                                                                                                                                                                       |
+| Version | Date       | Changelog                                                                                                                                                                                                                   |
+| ------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1.4     | 2025-03-31 | [Task] Remove gettext extension from add-on                                                                                                                                                                                 |
+| 1.3     | 25.02.2025 | [Task] Make symfony 6.4 compatible <br>[Bug] Some attributes are not writable via API in category folder Persons category Nagios                                                                                            |
+| 1.2     | 07.09.2024 | [Bug] Server error when open Nagios category                                                                                                                                                                                |
+| 1.1.1   | 22.08.2023 | [Improvement] PHP 8.1 Compatibility                                                                                                                                                                                         |
+| 1.1     | 05.09.2022 | [Task] PHP 8.0 compatibility  <br>[Task] Design Compatibility                                                                                                                                                               |
+| 1.0.3   |            | [Improvement] Compatibility with i-doit 1.16                                                                                                                                                                                |
+| 1.0.2   |            | [Bug] The Nagios category cannot be opened among persons<br>[Bug] Clicking on "Edit" after saving an object, navigates to object list<br>[Bug] Click on "Edit" in object list should be only possible if object is selected |
+| 1.0.1   |            | [Bug] Creation of Nagios tables is performed in the wrong order                                                                                                                                                             |
+| 1.0     |            | [Change] Add-onize Nagios                                                                                                                                                                                                   |

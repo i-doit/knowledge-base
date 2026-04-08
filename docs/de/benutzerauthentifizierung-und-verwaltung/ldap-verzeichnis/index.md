@@ -1,17 +1,17 @@
 ---
 title: LDAP-Verzeichnis/Active Directory (AD)
-description: LDAP-Verzeichnis/Active Directory (AD)
+description: "Mit der LDAP-/AD-Schnittstelle bindest du i-doit an dein zentrales Verzeichnis an."
 #icon: material/
 status:
 lang: de
 ---
 
-!!! warning "Bitte erstellen Sie vor jeder Änderung an einer Schnittstelle/Import einen vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist kann dieses dann wiederhergestellt werden"
+!!! warning "Bitte erstelle vor jeder Änderung an einer Schnittstelle/Import ein vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist, kann dieses dann wiederhergestellt werden"
 
-Für die Authentifizierung/Autorisierung und Synchronisierung von Daten aus einem LDAP-Verzeichnis oder Active Directory (AD) bietet i-doit eine Schnittstelle.
+Mit der LDAP-/AD-Schnittstelle bindest du i-doit an dein zentrales Verzeichnis an. Benutzer melden sich mit ihren gewohnten Zugangsdaten an, und du kannst Personen sowie Personengruppen automatisch synchronisieren.
 
 !!! info ""
-    Ein Praxisbeispiel finden Sie auf unserem [Blog](https://www.i-doit.com/blog/ldap-integration-mit-i-doit/)
+    Ein Praxisbeispiel findest du auf unserem [Blog](https://www.i-doit.com/blog/ldap-integration-mit-i-doit/)
 
 ## Voraussetzungen
 
@@ -21,9 +21,10 @@ i-doit unterstützt folgende Verzeichnisdienste:
 *   [Microsoft Active Directory (AD)](https://de.wikipedia.org/wiki/Active_Directory)
 *   [Novel eDirectory](https://de.wikipedia.org/wiki/Novell_eDirectory) (früher Directory Services)
 
-Die [PHP-Extension php_ldap](http://de.php.net/manual/de/ldap.setup.php) für die Kommunikation mit einem Active Directory (AD) bzw. LDAP-Verzeichnis muss installiert und aktiviert werden. Wer den Installationsanweisungen gefolgt ist, hat die Extension bereits auf dem System.
+Die [PHP-Extension php_ldap](http://de.php.net/manual/de/ldap.setup.php) muss installiert und aktiviert sein. Wenn du den Installationsanweisungen gefolgt bist, ist die Extension bereits auf deinem System vorhanden.
 
-Nicht vergessen, LDAP zu erlauben, wenn SELinux verwendet wird. Dazu `setsebool -P httpd_can_connect_ldap on` verwenden. Das -P steht für Permanent. Überprüfen Sie dies mit `getsebool -a | grep httpd`
+!!! tip "SELinux"
+    Wenn du SELinux verwendest, musst du LDAP-Verbindungen explizit erlauben: `setsebool -P httpd_can_connect_ldap on` (das `-P` macht die Einstellung permanent). Überprüfe den Status mit `getsebool -a | grep httpd`.
 
 ### Benötigte Rechte für den LDAP-Sync
 
@@ -45,9 +46,9 @@ sudo apt install php-ldap
 sudo service apache2 restart
 ```
 
-## Nachträgliche Installation unter [Windows](../../installation/manuelle-installation/microsoft-windows-server/index.md)
+### Nachträgliche Installation unter [Windows](../../installation/manuelle-installation/microsoft-windows-server/index.md)
 
-Die Datei php.ini (in der Regel unter `C:\xampp\php\php.ini`) muss angepasst werden. In einem Texteditor aktiviert man das Laden der Extension php_ldap.
+Passe die Datei `php.ini` an (in der Regel unter `C:\xampp\php\php.ini`). Aktiviere die Extension `php_ldap`, indem du das Semikolon am Zeilenanfang entfernst.
 
 Aus der Zeile
 
@@ -55,13 +56,13 @@ Aus der Zeile
 ;extension=php_ldap.dll
 ```
 
-wird das ";" entfernt und somit
+wird
 
 ```ini
 extension=php_ldap.dll
 ```
 
-Manchmal kann es noch notwendig sein, die Dateien `ssleay32.dll` und `libeay32.dll` (von Version zu Version unterschiedlich, jedoch meist unter `C:\xampp\apache\bin\` zu finden) in das Verzeichnis php\ zu kopieren. Danach muss noch der Apache Webserver neu gestartet werden.
+Je nach Version kann es notwendig sein, die Dateien `ssleay32.dll` und `libeay32.dll` (meist unter `C:\xampp\apache\bin\`) in das Verzeichnis `php\` zu kopieren. Starte anschließend den Apache Webserver neu.
 
 ## Konfiguration
 
@@ -69,7 +70,7 @@ Die Konfiguration befindet sich in i-doit unter **Verwaltung → Import und Schn
 
 ### Server
 
-Unter **Verwaltung → Import und Schnittstellen → LDAP → Server** können ein oder mehrere Instanzen konfiguriert werden. Beim Login werden alle Server nacheinander abgefragt, bis ein Login gefunden wurde. Gibt es mehrere [Mandanten](../../administration/mandantenfaehigkeit.md), werden alle nacheinander abgefragt und die Datenbanken für den Login angeboten, wenn die Abfrage ein positives Ergebnis geliefert hat.
+Unter **Verwaltung → Import und Schnittstellen → LDAP → Server** konfigurierst du einen oder mehrere LDAP-Server. Beim Login fragt i-doit alle konfigurierten Server nacheinander ab, bis eine erfolgreiche Authentifizierung stattfindet. Bei mehreren [Mandanten](../../administration/mandantenfaehigkeit.md) werden alle Datenbanken angeboten, bei denen die Abfrage ein positives Ergebnis liefert.
 
 ### LDAP Verbindung für Lookups (lesend)
 
@@ -94,7 +95,7 @@ _Bekannte Lösungen für Probleme bei der TLS Verbindung findet Ihr [LDAP via TL
 
 ### LDAP-Parameter für i-doit-Login
 
-Die hier angegebenen Parameter bestimmen, wo im Directory nach Benutzern gesucht werden soll.
+Diese Parameter bestimmen, wo i-doit im Verzeichnis nach Benutzern sucht.
 
 | Feldname                          | Inhalt                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -103,7 +104,7 @@ Die hier angegebenen Parameter bestimmen, wo im Directory nach Benutzern gesucht
 | **Nach Benutzern suchen in (OU)** | **Pflichtfeld**: Der Pfad bis zur Organisationseinheit, in der die Benutzer im Directory abgelegt wurden.<br><br>(Beispiel: OU=tree,DC=synetics,DC=int)                                                                                                                                                                                                                                                                                                                  |
 | **Rekursive Suche**               | Beim Aktivieren der rekursiven Suche werden auch die Verzeichnisse unterhalb der darüber angegebenen Organisationseinheit durchsucht. Bei großen Directories ist dies nicht empfehlenswert und sollte durch die Anlage von mehreren Servern umgangen werden.                                                                                                                                                                                                             |
 
-Des Weiteren kann der Filter noch weiter definiert werden. Bei einer einzigen Filterzeile haben die Optionen dahinter noch keine Auswirkungen. Erst wenn über "Filter hinzufügen" die Abfrage erweitert wird, kommen die weiteren Optionen zur Geltung.
+Du kannst den Filter weiter verfeinern. Bei einer einzigen Filterzeile haben die zusätzlichen Optionen noch keine Auswirkung. Erst wenn du über **Filter hinzufügen** die Abfrage erweiterst, kommen sie zur Geltung.
 
 An letzten Filter anhängen:
 
@@ -123,34 +124,34 @@ Neuen Term bilden:
 (&(&(objectClass=user))(test=test))
 ```
 
-Im untersten Bereich lässt sich dann die oben festgelegte Konfiguration testen. Bestenfalls erscheint die Meldung:
+Im unteren Bereich der Seite testest du die Konfiguration. Bei Erfolg erscheint die Meldung:
 
 ```shell
 Connection OK!
 XX object(s) found in OU=tree,OU=synetics,DC=synetics,DC=int.
 ```
 
-Sollte bei Misserfolg die Fehlermeldung noch nicht eindeutig genug sein, kann das Debug-Level erhöht werden, sodass weitere Ausgaben im Apache Error Log mitgeschrieben werden. Das Error Log ist unter Debian-basierten Betriebssystemen unter /var/log/apache2/error.log zu finden.
+Falls die Fehlermeldung nicht aussagekräftig genug ist, erhöhe das Debug-Level. Dadurch schreibt i-doit detailliertere Ausgaben in das Apache Error Log. Unter Debian-basierten Systemen findest du dieses unter `/var/log/apache2/error.log`.
 
 ### Identifizierung von Objekten
 
-Ohne weitere Einstellung z.B. **Eindeutige Kennung** wird anhand des **Login** Attributes aus der **Kategorie Personen → Login** identifiziert**.**
+Ohne weitere Einstellung (z.B. **Eindeutige Kennung**) identifiziert i-doit Objekte anhand des **Login**-Attributs aus der **Kategorie Personen > Login**.
 
 ### Directories
 
-Über **Verwaltung → Import und Schnittstellen → LDAP → Directories** lässt sich dann das Mapping einrichten. Es wird dafür genutzt, beim Login grundlegende Informationen zu dem einloggenden Benutzer abzufragen und in dem in i-doit zu erstellenden Benutzer abzulegen. Hier kann nach der Auswahl des zutreffenden Directories die Zuweisung vorgenommen werden. Standardmäßig sind die Felder jedoch schon gefüllt und brauchen in der Regel nicht verändert zu werden.
+Unter **Verwaltung → Import und Schnittstellen → LDAP → Directories** richtest du das Attribut-Mapping ein. Beim Login fragt i-doit grundlegende Informationen des Benutzers ab und legt sie im Personen-Objekt ab. Wähle das zutreffende Directory aus und passe bei Bedarf die Zuweisung an. In der Regel sind die Felder bereits korrekt vorausgefüllt.
 
 ### Import eigener LDAP-Attribute
 
-Es ist auch möglich, eigene Attribute aus dem LDAP über den Import von Personen in den Stammdaten zu hinterlegen. Dafür können weitere Felder für diese Kategorie unter **Verwaltung → Import und Schnittstellen → LDAP → [Attributerweiterung](../../administration/verwaltung/import-und-schnittstellen/ldap/attributerweiterung.md)** konfiguriert werden. Sobald ein Name definiert wurde, wird das Feld mit derselben Bezeichnung angezeigt. Die Befüllung findet dann über den zugehörigen Key statt.
+Du kannst auch eigene LDAP-Attribute in die Stammdaten importieren. Konfiguriere dazu weitere Felder unter **Verwaltung → Import und Schnittstellen → LDAP → [Attributerweiterung](../../administration/verwaltung/import-und-schnittstellen/ldap/attributerweiterung.md)**. Sobald du einen Namen definiert hast, erscheint das Feld in den Stammdaten und wird beim Sync über den zugehörigen Key befüllt.
 
 ### Regelmäßige Synchronisation
 
-Die dafür benötigte Konfiguration wurde in den vorherigen Schritten bereits vorgenommen. Für die Synchronisation muss nun noch der passende [i-doit console utility](../../automatisierung-und-integration/cli/index.md) Befehl eingerichtet werden. Außerdem können noch weitere zu synchronisierende Felder konfiguriert werden.
+Die Grundkonfiguration hast du in den vorherigen Schritten bereits erledigt. Richte nun den passenden [i-doit console utility](../../automatisierung-und-integration/cli/index.md) Befehl ein, um die Synchronisation regelmäßig auszuführen. Optional konfigurierst du weitere zu synchronisierende Felder.
 
 ### Erweiterte Konfiguration
 
-Ein Beispiel dazu ist [hier](../../automatisierung-und-integration/cli/configuration-files.md) zu finden. Diese Datei kann mit Login-Daten, Tenant und anderen Optionen erweitert und angepasst werden. Damit diese Datei z.B. beim `ldap-sync` Befehl berücksichtigt wird, muss diese über einen weiteren Parameter `-c /pfad/` mit angegeben werden weitere Informationen zur [i-doit console utility](../../automatisierung-und-integration/cli/index.md).
+Ein Beispiel findest du [hier](../../automatisierung-und-integration/cli/configuration-files.md). Diese Datei kannst du mit Login-Daten, Tenant und weiteren Optionen erweitern. Damit sie beim `ldap-sync`-Befehl berücksichtigt wird, gib sie über den Parameter `-c /pfad/` an. Weitere Informationen findest du beim [i-doit console utility](../../automatisierung-und-integration/cli/index.md).
 
 | Parameter                     | Zweck                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -167,7 +168,14 @@ Ein Beispiel dazu ist [hier](../../automatisierung-und-integration/cli/configura
 
 ### Automatische Zuweisung von Personen zu Personengruppen
 
-Die automatische Zuweisung sorgt dafür, dass nach dem Login automatisch die für die Personengruppe festgelegten Berechtigungen zugewiesen werden. Damit die Zuweisung erfolgen kann, muss in den **Stammdaten** einer **Personengruppe** das Attribut **LDAP-Gruppe (Mapping)** mit einer validen Gruppe aus LDAP/AD gefüllt werden. Loggt sich ein Benutzer ein oder wird die Synchronisation ausgeführt, werden automatisch auch die dem Benutzerobjekt im Directory zugewiesenen Gruppen abgefragt und mit dem Attribut **LDAP-Gruppe (Mapping)** der Personengruppen verglichen. Gibt es eine Übereinstimmung wird die Gruppe zugewiesen und die weiteren Gruppen abgefragt.
+Die automatische Zuweisung sorgt dafür, dass Benutzer nach dem Login automatisch die Berechtigungen ihrer Personengruppe erhalten.
+
+So richtest du die Zuweisung ein:
+
+1. Öffne die **Stammdaten** einer **Personengruppe** in i-doit.
+2. Trage im Attribut **LDAP-Gruppe (Mapping)** den Namen der entsprechenden LDAP-/AD-Gruppe ein.
+
+Beim Login oder bei der Synchronisation gleicht i-doit die Gruppenmitgliedschaften des Benutzers im Directory mit den konfigurierten Mappings ab. Bei Übereinstimmung wird die Personengruppe automatisch zugewiesen.
 
 [![ldap-autozuweisung](../../assets/images/de/automatisierung-und-integration/ldap/1-ldap.png)](../../assets/images/de/automatisierung-und-integration/ldap/1-ldap.png)
 
@@ -176,20 +184,21 @@ Die automatische Zuweisung sorgt dafür, dass nach dem Login automatisch die fü
 
 ### Personen und Personengruppen Synchronisieren
 
-Seit Version 1.15 können Personen und Personengruppen aus dem LDAP/AD synchronisiert werden. Dabei werden die Personen Mitglied der Ihnen im LDAP zugewiesenen Gruppe. Solange die Gruppe auch mit dem eingestelltem Filter gefunden wird.<br>
-[HIER](../ldap-verzeichnis/so-werden-benutzer-und-gruppen-aus-dem-ad-ldap-importiert.md) geht es zum Artikel.
+Seit Version 1.15 synchronisiert i-doit Personen und Personengruppen aus dem LDAP/AD. Dabei werden Personen automatisch den im LDAP zugewiesenen Gruppen zugeordnet, sofern diese vom konfigurierten Filter erfasst werden.
 
-Voraussetzung ist, dass der Benutzer mit dem der Befehl ausgeführt wird auch die Supervisor Rechte auf die Kategorien ("Gruppenmitgliedschaft" und "Personengruppen > Mitglieder") sowie Supervisor Rechte auf die Objekttypen ("Personen" und "Personengruppen") besitzt.
+Eine ausführliche Anleitung findest du im Artikel [Benutzer und Gruppen aus dem AD/LDAP importieren](../ldap-verzeichnis/so-werden-benutzer-und-gruppen-aus-dem-ad-ldap-importiert.md).
+
+Der ausführende Benutzer benötigt Supervisor-Rechte auf die Kategorien **Gruppenmitgliedschaft** und **Personengruppen > Mitglieder** sowie auf die Objekttypen **Personen** und **Personengruppen**.
 
 [![ldap-sync](../../assets/images/de/automatisierung-und-integration/ldap/2-ldap.png)](../../assets/images/de/automatisierung-und-integration/ldap/2-ldap.png)
 
 ## Logging
 
-Im `log/` Verzeichnis im i-doit Installationsverzeichnis befindet sich eine Logdatei mit dem Namen `ldap_YYYY-MM-DD.log`. Das Logging lässt sich im [Admin-Center](../../administration/admin-center.md#system-settings) ändern, oder über die [Experteneinstellungen](../../administration/admin-center.md#expert-settings-system-bezogen) im [Admin-Center](../../administration/admin-center.md#system-settings).
+Im Verzeichnis `log/` deiner i-doit-Installation findest du die Logdatei `ldap_YYYY-MM-DD.log`. Das Logging konfigurierst du im [Admin-Center](../../administration/admin-center.md#system-settings) oder über die [Experteneinstellungen](../../administration/admin-center.md#expert-settings-system-bezogen).
 
 ## Den ldap-sync ausführen
 
-Der ldap-sync lässt sich nur über die Console des Servers ausführen. Um die Console richtig bedienen zu können, sollte der [Artikel](../../automatisierung-und-integration/cli/index.md) dazu bekannt sein. Für eine einfache Synchronisation ohne die erweiterte Konfiguration dient der Befehl `ldap-sync`. Eine Beschreibung der Parameter ist im entsprechenden für das[i-doit console utility](../../automatisierung-und-integration/cli/index.md) zu finden.
+Den ldap-sync führst du über die Kommandozeile des Servers aus. Mache dich zunächst mit dem [i-doit console utility](../../automatisierung-und-integration/cli/index.md) vertraut. Für eine einfache Synchronisation ohne erweiterte Konfiguration verwendest du den Befehl `ldap-sync`.
 
 **Beispiel zur Verwendung aus dem i-doit Ordner**
 

@@ -1,15 +1,13 @@
+---
+title: Manuelle Installation
+description: "Bei der manuellen Installation konfigurierst du alle Komponenten (Apache, PHP, MariaDB) selbst."
+icon:
+status:
+lang: de
+---
 # Manuelle Installation
 
-Dieser Artikel behandelt die manuelle [Installation](../index.md) von i-doit. Die nötigen Software-Pakete werden selbstständig installiert und konfiguriert. Danach wird i-doit heruntergeladen und installiert. Die nötigen Schritte für Cronjobs und Backups obliegen ebenfalls dem Benutzer.
-
-## Umfang
-
-✔ Software-Pakete installieren<br>
-✔ Software-Pakete konfigurieren<br>
-✔ i-doit installieren<br>
-✔ Cronjobs einrichten<br>
-✔ Backups einrichten<br>
-✔ Restore einrichten
+Bei der manuellen Installation konfigurierst du alle Komponenten (Apache, PHP, MariaDB) selbst. Das gibt dir volle Kontrolle über das Setup und ist die richtige Wahl für individuelle Anforderungen oder Windows-Server-Umgebungen.
 
 ## Voraussetzungen
 

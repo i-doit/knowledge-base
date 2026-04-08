@@ -8,11 +8,11 @@ lang: de
 
 # Forms
 
-Mit diesem Add-on können Sie Formulare erstellen, die Sie an anderen Mitarbeitern zum ausfüllen via Link zusenden können. Dieses Add-on kann ein Formular erstellen, dass zum Beispiel neuen Mitarbeitern hilft Computer in Ihrem Unternehmen zu dokumentieren.
+Mit dem Forms Add-on erstellst du Formulare und versendest sie per Link an Mitarbeiter zum Ausfüllen. Neue Kollegen dokumentieren so z. B. Computer im Unternehmen, ohne die gesamte i-doit-Oberfläche kennen zu müssen.
 
-Beim Erfassen von neuen Objekten ist es häufig so, dass zwar mehrere Kategorien angezeigt werden, aber aus jeder Kategorie nur einzelne Felder gepflegt werden müssen. In dem Fall ist es für den User (speziell wenn es neue Kollegen sind) einfacher, wenn nur die Attribute angezeigt werden, die tatsächlich ausgefüllt werden müssen.
+Der Vorteil: Statt aller Kategorien mit sämtlichen Feldern zeigst du nur die Attribute, die tatsächlich ausgefüllt werden müssen.
 
-Eine Vorstellung des Add-ons finden Sie auch auf unserem Blog, [hier](https://www.i-doit.com/blog/das-neue-i-doit-pro-forms-add-on/). Außerdem wurde ein [Video](https://www.youtube.com/watch?v=3jpzrK_cR0M) erstellt.
+Mehr dazu findest du in unserem [Blog](https://www.i-doit.com/blog/das-neue-i-doit-pro-forms-add-on/) und im [Video](https://www.youtube.com/watch?v=3jpzrK_cR0M).
 
 !!! info "Das Forms Add-on wird aktuell in Englisch bereitgestellt. Übersetzungen die von i-doit stammen werden auch in Deutsch übersetzt."
 
@@ -32,28 +32,28 @@ Es müssen die Systemvoraussetzungen von [MongoDB](https://docs.mongodb.com/manu
 
 ## Installation
 
-Folgende Schritte sind notwendig um das Add-on nutzen zu können:
+So installierst du das Add-on:
 
-*   Installieren des Forms Add-on über das [Admin-Center](../../administration/admin-center.md)
-*   [MongoDB Server **v8**](https://docs.mongodb.com/manual/installation/) installation
-*   anschließend wird [NodeJS **v22**](https://nodejs.org/en/download/current/) installiert via [nvm Package Manager](https://github.com/nvm-sh/nvm)
-*   das Forms Backend konfiguriert
-*   und dann i-doit konfiguriert
+1. Installiere das Forms Add-on über das [Admin-Center](../../administration/admin-center.md).
+2. Installiere [MongoDB Server **v8**](https://docs.mongodb.com/manual/installation/).
+3. Installiere [NodeJS **v22**](https://nodejs.org/en/download/current/) via [nvm Package Manager](https://github.com/nvm-sh/nvm).
+4. Konfiguriere das Forms Backend.
+5. Konfiguriere i-doit.
 
 [Weiter zur Installation des Forms Add-on](forms-installation.md){ .md-button .md-button--primary }
 
 ## Rechtevergabe
 
-Damit Benutzer in der Lage sind, Formulare zu erstellen, ist es nötig entsprechende [Rechte](../../effizientes-dokumentieren/rechteverwaltung/index.md) zu vergeben. Dies ist in der i-doit Verwaltung unterRechtesystem > Rechtevergabe > Forms möglich, wenn das Add-on installiert ist.
+Damit Benutzer Formulare erstellen können, vergib die entsprechenden [Rechte](../../effizientes-dokumentieren/rechteverwaltung/index.md) unter **Verwaltung → Rechtesystem → Rechtevergabe → Forms**.
 
 [![Rechtevergabe](../../assets/images/de/i-doit-add-ons/forms/2-forms.png)](../../assets/images/de/i-doit-add-ons/forms/2-forms.png)
 
 !!! attention "Cache für das Rechtesystem leeren"
-    Nachdem die Rechte vergeben oder geändert wurden ist es notwendig, in der i-doit [Verwaltung](../../administration/verwaltung/index.md) unter **Verwaltung → [Mandanten-Name] Verwaltung → Systemreparatur und Berechtigungen** [Cache](../../administration/verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md) zu leeren, damit die Änderungen vom System übernommen werden.
+    Nachdem du die Rechte vergeben oder geändert hast, leere in der i-doit [Verwaltung](../../administration/verwaltung/index.md) unter **Verwaltung > [Mandanten-Name] Verwaltung > Systemreparatur und Berechtigungen** den [Cache](../../administration/verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md), damit die Änderungen vom System übernommen werden.
 
 ## Aufruf des Add-ons
 
-Nachdem alle Vorbereitungen abgeschlossen sind ist der Zugriff auf das Add-on ist über `Add-ons → Forms` möglich. Die Ansicht des Menüs "Add-ons" kann sich Aufgrund unterschiedlicher Rechte und/oder weiterer installierter Add-ons unterscheiden.
+Nach Abschluss aller Vorbereitungen erreichst du das Add-on unter **Add-ons → Forms**.
 
 ## Verwendung der API
 

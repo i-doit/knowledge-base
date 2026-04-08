@@ -6,11 +6,11 @@ status: updated
 lang: de
 ---
 
-In diesem Artikel werden wir alle bekannten Probleme beim Update von oder auf eine bestimmte i-doit Version auflisten.
+Dieser Artikel listet alle bekannten Probleme beim Update von oder auf eine bestimmte i-doit-Version.
 
 ## Version 34
 
-Aktuell ist SM-View `2024.3.0.2708` nicht kompatibel und es wird nach dem Update auf i-doit 34 ein `HTTP 500` Server error geworfen. Das [deaktivieren des Add-ons](../../i-doit-add-ons/index.md#de-aktivieren) im [Admin-Center](../admin-center.md) erlaubt das weiter arbeiten mit i-doit. Die entsprechenden Fehlermeldung im Webserver Log sieht so aus:
+SM-View `2024.3.0.2708` ist nicht kompatibel mit i-doit 34. Nach dem Update wird ein `HTTP 500`-Serverfehler geworfen. [Deaktiviere das Add-on](../../i-doit-add-ons/index.md#de-aktivieren) im [Admin-Center](../admin-center.md), um weiterarbeiten zu können. Die Fehlermeldung im Webserver-Log sieht so aus:
 
 ```log
 PHP Fatal error: Declaration of Symfony\Component\HttpFoundation\ResponseHeaderBag::all(?string $key = null) must be compatible with Symfony\Component\HttpFoundation\HeaderBag::all(?string $key = null): array in /var/www/html/src/classes/modules/shd_smview_connect/vendor/symfony/http-foundation/ResponseHeaderBag.php on line 91
@@ -18,22 +18,21 @@ PHP Fatal error: Declaration of Symfony\Component\HttpFoundation\ResponseHeaderB
 
 ---
 
-Wenn beim Update auf die 35 folgende Fehlermeldung geloggt wird:
+Wenn beim Update auf Version 35 folgende Fehlermeldung geloggt wird:
 
 ```log
 Fatal error: Uncaught ArgumentCountError: 4 arguments are required, 2 given in /var/www/html/i-doit/updates/versions/35/migration/migrate-system-crypto-hash-to-tenant.php:28 Stack trace: #0 /var/www/html/i-doit/updates/versions/35/migration/migrate-system-crypto-hash-to-tenant.php(28): sprintf() #1 /var/www/html/i-doit/updates/classes/isys_update_migration.class.php(109): include('...') #2 /var/www/html/i-doit/updates/update.inc.php(1050): isys_update_migration->migrate() #3 /var/www/html/i-doit/src/hypergate.inc.php(229): include_once('...') #4 /var/www/html/i-doit/index.php(263): include_once('...') #5 {main} thrown in /var/www/html/i-doit/updates/versions/35/migration/migrate-system-crypto-hash-to-tenant.php on line 28
 ```
 
-Benutzen Sie diesen Hotfix in der **34** um auf die **35** zu aktualisieren zu können.
+Benutze diesen Hotfix in der **34**, um auf die **35** aktualisieren zu können.
 
 [i-doit_34_ID-11978_migration-of-crypto-hashes.zip :material-file-download:](../../assets/downloads/hotfixes/34/i-doit_34_ID-11978_migration-of-crypto-hashes.zip){ .md-button .md-button--primary }
 
 ## Version 33
 
-Es kann vorkommen, dass nach dem update einige Funktionen verschwinden. Wie zum Beispiel die Update Funktion oder die LDAP Funktion. Um das Problem zu lösen muss in der Datei `.../i-doit/src/config.inc.php`
-der Wert `$g_is_cloud = '0'` gesetzt werden.
+Nach dem Update können einige Funktionen verschwinden, z. B. die Update-Funktion oder die LDAP-Funktion. Setze in der Datei `.../i-doit/src/config.inc.php` den Wert `$g_is_cloud = '0'`.
 
-Es gibt noch weitere Variablen die geprüft werden sollten wie zum Beispiel:
+Prüfe auch die folgenden Variablen:
 
 === "Richtig"
 
@@ -53,7 +52,7 @@ Es gibt noch weitere Variablen die geprüft werden sollten wie zum Beispiel:
 
 ## Version 28
 
-Wenn du den Hotfix installiert hast [i-doit_28_hotfix_ID-10745.zip](../hotfixes/hotfix-archiv/v28.md#wrong-i-doit-version-is-downloaded-at-updater), wird dir die neue Version angezeigt. Klickst du dann auf **Next**, passiert aber nichts. Wenn du in der Entwicklerkonsole des Browsers (F12) öffnest, dort die Konsole anzeigst und auf **Next** klickst, kann es zu folgender Fehlermeldung kommen:
+Wenn du den Hotfix [i-doit_28_hotfix_ID-10745.zip](../hotfixes/hotfix-archiv/v28.md#wrong-i-doit-version-is-downloaded-at-updater) installiert hast, wird die neue Version angezeigt. Ein Klick auf **Next** hat jedoch keine Wirkung. In der Entwicklerkonsole des Browsers (F12) erscheint folgende Fehlermeldung:
 <!-- cSpell:disable -->
 ```shell
 Uncaught ReferenceError: open29NoticeHandler is not defined
@@ -62,25 +61,25 @@ at klass.handleEvent (prototype.js:7182:34)
 at HTMLInputElement.<anonymous> (prototype.js:7266:15)
 ```
 <!-- cSpell:enable -->
-Bitte führe die folgenden Schritte aus:
+Führe folgende Schritte aus:
 
-1. Führe das Update auf Version **28** noch mal mit dem Updater aus
-2. Lade die Update ZIP der Version **29** über das [Kundenportal](../kundenportal.md) runter
-3. Entpacke die Update ZIP im i-doit Ordner, wie [hier beschrieben](../../wartung-und-betrieb/update-einspielen.md#update-uber-die-konsole-vorbereiten)
-4. Führe das Update auf Version **29** noch mal mit dem Updater aus
+1. Führe das Update auf Version **28** erneut mit dem Updater aus.
+2. Lade die Update-ZIP der Version **29** über das [Kundenportal](../kundenportal.md) herunter.
+3. Entpacke die ZIP im i-doit-Ordner, wie [hier beschrieben](../../wartung-und-betrieb/update-einspielen.md#update-uber-die-konsole-vorbereiten).
+4. Führe das Update auf Version **29** mit dem Updater aus.
 
 ## Version 25 - 28
 
-Wird der Updater verwendet, zeigt dieser **v30** als nächste Version an, was ein Fehler ist.
-Verwende in diesem Fall den Hotfix oder bereite das Update manuell vor, indem das v29-Updatepaket in den i-doit-Ordner entpackt wird.
-Oder entpacke den entsprechenden Hotfix, je nach i-doit Version, [Hotfix-Archiv](../hotfixes/hotfix-archiv/index.md).
+Der Updater zeigt fälschlicherweise **v30** als nächste Version an. Behebe das Problem auf einem der folgenden Wege:
+
+-   Entpacke das v29-Updatepaket manuell in den i-doit-Ordner.
+-   Verwende den passenden Hotfix aus dem [Hotfix-Archiv](../hotfixes/hotfix-archiv/index.md).
 
 ## Dateien können nicht kopiert werden
 
-Wenn bei **4. File-Update** die Meldung `A problem occurred during update:` angezeigt wird, liegt dies häufig an fehlenden Schreibberechtigungen auf dem Dateisystem.
-In diesem Fall nutzen bitte, passend zum verwendeten Betriebssystem und Webserver Benutzer, den jeweiligen Befehl im die Rechte für die i-doit Dateien zu setzen:
+Wenn bei **4. File-Update** die Meldung `A problem occurred during update:` erscheint, fehlen häufig Schreibberechtigungen auf dem Dateisystem.
 
-Wir gehen von einer "standard" installation aus, so wie unterhalb von [Installation](../../installation/index.md) beschrieben.
+Setze die Dateiberechtigungen passend zu deinem Betriebssystem und Webserver-Benutzer. Die folgenden Befehle gehen von einer Standardinstallation aus, wie unter [Installation](../../installation/index.md) beschrieben.
 
 === "Debian/Ubuntu"
 

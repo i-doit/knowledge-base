@@ -1,6 +1,6 @@
 ---
 title: cmdb.reports
-description: cmdb.reports
+description: "Display the result of a report."
 icon: material/api
 #status: updated
 lang: de
@@ -129,3 +129,9 @@ JSON key **result** contains the Report result.
       ]
     }
     ```
+
+## Siehe auch
+
+- [API v1 Methoden](index.md) — Übersicht aller API v1 Methoden
+- [API Add-on](../../index.md) — Einstieg in das API Add-on
+- [i-doit Add-ons](../../../index.md) — Alle verfügbaren Add-ons

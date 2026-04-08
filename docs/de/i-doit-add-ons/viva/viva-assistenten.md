@@ -1,3 +1,10 @@
+---
+title: "VIVA-Assistenten"
+description: "Während im Kapitel zur _Vorgehensweise mit VIVA_ ein manueller Weg beschrieben wird, um alle IT-Grundschutz-relevanten Informationen zu dokumentieren,..."
+icon:
+status:
+lang: de
+---
 # VIVA-Assistenten
 
 Während im Kapitel zur _[Vorgehensweise mit VIVA](./vorgehensweise-mit-viva.md)_ ein manueller Weg beschrieben wird, um alle IT-Grundschutz-relevanten Informationen zu dokumentieren, umfasst das [Add-on](../index.md) **VIVA** eine Vielzahl an Assistenten, um diesen Weg teil-automatisiert zu gestalten. Die Assistenten analysieren im Vorfeld die Daten in VIVA und in der CMDB von i-doit, um daraus Vorschläge zu generieren, die der Anwender anschließend nachbearbeiten und/oder übernehmen kann. Komplexe Zusammenhänge innerhalb des Informationsverbunds werden dadurch sichtbar. Der Anwender hat somit die Möglichkeit, schneller und komfortabler zu dokumentieren.

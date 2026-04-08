@@ -1,3 +1,10 @@
+---
+title: Listeneditierung
+description: "Die Listeneditierung ist eine Funktion, die die gleichzeitige und einfache Bearbeitung mehrerer Objekte ermöglicht."
+icon:
+status:
+lang: de
+---
 # Listeneditierung
 
 Die Listeneditierung ist eine Funktion, die die gleichzeitige und einfache Bearbeitung mehrerer [Objekte](../grundlagen/struktur-it-dokumentation.md) ermöglicht. Die Bearbeitung erfolgt pro [Kategorie](../grundlagen/struktur-it-dokumentation.md).

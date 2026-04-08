@@ -1,6 +1,6 @@
 ---
 title: Objekt Beziehungen
-description: Objekt Beziehungen
+description: "Objekte stehen in i-doit in der Regel nicht für sich allein, sondern in Relation zueinander."
 icon: relations
 status:
 lang: de
@@ -12,15 +12,15 @@ lang: de
 
 ## Objekt Beziehungsarten
 
-Objekte können auf die unterschiedlichste Art in Beziehung stehen. Um hier Klarheit zu schaffen, erhält jede Beziehung eine Art. i-doit bringt in der Standardinstallation bereits viele vordefinierte Beziehungsarten mit. Eine Auflistung aller Arten gibt es unter **Verwaltung → Vordefinierte Inhalte → Objekt Beziehungsarten**.
+Objekte können auf die unterschiedlichste Art in Beziehung stehen. Um hier Klarheit zu schaffen, erhält jede Beziehung eine Art. i-doit bringt in der Standardinstallation bereits viele vordefinierte Beziehungsarten mit. Alle Arten findest du unter **Verwaltung → Vordefinierte Inhalte → Objekt Beziehungsarten**.
 
 [![Beziehungen](../assets/images/de/grundlagen/objekt-beziehungen/1-ob.png)](../assets/images/de/grundlagen/objekt-beziehungen/1-ob.png)
 
-Unter der Auflistung der Beziehungsarten kann über den Button **Neuen Wert Hinzufügen** eine neue Art erstellt werden. Möchten Sie diese Beziehung in einer benutzerdefinierten Kategorie verwenden, müssen Sie diese als "Implizit" definieren.
+Über den Button **Neuen Wert Hinzufügen** unterhalb der Auflistung erstellst du eine neue Beziehungsart. Möchtest du diese Beziehung in einer benutzerdefinierten Kategorie verwenden, definiere sie als "Implizit".
 
 [![Beziehung-hinzufügen](../assets/images/de/grundlagen/objekt-beziehungen/2-ob.png)](../assets/images/de/grundlagen/objekt-beziehungen/2-ob.png)
 
-Bereits dokumentierte Objekt-Beziehungen werden unter **Extras → CMDB → Beziehungen** je nach Art aufgelistet. Klickt man im linken Navigationsbaum auf Alle, werden alle Objekt-Beziehungen unabhängig von der Art geladen. Das Laden der Liste kann bei einer größeren IT-Dokumentation etwas dauern.
+Alle bereits dokumentierten Objekt-Beziehungen findest du unter **Extras → CMDB → Beziehungen**, aufgelistet nach Art. Klickst du im linken Navigationsbaum auf **Alle**, lädt i-doit sämtliche Objekt-Beziehungen unabhängig von der Art. Bei einer größeren IT-Dokumentation kann das Laden etwas dauern.
 
 [![vorhandene-beziehungsarten](../assets/images/de/grundlagen/objekt-beziehungen/3-ob.png)](../assets/images/de/grundlagen/objekt-beziehungen/3-ob.png)
 
@@ -56,9 +56,11 @@ Pro Objekt werden Beziehungen zu anderen Objekten in der [Kategorie](struktur-it
 
 ## Implizite vs. explizite Beziehungen
 
-Beziehungen unterscheiden sich nicht nur nach ihrer Art (siehe oben), sondern auch, ob diese implizit oder explizit erstellt worden sind. Implizite Beziehungen stammen aus den Kategorien. Wird beispielsweise die Kategorie **Standort** bearbeitet und im Attribut **Standort** ein übergeordnetes Objekt ausgewählt, entsteht automatisch im Hintergrund eine implizite Beziehung der Art **Standort**. Diese implizite Beziehung wird zudem in der Kategorie **Beziehungen** und unter **Extras → CMDB → Beziehungen → Standort** angezeigt.
+Beziehungen unterscheiden sich nicht nur nach ihrer Art (siehe oben), sondern auch danach, ob sie implizit oder explizit erstellt wurden.
 
-Soll unabhängig von den Kategorien und ihren Attributen eine Beziehung zwischen zwei Objekten gesetzt werden, wird eine explizite Beziehung erstellt. Diese explizite Beziehung wird in der Kategorie **Beziehungen** erstellt. Das Objekt, in dem man sich befindet, ist als **Objekt 1** vorausgewählt. Das Objekt, mit dem **Objekt 1** in Beziehung stehen soll, wird unter **Objekt 2** ausgewählt. Zudem muss zwischen beiden die Richtung gewählt werden. Als Beziehungsart ist standardmäßig **Abhängigkeit** vorausgewählt, weil diese Art unter **Verwaltung → Vordefinierte Inhalte → Objekt Beziehungen** bereits als explizit ausgewiesen ist. Es ist hier aber auch problemlos möglich eine neue explizite Beziehung zu definieren und direkt zu verwenden. Dies kann über das Zettel-Icon, wie bei Dialog+-Feldern, gemacht werden.
+**Implizite Beziehungen** entstehen automatisch aus Kategorien heraus. Bearbeitest du beispielsweise die Kategorie **Standort** und wählst im Attribut **Standort** ein übergeordnetes Objekt aus, erzeugt i-doit im Hintergrund automatisch eine implizite Beziehung der Art **Standort**. Diese Beziehung wird auch in der Kategorie **Beziehungen** und unter **Extras → CMDB → Beziehungen → Standort** angezeigt.
+
+**Explizite Beziehungen** erstellst du unabhängig von Kategorien und ihren Attributen direkt in der Kategorie **Beziehungen**. Das aktuelle Objekt ist als **Objekt 1** vorausgewählt. Du wählst unter **Objekt 2** das Objekt aus, zu dem eine Beziehung bestehen soll, und legst die Richtung fest. Als Beziehungsart ist standardmäßig **Abhängigkeit** vorausgewählt. Du kannst aber auch direkt eine neue explizite Beziehungsart definieren -- über das Zettel-Icon, wie bei Dialog+-Feldern.
 
 [![explizite-beziehungsart](../assets/images/de/grundlagen/objekt-beziehungen/6-ob.png)](../assets/images/de/grundlagen/objekt-beziehungen/6-ob.png)
 
@@ -81,7 +83,7 @@ Neben den gerichteten Beziehungen mit Master- und Slave-Objekten, existieren in 
 
 Beispiel: Ist in i-doit ein Web Cluster mit mehreren Nodes dokumentiert, agieren die Nodes unabhängig voneinander. Lediglich das Funktionieren des Clusters hängt von allen Nodes ab. Die Kategorie **Clustermitglieder** (beziehungsweise die [rückwärtige Kategorie](struktur-it-dokumentation.md) **Clustermitgliedschaften**) erstellt im Hintergrund gleichgerichtete Objekt-Beziehungen zwischen den Cluster-Mitgliedern.
 
-Eine Auflistung aller gleichgerichteter Beziehungen befindet sich unter **Extras → Vordefinierte Inhalte → Objekt Beziehungen → Gleichgerichtete Beziehungen**. Sie können nicht vom Benutzer erstellt werden, sondern werden implizit, automatisch im Hintergrund erstellt.
+Alle gleichgerichteten Beziehungen findest du unter **Extras → Vordefinierte Inhalte → Objekt Beziehungen → Gleichgerichtete Beziehungen**. Du kannst sie nicht manuell erstellen -- i-doit erzeugt sie implizit und automatisch im Hintergrund.
 
 [![gleichberechtigte-beziehungen](../assets/images/de/grundlagen/objekt-beziehungen/7-ob.png)](../assets/images/de/grundlagen/objekt-beziehungen/7-ob.png)
 

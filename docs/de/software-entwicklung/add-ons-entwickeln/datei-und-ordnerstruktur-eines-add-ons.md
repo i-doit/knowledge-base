@@ -1,3 +1,10 @@
+---
+title: "Datei und Ordnerstruktur eines Add-ons"
+description: "Wie unter Add-ons installieren, aktualisieren und aktivieren beschrieben, muss sich ein Add-on bzw."
+icon:
+status:
+lang: de
+---
 # Datei und Ordnerstruktur eines Add-ons
 
 Wie unter [Add-ons installieren, aktualisieren und aktivieren](add-ons-installieren-aktualisieren-und-entwickeln.md) beschrieben, muss sich ein Add-on bzw. dessen Code im eigenen Verzeichnis unter <i-doit>/src/classes/modules/<identifier> befinden. Theoretisch lässt sich innerhalb dieses Ordners eine beliebige Struktur anlegen. Wir haben folgende Struktur im i-doit-Team etabliert und raten dazu, diese auch für die eigene Entwicklung zu nutzen:
@@ -49,7 +56,7 @@ Grundsätzlich wird "PSR-4"-konformer PHP-Code unterhalb von "src" positioniert.
     Diese Autoloader-Klasse ist notwendig, sobald Code im "legacy"-Format verwendet wird (z.B. API, Rechtesystem, Kategorien, ...). Siehe auch [Bootstrapping eines Add-ons (init.php)](boostraping-eines-add-ons.md).
 
 *   **isys_module_example.class.php**
-    Dies ist die "Basis"-Klasse für Add-ons. Sie ist zwingend erforderlich!
+    Dies ist die "Basis"-Klasse für Add-ons. du ist zwingend erforderlich!
 
 *   **Makefile**
     Hierbei handelt es sich um ein einfaches "Make"-Skript, um Add-on-ZIP-Pakete zu erstellen.

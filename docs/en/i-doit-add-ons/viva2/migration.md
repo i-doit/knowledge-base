@@ -1,28 +1,30 @@
 ---
 title: Migration
 description: Migration from VIVA1 to VIVA2
+icon:
+status:
 lang: en
 ---
 
 # Migration
 
-This section describes migrating from VIVA1 to VIVA2.
+This section describes the migration from VIVA1 to VIVA2.
 
 ## Prerequisites
 
-- VIVA1 and VIVA2 are installed. The IT-Grundschutz Compendium is imported into VIVA2.
+- VIVA1 and VIVA2 are installed. The IT-Grundschutz Compendium has been imported into VIVA2.
 
 ## Steps
 
-1. Select information scopes
+1. Select information domains
 2. Adopt target object groups
-3. Assign modules and review suggestions
-4. Assign requirements and review suggestions
-5. Start the migration and verify the result
+3. Assign modules and check suggestions
+4. Assign requirements and check suggestions
+5. Start migration and verify the result
 
-## Follow-up
+## Post-processing
 
-- Manually review items that could not be assigned
+- Manually check non-assignable entries
 - Perform spot checks in reports and in the IT-Grundschutz check
 
 [<- Back](reports.md){ .md-button } · [Changelog ->](changelog.md){ .md-button .md-button--primary }

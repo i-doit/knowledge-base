@@ -1,6 +1,6 @@
 ---
 title: Systemeinstellungen erweitern
-description: Systemeinstellungen erweitern
+description: "i-doits Systemeinstellungen sind ein hierarchisches System kaskadierender Einstellungsparameter."
 icon:
 status:
 lang: de
@@ -148,3 +148,9 @@ Innerhalb des Callbacks können beliebig viele *Settings-Collections* hinzugefü
 
 **Wichtig!** Die Event-Callbacks werden nur dann aufgerufen, wenn die entsprechende GUI aufbereitet wird.
 Dadurch wird im laufenden Betrieb die Performance von i-doit nicht negativ beeinflusst.
+
+## Siehe auch
+
+- [Add-ons entwickeln](index.md) — Leitfaden zur Add-on-Entwicklung
+- [Software-Entwicklung](../index.md) — Übersicht der Entwickler-Dokumentation
+- [API Add-on](../../i-doit-add-ons/api/index.md) — Schnittstelle für externe Zugriffe

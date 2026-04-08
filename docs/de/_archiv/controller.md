@@ -1,6 +1,6 @@
 ---
 title: Controller (removed in v26)
-description:
+description: "i-doit verfügt über ein Kommandozeilen-Werkzeug namens Controller."
 icon:
 status:
 lang:

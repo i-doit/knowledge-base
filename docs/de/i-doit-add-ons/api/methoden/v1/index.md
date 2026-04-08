@@ -1,6 +1,13 @@
+---
+title: API Methoden
+description: "In dieser Sektion erläutern wir die i-doit JSON-RPC API."
+icon:
+status:
+lang: de
+---
 # API Methoden
 
-In dieser Sektion erläutern wir die i-doit [JSON-RPC API](../../index.md). Wenn Sie wissen wollen, welche Parameter für die jeweilige Methode gesetzt werden müssen/können und wie eine typische Antwort aussieht, ist dies die richtige Ressource.
+In dieser Sektion erläutern wir die i-doit [JSON-RPC API](../../index.md). Wenn du wissen wollen, welche Parameter für die jeweilige Methode gesetzt werden müssen/können und wie eine typische Antwort aussieht, ist dies die richtige Ressource.
 
 Einige Beispiele findest du hier. Mehr Informationen zu jeder Methode ist auf der jeweiligen Seite zu finden.
 
@@ -436,7 +443,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
 ??? example "cmdb.object.read (Zum aufklappen anklicken)"
 
-    Lesen Sie allgemeine Informationen über eine Objekt
+    Lies allgemeine Informationen über eine Objekt
 
     cmdb.object.read Parameter
 
@@ -862,8 +869,8 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
     | -------------- | ------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
     | **categories** | Array         | Nein         | Hier kann nach einer Liste oder einer Kategorie, in Form von Kategorie Konstante/n, gefiltert werden.  <br>"categories": ["C__CATG__MY_CUSTOM_CATEGORY"]  <br>"categories": ["C__CATG__MY_CUSTOM_CATEGORY", "C__CATG__MY_SECOND_CATEGORY"]                                                                                                                                                                                                                                                                                                                                                                                     |
     | **filter**     | Array         | Nein         | Liste der Objekte filtern; siehe unten für eine vollständige Liste der Optionen                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-    | **limit**      | Mixed         | Nein         | Maximale Anzahl von Objekten (als ganze Zahl), z.B. die ersten tausend Objekte abrufen: **1000**<br><br>Kombinieren Sie diese Grenze mit einem Offset (als Zeichenkette), z.B. holen Sie die nächsten tausend Objekte: **"1000,1000"**                                                                                                                                                                                                                                                                                                                                                                                         |
-    | **order_by**   | String        | Nein         | Ordnen Sie das Ergebnis nach (siehe Filter für weitere Details, was jeder Wert bedeutet):<br><br>*   **"isys_obj_type__id"**,<br>*   **"isys_obj__isys_obj_type__id"**,<br>*   **"type"**,<br>*   **"isys_obj__title"**,<br>*   **"title"**,<br>*   **"isys_obj_type__title"**,<br>*   **"type_title"**,<br>*   **"isys_obj__sysid"**,<br>*   **"sysid"**,<br>*   **"isys_cats_person_list__first_name"**,<br>*   **"first_name"**,<br>*   **"isys_cats_person_list__last_name"**,<br>*   **"last_name"**,<br>*   **"isys_cats_person_list__mail_address"**,<br>*   **"email"**,<br>*   **"isys_obj__id"**, or<br>*   **"id"** |
+    | **limit**      | Mixed         | Nein         | Maximale Anzahl von Objekten (als ganze Zahl), z.B. die ersten tausend Objekte abrufen: **1000**<br><br>Kombiniere diese Grenze mit einem Offset (als Zeichenkette), z.B. holst du die nächsten tausend Objekte: **"1000,1000"**                                                                                                                                                                                                                                                                                                                                                                                         |
+    | **order_by**   | String        | Nein         | Ordne das Ergebnis nach (siehe Filter für weitere Details, was jeder Wert bedeutet):<br><br>*   **"isys_obj_type__id"**,<br>*   **"isys_obj__isys_obj_type__id"**,<br>*   **"type"**,<br>*   **"isys_obj__title"**,<br>*   **"title"**,<br>*   **"isys_obj_type__title"**,<br>*   **"type_title"**,<br>*   **"isys_obj__sysid"**,<br>*   **"sysid"**,<br>*   **"isys_cats_person_list__first_name"**,<br>*   **"first_name"**,<br>*   **"isys_cats_person_list__last_name"**,<br>*   **"last_name"**,<br>*   **"isys_cats_person_list__mail_address"**,<br>*   **"email"**,<br>*   **"isys_obj__id"**, or<br>*   **"id"** |
     | **sort**       | String        | Nein         | Nur sinnvoll in Kombination mit Schlüssel order\_by; erlaubte Werte sind entweder "ASC" (aufsteigend) oder "DESC" (absteigend)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 
     Filter
@@ -873,7 +880,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
     | **ids**        | Array           | Nein         | Liste von Objekt-Identifikatoren (als ganze Zahlen), zum Beispiel: **1, 2, 3**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
     | **type**       | Integer\|String | Nein         | Objekttyp-Identifikator (als ganze Zahl), zum Beispiel: **5**<br><br>Alternativ Objekttyp-Konstante (als String), z.B.: **"C__OBJTYPE__SERVER"**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
     | **title**      | String          | Nein         | Objekt Bezeichnung (siehe Attribut Bezeichnung in Kategorie Global), z.B.: **"My little server"**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-    | **type_title** | String          | Nein         | Übersetzter Name des Objekttyps, zum Beispiel: **"Server"**<br><br>**Hinweis:** Stellen Sie in Ihrer Anfrage eine geeignete Sprache ein..                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+    | **type_title** | String          | Nein         | Übersetzter Name des Objekttyps, zum Beispiel: **"Server"**<br><br>**Hinweis:** Stelle in deiner Anfrage eine geeignete Sprache ein..                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
     | **sysid**      | String          | Nein         | **SYSID** (siehe Kategorie Global), zum Beispiel: **"SRV_101010"**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
     | **first_name** | String          | Nein         | Vorname eines Objekts vom Typ Personen (siehe Attribut Vorname in der Kategorie Personen → Stammdaten), z.B.: **"John"**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
     | **last_name**  | String          | Nein         | Nachname eines Objekts vom Typ Personen (siehe Attribut Nachname in der Kategorie Personen → Stammdaten), z.B.: **"Doe"**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
@@ -881,7 +888,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
     | **type_group** | String          | Nein         | Filter nach der Objekt Typ Gruppe z.B. Infrastructure oder Andere:  <br>"**C__OBJTYPE_GROUP__INFRASTRUCTURE**"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
     | **status**     | String          |              | Filter nach Status der Objekte z.B. Normal oder Archiviert:<br><br>*   **C__RECORD_STATUS__BIRTH  <br>    Status-ID = 1  <br>    Bezeichnung = Unfertig**<br>*   **C__RECORD_STATUS__NORMAL  <br>    Status-ID = 2**  <br>    **Bezeichnung = ****Normal**<br>*   **C__RECORD_STATUS__ARCHIVED  <br>    Status-ID = 3**  <br>    **Bezeichnung =** **Archiviert**<br>*   **C__RECORD_STATUS__DELETED  <br>    Status-ID = 4**  <br>    **Bezeichnung =** **Gelöscht**<br>*   **C__RECORD_STATUS__TEMPLATE  <br>    Status-ID = 6**  <br>    **Bezeichnung =** **Vorlage**<br>*   **C__RECORD_STATUS__MASS_CHANGES_TEMPLATE  <br>    Status-ID = 7**  <br>    **Bezeichnung =** **Vorlage für Massenänderung** |
 
-    Sie können eine beliebige Kombination von Filtern verwenden. Filter sind logisch mit UND verknüpft. Eine gültige Kombination könnte sein: "Gib mir alle Server, die den gleichen Hostnamen haben."
+    Du kannst eine beliebige Kombination von Filtern verwenden. Filter sind logisch mit UND verknüpft. Eine gültige Kombination könnte sein: "Gib mir alle Server, die den gleichen Hostnamen haben."
 
     Antwort
 
@@ -1110,7 +1117,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
 ??? example "cmdb.category.read (Zum aufklappen anklicken)"
 
-    Lesen Sie einen oder mehrere Kategorieeinträge für ein Objekt
+    Lies einen oder mehrere Kategorieeinträge für ein Objekt
 
     Anfrage Parameter
 
@@ -1259,9 +1266,9 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
     Einschränkungen
 
     *   Dies funktioniert zur Zeit nur mit multi-value Kategorien.
-    *   Sie können nur Kategorieeinträge archivieren, die einen normalen Status haben.
-    *   Sie können nur Kategorieeinträge als gelöscht markieren, die archiviert sind.
-    *   Sie können nur Kategorieeinträge aus der Datenbank bereinigen, die als gelöscht markiert sind..
+    *   Du kannst nur Kategorieeinträge archivieren, die einen normalen Status haben.
+    *   Du kannst nur Kategorieeinträge als gelöscht markieren, die archiviert sind.
+    *   Du kannst nur Kategorieeinträge aus der Datenbank bereinigen, die als gelöscht markiert sind.
 
     Anfrage Parameter
 
@@ -1315,7 +1322,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
 
 ??? example "cmdb.category.quickpurge (Zum aufklappen anklicken)"
 
-    Wenn [Quickpurge](../../../../grundlagen/objekt-liste/erweiterte-einstellungen.md) aktiviert ist, bereinigen Sie einen Kategorieeintrag eines Objekts direkt aus der Datenbank.
+    Wenn [Quickpurge](../../../../grundlagen/objekt-liste/erweiterte-einstellungen.md) aktiviert ist, bereinigst du einen Kategorieeintrag eines Objekts direkt aus der Datenbank.
 
     Anfrage Parameter
 
@@ -1458,7 +1465,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
     Einschränkungen
 
     *   Dies funktioniert zur Zeit nur mit multi-value Kategorien.
-    *   Sie können Kategorieeinträge, die den Status archiviert oder gelöscht haben, wiederherstellen.
+    *   Du kannst Kategorieeinträge, die den Status archiviert oder gelöscht haben, wiederherstellen.
 
     Anfrage Parameter
 
@@ -1515,7 +1522,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
     Limitations
 
     *   Dies funktioniert zur Zeit nur mit multi-value Kategorien.
-    *   Sie können nur Kategorieeinträge archivieren, die einen normalen Status haben.
+    *   Du kannst nur Kategorieeinträge archivieren, die einen normalen Status haben.
 
     Anfrage Parameter
 
@@ -1859,7 +1866,7 @@ Dieser Namensraum bezieht sich auf alle CMDB-spezifischen Methoden wie die Behan
     }
     ```
 
-    Oder Sie können auch den Parameter "id" in Ihrer Anfrage verwenden, um den entsprechenden Bericht zu erhalten
+    Oder du kannst auch den Parameter "id" in deiner Anfrage verwenden, um den entsprechenden Bericht zu erhalten
 
     **Anfrage Parameter**
 

@@ -1,3 +1,10 @@
+---
+title: Dateien hochladen und verknüpfen
+description: "Zu einer vollumfänglichen IT-Dokumentation gehören oftmals auch Dokumente in Form Dateien."
+icon:
+status:
+lang: de
+---
 # Dateien hochladen und verknüpfen
 
 Zu einer vollumfänglichen IT-Dokumentation gehören oftmals auch Dokumente in Form Dateien. Ob nun Betriebshandbücher, Notfallpläne, Verträge, Installationsprotokolle oder Treiber: Wichtige Dateien gehören mit [Objekten](../grundlagen/struktur-it-dokumentation.md) in i-doit verknüpft.

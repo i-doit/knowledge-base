@@ -9,13 +9,13 @@ lang: de
 Welche Pakete zu installieren und zu konfigurieren sind, erklären wir in wenigen Schritten in diesem Artikel. Wir verwenden eine Umgebung ohne **Desktop**.
 
 !!! note ""
-    Wenn Sie Ubuntu installieren, gelangen Sie schließlich zu einem "Softwareauswahl"-Dialog, der eine Liste von Kontrollkästchen enthält, um die Software auszuwählen, die Sie zunächst installieren möchten. Hier ist das Kontrollkästchen "Ubuntu-Desktop-Umgebung" bereits angekreuzt. Wenn Sie dieses Kontrollkästchen deaktivieren und alle anderen Kontrollkästchen für die Desktop-Umgebung (GNOME, Xfce usw.) nicht ankreuzen, führt dies zu einer GUI-losen Installation:
+    Wenn du Ubuntu installierst, gelangen Sie schließlich zu einem "Softwareauswahl"-Dialog, der eine Liste von Kontrollkästchen enthält, um die Software auszuwählen, die Sie zunächst installieren möchten. Hier ist das Kontrollkästchen "Ubuntu-Desktop-Umgebung" bereits angekreuzt. Wenn Sie dieses Kontrollkästchen deaktivieren und alle anderen Kontrollkästchen für die Desktop-Umgebung (GNOME, Xfce usw.) nicht ankreuzen, führt dies zu einer GUI-losen Installation:
 
 ## Systemvoraussetzungen
 
 Es gelten die allgemeinen [Systemvoraussetzungen](../../systemvoraussetzungen.md).
 
-Dieser Artikel bezieht sich auf **Ubuntu 24.04.4 "Noble Numcat"**. Um zu bestimmen, welche Ubuntu Version eingesetzt wird, kann auf der Konsole dieser Befehl ausgeführt werden:
+Dieser Artikel bezieht sich auf **Ubuntu 24.04.4 "Noble Numbat"**. Um zu bestimmen, welche Ubuntu Version eingesetzt wird, kann auf der Konsole dieser Befehl ausgeführt werden:
 
 ```shell
 cat /etc/os-release
@@ -57,7 +57,7 @@ Zunächst wird eine neue Datei erstellt und mit den nötigen Einstellungen befü
 sudo nano /etc/php/8.3/mods-available/i-doit.ini
 ```
 
-!!! example "Diese Datei erhält folgende von uns vorgegebenen Inhalt. Für mehr Informationen zu den Parametern, schauen Sie auf [PHP.net](https://www.php.net/manual/de/ini.core.php) vorbei"
+!!! example "Diese Datei erhält folgende von uns vorgegebenen Inhalt. Für mehr Informationen zu den Parametern, schaue dir auf [PHP.net](https://www.php.net/manual/de/ini.core.php) vorbei"
 <!-- cSpell:disable -->
 ```ini
 allow_url_fopen = Yes
@@ -85,9 +85,9 @@ session.cookie_lifetime = 0
 mysqli.default_socket = /var/lib/mysql/mysql.sock
 ```
 <!-- cSpell:enable -->
-Das `memory_limit` muss bei bedarf z.B. bei sehr großen Reports oder umfangreichen Dokumenten erhöht werden.
+Das `memory_limit` muss bei Bedarf z.B. bei sehr großen Reports oder umfangreichen Dokumenten erhöht werden.
 Der Wert (in Sekunden) von **session.gc_maxlifetime** sollte größer oder gleich dem **Session Timeout** in den [Systemeinstellungen](../systemeinstellungen.md) von i-doit sein.
-Der Parameter **date.timezone** sollte auf die lokale Zeitzone anpasst werden (siehe [Liste unterstützter Zeitzonen](http://php.net/manual/de/timezones.php)).
+Der Parameter **date.timezone** sollte auf die lokale Zeitzone angepasst werden (siehe [Liste unterstützter Zeitzonen](http://php.net/manual/de/timezones.php)).
 
 Anschließend werden die benötigten PHP-Module aktiviert und der Apache Webserver neu gestartet:
 
@@ -97,14 +97,14 @@ sudo phpenmod i-doit memcached
 
 ### Apache HTTP Server
 
-Der standard Virtual Host wird deaktiviert und ein neuer angelegt:
+Der Standard-Virtual-Host wird deaktiviert und ein neuer angelegt:
 
 ```shell
 sudo a2dissite 000-default
 sudo nano /etc/apache2/sites-available/i-doit.conf
 ```
 
-!!! example "Diese Datei erhält folgende von uns vorgegebenen Inhalt. Für mehr Informationen zu den Parametern, schauen Sie auf [httpd.apache.org](https://httpd.apache.org/docs/2.4/de/mod/core.html) vorbei"
+!!! example "Diese Datei erhält folgende von uns vorgegebenen Inhalt. Für mehr Informationen zu den Parametern, schaue dir auf [httpd.apache.org](https://httpd.apache.org/docs/2.4/de/mod/core.html) vorbei"
 <!-- cSpell:disable -->
 ```conf
 <VirtualHost *:80>
@@ -271,7 +271,7 @@ sudo a2ensite i-doit && sudo a2enmod rewrite proxy_fcgi setenvif && sudo systemc
 
 ### MariaDB
 
-Damit MariaDB eine gute Performance liefert und sicher betrieben werden kann, sollten Sie nicht nur unserer Anleitung folgen, sondern sich auch weiter Informieren. Angefangen, mit einer sicheren Installation bei der den Empfehlungen gefolgt werden sollte. Außerdem sollte der Benutzer **root** ein sicheres Passwort erhalten.
+Damit MariaDB eine gute Performance liefert und sicher betrieben werden kann, solltest du nicht nur unserer Anleitung folgen, sondern dich auch weiter informieren. Angefangen, mit einer sicheren Installation bei der den Empfehlungen gefolgt werden sollte. Außerdem sollte der Benutzer **root** ein sicheres Passwort erhalten.
 
 ```shell
 sudo mysql_secure_installation
@@ -283,7 +283,7 @@ Der Modus für das Herunterfahren von InnoDB muss noch geändert werden. Der Wer
 mysql -u root -p -e "SET GLOBAL innodb_fast_shutdown = 0"
 ```
 
-Für die abweichenden Konfigurationseinstellungen wird eine neue Datei erstellt und unsere standard Konfiguration eingefügt:
+Für die abweichenden Konfigurationseinstellungen wird eine neue Datei erstellt und unsere Standardkonfiguration eingefügt:
 
 ```shell
 sudo nano /etc/mysql/mariadb.conf.d/99-i-doit.cnf

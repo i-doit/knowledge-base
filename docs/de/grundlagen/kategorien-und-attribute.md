@@ -1,6 +1,6 @@
 ---
 title: Kategorien und Attribute
-description: Kategorien und Attribute
+description: "i-doit bringt bereits über 200 vordefinierte Kategorien mit. Daraus resultieren über 1000 Attribute, die theoretisch pro Objekt dokumentiert werden können."
 icon:
 status:
 lang: de

@@ -1,6 +1,6 @@
 ---
 title: Strukturanalyse
-description: Im Rahmen der Strukturanalyse muss sichergestellt werden, dass alle für die Dokumentation des Informationsverbund benötigten Objekte in i-doit angelegt sind.
+description: Im Rahmen der Strukturanalyse stellst du sicher, dass alle für die Dokumentation des Informationsverbundes benötigten Objekte in i-doit angelegt sind.
 icon:
 status:
 lang: de
@@ -8,7 +8,7 @@ lang: de
 
 # Strukturanalyse
 
-Im Rahmen der Strukturanalyse muss sichergestellt werden, dass alle für die Dokumentation des Informationsverbund benötigten Objekte in i-doit angelegt sind.
+Im Rahmen der Strukturanalyse stellst du sicher, dass alle für die Dokumentation des Informationsverbundes benötigten Objekte in i-doit angelegt sind.
 
 ## Zu erfassen
 
@@ -21,7 +21,7 @@ Im Rahmen der Strukturanalyse muss sichergestellt werden, dass alle für die Dok
 
 - Gleichartige Objekte statisch gruppieren und der Informationsverbund-Zuordnung zuführen
 
-Zur Reduzierung der Komplexität sollten gleichartige Objekte im Objekttyp Zielobjektgruppe gruppiert werden. Der Typ der Objektgruppe muss dabei auf statisch gesetzt bleiben. Die Zielobjektgruppe wird dann über die Kategorie "Informationsverbünde" dem Informationsverbund zugeordnet werden.
+Zur Reduzierung der Komplexität gruppierst du gleichartige Objekte im Objekttyp Zielobjektgruppe. Der Typ der Objektgruppe muss dabei auf "statisch" gesetzt bleiben. Die Zielobjektgruppe ordnest du dann über die Kategorie "Informationsverbünde" dem Informationsverbund zu.
 
 [![Zielobjekt-Gruppen](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/zielobjektgruppe-beispiel.png)](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/zielobjektgruppe-beispiel.png){:target="_blank"}
 
@@ -50,7 +50,7 @@ Die zu dokumentierenden Kommunikationsverbindungen werden über den neuen [Objek
 
 [![## Kommunikationsverbindungen](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/kommunikationsverbindungen.png)](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/kommunikationsverbindungen.png){:target="_blank"}
 
-Kommunikationsverbindungen werde in der Regel direkt dem Informationsverbund zugeordnet, deswegen ist dem Objekttypen "Kommunikationsverbindung" die Kategorie "IT-Grundschutz (Zielobjekte)" initial zugeordnet. Inder Kategorie "Informationsverbünde" muss dann noch der entsprechende Informationsverbund zugeordnet werden.
+Kommunikationsverbindungen werden in der Regel direkt dem Informationsverbund zugeordnet, deswegen ist dem Objekttyp "Kommunikationsverbindung" die Kategorie "IT-Grundschutz (Zielobjekte)" initial zugeordnet. In der Kategorie "Informationsverbünde" ordnest du dann noch den entsprechenden Informationsverbund zu.
 
 Wenn in der Kategorie "Kommunikationsverbindung" Objekte bei "Verbindungsteilnehmer" eingetragen sind, dann wird in der Schutzbedarfsfeststellung der Schutzbedarf von diesen Objekten auf die Kommunikationsverbindung vererbt.
 

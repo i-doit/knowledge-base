@@ -1,14 +1,19 @@
 ---
 title: Flows Add-on
-description: Flows Add-on
+description: "Das Flows Add-on für i-doit ist ein leistungsstarkes Werkzeug zur Automatisierung von Prozessen innerhalb des CMDB-Systems."
 icon: addons/flows
 status:
 lang: de
 ---
 
-Das Flows Add-on für i-doit ist ein leistungsstarkes Werkzeug zur Automatisierung von Prozessen innerhalb des CMDB-Systems. Es ermöglicht die Erstellung von automatisierten Flows basierend auf Triggern und definierten Bedingungen. Mit Flows können Benutzer repetitive Aufgaben und manuelle Schritte automatisieren, indem sie Regeln festlegen, die durch bestimmte Ereignisse oder Zustände (z. B. eine Änderung in der CMDB) ausgelöst werden. Das Add-on hilft, Arbeitsabläufe effizienter zu gestalten, Fehler zu reduzieren und die Verwaltung komplexer IT-Umgebungen zu vereinfachen, indem es Routineprozesse ohne Benutzerinteraktion abwickelt.
+Das Flows Add-on für i-doit ist ein leistungsstarkes Werkzeug zur Automatisierung von Prozessen innerhalb des CMDB-Systems. Es ermöglicht dir, automatisierte Flows basierend auf Triggern und definierten Bedingungen zu erstellen.
 
-!!! tip "Sie können dieses Add-on testen: Installieren Sie dazu einfach das Add-on.<br>Das Flows Add-on kann ohne Lizenz genutzt werden. In diesem Fall stehen Ihnen allerdings nur der Auslöser **Zeitbasiert** (Time based) und die Aktion **Befehl aufrufen** (Call command) zur Verfügung."
+[![Flows](../../assets/images/de/i-doit-add-ons/flows/flows-uebersicht.png)](../../assets/images/de/i-doit-add-ons/flows/flows-uebersicht.png)
+
+Mit Flows kannst du repetitive Aufgaben und manuelle Schritte automatisieren, indem du Regeln festlegst, die durch bestimmte Ereignisse oder Zustände (z. B. eine Änderung in der CMDB) ausgelöst werden. Das Add-on hilft, Arbeitsabläufe effizienter zu gestalten, Fehler zu reduzieren und die Verwaltung komplexer IT-Umgebungen zu vereinfachen, indem es Routineprozesse ohne Benutzerinteraktion abwickelt.
+
+!!! tip "Teste das Add-on kostenlos"
+    Installiere einfach das Add-on. Das Flows Add-on kann ohne Lizenz genutzt werden. In diesem Fall stehen dir allerdings nur der Auslöser **Zeitbasiert** (Time based) und die Aktion **Befehl aufrufen** (Call command) zur Verfügung.
 
 ## Download und Installation
 
@@ -18,25 +23,25 @@ Dieses Add-on kann nachträglich installiert werden. Detaillierte Beschreibungen
 
 ## Benötigte CLI Commands
 
-!!! success "Sofern der Befehl für einen anderen als den ersten Mandanten ausgeführt werden soll, ist die entsprechende ID des Mandanten zu übergeben."
+!!! success "Sofern du den Befehl für einen anderen als den ersten Mandanten ausführen willst, übergib die entsprechende Mandanten-ID."
 
-Das Flows Add-on wird mit zwei CLI-Befehlen geliefert. Beide Befehle werden benötigt, damit das Flows-Add-on vollständig funktioniert. Es gibt zwei Möglichkeiten, die CLI-Befehle einzurichten. Die Befehle können z.B. über einen **Crontab** ausgeführt werden. Wir haben auch ein Service-Installationsskript mit dem Namen **create-daemon.sh** erstellt, das sich im Flows Add-on Ordner unter `i-doit/src/classes/modules/synetics_flows/` befindet.
+Das Flows Add-on wird mit zwei [CLI-Befehlen](../../automatisierung-und-integration/cli/index.md) geliefert. Beide Befehle werden benötigt, damit das Add-on vollständig funktioniert. Du hast zwei Möglichkeiten, die CLI-Befehle einzurichten: per **Crontab** oder per **Systemdienst**.
 
 ### Systemdienst-Installationsskript verwenden
 
-Das Flows Add-on wird mit zwei [CLI-Befehlen](../../automatisierung-und-integration/cli/index.md) geliefert. Beide Befehle werden benötigt, damit das Flows-Add-on vollständig funktioniert. Es gibt zwei Möglichkeiten, die CLI-Befehle einzurichten. Die Befehle können z.B. über einen **Crontab** ausgeführt werden. Wir haben auch ein Service-Installationsskript mit dem Namen **create-daemon.sh** erstellt, das sich im Flows Add-on Ordner unter `i-doit/src/classes/modules/synetics_flows/` befindet.
+Im Flows Add-on Ordner unter `i-doit/src/classes/modules/synetics_flows/` findest du ein Service-Installationsskript namens **create-daemon.sh**. Dieser Dienst führt alle paar Sekunden die CLI-Befehle des Flows Add-on aus.
 
-Dieser Dienst führt alle paar Sekunden die CLI-Befehle des Flows Add-on aus. Zuerst müssen wir die Ausführungsrechte für die Datei festlegen. Verwenden Sie den Befehl im Ordner i-doit:
+Lege zuerst die Ausführungsrechte für die Datei fest. Verwende dazu den folgenden Befehl im i-doit-Ordner:
 
 ```shell
 sudo chmod +x src/classes/modules/synetics_flows/create-daemon.sh
 ```
 
-Nun kann die Datei ausgeführt werden, um einen Systemdienst zu erstellen. **Dies muss für jeden Mandanten durchgeführt werden**
+Nun kannst du die Datei ausführen, um einen Systemdienst zu erstellen. **Dies musst du für jeden Mandanten durchführen.**
 
--   `-u` i-doit Person mit Administrator rechten
+-   `-u` i-doit-Person mit Administratorrechten
 -   `-p` das Passwort für die Person
--   `-i` Mandanten ID in dem die Person verwendet wird, kann über Konsolenbefehl eingesehen werden [tenant-list](../../automatisierung-und-integration/cli/index.md)
+-   `-i` Mandanten-ID, in der die Person verwendet wird (einsehbar per Konsolenbefehl [tenant-list](../../automatisierung-und-integration/cli/index.md))
 
 ```shell
 src/classes/modules/synetics_flows/./create-daemon.sh -u admin-user -p admin-user-password -i 1
@@ -44,13 +49,13 @@ src/classes/modules/synetics_flows/./create-daemon.sh -u admin-user -p admin-use
 
 ### Erstellen eines Crontab
 
-Die Crontab führt die CLI-Befehle jede Minute aus. Erstellen Sie eine Crontab für den Apache-Benutzer. Beispiel für Debian:
+Die Crontab führt die CLI-Befehle jede Minute aus. Erstelle dazu eine Crontab für den Apache-Benutzer. Beispiel für Debian:
 
 ```shell
 sudo crontab -u www-data -e
 ```
 
-Fügen Sie die folgenden Zeilen am Ende der Datei ein, nachdem Sie die i-doit Anmeldeinformationen ersetzt haben. Möglicherweise müssen Sie auch die Mandanten-ID ersetzen.
+Füge die folgenden Zeilen am Ende der Datei ein, nachdem du die i-doit-Anmeldeinformationen ersetzt hast. Gegebenenfalls musst du auch die Mandanten-ID anpassen.
 
 ```shell
 * * * * * /usr/bin/php /var/www/html/console.php flows:perform ---user admin-user --password admin-user-password --tenantId 1
@@ -59,73 +64,73 @@ Fügen Sie die folgenden Zeilen am Ende der Datei ein, nachdem Sie die i-doit An
 
 ## Rechtevergabe
 
-Unter **Verwaltung → Berechtigungen → Flows** können [Rechte für Personen und Personengruppen](../../effizientes-dokumentieren/rechteverwaltung/index.md) angepasst werden.
+Unter **Verwaltung → Berechtigungen → Flows** kannst du [Rechte für Personen und Personengruppen](../../effizientes-dokumentieren/rechteverwaltung/index.md) anpassen.
 
-| Recht          | Beschreibung                                                                |
-| -------------- | --------------------------------------------------------------------------- |
-| **Erstellen**  | Erlaubt das erstellen, duplizieren und impliziert das Ansehen Recht         |
-| **Ansehen**    | Erlaubt Zugriff auf die Flows Overview                                      |
-| **Editieren**  | Erlaubt editieren, aktivieren/deaktivieren und impliziert das Ansehen Recht |
-| **Löschen**    | Erlaubt das löschen von Flows und impliziert das Ansehen Recht              |
-| **Supervisor** | Erlaubt alles                                                               |
+| Recht          | Beschreibung                                                                    |
+| -------------- | ------------------------------------------------------------------------------- |
+| **Erstellen**  | Erlaubt das Erstellen und Duplizieren; impliziert das Ansehen-Recht             |
+| **Ansehen**    | Erlaubt Zugriff auf die Flows-Übersicht                                         |
+| **Editieren**  | Erlaubt Editieren, Aktivieren/Deaktivieren; impliziert das Ansehen-Recht        |
+| **Löschen**    | Erlaubt das Löschen von Flows; impliziert das Ansehen-Recht                     |
+| **Supervisor** | Erlaubt alles                                                                   |
 
 ## Übersicht
 
-Über die [**Aktionsleiste**](../../grundlagen/struktur-it-dokumentation.md#kategorie) können Flows **erstellt**, **gelöscht** oder **exportiert** werden. Sofern ein Flow erstellt wurde kann dieser in der Flows Übersicht, über die **Aktionen** Spalte **geöffnet**, **aktiviert** oder **deaktiviert** werden. Außerdem sind über den "3 Punkte" (More) Button weitere Aktionen möglich wie zum Beispiel: **Bearbeiten**, **Duplizieren** oder **Zum Test Modus wechseln**.
+Über die [**Aktionsleiste**](../../grundlagen/struktur-it-dokumentation.md#kategorie) kannst du Flows **erstellen**, **löschen** oder **exportieren**. In der Flows-Übersicht kannst du einen Flow über die Spalte **Aktionen** **öffnen**, **aktivieren** oder **deaktivieren**. Über den "3-Punkte"-Button (More) stehen weitere Aktionen zur Verfügung, zum Beispiel: **Bearbeiten**, **Duplizieren** oder **Zum Testmodus wechseln**.
 
 ## Flow erstellen
 
-Um einen Flow zu erstellen wird das Flows Add-on aufgerufen, dies erfolgt über **Add-ons → Flows**. Anschließend wird über den **Add** Button ein neuer Flow erstellt. Ein Flow muss einen Namen, einen Trigger und eine oder mehrere Actions definiert haben um vollständig zu sein. Zu guter Letzt muss der Flow über den Button noch aktiviert werden.
+Um einen Flow zu erstellen, rufst du das Flows Add-on über **Add-ons → Flows** auf. Klicke anschließend auf den **Add**-Button, um einen neuen Flow anzulegen. Ein Flow benötigt einen Namen, einen Trigger und mindestens eine Aktion, um vollständig zu sein. Zum Schluss aktivierst du den Flow über den entsprechenden Button.
 
 ### Auslöser
 
-Trigger bestimmen wann ein Flow ausgeführt wird. Es ist nur ein Trigger pro Flow möglich.
+Trigger bestimmen, wann ein Flow ausgeführt wird. Pro Flow ist nur ein Trigger möglich.
 
 !!! success ""
     === "Zeitbasiert"
-        Die Aktion wird ausgeführt, sobald Datum und Uhrzeit erreicht sind. Sie kann regelmäßig wiederholt werden.
+        Die Aktion wird ausgeführt, sobald Datum und Uhrzeit erreicht sind. Du kannst sie regelmäßig wiederholen lassen.
     === "Button"
         Die Aktion wird ausgeführt, sobald der Button angeklickt wird. Dieser wird in der Aktionsleiste des Objekts angezeigt, wenn die entsprechenden Bedingungen erfüllt sind. Buttons lassen sich außerdem gruppieren, um mehrere Flows mit einem Klick auszuführen. Darüber hinaus können Buttons mit Icons versehen werden.
-    === "Objekt Ereignis"
-        Die Aktion wird ausgeführt, wenn ein bestimmter CMDB-Status gesetzt wird. Es lässt sich auch nach bestimmten Objekttypen filtern. Wird **NICHT** ausgelöst, wenn Kategoriedaten durch Importe oder API-Interaktion geändert werden.
-    === "Kategorie Ereignis"
+    === "Objekt-Ereignis"
+        Die Aktion wird ausgeführt, wenn ein bestimmter CMDB-Status gesetzt wird. Du kannst auch nach bestimmten Objekttypen filtern. Wird **NICHT** ausgelöst, wenn Kategoriedaten durch Importe oder API-Interaktion geändert werden.
+    === "Kategorie-Ereignis"
         Die Aktion wird ausgeführt, wenn Kategorien oder Einträge bearbeitet werden. Wird **NICHT** ausgelöst, wenn Kategoriedaten durch Importe oder API-Interaktion geändert werden.
 
 ### Konditionen
 
-Es muss keine Konditionen gewählt werden. Außerdem können conditions mit **UND** sowie **ODER** verknüpft und verschachtelt werden.
+Du musst keine Konditionen festlegen. Falls gewünscht, kannst du Konditionen mit **UND** sowie **ODER** verknüpfen und verschachteln.
 
 !!! warning ""
     === "Logische Konditionen"
-        Es können mehrere Logische Konditionen hinzugefügt werden um Bedingungen zu verknüpfen oder zu verschachteln.
+        Du kannst mehrere logische Konditionen hinzufügen, um Bedingungen zu verknüpfen oder zu verschachteln.
     === "Objektbasiert"
         Prüft, ob das Objekt die definierten Bedingungen erfüllt. Diese Auswahl bezieht sich auf den Endzustand des Objekts oder Attributs.
     === "Zeitbasiert"
         Prüft, ob die Ausführungszeit innerhalb der festgelegten Zeiträume liegt.
-    === "Person / Personengruppen basiert"
-        Prüft, ob die Bewegung durch ausgewählte Personen oder Mitglieder von Personengruppen ausgelöst wird.
+    === "Person-/Personengruppen-basiert"
+        Prüft, ob die Aktion durch ausgewählte Personen oder Mitglieder von Personengruppen ausgelöst wird.
 
 ### Aktionen
 
-Es muss mindestens eine Aktion definiert werden. In einigen Aktionen lässt sich [Twig](https://twig.symfony.com/doc/3.x/) als template Engine verwenden. Eine i-doit Referenz für Twig Templates ist [hier](twig-reference.md) zu finden.
+Du musst mindestens eine Aktion definieren. In einigen Aktionen lässt sich [Twig](https://twig.symfony.com/doc/3.x/) als Template-Engine verwenden. Eine i-doit-Referenz für Twig-Templates findest du [hier](twig-reference.md).
 
 !!! note ""
     === "API-Aufruf"
-        Die Aktion führt einen definierten API-Aufruf aus. Der API-Aufruf benötigt eine URL, eine Methode sowie angaben zur Autorisierung. Für diesen Action type kann [Twig](https://twig.symfony.com/doc/3.x/) als template Engine verwendet werden.
+        Die Aktion führt einen definierten API-Aufruf aus. Der API-Aufruf benötigt eine URL, eine Methode sowie Angaben zur Autorisierung. Für diesen Aktionstyp kannst du [Twig](https://twig.symfony.com/doc/3.x/) als Template-Engine verwenden.
     === "E-Mail schicken"
-        Die Aktion sendet eine E-Mail an bestimmte Empfänger. Ein Subject ist notwendig. Für diesen Action type kann [Twig](https://twig.symfony.com/doc/3.x/) als template Engine verwendet werden.
+        Die Aktion sendet eine E-Mail an bestimmte Empfänger. Ein Betreff ist notwendig. Für diesen Aktionstyp kannst du [Twig](https://twig.symfony.com/doc/3.x/) als Template-Engine verwenden.
     === "Objekt erstellen"
-        Die Aktion erstellt ein neues Objekt. Es ist möglich Attribute für Kategorien zu hinterlegen.
+        Die Aktion erstellt ein neues Objekt. Du kannst dabei auch Attribute für Kategorien hinterlegen.
     === "Objekt aktualisieren"
         Die Aktion aktualisiert Attribute in Objekten.
-    === "Objekt Status"
-        Die Aktion ändert den Objekt Zustand. Zum Beispiel von "Archiviert" zu "Gelöscht".
+    === "Objektstatus"
+        Die Aktion ändert den Objektzustand, zum Beispiel von "Archiviert" zu "Gelöscht".
     === "Befehl ausführen"
-        Rufen Sie einen i-doit-Konsolenbefehl auf. Weitere Informationen zu [Befehl ausführen](actions/call-command.md)
+        Ruft einen i-doit-Konsolenbefehl auf. Weitere Informationen findest du unter [Befehl ausführen](actions/call-command.md).
 
 ## Logs
 
-Die Logs sind für alle Flows ersichtlich oder für den jeweils geöffneten Flow. In den Logs werden wichtige Informationen zu den Ausführungen gespeichert.
+Du kannst die Logs für alle Flows einsehen oder nur für den jeweils geöffneten Flow. In den Logs werden wichtige Informationen zu den Ausführungen gespeichert.
 
 ## CLI-Befehle und Optionen
 
@@ -186,7 +191,7 @@ sudo -u www-data php console.php flows:time-trigger --user admin-user --password
 
 ## Anwendungsfälle
 
-Anwendungsfälle sind in unserer [Demo](https://demo.i-doit.com) zu finden und können von dort Exportiert werden.
+Anwendungsfälle findest du in unserer [Demo](https://demo.i-doit.com) und kannst sie von dort exportieren.
 
 ## Releases
 <!-- cSpell:disable -->

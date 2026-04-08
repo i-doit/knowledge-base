@@ -1,6 +1,6 @@
 ---
 title: Passwort zurücksetzen
-description: Passwort zurücksetzen
+description: "Mit dieser Funktion können Benutzer ihr Passwort selbstständig zurücksetzen, ohne einen Administrator kontaktieren zu müssen."
 icon:
 status:
 lang: de
@@ -8,27 +8,40 @@ lang: de
 
 # Passwort zurücksetzen
 
-Der Benutzer soll in der Lage sein, sein Passwort selbst zurückzusetzen, ohne dafür einen Administrator kontaktieren zu müssen. Dazu muss **SMTP** im [Admin-Center](admin-center.md) im Admin-Center konfiguriert und **Passwort zurücksetzen** in den [Einstellungen für [Mandanten-Name]](./verwaltung/mandanten-name-verwaltung/einstellungen-mandanten-name.md) im Mandant Aktiviert werden. Außerdem muss für den jeweiligen Benutzer eine E-Mail-Adresse im Feld **E-Mail-Adresse zum Passwort zurücksetzen** eingetragen sein.
+Mit dieser Funktion können Benutzer ihr Passwort selbstständig zurücksetzen, ohne einen Administrator kontaktieren zu müssen.
+
+Damit das funktioniert, müssen drei Voraussetzungen erfüllt sein:
+
+1. **SMTP** ist im [Admin-Center](admin-center.md) konfiguriert
+2. **Passwort zurücksetzen** ist in den [Einstellungen für [Mandanten-Name]](./verwaltung/mandanten-name-verwaltung/einstellungen-mandanten-name.md) aktiviert
+3. Für den Benutzer ist eine **E-Mail-Adresse zum Passwort zurücksetzen** eingetragen
 
 ## SMTP Konfiguration im Admin-Center
 
-Logge dich zuerst ins Admin-Center ein. Unter **System settings** musst du den Abschnitt **SMTP** konfigurieren. Teste die Konfiguration dann über den **Check SMTP configuration**-Button.
+1. Logge dich ins Admin-Center ein
+2. Konfiguriere unter **System settings** den Abschnitt **SMTP**
+3. Teste die Konfiguration über den **Check SMTP configuration**-Button
 
-!!! note "Wenn i-doit auf v34 aktualisiert wird, wird die SMTP Konfiguration aus dem ersten Mandanten übernommen"
+!!! note "Wenn du i-doit auf v34 aktualisierst, wird die SMTP-Konfiguration aus dem ersten Mandanten übernommen."
 
 ## Passwort zurücksetzen aktivieren
 
-Zuerst in den Mandant einloggen. Dort in die Verwaltung navigieren und unter [Einstellungen für [Mandanten-Name]](verwaltung/mandanten-name-verwaltung/einstellungen-mandanten-name.md) den Abschnitt **Passwort zurücksetzen** ausklappen. Um die Funktion zu aktivieren den Wert **Aktiviert** wählen und auf den **Speichern** Button klicken.
+1. Logge dich in den Mandanten ein
+2. Navigiere zu **Verwaltung** und öffne die [Einstellungen für [Mandanten-Name]](verwaltung/mandanten-name-verwaltung/einstellungen-mandanten-name.md)
+3. Klappe den Abschnitt **Passwort zurücksetzen** auf
+4. Wähle den Wert **Aktiviert** und klicke auf **Speichern**
 
-!!! note "Sobald ein Mandant die Funktion aktiviert hat, wird der Button **Forgot password?** auf der Login Seite dargestellt"
+!!! note "Sobald ein Mandant die Funktion aktiviert hat, erscheint der Button **Forgot password?** auf der Login-Seite."
 
-## E-Mail Adresse setzen
+## E-Mail-Adresse setzen
 
-Damit eine E-Mail verschickt wird, muss das Feld **E-Mail Adresse zum Passwort zurücksetzen** in der Kategorie **Personen -> Login** gesetzt sein. Benutzer können eine **E-Mail Adresse zum Passwort zurücksetzen** selbst setzen, indem Sie in der **Verwaltung** in den **Benutzereinstellungen** auf **Passwort und Login** klicken.
+Damit i-doit die Reset-Mail versenden kann, muss das Feld **E-Mail-Adresse zum Passwort zurücksetzen** in der Kategorie **Personen -> Login** gesetzt sein.
 
-!!! note "Es erfolgt eine Synchronisation der Felder **E-Mail-Adresse zum Passwort zurücksetzen** in der **Verwaltung** sowie in der Kategorie **Personen -> Login**."
+Benutzer können diese Adresse selbst eintragen: **Verwaltung -> Benutzereinstellungen -> Passwort und Login**.
 
-!!! warning "Es sollten nur so wenig Personen wie notwendig, Rechte auf die Kategorie **Personen -> Login** besitzen."
+!!! note "Die Felder **E-Mail-Adresse zum Passwort zurücksetzen** in der Verwaltung und in der Kategorie **Personen -> Login** werden synchronisiert."
+
+!!! warning "Vergib Rechte auf die Kategorie **Personen -> Login** nur an so wenige Personen wie nötig."
 
 [![Passwort und Login](../assets/images/de/administration/passwort-zuruecksetzen/Passwort-und-Login.png)](../assets/images/de/administration/passwort-zuruecksetzen/Passwort-und-Login.png)
 

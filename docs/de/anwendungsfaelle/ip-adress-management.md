@@ -1,10 +1,17 @@
+---
+title: IP Address Management (IPAM)
+description: "IP Address Management (IPAM) -- die Pflege von IP-Netzen, -Adressen und Netzwerk-Komponenten -- ist ein wesentliches Element deiner IT-Dokumentation."
+icon:
+status:
+lang: de
+---
 # IP Address Management (IPAM)
 
-Ein wesentliches Element einer [IT-Dokumentation](../glossar.md) ist die Pflege von IP-Netzen, -Adressen und diversen Netzwerk-Komponenten. Dieses wird IP Address Management, kurz IPAM, genannt.
+IP Address Management (IPAM) -- die Pflege von IP-Netzen, -Adressen und Netzwerk-Komponenten -- ist ein wesentliches Element deiner [IT-Dokumentation](../glossar.md).
 
 ## Überblick
 
-[IPAM](https://en.wikipedia.org/wiki/IP_address_management) beinhaltet verschiedene Bereiche, die im folgenden näher erläutert werden. i-doit verfügt bereits in der Standard-Installation über alle [Objekttypen](../glossar.md) und [Kategorien](../glossar.md), um ebendiese Bereiche abzudecken. Dazu zählen unter anderem folgende Objekttypen:
+i-doit bringt in der Standard-Installation alle [Objekttypen](../glossar.md) und [Kategorien](../glossar.md) mit, um [IPAM](https://en.wikipedia.org/wiki/IP_address_management) abzudecken. Dazu zählen unter anderem:
 
 *   **Layer-3-Netz**
 *   **Layer-2-Netz**

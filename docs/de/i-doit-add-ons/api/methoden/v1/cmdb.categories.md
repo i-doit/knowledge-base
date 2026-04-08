@@ -1,6 +1,6 @@
 ---
 title: cmdb.categories
-description: cmdb.categories
+description: "Um mehrere Kategorien mit einer Anfrage abzurufen, solltest du die Methode cmdb.categories.read verwenden."
 icon: material/api
 #status: updated
 lang: de

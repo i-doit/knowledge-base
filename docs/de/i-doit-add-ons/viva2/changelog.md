@@ -1,3 +1,10 @@
+---
+title: Changelog
+description: "[Improvement]   Compatibility to i-doit 34"
+icon:
+status:
+lang: de
+---
 # Changelog
 
 3.2.6

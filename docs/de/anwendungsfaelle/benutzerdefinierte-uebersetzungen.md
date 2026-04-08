@@ -1,3 +1,10 @@
+---
+title: Benutzerdefinierte Übersetzungen
+description: "Mithilfe der benutzerdefinierten Übersetzung, kann man innerhalb einiger Mausklicks, die Bezeichnung gewünschter Felder umändern oder neue Sprachen..."
+icon:
+status:
+lang: de
+---
 # Benutzerdefinierte Übersetzungen
 
 Mithilfe der benutzerdefinierten Übersetzung, kann man innerhalb einiger Mausklicks, die Bezeichnung gewünschter Felder umändern oder neue Sprachen hinzufügen.

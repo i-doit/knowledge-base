@@ -1,56 +1,63 @@
+---
+title: VIVA
+description: "The VIVA add-on is dedicated to the topic of information security based on IT-Grundschutz."
+icon:
+status:
+lang: en
+---
 # VIVA
 
 !!! warning "Deprecated"
-    This add-on is no longer developed and was replaced by Viva 2
+    This add-on is no longer being developed and has been replaced by Viva 2.
 
-The VIVA add-on is dedicated to the topic of information security based on IT-Grundschutz. It supports the user in the relevant documentation processes to establish an Information Security Management System (ISMS) in an organization.
+The [add-on](../index.md) **VIVA** is dedicated to the topic of information security based on IT-Grundschutz. It supports the user in the relevant documentation processes to establish an Information Security Management System (ISMS) in an organization.
 
 Table of contents
------------------
+------------------
 
-1. Introduction to VIVA
+1. [Introduction to VIVA](./einleitung-zu-viva.md)
     1. IT-Grundschutz
-    2. To whom this document is addressed
+    2. Who this document is aimed at
     3. Structure of this document
-2. Preparation of the VIVA installation
+2. [Preparing the VIVA installation](./vorbereitung-der-viva-installation.md)
     1. System requirements
     2. Download
-    3. Install
+    3. Installation
     4. Update
     5. Activate/Deactivate
     6. Uninstall
-    7. Rights management
-    8. Migrate from previous ITGS module
-3. Procedure with VIVA  
-    1. Manage IT-Grundschutz catalogs
-    2. Modeling information networks
-    3. Create target groups
-    4. Assign target objects
+    7. Permission management
+    8. Migrating from the previous ITGS module
+3. [Procedure with VIVA](./vorgehensweise-mit-viva.md)
+    1. Managing IT-Grundschutz catalogs
+    2. Modeling information domains
+    3. Creating target groups
+    4. Assigning target objects
     5. Target group inheritance
-    6. Define protection requirement categories
-    7. Define protection needs
-    8. Assign modules
-    9. Implement measures
-    10. Answer test questions
-    11. Perform supplementary security analysis
-4. Risk analysis according to IT-Grundschutz  
-    1. Identify hazards
-    2. Evaluate hazards
-5. Reports with VIVA  
-    1. Create audits
+    6. Defining protection needs categories
+    7. Determining protection needs
+    8. Assigning modules
+    9. Implementing measures
+    10. Answering audit questions
+    11. Performing supplementary security analysis
+4. [Risk analysis based on IT-Grundschutz](./risikoanalyse-nach-it-grundschutz.md)
+    1. Identifying threats
+    2. Evaluating threats
+5. [Reports with VIVA](./berichte-mit-viva.md)
+    1. Creating audits
     2. Reference documents
-6. Support audits with VIVA
-7. VIVA Wizards  
+6. [Supporting audits with VIVA](./audits-mit-viva-unterstuetzen.md)
+7. [VIVA Wizards](./viva-assistenten.md)
     1. Target group wizards
     2. Protection needs wizards
-8. Object Category VIVA
-9. VIVA widget
+8. [Object category VIVA](./objekt-kategorie-viva.md)
+9. [VIVA Widget](./viva-widget.md)
 
-Anhang
+Appendix
 ------
 
-*   Example of a possible workflow
-*   FAQ about VIVA
+*   [Example of a possible workflow](./arbeitsablauf-mit-viva.md)
+*   [FAQ about VIVA](https://help.i-doit.com/hc/de/articles/115002984325-FAQ-zu-VIVA)
 
 Releases
 --------
@@ -60,8 +67,8 @@ Releases
 | 1.5.5 |     | [Bug] Audits exported via PDF are displayed incorrectly |
 | 1.5.4 |     | [Bug] IT-Grundschutz catalogues cannot be imported  <br>[Bug] Audits exported via PDF are displayed incorrectly  <br>[Bug] The buttons are not completely displayed in the navbar |
 | 1.5.3 |     | [Bug] Load audits without the necessary rights  <br>[Bug] VIVA tables are not created for multi-tenant instances  <br>[Bug] The inheritance function of measures could not be performed.  <br>[Bug] The VIVA add-on could not be installed on i-doit version 1.10.x.  <br>[Bug] Link to VIVA within an object |
-| 1.5.2 | 2018-01-25 | <br>[Bug] Category VIVA cannot be used<br>[Bug] Error when editing comments<br>[Bug] Connected elements in menu are not updated, even when reloading the page<br>[Bug] Error while installing the VIVA add-on<br>[Bug] CSV export of linked safeguards shows not the right data<br>[Bug] Report "Applications" shows operating systems<br>[Bug] Report "implemented safeguards" mixes informations domains<br>[Bug] Report "linked CIs" mixes informations domains<br>[Bug] Umlauts are not displayed correctly during PDF export<br>[Bug] VIVA: Target objects not being displayed in left menu tree<br>[Bug] VIVA: Negative numbers are displayed in the Linked safeguards field within the Linked modules<br>[Bug] Category doesn't show any members of common target groups<br>[Bug] Category doesn't show any linked module<br>[Bug] When creating a link to a measure, a database error message occurs<br>[Bug] Error when accessing VIVA via icon in category list of objects<br>[Bug] VIVA add-on can not be installed<br>[Bug] Confirmation by enter / return leads to an HTTP / 500<br>[Bug] Number of unreacted actions wrong<br>[Bug] Handling of connected self defined controls within target objects faulty, will create database error<br> |
-| 1.5.1 | 2017-05-02 | [Bug] Report for supplementary security analysis shows false positives<br>[Bug] Report for group inheritance is marked red, but shows no results<br>[Bug] Report for applications shows operating systems<br> |
-| 1.5 | 2016-06-03 | [Improvement] Upgrade and connection from "IT-Verbünden" to new imported "Grundschutzkatalog"<br>[Improvement] Import of "IT-Grundschutz-Katalog 15 EL."[Bug] Error in export: E_WARNING: Illegal string offset 'type' production<br> |
-| 1.4.3 |     | [Bug] Contacts linked by VIVA can't be purged.<br>[Bug] Line break in comment field results with errors in tree<br> |
-| 1.4.2 |     | [Improvement] Improved representation of assistants<br> |
+| 1.5.2 | 25.01.2018 | [Bug] Number of unimplemented measures incorrect<br>[Bug] Confirmation via enter/return leads to HTTP/500<br>[Bug] VIVA add-on cannot be installed from i-doit version 1.10 onwards<br>[Bug] Error when opening VIVA via the icon in the category list of an object<br>[Bug] Creating a link to a measure results in a database error message<br>[Bug] Category does not display linked modules<br>[Bug] Category does not display members of shared target groups<br>[Bug] Statistics for linked measures of information domains show negative values<br>[Bug] VIVA: Target objects are missing in the left menu tree<br>[Bug] Umlauts are not displayed correctly in PDF export<br>[Bug] Report "Linked CIs" mixes up information domains<br>[Bug] Report "Implemented measures" mixes up information domains<br>[Bug] Report "Applications" displays operating systems<br>[Bug] CSV export of linked measures displays incorrect data<br>[Bug] Error during installation of the VIVA add-on<br>[Bug] Linked modules are not updated in the menu tree despite page reload<br>[Bug] Error when editing annotations<br>[Bug] VIVA category cannot be opened<br>[Bug] Handling of linked custom measures under target objects is faulty, generates database errors<br> |
+| 1.5.1 | 02.05.2017 | [Bug] Report on applications lists operating systems<br>[Bug] Report on group inheritance is marked red but returns no results<br>[Bug] Report on supplementary security analysis returns notes on forms that have already been filled in<br> |
+| 1.5 | 03.06.2016 | [Improvement] Import of the IT-Grundschutz catalog EL 15<br>[Improvement] Upgrade and linking of information domains to newly imported Grundschutz catalog<br>[Bug] Error during export: E_WARNING: Illegal string offset 'type' production<br> |
+| 1.4.3 |     | [Bug] Line break in description field leads to error in the navigation tree<br>[Bug] Contacts linked in VIVA cannot be permanently deleted<br> |
+| 1.4.2 |     | [Improvement] Improved display of wizards<br> |

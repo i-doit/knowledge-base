@@ -1,3 +1,10 @@
+---
+title: Automatisierte Vertragslaufzeit Verlängerung
+description: Der Vertrag eines Mandanten hat das letzte Kündigungsdatum überschritten und soll verlängert werden.
+icon:
+status:
+lang: de
+---
 # Automatisierte Vertragslaufzeit Verlängerung
 
 !!! info "Wurde zuletzt getestet für i-doit version 23"
@@ -15,7 +22,7 @@ Die benötigten Einstellungen finden wir in der Objektansicht des gewünschten V
 
 **Vertrag → Vertragsinformationen**
 
-[![vertragsverlaengerung-info](../assets/images/de/anwendungsfaelle/automatisierte-vertragsverlaengerung/1-avv-uc.png)](../assets/images/de/anwendungsfaelle/automatisierte-vertragsverlaengerung/1-avv-uc.png)
+[![vertragsverlängerung-info](../assets/images/de/anwendungsfaelle/automatisierte-vertragsverlaengerung/1-avv-uc.png)](../assets/images/de/anwendungsfaelle/automatisierte-vertragsverlaengerung/1-avv-uc.png)
 
 welche wir anschließend editieren:
 
@@ -24,7 +31,7 @@ welche wir anschließend editieren:
 * **Kündigungsdatum** bleibt leer
 * **Kündigungsfrist** stellen wir auf *1 Monat* und *zum Vertragsende*
 
-[![vertragsverlaengerung-config](../assets/images/de/anwendungsfaelle/automatisierte-vertragsverlaengerung/2-avv-uc.png)](../assets/images/de/anwendungsfaelle/automatisierte-vertragsverlaengerung/2-avv-uc.png)
+[![vertragsverlängerung-config](../assets/images/de/anwendungsfaelle/automatisierte-vertragsverlaengerung/2-avv-uc.png)](../assets/images/de/anwendungsfaelle/automatisierte-vertragsverlaengerung/2-avv-uc.png)
 
 !!! info "Die Voraussetzungen um den Befehl ausführen zu können lauten wie folgt:"
 
@@ -45,7 +52,7 @@ Der Befehl sieht wie folgt aus:
 
 Ist der Vertrag richtig konfiguriert, wird in der [Console](../automatisierung-und-integration/cli/index.md) angezeigt, dass der Vertrag um 1 Jahr verlängert wurde.
 
-[![vertragsverlaengerung-console](../assets/images/de/anwendungsfaelle/automatisierte-vertragsverlaengerung/3-avv-uc.png)](../assets/images/de/anwendungsfaelle/automatisierte-vertragsverlaengerung/3-avv-uc.png)
+[![vertragsverlängerung-console](../assets/images/de/anwendungsfaelle/automatisierte-vertragsverlaengerung/3-avv-uc.png)](../assets/images/de/anwendungsfaelle/automatisierte-vertragsverlaengerung/3-avv-uc.png)
 
 ## Schritt 3: Automatisieren
 
