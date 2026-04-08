@@ -16,4 +16,4 @@ Eine Auflistung der verschiedenen Versionen inklusive deren Changelog kann unter
 
 Nachdem Sie das Add-On heruntergeladen haben können Sie dies bequem über das [Admin-Center](../../administration/admin-center.md) von i-doit hochladen und installieren.
 
-[Zur Dokumentation des Add-ons](https://smdocu.atlassian.net/wiki/spaces/SKB/pages/2185429011/Modul+Connect){ .md-button .md-button--primary }
+[Zur Dokumentation des Add-ons](https://smdocu.atlassian.net/wiki/x/AQDbhw){ .md-button .md-button--primary }

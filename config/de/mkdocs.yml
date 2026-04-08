@@ -674,9 +674,9 @@ nav:
       - Relocate-CI: i-doit-add-ons/relocate-ci.md
       - Replacement: i-doit-add-ons/replacement.md
       - Rights Documentation: i-doit-add-ons/rights-documentation.md
-      - SHD VIEW Connect:
-          - i-doit-add-ons/shd-view-connect/index.md
-          - SHD SM-VIEW Connect - Telekom Adapter: i-doit-add-ons/shd-view-connect/telekom-adapter.md
+      - SHD Connect:
+          - i-doit-add-ons/shd-connect/index.md
+          - Telekom Adapter: i-doit-add-ons/shd-view-connect/telekom-adapter.md
           - Baramundi-Adapter: i-doit-add-ons/shd-view-connect/baramundi-adapter.md
       - URL-Router: i-doit-add-ons/url-router.md
       - VIVA:

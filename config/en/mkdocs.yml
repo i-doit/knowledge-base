@@ -642,8 +642,8 @@ nav:
       - OCS Inventory NG: i-doit-add-ons/ocs-inventory-ng.md
       - Relocate-CI: i-doit-add-ons/relocate-ci.md
       - Replacement: i-doit-add-ons/replacement.md
-      - SHD VIEW Connect:
-          - i-doit-add-ons/shd-view-connect/index.md
+      - SHD Connect:
+          - i-doit-add-ons/shd-connect/index.md
           - Telekom-Adapter: i-doit-add-ons/shd-view-connect/telekom-adapter.md
           - Baramundi-Adapter: i-doit-add-ons/shd-view-connect/baramundi-adapter.md
       - URL-Router: i-doit-add-ons/url-router.md
