@@ -642,10 +642,10 @@ nav:
       - OCS Inventory NG: i-doit-add-ons/ocs-inventory-ng.md
       - Relocate-CI: i-doit-add-ons/relocate-ci.md
       - Replacement: i-doit-add-ons/replacement.md
-      - SHD SM-VIEW Connect:
-          - i-doit-add-ons/sm-view-connect/index.md
-          - Telekom-Adapter: i-doit-add-ons/sm-view-connect/telekom-adapter.md
-          - Baramundi-Adapter: i-doit-add-ons/sm-view-connect/baramundi-adapter.md
+      - SHD VIEW Connect:
+          - i-doit-add-ons/shd-view-connect/index.md
+          - Telekom-Adapter: i-doit-add-ons/shd-view-connect/telekom-adapter.md
+          - Baramundi-Adapter: i-doit-add-ons/shd-view-connect/baramundi-adapter.md
       - URL-Router: i-doit-add-ons/url-router.md
       - VIVA:
           - i-doit-add-ons/viva/index.md
