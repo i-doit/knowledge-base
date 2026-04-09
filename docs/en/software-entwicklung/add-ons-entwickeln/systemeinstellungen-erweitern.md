@@ -84,10 +84,10 @@ use idoit\Event\System\Settings\ExtendTenantSettings;
 
 if (isys_module_manager::instance()->is_active('example_addon')) {
     // ...
-    
+
     isys_application::instance()->container->get('event_dispatcher')
         ->addListener(ExtendTenantSettings::NAME, ['isys_module_example', 'extendTenantSettings']);
-        
+
     // ...
 }
 ```
@@ -101,7 +101,7 @@ use idoit\Component\Settings\SettingsCollection;
 use idoit\Component\Settings\Types\SelectSetting;
 use idoit\Event\System\Settings\ExtendTenantSettings;
 
-class isys_module_example 
+class isys_module_example
 {
     // ...
 

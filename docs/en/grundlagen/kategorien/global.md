@@ -52,9 +52,9 @@ A free classification of the object, independent of the object type. Can be used
 A system-wide unique identifier that is automatically assigned by i-doit (e.g. `SYSID_1680000001`). Useful for integration with external systems when the internal object ID is not suitable. The SYSID is immutable after creation.
 
 !!! info "Automatically set fields"
-    **Created** and **Created by** are set automatically when the object is created.  
-    **Changed** and **Last changed by** are updated with each save.  
-    **Object type** is set when the object is created and cannot be changed.  
+    **Created** and **Created by** are set automatically when the object is created.
+    **Changed** and **Last changed by** are updated with each save.
+    **Object type** is set when the object is created and cannot be changed.
     All three field pairs are not manually editable and serve traceability during audits.
 
 ## Technical Reference

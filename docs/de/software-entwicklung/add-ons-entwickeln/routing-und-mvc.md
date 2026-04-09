@@ -30,7 +30,7 @@ use Symfony\Component\Routing\Loader\PhpFileLoader;
 class isys_module_example implements RoutingAwareInterface
 {
     // ...
-    
+
     public static function registerRouting(): void
     {
         isys_application::instance()->container->get('routes')
@@ -67,7 +67,7 @@ use Symfony\Component\Routing\Loader\YamlFileLoader;
 class isys_module_example implements RoutingAwareInterface
 {
     // ...
-    
+
     public static function registerRouting(): void
     {
         isys_application::instance()->container->get('routes')
@@ -116,7 +116,7 @@ Dazu gibt es eine Reihe von verschiedenen `Response` Klassen, die genutzt werden
 
 #### Die normale `Response` Klasse
 
-Diese Klasse kann für spezifische Inhalte genutzt werden, die ggf. spezielle `content-type` Angaben oder Response Codes benötigen. 
+Diese Klasse kann für spezifische Inhalte genutzt werden, die ggf. spezielle `content-type` Angaben oder Response Codes benötigen.
 
 ```php
 $response = new Response(

@@ -47,7 +47,7 @@ You freely choose the name and key of a new workflow type. The **order** determi
 
 ## Workflows in the object
 
-**Workflows** can also be displayed in the object via the **Workflows** category. This must first be added via the [object type configuration](../grundlagen/zurodnung-von-kategorien-zu-objekttypen.md) 
+**Workflows** can also be displayed in the object via the **Workflows** category. This must first be added via the [object type configuration](../grundlagen/zurodnung-von-kategorien-zu-objekttypen.md)
 
 [![Workflows in the object](../assets/images/de/i-doit-add-ons/workflow/1-wf.png)](../assets/images/de/i-doit-add-ons/workflow/1-wf.png)
 

@@ -332,11 +332,11 @@ Erklärung des Code
 Den Code möchte ich gerne Schritt für Schritt erklären:
 
 *   Unser Import beginnt mit den übergebenen Daten - in welcher Form dies geschieht obliegt dem Rahmen des Import (Datenbankverbindung, Third-Party-API, Datei im Dateisystem, …). Diese sollten zu diesem Zeitpunkt (unmittelbar vor dem Import) bereits dem vorgeschlagenen Format entsprechen _(Zeile 4)_
-*   Anschließend holen wir uns die "CMDB DAO" und die Datenbank Komponente aus unserem Dependency Injection Container.  
+*   Anschließend holen wir uns die "CMDB DAO" und die Datenbank Komponente aus unserem Dependency Injection Container.
     Zusätzlich definieren wir einen statischen Objekttypen, als was unsere Objekte importiert werden sollen (das könnte auch mittels eigenem Code oder Parametern verbessert werden) _(Zeilen 6-7)_
 *   Wir erzeugen eine "foreach" Schleife, die für jeden Eintrag ein Objekt importieren wird _(Zeilen 10+)_
 *   In den folgenden Zeilen wird ein Objekt erstellt mit dem Namen aus den übergebenen Daten - falls hier kein Name definiert wird verwenden wir einen Fallback String "Created by import: …" mit dem aktuellen Datum + Uhrzeit _(Zeile 11)_
-*   Es wird also aktuell IMMER ein Objekt erzeugt - soll stattdessen ein vorhandenes Objekt GEFUNDEN und weiterverwendet werden, muss eine eigene Logik implementiert werden.  
+*   Es wird also aktuell IMMER ein Objekt erzeugt - soll stattdessen ein vorhandenes Objekt GEFUNDEN und weiterverwendet werden, muss eine eigene Logik implementiert werden.
     Für die folgenden Zeilen wird zwingend eine Objekt ID benötigt! _(Zeile 13)_
 *   Wir erzeugen eine weitere "foreach"-Schleife, die nun die Kategorien des Objekts verarbeiten wird - zunächst versuchen wir auf Basis der verwendeten Kategorie Konstante die DAO Klasse der gewünschten Kategorie zu instanzieren.
 
@@ -358,7 +358,7 @@ Wie bereits geschrieben handelt es sich bei diesem Code um eine lauffähige "Bas
 Es fehlen allerdings einige (optionale) Funktionen die ein Import üblicherweise liefert. Diese Punkte möchte ich hier auflisten:
 
 *   Dieser Import ist auf das erstellen von Daten beschränkt - es können damit keine existierenden Daten aktualisiert werden. Dies ist ein äußerst aufwändiger Prozess der am besten für jede betroffene Kategorie händisch implementiert wird
-*   Ein Import sollte seinen Fortschritt und auch unerwartete Probleme in Form eines Logs aufzeichnen. Um eine Logger Instanz zu erzeugen können wir zu Beginn des Imports folgende Zeile nutzen:  
+*   Ein Import sollte seinen Fortschritt und auch unerwartete Probleme in Form eines Logs aufzeichnen. Um eine Logger Instanz zu erzeugen können wir zu Beginn des Imports folgende Zeile nutzen:
     $logger = idoit\Component\Logger::factory('my-import', BASE_DIR . 'log/my-import_' . date('Y-m-d') . '.log');
 *   Die $entryData Daten müssen auf allgemeine Konsistenz geprüft werden - Objekte und Dialog-Felder benötigen immer Referenzen mittels IDs. Falls hier String-Werte übergeben werden wird der Import für den entsprechenden Wert fehlschlagen
 *   Bevor die Daten an den "Merger" übergeben werden sollte ein Kategorie Prozessor verwendet werden der die Daten für die entsprechende Kategorie vorbereitet

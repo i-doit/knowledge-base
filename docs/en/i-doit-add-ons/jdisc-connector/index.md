@@ -41,8 +41,8 @@ The integration of JDisc Discovery into i-doit aims to combine the strengths of 
 
 ## installation
 
-1. Download the add-on from the [Kundenportal](../../administration/kundenportal.md) and upload and install it via the [Admin-Center](../../administration/admin-center.md) 
-   1. **or** install the add-on via the integrated [Add-on & Subscription Center](../../administration/add-on-and-subscription-center.md) 
+1. Download the add-on from the [Kundenportal](../../administration/kundenportal.md) and upload and install it via the [Admin-Center](../../administration/admin-center.md)
+   1. **or** install the add-on via the integrated [Add-on & Subscription Center](../../administration/add-on-and-subscription-center.md)
 2. After installation, a new menu item appears in the add-on menu
 
 * * *

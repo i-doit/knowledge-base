@@ -43,9 +43,9 @@ class Example implements EndpointInterface
     public function getDefinition(): EndpointDefinition
     {
         return new EndpointDefinition(
-            'endpoint.example.v2', 
-            'Description of this new endpoint', 
-            [ /* parameters */ ], 
+            'endpoint.example.v2',
+            'Description of this new endpoint',
+            [ /* parameters */ ],
             [ /* example request*/ ],
             [ /* example response */ ]
         );
@@ -105,7 +105,7 @@ public function request(Request $request): JsonRpcResponse
 ### Endpunkt definition
 
 Die Endpunktdefinition enthält notwendige Informationen wie beispielsweise den Namen des Endpunkts, eine Beschreibung und verfügbare Parameter.
-Optional können auch Beispiele für Requests und Responses hinzugefügt werden. 
+Optional können auch Beispiele für Requests und Responses hinzugefügt werden.
 
 ### Endpunkt request
 
@@ -123,8 +123,8 @@ Optionale Parameter können einen Standardwert definieren, für den Fall, dass s
 
 ```php
 return new EndpointDefinition(
-    'endpoint.example.v2', 
-    'Description of this new endpoint', 
+    'endpoint.example.v2',
+    'Description of this new endpoint',
     [
         new RequiredParameter('object', Parameter::TYPE_INTEGER, 'Numeric object ID', fn ($id) => $id > 0),
         new OptionalParameter('categories', Parameter::TYPE_ARRAY, 'Array of category constants', function ($categories) {
@@ -136,7 +136,7 @@ return new EndpointDefinition(
 
             return true;
         })
-    ], 
+    ],
     [ /* example request*/ ],
     [ /* example response */ ]
 );

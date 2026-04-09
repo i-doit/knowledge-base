@@ -40,7 +40,7 @@ Copy the ZIP file and the SQL file to the new server (e.g. per [WinSCP](http://w
 
         mysql -uroot -p < i-doit.sql
 
-###### If you receive this error message when importing the database "Can't create table \idoit\_data\.\table\_name\ (errno: 140 "Wrong create options")". The solution can be found [HERE](../administration/troubleshooting/cant-create-table.md) 
+###### If you receive this error message when importing the database "Can't create table \idoit\_data\.\table\_name\ (errno: 140 "Wrong create options")". The solution can be found [HERE](../administration/troubleshooting/cant-create-table.md)
 
 2. Set up the i-doit user:
 

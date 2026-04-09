@@ -9,7 +9,7 @@ lang: en
 
 In this section we explain the i-doit [JSON-RPC API](../../index.md). If you want to know which parameters need to or can be set for each method and what a typical response looks like, this is the right resource.
 
-You can find some examples here. More information about each method can be found on the respective page. 
+You can find some examples here. More information about each method can be found on the respective page.
 
 ## Namespace [idoit]
 

@@ -73,16 +73,16 @@ Each parameter has types and optional attributes
 The attributes are self-explanatory and can look like this (example from `idoit\Component\Processor\Dto\ObjectTypeGroup\CreateRequest`):
 
 ```php
-#[Required]  
-public readonly string $title; 
- 
-#[OrX(new IsNull(), new IsValidConstantString('C__OBJTYPE_GROUP__'))]  
-public readonly string|null $constant = null; 
- 
-public readonly int $sort = 0; 
- 
-#[OrX(new IsNull(), new OneOf([C__RECORD_STATUS__BIRTH, C__RECORD_STATUS__NORMAL]))] 
-public readonly int|null $status = null; 
+#[Required]
+public readonly string $title;
+
+#[OrX(new IsNull(), new IsValidConstantString('C__OBJTYPE_GROUP__'))]
+public readonly string|null $constant = null;
+
+public readonly int $sort = 0;
+
+#[OrX(new IsNull(), new OneOf([C__RECORD_STATUS__BIRTH, C__RECORD_STATUS__NORMAL]))]
+public readonly int|null $status = null;
 ```
 
 Here we see that the `title` parameter is a required field of type `string`.<br>

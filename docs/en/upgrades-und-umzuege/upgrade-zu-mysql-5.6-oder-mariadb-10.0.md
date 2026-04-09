@@ -139,7 +139,7 @@ If Windows Server 2008/2012 is used, XAMPP is recommended. This distribution pro
 If a XAMPP version with MariaDB 10.0 is not already in use, the following steps are necessary:
 
 1. Copy the XAMPP directory, usually at C:\xampp\
-2. Download the current version of XAMPP from the [official website](https://www.apachefriends.org/) 
+2. Download the current version of XAMPP from the [official website](https://www.apachefriends.org/)
 3. Uninstall the previous XAMPP version
 4. Delete the XAMPP directory
 5. Install the new XAMPP version in the same directory

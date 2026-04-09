@@ -30,7 +30,7 @@ use Symfony\Component\Routing\Loader\PhpFileLoader;
 class isys_module_example implements RoutingAwareInterface
 {
     // ...
-    
+
     public static function registerRouting(): void
     {
         isys_application::instance()->container->get('routes')
@@ -67,7 +67,7 @@ use Symfony\Component\Routing\Loader\YamlFileLoader;
 class isys_module_example implements RoutingAwareInterface
 {
     // ...
-    
+
     public static function registerRouting(): void
     {
         isys_application::instance()->container->get('routes')

@@ -31,7 +31,7 @@ These options are available at runtime:
 
 IDs is a comma-separated list of object IDs.
 
-TITLE means any object title, including the wildcards *, ? and [ae]. TITLE is case-insensitive. Repeat the option to specify more than one object title. 
+TITLE means any object title, including the wildcards *, ? and [ae]. TITLE is case-insensitive. Repeat the option to specify more than one object title.
 
 TYPE means the object type, represented by its title, its constant, or its identifier. Like TITLE, wildcards are allowed and the comparison is case-insensitive. Repeat the option to specify more than one object type.
 

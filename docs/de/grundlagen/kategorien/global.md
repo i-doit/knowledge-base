@@ -52,9 +52,9 @@ Eine freie Klassifizierung des Objekts, unabhängig vom Objekttyp. Kann z.B. gen
 Eine systemweit eindeutige Kennung, die von i-doit automatisch vergeben wird (z.B. `SYSID_1680000001`). Nützlich für die Integration mit externen Systemen, wenn die interne Objekt-ID nicht geeignet ist. Die SYSID ist nach der Erstellung unveränderlich.
 
 !!! info "Automatisch gesetzte Felder"
-    **Erstellungsdatum** und **Erstellt von** werden beim Anlegen automatisch gesetzt.  
-    **Änderungsdatum** und **Zuletzt geändert von** werden bei jeder Speicherung aktualisiert.  
-    **Objekttyp** wird beim Anlegen festgelegt und kann nicht geändert werden.  
+    **Erstellungsdatum** und **Erstellt von** werden beim Anlegen automatisch gesetzt.
+    **Änderungsdatum** und **Zuletzt geändert von** werden bei jeder Speicherung aktualisiert.
+    **Objekttyp** wird beim Anlegen festgelegt und kann nicht geändert werden.
     Alle drei Feldpaare sind nicht manuell editierbar und dienen der Nachvollziehbarkeit bei Audits.
 
 ## Technische Referenz

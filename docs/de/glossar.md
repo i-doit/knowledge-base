@@ -1,6 +1,6 @@
 ---
 title: "Glossar"
-description: 
+description:
 icon:
 status:
 lang: de

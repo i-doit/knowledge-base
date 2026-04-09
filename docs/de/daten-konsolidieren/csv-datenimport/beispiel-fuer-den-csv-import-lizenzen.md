@@ -1,7 +1,7 @@
 ---
 title: Beispiel Lizenzen
 description: "Dieses Beispiel baut auf dem CSV Import von Anwendungen auf. Du importierst Lizenzen mit allen relevanten Schluessel- und Laufzeitinformationen."
-icon: 
+icon:
 status:
 lang: de
 ---

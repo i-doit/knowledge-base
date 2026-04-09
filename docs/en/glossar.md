@@ -1,6 +1,6 @@
 ---
 title: "Glossary"
-description: 
+description:
 icon:
 status:
 lang: en

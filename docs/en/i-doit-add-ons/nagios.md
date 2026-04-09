@@ -17,7 +17,7 @@ Nagios is a [Network Monitoring](../automatisierung-und-integration/network-moni
 
 ## Basic configuration
 
-Set up the configuration under **Administration → Import and interfaces → Monitoring → Export configuration** 
+Set up the configuration under **Administration → Import and interfaces → Monitoring → Export configuration**
 
 - **Local path** -- Absolute or relative path where the generated configuration is stored.
 - **Link to the monitoring tool** -- Base link to generate links from i-doit to the monitoring instance.

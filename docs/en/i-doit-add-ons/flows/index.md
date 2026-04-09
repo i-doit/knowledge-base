@@ -115,7 +115,7 @@ Now adjust the file permissions so that the web server has read and write access
 
 With i-doit 33, the [Subscription & Add-ons](../../administration/add-on-and-subscription-center.md) feature was added, through which you can install add-ons directly. The Flows Add-on can also be installed as usual via the [Admin Center](../../administration/admin-center.md).
 
-### (Online) Flows Add-on via Subscription & Add-ons 
+### (Online) Flows Add-on via Subscription & Add-ons
 
 To use the **Subscription & Add-ons** feature, you need the license token. Enter it here and save it.
 
@@ -127,13 +127,13 @@ To use the **Subscription & Add-ons** feature, you need the license token. Enter
 
 [![Save license token](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/flows-install-step-2.png)](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/flows-install-step-2.png)
 
-#### Step 3: Open Add-ons and install the Flows Add-on via Actions 
+#### Step 3: Open Add-ons and install the Flows Add-on via Actions
 
 [![Open Add-ons and install Flows Add-on](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/flows-install-step-3.png)](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/flows-install-step-3.png)
 
 * * *
 
-### (Offline) Flows Add-on via the Admin Center 
+### (Offline) Flows Add-on via the Admin Center
 
 If your i-doit instance cannot access the internet or the [Subscription & Add-ons](../../administration/add-on-and-subscription-center.md) backend, download the add-on from the [Customer Portal](../../administration/kundenportal.md) and install it via the [Admin Center](../../administration/admin-center.md).
 
@@ -149,7 +149,7 @@ First log in to the Customer Portal at <https://center.i-doit.com> and download 
 
 [![Log in to Admin Center](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/install-2.2-2.png)](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/install-2.2-2.png)
 
-#### Step 4: Install the Flows Add-on 
+#### Step 4: Install the Flows Add-on
 
 Click the heading **Add-ons**, then click **Install/update Add-on** and select the **Flows ZIP file**:
 

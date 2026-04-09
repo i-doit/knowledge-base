@@ -17,7 +17,7 @@ Opening the URL `/open-object/client001` triggers the internal logic to search f
 
 ### Open object by similar name `/open-object-like/{object title}` (case-insensitive)
 
-Similar to `/open-object/{object-title}` this route will try to find an object by its title. If we call it with "client001" and no exact match can be found, this route will continue searching for objects whose names start with "client001" 
+Similar to `/open-object/{object-title}` this route will try to find an object by its title. If we call it with "client001" and no exact match can be found, this route will continue searching for objects whose names start with "client001"
 (for example "client00123").
 
 If this also fails, the search will continue to find objects that contain "client001" anywhere in their name
@@ -39,7 +39,7 @@ If either no exact match or multiple matches are found, you are redirected to th
 
 ### Open objects by similar inventory number `/open-object-like-inventory/{inventory}` (case-insensitive)
 
-Similar to `/open-object-by-inventory/{inventory no}` this route will try to find an object by its inventory number. If we call it with "123" and no exact match can be found, this route will continue searching for inventory numbers that start with "123" 
+Similar to `/open-object-by-inventory/{inventory no}` this route will try to find an object by its inventory number. If we call it with "123" and no exact match can be found, this route will continue searching for inventory numbers that start with "123"
 (for example "123456").
 
 If this also fails, the search will continue to find inventory numbers that contain "123" anywhere in their name

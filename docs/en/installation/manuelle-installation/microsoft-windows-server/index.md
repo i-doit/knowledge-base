@@ -121,7 +121,7 @@ Navigate to your i-doit folder at `ProgramData\i-doit\apache-2.4\conf\extra\` an
 
 #### 2. **Modifications in httpd.conf**
 
-Edit the `httpd.conf` file located at `i-doit\apache-2.4\conf\` 
+Edit the `httpd.conf` file located at `i-doit\apache-2.4\conf\`
 
 -   Add `Listen 443` and comment out `Listen 80`. This will make i-doit no longer accessible via HTTP.
 -   Also add the following lines: `LoadModule ssl_module modules/mod_ssl.so` and `Include conf/extra/ssl.conf`

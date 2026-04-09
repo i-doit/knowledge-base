@@ -1,6 +1,6 @@
 ---
 title: Releases
-description: 
+description:
 icon:
 status:
 lang: de

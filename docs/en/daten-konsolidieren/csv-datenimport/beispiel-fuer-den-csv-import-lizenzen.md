@@ -1,7 +1,7 @@
 ---
 title: CSV Import Example Licenses
 description: "This example builds on the CSV import of applications. You import licenses with all relevant key and runtime information."
-icon: 
+icon:
 status:
 lang: en
 ---
