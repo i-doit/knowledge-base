@@ -38,7 +38,6 @@ The protection needs for the various basic values are inherited downward accordi
 
 If the protection needs are entered directly on the object, the value is displayed in green text. If the value is inherited, it is displayed in gray. If the value entered on the object is lower than what the inheritance would dictate, the value is displayed in red text (e.g., in the case of a distribution effect).
 
-[![Target objects with inherited protection needs](../../assets/images/de/i-doit-add-ons/viva2/schutzbedarfsfeststellung/zielobjekte-schutzbedarf-inherited.png)](../../assets/images/de/i-doit-add-ons/viva2/schutzbedarfsfeststellung/zielobjekte-schutzbedarf-inherited.png){:target="_blank"}
 
 ## Filtering the View
 

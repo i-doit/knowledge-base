@@ -44,7 +44,6 @@ Mozilla Firefox;Mozilla;102;Web browser
 
 For detailed instructions on the CSV import process, see [CSV Data Import](index.md).
 
-[![CSV Import Applications](../../assets/images/de/daten-konsolidieren/csv-datenimport/beispiel-fuer-den-csv-import-anwendungen/1-csv-app.png)](../../assets/images/de/daten-konsolidieren/csv-datenimport/beispiel-fuer-den-csv-import-anwendungen/1-csv-app.png)
 
 ## See also
 

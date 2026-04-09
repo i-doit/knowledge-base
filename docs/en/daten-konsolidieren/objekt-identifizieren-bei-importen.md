@@ -15,7 +15,6 @@ During data import, i-doit identifies already existing objects based on specific
 
 Object matching profiles define the criteria by which i-doit recognizes whether an imported object already exists. You can configure these profiles under **Administration → Import and Interfaces → Import → Object Matching Profiles**.
 
-[![Object matching profiles](../assets/images/de/daten-konsolidieren/objekt-identifizieren-bei-importen/1-oibi.png)](../assets/images/de/daten-konsolidieren/objekt-identifizieren-bei-importen/1-oibi.png)
 
 ## How It Works
 
