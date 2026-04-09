@@ -21,7 +21,7 @@ You can reach the Administration via the gear icon in your user area. This appea
 * [\[Tenant Name\] Administration](mandanten-name-verwaltung/index.md)
 * [Data Structure](datenstruktur/index.md)
 * [Data View](datenansicht/index.md)
-* [Predefined Content](vordefinede-inhalte/index.md)
+* [Predefined Content](vordefinierte-inhalte/index.md)
 * [Permissions](berechtigungen.md)
 * [Logbook](logbuch/index.md)
 * [Import and Interfaces](import-und-schnittstellen/index.md)

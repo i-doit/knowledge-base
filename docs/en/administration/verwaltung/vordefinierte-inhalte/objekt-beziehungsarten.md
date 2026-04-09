@@ -11,7 +11,7 @@ With the [object relationships](../../../grundlagen/objekt-beziehungen.md) funct
 
 You can reach this setting under **Administration → Predefined Content → Object Relationship Types**. Here you see an overview of all existing relationship types and can create new ones or adjust existing ones. Each relationship type defines how two objects relate to each other, e.g., "is location of", "is member of", or "is connected to". You can set the title, description, and weighting (master/slave) of a relationship type. Use this administration page when you need custom relationship types for specific documentation requirements or want to adjust the labels of existing relationships.
 
-[![Object Relationship Types](../../../assets/images/de/administration/verwaltung/vordefinede-inhalte/objekt-beziehungsarten/1-ob.png)](../../../assets/images/de/administration/verwaltung/vordefinede-inhalte/objekt-beziehungsarten/1-ob.png)
+[![Object Relationship Types](../../../assets/images/de/administration/verwaltung/vordefinierte-inhalte/objekt-beziehungsarten/1-ob.png)](../../../assets/images/de/administration/verwaltung/vordefinierte-inhalte/objekt-beziehungsarten/1-ob.png)
 
 ## See also
 

@@ -13,7 +13,7 @@ You can reach this setting under **Administration → Predefined Content → Cus
 
 A detailed guide can be found under [Custom Counters](../../../grundlagen/benutzerdefinierte-zaehler.md).
 
-[![Custom Counters](../../../assets/images/de/administration/verwaltung/vordefinede-inhalte/benutzerdefinierte-zaehler/1-bz.png)](../../../assets/images/de/administration/verwaltung/vordefinede-inhalte/benutzerdefinierte-zaehler/1-bz.png)
+[![Custom Counters](../../../assets/images/de/administration/verwaltung/vordefinierte-inhalte/benutzerdefinierte-zaehler/1-bz.png)](../../../assets/images/de/administration/verwaltung/vordefinierte-inhalte/benutzerdefinierte-zaehler/1-bz.png)
 
 ## See also
 

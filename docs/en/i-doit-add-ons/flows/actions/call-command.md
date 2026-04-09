@@ -41,7 +41,7 @@ Updates the status of expired contracts.
 
 ## extend-contracts
 
-Automatically extends the duration of non-terminated contracts. A use case can be found [here](../../../anwendungsfaelle/automated-vertragsverlaengerung.md).
+Automatically extends the duration of non-terminated contracts. A use case can be found [here](../../../anwendungsfaelle/automatisierte-vertragsverlaengerung.md).
 
 ## import-csv (only on-prem)
 

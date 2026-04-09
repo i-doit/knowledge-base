@@ -23,7 +23,7 @@ With the i-doit [Add-on](../index.md) "Documents", you combine free text, text e
 - **[Placeholders in the Documents Add-on](./platzhalter-im-add-on-dokumente.md)**
     You embed dynamic documentation content using placeholders. Here you find all available placeholders and instructions for their use.
 
-- **[Creating Documents](./dokumentfirstllung.md)**
+- **[Creating Documents](./dokumenterstellung.md)**
     You use created templates to generate documents for objects in the documentation. This section describes the creation, updating, and export of documents.
 
 ## CLI console commands and options

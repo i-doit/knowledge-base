@@ -11,7 +11,7 @@ Before you get started with IT documentation, i-doit needs to be installed. Choo
 
 ## Which installation Method Suits You?
 
-| | [Automatische installation](automatic-installation.md) | [Manuelle installation](manuelle-installation/index.md) | [Eval Appliance](i-doit-virtual-eval-appliance/index.md) |
+| | [Automatische installation](automatische-installation.md) | [Manuelle installation](manuelle-installation/index.md) | [Eval Appliance](i-doit-virtual-eval-appliance/index.md) |
 |---|---|---|---|
 | **Description** | A script installs and configures everything on a fresh Linux system — including cron jobs, backups, and CLI tools. | You install and configure all components yourself. Full control over every step. | Ready-made VM with pre-installed i-doit for testing and evaluation. |
 | **Suitable for** | Production use, standard setup | Production use, custom requirements, Windows Server | Evaluation and testing |

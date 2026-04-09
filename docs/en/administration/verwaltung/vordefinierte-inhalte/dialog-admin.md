@@ -13,7 +13,7 @@ You can reach this setting under **Administration → Predefined Content → Dia
 
 A detailed guide can be found under [Dialog Admin](../../../grundlagen/dialog-admin.md).
 
-[![Dialog Admin](../../../assets/images/de/administration/verwaltung/vordefinede-inhalte/dialog-admin/1-da.png)](../../../assets/images/de/administration/verwaltung/vordefinede-inhalte/dialog-admin/1-da.png)
+[![Dialog Admin](../../../assets/images/de/administration/verwaltung/vordefinierte-inhalte/dialog-admin/1-da.png)](../../../assets/images/de/administration/verwaltung/vordefinierte-inhalte/dialog-admin/1-da.png)
 
 ## See also
 

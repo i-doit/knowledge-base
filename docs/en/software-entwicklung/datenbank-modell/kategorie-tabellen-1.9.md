@@ -41,7 +41,7 @@ Global Categories
 
 | field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Hfirstller | int | isys\_catg\_model\_list | isys\_catg\_model\_list\_\_isys\_model\_manufacturer\_\_id | isys\_model\_manufacturer | isys\_model\_manufacturer\_\_id |
+| Hersteller | int | isys\_catg\_model\_list | isys\_catg\_model\_list\_\_isys\_model\_manufacturer\_\_id | isys\_model\_manufacturer | isys\_model\_manufacturer\_\_id |
 | Modell | int | isys\_catg\_model\_list | isys\_catg\_model\_list\_\_isys\_model\_title\_\_id | isys\_model\_title | isys\_model\_title\_\_id |
 | Produkt-ID | text | isys\_catg\_model\_list | isys\_catg\_model\_list\_\_productid |     |     |
 | Service Tag | text | isys\_catg\_model\_list | isys\_catg\_model\_list\_\_service\_tag |     |     |
@@ -72,7 +72,7 @@ Global Categories
 | field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
 | designation | text | isys\_catg\_cpu\_list | isys\_catg\_cpu\_list\_\_title |     |     |
-| Hfirstller | int | isys\_catg\_cpu\_list | isys\_catg\_cpu\_list\_\_isys\_catg\_cpu\_manufacturer\_\_id | isys\_catg\_cpu\_manufacturer | isys\_catg\_cpu\_manufacturer\_\_id |
+| Hersteller | int | isys\_catg\_cpu\_list | isys\_catg\_cpu\_list\_\_isys\_catg\_cpu\_manufacturer\_\_id | isys\_catg\_cpu\_manufacturer | isys\_catg\_cpu\_manufacturer\_\_id |
 | Typ | int | isys\_catg\_cpu\_list | isys\_catg\_cpu\_list\_\_isys\_catg\_cpu\_type\_\_id | isys\_catg\_cpu\_type | isys\_catg\_cpu\_type\_\_id |
 | CPU-Frequenz | float | isys\_catg\_cpu\_list | isys\_catg\_cpu\_list\_\_frequency |     |     |
 | CPU-Frequenz Einheit | int | isys\_catg\_cpu\_list | isys\_catg\_cpu\_list\_\_isys\_frequency\_unit\_\_id | isys\_frequency\_unit | isys\_frequency\_unit\_\_id |
@@ -87,7 +87,7 @@ Global Categories
 | --- | --- | --- | --- | --- | --- |
 | Anzahl | int | isys\_catg\_memory\_list | isys\_catg\_memory\_list\_\_quantity |     |     |
 | designation | int | isys\_catg\_memory\_list | isys\_catg\_memory\_list\_\_isys\_memory\_title\_\_id | isys\_memory\_title | isys\_memory\_title\_\_id |
-| Hfirstller | int | isys\_catg\_memory\_list | isys\_catg\_memory\_list\_\_isys\_memory\_manufacturer\_\_id | isys\_memory\_manufacturer | isys\_memory\_manufacturer\_\_id |
+| Hersteller | int | isys\_catg\_memory\_list | isys\_catg\_memory\_list\_\_isys\_memory\_manufacturer\_\_id | isys\_memory\_manufacturer | isys\_memory\_manufacturer\_\_id |
 | Typ | int | isys\_catg\_memory\_list | isys\_catg\_memory\_list\_\_isys\_memory\_type\_\_id | isys\_memory\_type | isys\_memory\_type\_\_id |
 | total capacity | float | isys\_catg\_memory\_list | isys\_catg\_memory\_list\_\_capacity |     |     |
 | capacity | float | isys\_catg\_memory\_list | isys\_catg\_memory\_list\_\_capacity |     |     |
@@ -101,7 +101,7 @@ Global Categories
 | field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
 | designation | text | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_title |     |     |
-| Hfirstller | int | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_isys\_iface\_manufacturer\_\_id | isys\_iface\_manufacturer | isys\_iface\_manufacturer\_\_id |
+| Hersteller | int | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_isys\_iface\_manufacturer\_\_id | isys\_iface\_manufacturer | isys\_iface\_manufacturer\_\_id |
 | Modell | int | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_isys\_iface\_model\_\_id | isys\_iface\_model | isys\_iface\_model\_\_id |
 | Serial number | text | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_serial |     |     |
 | Slotnummer | text | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_slotnumber |     |     |
@@ -115,7 +115,7 @@ Global Categories
 | --- | --- | --- | --- | --- | --- |
 | designation | text | isys\_catg\_pc\_list | isys\_catg\_pc\_list\_\_title |     |     |
 | Aktiv | int | isys\_catg\_pc\_list | isys\_catg\_pc\_list\_\_active |     |     |
-| Hfirstller | int | isys\_catg\_pc\_list | isys\_catg\_pc\_list\_\_isys\_pc\_manufacturer\_\_id | isys\_pc\_manufacturer | isys\_pc\_manufacturer\_\_id |
+| Hersteller | int | isys\_catg\_pc\_list | isys\_catg\_pc\_list\_\_isys\_pc\_manufacturer\_\_id | isys\_pc\_manufacturer | isys\_pc\_manufacturer\_\_id |
 | Modell | int | isys\_catg\_pc\_list | isys\_catg\_pc\_list\_\_isys\_pc\_model\_\_id | isys\_pc\_model | isys\_pc\_model\_\_id |
 | Volt | text | isys\_catg\_pc\_list | isys\_catg\_pc\_list\_\_volt |     |     |
 | Watt | text | isys\_catg\_pc\_list | isys\_catg\_pc\_list\_\_watt |     |     |
@@ -253,7 +253,7 @@ Global Categories
 | --- | --- | --- | --- | --- | --- |
 | designation | text | isys\_catg\_controller\_list | isys\_catg\_controller\_list\_\_title |     |     |
 | Typ | int | isys\_catg\_controller\_list | isys\_catg\_controller\_list\_\_isys\_controller\_type\_\_id | isys\_controller\_type | isys\_controller\_type\_\_id |
-| Hfirstller | int | isys\_catg\_controller\_list | isys\_catg\_controller\_list\_\_isys\_controller\_manufacturer\_\_id | isys\_controller\_manufacturer | isys\_controller\_manufacturer\_\_id |
+| Hersteller | int | isys\_catg\_controller\_list | isys\_catg\_controller\_list\_\_isys\_controller\_manufacturer\_\_id | isys\_controller\_manufacturer | isys\_controller\_manufacturer\_\_id |
 | Modell | int | isys\_catg\_controller\_list | isys\_catg\_controller\_list\_\_isys\_controller\_model\_\_id | isys\_controller\_model | isys\_controller\_model\_\_id |
 | Description | text\_area | isys\_catg\_controller\_list | isys\_catg\_controller\_list\_\_description |     |     |
 
@@ -299,7 +299,7 @@ Global Categories
 
 | field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Hfirstller | int | isys\_catg\_sound\_list | isys\_catg\_sound\_list\_\_isys\_sound\_manufacturer\_\_id | isys\_sound\_manufacturer | isys\_sound\_manufacturer\_\_id |
+| Hersteller | int | isys\_catg\_sound\_list | isys\_catg\_sound\_list\_\_isys\_sound\_manufacturer\_\_id | isys\_sound\_manufacturer | isys\_sound\_manufacturer\_\_id |
 | designation | text | isys\_catg\_sound\_list | isys\_catg\_sound\_list\_\_title |     |     |
 | Description | text\_area | isys\_catg\_sound\_list | isys\_catg\_sound\_list\_\_description |     |     |
 
@@ -318,7 +318,7 @@ Global Categories
 | field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
 | designation | text | isys\_catg\_graphic\_list | isys\_catg\_graphic\_list\_\_title |     |     |
-| Hfirstller | int | isys\_catg\_graphic\_list | isys\_catg\_graphic\_list\_\_isys\_graphic\_manufacturer\_\_id | isys\_graphic\_manufacturer | isys\_graphic\_manufacturer\_\_id |
+| Hersteller | int | isys\_catg\_graphic\_list | isys\_catg\_graphic\_list\_\_isys\_graphic\_manufacturer\_\_id | isys\_graphic\_manufacturer | isys\_graphic\_manufacturer\_\_id |
 | Speicher | float | isys\_catg\_graphic\_list | isys\_catg\_graphic\_list\_\_memory |     |     |
 | Speichereinheit | int | isys\_catg\_graphic\_list | isys\_catg\_graphic\_list\_\_isys\_memory\_unit\_\_id | isys\_memory\_unit | isys\_memory\_unit\_\_id |
 | Description | text\_area | isys\_catg\_graphic\_list | isys\_catg\_graphic\_list\_\_description |     |     |
@@ -400,7 +400,7 @@ Global Categories
 | field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
 | designation | text | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_title |     |     |
-| Hfirstller | int | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_isys\_iface\_manufacturer\_\_id | isys\_iface\_manufacturer | isys\_iface\_manufacturer\_\_id |
+| Hersteller | int | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_isys\_iface\_manufacturer\_\_id | isys\_iface\_manufacturer | isys\_iface\_manufacturer\_\_id |
 | Modell | int | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_isys\_iface\_model\_\_id | isys\_iface\_model | isys\_iface\_model\_\_id |
 | Serial number | text | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_serial |     |     |
 | Slotnummer | text | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_slotnumber |     |     |
@@ -457,7 +457,7 @@ Global Categories
 | --- | --- | --- | --- | --- | --- |
 | Typ | int | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_isys\_stor\_type\_\_id | isys\_stor\_type | isys\_stor\_type\_\_id |
 | designation | text | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_title |     |     |
-| Hfirstller | int | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_isys\_stor\_manufacturer\_\_id | isys\_stor\_manufacturer | isys\_stor\_manufacturer\_\_id |
+| Hersteller | int | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_isys\_stor\_manufacturer\_\_id | isys\_stor\_manufacturer | isys\_stor\_manufacturer\_\_id |
 | Modell | int | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_isys\_stor\_model\_\_id | isys\_stor\_model | isys\_stor\_model\_\_id |
 | Speichereinheit | int | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_isys\_memory\_unit\_\_id | isys\_memory\_unit | isys\_memory\_unit\_\_id |
 | capacity | double | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_capacity |     |     |
@@ -641,7 +641,7 @@ Global Categories
 | --- | --- | --- | --- | --- | --- |
 | designation | text | isys\_catg\_hba\_list | isys\_catg\_hba\_list\_\_title |     |     |
 | Typ | int | isys\_catg\_hba\_list | isys\_catg\_hba\_list\_\_isys\_hba\_type\_\_id | isys\_hba\_type | isys\_hba\_type\_\_id |
-| Hfirstller | int | isys\_catg\_hba\_list | isys\_catg\_hba\_list\_\_isys\_controller\_manufacturer\_\_id | isys\_controller\_manufacturer | isys\_controller\_manufacturer\_\_id |
+| Hersteller | int | isys\_catg\_hba\_list | isys\_catg\_hba\_list\_\_isys\_controller\_manufacturer\_\_id | isys\_controller\_manufacturer | isys\_controller\_manufacturer\_\_id |
 | Modell | int | isys\_catg\_hba\_list | isys\_catg\_hba\_list\_\_isys\_controller\_model\_\_id | isys\_controller\_model | isys\_controller\_model\_\_id |
 | Description | text\_area | isys\_catg\_hba\_list | isys\_catg\_hba\_list\_\_description |     |     |
 
@@ -1021,7 +1021,7 @@ Global Categories
 | Beauftragt | int | isys\_catg\_audit\_list | isys\_catg\_audit\_list\_\_commission | isys\_contact | isys\_contact\_\_id |
 | Verantwortlich | int | isys\_catg\_audit\_list | isys\_catg\_audit\_list\_\_responsible | isys\_contact | isys\_contact\_\_id |
 | Beteiligt | int | isys\_catg\_audit\_list | isys\_catg\_audit\_list\_\_involved | isys\_contact | isys\_contact\_\_id |
-| Hfirstllerfrist | date | isys\_catg\_audit\_list | isys\_catg\_audit\_list\_\_period\_manufacturer |     |     |
+| Herstellerfrist | date | isys\_catg\_audit\_list | isys\_catg\_audit\_list\_\_period\_manufacturer |     |     |
 | Betreiberfrist | date | isys\_catg\_audit\_list | isys\_catg\_audit\_list\_\_period\_operator |     |     |
 | Performed | date | isys\_catg\_audit\_list | isys\_catg\_audit\_list\_\_apply |     |     |
 | Result | text\_area | isys\_catg\_audit\_list | isys\_catg\_audit\_list\_\_result |     |     |
@@ -1249,8 +1249,8 @@ Global Categories
 | Sonntag | text | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_sunday\_time |     |     |
 | Reaktionszeit | int | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_reaction\_time |     |     |
 | Reaktionszeit Einheit | int | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_reaction\_time\_unit | isys\_unit\_of\_time | isys\_unit\_of\_time\_\_id |
-| Wiederhfirstllungszeit | int | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_recovery\_time |     |     |
-| Wiederhfirstllungszeit Einheit | int | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_recovery\_time\_unit | isys\_unit\_of\_time | isys\_unit\_of\_time\_\_id |
+| Wiederherstellungszeit | int | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_recovery\_time |     |     |
+| Wiederherstellungszeit Einheit | int | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_recovery\_time\_unit | isys\_unit\_of\_time | isys\_unit\_of\_time\_\_id |
 | Kalender | int | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_isys\_calendar\_\_id | isys\_calendar | isys\_calendar\_\_id |
 | Description | text\_area | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_description |     |     |
 
@@ -2229,7 +2229,7 @@ Specific Categories
 | field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
 | Spezifikation | text | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_specification |     |     |
-| Hfirstller | int | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_isys\_application\_manufacturer\_\_id | isys\_application\_manufacturer | isys\_application\_manufacturer\_\_id |
+| Hersteller | int | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_isys\_application\_manufacturer\_\_id | isys\_application\_manufacturer | isys\_application\_manufacturer\_\_id |
 | installationsart | int | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_isys\_installation\_type\_\_id | isys\_installation\_type | isys\_installation\_type\_\_id |
 | Registrierungs-Key | text | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_registration\_key |     |     |
 | installationspfad | text | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_install\_path |     |     |
@@ -2386,7 +2386,7 @@ Specific Categories
 | field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
 | Spezifikation | text | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_specification |     |     |
-| Hfirstller | int | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_isys\_application\_manufacturer\_\_id | isys\_application\_manufacturer | isys\_application\_manufacturer\_\_id |
+| Hersteller | int | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_isys\_application\_manufacturer\_\_id | isys\_application\_manufacturer | isys\_application\_manufacturer\_\_id |
 | installationsart | int | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_isys\_installation\_type\_\_id | isys\_installation\_type | isys\_installation\_type\_\_id |
 | Registrierungs-Key | text | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_registration\_key |     |     |
 | installationspfad | text | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_install\_path |     |     |
@@ -2964,7 +2964,7 @@ Specific Categories
 | field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
 | Spezifikation | text | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_specification |     |     |
-| Hfirstller | int | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_isys\_application\_manufacturer\_\_id | isys\_application\_manufacturer | isys\_application\_manufacturer\_\_id |
+| Hersteller | int | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_isys\_application\_manufacturer\_\_id | isys\_application\_manufacturer | isys\_application\_manufacturer\_\_id |
 | installationsart | int | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_isys\_installation\_type\_\_id | isys\_installation\_type | isys\_installation\_type\_\_id |
 | Registrierungs-Key | text | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_registration\_key |     |     |
 | installationspfad | text | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_install\_path |     |     |

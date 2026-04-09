@@ -43,7 +43,7 @@ Users can enter this address themselves: **Administration → User Settings → 
 
 !!! warning "Grant permissions on the category **Persons → Login** to as few persons as necessary."
 
-[![Password and Login](../assets/images/de/administration/passwort-zuruecksetzen/password-und-Login.png)](../assets/images/de/administration/passwort-zuruecksetzen/password-und-Login.png)
+[![Password and Login](../assets/images/de/administration/passwort-zuruecksetzen/Passwort-und-Login.png)](../assets/images/de/administration/passwort-zuruecksetzen/Passwort-und-Login.png)
 
 ## Logging
 

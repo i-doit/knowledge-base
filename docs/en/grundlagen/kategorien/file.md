@@ -79,7 +79,7 @@ Free text for additional information about the file assignment: what the file is
         "data": {
             "file": 2048,
             "link": "https://wiki.example.com/handbuch-core-switch",
-            "description": "Hfirstllerhandbuch Cisco Catalyst 9300, Version 17.6"
+            "description": "Herstellerhandbuch Cisco Catalyst 9300, Version 17.6"
         }
     },
     "id": 1

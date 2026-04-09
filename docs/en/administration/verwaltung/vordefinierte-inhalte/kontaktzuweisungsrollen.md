@@ -11,9 +11,9 @@ Under **Administration → Predefined Content → Contact Assignment Roles**, yo
 
 i-doit already comes with some default roles such as **Administrator**, **User**, and **Owner**. You can add additional roles, rename existing ones, or remove unneeded roles. The roles defined here are then available for selection in the **Contact Assignment** category of all objects. Via the permission system and the Report Manager, evaluations and permissions can be specifically restricted to certain contact roles.
 
-[![Contact Assignment Roles](../../../assets/images/de/administration/verwaltung/vordefinede-inhalte/kontaktzuweisungsrollen.png)](../../../assets/images/de/administration/verwaltung/vordefinede-inhalte/kontaktzuweisungsrollen.png)
+[![Contact Assignment Roles](../../../assets/images/de/administration/verwaltung/vordefinierte-inhalte/kontaktzuweisungsrollen.png)](../../../assets/images/de/administration/verwaltung/vordefinierte-inhalte/kontaktzuweisungsrollen.png)
 
-[![Contact Assignment Roles](../../../assets/images/de/administration/verwaltung/vordefinede-inhalte/kontaktzuweisungsrollen/1-k.png)](../../../assets/images/de/administration/verwaltung/vordefinede-inhalte/kontaktzuweisungsrollen/1-k.png)
+[![Contact Assignment Roles](../../../assets/images/de/administration/verwaltung/vordefinierte-inhalte/kontaktzuweisungsrollen/1-k.png)](../../../assets/images/de/administration/verwaltung/vordefinierte-inhalte/kontaktzuweisungsrollen/1-k.png)
 
 ## See also
 

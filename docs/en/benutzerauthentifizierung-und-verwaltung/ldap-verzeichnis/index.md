@@ -186,7 +186,7 @@ During login or synchronization, i-doit compares the user's group memberships in
 
 Since version 1.15, i-doit synchronizes persons and person groups from LDAP/AD. In this process, persons are automatically assigned to the groups they belong to in LDAP, provided those groups are captured by the configured filter.
 
-A detailed guide can be found in the article [Import users and groups from AD/LDAP](../ldap-verzeichnis/so-werden-benutzer-und-gruppen-aus-dem-ad-ldap-imported.md).
+A detailed guide can be found in the article [Import users and groups from AD/LDAP](../ldap-verzeichnis/so-werden-benutzer-und-gruppen-aus-dem-ad-ldap-importiert.md).
 
 The executing user requires supervisor permissions on the categories **Group membership** and **Person groups > Members** as well as on the object types **Persons** and **Person groups**.
 

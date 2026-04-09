@@ -119,7 +119,7 @@ If an update fails or errors occur after the update, you can find a maintained l
 
 ### Location problems
 
-If you cannot save in the **Location** category, there is usually an inconsistency in the location hierarchy. The article [Location cannot be saved](standort-kann-nicht-saved-werden.md) shows you how to find and fix the cause.
+If you cannot save in the **Location** category, there is usually an inconsistency in the location hierarchy. The article [Location cannot be saved](standort-kann-nicht-gespeichert-werden.md) shows you how to find and fix the cause.
 
 ### LDAP problems
 

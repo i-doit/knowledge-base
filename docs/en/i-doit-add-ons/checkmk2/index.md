@@ -82,7 +82,7 @@ The `idoitcmk` application is [highly configurable](konfiguration.md) in this pr
 
 ## Documentation
 
--   [Getting Started](./first-schritte.md)
+-   [Getting Started](./erste-schritte.md)
 -   [Requirements](./anforderungen.md)
 -   [Installation](./installation.md)
 -   [Configuration](./konfiguration.md)

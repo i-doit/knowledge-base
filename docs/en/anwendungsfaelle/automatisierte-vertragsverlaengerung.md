@@ -22,7 +22,7 @@ The required settings can be found in the object view of the desired contract,
 
 **Contract > Contract Information**
 
-[![Contract renewal info](../assets/images/de/anwendungsfaelle/automated-vertragsverlaengerung/1-avv-uc.png)](../assets/images/de/anwendungsfaelle/automated-vertragsverlaengerung/1-avv-uc.png)
+[![Contract renewal info](../assets/images/de/anwendungsfaelle/automatisierte-vertragsverlaengerung/1-avv-uc.png)](../assets/images/de/anwendungsfaelle/automatisierte-vertragsverlaengerung/1-avv-uc.png)
 
 which we then edit:
 
@@ -31,7 +31,7 @@ which we then edit:
 * **Cancellation date** remains empty
 * **Cancellation period** is set to *1 Month* and *at contract end*
 
-[![Contract renewal config](../assets/images/de/anwendungsfaelle/automated-vertragsverlaengerung/2-avv-uc.png)](../assets/images/de/anwendungsfaelle/automated-vertragsverlaengerung/2-avv-uc.png)
+[![Contract renewal config](../assets/images/de/anwendungsfaelle/automatisierte-vertragsverlaengerung/2-avv-uc.png)](../assets/images/de/anwendungsfaelle/automatisierte-vertragsverlaengerung/2-avv-uc.png)
 
 !!! info "The prerequisites to execute the command are as follows:"
 
@@ -52,7 +52,7 @@ The command is as follows:
 
 If the contract is configured correctly, the [console](../automatisierung-und-integration/cli/index.md) will show that the contract has been extended by 1 year.
 
-[![Contract renewal console](../assets/images/de/anwendungsfaelle/automated-vertragsverlaengerung/3-avv-uc.png)](../assets/images/de/anwendungsfaelle/automated-vertragsverlaengerung/3-avv-uc.png)
+[![Contract renewal console](../assets/images/de/anwendungsfaelle/automatisierte-vertragsverlaengerung/3-avv-uc.png)](../assets/images/de/anwendungsfaelle/automatisierte-vertragsverlaengerung/3-avv-uc.png)
 
 ## Step 3: Automating
 

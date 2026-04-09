@@ -21,7 +21,7 @@ Customers often have multiple locations that should be displayed hierarchically 
 
 IT workstations can be documented in i-doit. This way, you always have an overview of which employee has which IT components and where they can be found.
 
-## [Automatic Contract Renewal](./automated-vertragsverlaengerung.md)
+## [Automatic Contract Renewal](./automatisierte-vertragsverlaengerung.md)
 
 A tenant's contract has passed the last cancellation date and needs to be renewed. To renew the contract, we use the `extend-contracts` command.
 

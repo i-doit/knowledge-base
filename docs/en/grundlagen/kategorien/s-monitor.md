@@ -131,7 +131,7 @@ Free text for additional details: connector configuration (HDMI, DisplayPort, US
         "entry": 1,
         "data": {
             "resolution": "3840x2160",
-            "description": "Upgrade 2026-03: Panel-Tausch auf 4K UHD durch Hfirstller-Service"
+            "description": "Upgrade 2026-03: Panel-Tausch auf 4K UHD durch Hersteller-Service"
         }
     },
     "id": 3

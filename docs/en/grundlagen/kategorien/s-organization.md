@@ -89,7 +89,7 @@ Free text for additional details: industry, contract partner number, internal ab
             "fax": "+49 211 699 31-99",
             "website": "https://www.i-doit.com",
             "headquarter": 1,
-            "description": "Hfirstller von i-doit. Hauptsitz Duesseldorf."
+            "description": "Hersteller von i-doit. Hauptsitz Duesseldorf."
         }
     },
     "id": 1
@@ -124,7 +124,7 @@ Free text for additional details: industry, contract partner number, internal ab
         "entry": 1,
         "data": {
             "telephone": "+49 211 699 31-100",
-            "description": "Hfirstller von i-doit. 2026-04: New Zentral-Rufnummer nach Umzug."
+            "description": "Hersteller von i-doit. 2026-04: New Zentral-Rufnummer nach Umzug."
         }
     },
     "id": 3

@@ -92,7 +92,7 @@ Free text for additional details: industry, customer number at the supplier, int
             "fax": "+49 211 699 31-99",
             "website": "https://www.i-doit.com",
             "headquarter": 1,
-            "description": "Hfirstller von i-doit. Hauptsitz Duesseldorf. Kundennummer: K-2024-0815."
+            "description": "Hersteller von i-doit. Hauptsitz Duesseldorf. Kundennummer: K-2024-0815."
         }
     },
     "id": 1
@@ -127,7 +127,7 @@ Free text for additional details: industry, customer number at the supplier, int
         "entry": 1,
         "data": {
             "website": "https://www.i-doit.com/de",
-            "description": "Hfirstller von i-doit. 2026-04: Website-URL auf new DE-Subdomain updated."
+            "description": "Hersteller von i-doit. 2026-04: Website-URL auf new DE-Subdomain updated."
         }
     },
     "id": 3

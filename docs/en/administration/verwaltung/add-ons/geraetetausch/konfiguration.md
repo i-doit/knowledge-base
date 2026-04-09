@@ -26,4 +26,4 @@ For more information -> [READ MORE](../../../../i-doit-add-ons/replacement.md)
 ## See also
 
 - [Replacement Add-on](../../../../i-doit-add-ons/replacement.md) -- Complete documentation on device swap
-- [CMDB Status](../../vordefinede-inhalte/cmdb-status.md) -- Configure status values for objects
+- [CMDB Status](../../vordefinierte-inhalte/cmdb-status.md) -- Configure status values for objects
