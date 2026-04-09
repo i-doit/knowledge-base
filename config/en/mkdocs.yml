@@ -130,8 +130,8 @@ extra:
       link: https://kb.i-doit.com/de/
       lang: de
   status:
-    new: Neu
-    updated: Aktualisiert
+    new: New
+    updated: Updated
 extra_css:
   - assets/custom.css
 use_directory_urls: false
@@ -292,7 +292,7 @@ nav:
               - Changelog 1.5.2: versionshistorie/changelogs/changelog-1.5.x/changelog-1.5.2.md
               - Changelog 1.5.1: versionshistorie/changelogs/changelog-1.5.x/changelog-1.5.1.md
               - Changelog 1.5: versionshistorie/changelogs/changelog-1.5.x/changelog-1.5.md
-          - changelog-aeltere-versionen:
+          - Older Changelogs:
               - versionshistorie/changelogs/changelog-aeltere-versionen/index.md
               - Changelog 1.4: versionshistorie/changelogs/changelog-aeltere-versionen/changelog-1.4.md
               - Changelog 1.3: versionshistorie/changelogs/changelog-aeltere-versionen/changelog-1.3.md
@@ -304,11 +304,11 @@ nav:
   - Installation:
       - installation/index.md
       - System Requirements: installation/systemvoraussetzungen.md
-      - Automatische Installation: installation/automatische-installation.md
+      - Automatic Installation: installation/automatische-installation.md
       - Manual Installation:
           - installation/manuelle-installation/index.md
           - Debian GNU/Linux: installation/manuelle-installation/debian/index.md
-          - Red Hat Enterprise Linux (RHEL) und kompatible:
+          - Red Hat Enterprise Linux (RHEL) and Compatible:
               - installation/manuelle-installation/red-hat-enterprise-linux/index.md
               - Red Hat Enterprise Linux 9: installation/manuelle-installation/red-hat-enterprise-linux/rhel9.md
           - SUSE Linux Enterprise Server (SLES): installation/manuelle-installation/suse/index.md
@@ -320,28 +320,28 @@ nav:
           - Setup: installation/manuelle-installation/setup.md
       - i-doit Virtual Eval Appliance:
           - installation/i-doit-virtual-eval-appliance/index.md
-          - i-doit Appliance in VirtualBox importieren: installation/i-doit-virtual-eval-appliance/virtual-box.md
-          - i-doit Appliance in eine Hyper-V Umgebung importieren: installation/i-doit-virtual-eval-appliance/hyper-v-import.md
+          - Import i-doit Appliance in VirtualBox: installation/i-doit-virtual-eval-appliance/virtual-box.md
+          - Import i-doit Appliance in Hyper-V: installation/i-doit-virtual-eval-appliance/hyper-v-import.md
   - Maintenance and Operation:
       - wartung-und-betrieb/index.md
       - Licensing: wartung-und-betrieb/lizenzierung.md
       - Set Up Cron Jobs: wartung-und-betrieb/cronjobs-einrichten.md
       - Back Up and Restore Data:
           - wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md
-          - Backup-Script für Daten und Dateien: wartung-und-betrieb/daten-sichern-und-wiederherstellen/backup-script-fuer-daten-und-dateien.md
+          - Backup Script for Data and Files: wartung-und-betrieb/daten-sichern-und-wiederherstellen/backup-script-fuer-daten-und-dateien.md
       - i-doit Update: wartung-und-betrieb/update-einspielen.md
       - Security and Protection: wartung-und-betrieb/sicherheit-und-schutz.md
       - PHP update: wartung-und-betrieb/php-update.md
   - Upgrades and Migrations:
       - upgrades-und-umzuege/index.md
-      - i-doit update Anleitung: upgrades-und-umzuege/update-anleitung.md
-      - Upgrade von i-doit open auf i-doit: upgrades-und-umzuege/upgrade-von-open-auf-i-doit.md
-      - Update von i-doit open 1.4.8 auf 1.8: upgrades-und-umzuege/update-von-open-1.4.8-auf-1.8.md
-      - Upgrade zu MySQL 5.6 oder MariaDB 10.0: upgrades-und-umzuege/upgrade-zu-mysql-5.6-oder-mariadb-10.0.md
-      - Umzug einer Installation unter GNU/Linux: upgrades-und-umzuege/umzug-einer-installation-unter-linux.md
-      - Umzug von Windows zu Linux: upgrades-und-umzuege/umzug-von-windows-zu-linux.md
-      - Umzug von Linux zu Windows: upgrades-und-umzuege/umzug-von-linux-zu-windows.md
-      - Update PHP und MariaDB für Windows: upgrades-und-umzuege/update-php-und-mariadb-fuer-windows.md
+      - i-doit Update Guide: upgrades-und-umzuege/update-anleitung.md
+      - Upgrade from i-doit open to i-doit: upgrades-und-umzuege/upgrade-von-open-auf-i-doit.md
+      - Update from i-doit open 1.4.8 to 1.8: upgrades-und-umzuege/update-von-open-1.4.8-auf-1.8.md
+      - Upgrade to MySQL 5.6 or MariaDB 10.0: upgrades-und-umzuege/upgrade-zu-mysql-5.6-oder-mariadb-10.0.md
+      - Migration of an Installation on GNU/Linux: upgrades-und-umzuege/umzug-einer-installation-unter-linux.md
+      - Migration from Windows to Linux: upgrades-und-umzuege/umzug-von-windows-zu-linux.md
+      - Migration from Linux to Windows: upgrades-und-umzuege/umzug-von-linux-zu-windows.md
+      - Update PHP and MariaDB for Windows: upgrades-und-umzuege/update-php-und-mariadb-fuer-windows.md
   - Basics:
       - grundlagen/index.md
       - Getting Started:
@@ -352,220 +352,220 @@ nav:
       - Object List:
           - grundlagen/objekt-liste/index.md
           - Action Bar: grundlagen/objekt-liste/aktionsleiste.md
-          - Navigieren und filtern: grundlagen/objekt-liste/navigieren-und-filtern.md
-          - Listenansicht Konfigurieren: grundlagen/objekt-liste/listenansicht-konfigurieren.md
+          - Navigate and Filter: grundlagen/objekt-liste/navigieren-und-filtern.md
+          - Configure List View: grundlagen/objekt-liste/listenansicht-konfigurieren.md
           - Advanced Settings: grundlagen/objekt-liste/erweiterte-einstellungen.md
       - Attribute Fields: grundlagen/attributfelder.md
       - Dialog Admin: grundlagen/dialog-admin.md
       - Object Types:
           - grundlagen/objekttypen/index.md
           - Access Point Controller: grundlagen/objekttypen/access-point-controller.md
-          - Anwendung: grundlagen/objekttypen/anwendung.md
-          - Gerät/Appliance: grundlagen/objekttypen/appliance.md
-          - Arbeitsplatz: grundlagen/objekttypen/arbeitsplatz.md
-          - Betriebssystem: grundlagen/objekttypen/betriebssystem.md
+          - Application: grundlagen/objekttypen/anwendung.md
+          - Device/Appliance: grundlagen/objekttypen/appliance.md
+          - Workstation: grundlagen/objekttypen/arbeitsplatz.md
+          - Operating System: grundlagen/objekttypen/betriebssystem.md
           - Blade Chassis: grundlagen/objekttypen/blade-chassis.md
           - Blade Server: grundlagen/objekttypen/blade-server.md
           - Cluster: grundlagen/objekttypen/cluster.md
-          - Clusterdienst: grundlagen/objekttypen/clusterdienst.md
+          - Cluster Service: grundlagen/objekttypen/clusterdienst.md
           - Client: grundlagen/objekttypen/client.md
-          - Dateien: grundlagen/objekttypen/dateien.md
-          - Datenbankinstanz: grundlagen/objekttypen/datenbankinstanz.md
-          - Datenbankschema: grundlagen/objekttypen/datenbankschema.md
+          - Files: grundlagen/objekttypen/dateien.md
+          - Database Instance: grundlagen/objekttypen/datenbankinstanz.md
+          - Database Schema: grundlagen/objekttypen/datenbankschema.md
           - DBMS: grundlagen/objekttypen/dbms.md
-          - Drucker: grundlagen/objekttypen/drucker.md
-          - Energieversorgungsunternehmen: grundlagen/objekttypen/energieversorgungsunternehmen.md
-          - Fahrzeug: grundlagen/objekttypen/fahrzeug.md
+          - Printer: grundlagen/objekttypen/drucker.md
+          - Energy Supply Company: grundlagen/objekttypen/energieversorgungsunternehmen.md
+          - Vehicle: grundlagen/objekttypen/fahrzeug.md
           - FC-Switch: grundlagen/objekttypen/fc-switch.md
-          - Flugzeug: grundlagen/objekttypen/flugzeug.md
-          - Gebäude: grundlagen/objekttypen/gebaeude.md
+          - Aircraft: grundlagen/objekttypen/flugzeug.md
+          - Building: grundlagen/objekttypen/gebaeude.md
           - Host: grundlagen/objekttypen/host.md
-          - Kabel: grundlagen/objekttypen/kabel.md
-          - Kabeltrasse: grundlagen/objekttypen/kabeltrasse.md
-          - Klimaanlage: grundlagen/objekttypen/klimaanlage.md
-          - Konverter: grundlagen/objekttypen/konverter.md
-          - Kryptokarte: grundlagen/objekttypen/kryptokarte.md
+          - Cable: grundlagen/objekttypen/kabel.md
+          - Cable Tray: grundlagen/objekttypen/kabeltrasse.md
+          - Air Conditioning: grundlagen/objekttypen/klimaanlage.md
+          - Converter: grundlagen/objekttypen/konverter.md
+          - Crypto Card: grundlagen/objekttypen/kryptokarte.md
           - KVM-Switch: grundlagen/objekttypen/kvm-switch.md
-          - Land: grundlagen/objekttypen/land.md
-          - Layer-2-Netz: grundlagen/objekttypen/layer-2-netz.md
-          - Layer-3-Netz: grundlagen/objekttypen/layer-3-netz.md
-          - Leerrohr: grundlagen/objekttypen/leerrohr.md
-          - Leitungsnetz: grundlagen/objekttypen/leitungsnetz.md
-          - Lizenzen: grundlagen/objekttypen/lizenzen.md
+          - Country: grundlagen/objekttypen/land.md
+          - Layer 2 Net: grundlagen/objekttypen/layer-2-netz.md
+          - Layer 3 Net: grundlagen/objekttypen/layer-3-netz.md
+          - Conduit: grundlagen/objekttypen/leerrohr.md
+          - Wiring System: grundlagen/objekttypen/leitungsnetz.md
+          - Licenses: grundlagen/objekttypen/lizenzen.md
           - Middleware: grundlagen/objekttypen/middleware.md
-          - Mobiltelefon: grundlagen/objekttypen/mobiltelefon.md
+          - Mobile Phone: grundlagen/objekttypen/mobiltelefon.md
           - Monitor: grundlagen/objekttypen/monitor.md
-          - Netzbereich: grundlagen/objekttypen/netzbereich.md
-          - Netzersatzanlage: grundlagen/objekttypen/netzersatzanlage.md
-          - Notfallplan: grundlagen/objekttypen/notfallplan.md
-          - Objektgruppe: grundlagen/objekttypen/objektgruppe.md
-          - Organisation: grundlagen/objekttypen/organisation.md
-          - Patchfeld: grundlagen/objekttypen/patchfeld.md
-          - Personen: grundlagen/objekttypen/personen.md
-          - Personengruppen: grundlagen/objekttypen/personengruppen.md
+          - Net Zone: grundlagen/objekttypen/netzbereich.md
+          - Emergency Power Supply: grundlagen/objekttypen/netzersatzanlage.md
+          - Emergency Plan: grundlagen/objekttypen/notfallplan.md
+          - Object Group: grundlagen/objekttypen/objektgruppe.md
+          - Organization: grundlagen/objekttypen/organisation.md
+          - Patch Panel: grundlagen/objekttypen/patchfeld.md
+          - Persons: grundlagen/objekttypen/personen.md
+          - Person Groups: grundlagen/objekttypen/personengruppen.md
           - Printbox: grundlagen/objekttypen/printbox.md
-          - Rack-Segment: grundlagen/objekttypen/rack-segment.md
-          - Raum: grundlagen/objekttypen/raum.md
+          - Rack Segment: grundlagen/objekttypen/rack-segment.md
+          - Room: grundlagen/objekttypen/raum.md
           - Remote Management Controller: grundlagen/objekttypen/remote-management-controller.md
-          - Replikationsobjekt: grundlagen/objekttypen/replikationsobjekt.md
+          - Replication Object: grundlagen/objekttypen/replikationsobjekt.md
           - Router: grundlagen/objekttypen/router.md
           - SAN Zoning: grundlagen/objekttypen/san-zoning.md
-          - Schrank: grundlagen/objekttypen/schrank.md
+          - Cabinet: grundlagen/objekttypen/schrank.md
           - Server: grundlagen/objekttypen/server.md
           - Service: grundlagen/objekttypen/service.md
-          - SIM-Karte: grundlagen/objekttypen/sim-karte.md
-          - Speichersystem: grundlagen/objekttypen/speichersystem.md
-          - Stadt: grundlagen/objekttypen/stadt.md
-          - Steckdosenleiste: grundlagen/objekttypen/steckdosenleiste.md
+          - SIM Card: grundlagen/objekttypen/sim-karte.md
+          - Storage System: grundlagen/objekttypen/speichersystem.md
+          - City: grundlagen/objekttypen/stadt.md
+          - Power Distribution Unit: grundlagen/objekttypen/steckdosenleiste.md
           - Supernet: grundlagen/objekttypen/supernet.md
           - Switch: grundlagen/objekttypen/switch.md
           - Switch Chassis: grundlagen/objekttypen/switch-chassis.md
-          - Systemdienst: grundlagen/objekttypen/systemdienst.md
-          - Telefon: grundlagen/objekttypen/telefon.md
-          - Telefonanlage: grundlagen/objekttypen/telefonanlage.md
-          - Unterbrechungsfreie Stromversorgung: grundlagen/objekttypen/usv.md
-          - Verstärker: grundlagen/objekttypen/verstaerker.md
-          - Verteilerkasten: grundlagen/objekttypen/verteilerkasten.md
-          - Vertrag: grundlagen/objekttypen/vertrag.md
-          - Virtueller Client: grundlagen/objekttypen/virtueller-client.md
-          - Virtueller Host: grundlagen/objekttypen/virtueller-host.md
-          - Virtueller Server: grundlagen/objekttypen/virtueller-server.md
-          - VoIP-Telefon: grundlagen/objekttypen/voip-telefon.md
+          - System Service: grundlagen/objekttypen/systemdienst.md
+          - Telephone: grundlagen/objekttypen/telefon.md
+          - Telephone System: grundlagen/objekttypen/telefonanlage.md
+          - Uninterruptible Power Supply: grundlagen/objekttypen/usv.md
+          - Amplifier: grundlagen/objekttypen/verstaerker.md
+          - Distribution Box: grundlagen/objekttypen/verteilerkasten.md
+          - Contract: grundlagen/objekttypen/vertrag.md
+          - Virtual Client: grundlagen/objekttypen/virtueller-client.md
+          - Virtual Host: grundlagen/objekttypen/virtueller-host.md
+          - Virtual Server: grundlagen/objekttypen/virtueller-server.md
+          - VoIP Phone: grundlagen/objekttypen/voip-telefon.md
           - VRRP: grundlagen/objekttypen/vrrp.md
           - VRRP/HSRP Cluster: grundlagen/objekttypen/vrrp-hsrp-cluster.md
-          - WAN-Leitung: grundlagen/objekttypen/wan-leitung.md
+          - WAN Connection: grundlagen/objekttypen/wan-leitung.md
           - Wireless Access Point: grundlagen/objekttypen/wireless-access-point.md
       - Object Type Configuration: grundlagen/objekttyp-konfiguration.md
       - Assigning Categories to Object Types: grundlagen/zurodnung-von-kategorien-zu-objekttypen.md
       - Categories and Attributes: grundlagen/kategorien-und-attribute.md
       - Category Reference:
           - grundlagen/kategorien/index.md
-          - Allgemein: grundlagen/kategorien/global.md
-          - Anschlüsse: grundlagen/kategorien/connector.md
-          - Anschrift: grundlagen/kategorien/address.md
-          - Anwendungen: grundlagen/kategorien/s-application.md
-          - Arbeitsplatzsystem: grundlagen/kategorien/s-client.md
-          - Betriebssystem: grundlagen/kategorien/operating-system.md
-          - Betriebssysteme: grundlagen/kategorien/s-operating-system.md
-          - Beziehung: grundlagen/kategorien/relation.md
+          - General: grundlagen/kategorien/global.md
+          - Connectors: grundlagen/kategorien/connector.md
+          - Address: grundlagen/kategorien/address.md
+          - Applications: grundlagen/kategorien/s-application.md
+          - Workstation System: grundlagen/kategorien/s-client.md
+          - Operating System: grundlagen/kategorien/operating-system.md
+          - Operating Systems: grundlagen/kategorien/s-operating-system.md
+          - Relation: grundlagen/kategorien/relation.md
           - Branch: grundlagen/kategorien/s-pdu-branch.md
-          - Buchhaltung: grundlagen/kategorien/accounting.md
+          - Accounting: grundlagen/kategorien/accounting.md
           - Chassis: grundlagen/kategorien/s-chassis.md
-          - Chassis Ansicht: grundlagen/kategorien/s-chassis-view.md
+          - Chassis View: grundlagen/kategorien/s-chassis-view.md
           - Cluster: grundlagen/kategorien/cluster.md
           - Cluster (Root): grundlagen/kategorien/cluster-root.md
-          - Clusterdienstzuweisung: grundlagen/kategorien/cluster-service.md
-          - Clustermitglieder: grundlagen/kategorien/cluster-members.md
-          - Clustermitgliedschaften: grundlagen/kategorien/cluster-memberships.md
+          - Cluster Service Assignment: grundlagen/kategorien/cluster-service.md
+          - Cluster Members: grundlagen/kategorien/cluster-members.md
+          - Cluster Memberships: grundlagen/kategorien/cluster-memberships.md
           - Controller: grundlagen/kategorien/controller.md
           - CPU: grundlagen/kategorien/cpu.md
-          - Dateizuweisung: grundlagen/kategorien/file.md
-          - Datenbank Gateway: grundlagen/kategorien/s-database-gateway.md
-          - Datenbanken: grundlagen/kategorien/database-sa.md
-          - Datenbanklinks: grundlagen/kategorien/s-database-links.md
-          - Datenbankobjekte: grundlagen/kategorien/s-database-objects.md
-          - Datenbankschema: grundlagen/kategorien/s-database-schema.md
-          - Datenbanktabelle: grundlagen/kategorien/database-table.md
-          - Datenbankzugriff: grundlagen/kategorien/s-database-access.md
-          - Datenbankzuweisung: grundlagen/kategorien/database-assignment.md
-          - Datensicherung: grundlagen/kategorien/backup.md
-          - Datensicherung (zugewiesene Objekte): grundlagen/kategorien/backup--assigned-objects.md
+          - File Assignment: grundlagen/kategorien/file.md
+          - Database Gateway: grundlagen/kategorien/s-database-gateway.md
+          - Databases: grundlagen/kategorien/database-sa.md
+          - Database Links: grundlagen/kategorien/s-database-links.md
+          - Database Objects: grundlagen/kategorien/s-database-objects.md
+          - Database Schema: grundlagen/kategorien/s-database-schema.md
+          - Database Table: grundlagen/kategorien/database-table.md
+          - Database Access: grundlagen/kategorien/s-database-access.md
+          - Database Assignment: grundlagen/kategorien/database-assignment.md
+          - Backup: grundlagen/kategorien/backup.md
+          - Backup (Assigned Objects): grundlagen/kategorien/backup--assigned-objects.md
           - DBMS Information: grundlagen/kategorien/database.md
           - DHCP: grundlagen/kategorien/s-net-dhcp.md
-          - Dienste: grundlagen/kategorien/s-service.md
-          - Drucker: grundlagen/kategorien/s-prt.md
-          - E-Mail-Adressen: grundlagen/kategorien/mail-addresses.md
-          - Faser/Ader: grundlagen/kategorien/fiber-lead.md
+          - Services: grundlagen/kategorien/s-service.md
+          - Printer: grundlagen/kategorien/s-prt.md
+          - E-Mail Addresses: grundlagen/kategorien/mail-addresses.md
+          - Fiber/Lead: grundlagen/kategorien/fiber-lead.md
           - FC-Port: grundlagen/kategorien/controller-fc-port.md
-          - Formfaktor: grundlagen/kategorien/formfactor.md
-          - Freigabe: grundlagen/kategorien/shares.md
-          - Freigabenzugriff: grundlagen/kategorien/share-access.md
-          - Gastsysteme: grundlagen/kategorien/guest-systems.md
-          - Gerät: grundlagen/kategorien/storage-device.md
-          - Grafikkarte: grundlagen/kategorien/graphic.md
-          - Gruppenmitgliedschaft: grundlagen/kategorien/group-memberships.md
-          - Handbuchzuweisung: grundlagen/kategorien/manual.md
-          - Hostadapter (HBA): grundlagen/kategorien/hba.md
-          - Hostadresse: grundlagen/kategorien/ip.md
+          - Form Factor: grundlagen/kategorien/formfactor.md
+          - Share: grundlagen/kategorien/shares.md
+          - Share Access: grundlagen/kategorien/share-access.md
+          - Guest Systems: grundlagen/kategorien/guest-systems.md
+          - Device: grundlagen/kategorien/storage-device.md
+          - Graphics Card: grundlagen/kategorien/graphic.md
+          - Group Membership: grundlagen/kategorien/group-memberships.md
+          - Manual Assignment: grundlagen/kategorien/manual.md
+          - Host Adapter (HBA): grundlagen/kategorien/hba.md
+          - Host Address: grundlagen/kategorien/ip.md
           - Installation: grundlagen/kategorien/s-application-assigned-obj.md
-          - IP-Liste: grundlagen/kategorien/s-net-ip-addresses.md
-          - Kabel: grundlagen/kategorien/cable.md
-          - Karten: grundlagen/kategorien/cards.md
-          - Kontaktzuweisung: grundlagen/kategorien/contact.md
-          - Laufwerk: grundlagen/kategorien/drive.md
+          - IP List: grundlagen/kategorien/s-net-ip-addresses.md
+          - Cable: grundlagen/kategorien/cable.md
+          - Cards: grundlagen/kategorien/cards.md
+          - Contact Assignment: grundlagen/kategorien/contact.md
+          - Drive: grundlagen/kategorien/drive.md
           - Listener: grundlagen/kategorien/net-listener.md
-          - Lizenzschlüssel: grundlagen/kategorien/s-licence-list.md
+          - License Keys: grundlagen/kategorien/s-licence-list.md
           - Logbook: grundlagen/kategorien/logbook.md
           - Login: grundlagen/kategorien/s-person-login.md
-          - Logische Geräte (Client): grundlagen/kategorien/ldev-client.md
-          - Logische Geräte (LDEV Server): grundlagen/kategorien/ldev-server.md
-          - Logische Netzwerkports: grundlagen/kategorien/network-log-port.md
-          - Mobilfunk: grundlagen/kategorien/s-cell-phone-contract.md
-          - Modell: grundlagen/kategorien/model.md
+          - Logical Devices (Client): grundlagen/kategorien/ldev-client.md
+          - Logical Devices (LDEV Server): grundlagen/kategorien/ldev-server.md
+          - Logical Network Ports: grundlagen/kategorien/network-log-port.md
+          - Mobile Radio: grundlagen/kategorien/s-cell-phone-contract.md
+          - Model: grundlagen/kategorien/model.md
           - Monitor: grundlagen/kategorien/s-monitor.md
-          - Netz: grundlagen/kategorien/s-net.md
-          - Netzbereiche: grundlagen/kategorien/s-net-zone.md
-          - Netzwerk: grundlagen/kategorien/network.md
-          - Netzwerk-Interface: grundlagen/kategorien/network-interface.md
-          - Netzwerk-Listener: grundlagen/kategorien/net-connections-folder.md
-          - Netzwerkport: grundlagen/kategorien/network-port.md
-          - Netzwerkverbindungen: grundlagen/kategorien/net-connector.md
-          - Notfallplanzuweisung: grundlagen/kategorien/emergency-plan.md
-          - Objektbild: grundlagen/kategorien/image.md
-          - Organisation: grundlagen/kategorien/s-organization.md
+          - Net: grundlagen/kategorien/s-net.md
+          - Net Zones: grundlagen/kategorien/s-net-zone.md
+          - Network: grundlagen/kategorien/network.md
+          - Network Interface: grundlagen/kategorien/network-interface.md
+          - Network Listener: grundlagen/kategorien/net-connections-folder.md
+          - Network Port: grundlagen/kategorien/network-port.md
+          - Network Connections: grundlagen/kategorien/net-connector.md
+          - Emergency Plan Assignment: grundlagen/kategorien/emergency-plan.md
+          - Object Image: grundlagen/kategorien/image.md
+          - Organization: grundlagen/kategorien/s-organization.md
           - PDU: grundlagen/kategorien/s-pdu.md
-          - Personen: grundlagen/kategorien/s-person.md
-          - Personengruppen: grundlagen/kategorien/s-person-group.md
-          - Personengruppen Mitglieder: grundlagen/kategorien/s-person-group-members.md
-          - Personengruppenmitgliedschaft: grundlagen/kategorien/s-person-assigned-groups.md
-          - RAID-Verbund: grundlagen/kategorien/raid.md
-          - Raum: grundlagen/kategorien/s-room.md
-          - Rechenressourcen: grundlagen/kategorien/computing-resources.md
-          - Rechnung: grundlagen/kategorien/invoice.md
+          - Persons: grundlagen/kategorien/s-person.md
+          - Person Groups: grundlagen/kategorien/s-person-group.md
+          - Person Group Members: grundlagen/kategorien/s-person-group-members.md
+          - Person Group Membership: grundlagen/kategorien/s-person-assigned-groups.md
+          - RAID Array: grundlagen/kategorien/raid.md
+          - Room: grundlagen/kategorien/s-room.md
+          - Computing Resources: grundlagen/kategorien/computing-resources.md
+          - Invoice: grundlagen/kategorien/invoice.md
           - Remote Management Controller: grundlagen/kategorien/rm-controller.md
           - Routing: grundlagen/kategorien/s-router.md
-          - Räumlich zugeordnete Objekte: grundlagen/kategorien/object.md
-          - Schnittstelle: grundlagen/kategorien/universal-interface.md
-          - Schrank: grundlagen/kategorien/s-enclosure.md
-          - Servicezuweisung: grundlagen/kategorien/it-service.md
+          - Locally Assigned Objects: grundlagen/kategorien/object.md
+          - Interface: grundlagen/kategorien/universal-interface.md
+          - Cabinet: grundlagen/kategorien/s-enclosure.md
+          - Service Assignment: grundlagen/kategorien/it-service.md
           - SIM: grundlagen/kategorien/sim.md
           - Slots: grundlagen/kategorien/s-chassis-slot.md
-          - Softwarezuweisung: grundlagen/kategorien/application.md
-          - Soundkarte: grundlagen/kategorien/sound.md
-          - Speicher: grundlagen/kategorien/memory.md
-          - Stammdaten (Organisation): grundlagen/kategorien/s-organization-master-data.md
-          - Stammdaten (Person): grundlagen/kategorien/s-person-master.md
-          - Stammdaten (Personengruppe): grundlagen/kategorien/s-person-group-master.md
-          - Standort: grundlagen/kategorien/location.md
-          - Status-Planung: grundlagen/kategorien/planning.md
-          - Stromverbraucher: grundlagen/kategorien/power-consumer.md
+          - Software Assignment: grundlagen/kategorien/application.md
+          - Sound Card: grundlagen/kategorien/sound.md
+          - Memory: grundlagen/kategorien/memory.md
+          - Master Data (Organization): grundlagen/kategorien/s-organization-master-data.md
+          - Master Data (Person): grundlagen/kategorien/s-person-master.md
+          - Master Data (Person Group): grundlagen/kategorien/s-person-group-master.md
+          - Location: grundlagen/kategorien/location.md
+          - Status Planning: grundlagen/kategorien/planning.md
+          - Power Consumer: grundlagen/kategorien/power-consumer.md
           - Switch: grundlagen/kategorien/s-switch-net.md
-          - Varianten: grundlagen/kategorien/s-application-variant.md
+          - Variants: grundlagen/kategorien/s-application-variant.md
           - Version: grundlagen/kategorien/version.md
-          - Vertragszuweisung: grundlagen/kategorien/contract-assignment.md
-          - Verwaltungsinstanz: grundlagen/kategorien/cluster-adm-service.md
-          - Virtuelle Geräte: grundlagen/kategorien/virtual-device.md
-          - Virtuelle Maschine: grundlagen/kategorien/virtual-machine.md
-          - Virtuelle Maschine (Root): grundlagen/kategorien/virtual-machine--root.md
-          - Virtuelle Switche: grundlagen/kategorien/virtual-switch.md
-          - Virtueller Host: grundlagen/kategorien/virtual-host.md
-          - Virtueller Host (Root): grundlagen/kategorien/virtual-host-root.md
-          - WAN-Verbindung: grundlagen/kategorien/wan.md
-          - Zertifikat: grundlagen/kategorien/certificate.md
-          - Zugewiesene Arbeitsplätze: grundlagen/kategorien/person-assigned-workstation.md
-          - Zugewiesene Geräte: grundlagen/kategorien/s-chassis-devices.md
-          - Zugewiesene Objekte (Organisation): grundlagen/kategorien/s-organization-contact-assignment.md
-          - Zugewiesene Objekte (Person): grundlagen/kategorien/s-person-contact-assignment.md
-          - Zugewiesene Objekte (Personengruppe): grundlagen/kategorien/s-person-group-contact-assignment.md
-          - Zugewiesene Personen (Organisation): grundlagen/kategorien/s-organization-persons.md
-          - Zugewiesene SIM-Karten: grundlagen/kategorien/assigned-sim-cards.md
-          - Zugewiesener Arbeitsplatz: grundlagen/kategorien/assigned-workstation.md
-          - Zugriff: grundlagen/kategorien/access.md
+          - Contract Assignment: grundlagen/kategorien/contract-assignment.md
+          - Management Instance: grundlagen/kategorien/cluster-adm-service.md
+          - Virtual Devices: grundlagen/kategorien/virtual-device.md
+          - Virtual Machine: grundlagen/kategorien/virtual-machine.md
+          - Virtual Machine (Root): grundlagen/kategorien/virtual-machine--root.md
+          - Virtual Switches: grundlagen/kategorien/virtual-switch.md
+          - Virtual Host: grundlagen/kategorien/virtual-host.md
+          - Virtual Host (Root): grundlagen/kategorien/virtual-host-root.md
+          - WAN Connection: grundlagen/kategorien/wan.md
+          - Certificate: grundlagen/kategorien/certificate.md
+          - Assigned Workstations: grundlagen/kategorien/person-assigned-workstation.md
+          - Assigned Devices: grundlagen/kategorien/s-chassis-devices.md
+          - Assigned Objects (Organization): grundlagen/kategorien/s-organization-contact-assignment.md
+          - Assigned Objects (Person): grundlagen/kategorien/s-person-contact-assignment.md
+          - Assigned Objects (Person Group): grundlagen/kategorien/s-person-group-contact-assignment.md
+          - Assigned Persons (Organization): grundlagen/kategorien/s-organization-persons.md
+          - Assigned SIM Cards: grundlagen/kategorien/assigned-sim-cards.md
+          - Assigned Workstation: grundlagen/kategorien/assigned-workstation.md
+          - Access: grundlagen/kategorien/access.md
       - Custom Object Types: grundlagen/benutzerdefinierte-objekttypen.md
       - Custom Categories: grundlagen/benutzerdefinierte-kategorien.md
       - Logbook: grundlagen/logbuch.md
       - Object Relationships: grundlagen/objekt-beziehungen.md
-      - Lebens und Dokumentationszyklus: grundlagen/lebens-und-dokumentationszyklus.md
+      - Life and Documentation Cycle: grundlagen/lebens-und-dokumentationszyklus.md
       - Unique References: grundlagen/eindeutige-referenzierungen.md
       - Web GUI: grundlagen/web-gui.md
       - Custom Counters: grundlagen/benutzerdefinierte-zaehler.md
@@ -573,63 +573,63 @@ nav:
       - benutzerauthentifizierung-und-verwaltung/index.md
       - Integrated Authentication:
           - benutzerauthentifizierung-und-verwaltung/integrierte-authentifizierung/index.md
-          - Lokalen Benutzer anlegen: benutzerauthentifizierung-und-verwaltung/integrierte-authentifizierung/lokalen-benutzer-anlegen.md
-      - Authentifizierung mit LDAP:
+          - Create Local User: benutzerauthentifizierung-und-verwaltung/integrierte-authentifizierung/lokalen-benutzer-anlegen.md
+      - Authentication with LDAP:
           - benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md
-          - LDAPS Debian Konfiguration: benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/ldap-tls.md
-          - LDAPS i-doit für Windows: benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/i-doit-win-ldaps.md
-          - Benutzer-/Gruppen-Synchronisierung: benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/so-werden-benutzer-und-gruppen-aus-dem-ad-ldap-importiert.md
-      - Zwei-Faktor-Authentisierung (2FA): benutzerauthentifizierung-und-verwaltung/2fa/index.md
-      - SSO-Authentifizierung im Vergleich:
+          - LDAPS Debian Configuration: benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/ldap-tls.md
+          - LDAPS i-doit for Windows: benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/i-doit-win-ldaps.md
+          - User/Group Synchronization: benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/so-werden-benutzer-und-gruppen-aus-dem-ad-ldap-importiert.md
+      - Two-Factor Authentication (2FA): benutzerauthentifizierung-und-verwaltung/2fa/index.md
+      - SSO Authentication Comparison:
           - benutzerauthentifizierung-und-verwaltung/sso-vergleich/index.md
-      - SSO mit SAML:
+      - SSO with SAML:
           - benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/index.md
           - ADFS (Active Directory): benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml.md
           - Azure AD (SAML): benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad-saml.md
-      - SSO mit GSSAPI:
+      - SSO with GSSAPI:
           - benutzerauthentifizierung-und-verwaltung/sso-vergleich/gssapi/index.md
           - Active Directory: benutzerauthentifizierung-und-verwaltung/sso-vergleich/gssapi/ad-gssapi.md
-      - SSO mit Kerberos: benutzerauthentifizierung-und-verwaltung/sso-vergleich/kerberos/index.md
-      - SSO mit OpenID Connect OAuth2:
+      - SSO with Kerberos: benutzerauthentifizierung-und-verwaltung/sso-vergleich/kerberos/index.md
+      - SSO with OpenID Connect OAuth2:
           - benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/index.md
-          - Google Authentifizierung: benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/google-openid.md
-      - SSO Fallback zu Builtin: benutzerauthentifizierung-und-verwaltung/sso-vergleich/sso-fallback/index.md
+          - Google Authentication: benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/google-openid.md
+      - SSO Fallback to Builtin: benutzerauthentifizierung-und-verwaltung/sso-vergleich/sso-fallback/index.md
   - Efficient Documentation:
       - effizientes-dokumentieren/index.md
-      - Listeneditierung: effizientes-dokumentieren/listeneditierung.md
-      - Massenänderung: effizientes-dokumentieren/massenaenderung.md
-      - Objekte Duplizieren: effizientes-dokumentieren/objekte-duplizieren.md
+      - List Editing: effizientes-dokumentieren/listeneditierung.md
+      - Mass Change: effizientes-dokumentieren/massenaenderung.md
+      - Duplicate Objects: effizientes-dokumentieren/objekte-duplizieren.md
       - Templates: effizientes-dokumentieren/templates.md
-      - Attributvalidierung und Pflichtfelder: effizientes-dokumentieren/attributvalidierung-und-pflichtfelder.md
+      - Attribute Validation and Required Fields: effizientes-dokumentieren/attributvalidierung-und-pflichtfelder.md
       - Permission Management:
           - effizientes-dokumentieren/rechteverwaltung/index.md
-          - CMDB (Rechteverwaltung): effizientes-dokumentieren/rechteverwaltung/cmdb.md
-          - Rechtevergabe über Rollen: effizientes-dokumentieren/rechteverwaltung/rechtevergabe-ueber-rollen.md
-      - Suche: effizientes-dokumentieren/suche.md
-      - Objektsperre: effizientes-dokumentieren/objektsperre.md
+          - CMDB (Permission Management): effizientes-dokumentieren/rechteverwaltung/cmdb.md
+          - Permission Assignment via Roles: effizientes-dokumentieren/rechteverwaltung/rechtevergabe-ueber-rollen.md
+      - Search: effizientes-dokumentieren/suche.md
+      - Object Lock: effizientes-dokumentieren/objektsperre.md
   - Reporting:
       - auswertungen/index.md
       - Report-Manager: auswertungen/report-manager.md
       - Notifications: auswertungen/benachrichtigungen.md
       - CMDB-Explorer:
           - auswertungen/cmdb-explorer/index.md
-          - Profile im CMDB-Explorer: auswertungen/cmdb-explorer/profile-im-cmdb-explorer.md
-      - Rack-Ansicht: auswertungen/rack-ansicht.md
-      - IP-Listen: auswertungen/ip-listen.md
+          - Profiles in CMDB Explorer: auswertungen/cmdb-explorer/profile-im-cmdb-explorer.md
+      - Rack View: auswertungen/rack-ansicht.md
+      - IP Lists: auswertungen/ip-listen.md
   - Consolidate Data:
       - daten-konsolidieren/index.md
       - CSV Data Import:
           - daten-konsolidieren/csv-datenimport/index.md
-          - Beispiel für den CSV Import - Anwendungen: daten-konsolidieren/csv-datenimport/beispiel-fuer-den-csv-import-anwendungen.md
-          - Beispiel für den CSV Import - Workstations: daten-konsolidieren/csv-datenimport/beispiel-fuer-den-csv-import-arbeitsplaetze.md
-          - Beispiel für den CSV Import - Lizenzen: daten-konsolidieren/csv-datenimport/beispiel-fuer-den-csv-import-lizenzen.md
-          - Beispiel für den CSV Import - Standorte erstellen: daten-konsolidieren/csv-datenimport/beispiel-fuer-den-csv-import-standorte-erstellen.md
-      - CSV-Datenexport: daten-konsolidieren/csv-datenexport.md
+          - CSV Import Example - Applications: daten-konsolidieren/csv-datenimport/beispiel-fuer-den-csv-import-anwendungen.md
+          - CSV Import Example - Workstations: daten-konsolidieren/csv-datenimport/beispiel-fuer-den-csv-import-arbeitsplaetze.md
+          - CSV Import Example - Licenses: daten-konsolidieren/csv-datenimport/beispiel-fuer-den-csv-import-lizenzen.md
+          - CSV Import Example - Create Locations: daten-konsolidieren/csv-datenimport/beispiel-fuer-den-csv-import-standorte-erstellen.md
+      - CSV Data Export: daten-konsolidieren/csv-datenexport.md
       - h-inventory: daten-konsolidieren/h-inventory.md
       - JDisc Discovery:
           - daten-konsolidieren/jdisc/index.md
-          - Erweiterte Optionen für JDisc-Importprofile: daten-konsolidieren/jdisc/advanced-options.md
-      - Objekte identifizieren bei Importen: daten-konsolidieren/objekt-identifizieren-bei-importen.md
+          - Advanced Options for JDisc Import Profiles: daten-konsolidieren/jdisc/advanced-options.md
+      - Identify Objects During Imports: daten-konsolidieren/objekt-identifizieren-bei-importen.md
   - Automation and Integration:
       - automatisierung-und-integration/index.md
       - E-Mail (SMTP): automatisierung-und-integration/e-mail.md
@@ -639,14 +639,14 @@ nav:
           - Commands and Options: automatisierung-und-integration/cli/befehle-und-optionen.md
       - Network Monitoring:
           - automatisierung-und-integration/network-monitoring/index.md
-          - Daten abfragen mit Livestatus/NDOUtils: automatisierung-und-integration/network-monitoring/daten-abfragen-mit-livestatus.md
+          - Query Data with Livestatus/NDOUtils: automatisierung-und-integration/network-monitoring/daten-abfragen-mit-livestatus.md
       - Trouble Ticket System (TTS):
           - automatisierung-und-integration/service-desk/index.md
           - Request Tracker (RT): automatisierung-und-integration/service-desk/request-tracker.md
           - ((OTRS)) Community Edition Help Desk: automatisierung-und-integration/service-desk/otrscommunity-help-desk.md
           - Zammad: automatisierung-und-integration/service-desk/zammad.md
       - SNMP: automatisierung-und-integration/snmp.md
-      - Aufgabenplanung & Cron Jobs: automatisierung-und-integration/automatisierung-und-cronjobs.md
+      - Task Scheduling & Cron Jobs: automatisierung-und-integration/automatisierung-und-cronjobs.md
   - Administration:
       - administration/index.md
       - Management:
@@ -661,29 +661,29 @@ nav:
                   - Category Lists: administration/verwaltung/benutzereinstellungen/benutzeroberflaeche/kategorie-listen.md
                   - Object Lists: administration/verwaltung/benutzereinstellungen/benutzeroberflaeche/objekt-listen.md
               - Edit Lock: administration/verwaltung/benutzereinstellungen/bearbeitungssperre.md
-          - '[Mandanten-Name] Verwaltung':
+          - '[Tenant-Name] Management':
               - administration/verwaltung/mandanten-name-verwaltung/index.md
-              - 'Einstellungen für [Mandanten-Name]': administration/verwaltung/mandanten-name-verwaltung/einstellungen-mandanten-name.md
+              - 'Settings for [Tenant-Name]': administration/verwaltung/mandanten-name-verwaltung/einstellungen-mandanten-name.md
               - System Repair and Cleanup: administration/verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md
               - Expert Settings: administration/verwaltung/mandanten-name-verwaltung/experteneinstellungen.md
           - Data Structure:
               - administration/verwaltung/datenstruktur/index.md
-              - Datenstruktur bearbeiten: administration/verwaltung/datenstruktur/datenstruktur-bearbeiten.md
+              - Edit Data Structure: administration/verwaltung/datenstruktur/datenstruktur-bearbeiten.md
               - Object Types: administration/verwaltung/datenstruktur/objekttypen.md
               - Custom Categories: administration/verwaltung/datenstruktur/benutzerdefinierte-kategorien.md
           - Data View:
               - administration/verwaltung/datenansicht/index.md
-              - Objekt-Browser konfigurieren: administration/verwaltung/datenansicht/objekt-browser-konfigurieren.md
-              - Attribut Einstellungen: administration/verwaltung/datenansicht/attribut-einstellungen.md
+              - Configure Object Browser: administration/verwaltung/datenansicht/objekt-browser-konfigurieren.md
+              - Attribute Settings: administration/verwaltung/datenansicht/attribut-einstellungen.md
               - Language Profiles: administration/verwaltung/datenansicht/sprachprofile.md
-              - Kategorieordner: administration/verwaltung/datenansicht/kategorieordner.md
+              - Category Folders: administration/verwaltung/datenansicht/kategorieordner.md
           - Predefined Content:
               - administration/verwaltung/vordefinierte-inhalte/index.md
               - CMDB Status: administration/verwaltung/vordefinierte-inhalte/cmdb-status.md
               - Contact Assignment Roles: administration/verwaltung/vordefinierte-inhalte/kontaktzuweisungsrollen.md
               - Custom Counters: administration/verwaltung/vordefinierte-inhalte/benutzerdefinierte-zaehler.md
               - Dialog admin: administration/verwaltung/vordefinierte-inhalte/dialog-admin.md
-              - Objektbeziehungsarten: administration/verwaltung/vordefinierte-inhalte/objekt-beziehungsarten.md
+              - Object Relationship Types: administration/verwaltung/vordefinierte-inhalte/objekt-beziehungsarten.md
               - QR Code: administration/verwaltung/vordefinierte-inhalte/qr-code.md
           - Permissions: administration/verwaltung/berechtigungen.md
           - Logbook: administration/verwaltung/logbuch/index.md
@@ -691,21 +691,21 @@ nav:
               - administration/verwaltung/import-und-schnittstellen/index.md
               - Import Matching Profile: administration/verwaltung/import-und-schnittstellen/import-matching-profile.md
               - h-inventory: administration/verwaltung/import-und-schnittstellen/h-inventory.md
-              - SMTP Konfiguration (E-Mail): administration/verwaltung/import-und-schnittstellen/smtp-konfiguration-email.md
+              - SMTP Configuration (E-Mail): administration/verwaltung/import-und-schnittstellen/smtp-konfiguration-email.md
               - JDisc:
                   - administration/verwaltung/import-und-schnittstellen/jdisc/index.md
-                  - JDisc Konfiguration: administration/verwaltung/import-und-schnittstellen/jdisc/jdisc-konfiguration.md
-                  - JDisc Profile: administration/verwaltung/import-und-schnittstellen/jdisc/jdisc-profile.md
+                  - JDisc Configuration: administration/verwaltung/import-und-schnittstellen/jdisc/jdisc-konfiguration.md
+                  - JDisc Profiles: administration/verwaltung/import-und-schnittstellen/jdisc/jdisc-profile.md
               - LDAP:
                   - administration/verwaltung/import-und-schnittstellen/ldap/index.md
                   - Server: administration/verwaltung/import-und-schnittstellen/ldap/server.md
                   - Directories: administration/verwaltung/import-und-schnittstellen/ldap/directories.md
-                  - Attributerweiterung: administration/verwaltung/import-und-schnittstellen/ldap/attributerweiterung.md
+                  - Attribute Extension: administration/verwaltung/import-und-schnittstellen/ldap/attributerweiterung.md
               - Trouble Ticket System (TTS): administration/verwaltung/import-und-schnittstellen/troubleticket-system.md
               - Monitoring:
                   - administration/verwaltung/import-und-schnittstellen/monitoring/index.md
                   - Livestatus / NDO: administration/verwaltung/import-und-schnittstellen/monitoring/livestatus-ndo.md
-                  - Exportkonfiguration: administration/verwaltung/import-und-schnittstellen/monitoring/exportkonfiguration.md
+                  - Export Configuration: administration/verwaltung/import-und-schnittstellen/monitoring/exportkonfiguration.md
           - Add-ons:
               - administration/verwaltung/add-ons/index.md
               - JSON-RPC API:
@@ -718,32 +718,32 @@ nav:
           - Two-Factor Authentication: administration/verwaltung/zwei-faktor-authentisierung.md
       - Add-on & Subscription Center: administration/add-on-and-subscription-center.md
       - Admin Center: administration/admin-center.md
-      - Kundenportal: administration/kundenportal.md
+      - Customer Portal: administration/kundenportal.md
       - Multi-Tenancy: administration/mandantenfaehigkeit.md
       - Multilingual Support and Translations: administration/mehrsprachigkeit-und-uebersetzungen.md
       - Reset Password: administration/passwort-zuruecksetzen.md
-      - Den Lizenz Token finden oder zurücksetzen: administration/reset-token.md
+      - Find or Reset License Token: administration/reset-token.md
       - Permission Management:
           - effizientes-dokumentieren/rechteverwaltung/index.md
-          - CMDB (Rechteverwaltung): effizientes-dokumentieren/rechteverwaltung/cmdb.md
-          - Rechtevergabe über Rollen: effizientes-dokumentieren/rechteverwaltung/rechtevergabe-ueber-rollen.md
+          - CMDB (Permission Management): effizientes-dokumentieren/rechteverwaltung/cmdb.md
+          - Permission Assignment via Roles: effizientes-dokumentieren/rechteverwaltung/rechtevergabe-ueber-rollen.md
       - Troubleshooting:
           - administration/troubleshooting/index.md
-          - Bekannte update Probleme: administration/troubleshooting/bekannte-update-probleme.md
+          - Known Update Issues: administration/troubleshooting/bekannte-update-probleme.md
           - Lost link to database: administration/troubleshooting/lost-link-to-database.md
           - MySQL-Server has gone away: administration/troubleshooting/mysql-server-has-gone-away.md
           - Can not create table idoit_data.table_name: administration/troubleshooting/cant-create-table.md
-          - Kein Login nach Änderung des Session Timeouts: administration/troubleshooting/kein-login-nach-aenderung-des-session-timeouts.md
+          - No Login After Session Timeout Change: administration/troubleshooting/kein-login-nach-aenderung-des-session-timeouts.md
           - LDAP via TLS: administration/troubleshooting/ldap-via-tls.md
-          - MySQL/MariaDB startet nach Änderung der Einstellung innodb_log_file_size nicht: administration/troubleshooting/mysql-mariadb-startet-nicht.md
+          - MySQL/MariaDB Does Not Start After Changing innodb_log_file_size: administration/troubleshooting/mysql-mariadb-startet-nicht.md
           - Row size too large: administration/troubleshooting/row-size-too-large.md
-          - Standort kann nicht gespeichert werden: administration/troubleshooting/standort-kann-nicht-gespeichert-werden.md
-          - Database corrupt Fehler: administration/troubleshooting/mariadb-database-corruption.md
+          - Location Cannot Be Saved: administration/troubleshooting/standort-kann-nicht-gespeichert-werden.md
+          - Database Corrupt Error: administration/troubleshooting/mariadb-database-corruption.md
       - Hotfixes:
           - administration/hotfixes/index.md
-          - i-doit 1.12.2 Update-Button funktionslos: administration/hotfixes/i-doit-1.12.2-update-button-funktionslos.md
-          - i-doit 1.13.2 & 1.14 Login im Admin-Center nicht möglich: administration/hotfixes/i-doit-1.13.2-1.14-login-im-admin-center-nicht-moeglich.md
-          - Hotfix Archiv:
+          - i-doit 1.12.2 Update Button Not Working: administration/hotfixes/i-doit-1.12.2-update-button-funktionslos.md
+          - i-doit 1.13.2 & 1.14 Login in Admin Center Not Possible: administration/hotfixes/i-doit-1.13.2-1.14-login-im-admin-center-nicht-moeglich.md
+          - Hotfix Archive:
               - administration/hotfixes/hotfix-archiv/index.md
               - Version 37: administration/hotfixes/hotfix-archiv/v37.md
               - Version 36: administration/hotfixes/hotfix-archiv/v36.md
@@ -766,15 +766,15 @@ nav:
       - Mapping Customer Locations: anwendungsfaelle/abbildung-von-kundenstandorten.md
       - Workstations: anwendungsfaelle/arbeitsplaetze.md
       - Custom Translations: anwendungsfaelle/benutzerdefinierte-uebersetzungen.md
-      - Automatisierte Vertragslaufzeit Verlängerung: anwendungsfaelle/automatisierte-vertragsverlaengerung.md
+      - Automated Contract Term Renewal: anwendungsfaelle/automatisierte-vertragsverlaengerung.md
       - Upload and Link Files: anwendungsfaelle/dateien-hochladen-und-verknuepfen.md
       - Documenting Databases: anwendungsfaelle/dokumentation-von-datenbanken.md
       - Documenting Licenses: anwendungsfaelle/dokumentation-von-lizenzen.md
-      - Excel-Tabelle mit Daten aus i-doit befüllen: anwendungsfaelle/excel-tabelle-mit-daten-aus-i-doit-befuellen.md
+      - Populate Excel with i-doit Data: anwendungsfaelle/excel-tabelle-mit-daten-aus-i-doit-befuellen.md
       - Geo Coordinates: anwendungsfaelle/geo-koordinaten.md
       - i-doit - Patch Manager bridge: anwendungsfaelle/i-doit-patch-manager-bridge.md
       - IP Address Management (IPAM): anwendungsfaelle/ip-adress-management.md
-      - ISO 27000 mit i-doit: anwendungsfaelle/iso27000-mit-i-doit.md
+      - ISO 27000 with i-doit: anwendungsfaelle/iso27000-mit-i-doit.md
       - Cable Patches and Pathways: anwendungsfaelle/kabel-patches-und-wege.md
       - Complex Reports: anwendungsfaelle/komplexe-reports.md
       - Manage Passwords: anwendungsfaelle/passwoerter-verwalten.md
@@ -783,7 +783,7 @@ nav:
       - Locations: anwendungsfaelle/standorte.md
       - Switch Stacking: anwendungsfaelle/switch-stacking.md
       - Variable Reports: anwendungsfaelle/variable-reports.md
-      - VM provisionieren (veraltet): anwendungsfaelle/vm-provisionieren.md
+      - VM Provisioning (deprecated): anwendungsfaelle/vm-provisionieren.md
   - i-doit Add-ons:
       - i-doit-add-ons/index.md
       - Active Directory Documentation: i-doit-add-ons/active-directory-documentation.md
@@ -791,7 +791,7 @@ nav:
       - Analysis: i-doit-add-ons/analysis.md
       - API (JSON-RPC):
           - i-doit-add-ons/api/index.md
-          - Methoden:
+          - Methods:
               - v1:
                   - i-doit-add-ons/api/methoden/v1/index.md
                   - cmdb.cabling: i-doit-add-ons/api/methoden/v1/cmdb.cabling.md
@@ -820,8 +820,8 @@ nav:
               - v2:
                   - i-doit-add-ons/api/methoden/v2/index.md
                   - cmdb.external: i-doit-add-ons/api/methoden/v2/cmdb.external.md
-          - Beispiele zur Nutzung der API: i-doit-add-ons/api/beispiele-zur-nutzung-der-api.md
-          - Tipps und Tricks zur API: i-doit-add-ons/api/tipps-und-tricks-zur-nutzung-der-api.md
+          - API Usage Examples: i-doit-add-ons/api/beispiele-zur-nutzung-der-api.md
+          - API Tips and Tricks: i-doit-add-ons/api/tipps-und-tricks-zur-nutzung-der-api.md
       - Cabling: i-doit-add-ons/cabling.md
       - Checkmk: i-doit-add-ons/checkmk.md
       - Checkmk 2:
@@ -831,47 +831,47 @@ nav:
           - Installation: i-doit-add-ons/checkmk2/installation.md
           - Configuration: i-doit-add-ons/checkmk2/konfiguration.md
           - Usage: i-doit-add-ons/checkmk2/verwendung.md
-          - Synchronisierung der checkmk Agenten: i-doit-add-ons/checkmk2/synchronisierung-der-checkmk-agenten.md
-          - Kontaktgruppen synchronisieren: i-doit-add-ons/checkmk2/kontaktgruppen-synchronisieren.md
-          - WATO Ordner synchronisieren: i-doit-add-ons/checkmk2/wato-ordner-synchronisieren.md
-          - checkmk sites synchronisieren: i-doit-add-ons/checkmk2/checkmk-sites-synchronisieren.md
-          - Host Tags synchronisieren: i-doit-add-ons/checkmk2/host-tags-synchronisieren.md
-          - WATO Konfiguration auf Basis von CMDB-Daten generieren: i-doit-add-ons/checkmk2/wato-konfiguration-auf-basis-von-cmdb-daten-generieren.md
-          - Bestandsdaten in die CMDB importieren: i-doit-add-ons/checkmk2/bestandsdaten-in-die-cmdb-importieren.md
+          - Synchronize checkmk Agents: i-doit-add-ons/checkmk2/synchronisierung-der-checkmk-agenten.md
+          - Synchronize Contact Groups: i-doit-add-ons/checkmk2/kontaktgruppen-synchronisieren.md
+          - Synchronize WATO Folders: i-doit-add-ons/checkmk2/wato-ordner-synchronisieren.md
+          - Synchronize checkmk Sites: i-doit-add-ons/checkmk2/checkmk-sites-synchronisieren.md
+          - Synchronize Host Tags: i-doit-add-ons/checkmk2/host-tags-synchronisieren.md
+          - Generate WATO Configuration Based on CMDB Data: i-doit-add-ons/checkmk2/wato-konfiguration-auf-basis-von-cmdb-daten-generieren.md
+          - Import Inventory Data into CMDB: i-doit-add-ons/checkmk2/bestandsdaten-in-die-cmdb-importieren.md
           - i-doit Web GUI: i-doit-add-ons/checkmk2/i-doit-web-gui.md
-          - Informationen aus i-doit und checkmk lesen: i-doit-add-ons/checkmk2/informationen-aus-i-doit-und-checkmk-lesen.md
-          - Abgleich von Objekten aus i-doit mit Hosts aus checkmk: i-doit-add-ons/checkmk2/abgleich-von-objekten-aus-i-doit-mit-hosts-aus-checkmk.md
-          - Häufig gestellte Fragen (FAQ): i-doit-add-ons/checkmk2/faq.md
+          - Read Information from i-doit and checkmk: i-doit-add-ons/checkmk2/informationen-aus-i-doit-und-checkmk-lesen.md
+          - Match Objects from i-doit with Hosts from checkmk: i-doit-add-ons/checkmk2/abgleich-von-objekten-aus-i-doit-mit-hosts-aus-checkmk.md
+          - Frequently Asked Questions (FAQ): i-doit-add-ons/checkmk2/faq.md
       - DNS Documentation: i-doit-add-ons/dns-documentation.md
       - Documents:
           - i-doit-add-ons/documents/index.md
-          - Vorbereitung: i-doit-add-ons/documents/vorbereitung-add-on-dokumente.md
+          - Preparation: i-doit-add-ons/documents/vorbereitung-add-on-dokumente.md
           - Document Templates: i-doit-add-ons/documents/dokumentenvorlagen.md
-          - Platzhalter: i-doit-add-ons/documents/platzhalter-im-add-on-dokumente.md
+          - Placeholders: i-doit-add-ons/documents/platzhalter-im-add-on-dokumente.md
           - Document Creation: i-doit-add-ons/documents/dokumenterstellung.md
       - Events: i-doit-add-ons/events.md
       - Floorplan: i-doit-add-ons/floorplan.md
       - Flows:
           - i-doit-add-ons/flows/index.md
           - Twig Templates: i-doit-add-ons/flows/twig-reference.md
-          - Aktionen:
-              - Befehl ausführen: i-doit-add-ons/flows/actions/call-command.md
-          - i-doit 33 update und Flows installation: i-doit-add-ons/flows/flows-guide.md
+          - Actions:
+              - Execute Command: i-doit-add-ons/flows/actions/call-command.md
+          - i-doit 33 Update and Flows Installation: i-doit-add-ons/flows/flows-guide.md
       - Forms:
           - i-doit-add-ons/forms/index.md
-          - Installation des Forms Add-on: i-doit-add-ons/forms/forms-installation.md
-          - Formulare erstellen: i-doit-add-ons/forms/forms-verwenden.md
-          - Formulare veröffenlichen: i-doit-add-ons/forms/formulare-publishen.md
-          - Formular ausfüllen: i-doit-add-ons/forms/formulare-ausfuellen.md
-          - Verwendung der Forms API: i-doit-add-ons/forms/verwenden-der-forms-api.md
+          - Installation of Forms Add-on: i-doit-add-ons/forms/forms-installation.md
+          - Create Forms: i-doit-add-ons/forms/forms-verwenden.md
+          - Publish Forms: i-doit-add-ons/forms/formulare-publishen.md
+          - Fill Out Form: i-doit-add-ons/forms/formulare-ausfuellen.md
+          - Using the Forms API: i-doit-add-ons/forms/verwenden-der-forms-api.md
       - i-diary: i-doit-add-ons/i-diary.md
       - i-doit QR-Code Printer: i-doit-add-ons/i-doit-qr-code-printer.md
       - ISMS:
           - i-doit-add-ons/isms/index.md
           - Setup: i-doit-add-ons/isms/configuration.md
-          - Risikoeinschätzung: i-doit-add-ons/isms/risk-assessment.md
+          - Risk Assessment: i-doit-add-ons/isms/risk-assessment.md
           - Reporting: i-doit-add-ons/isms/reports.md
-          - Objekttypen und Kategorien: i-doit-add-ons/isms/object-types-and-categories.md
+          - Object Types and Categories: i-doit-add-ons/isms/object-types-and-categories.md
           - Releases: i-doit-add-ons/isms/releases.md
       - JDisc Connector: i-doit-add-ons/jdisc-connector/index.md
       - Maintenance: i-doit-add-ons/maintenance.md
@@ -887,27 +887,27 @@ nav:
       - URL-Router: i-doit-add-ons/url-router.md
       - VIVA:
           - i-doit-add-ons/viva/index.md
-          - Einleitung zu VIVA: i-doit-add-ons/viva/einleitung-zu-viva.md
-          - Vorbereitung der VIVA-Installation: i-doit-add-ons/viva/vorbereitung-der-viva-installation.md
-          - Vorgehensweise mit VIVA: i-doit-add-ons/viva/vorgehensweise-mit-viva.md
-          - Risikoanalyse nach IT-Grundschutz: i-doit-add-ons/viva/risikoanalyse-nach-it-grundschutz.md
-          - Berichte mit VIVA: i-doit-add-ons/viva/berichte-mit-viva.md
-          - Audits mit VIVA unterstützen: i-doit-add-ons/viva/audits-mit-viva-unterstuetzen.md
-          - VIVA-Assistenten: i-doit-add-ons/viva/viva-assistenten.md
-          - Objekt-Kategorie VIVA: i-doit-add-ons/viva/objekt-kategorie-viva.md
+          - Introduction to VIVA: i-doit-add-ons/viva/einleitung-zu-viva.md
+          - Preparation of VIVA Installation: i-doit-add-ons/viva/vorbereitung-der-viva-installation.md
+          - Procedure with VIVA: i-doit-add-ons/viva/vorgehensweise-mit-viva.md
+          - Risk Analysis according to IT-Grundschutz: i-doit-add-ons/viva/risikoanalyse-nach-it-grundschutz.md
+          - Reports with VIVA: i-doit-add-ons/viva/berichte-mit-viva.md
+          - Support Audits with VIVA: i-doit-add-ons/viva/audits-mit-viva-unterstuetzen.md
+          - VIVA Assistants: i-doit-add-ons/viva/viva-assistenten.md
+          - Object Category VIVA: i-doit-add-ons/viva/objekt-kategorie-viva.md
           - VIVA-Widget: i-doit-add-ons/viva/viva-widget.md
-          - Arbeitsablauf mit VIVA: i-doit-add-ons/viva/arbeitsablauf-mit-viva.md
+          - Workflow with VIVA: i-doit-add-ons/viva/arbeitsablauf-mit-viva.md
       - VIVA2 (IT-Grundschutz):
           - i-doit-add-ons/viva2/index.md
-          - Installation und Einrichtung: i-doit-add-ons/viva2/setup.md
-          - IT-Grundschutz-Profile: i-doit-add-ons/viva2/it-grundschutz-profiles.md
-          - Objekttypen und Kategorien: i-doit-add-ons/viva2/objecttypes-categories.md
-          - Strukturanalyse: i-doit-add-ons/viva2/structural-analysis.md
-          - Schutzbedarfsfeststellung: i-doit-add-ons/viva2/assessment-of-protection.md
-          - Modellierung des Informationsverbundes: i-doit-add-ons/viva2/modeling.md
+          - Installation and Setup: i-doit-add-ons/viva2/setup.md
+          - IT-Grundschutz Profiles: i-doit-add-ons/viva2/it-grundschutz-profiles.md
+          - Object Types and Categories: i-doit-add-ons/viva2/objecttypes-categories.md
+          - Structural Analysis: i-doit-add-ons/viva2/structural-analysis.md
+          - Assessment of Protection: i-doit-add-ons/viva2/assessment-of-protection.md
+          - Modeling of Information Network: i-doit-add-ons/viva2/modeling.md
           - IT-Grundschutz-Check: i-doit-add-ons/viva2/it-grundschutz-check.md
           - Reports: i-doit-add-ons/viva2/reports.md
-          - Migration von VIVA zu VIVA 2: i-doit-add-ons/viva2/migration.md
+          - Migration from VIVA to VIVA 2: i-doit-add-ons/viva2/migration.md
           - Changelog: i-doit-add-ons/viva2/changelog.md
       - Workflow: i-doit-add-ons/workflow.md
   - i-doit cloud:
@@ -917,27 +917,27 @@ nav:
       - software-entwicklung/index.md
       - Database Model:
           - software-entwicklung/datenbank-modell/index.md
-          - Kategorie-Tabellen 1.10: software-entwicklung/datenbank-modell/kategorie-tabellen-1.10.md
-          - Kategorie-Tabellen 1.9: software-entwicklung/datenbank-modell/kategorie-tabellen-1.9.md
+          - Category Tables 1.10: software-entwicklung/datenbank-modell/kategorie-tabellen-1.10.md
+          - Category Tables 1.9: software-entwicklung/datenbank-modell/kategorie-tabellen-1.9.md
       - Developing Add-ons:
           - software-entwicklung/add-ons-entwickeln/index.md
-          - Add-ons installieren, aktualisieren und aktivieren: software-entwicklung/add-ons-entwickeln/add-ons-installieren-aktualisieren-und-entwickeln.md
-          - Datei- und Ordnerstruktur eines Add-on: software-entwicklung/add-ons-entwickeln/datei-und-ordnerstruktur-eines-add-ons.md
-          - Bootstrapping eines Add-ons (init.php): software-entwicklung/add-ons-entwickeln/boostraping-eines-add-ons.md
-          - CMDB Prozessoren: software-entwicklung/add-ons-entwickeln/cmdb-prozessoren.md
-          - Metadaten eines Add-ons (package.json): software-entwicklung/add-ons-entwickeln/metadaten-eines-add-ons.md
-          - Lokalisierung: software-entwicklung/add-ons-entwickeln/lokalisierung.md
-          - Routing und MVC: software-entwicklung/add-ons-entwickeln/routing-und-mvc.md
-          - Benutzerrechte im Add-on nutzen: software-entwicklung/add-ons-entwickeln/benutzerrechte-im-add-on-nutzen.md
-          - Commands im Add-on nutzen: software-entwicklung/add-ons-entwickeln/commands-im-add-on-nutzen.md
-          - Systemeinstellungen erweitern: software-entwicklung/add-ons-entwickeln/systemeinstellungen-erweitern.md
-          - API erweitern: software-entwicklung/add-ons-entwickeln/api-erweitern.md
-          - Attribut-Definition: software-entwicklung/add-ons-entwickeln/attribut-definition.md
-          - Kategorien programmieren: software-entwicklung/add-ons-entwickeln/kategorien-programmieren.md
+          - Install, Update, and Activate Add-ons: software-entwicklung/add-ons-entwickeln/add-ons-installieren-aktualisieren-und-entwickeln.md
+          - File and Folder Structure of an Add-on: software-entwicklung/add-ons-entwickeln/datei-und-ordnerstruktur-eines-add-ons.md
+          - Bootstrapping an Add-on (init.php): software-entwicklung/add-ons-entwickeln/boostraping-eines-add-ons.md
+          - CMDB Processors: software-entwicklung/add-ons-entwickeln/cmdb-prozessoren.md
+          - Metadata of an Add-on (package.json): software-entwicklung/add-ons-entwickeln/metadaten-eines-add-ons.md
+          - Localization: software-entwicklung/add-ons-entwickeln/lokalisierung.md
+          - Routing and MVC: software-entwicklung/add-ons-entwickeln/routing-und-mvc.md
+          - Using Permissions in Add-ons: software-entwicklung/add-ons-entwickeln/benutzerrechte-im-add-on-nutzen.md
+          - Using Commands in Add-ons: software-entwicklung/add-ons-entwickeln/commands-im-add-on-nutzen.md
+          - Extend System Settings: software-entwicklung/add-ons-entwickeln/systemeinstellungen-erweitern.md
+          - Extend API: software-entwicklung/add-ons-entwickeln/api-erweitern.md
+          - Attribute Definition: software-entwicklung/add-ons-entwickeln/attribut-definition.md
+          - Programming Categories: software-entwicklung/add-ons-entwickeln/kategorien-programmieren.md
           - Report Views: software-entwicklung/add-ons-entwickeln/report-views.md
           - Signal-Slot System: software-entwicklung/add-ons-entwickeln/signal-slot-system.md
-          - DIY Daten-Import: software-entwicklung/add-ons-entwickeln/diy-daten-import.md
-          - Dashboard Widget programmieren: software-entwicklung/add-ons-entwickeln/dashboard-widget-programmieren.md
+          - DIY Data Import: software-entwicklung/add-ons-entwickeln/diy-daten-import.md
+          - Programming Dashboard Widgets: software-entwicklung/add-ons-entwickeln/dashboard-widget-programmieren.md
   - Glossary: glossar.md
   - FAQ: faq.md
 not_in_nav: |
