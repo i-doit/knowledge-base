@@ -6,7 +6,7 @@ status:
 lang: en
 ---
 
-Starting with i-doit version 1.7, you need at least **MySQL 5.6** or **MariaDB 10.0** (previously: MySQL 5.5 / MariaDB 5.5). This article describes the upgrade steps for the various [supported operating systems](../installation/manual-installation/index.md).
+Starting with i-doit version 1.7, you need at least **MySQL 5.6** or **MariaDB 10.0** (previously: MySQL 5.5 / MariaDB 5.5). This article describes the upgrade steps for the various [supported operating systems](../installation/manuelle-installation/index.md).
 
 Check your current version:
 
@@ -144,7 +144,7 @@ If a XAMPP version with MariaDB 10.0 is not already in use, the following steps 
 4. Delete the XAMPP directory
 5. Install the new XAMPP version in the same directory
 6. Restore the htdocs and mysql\data directories from the copy of the XAMPP directory without overwriting existing files
-7. Adjust configuration files to meet the [system settings](../installation/manual-installation/systemeinstellungen.md) requirements
+7. Adjust configuration files to meet the [system settings](../installation/manuelle-installation/systemeinstellungen.md) requirements
 8. Start Apache web server and MariaDB
 9. Perform tests
 

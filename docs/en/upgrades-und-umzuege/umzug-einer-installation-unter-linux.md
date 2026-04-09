@@ -27,7 +27,7 @@ A few things need to be considered to ensure a smooth migration:
 First, the new system should be prepared as much as possible:
 
 1. The system requirements match the version in use; see the [compatibility matrix](../installation/systemvoraussetzungen.md#kompatibilitatsmatrix).
-2. Customized [system settings](../installation/manual-installation/systemeinstellungen.md) have been configured.
+2. Customized [system settings](../installation/manuelle-installation/systemeinstellungen.md) have been configured.
 
 ## Decommission Old System
 

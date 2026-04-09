@@ -110,7 +110,7 @@ Delete unwanted entries (e.g., wildcards `%` or external addresses). Only `local
 
 ### Secure PHP
 
-Always keep PHP on the latest patch level. The settings required for i-doit can be found in the [system settings](../installation/manual-installation/systemeinstellungen.md). Additional hardening can be achieved via a dedicated configuration file:
+Always keep PHP on the latest patch level. The settings required for i-doit can be found in the [system settings](../installation/manuelle-installation/systemeinstellungen.md). Additional hardening can be achieved via a dedicated configuration file:
 
 ```shell
 sudo nano /etc/php/8.2/mods-available/zz_security.ini

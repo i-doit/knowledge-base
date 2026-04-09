@@ -26,7 +26,7 @@ _i-doit_ offers [significantly more features](https://www.i-doit.org/cmdb-it-doc
 
 !!! warning "This process cannot be undone. Create a working [backup](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md)!"
 
-After the upgrade, you will need a valid [license for i-doit](../wartung-und-betrieb/lizenzierung.md). Make sure that the [system requirements](../installation/systemvoraussetzungen.md) and [settings](../installation/manual-installation/systemeinstellungen.md) are met.
+After the upgrade, you will need a valid [license for i-doit](../wartung-und-betrieb/lizenzierung.md). Make sure that the [system requirements](../installation/systemvoraussetzungen.md) and [settings](../installation/manuelle-installation/systemeinstellungen.md) are met.
 
 For older open installations, note:
 

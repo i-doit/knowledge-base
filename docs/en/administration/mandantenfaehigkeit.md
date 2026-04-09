@@ -69,7 +69,7 @@ For each tenant, you specify the following properties:
 -   **Description**: Free-text description (purely informational, has no functional effect).
 -   **Sort value**: Sort order as an integer. The lower the value, the higher the tenant appears.
 -   **Cache dir**: Dedicated cache directory below `temp/` in the installation directory. i-doit creates it automatically.
--   **MySQL settings**: Database name, host, user, and password. It is recommended to name the database with the prefix `idoit_`. After [installation](../installation/manual-installation/setup.md), the first tenant is named `idoit_data` by default.
+-   **MySQL settings**: Database name, host, user, and password. It is recommended to name the database with the prefix `idoit_`. After [installation](../installation/manuelle-installation/setup.md), the first tenant is named `idoit_data` by default.
 
 ## Object limit per tenant
 

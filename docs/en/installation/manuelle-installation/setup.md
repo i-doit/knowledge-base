@@ -6,7 +6,7 @@ status:
 lang: en
 ---
 
-Once the necessary preparations have been made - for example, [configuring the underlying operating system](../manual-installation/index.md), the i-doit setup can begin.
+Once the necessary preparations have been made - for example, [configuring the underlying operating system](../manuelle-installation/index.md), the i-doit setup can begin.
 
 ## Quick Start
 

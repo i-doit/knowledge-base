@@ -10,7 +10,7 @@ lang: en
 i-doit comes with German and English as built-in languages. The entire interface — menus, category labels, attribute names, and dialog values — is automatically displayed in the selected language. In addition, you can customize existing translations, override them, or even create entirely new languages via language profiles. This article explains how the language switch works, what is translated and what is not, and how you maintain your own translations.
 
 !!! info "English-only areas"
-    Some areas are only available in English: the [login](../grundlagen/erstanmeldung.md), the [Admin Center](../administration/admin-center.md), the [setup](../installation/manual-installation/setup.md), the [update wizard](../wartung-und-betrieb/update-einspielen.md), and the [command-line tool Controller](../automatisierung-und-integration/cli/index.md).
+    Some areas are only available in English: the [login](../grundlagen/erstanmeldung.md), the [Admin Center](../administration/admin-center.md), the [setup](../installation/manuelle-installation/setup.md), the [update wizard](../wartung-und-betrieb/update-einspielen.md), and the [command-line tool Controller](../automatisierung-und-integration/cli/index.md).
 
 ---
 

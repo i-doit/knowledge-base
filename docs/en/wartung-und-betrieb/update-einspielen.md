@@ -39,7 +39,7 @@ Open the update via one of the following methods:
 
 [![Update via Dashboard](../assets/images/de/wartung-und-betrieb/update/1-update.png)](../assets/images/de/wartung-und-betrieb/update/1-update.png)
 
-i-doit checks the current system status. If something is not right, compare the [system requirements](../installation/systemvoraussetzungen.md) and [system settings](../installation/manual-installation/systemeinstellungen.md). After adjustments, everything should be green or show "OK".
+i-doit checks the current system status. If something is not right, compare the [system requirements](../installation/systemvoraussetzungen.md) and [system settings](../installation/manuelle-installation/systemeinstellungen.md). After adjustments, everything should be green or show "OK".
 
 ### Step 1: i-doit Update and Compatibility Check
 

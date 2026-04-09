@@ -22,4 +22,4 @@ Increase the value of `max_allowed_packet` in the MySQL/MariaDB configuration fi
 max_allowed_packet = 128M
 ```
 
-Then restart the MySQL/MariaDB service. Further recommended values can be found in our [system settings](../../installation/manual-installation/systemeinstellungen.md).
+Then restart the MySQL/MariaDB service. Further recommended values can be found in our [system settings](../../installation/manuelle-installation/systemeinstellungen.md).

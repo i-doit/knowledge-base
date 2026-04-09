@@ -253,7 +253,7 @@ After successful login you should see the following output:
 
 ## Install i-doit
 
-The installation can be performed as described in the KB article for [Debian](../../../installation/manual-installation/debian/index.md).
+The installation can be performed as described in the KB article for [Debian](../../../installation/manuelle-installation/debian/index.md).
 
 ## Enable SSO login for i-doit
 

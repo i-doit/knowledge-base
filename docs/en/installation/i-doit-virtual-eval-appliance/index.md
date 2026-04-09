@@ -22,12 +22,12 @@ The appliance is available for free download during the evaluation process. To r
 
 The download comes as a standard ZIP file that needs to be extracted after downloading. It contains an OVF file that can be imported into common virtualization environments.
 
-During import, some settings may be requested (name, CPU cores, memory). The defaults can be accepted without issues. However, if they are changed, it is very likely that the [settings](../manual-installation/systemeinstellungen.md) of MariaDB and PHP will also need to be adjusted. It is also important not to fall below the [system requirements](../systemvoraussetzungen.md).
+During import, some settings may be requested (name, CPU cores, memory). The defaults can be accepted without issues. However, if they are changed, it is very likely that the [settings](../manuelle-installation/systemeinstellungen.md) of MariaDB and PHP will also need to be adjusted. It is also important not to fall below the [system requirements](../systemvoraussetzungen.md).
 
 [![Appliance-settings](../../assets/images/de/installation/virtual-appliance/import/vm_import.png)](../../assets/images/de/installation/virtual-appliance/import/vm_import.png)
 
 !!! info "Operating System"
-    The installed operating system is **[Debian GNU/Linux](../manual-installation/debian/index.md)** **10 buster** in the 64-bit variant. If the virtualizer does not automatically detect this, it should be specified manually. Otherwise, problems may occur when starting and running the VM.
+    The installed operating system is **[Debian GNU/Linux](../manuelle-installation/debian/index.md)** **10 buster** in the 64-bit variant. If the virtualizer does not automatically detect this, it should be specified manually. Otherwise, problems may occur when starting and running the VM.
 
 ## Accessing i-doit
 

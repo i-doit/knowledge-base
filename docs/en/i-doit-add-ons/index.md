@@ -32,7 +32,7 @@ The button opens a new dialog. Under **Tenant**, you specify whether the add-on 
 
 System settings
 
-For installation to be possible, the maximum file size liwith must exceed the file size of the ZIP file. Anyone who has fully met the [system requirements](../installation/manual-installation/systemeinstellungen.md) should not encounter any difficulties.
+For installation to be possible, the maximum file size liwith must exceed the file size of the ZIP file. Anyone who has fully met the [system requirements](../installation/manuelle-installation/systemeinstellungen.md) should not encounter any difficulties.
 
 After successful installation, a corresponding success message is displayed. The add-on is now listed in the list of installed add-ons. Each tenant has its own list here.
 

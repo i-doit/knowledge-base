@@ -20,7 +20,7 @@ i-doit cannot access the desired [tenant database](../../software-entwicklung/da
 
 ### Background
 
-In the [system database](../../software-entwicklung/datenbank-modell/index.md) (`idoit_system` for [standard installations](../../installation/manual-installation/setup.md)), i-doit stores all configured tenants in the table `isys_mandator`. Each tenant has its own database (`idoit_data` for the first tenant in standard installations).
+In the [system database](../../software-entwicklung/datenbank-modell/index.md) (`idoit_system` for [standard installations](../../installation/manuelle-installation/setup.md)), i-doit stores all configured tenants in the table `isys_mandator`. Each tenant has its own database (`idoit_data` for the first tenant in standard installations).
 
 The credentials for the tenant database are stored in the columns `isys_mandator__db_user` and `isys_mandator__db_pass`. Check these for validity.
 

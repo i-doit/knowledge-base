@@ -20,7 +20,7 @@ For automatic login to i-doit within an intranet, Single Sign-On (SSO) is the re
 
 ## Prerequisites
 
-*   i-doit is [installed](../../../installation/manual-installation/setup.md) on GNU/Linux.
+*   i-doit is [installed](../../../installation/manuelle-installation/setup.md) on GNU/Linux.
 *   An Active Directory (AD) running on Windows Server 2008/2012 is used for authentication.
 
 !!! warning "Case sensitivity"

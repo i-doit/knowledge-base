@@ -89,7 +89,7 @@ i-doit is responding slowly, pages take forever to load, saving takes minutes? T
 
 1. **System load** — is the CPU or memory at its limit? (`htop`, `free -h`)
 2. **Database size** — very large tenant databases benefit from regular [system repair and cleanup](../verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md). This function cleans up orphaned entries and optimizes tables.
-3. **MariaDB configuration** — the settings `innodb_buffer_pool_size` and `innodb_log_file_size` have a major impact on performance. Refer to our [system settings](../../installation/manual-installation/systemeinstellungen.md).
+3. **MariaDB configuration** — the settings `innodb_buffer_pool_size` and `innodb_log_file_size` have a major impact on performance. Refer to our [system settings](../../installation/manuelle-installation/systemeinstellungen.md).
 4. **PHP OPcache** — make sure the OPcache is enabled and has sufficient memory.
 5. **Network** — with remote databases, latency can be the cause.
 

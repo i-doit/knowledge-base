@@ -13,7 +13,7 @@ Via Windows Task Scheduling, you automate recurring i-doit tasks such as logbook
 
 ### Prerequisites
 
-This example assumes an i-doit instance that was set up with the [i-doit Windows Installer](../installation/manual-installation/microsoft-windows-server/index.md).
+This example assumes an i-doit instance that was set up with the [i-doit Windows Installer](../installation/manuelle-installation/microsoft-windows-server/index.md).
 
 !!! warning "If you installed i-doit via XAMPP, adjust the paths for `console.php` and `php.exe` in the batch file."
 

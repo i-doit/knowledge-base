@@ -185,7 +185,7 @@ Under PHPInfo in the menu, you can verify whether the values set in php.ini have
 
 The operating system is now prepared so that i-doit can be installed:
 
-[Continue to **Setup**](../../manual-installation/setup.md)
+[Continue to **Setup**](../../manuelle-installation/setup.md)
 
 ## FAQ
 

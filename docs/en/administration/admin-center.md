@@ -14,7 +14,7 @@ The Admin Center is the central, cross-tenant administration interface of i-doit
 
 ## Credentials and Login
 
-The Admin Center uses **separate credentials** — not your regular i-doit login. You set them during the [installation of i-doit](../installation/manual-installation/setup.md).
+The Admin Center uses **separate credentials** — not your regular i-doit login. You set them during the [installation of i-doit](../installation/manuelle-installation/setup.md).
 
 You can reach the Admin Center in two ways:
 

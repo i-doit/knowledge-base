@@ -8,7 +8,7 @@ lang: en
 
 # Initial login
 
-The initial login is your first step after [installing](../installation/manual-installation/index.md) i-doit. Here you will learn which default users exist, how to log in, and what you should pay attention to right after logging in.
+The initial login is your first step after [installing](../installation/manuelle-installation/index.md) i-doit. Here you will learn which default users exist, how to log in, and what you should pay attention to right after logging in.
 
 ## Default users and groups
 

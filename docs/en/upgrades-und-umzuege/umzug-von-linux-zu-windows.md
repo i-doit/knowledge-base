@@ -8,7 +8,7 @@ lang: en
 
 # Migration from Linux to Windows
 
-This article describes how to migrate your i-doit installation from Linux to a Windows Server. Prerequisite: The Windows Server was set up with the [i-doit Windows Installer](../installation/manual-installation/microsoft-windows-server/index.md) .
+This article describes how to migrate your i-doit installation from Linux to a Windows Server. Prerequisite: The Windows Server was set up with the [i-doit Windows Installer](../installation/manuelle-installation/microsoft-windows-server/index.md) .
 
 ## Preparations and Assumptions
 

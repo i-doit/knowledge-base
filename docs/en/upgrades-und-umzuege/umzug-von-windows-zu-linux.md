@@ -17,7 +17,7 @@ Before you start:
 *   **Inform users** -- Notify all colleagues in advance about the migration and the planned downtime.
 *   **Identify interfaces** -- Which third-party systems ([Nagios](../i-doit-add-ons/nagios.md), [((OTRS)) Community Edition](../automatisierung-und-integration/service-desk/otrscommunity-help-desk.md), [additional](../daten-konsolidieren/index.md)) access i-doit? Deactivate data access during the migration, running [Tasks](../automatisierung-und-integration/cli/index.md), [Backups](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) and monitoring.
 *   **Windows side** -- This example assumes a XAMPP setup ([Apache Friends](https://www.apachefriends.org/)) . In the following, we use "MySQL" also for MariaDB. Configuration adjustments should be transferred to the new system.
-*   **Linux side** -- The new system must be [prepared](../installation/manual-installation/index.md) and all [system requirements](../installation/systemvoraussetzungen.md) and [settings](../installation/manual-installation/systemeinstellungen.md) must be fulfilled. DNS, SMTP, and LDAP/AD must be reachable.
+*   **Linux side** -- The new system must be [prepared](../installation/manuelle-installation/index.md) and all [system requirements](../installation/systemvoraussetzungen.md) and [settings](../installation/manuelle-installation/systemeinstellungen.md) must be fulfilled. DNS, SMTP, and LDAP/AD must be reachable.
 *   **Credentials** -- Have the passwords for the MySQL system user (`root`) and the i-doit user (`idoit`) ready.
 
 ## Export Data from Windows

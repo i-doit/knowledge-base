@@ -22,7 +22,7 @@ With the Report Special add-on, approximately 50 pre-built reports are imported.
 
 ## Evaluating a Report
 
-The self-created reports are located under **Reports**. After the [setup of _i-doit_](../installation/manual-installation/setup.md), there are no reports in this area yet.
+The self-created reports are located under **Reports**. After the [setup of _i-doit_](../installation/manuelle-installation/setup.md), there are no reports in this area yet.
 
 [![evaluate-report](../assets/images/de/auswertungen/report-manager/2-rm.png)](../assets/images/de/auswertungen/report-manager/2-rm.png)
 

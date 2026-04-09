@@ -11,7 +11,7 @@ We explain which packages need to be installed and configured in a few steps in 
 !!! warning ""
     When you install Debian, you will eventually reach a "Software selection" dialog that contains a list of checkboxes for selecting the software you want to install initially. Here, the "Debian desktop environment" checkbox is already checked. If you uncheck this checkbox and leave all other desktop environment checkboxes (GNOME, Xfce, etc.) unchecked, this results in a GUI-less installation:
 
-    [![Software selection](../../../assets/images/de/installation/manual-installation/debian/gui.png)](../../../assets/images/de/installation/manual-installation/debian/gui.png)
+    [![Software selection](../../../assets/images/de/installation/manuelle-installation/debian/gui.png)](../../../assets/images/de/installation/manuelle-installation/debian/gui.png)
 
 ## System Requirements
 

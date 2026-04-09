@@ -46,7 +46,7 @@ sudo apt install php-ldap
 sudo service apache2 restart
 ```
 
-### Subsequent installation on [Windows](../../installation/manual-installation/microsoft-windows-server/index.md)
+### Subsequent installation on [Windows](../../installation/manuelle-installation/microsoft-windows-server/index.md)
 
 Edit the file `php.ini` (typically located at `C:\xampp\php\php.ini`). Enable the extension `php_ldap` by removing the semicolon at the beginning of the line.
 

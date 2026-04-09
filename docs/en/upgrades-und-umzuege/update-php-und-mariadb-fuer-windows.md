@@ -6,7 +6,7 @@ status:
 lang: en
 ---
 
-In this article, we show you how to update PHP and MariaDB for your [i-doit Windows](../installation/manual-installation/microsoft-windows-server/index.md) installation.
+In this article, we show you how to update PHP and MariaDB for your [i-doit Windows](../installation/manuelle-installation/microsoft-windows-server/index.md) installation.
 
 ## Update Packages
 

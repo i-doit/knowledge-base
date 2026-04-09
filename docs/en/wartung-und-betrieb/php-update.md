@@ -192,7 +192,7 @@ Enable the configuration for all SAPIs (CLI and FPM):
 sudo phpenmod -v 8.3 i-doit
 ```
 
-The complete settings can be found at [System settings](../installation/manual-installation/systemeinstellungen.md).
+The complete settings can be found at [System settings](../installation/manuelle-installation/systemeinstellungen.md).
 
 ### Where Are the php.ini Files Located?
 

@@ -20,7 +20,7 @@ The object ID is displayed in the [category](struktur-it-dokumentation.md) **Gen
 
 [![object-id](../assets/images/de/grundlagen/eindeutige-referenzierungen/1-er.png)](../assets/images/de/grundlagen/eindeutige-referenzierungen/1-er.png)
 
-During [i-doit setup](../installation/manual-installation/setup.md), you can determine from which point object IDs are assigned. By default, counting starts at 1.
+During [i-doit setup](../installation/manuelle-installation/setup.md), you can determine from which point object IDs are assigned. By default, counting starts at 1.
 
 The object ID is highly significant in the generation of URIs. Objects can be uniquely accessed via a link using the ID. The variable name is objID. The naming schema:
 
