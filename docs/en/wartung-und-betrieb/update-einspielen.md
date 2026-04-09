@@ -156,4 +156,4 @@ Perform the following steps after every update:
 
 1. [Clear cache](../administration/verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md)
 2. [Rebuild search index](../administration/verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md)
-3. [Update reports](../auswertungen/report-manager.md#aktualisieren-der-reports-nach-einem-update)
+3. [Update reports](../auswertungen/report-manager.md#updating-reports-after-an-update)

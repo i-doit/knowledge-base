@@ -62,7 +62,7 @@ sudo -u www-data php /var/www/html/console.php COMMAND \
     php console.php search-index -c /var/www/html/search-index.ini
     ```
 
-    A detailed guide with examples for each command can be found at [Configuration files for the i-doit console](../automatisierung-und-integration/cli/configuration-files.md#beispiel-fur-den-befehl-search-index).
+    A detailed guide with examples for each command can be found at [Configuration files for the i-doit console](../automatisierung-und-integration/cli/configuration-files.md#example-for-the-search-index-command).
 
 A complete list of all commands can be found at [Commands and options](../automatisierung-und-integration/cli/befehle-und-optionen.md).
 
@@ -106,7 +106,7 @@ You should set up these jobs in every i-doit installation:
 ```
 
 !!! tip "No passwords in the crontab"
-    Instead of repeating `--user` and `--password` in every line, store the credentials in a [configuration file](../automatisierung-und-integration/cli/configuration-files.md#beispiel-fur-den-befehl-search-index) and reference it with `-c`.
+    Instead of repeating `--user` and `--password` in every line, store the credentials in a [configuration file](../automatisierung-und-integration/cli/configuration-files.md#example-for-the-search-index-command) and reference it with `-c`.
 
 !!! warning "Mind the time window"
     Run jobs **at night** when no users are working. During execution, no other access to i-doit should occur -- neither via the web GUI nor via the API.
@@ -123,7 +123,7 @@ If you synchronize users from an [LDAP directory](../benutzerauthentifizierung-u
 - `--ldapServerId 1` -- The ID of your LDAP server (found under Administration > LDAP)
 - The log is written to `/var/www/html/log/ldap-sync.log` -- helpful for troubleshooting
 
-The LDAP sync has many parameters (filters, mapping, groups). Instead of writing them all in the crontab, use a [configuration file](../automatisierung-und-integration/cli/configuration-files.md#beispiel-fur-den-befehl-ldap-sync) -- there you will find a complete example with attribute mapping and all options.
+The LDAP sync has many parameters (filters, mapping, groups). Instead of writing them all in the crontab, use a [configuration file](../automatisierung-und-integration/cli/configuration-files.md#example-for-the-ldap-sync-command) -- there you will find a complete example with attribute mapping and all options.
 
 ### JDisc Import
 

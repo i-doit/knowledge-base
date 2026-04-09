@@ -18,7 +18,7 @@ Highlights in this release
 *   **Setting** to define a [**default language** for newly created users](../../administration/verwaltung/mandanten-name-verwaltung/einstellungen-mandanten-name.md#sprache).
 *   **New configuration** to **[attribute settings](../../administration/verwaltung/datenansicht/attribut-einstellungen.md)** from categories and/or overview pages.
 *   **Option** to **log** the **[last login](../../administration/verwaltung/mandanten-name-verwaltung/einstellungen-mandanten-name.md#sicherheit)** of a user.
-*   [**Export** for **reports**](../../auswertungen/report-manager.md#report-exportierenimportieren) which have been created via **query builder**.
+*   [**Export** for **reports**](../../auswertungen/report-manager.md#exportingimporting-reports) which have been created via **query builder**.
 
 Add-ons
 -------
