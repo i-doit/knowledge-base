@@ -15,11 +15,11 @@ The [add-on](../index.md) **VIVA** is dedicated to the topic of information secu
 Table of contents
 ------------------
 
-1. [Introduction to VIVA](./einleitung-zu-viva.md)
+1. [Introduction to VIVA](./introduction-to-viva.md)
     1. IT-Grundschutz
     2. Who this document is aimed at
     3. Structure of this document
-2. [Preparing the VIVA installation](./vorbereitung-der-viva-installation.md)
+2. [Preparing the VIVA installation](./preparation-viva-installation.md)
     1. System requirements
     2. Download
     3. Installation
@@ -28,7 +28,7 @@ Table of contents
     6. Uninstall
     7. Permission management
     8. Migrating from the previous ITGS module
-3. [Procedure with VIVA](./vorgehensweise-mit-viva.md)
+3. [Procedure with VIVA](./procedure-with-viva.md)
     1. Managing IT-Grundschutz catalogs
     2. Modeling information domains
     3. Creating target groups
@@ -40,13 +40,13 @@ Table of contents
     9. Implementing measures
     10. Answering audit questions
     11. Performing supplementary security analysis
-4. [Risk analysis based on IT-Grundschutz](./risikoanalyse-nach-it-grundschutz.md)
+4. [Risk analysis based on IT-Grundschutz](./risk-analysis-it-grundschutz.md)
     1. Identifying threats
     2. Evaluating threats
-5. [Reports with VIVA](./berichte-mit-viva.md)
+5. [Reports with VIVA](./reports-with-viva.md)
     1. Creating audits
     2. Reference documents
-6. [Supporting audits with VIVA](./audits-mit-viva-unterstuetzen.md)
+6. [Supporting audits with VIVA](./support-audits-with-viva.md)
 7. [VIVA Wizards](./viva-assistenten.md)
     1. Target group wizards
     2. Protection needs wizards
@@ -56,7 +56,7 @@ Table of contents
 Appendix
 ------
 
-*   [Example of a possible workflow](./arbeitsablauf-mit-viva.md)
+*   [Example of a possible workflow](./workflow-with-viva.md)
 *   [FAQ about VIVA](https://help.i-doit.com/hc/de/articles/115002984325-FAQ-zu-VIVA)
 
 Releases

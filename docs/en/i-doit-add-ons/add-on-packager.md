@@ -1,7 +1,7 @@
 # Add-on Packager
 
 The idea of the Add-on Packager is to give the user the possibility to build his own full-fledged [add-ons](./index.md). The Add-on Packager is operated completely via the i-doit graphical user interface and no programming skills are required.<br>
-The structures that the user can create using [Edit data structure](../grundlagen/zurodnung-von-kategorien-zu-objekttypen.md) or the [Report Manager](../auswertungen/report-manager.md), for example, can be packaged and distributed as add-ons.
+The structures that the user can create using [Edit data structure](../basics/assigning-categories-to-object-types.md) or the [Report Manager](../evaluation/report-manager.md), for example, can be packaged and distributed as add-ons.
 
 ## General notes
 
@@ -23,14 +23,14 @@ Like any add-on, the Packager add-on is installed via the Admin-Center. The Pack
 
 ## Which structures can be packed into an add-on?
 
-Currently the following [structures](../grundlagen/struktur-it-dokumentation.md) can be included in an add-on with the Add-on Packager:
+Currently the following [structures](../basics/it-documentation-structure.md) can be included in an add-on with the Add-on Packager:
 
 Object type groups<br>
 Object types<br>
-[Custom Categories](../grundlagen/benutzerdefinierte-kategorien.md)<br>
-[Reports](../auswertungen/report-manager.md)<br>
+[Custom Categories](../basics/custom-categories.md)<br>
+[Reports](../evaluation/report-manager.md)<br>
 Dialog fields<br>
-[Relationship types](../grundlagen/objekt-beziehungen.md)
+[Relationship types](../basics/object-relationships.md)
 
 ## Creating an Add-on Structural Template
 

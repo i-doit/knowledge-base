@@ -10,7 +10,7 @@ lang: en
 
 ### License installation
 
-How i-doit is licensed can be found in the article [Licensing](../../wartung-und-betrieb/lizenzierung.md){: target="_blank"}.
+How i-doit is licensed can be found in the article [Licensing](../../maintenance-and-operation/licensing.md){: target="_blank"}.
 
 ### Download and installation of the Forms Add-on
 
@@ -185,8 +185,8 @@ The installation is now complete.
 
 ## 5. Configuration in i-doit
 
-For the frontend to communicate with the backend, enter the previously used username and API key in the administration under [Settings for [tenant-name]](../../administration/verwaltung/mandanten-name-verwaltung/einstellungen-mandanten-name.md). Access these via **Administration → [tenant-name] Administration → Settings for [tenant-name] → Forms Add-on**.
+For the frontend to communicate with the backend, enter the previously used username and API key in the administration under [Settings for [tenant-name]](../../administration/management/tenant-management/tenant-settings.md). Access these via **Administration → [tenant-name] Administration → Settings for [tenant-name] → Forms Add-on**.
 
 [![Configuration in i-doit](../../assets/images/de/i-doit-add-ons/forms/installation/konfig-i-doit.png)](../../assets/images/de/i-doit-add-ons/forms/installation/konfig-i-doit.png)
 
-[Continue with "Using the Forms Add-on"](./forms-verwenden.md){ .md-button .md-button--primary }
+[Continue with "Using the Forms Add-on"](./create-forms.md){ .md-button .md-button--primary }

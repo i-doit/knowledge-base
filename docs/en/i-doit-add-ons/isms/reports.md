@@ -6,7 +6,7 @@ lang: en
 
 # Reports in the ISMS Add-on
 
-This page describes the evaluations provided with the ISMS add-on in **i-doit**. For a general introduction to reports and where to find them in i-doit, see the [Report Manager](../../auswertungen/report-manager.md).
+This page describes the evaluations provided with the ISMS add-on in **i-doit**. For a general introduction to reports and where to find them in i-doit, see the [Report Manager](../../evaluation/report-manager.md).
 
 **Quick Overview**
 

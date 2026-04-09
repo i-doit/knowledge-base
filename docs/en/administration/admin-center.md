@@ -14,7 +14,7 @@ The Admin Center is the central, cross-tenant administration interface of i-doit
 
 ## Credentials and Login
 
-The Admin Center uses **separate credentials** — not your regular i-doit login. You set them during the [installation of i-doit](../installation/manuelle-installation/setup.md).
+The Admin Center uses **separate credentials** — not your regular i-doit login. You set them during the [installation of i-doit](../installation/manual-installation/setup.md).
 
 You can reach the Admin Center in two ways:
 
@@ -24,7 +24,7 @@ You can reach the Admin Center in two ways:
 [![Login](../assets/images/de/administration/admin-center/1-ac.png)](../assets/images/de/administration/admin-center/1-ac.png)
 
 !!! warning "Forgot your password?"
-    If you can no longer log in, the password can only be reset via the [i-doit console utility](../automatisierung-und-integration/cli/index.md).
+    If you can no longer log in, the password can only be reset via the [i-doit console utility](../automation-and-integration/cli/index.md).
 
 !!! info "English interface"
     The Admin Center interface is entirely in English.
@@ -39,13 +39,13 @@ Shows the installed i-doit version. Under **Actions** you can download the **i-d
 
 Here you manage tenants — relevant for multi-tenant licenses. You can create new tenants, (de)activate existing ones, or delete them.
 
-!!! warning "A deleted tenant can only be restored from a [backup](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md)."
+!!! warning "A deleted tenant can only be restored from a [backup](../maintenance-and-operation/backup-and-restore/index.md)."
 
 [![Tenants](../assets/images/de/administration/admin-center/4-ac.png)](../assets/images/de/administration/admin-center/4-ac.png)
 
 ## Licenses
 
-Here you import your [license](../wartung-und-betrieb/lizenzierung.md).
+Here you import your [license](../maintenance-and-operation/licensing.md).
 
 [![Licenses](../assets/images/de/administration/admin-center/5-ac.png)](../assets/images/de/administration/admin-center/5-ac.png)
 
@@ -60,7 +60,7 @@ Here you install and manage [i-doit add-ons](../i-doit-add-ons/index.md).
 [![Admin Center System Settings](../assets/images/de/administration/admin-center-system-settings.png)](../assets/images/de/administration/admin-center-system-settings.png)
 
 !!! info "Since i-doit v25"
-    The system-wide settings have been moved to the Admin Center since version 25. Tenant-specific settings can still be found under [Administration → Expert Settings](verwaltung/mandanten-name-verwaltung/experteneinstellungen.md).
+    The system-wide settings have been moved to the Admin Center since version 25. Tenant-specific settings can still be found under [Administration → Expert Settings](management/tenant-management/expert-settings.md).
 
 ### Login
 
@@ -81,7 +81,7 @@ If your i-doit installation does not have direct internet access (e.g., for lice
 
 ### SMTP
 
-Email configuration for [notifications](../auswertungen/benachrichtigungen.md), password reset emails, and maintenance contract reminders. Without a correct SMTP configuration, **no emails** will be sent.
+Email configuration for [notifications](../evaluation/notifications.md), password reset emails, and maintenance contract reminders. Without a correct SMTP configuration, **no emails** will be sent.
 
 | Setting | Description |
 |---------|-------------|
@@ -114,7 +114,7 @@ Email configuration for [notifications](../auswertungen/benachrichtigungen.md), 
 
 | Setting | Description |
 |---------|-------------|
-| **Active** | Enable/disable SSO. Prerequisite: an [SSO method](../benutzerauthentifizierung-und-verwaltung/sso-vergleich/index.md) must be configured. |
+| **Active** | Enable/disable SSO. Prerequisite: an [SSO method](../user-authentication-and-management/sso-comparison/index.md) must be configured. |
 | **Default tenant** | Which tenant is automatically selected during SSO login |
 | **Use Domain Part** | When set to `Yes`, the domain part of the username (e.g., `COMPANY\lfischer`) is used for tenant assignment |
 
@@ -194,4 +194,4 @@ Here you change three basic settings:
 [![Configuration](../assets/images/de/administration/admin-center/7-ac.png)](../assets/images/de/administration/admin-center/7-ac.png)
 
 !!! tip "Emergency access"
-    In an emergency, you can change the database settings directly in the file `src/config.inc.php` in the installation directory. During an [update](../wartung-und-betrieb/update-einspielen.md), i-doit automatically creates a backup of this file.
+    In an emergency, you can change the database settings directly in the file `src/config.inc.php` in the installation directory. During an [update](../maintenance-and-operation/i-doit-update.md), i-doit automatically creates a backup of this file.

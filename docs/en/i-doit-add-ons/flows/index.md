@@ -40,7 +40,7 @@ If your instance does not have internet access, you must manually extract the up
 
 #### Step 1: Download i-doit 33 Updater
 
-Download the update package from the [Customer Portal](../../administration/kundenportal.md).
+Download the update package from the [Customer Portal](../../administration/customer-portal.md).
 
 #### Step 2: Move `idoit-33-update.zip` to the i-doit directory
 
@@ -68,7 +68,7 @@ unzip idoit-33-update.zip
 
 Now adjust the file permissions so that the web server has read and write access to **i-doit**.
 
-!!! info "The user:group combination **www-data:www-data** used here refers to **Debian** or **Ubuntu** Linux. If you are using a different operating system, you must adjust the user:group combination accordingly. See [here](../../installation/manuelle-installation/setup.md#installationspaket-herunterladen-und-entpacken)."
+!!! info "The user:group combination **www-data:www-data** used here refers to **Debian** or **Ubuntu** Linux. If you are using a different operating system, you must adjust the user:group combination accordingly. See [here](../../installation/manual-installation/setup.md#installationspaket-herunterladen-und-entpacken)."
 
 !!! quote ""
     === "Debian & Ubuntu"
@@ -135,7 +135,7 @@ To use the **Subscription & Add-ons** feature, you need the license token. Enter
 
 ### (Offline) Flows Add-on via the Admin Center
 
-If your i-doit instance cannot access the internet or the [Subscription & Add-ons](../../administration/add-on-and-subscription-center.md) backend, download the add-on from the [Customer Portal](../../administration/kundenportal.md) and install it via the [Admin Center](../../administration/admin-center.md).
+If your i-doit instance cannot access the internet or the [Subscription & Add-ons](../../administration/add-on-and-subscription-center.md) backend, download the add-on from the [Customer Portal](../../administration/customer-portal.md) and install it via the [Admin Center](../../administration/admin-center.md).
 
 #### Step 1: Download the Flows Add-on from the Customer Portal
 
@@ -173,7 +173,7 @@ sudo chmod +x src/classes/modules/synetics_flows/create-daemon.sh
 
 Now you can execute **create-daemon.sh** to create and enable a service for the automatic execution of Flows. **Each tenant requires its own service.**
 
--   `-i` Tenant ID (viewable via the console command [tenant-list](../../automatisierung-und-integration/cli/index.md))
+-   `-i` Tenant ID (viewable via the console command [tenant-list](../../automation-and-integration/cli/index.md))
 -   `-u` **i-doit admin user** in the selected tenant
 -   `-p` **password of the admin user** in the selected tenant
 

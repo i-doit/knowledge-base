@@ -127,6 +127,6 @@ To avoid this error, you should decrease the configuration setting `i-doit.liwit
 
 ## Duplicated Objects After Pulling to i-doit
 
-If the matching does not seem to work correctly, make sure that the "Checkmk Host" and "Checkmk Tags" categories are assigned to the object types that you are pulling to i-doit. Use [Edit data structure](../../administration/verwaltung/datenstruktur/datenstruktur-bearbeiten.md) for this.
+If the matching does not seem to work correctly, make sure that the "Checkmk Host" and "Checkmk Tags" categories are assigned to the object types that you are pulling to i-doit. Use [Edit data structure](../../administration/management/data-structure/edit-data-structure.md) for this.
 
 It may also be necessary to reduce the [pull identifiers](./konfiguration.md) to, for example, just the hostname.

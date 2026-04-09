@@ -10,7 +10,7 @@ lang: en
 
 ## Creating Documents in the Add-on
 
-Once you have created a [template](./dokumentenvorlagen.md), you create a document for an object in the "Documents" menu item under the corresponding document category.
+Once you have created a [template](./document-templates.md), you create a document for an object in the "Documents" menu item under the corresponding document category.
 
 [![Template](../../assets/images/de/i-doit-add-ons/documents/dokumentenerstellung/1-de.png)](../../assets/images/de/i-doit-add-ons/documents/dokumentenerstellung/1-de.png)
 
@@ -48,6 +48,6 @@ Via "New," you create additional documents for the object. The object is already
 
 ## Document Creation via the i-doit Console
 
-You can also create new revisions and export documents via the i-doit [Console](../../automatisierung-und-integration/cli/index.md) and automate them.
+You can also create new revisions and export documents via the i-doit [Console](../../automation-and-integration/cli/index.md) and automate them.
 
 The command [documents](index.md#cli-console-commands-und-optionen) is available for these operations.

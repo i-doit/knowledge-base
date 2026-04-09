@@ -22,12 +22,12 @@ The appliance is available for free download during the evaluation process. To r
 
 The download comes as a standard ZIP file that needs to be extracted after downloading. It contains an OVF file that can be imported into common virtualization environments.
 
-During import, some settings may be requested (name, CPU cores, memory). The defaults can be accepted without issues. However, if they are changed, it is very likely that the [settings](../manuelle-installation/systemeinstellungen.md) of MariaDB and PHP will also need to be adjusted. It is also important not to fall below the [system requirements](../systemvoraussetzungen.md).
+During import, some settings may be requested (name, CPU cores, memory). The defaults can be accepted without issues. However, if they are changed, it is very likely that the [settings](../manual-installation/system-settings.md) of MariaDB and PHP will also need to be adjusted. It is also important not to fall below the [system requirements](../system-requirements.md).
 
 [![Appliance-settings](../../assets/images/de/installation/virtual-appliance/import/vm_import.png)](../../assets/images/de/installation/virtual-appliance/import/vm_import.png)
 
 !!! info "Operating System"
-    The installed operating system is **[Debian GNU/Linux](../manuelle-installation/debian/index.md)** **10 buster** in the 64-bit variant. If the virtualizer does not automatically detect this, it should be specified manually. Otherwise, problems may occur when starting and running the VM.
+    The installed operating system is **[Debian GNU/Linux](../manual-installation/debian/index.md)** **10 buster** in the 64-bit variant. If the virtualizer does not automatically detect this, it should be specified manually. Otherwise, problems may occur when starting and running the VM.
 
 ## Accessing i-doit
 
@@ -47,7 +47,7 @@ The IP address can be configured via the console (see below).
 | MySQL (Systemuser)                                          | **root**       | **idoit**                |
 | Forms Add-on API                                            | **idoit**      | **SrUBXhaop0bp4dgdtiMY** |
 
-Additionally, [the predefined persons and person groups](../../grundlagen/erstanmeldung.md) exist in i-doit.
+Additionally, [the predefined persons and person groups](../../basics/initial-login.md) exist in i-doit.
 
 ## Configuration
 
@@ -63,7 +63,7 @@ The appliance configuration can be done on the console. After logging in via SSH
 | **4**    | **Timezone**                             | Set time zone                                                                                                                                                                             |
 | **5**    | **Keyboard layout**                      | Keyboard layout; de is set as default                                                                                                                                                     |
 | **6**    | **Change idoitadm user password**        | Change the password of user **idoitadm**                                                                                                                                                  |
-| **7**    | **i-doit scripting configuration  <br>** | Change settings for CLI, [cron jobs](../../wartung-und-betrieb/cronjobs-einrichten.md), [backups and restore](../../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md)      |
+| **7**    | **i-doit scripting configuration  <br>** | Change settings for CLI, [cron jobs](../../maintenance-and-operation/set-up-cron-jobs.md), [backups and restore](../../maintenance-and-operation/backup-and-restore/index.md)      |
 | **8**    | **Reboot system**                        | Restart the system                                                                                                                                                                        |
 | **9**    | **Shutdown system**                      | Shut down the system                                                                                                                                                                      |
 | **0**    | **Launch shell**                         | Open shell for further actions                                                                                                                                                            |
@@ -82,7 +82,7 @@ The appliance includes various scripts and cron jobs.
 
 The scripts are located at **/usr/local/bin/**.
 
-Pre-configured [cron jobs](../../automatisierung-und-integration/cli/index.md) exist at **/etc/cron.d/i-doit** that regularly optimize the system.
+Pre-configured [cron jobs](../../automation-and-integration/cli/index.md) exist at **/etc/cron.d/i-doit** that regularly optimize the system.
 
 Every night, i-doit data is backed up locally. The retention period is one week.
 
@@ -103,9 +103,9 @@ Where can things be found?
 
 The appliance provides a "bare" installation of i-doit. This means neither demo data nor additional [i-doit add-ons](../../i-doit-add-ons/index.md) are included.
 
-On first login, i-doit asks for a valid [license](../../wartung-und-betrieb/lizenzierung.md) that must be applied for all functions to be available.
+On first login, i-doit asks for a valid [license](../../maintenance-and-operation/licensing.md) that must be applied for all functions to be available.
 
-Further first steps with i-doit are also described in the Knowledge Base under [Basics](../../grundlagen/index.md).
+Further first steps with i-doit are also described in the Knowledge Base under [Basics](../../basics/index.md).
 
 ## Troubleshooting
 

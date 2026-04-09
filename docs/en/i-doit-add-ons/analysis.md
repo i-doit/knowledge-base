@@ -24,7 +24,7 @@ No separate configuration is required.
 
 ## Assigning rights
 
-Under **Administration → Authorization system → Rights → Analysis**, [permissions for persons and person groups](../effizientes-dokumentieren/rechteverwaltung/index.md) can be adjusted.
+Under **Administration → Authorization system → Rights → Analysis**, [permissions for persons and person groups](../efficient-documentation/permission-management/index.md) can be adjusted.
 
 | Condition | Description |
 | --- | --- |
@@ -45,22 +45,22 @@ Would you like to find out what impact the failure of a specific object has on y
 Click **Start simulation** to obtain the result. The result includes:
 
 - A **list of affected services** -- depending on the service filter, also parent services in the hierarchy.
-- Per service, an **outage severity**, displayed in color from green (minor) to red (severe). This is based on the weighting of the [object relationships](../grundlagen/objekt-beziehungen.md).
+- Per service, an **outage severity**, displayed in color from green (minor) to red (severe). This is based on the weighting of the [object relationships](../basics/object-relationships.md).
 - A **C** after the value indicates that the failed object is part of a cluster.
 
 Under **Tree view**, the outage is visualized as a service tree.
 
 [![Outage simulation](../assets/images/de/i-doit-add-ons/analysis/1-ans.png)](../assets/images/de/i-doit-add-ons/analysis/1-ans.png)
 
-Via the **Report object selection** tab, you can alternatively select the objects based on a [report](../auswertungen/report-manager.md).
+Via the **Report object selection** tab, you can alternatively select the objects based on a [report](../evaluation/report-manager.md).
 
 ## Live outages
 
-Under **Extras → Analysis → Live outages**, i-doit accesses the interface to a configured [network monitoring](../automatisierung-und-integration/network-monitoring/index.md) system (e.g., [Checkmk](../i-doit-add-ons/checkmk.md)). If a host actually fails, you can see directly what impact this outage has on your documented services.
+Under **Extras → Analysis → Live outages**, i-doit accesses the interface to a configured [network monitoring](../automation-and-integration/network-monitoring/index.md) system (e.g., [Checkmk](../i-doit-add-ons/checkmk.md)). If a host actually fails, you can see directly what impact this outage has on your documented services.
 
 ## Data quality
 
-Under **Extras → Analysis → Data quality**, you measure how completely your IT documentation is filled in. The benchmark: [Every assigned category](../grundlagen/zurodnung-von-kategorien-zu-objekttypen.md) of every object for each visible object type must be filled in -- that corresponds to 100 percent.
+Under **Extras → Analysis → Data quality**, you measure how completely your IT documentation is filled in. The benchmark: [Every assigned category](../basics/assigning-categories-to-object-types.md) of every object for each visible object type must be filled in -- that corresponds to 100 percent.
 
 **Example:** You have 21 objects of the type **Client** with 20 assigned categories. Only when all categories are filled in for all 21 objects do you reach 100%. Every gap reduces the value.
 
@@ -86,7 +86,7 @@ Under **Extras → Analysis → Object catalog**, you list all objects that belo
 
 1. Under **Object selection**, select an object of the type **Service**.
 2. Optionally narrow the analysis using the **Service filter**.
-3. Select the desired [attributes](../grundlagen/struktur-it-dokumentation.md) from [global and specific categories](../grundlagen/struktur-it-dokumentation.md) -- similar to the [Report Manager](../auswertungen/report-manager.md).
+3. Select the desired [attributes](../basics/it-documentation-structure.md) from [global and specific categories](../basics/it-documentation-structure.md) -- similar to the [Report Manager](../evaluation/report-manager.md).
 4. Click **Load object data** to generate the tabular result.
 
 [![Object catalog](../assets/images/de/i-doit-add-ons/analysis/4-ans.png)](../assets/images/de/i-doit-add-ons/analysis/4-ans.png)

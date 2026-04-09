@@ -12,7 +12,7 @@ lang: en
 
 [![mysql-mariadb-startet-nicht.png](../../assets/images/de/administration/troubleshooting/mysql-mariadb-startet-nicht.png)](../../assets/images/de/administration/troubleshooting/mysql-mariadb-startet-nicht.png)
 
-For better MySQL/MariaDB performance, [it is recommended](../../installation/manuelle-installation/systemeinstellungen.md) to change the `innodb_log_file_size` setting to a higher value. After the change, the service no longer starts and displays the following error message:
+For better MySQL/MariaDB performance, [it is recommended](../../installation/manual-installation/system-settings.md) to change the `innodb_log_file_size` setting to a higher value. After the change, the service no longer starts and displays the following error message:
 
 ```log
 110216  9:48:41  InnoDB: Initializing buffer pool, size = 128.0M

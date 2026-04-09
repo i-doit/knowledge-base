@@ -7,13 +7,13 @@ lang: en
 ---
 # Events
 
-With the Events [add-on](./index.md), you automate actions when changes are made to your [IT documentation](../glossar.md). When something is changed in i-doit, you can automatically notify third-party systems. For example, if you document a new VM, it can be automatically created and provisioned on a virtualization host.
+With the Events [add-on](./index.md), you automate actions when changes are made to your [IT documentation](../glossary.md). When something is changed in i-doit, you can automatically notify third-party systems. For example, if you document a new VM, it can be automatically created and provisioned on a virtualization host.
 
 !!! info "You can find a practical example on our [Blog](https://www.i-doit.com/blog/event-add-on/)"
 
 ## Assigning rights
 
-Under **Administration → Permissions → Events**, [permissions for persons and person groups](../effizientes-dokumentieren/rechteverwaltung/index.md) can be adjusted.
+Under **Administration → Permissions → Events**, [permissions for persons and person groups](../efficient-documentation/permission-management/index.md) can be adjusted.
 
 [![Assigning rights](../assets/images/de/i-doit-add-ons/events/1-eve.png)](../assets/images/de/i-doit-add-ons/events/1-eve.png)
 
@@ -24,22 +24,22 @@ The configuration is accessed via **Administration → Add-ons → Events → Ho
 [![Configuration](../assets/images/de/i-doit-add-ons/events/2-eve.png)](../assets/images/de/i-doit-add-ons/events/2-eve.png)
 
 !!! attention "404 Not Found"
-    If only an error message appears when accessing the event configuration, stating that the page could not be found, this is most likely due to an incorrect [web server configuration](../administration/verwaltung/mandanten-name-verwaltung/index.md). Both the Apache rewrite module must be activated and reading the .htaccess file in the i-doit installation directory must be perwithted (AllowOverride All).
+    If only an error message appears when accessing the event configuration, stating that the page could not be found, this is most likely due to an incorrect [web server configuration](../administration/management/tenant-management/index.md). Both the Apache rewrite module must be activated and reading the .htaccess file in the i-doit installation directory must be perwithted (AllowOverride All).
 
 You combine events with command calls. An event is triggered by a hook -- i.e., during an internal routine in i-doit. The following events are available:
 
--   [Category](../glossar.md)
+-   [Category](../glossary.md)
     -   Create (only via the web GUI)
     -   Save
     -   Archive/Delete/Restore/Purge
--   [Object](../glossar.md)
+-   [Object](../glossary.md)
     -   Create
     -   Purge
--   [Object type](../glossar.md)
+-   [Object type](../glossary.md)
     -   Create/Save
     -   Purge
 
-For all [states in IT documentation](../grundlagen/lebens-und-dokumentationszyklus.md), there are corresponding events. You can create any number of event-to-command-call combinations.
+For all [states in IT documentation](../basics/life-and-documentation-cycle.md), there are corresponding events. You can create any number of event-to-command-call combinations.
 
 When a configured event occurs, i-doit immediately executes a shell script. Note the following:
 
@@ -159,7 +159,7 @@ In this example, the **General** category for the object "Headquarter Network" w
 You can configure additional static parameters that are passed to the shell script. Placeholders are not supported.
 
 !!! success "i-doit Controller"
-    The described shell scripts are not only suitable for controlling third-party systems but also i-doit itself. There is nothing preventing you from calling i-doit's command-line tool, the [Controller](../automatisierung-und-integration/cli/index.md), or the [API](./api/index.md) via such a shell script. This allows automated tasks to be performed within the IT documentation.
+    The described shell scripts are not only suitable for controlling third-party systems but also i-doit itself. There is nothing preventing you from calling i-doit's command-line tool, the [Controller](../automation-and-integration/cli/index.md), or the [API](./api/index.md) via such a shell script. This allows automated tasks to be performed within the IT documentation.
 
 !!! success "Performance"
     The command calls are executed **synchronously** -- when clicking **Save**, i-doit waits until the shell script has finished. With many or extensive scripts, this can slow down the web GUI.

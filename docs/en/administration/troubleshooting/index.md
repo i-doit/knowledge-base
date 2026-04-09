@@ -27,7 +27,7 @@ All i-doit-specific logs are located in the installation directory under `log/`.
 | `log/exception.log` | PHP exceptions — the most common starting point for error messages in the interface. Enable under **Administration → [Tenant Name] Administration → Settings → Logging → Exception Log**. |
 | `log/system.log` | General system messages from i-doit |
 | `log/ldap_debug.log` | LDAP connection and sync log (when `ldap.debug` is enabled) |
-| `log/import_*.log` | Import logs for CSV, JDisc, and other [imports](../../daten-konsolidieren/index.md) |
+| `log/import_*.log` | Import logs for CSV, JDisc, and other [imports](../../consolidate-data/index.md) |
 
 !!! tip "Monitor log files in real time"
     Open a terminal and use `tail -f /path/to/idoit/log/exception.log`. Then perform the faulty action in i-doit — the error appears immediately in the terminal.
@@ -69,7 +69,7 @@ Check whether the Apache and MySQL/MariaDB processes are consuming unusually hig
 
 A white page (White Screen of Death) or an HTTP 500 error almost always indicates a PHP problem. First check the PHP error log of the web server (see above). Common causes:
 
-- **PHP version not compatible** — check the [system requirements](../../installation/systemvoraussetzungen.md) for your i-doit version.
+- **PHP version not compatible** — check the [system requirements](../../installation/system-requirements.md) for your i-doit version.
 - **PHP memory limit too low** — `memory_limit` in `php.ini` should be at least `256M`.
 - **File permissions incorrectly set** — the web server user (e.g., `www-data`) must have read and write permissions on the entire installation directory.
 - **Database not reachable** — see the [Database errors](#database-errors) section below.
@@ -79,17 +79,17 @@ A white page (White Screen of Death) or an HTTP 500 error almost always indicate
 If you cannot log in, there are several possible causes:
 
 - **"Lost link to database"** — the database connection is interrupted. Detailed help can be found in the article ["Lost link to database"](lost-link-to-database.md).
-- **Session timeout incorrectly configured** — a value that is too low can cause you to be logged out immediately after logging in. Read [No login after changing the session timeout](kein-login-nach-aenderung-des-session-timeouts.md).
+- **Session timeout incorrectly configured** — a value that is too low can cause you to be logged out immediately after logging in. Read [No login after changing the session timeout](no-login-after-session-timeout.md).
 - **LDAP problems** — if LDAP users cannot log in, check the LDAP configuration and the debug log. For TLS connections, the article [LDAP via TLS](ldap-via-tls.md) helps.
-- **Admin Center login** — the Admin Center uses separate credentials. If the password is forgotten, it can only be reset via the [CLI tool](../../automatisierung-und-integration/cli/index.md). See [Admin Center](../../administration/admin-center.md).
+- **Admin Center login** — the Admin Center uses separate credentials. If the password is forgotten, it can only be reset via the [CLI tool](../../automation-and-integration/cli/index.md). See [Admin Center](../../administration/admin-center.md).
 
 ### Performance problems
 
 i-doit is responding slowly, pages take forever to load, saving takes minutes? Then check:
 
 1. **System load** — is the CPU or memory at its limit? (`htop`, `free -h`)
-2. **Database size** — very large tenant databases benefit from regular [system repair and cleanup](../verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md). This function cleans up orphaned entries and optimizes tables.
-3. **MariaDB configuration** — the settings `innodb_buffer_pool_size` and `innodb_log_file_size` have a major impact on performance. Refer to our [system settings](../../installation/manuelle-installation/systemeinstellungen.md).
+2. **Database size** — very large tenant databases benefit from regular [system repair and cleanup](../management/tenant-management/system-repair-and-cleanup.md). This function cleans up orphaned entries and optimizes tables.
+3. **MariaDB configuration** — the settings `innodb_buffer_pool_size` and `innodb_log_file_size` have a major impact on performance. Refer to our [system settings](../../installation/manual-installation/system-settings.md).
 4. **PHP OPcache** — make sure the OPcache is enabled and has sufficient memory.
 5. **Network** — with remote databases, latency can be the cause.
 
@@ -107,23 +107,23 @@ Database problems are among the most common sources of errors. Here are the most
 | Database corruption (crashes, broken tables) | [MariaDB Database Corruption](mariadb-database-corruption.md) — repairing damaged InnoDB tables. |
 
 !!! info "Check database health"
-    The [System Repair and Cleanup](../verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md) function checks database integrity and can automatically fix many inconsistencies.
+    The [System Repair and Cleanup](../management/tenant-management/system-repair-and-cleanup.md) function checks database integrity and can automatically fix many inconsistencies.
 
 ### Update problems
 
-If an update fails or errors occur after the update, you can find a maintained list of known problems with workarounds in [Known Update Problems](bekannte-update-probleme.md). Also check:
+If an update fails or errors occur after the update, you can find a maintained list of known problems with workarounds in [Known Update Problems](known-update-issues.md). Also check:
 
-- Were the [system requirements](../../installation/systemvoraussetzungen.md) for the new version met?
-- Was a complete backup created before the update? If so, you can [restore](../../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) in an emergency.
+- Were the [system requirements](../../installation/system-requirements.md) for the new version met?
+- Was a complete backup created before the update? If so, you can [restore](../../maintenance-and-operation/backup-and-restore/index.md) in an emergency.
 - Are [hotfixes](../hotfixes/index.md) available for the new version?
 
 ### Location problems
 
-If you cannot save in the **Location** category, there is usually an inconsistency in the location hierarchy. The article [Location cannot be saved](standort-kann-nicht-gespeichert-werden.md) shows you how to find and fix the cause.
+If you cannot save in the **Location** category, there is usually an inconsistency in the location hierarchy. The article [Location cannot be saved](location-cannot-be-saved.md) shows you how to find and fix the cause.
 
 ### LDAP problems
 
-LDAP connections via TLS are known to be error-prone. The article [LDAP via TLS](ldap-via-tls.md) lists the most common causes and solutions. Also enable the LDAP debug log (`ldap.debug` in the [Expert Settings](../verwaltung/mandanten-name-verwaltung/experteneinstellungen.md)) to trace the communication with the LDAP server in detail.
+LDAP connections via TLS are known to be error-prone. The article [LDAP via TLS](ldap-via-tls.md) lists the most common causes and solutions. Also enable the LDAP debug log (`ldap.debug` in the [Expert Settings](../management/tenant-management/expert-settings.md)) to trace the communication with the LDAP server in detail.
 
 ---
 
@@ -131,8 +131,8 @@ LDAP connections via TLS are known to be error-prone. The article [LDAP via TLS]
 
 In addition to the log files, several tools are available within i-doit itself:
 
-- **[Logbook](../../grundlagen/kategorien/logbook.md)** — Every change to objects is recorded in the logbook. If data has disappeared or changed, the logbook shows you who changed what and when.
-- **[System Repair and Cleanup](../verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md)** — Checks the database for inconsistencies and repairs them. Particularly helpful after imports, migrations, or when i-doit behaves "strangely".
+- **[Logbook](../../basics/categories/logbook.md)** — Every change to objects is recorded in the logbook. If data has disappeared or changed, the logbook shows you who changed what and when.
+- **[System Repair and Cleanup](../management/tenant-management/system-repair-and-cleanup.md)** — Checks the database for inconsistencies and repairs them. Particularly helpful after imports, migrations, or when i-doit behaves "strangely".
 - **i-doit environment info file** — In the [Admin Center](../../administration/admin-center.md) under **Home → Actions**, you can download an XML file with all system settings. This file is invaluable for support.
 - **[FAQ](../../faq.md)** — Frequently asked questions with answers.
 - **[Hotfixes](../hotfixes/index.md)** — Already published fixes for known bugs.
@@ -158,7 +158,7 @@ If you cannot solve the problem yourself, help us help you quickly. Gather the f
 
 ### Contact options
 
-If you have a support contract, you already have the necessary contact information. Bugs can also be reported without a support contract via the [Customer Portal](../../administration/kundenportal.md) or the [Help Portal](https://help.i-doit.com).
+If you have a support contract, you already have the necessary contact information. Bugs can also be reported without a support contract via the [Customer Portal](../../administration/customer-portal.md) or the [Help Portal](https://help.i-doit.com).
 
 You do not need to format the bug report beautifully or embed it in glossy PDFs. A friendly, factual tone and the information mentioned above are perfectly sufficient.
 

@@ -23,7 +23,7 @@ You can reach the Center in two ways:
 
 ## Permissions
 
-Under **Administration → Permissions → Add-on & Subscription Center**, [permissions for persons and person groups](../effizientes-dokumentieren/rechteverwaltung/index.md) can be configured.
+Under **Administration → Permissions → Add-on & Subscription Center**, [permissions for persons and person groups](../efficient-documentation/permission-management/index.md) can be configured.
 
 | Permission        | Condition                           | Description                                                              |
 | ----------------- | ----------------------------------- | ------------------------------------------------------------------------- |

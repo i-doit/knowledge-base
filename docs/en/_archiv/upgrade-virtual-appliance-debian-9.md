@@ -186,5 +186,5 @@ Damit ist auch die Nachbereitung abgeschlossen. Nun können wieder alle Automati
 
 ## See also
 
-- [Upgrades und Umzuege](../upgrades-und-umzuege/index.md) — Aktuelle Upgrade-Anleitungen
+- [Upgrades und Umzuege](../upgrades-and-migrations/index.md) — Aktuelle Upgrade-Anleitungen
 - [Installation](../installation/index.md) — i-doit installieren

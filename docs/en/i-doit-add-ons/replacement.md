@@ -6,7 +6,7 @@ status:
 lang: en
 ---
 
-Are you putting a new switch into operation and want to take over all existing connections? With the [Add-on](./index.md) **Replacement** you swap [objects](../grundlagen/struktur-it-dokumentation.md) and configure which connections and category data are transferred.
+Are you putting a new switch into operation and want to take over all existing connections? With the [Add-on](./index.md) **Replacement** you swap [objects](../basics/it-documentation-structure.md) and configure which connections and category data are transferred.
 
 !!! note "The add-on was previously called **SwapCI** until version 1.3.1."
 
@@ -20,23 +20,23 @@ Under **Administration → Add-ons → Device Swap → Configuration** you defin
 
 | Option                                              | Description                                                                                                                                                                                                                                                                                                                                                                                                              |
 | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Selectable object types**                        | Which objects of which type can be swapped is defined here. Additionally, per [object type](../grundlagen/struktur-it-dokumentation.md) it is defined which [categories](../grundlagen/struktur-it-dokumentation.md) (and thus which [attributes](../grundlagen/struktur-it-dokumentation.md)) should be swapped. Categories that are not selected remain unaffected by a swap. |
-| **CMDB status for replacement devices**                    | The selection of which objects are offered for swapping can be restricted via their [**CMDB status**](../grundlagen/lebens-und-dokumentationszyklus.md)                                                                                                                                                                                                                                                       |
+| **Selectable object types**                        | Which objects of which type can be swapped is defined here. Additionally, per [object type](../basics/it-documentation-structure.md) it is defined which [categories](../basics/it-documentation-structure.md) (and thus which [attributes](../basics/it-documentation-structure.md)) should be swapped. Categories that are not selected remain unaffected by a swap. |
+| **CMDB status for replacement devices**                    | The selection of which objects are offered for swapping can be restricted via their [**CMDB status**](../basics/life-and-documentation-cycle.md)                                                                                                                                                                                                                                                       |
 | **Consider "swap" status?**                | If the swap status is considered, the swapped device receives the **CMDB status** **Swapped** and the replacement device receives the **CMDB status In operation**.                                                                                                                                                                                                                                                             |
-| **Archive swapped devices?**                  | Should the object being swapped receive the [state](../grundlagen/lebens-und-dokumentationszyklus.md) **Archived**?                                                                                                                                                                                                                                                                                              |
-| **Swap SYS-ID as well?**                      | Should the **SYS-ID** attribute of the **General** category be swapped? This is [an attribute for unique referencing](../grundlagen/eindeutige-referenzierungen.md).                                                                                                                                                                                                                        |
+| **Archive swapped devices?**                  | Should the object being swapped receive the [state](../basics/life-and-documentation-cycle.md) **Archived**?                                                                                                                                                                                                                                                                                              |
+| **Swap SYS-ID as well?**                      | Should the **SYS-ID** attribute of the **General** category be swapped? This is [an attribute for unique referencing](../basics/unique-references.md).                                                                                                                                                                                                                        |
 | **Retain category data of swapped objects?** | Should the category data of both objects be swapped? A -> B and B -> A. If "No" is selected, the swapped object will not take over any category data.                                                                                                                                                                                                                                            |
 
 ## Assigning rights
 
-Under **Administration → Permissions → Device Swap** can [permissions for persons and person groups](../effizientes-dokumentieren/rechteverwaltung/index.md) be adjusted.
+Under **Administration → Permissions → Device Swap** can [permissions for persons and person groups](../efficient-documentation/permission-management/index.md) be adjusted.
 
 | Condition                                        | Description                                                                                                                                                                                      |
 | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Swap objects**                             | May the user swap objects?                                                                                                                                                               |
 | **Swap by workstation systems**           | May the user swap workstation components?                                                                                                                                               |
 | **Device swap configuration**                   | May the user modify the configuration (see above)?                                                                                                                                        |
-| **Device swap button in the object list** | The user has via the [action bar of the object list](../grundlagen/objekt-liste/aktionsleiste.md) the ability to swap objects with each other. The **Swap** button appears there. |
+| **Device swap button in the object list** | The user has via the [action bar of the object list](../basics/object-list/action-bar.md) the ability to swap objects with each other. The **Swap** button appears there. |
 | **Device swap button in objects**        | The user has via the action bar within an object the ability to swap the object with another. The **Swap** button appears there.                                |
 
 ## Prerequisites
@@ -50,7 +50,7 @@ Before two objects can be swapped with each other, the following prerequisites m
 
 There are three ways to swap one object for another:
 
-1. Within an [object list](../grundlagen/objekt-liste/index.md) select both objects and in the [action bar](../grundlagen/objekt-liste/aktionsleiste.md) click the **Swap** button.
+1. Within an [object list](../basics/object-list/index.md) select both objects and in the [action bar](../basics/object-list/action-bar.md) click the **Swap** button.
 2. Within an object, click the **Swap** button in the action bar and then select the replacement device under **Stored object**
 3. Under **Add-ons → Device Swap** select the two objects under **Object to be swapped** and **Stored object**
 

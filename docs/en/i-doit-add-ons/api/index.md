@@ -8,7 +8,7 @@ lang: en
 
 !!! warning "Please create a complete backup before making any changes to an interface/import. If the result is not satisfactory, the backup can then be restored"
 
-Via the [programming interface (API)](https://en.wikipedia.org/wiki/API) you can externally access your [IT documentation](../../glossar.md). You can read, create, update and delete data -- the same functions as in the Web GUI, but fully automatable.
+Via the [programming interface (API)](https://en.wikipedia.org/wiki/API) you can externally access your [IT documentation](../../glossary.md). You can read, create, update and delete data -- the same functions as in the Web GUI, but fully automatable.
 
 ## Technical background
 
@@ -28,11 +28,11 @@ API calls can be made asynchronously without losing the context between requests
 
 ## Download
 
-The API is offered as a free [add-on](../index.md) for download in the [customer portal](../../administration/kundenportal.md) for the pro variant.
+The API is offered as a free [add-on](../index.md) for download in the [customer portal](../../administration/customer-portal.md) for the pro variant.
 
 ## Configuration
 
-The API is configured via the [Web GUI](../../grundlagen/web-gui.md) of i-doit, found under **Administration → Add-ons → JSON-RPC API**.
+The API is configured via the [Web GUI](../../basics/web-gui.md) of i-doit, found under **Administration → Add-ons → JSON-RPC API**.
 
 [![Configuration](../../assets/images/de/i-doit-add-ons/api/1-api.png)](../../assets/images/de/i-doit-add-ons/api/1-api.png)
 
@@ -170,7 +170,7 @@ There are already numerous projects and products that use the i-doit API. Here w
 
 A [documentation created by the developers](../../assets/downloads/i-doit-JSON-RPC-1.8.3.pdf) is available for download in PDF format.
 
-Since version 1.8.1, the API has been released as an add-on. Previous releases were [included in i-doit](../../versionshistorie/index.md).
+Since version 1.8.1, the API has been released as an add-on. Previous releases were [included in i-doit](../../version-history/index.md).
 
 ## FAQ
 

@@ -63,11 +63,11 @@ Upload an image file -- it is automatically integrated into every label.
 
 ### i-doit QR-Code Printer
 
-With the QR Code Printer, you conveniently print labels on your label printer. You configure the formats to match your specifications. When someone scans the QR code with a smartphone or tablet, they are redirected directly to the overview page of the [object](../glossar.md).
+With the QR Code Printer, you conveniently print labels on your label printer. You configure the formats to match your specifications. When someone scans the QR code with a smartphone or tablet, they are redirected directly to the overview page of the [object](../glossary.md).
 
 ### Start and configuration
 
-Download the QR Code Printer from the [customer portal](../administration/kundenportal.md). The Windows application starts directly -- no installation is required.
+Download the QR Code Printer from the [customer portal](../administration/customer-portal.md). The Windows application starts directly -- no installation is required.
 
 To set up the connection:
 

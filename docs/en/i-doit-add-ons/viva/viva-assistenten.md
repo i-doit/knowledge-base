@@ -7,7 +7,7 @@ lang: en
 ---
 # VIVA Wizards
 
-While the chapter on the _[Procedure with VIVA](./vorgehensweise-mit-viva.md)_ describes a manual path for documenting all IT-Grundschutz-relevant information, the [add-on](../index.md) **VIVA** includes a wide variety of wizards to partially automate this process. The wizards analyze the data in VIVA and in the i-doit CMDB in advance to generate suggestions that the user can subsequently review and/or accept. Complex relationships within the information domain become visible in this way. The user thus has the opportunity to document more quickly and conveniently.
+While the chapter on the _[Procedure with VIVA](./procedure-with-viva.md)_ describes a manual path for documenting all IT-Grundschutz-relevant information, the [add-on](../index.md) **VIVA** includes a wide variety of wizards to partially automate this process. The wizards analyze the data in VIVA and in the i-doit CMDB in advance to generate suggestions that the user can subsequently review and/or accept. Complex relationships within the information domain become visible in this way. The user thus has the opportunity to document more quickly and conveniently.
 
 [![Action and navigation bar of target groups](../../assets/images/de/i-doit-add-ons/viva/assistenten/1-va.png)](../../assets/images/de/i-doit-add-ons/viva/assistenten/1-va.png)
 
@@ -18,14 +18,14 @@ The wizards can be found below each information domain as buttons in the respect
 3.  Post-process suggestions by the user
 4.  Save or discard suggestions by the user
 
-The wizards support an extensive process that runs through an essential part of the documentation. This process is explained as a possible approach in the chapter _[Example of a possible workflow](./arbeitsablauf-mit-viva.md)_.
+The wizards support an extensive process that runs through an essential part of the documentation. This process is explained as a possible approach in the chapter _[Example of a possible workflow](./workflow-with-viva.md)_.
 
 The following sections describe the specific properties of the various wizards. They are divided into [_Target group wizards_]() and [_Protection needs wizards_]().
 
 Target group wizards
 -----------------------
 
-This type of wizard suggests suitable [target groups](./vorgehensweise-mit-viva.md) based on existing data. New target groups with IT-Grundschutz numbers and titles can thus be conveniently created. Suggestions can be discarded or, where appropriate, expanded. The individual wizards are described in more detail below. The order refers to the possible approach described in the appendix [_Example of a possible workflow_](./arbeitsablauf-mit-viva.md). The wizards can be found within the respective layers.
+This type of wizard suggests suitable [target groups](./procedure-with-viva.md) based on existing data. New target groups with IT-Grundschutz numbers and titles can thus be conveniently created. Suggestions can be discarded or, where appropriate, expanded. The individual wizards are described in more detail below. The order refers to the possible approach described in the appendix [_Example of a possible workflow_](./workflow-with-viva.md). The wizards can be found within the respective layers.
 
 | Wizards                                                      | Source: object types                                          | Source: categories                    |
 | ------------------------------------------------------------ | ------------------------------------------------------------- | ------------------------------------- |
@@ -92,7 +92,7 @@ Similar to the previous wizard, this one works analogously to the [IT System wiz
 Protection needs wizards
 -------------------------
 
-Wizards of this type suggest how the [protection needs](./vorgehensweise-mit-viva.md) should be configured. To do this, related target groups are analyzed so that inheritance of protection needs results, as suggested in the BSI standard. (See BSI standard 100-2, chapter 4.3 _Protection Needs Assessment_.) In short, the highest protection class (normal, high, very high) for each basic value (confidentiality, integrity, availability) is inherited. The examples in the following sections illustrate this principle.
+Wizards of this type suggest how the [protection needs](./procedure-with-viva.md) should be configured. To do this, related target groups are analyzed so that inheritance of protection needs results, as suggested in the BSI standard. (See BSI standard 100-2, chapter 4.3 _Protection Needs Assessment_.) In short, the highest protection class (normal, high, very high) for each basic value (confidentiality, integrity, availability) is inherited. The examples in the following sections illustrate this principle.
 
 The wizards are located within the target groups to directly assist with the respective protection needs assessment. If the protection needs for multiple target groups need to be edited simultaneously, the wizards within the layers can be used. The following sections describe the respective wizard for each layer. Suggestions can be generated here for layers [2 _Infrastructure_]() and [3 _IT Systems_]().
 

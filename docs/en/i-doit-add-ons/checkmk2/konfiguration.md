@@ -53,8 +53,8 @@ The configuration settings are separated by topic:
 | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | i-doit                 | Configure access to the JSON-RPC API of i-doit                                                                              |
 | check_mk               | Configure access to the Checkmk Web API                                                                                  |
-| push                   | Configure how [data is transferred from i-doit to Checkmk](./wato-konfiguration-auf-basis-von-cmdb-daten-generieren.md) |
-| pull                   | Configure how [data is pulled from Checkmk to i-doit](./bestandsdaten-in-die-cmdb-importieren.md)                            |
+| push                   | Configure how [data is transferred from i-doit to Checkmk](./generate-wato-configuration.md) |
+| pull                   | Configure how [data is pulled from Checkmk to i-doit](./import-inventory-data.md)                            |
 | objectTypes            | Used object types, identified by their constants                                                                            |
 | objectTitles           | Used objects, identified by their title                                                                          |
 | roles                  | i-doit roles for contact groups used in contact assignments                                                         |
@@ -114,7 +114,7 @@ Livestatus currently cannot be connected via TLS.
 
 ### Configuration of the push Command
 
-Configure how [data is transferred from i-doit to Checkmk](./wato-konfiguration-auf-basis-von-cmdb-daten-generieren.md):
+Configure how [data is transferred from i-doit to Checkmk](./generate-wato-configuration.md):
 
 | Key                         | Type    | Required | Default | Description                                                                                                                                                                                           |
 | --------------------------- | ------- | ------------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -171,7 +171,7 @@ Tries to find all expressions:
 
 ### Configuration of the pull Command
 
-Configure how [data is pulled from Checkmk to i-doit](./bestandsdaten-in-die-cmdb-importieren.md):
+Configure how [data is pulled from Checkmk to i-doit](./import-inventory-data.md):
 
 | Key                                    | Type    | Required | Default                                                                        | Description                                                                                                                                         |
 | -------------------------------------- | ------- | ------------ | ------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |

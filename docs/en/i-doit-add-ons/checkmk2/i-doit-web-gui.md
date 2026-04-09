@@ -17,7 +17,7 @@ Let i-doit retrieve the status of host and service checks in real time via Lives
 
 These status queries can be displayed in every object or in the object lists for each type. Add the "Monitoring" category to these object types via "Administration > CMDB Settings > Quick Configuration Wizard."
 
-Enable status calls within this category manually for each object, or [idoitcmk pull](bestandsdaten-in-die-cmdb-importieren.md) does this through the [configuration setting](./konfiguration.md) `pull.enableLivestatus`.
+Enable status calls within this category manually for each object, or [idoitcmk pull](import-inventory-data.md) does this through the [configuration setting](./konfiguration.md) `pull.enableLivestatus`.
 
 ## Managing Host Tags
 
@@ -26,7 +26,7 @@ With i-doit you can manage host tags. There are "static" and "dynamic" host tags
 - **Static** means you create tags manually under Extras > Check_MK 2 > Tags (static) and add them to a host in the Check_MK Tags category.
 - **Dynamic** means this happens automatically via rulesets under Extras > Check_MK 2 > Tags (dynamic).
 
-Both "static" and "dynamic" host tags are displayed in the Check_MK Tags category. They are exported to Checkmk via [idoitcmk push](./wato-konfiguration-auf-basis-von-cmdb-daten-generieren.md).
+Both "static" and "dynamic" host tags are displayed in the Check_MK Tags category. They are exported to Checkmk via [idoitcmk push](./generate-wato-configuration.md).
 
 ## Calling idoitcmk via the Web GUI
 

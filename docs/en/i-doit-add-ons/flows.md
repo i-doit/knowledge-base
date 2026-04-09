@@ -16,9 +16,9 @@ This add-on can be installed additionally. Details on download, installation, an
 
 ## Required CLI Commands
 
-!!! success "If you want to execute the command for a tenant other than the first one, pass the corresponding [tenant ID](../automatisierung-und-integration/cli/index.md)."
+!!! success "If you want to execute the command for a tenant other than the first one, pass the corresponding [tenant ID](../automation-and-integration/cli/index.md)."
 
-The Flows Add-on requires two [CLI commands](../automatisierung-und-integration/cli/index.md) to function fully. You have two options for setting them up:
+The Flows Add-on requires two [CLI commands](../automation-and-integration/cli/index.md) to function fully. You have two options for setting them up:
 
 - **Crontab** -- Run the commands regularly via Cron.
 - **System service** -- Use the included script `create-daemon.sh` located under `i-doit/src/classes/modules/synetics_flows/`.
@@ -37,7 +37,7 @@ Then run the script for each tenant individually:
 
 -   `-u` i-doit person with administrator rights
 -   `-p` the password for the person
--   `-i` tenant ID in which the person is used (viewable via the console command [tenant-list](../automatisierung-und-integration/cli/index.md))
+-   `-i` tenant ID in which the person is used (viewable via the console command [tenant-list](../automation-and-integration/cli/index.md))
 
 ```shell
 src/classes/modules/synetics_flows/./create-daemon.sh -u admin-user -p admin-user-password -i 1
@@ -60,7 +60,7 @@ Add the following lines at the end of the file and replace the login credentials
 
 ## Assigning rights
 
-Under **Administration → Permissions → Flows** can [permissions for persons and person groups](../effizientes-dokumentieren/rechteverwaltung/index.md) be adjusted.
+Under **Administration → Permissions → Flows** can [permissions for persons and person groups](../efficient-documentation/permission-management/index.md) be adjusted.
 
 | Right          | Description                                                                |
 | -------------- | --------------------------------------------------------------------------- |
@@ -72,7 +72,7 @@ Under **Administration → Permissions → Flows** can [permissions for persons 
 
 ## Overview
 
-Via the [**action bar**](../grundlagen/struktur-it-dokumentation.md#kategorie) you create, delete, or export Flows. In the overview you open, enable, or disable Flows via the **Actions** column. The **More** button (three dots) offers additional options: **Edit**, **Duplicate**, and **Switch to test mode**.
+Via the [**action bar**](../basics/it-documentation-structure.md#kategorie) you create, delete, or export Flows. In the overview you open, enable, or disable Flows via the **Actions** column. The **More** button (three dots) offers additional options: **Edit**, **Duplicate**, and **Switch to test mode**.
 
 ## Creating a Flow
 

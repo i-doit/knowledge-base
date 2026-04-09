@@ -20,7 +20,7 @@ After [installation](../i-doit-add-ons/index.md), no further technical configura
 
 ## Assigning rights
 
-Under **Administration → Permissions → Cabling view**, [permissions for persons and person groups](../effizientes-dokumentieren/rechteverwaltung/index.md) can be adjusted.
+Under **Administration → Permissions → Cabling view**, [permissions for persons and person groups](../efficient-documentation/permission-management/index.md) can be adjusted.
 
 [![Assigning rights](../assets/images/de/i-doit-add-ons/cabling/1-cab.png)](../assets/images/de/i-doit-add-ons/cabling/1-cab.png)
 

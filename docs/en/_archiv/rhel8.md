@@ -14,7 +14,7 @@ We explain in a few steps in this article which packages need to be installed an
 
 ## System Requirements
 
-The general [System Requirements](../installation/systemvoraussetzungen.md).
+The general [System Requirements](../installation/system-requirements.md).
 
 This article refers to **RHEL in Version 8.9**. To determine which version is being used, this command can be executed on the console:
 
@@ -146,7 +146,7 @@ session.cookie_lifetime = 0
 mysqli.default_socket = /var/lib/mysql/mysql.sock
 ```
 
-The value (in seconds) of **session.gc_maxlifetime** should be greater than or equal to the **Session Timeout** in den [Systemeinstellungen](../installation/manuelle-installation/systemeinstellungen.md) of i-doit.
+The value (in seconds) of **session.gc_maxlifetime** should be greater than or equal to the **Session Timeout** in den [Systemeinstellungen](../installation/manual-installation/system-settings.md) of i-doit.
 
 The parameter **date.timezone** should be adjusted to the local time zone (siehe [Liste unterstützter Zeitzonen](http://php.net/manual/de/timezones.php)).
 
@@ -278,4 +278,4 @@ sudo setsebool -P httpd_can_network_connect_db 1
 
 The operating system is now prepared so that i-doit can be installed:
 
-[Continue to **Setup**](../installation/manuelle-installation/setup.md)
+[Continue to **Setup**](../installation/manual-installation/setup.md)

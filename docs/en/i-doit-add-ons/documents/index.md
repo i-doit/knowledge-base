@@ -14,10 +14,10 @@ With the i-doit [Add-on](../index.md) "Documents", you combine free text, text e
 
 ## Documentation Areas
 
-- **[Preparation (Documents Add-on)](./vorbereitung-add-on-dokumente.md)**
+- **[Preparation (Documents Add-on)](./preparation.md)**
     Here you learn how to install and update the add-on. All configuration options are also described so you can make optimal use of the add-on's features.
 
-- **[Creating & Editing Document Templates](./dokumentenvorlagen.md)**
+- **[Creating & Editing Document Templates](./document-templates.md)**
     Document templates are the central element on which you base your documents. Here you will find how to create, edit, and reuse templates -- including all parameters and options of the WYSIWYG editor.
 
 - **[Placeholders in the Documents Add-on](./platzhalter-im-add-on-dokumente.md)**

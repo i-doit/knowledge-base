@@ -69,7 +69,7 @@ Additionally, the ISMS add-on installs several [reports](reports.md) that enable
 
 ## Assigning rights
 
-The ISMS add-on comes with new rights that you can configure in the [i-doit rights management](../../administration/verwaltung/berechtigungen.md). These rights control access to risk classes and risk calculation.
+The ISMS add-on comes with new rights that you can configure in the [i-doit rights management](../../administration/management/permissions.md). These rights control access to risk classes and risk calculation.
 
 * * *
 

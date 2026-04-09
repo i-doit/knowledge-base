@@ -172,7 +172,7 @@ The majority of [i-doit add-ons](../i-doit-add-ons/index.md) are compatible with
 
 ## Automation with Flows Lite
 
-In the on-premise version, you set up recurring tasks via [cronjobs](../wartung-und-betrieb/cronjobs-einrichten.md) and `console.php`. In the cloud, there is no shell access -- instead, **Flows Lite** is available.
+In the on-premise version, you set up recurring tasks via [cronjobs](../maintenance-and-operation/set-up-cron-jobs.md) and `console.php`. In the cloud, there is no shell access -- instead, **Flows Lite** is available.
 
 Flows Lite is a limited version of the [Flows add-on](../i-doit-add-ons/flows/index.md) that works without a separate license and enables scheduled execution of console commands.
 
@@ -193,16 +193,16 @@ The following commands can be executed on a schedule via Flows Lite:
 
 | Command | Description |
 |---------|-------------|
-| `ldap-sync` / `ldap-syncdn` | [LDAP synchronization](../benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md) |
-| `import-jdisc` | [JDisc import](../daten-konsolidieren/jdisc/index.md) |
-| `import-csv` / `import-xml` | [CSV](../daten-konsolidieren/csv-datenimport/index.md) and XML import |
-| `notifications-send` | Send [notifications](../auswertungen/benachrichtigungen.md) |
+| `ldap-sync` / `ldap-syncdn` | [LDAP synchronization](../user-authentication-and-management/ldap-directory/index.md) |
+| `import-jdisc` | [JDisc import](../consolidate-data/jdisc/index.md) |
+| `import-csv` / `import-xml` | [CSV](../consolidate-data/csv-data-import/index.md) and XML import |
+| `notifications-send` | Send [notifications](../evaluation/notifications.md) |
 | `search-index` | Update search index |
 | `report-export` | Export reports |
 | `extend-contracts` | Automatically extend contract terms |
 | `sync-dynamic-groups` | Synchronize dynamic groups |
 
-Flows Lite thus replaces the manual [cronjob configuration](../wartung-und-betrieb/cronjobs-einrichten.md) that is done via the server console in on-premise installations.
+Flows Lite thus replaces the manual [cronjob configuration](../maintenance-and-operation/set-up-cron-jobs.md) that is done via the server console in on-premise installations.
 
 ---
 

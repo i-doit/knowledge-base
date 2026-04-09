@@ -44,12 +44,12 @@ To install the add-on:
 
 ## Assigning rights
 
-For users to be able to create forms, assign the corresponding [permissions](../../effizientes-dokumentieren/rechteverwaltung/index.md) under **Administration → Authorization system → Rights → Forms**.
+For users to be able to create forms, assign the corresponding [permissions](../../efficient-documentation/permission-management/index.md) under **Administration → Authorization system → Rights → Forms**.
 
 [![Permission assignment](../../assets/images/de/i-doit-add-ons/forms/2-forms.png)](../../assets/images/de/i-doit-add-ons/forms/2-forms.png)
 
 !!! attention "Clear the authorization system cache"
-    After you have assigned or changed the permissions, clear the [cache](../../administration/verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md) in the i-doit [administration](../../administration/verwaltung/index.md) under **Administration > [tenant-name] Administration > System repair and cleanup**, so that the changes are applied by the system.
+    After you have assigned or changed the permissions, clear the [cache](../../administration/management/tenant-management/system-repair-and-cleanup.md) in the i-doit [administration](../../administration/management/index.md) under **Administration > [tenant-name] Administration > System repair and cleanup**, so that the changes are applied by the system.
 
 ## Accessing the add-on
 
@@ -59,7 +59,7 @@ After completing all preparations, you can access the add-on under **Add-ons →
 
 This document contains a basic description of the Forms API.
 
-!!! info "[Using the Forms API](verwenden-der-forms-api.md)"
+!!! info "[Using the Forms API](using-the-forms-api.md)"
 
 ## Releases
 

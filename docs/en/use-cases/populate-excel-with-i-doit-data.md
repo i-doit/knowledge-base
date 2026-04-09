@@ -1,0 +1,169 @@
+---
+title: "Populating Excel Spreadsheets with Data from i-doit"
+description: "With just a few lines of Visual Basic, you can read any content from i-doit and display it in Microsoft Excel."
+icon:
+status:
+lang: en
+---
+# Populating Excel Spreadsheets with Data from i-doit
+
+With just a few lines of Visual Basic, you can read any content from i-doit and display it in Microsoft Excel. In this article, we explain the procedure using [reports](../evaluation/report-manager.md).
+
+!!! info "Last tested with i-doit 36 and API 2.5"
+
+    This article was revised and subsequently tested with i-doit 36 and API 2.5.
+
+## installation
+
+1. Download [https://github.com/VBA-tools/VBA-JSON/releases](https://github.com/VBA-tools/VBA-JSON/releases) and extract
+
+2. Open a new document in Excel
+
+3. Press **Alt + F11** to open the VBA editor
+
+4. Import the VBA-JSON code as shown in the GIF
+
+    [![Import code](../assets/images/de/anwendungsfaelle/excel/1-excel.gif)](../assets/images/de/anwendungsfaelle/excel/1-excel.gif)
+
+5. Under Tools/References, enable `Microsoft Scripting Runtime`
+
+    [![Enable script](../assets/images/de/anwendungsfaelle/excel/2-excel.gif)](../assets/images/de/anwendungsfaelle/excel/2-excel.gif)
+
+6. In i-doit under settings in **Expert Settings**, the key **api.authenticated-users-only** must be set to 0
+
+    [![Settings](../assets/images/de/anwendungsfaelle/excel/3-excel.png)](../assets/images/de/anwendungsfaelle/excel/3-excel.png)
+
+7. Insert the code into the workbook and adjust both the URL and the apikey:
+
+    ```vbscript
+    Public Sub idoitapi()
+    Dim http As Object, JSON As Object, i As Integer, Item As Object
+    Dim URL$, postData$
+    Set http = CreateObject("MSXML2.XMLHTTP")
+    URL = "https://demo.i-doit.com/src/jsonrpc.php"
+    postData = "{""jsonrpc"":""2.0"",""id"":""1"",""method"":""cmdb.reports"",""params"":{""apikey"":""c1ia5q"",""id"": 2}}"
+    http.Open "POST", URL, False
+    http.setRequestHeader "Content-Type", "application/json"
+    http.send postData
+    Set JSON = ParseJson(http.responseText)
+    i = 1
+    'Debug.Print http.responseText
+    For Each Item In JSON("result")
+    Sheets(1).Cells(i, 1).Value = Item("Title")
+    Sheets(1).Cells(i, 2).Value = Item("Object type")
+    Sheets(1).Cells(i, 3).Value = Item("Host address")
+    Sheets(1).Cells(i, 4).Value = Item("Contact")
+    Sheets(1).Cells(i, 5).Value = Item("Location")
+    i = i + 1
+    Next
+    End Sub
+    ```
+
+8. Execute the code in the VBA editor by pressing F5. The result should look as follows:
+    [![Excel](../assets/images/de/anwendungsfaelle/excel/4-excel.png)](../assets/images/de/anwendungsfaelle/excel/4-excel.png)
+
+### Code Explanation
+
+In the first part, the necessary variables are declared:
+
+```vbscript
+Public Sub idoitapi()
+Dim http As Object, JSON As Object, i As Integer, Item As Object
+Dim URL$, postData$
+```
+
+Next, an object of type MSXML2.XMLHTTP is initialized to establish the HTTP connection
+
+```vbscript
+Set http = CreateObject("MSXML2.XMLHTTP")
+```
+
+Here the target URL of the API to be called is entered
+
+```bash
+URL = "[https://demo.i-doit.com/src/jsonrpc.php](https://demo.i-doit.com/src/jsonrpc.php)"
+```
+
+Now the API call is prepared. The method cmdb.reports is called and the report with number 2 is queried.<br>
+No user/password authentication is used, only the API key. For this to work, the settings shown in step 6 must be configured.<br>
+When formatting the JSON string, all quotation marks within the JSON string must be doubled.
+
+```bash
+postData = "{""jsonrpc"":""2.0"",""id"":""1"",""method"":""cmdb.reports"",""params"":{""apikey"":""c1ia5q"",""id"": 2}}"
+```
+
+These instructions execute the HTTP POST request and send the specified JSON string to the API
+
+```bash
+http.Open "POST", URL, False
+http.setRequestHeader "Content-Type", "application/json"
+http.send postData
+```
+
+The JSON string returned by the API is passed to an object and parsed. This is handled by the JSON VBA library downloaded from GitHub.
+
+```bash
+Set JSON = ParseJson(http.responseText)
+```
+
+We need this counter to address the different columns in the sheet
+
+```bash
+i = 1
+```
+
+The returned JSON string has two levels (content shortened for better readability):
+
+```json
+{
+    "jsonrpc":"2.0",
+    "result":
+        [
+            {
+                "Title":"Ceph Storage Pod A001 01",
+                "Object type":"LC__CMDB__OBJTYPE__SERVER",
+                "IP":"10.20.10.36",
+                "Contact assignment":"IT Operations",
+                "Location":"Colo A001"
+            },
+            {
+                "Title":"Ceph Storage Pod A001 02",
+                "Object type":"LC__CMDB__OBJTYPE__SERVER",
+                "IP":"10.20.10.37",
+                "Contact assignment":"IT Operations",
+                "Location":"Colo A001"
+            }
+        ],
+    "id":null
+}
+```
+
+This output can be generated by uncommenting the line
+
+```bash
+Debug.Print http.responseText
+```
+
+in the Immediate window of the VBA editor.<br>
+In the first level, which we never see, are the values "jsonrpc", "result", and "id". Since we are only interested in the results, the values from the second level located below "result" are iterated in a loop.
+
+```bash
+For Each Item In JSON("result")
+```
+
+In the data, we find the column titles from the targeted report with ID 2.
+
+[![Reports](../assets/images/de/anwendungsfaelle/excel/5-excel.png)](../assets/images/de/anwendungsfaelle/excel/5-excel.png)
+
+Now, for each record in the result set, the titles are addressed and written to an Excel row.
+
+```bash
+Sheets(1).Cells(i, 1).Value = Item("Title")
+Sheets(1).Cells(i, 2).Value = Item("Object type")
+Sheets(1).Cells(i, 3).Value = Item("Host address")
+Sheets(1).Cells(i, 4).Value = Item("Contact")
+Sheets(1).Cells(i, 5).Value = Item("Location")
+i = i + 1
+Next
+End Sub
+```

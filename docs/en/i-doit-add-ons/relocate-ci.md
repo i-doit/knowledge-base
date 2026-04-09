@@ -7,7 +7,7 @@ lang: en
 ---
 # Relocate-CI
 
-The [add-on](./index.md) **Relocate-CI** is used for easily documenting location changes of IT components. The focus is on classic workplace components such as desktop PCs, telephones, or monitors. Logical groupings via the [object type](../grundlagen/struktur-it-dokumentation.md) workstation are also supported.
+The [add-on](./index.md) **Relocate-CI** is used for easily documenting location changes of IT components. The focus is on classic workplace components such as desktop PCs, telephones, or monitors. Logical groupings via the [object type](../basics/it-documentation-structure.md) workstation are also supported.
 
 The functions can be found under **Add-ons → Relocate-CI**.
 
@@ -35,7 +35,7 @@ Once the relocation is complete, the tree view is updated.
 
 [![Relocation dialog](../assets/images/de/i-doit-add-ons/relocate-ci/5-rci.png)](../assets/images/de/i-doit-add-ons/relocate-ci/5-rci.png)
 
-The relocation is recorded in the [logbook](../grundlagen/logbuch.md) for each relocated object.
+The relocation is recorded in the [logbook](../basics/logbook.md) for each relocated object.
 
 [![Tree view](../assets/images/de/i-doit-add-ons/relocate-ci/6-rci.png)](../assets/images/de/i-doit-add-ons/relocate-ci/6-rci.png)
 

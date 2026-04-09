@@ -8,7 +8,7 @@ lang: en
 
 # Placeholders in Documents
 
-With placeholders, you dynamically embed documentation content into the document. You insert the placeholders in the [document template](./dokumentenvorlagen.md) via the WYSIWYG editor.
+With placeholders, you dynamically embed documentation content into the document. You insert the placeholders in the [document template](./document-templates.md) via the WYSIWYG editor.
 
 [![WYSIWYG](../../assets/images/de/i-doit-add-ons/documents/platzhalter/1-ph.png)](../../assets/images/de/i-doit-add-ons/documents/platzhalter/1-ph.png)
 
@@ -46,11 +46,11 @@ Via this placeholder, you embed information from a fixed, defined object. The at
 
 [![Report placeholder](../../assets/images/de/i-doit-add-ons/documents/platzhalter/7-ph.png)](../../assets/images/de/i-doit-add-ons/documents/platzhalter/7-ph.png)
 
-Via the "Report" button, you embed result lists from previously created [reports](../../auswertungen/report-manager.md). You select the report in the dropdown field by its name.
+Via the "Report" button, you embed result lists from previously created [reports](../../evaluation/report-manager.md). You select the report in the dropdown field by its name.
 
 The result list in the document always reflects the state of the report at the time of document creation. If the report results have changed, you create a new revision of the document.
 
-Additionally, you can embed [variable reports](../../anwendungsfaelle/variable-reports.md). The placeholders refer to the main object and dynamically output its content.
+Additionally, you can embed [variable reports](../../use-cases/variable-reports.md). The placeholders refer to the main object and dynamically output its content.
 
 Via the formatting options, you optionally add the report title and description. You also define column headers, font and background colors, gridlines, and table rows.
 

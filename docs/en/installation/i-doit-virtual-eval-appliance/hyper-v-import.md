@@ -47,7 +47,7 @@ Then select the generation for the new virtual machine:
 
 [![Appliance-Generation](../../assets/images/de/installation/virtual-appliance/hyper-v/8.png)](../../assets/images/de/installation/virtual-appliance/hyper-v/8.png)
 
-Assign sufficient memory ( [system requirements](../systemvoraussetzungen.md) ):
+Assign sufficient memory ( [system requirements](../system-requirements.md) ):
 
 [![Appliance-RAM](../../assets/images/de/installation/virtual-appliance/hyper-v/9.png)](../../assets/images/de/installation/virtual-appliance/hyper-v/9.png)
 

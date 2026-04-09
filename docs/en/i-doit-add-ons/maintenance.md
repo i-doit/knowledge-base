@@ -6,7 +6,7 @@ status:
 lang: en
 ---
 
-With the [add-on](./index.md) **Maintenance**, maintenance appointments can be planned, coordinated, and managed. Planned maintenance activities are linked to any [objects](../grundlagen/struktur-it-dokumentation.md). To avoid missing deadlines, notifications are automatically sent via email.
+With the [add-on](./index.md) **Maintenance**, maintenance appointments can be planned, coordinated, and managed. Planned maintenance activities are linked to any [objects](../basics/it-documentation-structure.md). To avoid missing deadlines, notifications are automatically sent via email.
 
 !!! info "You can find a practical example in our **[Blog](https://www.i-doit.com/blog/status-und-wartungsplanung-with-i-doit/)**"
 
@@ -20,7 +20,7 @@ No separate configuration is required.
 
 ## Assigning rights
 
-Under **Administration → Permissions → Wartung** can [permissions for persons and person groups](../effizientes-dokumentieren/rechteverwaltung/index.md) be adjusted.
+Under **Administration → Permissions → Wartung** can [permissions for persons and person groups](../efficient-documentation/permission-management/index.md) be adjusted.
 
 | Condition                    | Description                                        |
 | ---------------------------- | --------------------------------------------------- |
@@ -94,7 +94,7 @@ From the previously planned and performed maintenance activities, you can create
 | **Maintenance type**  | Restriction to a specific type                                                                                                                                            |
 | **Von**          | Start date                                                                                                                                                                      |
 | **Bis**          | End date                                                                                                                                                                          |
-| **Logo for PDF** | Additional image integrated into every page; the image must first be available as a [file object](../anwendungsfaelle/dateien-hochladen-und-verknuepfen.md) in i-doit. |
+| **Logo for PDF** | Additional image integrated into every page; the image must first be available as a [file object](../use-cases/upload-and-link-files.md) in i-doit. |
 
 The PDF file is generated via the **PDF Export & Download** button and offered for download.
 
@@ -104,13 +104,13 @@ The PDF file is generated via the **PDF Export & Download** button and offered f
 
 If an object is under maintenance, this is indicated symbolically. On every page of the object -- on the overview page or within categories -- the note **In maintenance** appears.
 
-You can add the **Maintenance overview** category to the object type via the [object type configuration](../grundlagen/zurodnung-von-kategorien-zu-objekttypen.md) to also display maintenance activities directly in the object.
+You can add the **Maintenance overview** category to the object type via the [object type configuration](../basics/assigning-categories-to-object-types.md) to also display maintenance activities directly in the object.
 
 [![Maintenance overview in object](../assets/images/de/i-doit-add-ons/maintenance/8-main.png)](../assets/images/de/i-doit-add-ons/maintenance/8-main.png)
 
 ## Maintenance on the dashboard
 
-On the [Dashboard](../grundlagen/dashboard-und-widgets.md) you display planned and completed maintenance activities in the calendar widget. These are highlighted.
+On the [Dashboard](../basics/dashboard-and-widgets.md) you display planned and completed maintenance activities in the calendar widget. These are highlighted.
 
 [![Kalender-Widget](../assets/images/de/i-doit-add-ons/maintenance/9-main.png)](../assets/images/de/i-doit-add-ons/maintenance/9-main.png)
 
@@ -135,7 +135,7 @@ You can populate both the **Title** and the **Content** with placeholders that a
 
 ## Sending emails automatically
 
-The actual sending of emails takes place in the background via the [Console](../automatisierung-und-integration/cli/index.md), the CLI tool of i-doit. For this, you use the **maintenance** command. It is best to set up a cron job to send emails automatically. Example call:
+The actual sending of emails takes place in the background via the [Console](../automation-and-integration/cli/index.md), the CLI tool of i-doit. For this, you use the **maintenance** command. It is best to set up a cron job to send emails automatically. Example call:
 
 ```shell
 sudo -u www-data php console.php --user admin --password admin maintenance

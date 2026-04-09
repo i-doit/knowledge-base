@@ -6,7 +6,7 @@ status:
 lang: en
 ---
 
-With i-doit, the focus is on [IT documentation](../grundlagen/struktur-it-dokumentation.md) and the [CMDB](../grundlagen/struktur-it-dokumentation.md). In addition, there are supplementary add-ons to extend the functionality of i-doit as needed. This gives users an entirely new perspective on IT documentation.
+With i-doit, the focus is on [IT documentation](../basics/it-documentation-structure.md) and the [CMDB](../basics/it-documentation-structure.md). In addition, there are supplementary add-ons to extend the functionality of i-doit as needed. This gives users an entirely new perspective on IT documentation.
 
 !!! info "All available add-ons can be found at [https://www.i-doit.com/produkte/add-ons](https://www.i-doit.com/produkte/add-ons){:target="_blank"}"
 
@@ -15,7 +15,7 @@ In addition to these add-ons, many more are available from our partners and exte
 ## Download
 
 Add-ons are available as installable ZIP files. These are installed via the [Admin Center](../administration/admin-center.md#add-ons).
-In the [customer portal](../administration/kundenportal.md), customers can download add-ons. Licensed add-ons (see above) are made available for download in your customer account during the purchase process.
+In the [customer portal](../administration/customer-portal.md), customers can download add-ons. Licensed add-ons (see above) are made available for download in your customer account during the purchase process.
 If you are missing any add-ons that you have purchased, please contact [help@i-doit.com](mailto:help@i-doit.com) for assistance.
 
 Evaluation users can download all free and commercial add-ons during the evaluation process. Download buttons for all add-ons are available on your personal evaluation page at [https://center.i-doit.com](https://center.i-doit.com). All licensed add-ons are included in the evaluation license.
@@ -26,13 +26,13 @@ All modules and extensions are installed via the [Admin Center](../administratio
 
 [![installation](../assets/images/de/i-doit-add-ons/1-i-doit-add-ons.png)](../assets/images/de/i-doit-add-ons/1-i-doit-add-ons.png)
 
-The button opens a new dialog. Under **Tenant**, you specify whether the add-on should be installed in all [tenants](../administration/mandantenfaehigkeit.md) (**All tenants**) or only in a single one. Using the **Browse...** button under **ZIP File**, you select the add-on. After clicking the **Upload and install** button, the ZIP file is uploaded to the i-doit host and installed.
+The button opens a new dialog. Under **Tenant**, you specify whether the add-on should be installed in all [tenants](../administration/multi-tenancy.md) (**All tenants**) or only in a single one. Using the **Browse...** button under **ZIP File**, you select the add-on. After clicking the **Upload and install** button, the ZIP file is uploaded to the i-doit host and installed.
 
 [![Upload and install](../assets/images/de/i-doit-add-ons/2-i-doit-add-ons.png)](../assets/images/de/i-doit-add-ons/2-i-doit-add-ons.png)
 
 System settings
 
-For installation to be possible, the maximum file size liwith must exceed the file size of the ZIP file. Anyone who has fully met the [system requirements](../installation/manuelle-installation/systemeinstellungen.md) should not encounter any difficulties.
+For installation to be possible, the maximum file size liwith must exceed the file size of the ZIP file. Anyone who has fully met the [system requirements](../installation/manual-installation/system-settings.md) should not encounter any difficulties.
 
 After successful installation, a corresponding success message is displayed. The add-on is now listed in the list of installed add-ons. Each tenant has its own list here.
 
@@ -42,7 +42,7 @@ If an add-on is available but not yet installed, it is marked as **not installed
 
 ## Assigning rights
 
-Each add-on has its own permissions that can be assigned per person or person group. After installing a new add-on, users do not yet have any permissions to use it. Further steps in the [authorization management](../effizientes-dokumentieren/rechteverwaltung/index.md) are required.
+Each add-on has its own permissions that can be assigned per person or person group. After installing a new add-on, users do not yet have any permissions to use it. Further steps in the [authorization management](../efficient-documentation/permission-management/index.md) are required.
 
 ## Updating
 

@@ -10,7 +10,7 @@ lang: en
 
 !!! warning "Please create a complete backup before making any changes to an interface or import. If the result is not satisfactory, you can then restore it."
 
-Nagios is a [Network Monitoring](../automatisierung-und-integration/network-monitoring/index.md) software that you configure from the data of your [IT documentation](../glossar.md). This way you avoid duplicate data maintenance and minimize errors. The export generates complete or partial configurations -- either manually created or automatically populated with values from i-doit.
+Nagios is a [Network Monitoring](../automation-and-integration/network-monitoring/index.md) software that you configure from the data of your [IT documentation](../glossary.md). This way you avoid duplicate data maintenance and minimize errors. The export generates complete or partial configurations -- either manually created or automatically populated with values from i-doit.
 
 !!! info "Compatibility"
     The exported data is compatible with Nagios version 3 and Icinga version 1. Nagios version 4 is not fully compatible. Other Nagios derivatives are not supported.
@@ -34,9 +34,9 @@ This includes the main configuration, service and host templates, and other basi
 
 ## Configuration in objects
 
-All other configurations are made within the [objects](../grundlagen/struktur-it-dokumentation.md). For host parameters, proceed as follows:
+All other configurations are made within the [objects](../basics/it-documentation-structure.md). For host parameters, proceed as follows:
 
-1. Assign via [Edit data structure](../administration/verwaltung/datenstruktur/datenstruktur-bearbeiten.md) the [category](../grundlagen/struktur-it-dokumentation.md) folder **Nagios (Host)** to the desired [object types](../grundlagen/struktur-it-dokumentation.md).
+1. Assign via [Edit data structure](../administration/management/data-structure/edit-data-structure.md) the [category](../basics/it-documentation-structure.md) folder **Nagios (Host)** to the desired [object types](../basics/it-documentation-structure.md).
 2. Enter in the category **Host Definition** a host definition -- either via a Nagios template or through individual configuration.
 
 [![Nagios configuration](../assets/images/de/automatisierung-und-integration/network-monitoring/nagios/3-nag.png)](../assets/images/de/automatisierung-und-integration/network-monitoring/nagios/3-nag.png)
@@ -58,7 +58,7 @@ You start the export manually under **Administration â†’ Import and interfaces â
 
 The validation checks basic dependencies -- e.g. whether an IP address is entered for a host. It protects against corrupt configurations but does not offer 100 percent protection. Therefore, always additionally test the generated configuration with the Nagios binary.
 
-The configuration files are stored in the configured path. You can also automate the export via the [i-doit console utility](../automatisierung-und-integration/cli/index.md) (`--help` shows all options).
+The configuration files are stored in the configured path. You can also automate the export via the [i-doit console utility](../automation-and-integration/cli/index.md) (`--help` shows all options).
 
 ## CLI console commands and options
 

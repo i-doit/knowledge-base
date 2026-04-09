@@ -54,4 +54,4 @@ After clicking, a popup appears with the note that the form will no longer be ac
 
 [![Unpublish popup](../../assets/images/de/i-doit-add-ons/forms/publishen/unpublish-popup.png)](../../assets/images/de/i-doit-add-ons/forms/publishen/unpublish-popup.png)
 
-[Continue to fill out the form](./formulare-ausfuellen.md){ .md-button .md-button--primary }
+[Continue to fill out the form](./fill-out-forms.md){ .md-button .md-button--primary }

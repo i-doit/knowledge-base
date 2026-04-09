@@ -34,7 +34,7 @@ i-diary is a Windows application that functions as an add-on for i-doit. As a sy
 
 ## installation
 
-1. Download the add-on from the [customer portal](../administration/kundenportal.md).
+1. Download the add-on from the [customer portal](../administration/customer-portal.md).
 2. Install it via the [Admin Center](../administration/admin-center.md).
 
 ## Updates

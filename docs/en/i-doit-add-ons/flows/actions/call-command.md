@@ -6,7 +6,7 @@ status:
 lang: en
 ---
 
-The following [console commands](../../../automatisierung-und-integration/cli/index.md) are available in the add-on. You can use these functions instead of a cron job.
+The following [console commands](../../../automation-and-integration/cli/index.md) are available in the add-on. You can use these functions instead of a cron job.
 
 [![Flows](../../../assets/images/de/i-doit-add-ons/flows/flows-uebersicht.png)](../../../assets/images/de/i-doit-add-ons/flows/flows-uebersicht.png)
 
@@ -41,14 +41,14 @@ Updates the status of expired contracts.
 
 ## extend-contracts
 
-Automatically extends the duration of non-terminated contracts. A use case can be found [here](../../../anwendungsfaelle/automatisierte-vertragsverlaengerung.md).
+Automatically extends the duration of non-terminated contracts. A use case can be found [here](../../../use-cases/automated-contract-renewal.md).
 
 ## import-csv (only on-prem)
 
 | Option              | Description                                                                                                                                                                                                    |
 | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **importFile**      | Specify the full path to the file. If you previously uploaded the file for CSV import, the path is for example `/var/www/html/imports/1/title.csv`. The `1` is the tenant ID. |
-| **importProfileId** | You must first create a CSV import profile, see [Create profile](../../../daten-konsolidieren/csv-datenimport/index.md#profil-anlegen).                                                                    |
+| **importProfileId** | You must first create a CSV import profile, see [Create profile](../../../consolidate-data/csv-data-import/index.md#profil-anlegen).                                                                    |
 
 ## import-hinventory (only on-prem)
 

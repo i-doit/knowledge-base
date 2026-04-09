@@ -8,7 +8,7 @@ lang: en
 
 You can find practical examples on our [Blog](https://www.i-doit.com/blog/floorplan-add-on-1-5-der-new-grundriss-editor/).
 
-With the [add-on](./index.md) **Floorplan**, you assign graphical plans to location [objects](../grundlagen/struktur-it-dokumentation.md), add a scale to them, and position the spatially assigned objects within them.
+With the [add-on](./index.md) **Floorplan**, you assign graphical plans to location [objects](../basics/it-documentation-structure.md), add a scale to them, and position the spatially assigned objects within them.
 
 [![Floorplan](../assets/images/de/i-doit-add-ons/floorplan/1-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/1-fp.png)
 
@@ -18,7 +18,7 @@ The add-on is installed via the [Admin Center](./index.md). Afterwards, it can b
 
 ## Assigning rights
 
-Under **Administration → Permissions → Floorplan**, [permissions for persons and person groups](../effizientes-dokumentieren/rechteverwaltung/index.md) can be adjusted.
+Under **Administration → Permissions → Floorplan**, [permissions for persons and person groups](../efficient-documentation/permission-management/index.md) can be adjusted.
 
 [![Assigning rights](../assets/images/de/i-doit-add-ons/floorplan/3-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/3-fp.png)
 
@@ -63,7 +63,7 @@ In the left area, you customize selected objects. Select an object to use the fo
 
 [![radius](../assets/images/de/i-doit-add-ons/floorplan/19-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/19-fp.png) **Define object radius**: Opens a popup to color the radius, display it transparently, and configure it in different units of measurement.
 
-[![icon](../assets/images/de/i-doit-add-ons/floorplan/20-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/20-fp.png) **Apply form factor**: Adopts the data from the [category](../grundlagen/struktur-it-dokumentation.md) **Form factor** and scales the object to scale.
+[![icon](../assets/images/de/i-doit-add-ons/floorplan/20-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/20-fp.png) **Apply form factor**: Adopts the data from the [category](../basics/it-documentation-structure.md) **Form factor** and scales the object to scale.
 
 [![icon](../assets/images/de/i-doit-add-ons/floorplan/21-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/21-fp.png) **Filter object types**: Show or hide specific object types in the floorplan.
 
