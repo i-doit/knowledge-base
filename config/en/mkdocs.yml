@@ -416,7 +416,7 @@ nav:
           - Service: basics/object-types/service.md
           - SIM Card: basics/object-types/sim-karte.md
           - Storage System: basics/object-types/speichersystem.md
-          - Stacking: basics/categories/stacking.md
+          - Stacking: basics/object-types/stacking.md
           - City: basics/object-types/stadt.md
           - Power Distribution Unit: basics/object-types/steckdosenleiste.md
           - Supernet: basics/object-types/supernet.md
