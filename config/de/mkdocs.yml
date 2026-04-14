@@ -142,6 +142,8 @@ nav:
   - Übersicht: index.md
   - Einführung:
       - einfuehrung/index.md
+      - Was ist i-doit?: einfuehrung/was-ist-i-doit.md
+      - Konzepte und Terminologie: einfuehrung/konzepte-und-terminologie.md
       - Wie beginne ich zu dokumentieren?: einfuehrung/wie-beginne-ich-zu-dokumentieren.md
       - Checkliste für die IT-Dokumentation: einfuehrung/checkliste-fuer-die-it-dokumentation.md
   - Versionshistorie:
@@ -538,6 +540,7 @@ nav:
           - Service: grundlagen/objekttypen/service.md
           - SIM-Karte: grundlagen/objekttypen/sim-karte.md
           - Speichersystem: grundlagen/objekttypen/speichersystem.md
+          - Stacking: grundlagen/objekttypen/stacking.md
           - Stadt: grundlagen/objekttypen/stadt.md
           - Steckdosenleiste: grundlagen/objekttypen/steckdosenleiste.md
           - Supernet: grundlagen/objekttypen/supernet.md

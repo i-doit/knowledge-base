@@ -416,6 +416,7 @@ nav:
           - Service: basics/object-types/service.md
           - SIM Card: basics/object-types/sim-karte.md
           - Storage System: basics/object-types/speichersystem.md
+          - Stacking: basics/categories/stacking.md
           - City: basics/object-types/stadt.md
           - Power Distribution Unit: basics/object-types/steckdosenleiste.md
           - Supernet: basics/object-types/supernet.md
@@ -881,10 +882,10 @@ nav:
       - Relocate-CI: i-doit-add-ons/relocate-ci.md
       - Replacement: i-doit-add-ons/replacement.md
       - Rights Documentation: i-doit-add-ons/rights-documentation.md
-      - SHD SM-VIEW Connect:
-          - i-doit-add-ons/sm-view-connect/index.md
-          - SHD SM-VIEW Connect - Telekom Adapter: i-doit-add-ons/sm-view-connect/telekom-adapter.md
-          - Baramundi-Adapter: i-doit-add-ons/sm-view-connect/baramundi-adapter.md
+      - SHD Connect:
+          - i-doit-add-ons/shd-connect/index.md
+          - Telekom-Adapter: i-doit-add-ons/shd-connect/telekom-adapter.md
+          - Baramundi-Adapter: i-doit-add-ons/shd-connect/baramundi-adapter.md
       - URL-Router: i-doit-add-ons/url-router.md
       - VIVA:
           - i-doit-add-ons/viva/index.md
