@@ -43,10 +43,23 @@ Zunächst werden erste Pakete aus den Standard-Repositories aktualisiert:
 sudo dnf update
 ```
 <!-- cSpell:enable -->
+Für einige Pakete werden EPEL und das CRB-Repository (CodeReady Builder) benötigt:
+<!-- cSpell:disable -->
+```sh
+sudo dnf install epel-release -y
+sudo dnf config-manager --set-enabled crb
+```
+<!-- cSpell:enable -->
+Die PHP- und MariaDB-Module auf die empfohlenen Versionen setzen:
+<!-- cSpell:disable -->
+```sh
+sudo dnf module enable php:8.3 mariadb:10.11 -y
+```
+<!-- cSpell:enable -->
 Die Installation weiterer Pakete:
 <!-- cSpell:disable -->
 ```sh
-sudo dnf install mariadb-server mariadb httpd boost-program-options memcached unzip php php-{bcmath,curl,gd,json,ldap,mysqli,mysqlnd,odbc,pecl-zip,pgsql,pdo,snmp,soap,zip} -y
+sudo dnf install -y httpd httpd-tools mariadb-server mariadb memcached unzip sudo moreutils php php-fpm php-bcmath php-cli php-common php-curl php-gd php-json php-ldap php-mbstring php-mysqlnd php-opcache php-pdo php-pgsql php-process php-soap php-xml php-zip
 ```
 <!-- cSpell:enable -->
 Damit der Apache HTTP Server, MariaDB, PHP-FPM und memcached auch beim Booten gestartet werden, sind diese Befehle erforderlich:
@@ -88,7 +101,6 @@ sudo nano /etc/php.d/i-doit.ini
 ```ini
 allow_url_fopen = Yes
 file_uploads = On
-magic_quotes_gpc = Off
 max_execution_time = 300
 max_file_uploads = 42
 max_input_time = 60
@@ -96,7 +108,6 @@ max_input_vars = 10000
 memory_limit = 256M
 post_max_size = 128M
 register_argc_argv = On
-register_globals = Off
 short_open_tag = On
 upload_max_filesize = 128M
 display_errors = Off
@@ -276,6 +287,12 @@ Diese Datei erhält folgenden Inhalt:
 
     TimeOut 600
     ProxyTimeout 600
+
+    <FilesMatch "\.php$">
+        <If "-f %{REQUEST_FILENAME}">
+            SetHandler "proxy:unix:/run/php-fpm/www.sock|fcgi://localhost"
+        </If>
+    </FilesMatch>
 </VirtualHost>
 ```
 <!-- cSpell:enable -->
@@ -348,8 +365,7 @@ innodb_flush_method = O_DIRECT
 innodb_lru_scan_depth = 2048
 table_definition_cache = 1024
 table_open_cache = 2048
-# Only if your have MySQL 5.6 or higher, do not use with MariaDB!
-#table_open_cache_instances = 4
+table_open_cache_instances = 8
 innodb_stats_on_metadata = 0
 sql-mode = ""
 ```
