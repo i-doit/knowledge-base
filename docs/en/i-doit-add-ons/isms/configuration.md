@@ -10,8 +10,6 @@ lang: en
 
 This document describes the complete setup of the ISMS add-on in i-doit.
 
-[![ISMS](../../assets/images/de/i-doit-add-ons/isms/isms-uebersicht.png)](../../assets/images/de/i-doit-add-ons/isms/isms-uebersicht.png)
-
 * * *
 
 ## Setting Up the ISMS Add-on
@@ -44,12 +42,12 @@ The level should be a positive integer, by which the criteria are sorted in asce
 - Negative public perception
 
 !!! example "For example"
-    | Identifier | Name              | Assessment Criteria                |
-    | ---------- | ----------------- | ---------------------------------- |
-    | 1          | Financial Impact  | Low: Less than 5,000 EUR           |
-    |            |                   | Normal: From 5,000 to 50,000 EUR   |
-    |            |                   | High: From 50,000 to 500,000 EUR   |
-    |            |                   | Very high: More than 500,000 EUR   |
+    | Identifier | Name             | Assessment Criteria              |
+    | ---------- | ---------------- | -------------------------------- |
+    | 1          | Financial Impact | Low: Less than 5,000 EUR         |
+    |            |                  | Normal: From 5,000 to 50,000 EUR |
+    |            |                  | High: From 50,000 to 500,000 EUR |
+    |            |                  | Very high: More than 500,000 EUR |
 
 Create appropriate specifications for each assessment criterion. You can orient the damage scenarios to those defined in the BSI IT-Grundschutz. The identifier is used for sorting.
 
@@ -65,9 +63,9 @@ Create appropriate specifications for each assessment criterion. You can orient 
 
 For further evaluation, you now choose how critical a risk level is assessed. You can define colors for this.
 
-| Color                               | Risk Level |
-| ----------------------------------- | ---------- |
-| Red, for values less than or equal  | -          |
+| Color                                 | Risk Level |
+| ------------------------------------- | ---------- |
+| Red, for values less than or equal    | -          |
 | Yellow, for values less than or equal | 6          |
 | Green, for values less than or equal  | 3          |
 
@@ -100,14 +98,14 @@ The risk formula defines how the risk level is calculated from the assessment cr
 
 Since a risk always consists of a **threat and a vulnerability**, it is recommended to also create these object types.
 
-| File                                                       | default                  | Description                                       | Version | Language | Number of Licensed Objects |
-| ---------------------------------------------------------- | ------------------------- | ------------------------------------------------- | ------- | -------- | -------------------------- |
-| ISO27001_Massnahmen_AnhangA(de).csv                        | DIN EN ISO/IEC 27001      | Annex A measures                                  | 2022    | DE       | ~93                        |
-| ISO27001_Controls_AnnexA(en).csv                           | DIN EN ISO/IEC 27001      | Controls Appendix A                               | 2022    | EN       | ~93                        |
-| IT-Grundschutz-Kompendium_Elementare Gefaehrdungen(de).csv | BSI Grundschutz Compendium | Elementary threats as threat/vulnerability         | -       | DE       | ~47                        |
-| IT-Grundschutz-Kompendium_Elementary_Threats(en).csv       | BSI Grundschutz Compendium | Elementary threats as threat/vulnerabilities       | -       | EN       | ~47                        |
-| IT-Grundschutz-Kompendium_Anforderungen(de).csv            | BSI Grundschutz Compendium | Requirements from modules as measures              | 2023    | DE       | ~1834                      |
-| NIS2-Anforderungen(openkritis.de).csv                      | NIS2                      | NIS2 requirements as measures                      | -       | DE       | ~36                        |
+| File                                                       | default                    | Description                                  | Version | Language | Number of Licensed Objects |
+| ---------------------------------------------------------- | -------------------------- | -------------------------------------------- | ------- | -------- | -------------------------- |
+| ISO27001_Massnahmen_AnhangA(de).csv                        | DIN EN ISO/IEC 27001       | Annex A measures                             | 2022    | DE       | ~93                        |
+| ISO27001_Controls_AnnexA(en).csv                           | DIN EN ISO/IEC 27001       | Controls Appendix A                          | 2022    | EN       | ~93                        |
+| IT-Grundschutz-Kompendium_Elementare Gefaehrdungen(de).csv | BSI Grundschutz Compendium | Elementary threats as threat/vulnerability   | -       | DE       | ~47                        |
+| IT-Grundschutz-Kompendium_Elementary_Threats(en).csv       | BSI Grundschutz Compendium | Elementary threats as threat/vulnerabilities | -       | EN       | ~47                        |
+| IT-Grundschutz-Kompendium_Anforderungen(de).csv            | BSI Grundschutz Compendium | Requirements from modules as measures        | 2023    | DE       | ~1834                      |
+| NIS2-Anforderungen(openkritis.de).csv                      | NIS2                       | NIS2 requirements as measures                | -       | DE       | ~36                        |
 
 * * *
 

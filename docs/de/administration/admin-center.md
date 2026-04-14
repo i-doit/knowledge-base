@@ -64,73 +64,73 @@ Hier installierst und verwaltest du [i-doit Add-ons](../i-doit-add-ons/index.md)
 
 ### Login
 
-| Einstellung | Beschreibung |
-|-------------|--------------|
+| Einstellung                   | Beschreibung                                                                                                                                      |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Welcome message for login** | Text der auf der Anmeldeseite angezeigt wird — z.B. "Wartungsfenster: Sonntag 02:00-06:00 Uhr" oder Hinweise für neue Benutzer. HTML ist möglich. |
 
 ### Proxy
 
 Wenn deine i-doit-Installation keinen direkten Internetzugang hat (z.B. für Lizenzprüfung oder das Add-on & Subscription Center), konfiguriere hier den HTTP-Proxy.
 
-| Einstellung | Beschreibung |
-|-------------|--------------|
-| **Active** | Proxy aktivieren/deaktivieren |
-| **Host/IP-Address** | Hostname oder IP des Proxy-Servers |
-| **Port** | Proxy-Port (Standard: 3128 für Squid) |
+| Einstellung           | Beschreibung                                |
+| --------------------- | ------------------------------------------- |
+| **Active**            | Proxy aktivieren/deaktivieren               |
+| **Host/IP-Address**   | Hostname oder IP des Proxy-Servers          |
+| **Port**              | Proxy-Port (Standard: 3128 für Squid)       |
 | **Username/Password** | Falls der Proxy Authentifizierung erfordert |
 
 ### SMTP
 
 E-Mail-Konfiguration für [Benachrichtigungen](../auswertungen/benachrichtigungen.md), Passwort-Reset-Mails und Wartungsvertrag-Erinnerungen. Ohne korrekte SMTP-Konfiguration werden **keine E-Mails** versendet.
 
-| Einstellung | Beschreibung |
-|-------------|--------------|
-| **SMTP Host** | Hostname des Mailservers, z.B. `smtp.firma.de` |
-| **SMTP Port** | Port — `587` für STARTTLS (empfohlen), `465` für SSL, `25` für unverschlüsselt |
-| **SMTP Username/Password** | Zugangsdaten für den Mailserver |
-| **SMTP TLS** | TLS-Verschlüsselung aktivieren — **unbedingt einschalten** wenn dein Mailserver es unterstützt |
-| **Sender** | Absender-Adresse, z.B. `idoit@firma.de`. Muss vom Mailserver akzeptiert werden. |
-| **Name** | Anzeigename des Absenders, z.B. `i-doit CMDB` |
-| **Timeout** | Verbindungs-Timeout in Sekunden (Standard: 60) |
-| **SMTP Debug** | Bei `Yes` werden SMTP-Dialoge ins Log geschrieben — hilfreich wenn Mails nicht ankommen |
-| **Subject prefix** | Wird jedem Betreff vorangestellt, z.B. `[i-doit]`. Hilft beim Filtern in Outlook/Thunderbird. |
+| Einstellung                | Beschreibung                                                                                   |
+| -------------------------- | ---------------------------------------------------------------------------------------------- |
+| **SMTP Host**              | Hostname des Mailservers, z.B. `smtp.firma.de`                                                 |
+| **SMTP Port**              | Port — `587` für STARTTLS (empfohlen), `465` für SSL, `25` für unverschlüsselt                 |
+| **SMTP Username/Password** | Zugangsdaten für den Mailserver                                                                |
+| **SMTP TLS**               | TLS-Verschlüsselung aktivieren — **unbedingt einschalten** wenn dein Mailserver es unterstützt |
+| **Sender**                 | Absender-Adresse, z.B. `idoit@firma.de`. Muss vom Mailserver akzeptiert werden.                |
+| **Name**                   | Anzeigename des Absenders, z.B. `i-doit CMDB`                                                  |
+| **Timeout**                | Verbindungs-Timeout in Sekunden (Standard: 60)                                                 |
+| **SMTP Debug**             | Bei `Yes` werden SMTP-Dialoge ins Log geschrieben — hilfreich wenn Mails nicht ankommen        |
+| **Subject prefix**         | Wird jedem Betreff vorangestellt, z.B. `[i-doit]`. Hilft beim Filtern in Outlook/Thunderbird.  |
 
 !!! tip "Verbindung testen"
     Unter der SMTP-Konfiguration gibt es einen **Test**-Button. Nutze ihn nach jeder Änderung um sicherzustellen, dass Mails tatsächlich versendet werden.
 
 ### Security
 
-| Einstellung | Beschreibung |
-|-------------|--------------|
+| Einstellung    | Beschreibung                                                                                                                                                                           |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **CSRF-Token** | Schutz gegen Cross-Site Request Forgery. Bei `Yes` (Standard) wird bei jedem Formular ein Token geprüft. **Nicht deaktivieren** — es sei denn, ein Add-on hat Kompatibilitätsprobleme. |
 
 ### Session
 
-| Einstellung | Beschreibung |
-|-------------|--------------|
+| Einstellung         | Beschreibung                                                                                                                                                                                 |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Session timeout** | Nach wie vielen Sekunden Inaktivität wird der Benutzer automatisch abgemeldet. Standard: `3600` (1 Stunde). In sicherheitskritischen Umgebungen auf `1800` (30 Minuten) oder weniger setzen. |
 
 ### Single Sign On
 
-| Einstellung | Beschreibung |
-|-------------|--------------|
-| **Active** | SSO aktivieren/deaktivieren. Voraussetzung: ein [SSO-Verfahren](../benutzerauthentifizierung-und-verwaltung/sso-vergleich/index.md) muss konfiguriert sein. |
-| **Default tenant** | Welcher Mandant bei SSO-Anmeldung automatisch ausgewählt wird |
-| **Use Domain Part** | Bei `Yes` wird der Domain-Teil des Benutzernamens (z.B. `FIRMA\lfischer`) für die Mandanten-Zuordnung verwendet |
+| Einstellung         | Beschreibung                                                                                                                                                |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Active**          | SSO aktivieren/deaktivieren. Voraussetzung: ein [SSO-Verfahren](../benutzerauthentifizierung-und-verwaltung/sso-vergleich/index.md) muss konfiguriert sein. |
+| **Default tenant**  | Welcher Mandant bei SSO-Anmeldung automatisch ausgewählt wird                                                                                               |
+| **Use Domain Part** | Bei `Yes` wird der Benutzername mit der Domain (z.B. `tester@i-doit.com`) für den Login verwendet                                                           |
 
 ### System Parameters
 
-| Einstellung | Beschreibung |
-|-------------|--------------|
-| **PHP Timezone** | Zeitzone für Datumsanzeigen, z.B. `Europe/Berlin`. Muss mit der PHP-Zeitzone des Servers übereinstimmen. |
-| **File upload directory** | Verzeichnis für hochgeladene Dateien. Standard: `upload/files/` relativ zum i-doit Installationsverzeichnis. |
-| **Image upload directory** | Verzeichnis für hochgeladene Bilder (Objektbilder, Floorplan-Bilder). |
+| Einstellung                | Beschreibung                                                                                                 |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| **PHP Timezone**           | Zeitzone für Datumsanzeigen, z.B. `Europe/Berlin`. Muss mit der PHP-Zeitzone des Servers übereinstimmen.     |
+| **File upload directory**  | Verzeichnis für hochgeladene Dateien. Standard: `upload/files/` relativ zum i-doit Installationsverzeichnis. |
+| **Image upload directory** | Verzeichnis für hochgeladene Bilder (Objektbilder, Floorplan-Bilder).                                        |
 
 ### User interface
 
-| Einstellung | Beschreibung |
-|-------------|--------------|
-| **Wiki URL** | URL zu einem externen Wiki. Wird in der Oberfläche als Link angezeigt. |
+| Einstellung                           | Beschreibung                                                                          |
+| ------------------------------------- | ------------------------------------------------------------------------------------- |
+| **Wiki URL**                          | URL zu einem externen Wiki. Wird in der Oberfläche als Link angezeigt.                |
 | **Sortfunction for login tenantlist** | Sortierung der Mandantenliste auf der Login-Seite: nach Titel oder benutzerdefiniert. |
 
 ## Expert settings (system-weit)
@@ -139,49 +139,49 @@ E-Mail-Konfiguration für [Benachrichtigungen](../auswertungen/benachrichtigunge
 
 ### Rechtesystem
 
-| Key | Standard | Was passiert wenn du es änderst? |
-|-----|----------|----------------------------------|
-| `auth.active` | `1` | Bei `0` wird das **gesamte Rechtesystem deaktiviert** — jeder Benutzer kann alles sehen und bearbeiten. Nur in Notfällen verwenden, z.B. wenn du dich durch eine fehlerhafte Rechtekonfiguration ausgesperrt hast. |
-| `api.authenticated-users-only` | `1` | Bei `1` müssen API-Anfragen mit gültigen Benutzerdaten (Basic Auth) authentifiziert werden — nicht nur mit dem API-Key. **Empfohlen** für Produktionsumgebungen. |
+| Key                            | Standard | Was passiert wenn du es änderst?                                                                                                                                                                                   |
+| ------------------------------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `auth.active`                  | `1`      | Bei `0` wird das **gesamte Rechtesystem deaktiviert** — jeder Benutzer kann alles sehen und bearbeiten. Nur in Notfällen verwenden, z.B. wenn du dich durch eine fehlerhafte Rechtekonfiguration ausgesperrt hast. |
+| `api.authenticated-users-only` | `1`      | Bei `1` müssen API-Anfragen mit gültigen Benutzerdaten (Basic Auth) authentifiziert werden — nicht nur mit dem API-Key. **Empfohlen** für Produktionsumgebungen.                                                   |
 
 ### CMDB-Verhalten
 
-| Key | Standard | Was passiert wenn du es änderst? |
-|-----|----------|----------------------------------|
-| `cmdb.quickpurge` | `0` | Bei `1` können Objekte **direkt und unwiderruflich gelöscht** werden — ohne Archivieren → Löschen → Purgen. **Gefährlich in Produktion.** |
-| `cmdb.unique.hostname` | `0` | Bei `1` werden doppelte Hostnamen verhindert. |
-| `cmdb.unique.ip-address` | `0` | Bei `1` werden doppelte IP-Adressen verhindert. **Empfohlen.** |
-| `cmdb.unique.object-title` | `0` | Bei `1` müssen Objektnamen eindeutig sein. |
-| `cmdb.unique.layer-2-net` | `0` | Bei `1` werden doppelte VLAN-IDs verhindert. |
-| `cmdb.limits.obj-browser.objects-in-viewmode` | `8` | Maximale Anzahl Objekte im Objekt-Browser. |
-| `cmdb.limits.port-lists-vlans` | `5` | Wie viele VLANs in der Portliste angezeigt werden. |
-| `cmdb.object.title.cable-prefix` | `KABEL_DEFAULT_` | Prefix für automatisch generierte Kabel-Objektnamen. |
-| `cmdb.objtype.X.auto-inventory-no` | (leer) | Muster für automatische Inventarnummern. Ersetze `X` durch die Objekttyp-ID. Beispiel: `SRV-%COUNTER%` → `SRV-001`. |
+| Key                                           | Standard         | Was passiert wenn du es änderst?                                                                                                          |
+| --------------------------------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `cmdb.quickpurge`                             | `0`              | Bei `1` können Objekte **direkt und unwiderruflich gelöscht** werden — ohne Archivieren → Löschen → Purgen. **Gefährlich in Produktion.** |
+| `cmdb.unique.hostname`                        | `0`              | Bei `1` werden doppelte Hostnamen verhindert.                                                                                             |
+| `cmdb.unique.ip-address`                      | `0`              | Bei `1` werden doppelte IP-Adressen verhindert. **Empfohlen.**                                                                            |
+| `cmdb.unique.object-title`                    | `0`              | Bei `1` müssen Objektnamen eindeutig sein.                                                                                                |
+| `cmdb.unique.layer-2-net`                     | `0`              | Bei `1` werden doppelte VLAN-IDs verhindert.                                                                                              |
+| `cmdb.limits.obj-browser.objects-in-viewmode` | `8`              | Maximale Anzahl Objekte im Objekt-Browser.                                                                                                |
+| `cmdb.limits.port-lists-vlans`                | `5`              | Wie viele VLANs in der Portliste angezeigt werden.                                                                                        |
+| `cmdb.object.title.cable-prefix`              | `KABEL_DEFAULT_` | Prefix für automatisch generierte Kabel-Objektnamen.                                                                                      |
+| `cmdb.objtype.X.auto-inventory-no`            | (leer)           | Muster für automatische Inventarnummern. Ersetze `X` durch die Objekttyp-ID. Beispiel: `SRV-%COUNTER%` → `SRV-001`.                       |
 
 ### Sicherheit und Passwörter
 
-| Key | Standard | Was passiert wenn du es änderst? |
-|-----|----------|----------------------------------|
-| `security.passwort.minlength` | (leer) | Mindestlänge für Benutzerpasswörter. Setze diesen Wert in Produktionsumgebungen auf mindestens **8**, besser **12**. |
+| Key                           | Standard | Was passiert wenn du es änderst?                                                                                     |
+| ----------------------------- | -------- | -------------------------------------------------------------------------------------------------------------------- |
+| `security.passwort.minlength` | (leer)   | Mindestlänge für Benutzerpasswörter. Setze diesen Wert in Produktionsumgebungen auf mindestens **8**, besser **12**. |
 
 ### Logging und Debug
 
-| Key | Standard | Was passiert wenn du es änderst? |
-|-----|----------|----------------------------------|
-| `ldap.debug` | `1` | LDAP-Debug-Logging. Bei `0` deaktiviert — spart Log-Volumen in Produktion. |
-| `logbook.changes` | `1` | Bei `0` werden Änderungen nicht mehr im Logbuch protokolliert. **Nicht deaktivieren** — du verlierst die Nachvollziehbarkeit. |
-| `logging.cmdb.import` | `1` | Logging von Import-Vorgängen (CSV, JDisc). |
-| `debug-bar.enabled` | `1` | PHP Debug Bar anzeigen. In Produktion auf `0` setzen. |
+| Key                   | Standard | Was passiert wenn du es änderst?                                                                                              |
+| --------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `ldap.debug`          | `1`      | LDAP-Debug-Logging. Bei `0` deaktiviert — spart Log-Volumen in Produktion.                                                    |
+| `logbook.changes`     | `1`      | Bei `0` werden Änderungen nicht mehr im Logbuch protokolliert. **Nicht deaktivieren** — du verlierst die Nachvollziehbarkeit. |
+| `logging.cmdb.import` | `1`      | Logging von Import-Vorgängen (CSV, JDisc).                                                                                    |
+| `debug-bar.enabled`   | `1`      | PHP Debug Bar anzeigen. In Produktion auf `0` setzen.                                                                         |
 
 ### GUI und E-Mail-Templates
 
-| Key | Standard | Beschreibung |
-|-----|----------|--------------|
-| `gui.empty_value` | (leer) | Darstellung leerer Felder in der UI, z.B. `—` oder `n/a`. |
-| `gui.wysiwyg` | `1` | WYSIWYG-Editor für Beschreibungsfelder aktivieren. |
-| `email.template.maintenance` | (Template) | E-Mail-Vorlage für Wartungsvertrag-Benachrichtigungen. |
-| `email.template.password` | `Ihr Passwort lautet:` | E-Mail-Text beim Passwort-Versand. |
-| `maxlength.dialog_plus` | `110` | Maximale Zeichenlänge für Dialog+-Einträge. |
+| Key                          | Standard               | Beschreibung                                              |
+| ---------------------------- | ---------------------- | --------------------------------------------------------- |
+| `gui.empty_value`            | (leer)                 | Darstellung leerer Felder in der UI, z.B. `—` oder `n/a`. |
+| `gui.wysiwyg`                | `1`                    | WYSIWYG-Editor für Beschreibungsfelder aktivieren.        |
+| `email.template.maintenance` | (Template)             | E-Mail-Vorlage für Wartungsvertrag-Benachrichtigungen.    |
+| `email.template.password`    | `Ihr Passwort lautet:` | E-Mail-Text beim Passwort-Versand.                        |
+| `maxlength.dialog_plus`      | `110`                  | Maximale Zeichenlänge für Dialog+-Einträge.               |
 
 ## Konfiguration (Config)
 

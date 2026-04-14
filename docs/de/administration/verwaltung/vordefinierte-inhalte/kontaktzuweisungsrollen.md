@@ -11,8 +11,6 @@ Unter **Verwaltung → Vordefinierte Inhalte → Kontaktzuweisungsrollen** verwa
 
 i-doit liefert bereits einige Standardrollen wie **Administrator**, **Anwender** und **Eigentümer** mit. Du kannst weitere Rollen hinzufügen, bestehende umbenennen oder nicht benötigte Rollen entfernen. Die hier definierten Rollen stehen anschließend in der Kategorie **Kontaktzuweisung** aller Objekte zur Auswahl. Über das Rechtesystem und den Report Manager lassen sich Auswertungen und Berechtigungen gezielt auf bestimmte Kontaktrollen einschränken.
 
-[![Kontaktzuweisungsrollen](../../../assets/images/de/administration/verwaltung/vordefinierte-inhalte/kontaktzuweisungsrollen.png)](../../../assets/images/de/administration/verwaltung/vordefinierte-inhalte/kontaktzuweisungsrollen.png)
-
 [![Contact Assignment Roles](../../../assets/images/de/administration/verwaltung/vordefinierte-inhalte/kontaktzuweisungsrollen/1-k.png)](../../../assets/images/de/administration/verwaltung/vordefinierte-inhalte/kontaktzuweisungsrollen/1-k.png)
 
 ## Siehe auch

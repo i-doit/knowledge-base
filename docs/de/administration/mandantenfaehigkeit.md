@@ -34,14 +34,14 @@ Durch diese Architektur ist ein versehentlicher Datenaustausch zwischen Mandante
 
 Nicht jede Form der Datentrennung erfordert einen eigenen Mandanten. Bevor du einen neuen Mandanten anlegst, prüfe, ob die [Rechteverwaltung](../benutzerauthentifizierung-und-verwaltung/integrierte-authentifizierung/index.md) innerhalb eines Mandanten ausreicht:
 
-| Kriterium | Rechteverwaltung im Mandant | Eigener Mandant |
-|---|---|---|
-| Sichtbarkeit einzelner Objekte einschränken | Ja — über Objektrechte und Personengruppen | Nicht nötig |
-| Kategorien pro Benutzergruppe beschränken | Ja — über Kategorierechte | Nicht nötig |
-| Komplett getrennte Objektbestände ohne jede Überschneidung | Schwierig und fehleranfällig | Empfohlen |
-| Eigene Objekttyp-Konfiguration je Bereich | Nein | Ja |
-| Getrennte CMDB-Strukturen (z.B. unterschiedliche Lebenszyklen, Workflows) | Nein | Ja |
-| Daten müssen an einen externen Dritten übergeben werden können | Nur mit manuellem Export | Ja — Datenbank einzeln sicherbar |
+| Kriterium                                                                 | Rechteverwaltung im Mandant                | Eigener Mandant                  |
+| ------------------------------------------------------------------------- | ------------------------------------------ | -------------------------------- |
+| Sichtbarkeit einzelner Objekte einschränken                               | Ja — über Objektrechte und Personengruppen | Nicht nötig                      |
+| Kategorien pro Benutzergruppe beschränken                                 | Ja — über Kategorierechte                  | Nicht nötig                      |
+| Komplett getrennte Objektbestände ohne jede Überschneidung                | Schwierig und fehleranfällig               | Empfohlen                        |
+| Eigene Objekttyp-Konfiguration je Bereich                                 | Nein                                       | Ja                               |
+| Getrennte CMDB-Strukturen (z.B. unterschiedliche Lebenszyklen, Workflows) | Nein                                       | Ja                               |
+| Daten müssen an einen externen Dritten übergeben werden können            | Nur mit manuellem Export                   | Ja — Datenbank einzeln sicherbar |
 
 **Faustregel:** Wenn sich zwei Bereiche lediglich nicht gegenseitig sehen sollen, reicht die Rechteverwaltung. Wenn sie komplett unabhängige Konfigurationen, Objekttypen oder Kategoriedefinitionen benötigen, nutze separate Mandanten.
 
@@ -79,25 +79,25 @@ Du kannst festlegen, wie viele lizenzpflichtige Objekte ein Mandant maximal enth
 
 ## Was ist gemeinsam, was ist getrennt?
 
-| Aspekt | Gemeinsam (installationsweit) | Getrennt (pro Mandant) |
-|---|---|---|
-| **PHP-Code und Webserver** | Ja | — |
-| **System-Datenbank** | Ja | — |
-| **Add-on-Dateien** | Ja (eine Installation) | Aktivierung pro Mandant steuerbar |
-| **Admin-Center-Zugang** | Ja (ein Passwort) | — |
-| **Mandanten-Datenbank** | — | Ja — eigene DB pro Mandant |
-| **Objekte, Kategorien, Beziehungen** | — | Ja |
-| **Objekttyp-Konfiguration** | — | Ja |
-| **Reports und Dashboards** | — | Ja |
-| **Benutzer und Rechte** | — | Ja — eigene Personen-Objekte |
-| **LDAP-/SSO-Konfiguration** | — | Pro Mandant konfigurierbar |
-| **Mandantenspezifische Einstellungen** | — | Ja — siehe [Einstellungen](verwaltung/mandanten-name-verwaltung/einstellungen-mandanten-name.md) |
+| Aspekt                                 | Gemeinsam (installationsweit) | Getrennt (pro Mandant)                                                                           |
+| -------------------------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------ |
+| **PHP-Code und Webserver**             | Ja                            | —                                                                                                |
+| **System-Datenbank**                   | Ja                            | —                                                                                                |
+| **Add-on-Dateien**                     | Ja (eine Installation)        | Aktivierung pro Mandant steuerbar                                                                |
+| **Admin-Center-Zugang**                | Ja (ein Passwort)             | —                                                                                                |
+| **Mandanten-Datenbank**                | —                             | Ja — eigene DB pro Mandant                                                                       |
+| **Objekte, Kategorien, Beziehungen**   | —                             | Ja                                                                                               |
+| **Objekttyp-Konfiguration**            | —                             | Ja                                                                                               |
+| **Reports und Dashboards**             | —                             | Ja                                                                                               |
+| **Benutzer und Rechte**                | —                             | Ja — eigene Personen-Objekte                                                                     |
+| **LDAP-/SSO-Konfiguration**            | —                             | Pro Mandant konfigurierbar                                                                       |
+| **Mandantenspezifische Einstellungen** | —                             | Ja — siehe [Einstellungen](verwaltung/mandanten-name-verwaltung/einstellungen-mandanten-name.md) |
 
 ## Add-ons pro Mandant
 
 Add-on-Dateien installierst du einmalig über das Admin-Center. Bei der [Installation und beim Update](../i-doit-add-ons/i-diary.md) wählst du aus, ob die Aktion für einen einzelnen Mandanten oder alle Mandanten gelten soll.
 
-Im Admin-Center unter **Modules** siehst du alle installierten Add-ons pro Mandant und kannst sie gezielt (de-)aktivieren. Das Löschen von Add-on-Dateien erfolgt immer installationsweit für alle Mandanten.
+Im Admin-Center unter **Add-ons** siehst du alle installierten Add-ons pro Mandant und kannst sie gezielt (de-)aktivieren. Das Löschen von Add-on-Dateien erfolgt immer installationsweit für alle Mandanten.
 
 [![Add-ons pro Mandant](../assets/images/de/administration/mandantenfaehigkeit/4-mand.png)](../assets/images/de/administration/mandantenfaehigkeit/4-mand.png)
 

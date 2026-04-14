@@ -8,8 +8,6 @@ lang: de
 
 Hier beschreiben wir, wie du i-doit auf Version **33** aktualisierst, um das Flows Add-on installieren zu können.
 
-[![Flows](../../assets/images/de/i-doit-add-ons/flows/flows-uebersicht.png)](../../assets/images/de/i-doit-add-ons/flows/flows-uebersicht.png)
-
 ## 1. i-doit 33 Update
 <!--//TODO add a selection -->
 Um das Flows Add-on und alle neuen Funktionen nutzen zu können, musst du i-doit zuvor auf Version 33 aktualisieren.
@@ -160,9 +158,9 @@ Klicke auf die Überschrift **Add-ons**, dann auf **Install/update Add-on** und 
 ## 3. Automatisierte Ausführung von flows
 
 Das Flows Add-on wird mit zwei CLI-Befehlen geliefert. Beide Befehle werden benötigt, damit das Flows Add-on funktioniert.
-<!-- //TODO clarify if this canlead to problems when a crontab is executed while the cron is running
+
 Das Flows Add-on wird mit zwei CLI-Befehlen geliefert. Beide Befehle werden benötigt, damit das Flows-Add-on vollständig funktioniert. Es gibt zwei Möglichkeiten, die CLI-Befehle einzurichten. Die Befehle können z.B. über einen **Crontab** ausgeführt werden. Wir haben auch ein Service-Installationsskript mit dem Namen **create-daemon.sh** erstellt, das sich im Flows Add-on Ordner unter `i-doit/src/classes/modules/synetics_flows/` befindet.
---->
+
 ### Systemdienst-Installationsskript verwenden
 
 Lege zuerst die Ausführungsrechte für die Datei fest. Verwende dazu den folgenden Befehl im i-doit-Ordner:
@@ -182,7 +180,7 @@ sudo src/classes/modules/synetics_flows/create-daemon.sh -u admin-user -p admin-
 ```
 
 * * *
-<!-- //TODO clarify if this canlead to problems when a crontab is executed while the cron is running
+
 ### Erstellen eines Crontabs
 
 Erstelle eine Crontab für den Apache-Benutzer. Beispiel für Debian:
@@ -197,6 +195,5 @@ Füge die folgenden Zeilen am Ende der Datei ein, nachdem du die i-doit-Anmeldei
 * * * * * /usr/bin/php /var/www/html/console.php flows:time-trigger --user admin-user --password admin-user-password --tenantId 1
 * * * * * /usr/bin/php /var/www/html/console.php flows:perform ---user admin-user --password admin-user-password --tenantId 1
 ```
---->
 
 Wenn du Fragen hast oder weitere Unterstützung benötigst, wende dich bitte an uns unter <help@i-doit.com>.

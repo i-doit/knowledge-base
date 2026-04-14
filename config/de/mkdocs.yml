@@ -74,6 +74,7 @@ plugins:
         'daten-konsolidieren/jdisc-discovery.md': 'daten-konsolidieren/jdisc/index.md'
         'upgrades-und-umzuege/update-anleitung-1.7.4-bis-31.md': 'upgrades-und-umzuege/update-anleitung.md'
         'auswertungen/variable-reports.md': 'anwendungsfaelle/variable-reports.md'
+        'administration/verwaltung/import-und-schnittstellen/jdisc/index.md': 'i-doit-add-ons/jdisc-connector/index.md'
 markdown_extensions:
   - abbr
   - admonition
@@ -124,10 +125,10 @@ extra:
       icon: fontawesome/brands/github
   alternate:
     - name: English
-      link: https://kb.i-doit.com/en/
+      link: /en/
       lang: en
     - name: Deutsch
-      link: https://kb.i-doit.com/de/
+      link: /de/
       lang: de
   status:
     new: Neu
@@ -770,7 +771,6 @@ nav:
       - Geo-Koordinaten: anwendungsfaelle/geo-koordinaten.md
       - i-doit - Patch Manager bridge: anwendungsfaelle/i-doit-patch-manager-bridge.md
       - IP Address Management (IPAM): anwendungsfaelle/ip-adress-management.md
-      - ISO 27000 mit i-doit: anwendungsfaelle/iso27000-mit-i-doit.md
       - Kabel-Patches und -wege: anwendungsfaelle/kabel-patches-und-wege.md
       - Komplexe Reports: anwendungsfaelle/komplexe-reports.md
       - Passwörter verwalten: anwendungsfaelle/passwoerter-verwalten.md

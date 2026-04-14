@@ -1,0 +1,17 @@
+---
+title: Dokumentation von End of Life Daten
+description: In diesem Artikel zeigen wir Ihnen, wie Sie End of Life Daten in i-doit dokumentieren können.
+lang: de
+---
+
+# Dokumentation von End of Life Daten
+
+In diesem Artikel zeigen wir Ihnen, wie Sie End of Life Daten in i-doit dokumentieren können. Diese Informationen sind wichtig, um den Lebenszyklus von IT-Komponenten zu überwachen und rechtzeitig Maßnahmen zu ergreifen, bevor Komponenten nicht mehr unterstützt werden.
+
+## Kategorie mit EOL Daten und Objekttyp für um die Daten pro Objekttyp zu dokumentieren
+
+Um End of Life Daten zu dokumentieren, können Sie eine benutzerdefinierte Kategorie erstellen, die die relevanten Informationen enthält. Zusätzlich können Sie einen Objekttyp erstellen, um die EOL-Daten für verschiedene Objekttypen zu dokumentieren. In der Kategorie können Sie Attribute wie "End of Life Datum", "End of Support Datum" und "EOL Status" hinzufügen. Der Objekttyp dient der Dokumentation der EOL-Daten für spezifische IT-Komponenten, wie z.B. Server, Software oder Netzwerkgeräte.
+
+## Kategorie mit EOL Daten und ein Objekttyp für die Modelle sowie
+
+Alternativ können Sie auch eine Kategorie erstellen, die die EOL-Daten enthält, und einen Objekttyp für die Modelle der IT-Komponenten erstellen. In diesem Fall würden Sie die EOL-Daten auf der Ebene der Modelle dokumentieren, anstatt auf der Ebene der einzelnen Objekte. Auch hier können Sie Attribute wie "End of Life Datum", "End of Support Datum" und "EOL Status" hinzufügen, um die relevanten Informationen zu erfassen. Dieser Ansatz ermöglicht es Ihnen, die EOL-Daten als Objekt zu verwalten und diese

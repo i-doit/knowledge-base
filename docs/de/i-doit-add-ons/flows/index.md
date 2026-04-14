@@ -8,8 +8,6 @@ lang: de
 
 Das Flows Add-on für i-doit ist ein leistungsstarkes Werkzeug zur Automatisierung von Prozessen innerhalb des CMDB-Systems. Es ermöglicht dir, automatisierte Flows basierend auf Triggern und definierten Bedingungen zu erstellen.
 
-[![Flows](../../assets/images/de/i-doit-add-ons/flows/flows-uebersicht.png)](../../assets/images/de/i-doit-add-ons/flows/flows-uebersicht.png)
-
 Mit Flows kannst du repetitive Aufgaben und manuelle Schritte automatisieren, indem du Regeln festlegst, die durch bestimmte Ereignisse oder Zustände (z. B. eine Änderung in der CMDB) ausgelöst werden. Das Add-on hilft, Arbeitsabläufe effizienter zu gestalten, Fehler zu reduzieren und die Verwaltung komplexer IT-Umgebungen zu vereinfachen, indem es Routineprozesse ohne Benutzerinteraktion abwickelt.
 
 !!! tip "Teste das Add-on kostenlos"
@@ -66,13 +64,13 @@ Füge die folgenden Zeilen am Ende der Datei ein, nachdem du die i-doit-Anmeldei
 
 Unter **Verwaltung → Berechtigungen → Flows** kannst du [Rechte für Personen und Personengruppen](../../effizientes-dokumentieren/rechteverwaltung/index.md) anpassen.
 
-| Recht          | Beschreibung                                                                    |
-| -------------- | ------------------------------------------------------------------------------- |
-| **Erstellen**  | Erlaubt das Erstellen und Duplizieren; impliziert das Ansehen-Recht             |
-| **Ansehen**    | Erlaubt Zugriff auf die Flows-Übersicht                                         |
-| **Editieren**  | Erlaubt Editieren, Aktivieren/Deaktivieren; impliziert das Ansehen-Recht        |
-| **Löschen**    | Erlaubt das Löschen von Flows; impliziert das Ansehen-Recht                     |
-| **Supervisor** | Erlaubt alles                                                                   |
+| Recht          | Beschreibung                                                             |
+| -------------- | ------------------------------------------------------------------------ |
+| **Erstellen**  | Erlaubt das Erstellen und Duplizieren; impliziert das Ansehen-Recht      |
+| **Ansehen**    | Erlaubt Zugriff auf die Flows-Übersicht                                  |
+| **Editieren**  | Erlaubt Editieren, Aktivieren/Deaktivieren; impliziert das Ansehen-Recht |
+| **Löschen**    | Erlaubt das Löschen von Flows; impliziert das Ansehen-Recht              |
+| **Supervisor** | Erlaubt alles                                                            |
 
 ## Übersicht
 

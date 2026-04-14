@@ -10,8 +10,6 @@ lang: de
 
 Das **ISMS Add-on** für die **i-doit CMDB** ist eine leistungsstarke Erweiterung für das **Informationssicherheits-Management**. Es unterstützt dich bei der Umsetzung der **ISO 27001-Zertifizierung** und bietet umfassende Funktionen für **Risikomanagement**, **Maßnahmenverwaltung** und **Compliance**.
 
-[![ISMS](../../assets/images/de/i-doit-add-ons/isms/isms-uebersicht.png)](../../assets/images/de/i-doit-add-ons/isms/isms-uebersicht.png)
-
 ### Vorteile des ISMS Add-ons
 
 - Direkte Integration in die **IT-Dokumentation**

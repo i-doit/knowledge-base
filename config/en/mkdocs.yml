@@ -9,7 +9,7 @@ site_author: i-doit GmbH
 copyright: Copyright &copy; 2026 i-doit GmbH
 repo_url: https://github.com/i-doit/knowledge-base
 edit_uri: edit/main/docs/en
-strict: false
+strict: true
 theme:
   name: material
   custom_dir: '../../overrides/'
@@ -30,7 +30,7 @@ theme:
         name: Switch to light mode
   font: false
   logo: assets/images/logos/logo.svg
-  language: de
+  language: en
   favicon: assets/images/logos/favicon.ico
   features:
     - content.action.edit
@@ -74,6 +74,7 @@ plugins:
         'daten-konsolidieren/jdisc-discovery.md': 'consolidate-data/jdisc/index.md'
         'upgrades-und-umzuege/update-anleitung-1.7.4-bis-31.md': 'upgrades-and-migrations/update-guide.md'
         'auswertungen/variable-reports.md': 'use-cases/variable-reports.md'
+        'administration/verwaltung/import-und-schnittstellen/jdisc/index.md': 'i-doit-add-ons/jdisc-connector/index.md'
 markdown_extensions:
   - abbr
   - admonition
@@ -124,10 +125,10 @@ extra:
       icon: fontawesome/brands/github
   alternate:
     - name: English
-      link: https://kb.i-doit.com/en/
+      link: /en/
       lang: en
     - name: Deutsch
-      link: https://kb.i-doit.com/de/
+      link: /de/
       lang: de
   status:
     new: New

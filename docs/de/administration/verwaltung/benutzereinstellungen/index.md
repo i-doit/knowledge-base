@@ -9,8 +9,6 @@ lang: de
 
 ## Die Benutzereinstellungen sind in die folgenden Unterpunkte aufgeteilt
 
-![index](../../../assets/images/de/administration/verwaltung/benutzereinstellungen/index-20260407-103057.png)
-
 * [Passwort und Login](passwort-aendern.md) — Der eingeloggte Benutzer kann hier seine Login Daten ändern.
 * [Datenformate](datenformate.md) — Der Benutzer hat die Möglichkeit verschiedene Datenformate auszuwählen.
 * [Benutzersprache](benutzersprache.md) — Unter \"Benutzersprache\" kann der eingeloggte Benutzer eine gewünschte Benutzersprache festlegen.

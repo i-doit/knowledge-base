@@ -8,8 +8,6 @@ lang: en
 
 Here we describe how to update i-doit to version **33** to use the Flows Add-on.
 
-[![Flows](../../assets/images/de/i-doit-add-ons/flows/flows-uebersicht.png)](../../assets/images/de/i-doit-add-ons/flows/flows-uebersicht.png)
-
 ## 1. i-doit 33 Update
 <!--//TODO add a selection -->
 To use the Flows Add-on and all new features, you must first update i-doit to version 33.
@@ -160,9 +158,9 @@ Click the heading **Add-ons**, then click **Install/update Add-on** and select t
 ## 3. Automated Execution of Flows
 
 The Flows Add-on comes with two CLI commands. Both commands are required for the Flows Add-on to function.
-<!-- //TODO clarify if this canlead to problems when a crontab is executed while the cron is running
+
 The Flows Add-on comes with two CLI commands. Both commands are required for the Flows Add-on to function fully. There are two options for setting up the CLI commands. The commands can be executed, for example, via a **crontab**. We have also created a service installation script named **create-daemon.sh** that is located in the Flows Add-on directory under `i-doit/src/classes/modules/synetics_flows/`.
---->
+
 ### Using the system service installation script
 
 First set the execution rights for the file. Use the following command in the i-doit directory:
@@ -182,7 +180,7 @@ sudo src/classes/modules/synetics_flows/create-daemon.sh -u admin-user -p admin-
 ```
 
 * * *
-<!-- //TODO clarify if this canlead to problems when a crontab is executed while the cron is running
+
 ### Creating a crontab
 
 Create a crontab for the Apache user. Example for Debian:
@@ -197,6 +195,5 @@ Add the following lines at the end of the file after replacing the i-doit login 
 * * * * * /usr/bin/php /var/www/html/console.php flows:time-trigger --user admin-user --password admin-user-password --tenantId 1
 * * * * * /usr/bin/php /var/www/html/console.php flows:perform ---user admin-user --password admin-user-password --tenantId 1
 ```
---->
 
 If you have questions or need additional support, please contact us at <help@i-doit.com>.

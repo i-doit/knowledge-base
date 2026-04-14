@@ -5,6 +5,7 @@ icon:
 status:
 lang: en
 ---
+
 # Installing, Updating, and Activating Add-ons
 
 For an add-on to be installed, updated, and activated in i-doit, a specific directory hierarchy must be followed. Within the add-on directory, files such as init.php are expected to ensure a consistent program flow.
@@ -27,6 +28,7 @@ Unlike the i-doit core, there is no difference between "installation" and "updat
 
 Frequently, an add-on extends the i-doit tenant database with its own tables and content. For this purpose, an add-on can include the files update_data.xml and update_sys.xml, which must be located in the add-on directory underneath the "install" folder. Under defined conditions, SQL queries are executed that can be used both for installing and updating database tables and content. The file update_data.xml is used for the selected tenant databases, while update_sys.xml is applied exclusively to the system database.
 
+```xml
     <?xml version="1.0" encoding="UTF-8"?>
     <!DOCTYPE isys [
         <!ELEMENT isys (info|queries)*>
@@ -59,7 +61,7 @@ Frequently, an add-on extends the i-doit tenant database with its own tables and
 
         </queries>
     </isys>
-
+``
 A query element must always include the following elements:
 
 *   id: A numeric counter, starting at 1
@@ -69,7 +71,7 @@ A query element must always include the following elements:
 *   sql: The SQL query to be executed, taking the check result into account
 
 Such queries can look as follows:
-
+```xml
     <query>
         <id>1</id>
         <title>Creating table "isys_example_table"</title>
@@ -109,7 +111,7 @@ Such queries can look as follows:
             </exec>
         </sql>
     </query>
-
+```
 It is possible to store an SQL query for each outcome of the check (true / false).
 
 The following checks and conditions are available:
@@ -128,6 +130,7 @@ The following checks and conditions are available:
 
 For an add-on to be activated and deactivated in the Admin Center, the isys_module_example class must implement the idoit\AddOn\ActivatableInterface interface. This requires three methods that are executed during the corresponding actions:
 
+```
     /**
     * Checks if a module is active.
     *
@@ -171,6 +174,7 @@ For an add-on to be activated and deactivated in the Admin Center, the isys_modu
             return false;
         }
     }
+```
 
 If the methods are not needed, they can simply return true. Typically, these methods are used to set permissions or install dashboard widgets.
 
@@ -178,6 +182,7 @@ If the methods are not needed, they can simply return true. Typically, these met
 
 Similar to activating and deactivating an add-on, there is also a corresponding interface for installing and uninstalling: idoit\AddOn\InstallableInterface. This also requires three methods that must be implemented:
 
+```
     /**
     * Checks if a add-on is installed.
     *
@@ -220,6 +225,7 @@ Similar to activating and deactivating an add-on, there is also a corresponding 
     {
         // Custom logic...
     }
+```
 
 The install and uninstall methods can be used to perform complex tasks that go beyond simple SQL queries.
 

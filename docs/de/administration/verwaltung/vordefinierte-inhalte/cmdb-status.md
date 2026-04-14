@@ -11,8 +11,6 @@ Unter **Verwaltung → Vordefinierte Inhalte → CMDB-Status** verwaltest du die
 
 i-doit liefert bereits Standardwerte wie **In Betrieb**, **Geplant**, **Defekt**, **Außer Betrieb** und **Gespeichert** mit. Du kannst eigene Status-Werte hinzufügen, bestehende umbenennen oder mit einer individuellen Farbe versehen. Über den Statusfilter in den Objekt-Listen lassen sich Objekte nach ihrem aktuellen CMDB-Status filtern. Der CMDB-Status ist unabhängig vom Zustand (normal, archiviert, gelöscht) eines Objekts -- beide Werte ergänzen sich, um den Lebenszyklus vollständig abzubilden.
 
-[![CMDB Status](../../../assets/images/de/administration/verwaltung/vordefinierte-inhalte/cmdb-status.png)](../../../assets/images/de/administration/verwaltung/vordefinierte-inhalte/cmdb-status.png)
-
 [![CMDB-Status](../../../assets/images/de/administration/verwaltung/vordefinierte-inhalte/cmdb-status/1-cs.png)](../../../assets/images/de/administration/verwaltung/vordefinierte-inhalte/cmdb-status/1-cs.png)
 
 ## Siehe auch

@@ -20,7 +20,7 @@ Nach dem Aufruf von <https://center.i-doit.com/> landest du auf der Login-Seite.
 
 [![login](../assets/images/de/administration/kundenportal/login.png)](../assets/images/de/administration/kundenportal/login.png)
 
-Nach dem Login siehst du das Dashboard.
+Nach dem Login siehst du das **Dashboard**.
 
 [![dashboard](../assets/images/de/administration/kundenportal/dashboard.png)](../assets/images/de/administration/kundenportal/dashboard.png)
 
@@ -32,14 +32,26 @@ Unter **Invoice** siehst du Rechnungen und Rechnungsdetails.
 
 [![invoice](../assets/images/de/administration/kundenportal/invoice.png)](../assets/images/de/administration/kundenportal/invoice.png)
 
-Unter **Help** findest du hilfreiche Links und ein Kontaktformular für den Support.
+Unter **Add-ons & Services** findest du Informationen zu deinen Add-ons und Services. Hier kannst du Add-ons installieren, aktualisieren und deinstallieren. Außerdem kannst du hier Add-ons, Support-Pakete und Pläne kaufen.
 
-[![help](../assets/images/de/administration/kundenportal/help.png)](../assets/images/de/administration/kundenportal/help.png)
+[![add-ons](../assets/images/de/administration/kundenportal/add-ons.png)](../assets/images/de/administration/kundenportal/add-ons.png)
+
+Im Reiter **Support** findest du Informationen zu Support-Paketen. Hier können Support-Pakete gekauft werden.
+
+[![support](../assets/images/de/administration/kundenportal/support.png)](../assets/images/de/administration/kundenportal/support.png)
+
+Im Reiter **Plans** sind Informationen zu verschiedenen Plänen zu finden. Hier können Pläne gekauft werden.
+
+[![plans](../assets/images/de/administration/kundenportal/plans.png)](../assets/images/de/administration/kundenportal/plans.png)
+
+Unter **Downloads** listet das Portal alle verfügbaren Downloads auf.
+
+[![downloads](../assets/images/de/administration/kundenportal/downloads.png)](../assets/images/de/administration/kundenportal/downloads.png)
 
 Unter **Advanced** findest du die Offline-Lizenz. Diese benötigst du, wenn deine i-doit-Instanz keinen Internetzugriff hat.
 
 [![advanced](../assets/images/de/administration/kundenportal/advanced.png)](../assets/images/de/administration/kundenportal/advanced.png)
 
-Unter **Downloads** listet das Portal alle verfügbaren Downloads auf.
+Unter **Help** findest du hilfreiche Links und ein Kontaktformular für den Support.
 
-[![downloads](../assets/images/de/administration/kundenportal/downloads.png)](../assets/images/de/administration/kundenportal/downloads.png)
+[![help](../assets/images/de/administration/kundenportal/help.png)](../assets/images/de/administration/kundenportal/help.png)

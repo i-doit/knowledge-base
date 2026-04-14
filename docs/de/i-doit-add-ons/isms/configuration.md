@@ -10,8 +10,6 @@ lang: de
 
 Dieses Dokument beschreibt die vollständige Einrichtung des ISMS-Add-ons in i-doit.
 
-[![ISMS](../../assets/images/de/i-doit-add-ons/isms/isms-uebersicht.png)](../../assets/images/de/i-doit-add-ons/isms/isms-uebersicht.png)
-
 * * *
 
 ## Einrichtung des ISMS Add-ons

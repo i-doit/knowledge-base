@@ -7,10 +7,7 @@ lang: de
 ---
 # Troubleshooting
 
-Etwas funktioniert nicht? Kein Problem — hier findest du systematische Hilfe. Die allermeisten Fehler in i-doit lassen sich mit den richtigen Informationen schnell eingrenzen und lösen. Dieser Artikel hilft dir dabei, die Ursache zu finden, die passende Lösung in der Knowledge Base zu erreichen und — falls nötig — einen aussagekräftigen Bug Report zu schreiben.
-
-
-[![index-logfiles.png](../../assets/images/de/administration/troubleshooting/index-logfiles.png)](../../assets/images/de/administration/troubleshooting/index-logfiles.png)
+Etwas funktioniert nicht? Kein Problem — hier findest du systematische Hilfe. Die allermeisten Fehler in i-doit lassen sich mit den richtigen Informationen schnell eingrenzen und lösen. Dieser Artikel hilft dir dabei, die Ursache zu finden, die passende Lösung in der Knowledge Base zu erreichen und falls nötig einen aussagekräftigen Bug Report zu schreiben.
 
 ---
 
@@ -22,12 +19,12 @@ Bevor du dich in die Details stürzt, wirf einen Blick auf diese vier Informatio
 
 Alle i-doit-eigenen Logs liegen im Installationsverzeichnis unter `log/`. Die wichtigsten Dateien:
 
-| Datei | Inhalt |
-|-------|--------|
-| `log/exception.log` | PHP-Exceptions — die häufigste Anlaufstelle bei Fehlermeldungen in der Oberfläche. Aktivieren unter **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen → Logging → Exception Log**. |
-| `log/system.log` | Allgemeine Systemmeldungen von i-doit |
-| `log/ldap_debug.log` | LDAP-Verbindungs- und Sync-Protokoll (wenn `ldap.debug` aktiviert ist) |
-| `log/import_*.log` | Import-Protokolle für CSV, JDisc und andere [Importe](../../daten-konsolidieren/index.md) |
+| Datei                | Inhalt                                                                                                                                                                                      |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `log/exception.log`  | PHP-Exceptions — die häufigste Anlaufstelle bei Fehlermeldungen in der Oberfläche. Aktivieren unter **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen → Logging → Exception Log**. |
+| `log/system.log`     | Allgemeine Systemmeldungen von i-doit                                                                                                                                                       |
+| `log/ldap_debug.log` | LDAP-Verbindungs- und Sync-Protokoll (wenn `ldap.debug` aktiviert ist)                                                                                                                      |
+| `log/import_*.log`   | Import-Protokolle für CSV, JDisc und andere [Importe](../../daten-konsolidieren/index.md)                                                                                                   |
 
 !!! tip "Log-Dateien in Echtzeit beobachten"
     Öffne ein Terminal und verwende `tail -f /pfad/zu/idoit/log/exception.log`. Führe dann die fehlerhafte Aktion in i-doit aus — der Fehler erscheint sofort im Terminal.
@@ -97,14 +94,14 @@ i-doit reagiert langsam, Seiten laden ewig, Speichern dauert Minuten? Dann prüf
 
 Datenbankprobleme gehören zu den häufigsten Fehlerquellen. Hier die wichtigsten Szenarien und ihre Lösungsartikel:
 
-| Symptom | Artikel |
-|---------|---------|
-| Fehlermeldung "MySQL-Server has gone away" | ["MySQL-Server has gone away"](mysql-server-has-gone-away.md) — in der Regel ist `max_allowed_packet` zu niedrig konfiguriert. |
-| MySQL/MariaDB startet nicht nach Konfigurationsänderung | [MySQL/MariaDB startet nicht](mysql-mariadb-startet-nicht.md) — tritt häufig nach Änderung von `innodb_log_file_size` auf. |
-| "Lost link to database" beim Login | ["Lost link to database"](lost-link-to-database.md) — die Datenbankverbindung ist unterbrochen oder die Zugangsdaten sind falsch. |
-| "Row size too large" beim Update | [Row size too large](row-size-too-large.md) — eine Tabelle hat die maximale Zeilengröße von InnoDB überschritten. |
-| "Can't create table (errno: 140)" | [Can't create table](cant-create-table.md) — tritt beim Wiederherstellen eines SQL-Dumps auf, wenn das Zeilenformat nicht passt. |
-| Datenbank-Korruption (Crashes, kaputte Tabellen) | [MariaDB Database Corruption](mariadb-database-corruption.md) — Reparatur beschädigter InnoDB-Tabellen. |
+| Symptom                                                 | Artikel                                                                                                                           |
+| ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| Fehlermeldung "MySQL-Server has gone away"              | ["MySQL-Server has gone away"](mysql-server-has-gone-away.md) — in der Regel ist `max_allowed_packet` zu niedrig konfiguriert.    |
+| MySQL/MariaDB startet nicht nach Konfigurationsänderung | [MySQL/MariaDB startet nicht](mysql-mariadb-startet-nicht.md) — tritt häufig nach Änderung von `innodb_log_file_size` auf.        |
+| "Lost link to database" beim Login                      | ["Lost link to database"](lost-link-to-database.md) — die Datenbankverbindung ist unterbrochen oder die Zugangsdaten sind falsch. |
+| "Row size too large" beim Update                        | [Row size too large](row-size-too-large.md) — eine Tabelle hat die maximale Zeilengröße von InnoDB überschritten.                 |
+| "Can't create table (errno: 140)"                       | [Can't create table](cant-create-table.md) — tritt beim Wiederherstellen eines SQL-Dumps auf, wenn das Zeilenformat nicht passt.  |
+| Datenbank-Korruption (Crashes, kaputte Tabellen)        | [MariaDB Database Corruption](mariadb-database-corruption.md) — Reparatur beschädigter InnoDB-Tabellen.                           |
 
 !!! info "Datenbank-Gesundheit prüfen"
     Die Funktion [Systemreparatur und Bereinigung](../verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md) prüft die Datenbankintegrität und kann viele Inkonsistenzen automatisch beheben.

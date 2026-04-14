@@ -10,8 +10,6 @@ lang: de
 
 Diese Referenz bietet dir eine Übersicht über die verfügbaren Template-Funktionen und -Variablen in i-doit. Die Beispiele lassen sich im Flow hauptsächlich bei der Aktion "API-Aufruf" und "E-Mail schicken" verwenden.
 
-[![Flows](../../assets/images/de/i-doit-add-ons/flows/flows-uebersicht.png)](../../assets/images/de/i-doit-add-ons/flows/flows-uebersicht.png)
-
 ## Schnelleinstieg
 
 ### Verfügbare globale Variablen

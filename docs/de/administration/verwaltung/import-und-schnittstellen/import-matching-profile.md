@@ -13,8 +13,6 @@ Die [Objekt-Matching Profile](../../../daten-konsolidieren/objekt-identifizieren
 
 Ein gut konfiguriertes Matching-Profil verhindert doppelte Objekte in der CMDB und sorgt dafür, dass importierte Daten den richtigen vorhandenen Objekten zugeordnet werden. Die Profile werden von verschiedenen Import-Schnittstellen wie JDisc, CSV-Import und LDAP verwendet.
 
-[![Import Matching Profile](../../../assets/images/de/administration/verwaltung/import-und-schnittstellen/import-matching-profile.png)](../../../assets/images/de/administration/verwaltung/import-und-schnittstellen/import-matching-profile.png)
-
 [![Objekt-matching Profile](../../../assets/images/de/administration/verwaltung/import-und-schnittstellen/import-matching-profile/1-imp.png)](../../../assets/images/de/administration/verwaltung/import-und-schnittstellen/import-matching-profile/1-imp.png)
 
 ## Siehe auch

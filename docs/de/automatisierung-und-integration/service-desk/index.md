@@ -39,7 +39,9 @@ Die Anbindung konfigurierst du unter **Verwaltung → Import und Schnittstellen 
 
 ## Tickets auslesen
 
-Verknüpfst du ein Ticket in der Service-Desk-Applikation mit einem i-doit-Objekt, wird diese Verknüpfung in i-doit sichtbar. Voraussetzung: Die Option **Aktiv** steht auf **Ja**. Die Kategorie **Alle Tickets** erreichst du über das Sprachblasen-Icon ![service-desk-icon](../../assets/images/de/automatisierung-und-integration/service-desk/2-sd.png).
+Verknüpfst du ein Ticket in der Service-Desk-Applikation mit einem i-doit-Objekt, wird diese Verknüpfung in i-doit sichtbar. Voraussetzung: Die Option **Aktiv** steht auf **Ja**. Die Kategorie **Alle Tickets** erreichst du über das Sprachblasen-Icon.
+
+[![service-desk-icon](../../assets/images/de/automatisierung-und-integration/service-desk/2-sd.png)](../../assets/images/de/automatisierung-und-integration/service-desk/2-sd.png)
 
 [![service-desk-anzeigen](../../assets/images/de/automatisierung-und-integration/service-desk/3-sd.png)](../../assets/images/de/automatisierung-und-integration/service-desk/3-sd.png)
 

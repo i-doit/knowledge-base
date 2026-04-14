@@ -207,7 +207,7 @@ Benutzern und Benutzergruppen (Objekttypen **Personen** und **Personengruppen**)
 *   **Report importieren**
 *   **Selbsterstellte Reports**
 
-[![rechte-vergeben](../assets/images/de/auswertungen/report-manager/14-rm.png)](../assets/images/de/auswertungen/report-manager/14-rm.png
+[![rechte-vergeben](../assets/images/de/auswertungen/report-manager/14-rm.png)](../assets/images/de/auswertungen/report-manager/14-rm.png)
 
 ## Variable Reports
 
