@@ -44,7 +44,7 @@ zu installieren:
 
 ```shell
 apt update
-apt install apache2 libapache2-mod-php mariadb-client mariadb-server memcached unzip sudo moreutils php php-{bcmath,cli,common,curl,gd,imagick,json,ldap,mbstring,memcached,mysql,pgsql,soap,xml,zip}
+apt install apache2 php8.4-fpm mariadb-client mariadb-server memcached unzip sudo moreutils php php-{bcmath,cli,common,curl,gd,imagick,json,ldap,mbstring,memcached,mysql,pgsql,soap,xml,zip}
 ```
 
 ## Konfiguration
@@ -112,9 +112,8 @@ sudo nano /etc/apache2/sites-available/i-doit.conf
 <VirtualHost *:80>
         ServerAdmin i-doit@example.net
 
-        DocumentRoot /var/www/html/
-DirectoryIndex index.php
-DocumentRoot /var/www/html
+        DocumentRoot /var/www/html
+        DirectoryIndex index.php
 
     <Directory /var/www/html>
         ## See https://httpd.apache.org/docs/2.2/mod/core.html#allowoverride
