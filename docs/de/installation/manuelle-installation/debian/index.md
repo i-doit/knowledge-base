@@ -6,6 +6,8 @@ status:
 lang: de
 ---
 
+!!! note "Getestet mit i-doit **38** und **Debian 13 Trixie**"
+
 Welche Pakete zu installieren und zu konfigurieren sind, erklären wir in wenigen Schritten in diesem Artikel. Wir verwenden eine Umgebung **ohne Desktop**.
 
 !!! warning ""

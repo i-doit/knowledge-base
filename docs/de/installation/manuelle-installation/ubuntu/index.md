@@ -6,6 +6,8 @@ status:
 lang: de
 ---
 
+!!! note "Getestet mit i-doit **38** und **Ubuntu 24.04.4 LTS**"
+
 Welche Pakete zu installieren und zu konfigurieren sind, erklären wir in wenigen Schritten in diesem Artikel. Wir verwenden eine Umgebung ohne **Desktop**.
 
 !!! note ""

@@ -6,7 +6,7 @@ status:
 lang: de
 ---
 
-!!! note "Getestet mit i-doit **36** und **Red Hat Linux Enterprise Server 10.0**"
+!!! note "Getestet mit i-doit **38** und **Rocky Linux 10.1**"
 
 Welche Pakete zu installieren und zu konfigurieren sind, erklären wir in wenigen Schritten in diesem Artikel.
 
