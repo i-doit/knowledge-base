@@ -6,7 +6,7 @@ status:
 lang: de
 ---
 
-!!! note "Getestet mit i-doit **38** und **Rocky Linux 10.1**"
+!!! note "Getestet mit i-doit **38** und **Rocky Linux 10.1** (RHEL 10 kompatibel)"
 
 Welche Pakete zu installieren und zu konfigurieren sind, erklären wir in wenigen Schritten in diesem Artikel.
 
