@@ -66,7 +66,6 @@ sudo nano /etc/php/8.4/mods-available/i-doit.ini
 ```ini
 allow_url_fopen = Yes
 file_uploads = On
-magic_quotes_gpc = Off
 max_execution_time = 300
 max_file_uploads = 42
 max_input_time = 60
@@ -74,7 +73,6 @@ max_input_vars = 10000
 memory_limit = 256M
 post_max_size = 128M
 register_argc_argv = On
-register_globals = Off
 short_open_tag = On
 upload_max_filesize = 128M
 display_errors = Off
@@ -269,8 +267,9 @@ sudo nano /etc/apache2/sites-available/i-doit.conf
 Im nächsten Schritt werden der neue VHost und das nötige Apache-Modul **rewrite** aktiviert sowie der Apache Webserver neu gestartet:
 
 ```shell
+sudo a2dismod mpm_prefork
+sudo a2enmod mpm_event proxy proxy_fcgi setenvif rewrite
 sudo a2ensite i-doit
-sudo a2enmod rewrite proxy_fcgi setenvif
 sudo systemctl restart apache2 php8.4-fpm
 ```
 
