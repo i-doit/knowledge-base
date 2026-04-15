@@ -308,7 +308,8 @@ Damit Apache Lese- und Schreibrechte im künftigen Installationsverzeichnis von 
 <!-- cSpell:disable -->
 ```sh
 sudo chown apache:apache -R /var/www/html
-sudo chcon -t httpd_sys_rw_content_t "/var/www/html/" -R
+sudo semanage fcontext -a -t httpd_sys_rw_content_t "/var/www/html(/.*)?"
+sudo restorecon -Rv /var/www/html
 ```
 <!-- cSpell:enable -->
 ### MariaDB
