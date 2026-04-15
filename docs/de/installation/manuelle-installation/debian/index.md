@@ -11,7 +11,7 @@ lang: de
 Welche Pakete zu installieren und zu konfigurieren sind, erklären wir in wenigen Schritten in diesem Artikel. Wir verwenden eine Umgebung **ohne Desktop**.
 
 !!! warning ""
-    Wenn du Debian installierst, gelangen Sie schließlich zu einem "Softwareauswahl"-Dialog, der eine Liste von Kontrollkästchen enthält, um die Software auszuwählen, die Sie zunächst installieren möchten. Hier ist das Kontrollkästchen "Debian-Desktop-Umgebung" bereits angekreuzt. Wenn Sie dieses Kontrollkästchen deaktivieren und alle anderen Kontrollkästchen für die Desktop-Umgebung (GNOME, Xfce usw.) nicht ankreuzen, führt dies zu einer GUI-losen Installation:
+    Wenn du Debian installierst, gelangst du zum „Softwareauswahl"-Dialog. Dort ist das Kontrollkästchen „Debian-Desktop-Umgebung" standardmäßig aktiviert. Deaktiviere es und alle weiteren Desktop-Optionen (GNOME, Xfce usw.), um eine Installation ohne grafische Oberfläche zu erhalten:
 
     [![Software selection](../../../assets/images/de/installation/manuelle-installation/debian/gui.png)](../../../assets/images/de/installation/manuelle-installation/debian/gui.png)
 
