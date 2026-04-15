@@ -6,7 +6,7 @@ status:
 lang: de
 ---
 
-!!! note "Getestet mit i-doit **36** und RHEL 9.6"
+!!! note "Getestet mit i-doit **38** und RHEL 9.6"
 
 Welche Pakete zu installieren und zu konfigurieren sind, erklären wir in wenigen Schritten in diesem Artikel.
 
