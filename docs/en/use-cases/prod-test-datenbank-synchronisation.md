@@ -187,9 +187,11 @@ sudo -u www-data php /var/www/html/console.php system:tenant-import \
     --file /var/backup/idoit-tenant-export-DATE.zip \
     --tenant-database-name idoit_data \
     --tenant-title "Test" \
+    --with-system-settings \
+    --with-tenant-settings \
     --db-root-user root \
     --db-root-pass <PASSWORD> \
-    --db-host localhost
+    --db-host <HOST>
 ```
 
 ### Automated Script (Export + Transfer + Import)

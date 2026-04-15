@@ -777,6 +777,7 @@ nav:
       - Kabel-Patches und -wege: anwendungsfaelle/kabel-patches-und-wege.md
       - Komplexe Reports: anwendungsfaelle/komplexe-reports.md
       - Passwörter verwalten: anwendungsfaelle/passwoerter-verwalten.md
+      - Prod→Test Datenbank-Synchronisation: anwendungsfaelle/prod-test-datenbank-synchronisation.md
       - Standort-basierte Benutzerrechte: anwendungsfaelle/standort-basierte-benutzerrechte.md
       - Standorte: anwendungsfaelle/standorte.md
       - Switch Stacking: anwendungsfaelle/switch-stacking.md
