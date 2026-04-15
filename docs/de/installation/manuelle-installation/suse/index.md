@@ -6,7 +6,7 @@ status:
 lang: de
 ---
 
-!!! note "Getestet mit i-doit **38** und **openSUSE Leap 15.6**"
+!!! note "Getestet mit i-doit **38** und **openSUSE Leap 15.6** (SLES 15 SP6 kompatibel)"
 
 Welche Pakete zu installieren und zu konfigurieren sind, erklären wir in wenigen Schritten in diesem Artikel.
 
