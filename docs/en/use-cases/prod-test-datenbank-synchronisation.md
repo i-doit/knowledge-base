@@ -21,7 +21,7 @@ This article describes two approaches: a classic **shell script** with `mysqldum
 |-------------|---------|
 | **Network** | The test server must be able to reach the production database on port 3306 |
 | **MySQL access** | DB user on production with read permissions for `idoit_system` and `idoit_data` |
-| **SSH access** | Root access on the test server, SSH key auth to the production server (for `rsync` and `mysqldump`) |
+| **SSH access** | Root access on the test server, **SSH key auth to the production server** (for `rsync` and `mysqldump`) |
 | **Disk space** | Sufficient space for DB dumps (approx. 2x database size) |
 | **Same i-doit version** | Production and test should be running the same i-doit version |
 
@@ -39,19 +39,20 @@ This option works with any i-doit version. The script runs on the **test server*
 Create the script on the test server:
 
 ```bash
-sudo nano /var/www/html/i-doit/skripte/copy_database_from_production
+sudo nano /usr/local/sbin/idoit-sync
 ```
 
 Content:
 
 ```bash
 #!/bin/bash
-# i-doit Prod-Test DB Sync
-# Copies the i-doit databases from the production system to the test server
+# i-doit Prod-to-Test DB sync
+# Fetches databases and files from the production server and imports them locally.
+# Must be run as root.
 set -e
 
 # ====================================================
-# Configuration — please adjust
+# Configuration -- please adjust
 # ====================================================
 PROD_HOST="<PROD-SERVER-IP>"
 PROD_DB_USER="root"
@@ -63,7 +64,7 @@ DATA_DB="idoit_data"
 LOCAL_DB_USER="root"
 LOCAL_DB_PASS="<TEST-DB-PASSWORD>"
 
-IDOIT_DIR="/var/www/html/i-doit"
+IDOIT_DIR="/var/www/html"
 BACKUP_DIR="/var/backup/idoit"
 LOG="/var/log/idoit-sync.log"
 
@@ -113,17 +114,17 @@ gunzip < "$BACKUP_DIR/${DATA_DB}.sql.gz" \
 # Step 4: Synchronize files from production server
 # ---------------------------------------------------
 echo "[6/8] Synchronizing uploads..."
-rsync -az --delete "$PROD_DB_USER@$PROD_HOST:$IDOIT_DIR/upload/" "$IDOIT_DIR/upload/"
+rsync -az --delete "root@$PROD_HOST:$IDOIT_DIR/upload/" "$IDOIT_DIR/upload/"
 
-echo "[7/8] Synchronizing imports and documents..."
-rsync -az --delete "$PROD_DB_USER@$PROD_HOST:$IDOIT_DIR/imports/" "$IDOIT_DIR/imports/"
+echo "[7/8] Synchronizing import files..."
+rsync -az --delete "root@$PROD_HOST:$IDOIT_DIR/imports/" "$IDOIT_DIR/imports/"
 
 # ---------------------------------------------------
-# Step 5: Set file permissions, clear cache, start Apache
+# Step 5: Set permissions, clear cache, start Apache
 # ---------------------------------------------------
 echo "[8/8] Setting permissions, clearing cache, starting Apache..."
 chown -R www-data:www-data "$IDOIT_DIR/upload/" "$IDOIT_DIR/imports/"
-rm -rf "$IDOIT_DIR/temp/*"
+rm -rf "$IDOIT_DIR/temp/"*
 systemctl start apache2
 
 # ---------------------------------------------------
@@ -140,10 +141,10 @@ echo "=========================================="
 
 ```bash
 # Make executable
-chmod +x /var/www/html/i-doit/skripte/copy_database_from_production
+chmod +x /usr/local/sbin/idoit-sync
 
 # Test manually once
-/var/www/html/i-doit/skripte/copy_database_from_production
+/usr/local/sbin/idoit-sync
 
 # Check the log
 tail -f /var/log/idoit-sync.log
@@ -154,8 +155,8 @@ tail -f /var/log/idoit-sync.log
 Create the file `/etc/cron.d/idoit-sync`:
 
 ```bash
-# i-doit Prod-Test Sync: Every Sunday at 01:00
-0 1 * * 0  root  /var/www/html/i-doit/skripte/copy_database_from_production
+# i-doit Prod-to-Test Sync: Every Sunday at 01:00
+0 1 * * 0  root  /usr/local/sbin/idoit-sync
 ```
 
 ---
@@ -171,19 +172,19 @@ sudo -u www-data php /var/www/html/console.php system:tenant-export \
     --user admin --password admin --tenantId 1
 ```
 
-This creates a ZIP archive in the i-doit directory.
+This creates a ZIP archive in the i-doit `temp/` directory.
 
 ### Transfer to the Test Server
 
 ```bash
-scp /var/www/html/tenant-export-*.zip testserver:/var/backup/
+scp /var/www/html/temp/idoit-tenant-export-*.zip testserver:/var/backup/
 ```
 
 ### Import on the Test Server
 
 ```bash
 sudo -u www-data php /var/www/html/console.php system:tenant-import \
-    --file /var/backup/tenant-export-DATUM.zip \
+    --file /var/backup/idoit-tenant-export-DATE.zip \
     --tenant-database-name idoit_data \
     --tenant-title "Test" \
     --db-root-user root \
@@ -191,26 +192,91 @@ sudo -u www-data php /var/www/html/console.php system:tenant-import \
     --db-host localhost
 ```
 
-### As a Cronjob (Weekly)
+### Automated Script (Export + Transfer + Import)
 
-On the **production server** (export + transfer):
+This script runs on the **production server**, exports the tenant, transfers the package via SSH to the test server, and triggers the import there.
+
+Create the script on the production server:
 
 ```bash
-# /etc/cron.d/idoit-backup
-0 1 * * 0  www-data  php /var/www/html/console.php system:tenant-export \
-    --user admin --password admin --tenantId 1 \
-    && scp /var/www/html/tenant-export-*.zip testserver:/var/backup/
+sudo nano /usr/local/sbin/idoit-tenant-sync
 ```
 
-On the **test server** (import, 30 min after export):
+Content:
 
 ```bash
-# /etc/cron.d/idoit-import
-30 1 * * 0  www-data  php /var/www/html/console.php system:tenant-import \
-    --file /var/backup/tenant-export-*.zip \
-    --tenant-database-name idoit_data \
-    --tenant-title "Test" \
-    --db-root-user root --db-root-pass <PASSWORD>
+#!/bin/bash
+# i-doit Prod-to-Test tenant sync via console.php
+# Must be run as root on the production server.
+# Prerequisite: SSH key auth from the production server to the test server must be set up.
+set -e
+
+# ====================================================
+# Configuration -- please adjust
+# ====================================================
+PROD_CONSOLE="/var/www/html/console.php"
+PROD_TEMP="/var/www/html/temp"
+
+TEST_USER="root"
+TEST_HOST="<TEST-SERVER-IP>"
+TEST_BACKUP_DIR="/var/backup/idoit-transfer"
+TEST_CONSOLE="/var/www/html/console.php"
+
+IDOIT_USER="admin"
+IDOIT_PASS="admin"
+TENANT_ID="1"
+TEST_DB_NAME="idoit_data"
+TEST_DB_PASS="<TEST-DB-PASSWORD>"
+# ====================================================
+
+echo "--- Step 1: Export on production ---"
+rm -f "$PROD_TEMP"/idoit-tenant-export-*.zip
+
+sudo -u www-data php "$PROD_CONSOLE" system:tenant-export \
+    --user "$IDOIT_USER" --password "$IDOIT_PASS" --tenantId "$TENANT_ID"
+
+EXPORT_FILE=$(ls -t "$PROD_TEMP"/idoit-tenant-export-*.zip 2>/dev/null | head -1)
+
+if [ -z "$EXPORT_FILE" ]; then
+    echo "ERROR: Export file not found!"
+    exit 1
+fi
+
+FILENAME=$(basename "$EXPORT_FILE")
+
+echo "--- Step 2: Transfer to $TEST_HOST ---"
+ssh "$TEST_USER@$TEST_HOST" "mkdir -p $TEST_BACKUP_DIR"
+scp "$EXPORT_FILE" "$TEST_USER@$TEST_HOST:$TEST_BACKUP_DIR/$FILENAME"
+
+echo "--- Step 3: Import on $TEST_HOST ---"
+ssh "$TEST_USER@$TEST_HOST" \
+    "sudo -u www-data php $TEST_CONSOLE system:tenant-import \
+        --file $TEST_BACKUP_DIR/$FILENAME \
+        --tenant-database-name $TEST_DB_NAME \
+        --tenant-title 'Test System' \
+        --with-system-settings \
+        --with-tenant-settings \
+        --db-root-user root \
+        --db-root-pass '$TEST_DB_PASS' \
+        --db-host localhost \
+    && rm -f $TEST_BACKUP_DIR/$FILENAME"
+
+echo "--- Step 4: Clean up on production ---"
+rm -f "$EXPORT_FILE"
+
+echo "DONE! The test system was successfully updated."
+```
+
+```bash
+chmod +x /usr/local/sbin/idoit-tenant-sync
+```
+
+### As a Cronjob (Weekly)
+
+```bash
+# /etc/cron.d/idoit-tenant-sync
+# Every Sunday at 01:00 -- on the production server
+0 1 * * 0  root  /usr/local/sbin/idoit-tenant-sync
 ```
 
 ### Advantages over the Manual Method
@@ -223,25 +289,24 @@ On the **test server** (import, 30 min after export):
 
 ## Setup Checklist
 
-- [ ] SSH access to both servers (production + test)
+- [ ] SSH key auth set up from test to production server (Option A) or from production to test server (Option B)
 - [ ] Test MySQL connection from test to production server: `mysql -h<Prod-IP> -uroot -p`
-- [ ] Firewall: Port 3306 open between the servers
-- [ ] Check existing script: `cat /var/www/html/i-doit/skripte/copy_database_from_production`
-- [ ] Check existing crontab: `crontab -l` and `ls /etc/cron.d/`
-- [ ] Adjust script with correct credentials
-- [ ] Run the script manually once and check the log
-- [ ] Set up cronjob (weekly Sunday 01:00)
+- [ ] Firewall: Port 3306 open between the servers (Option A)
+- [ ] Script adjusted with correct credentials
+- [ ] Script run manually once and log checked
+- [ ] Cronjob set up (weekly Sunday 01:00)
 - [ ] Check log after first automated run
 
 ## Troubleshooting
 
 | Problem | Solution |
 |---------|----------|
-| `Access denied` during dump | Check DB credentials, user needs SELECT + LOCK TABLES + SHOW VIEW |
+| `Access denied` during dump | Check DB credentials -- user needs SELECT + LOCK TABLES + SHOW VIEW |
 | `Can't connect to MySQL` | Check firewall, check MySQL `bind-address`, test network |
 | `Foreign key constraint` during import | Drop databases first (already included in the script) |
 | Apache does not start after import | Clear `temp/` directory, restart PHP-FPM |
 | Sync runs but i-doit shows old data | Clear browser cache, clear i-doit cache (`temp/*`) |
+| Export file not found (Option B) | Check path to `temp/`, ensure `www-data` has write permissions |
 
 ## See also
 
