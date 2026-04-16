@@ -312,6 +312,7 @@ nav:
           - Red Hat Enterprise Linux (RHEL) and Compatible:
               - installation/manual-installation/red-hat-enterprise-linux/index.md
               - Red Hat Enterprise Linux 9: installation/manual-installation/red-hat-enterprise-linux/rhel9.md
+              - Red Hat Enterprise Linux 10: installation/manual-installation/red-hat-enterprise-linux/rhel10.md
           - SUSE Linux Enterprise Server (SLES): installation/manual-installation/suse/index.md
           - Ubuntu GNU/Linux: installation/manual-installation/ubuntu/index.md
           - Microsoft Windows Server:

@@ -1,12 +1,12 @@
 ---
-title: Red Hat Enterprise Linux 10
-description: i-doit installation auf RHEL 10
+title: Rocky Linux 10
+description: i-doit installation auf Rocky Linux 10
 icon: material/redhat
 status:
 lang: de
 ---
 
-!!! note "Getestet mit i-doit **38** und **Rocky Linux 10.1** (RHEL 10 kompatibel)"
+!!! note "Getestet mit i-doit **38** und **Rocky Linux 10.1**"
 
 Welche Pakete zu installieren und zu konfigurieren sind, erklären wir in wenigen Schritten in diesem Artikel.
 

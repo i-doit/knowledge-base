@@ -1,78 +1,88 @@
 ---
-title: Rocky Linux 10
-description: i-doit installation on Rocky Linux 10
+title: Red Hat Enterprise Linux 10
+description: i-doit installation auf Red Hat Enterprise Linux 10
 icon: material/redhat
 status:
-lang: en
+lang: de
 ---
 
-!!! note "Tested with i-doit **38** and **Rocky Linux 10.1**"
+!!! note "Getestet mit i-doit **38** und **Red Hat Enterprise Linux 10.1 (Coughlan)**"
 
-We explain which packages need to be installed and configured in a few steps in this article.
+!!! warning "Red Hat Subscription erforderlich"
+    Für die Installation von RHEL-Paketen und die Aktivierung des CRB-Repositories wird eine aktive **Red Hat Subscription** benötigt. Eine kostenlose Developer-Subscription ist unter [developers.redhat.com](https://developers.redhat.com) erhältlich.
 
-## System Requirements
+Welche Pakete zu installieren und zu konfigurieren sind, erklären wir in wenigen Schritten in diesem Artikel.
 
-The general [system requirements](../../system-requirements.md) apply. To determine which version is in use, you can run the following command in the console:
+## Systemvoraussetzungen
+
+Es gelten die allgemeinen [Systemvoraussetzungen](../../systemvoraussetzungen.md). Um zu bestimmen, welche Version eingesetzt wird, kann auf der Konsole dieser Befehl ausgeführt werden:
 <!-- cSpell:disable -->
 ```sh
 cat /etc/os-release
 ```
 <!-- cSpell:enable -->
-The system architecture should be x86 in 64-bit:
+Als Systemarchitektur sollte ein x86 in 64bit zum Einsatz kommen:
 <!-- cSpell:disable -->
 ```sh
 uname -m
 ```
 <!-- cSpell:enable -->
-**x86_64** means 64-bit, **i386** or **i686** means only 32-bit.
+**x86_64** bedeutet 64bit, **i386** oder **i686** lediglich 32bit.
 
-## Package Installation
+## Installation der Pakete
 
-On an up-to-date system, the following will be installed:
+Auf einem aktuell gehaltenen System werden
 
-*   the **Apache** HTTP Server 2.4,
-*   the scripting language **PHP-FPM** 8.3,
-*   the database management system **MariaDB** 10.11, and
-*   the caching server **memcached**
+*   der **Apache** HTTP Server 2.4,
+*   die Script-Sprache **PHP-FPM** 8.3,
+*   das Datenbankmanagementsystem **MariaDB** 10.11 und
+*   der Caching-Server **memcached**
 
-First, packages are updated from the standard repositories:
+installiert.
+
+Zunächst werden erste Pakete aus den Standard-Repositories aktualisiert:
 <!-- cSpell:disable -->
 ```sh
 sudo dnf update
 ```
 <!-- cSpell:enable -->
-For some packages, EPEL and the CRB repository (CodeReady Builder) are required:
+Für einige Pakete wird **EPEL** benötigt. Auf RHEL ist EPEL nicht als Paket verfügbar, sondern wird direkt von fedoraproject.org installiert:
 <!-- cSpell:disable -->
 ```sh
-sudo dnf install epel-release -y
-sudo dnf config-manager --set-enabled crb
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-10.noarch.rpm -y
 ```
 <!-- cSpell:enable -->
-Set the PHP and MariaDB modules to the recommended versions:
+Das **CRB-Repository** (CodeReady Builder) wird über den Subscription Manager aktiviert:
+<!-- cSpell:disable -->
+```sh
+sudo subscription-manager repos --enable codeready-builder-for-rhel-10-x86_64-rpms
+```
+<!-- cSpell:enable -->
+Die PHP- und MariaDB-Module auf die empfohlenen Versionen setzen:
 <!-- cSpell:disable -->
 ```sh
 sudo dnf module enable php:8.3 mariadb:10.11 -y
 ```
 <!-- cSpell:enable -->
-Installation of additional packages:
+Die Installation weiterer Pakete:
 <!-- cSpell:disable -->
 ```sh
 sudo dnf install -y httpd httpd-tools mariadb-server mariadb memcached unzip sudo moreutils php php-fpm php-bcmath php-cli php-common php-curl php-gd php-json php-ldap php-mbstring php-mysqlnd php-opcache php-pdo php-pgsql php-process php-soap php-xml php-zip
 ```
 <!-- cSpell:enable -->
-To ensure that the Apache HTTP Server, MariaDB, PHP-FPM, and memcached are also started at boot, the following commands are required:
+Damit der Apache HTTP Server, MariaDB, PHP-FPM und memcached auch beim Booten gestartet werden, sind diese Befehle erforderlich:
 <!-- cSpell:disable -->
 ```sh
 sudo systemctl enable httpd mariadb php-fpm memcached
 ```
 <!-- cSpell:enable -->
-Then the services are started:
+Anschließend erfolgt der Start der Dienste:
 <!-- cSpell:disable -->
 ```sh
 sudo systemctl start httpd mariadb php-fpm memcached
 ```
 <!-- cSpell:enable -->
-Furthermore, the standard HTTP port 80 is allowed through the firewall. The firewall must be restarted after the adjustment:
+Weiterhin wird der Standard HTTP Port 80 über die Firewall erlaubt. Diese muss nach der Anpassung neu gestartet werden:
 <!-- cSpell:disable -->
 ```sh
 sudo firewall-cmd --permanent --add-service=http
@@ -80,21 +90,21 @@ sudo systemctl restart firewalld.service
 ```
 <!-- cSpell:enable -->
 
-!!! success "If you want to use i-doit via HTTPS, you need to create a corresponding VirtualHost configuration for port 443. [This is not covered here.](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10/html/deploying_web_servers_and_reverse_proxies/setting-up-the-apache-http-web-server#configuring-tls-encryption-on-an-apache-http-server)"
+!!! success "Wenn du i-doit via HTTPS nutzen möchtest, musst du eine entsprechende VirtualHost-Konfiguration für Port 443 erstellen. [Dies wird hier nicht beschrieben.](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10/html/deploying_web_servers_and_reverse_proxies/setting-up-the-apache-http-web-server#configuring-tls-encryption-on-an-apache-http-server)"
 
-## Configuration
+## Konfiguration
 
-The installed packages for Apache HTTP Server, PHP, and MariaDB already come with configuration files. **It is recommended to store custom settings in separate files** rather than modifying the existing configuration files. The default configuration settings are supplemented or overridden by the custom ones.
+Die installierten Pakete für Apache HTTP Server, PHP und MariaDB bringen bereits Konfigurationsdateien mit. **Es empfiehlt sich, abweichende Einstellungen in gesonderten Dateien zu speichern**, anstatt die vorhandenen Konfigurationsdateien anzupassen. Die Einstellungen der Standardkonfiguration werden durch die benutzerdefinierten ergänzt bzw. überschrieben.
 
-### PHP Configuration
+### PHP Konfiguration
 
-First, a new file is created and populated with the required settings:
+Zunächst wird eine neue Datei erstellt und mit den nötigen Einstellungen befüllt:
 <!-- cSpell:disable -->
 ```sh
 sudo nano /etc/php.d/i-doit.ini
 ```
 <!-- cSpell:enable -->
-!!! example "This file receives the following content as specified by us. For more information about the parameters, visit [PHP.net](https://www.php.net/manual/en/install.fpm.configuration.php)"
+!!! example "Diese Datei erhält folgende von uns vorgegebenen Inhalt. Für mehr Informationen zu den Parametern, schaue dir auf [PHP.net](https://www.php.net/manual/en/install.fpm.configuration.php) vorbei"
 <!-- cSpell:disable -->
 ```ini
 allow_url_fopen = Yes
@@ -120,26 +130,26 @@ session.cookie_lifetime = 0
 mysqli.default_socket = /var/lib/mysql/mysql.sock
 ```
 <!-- cSpell:enable -->
-The `memory_limit` must be increased if needed, e.g., for very large reports or extensive documents.
-The value (in seconds) of **session.gc_maxlifetime** should be greater than or equal to the **Session Timeout** in the [system settings](../system-settings.md) of i-doit.
-The **date.timezone** parameter should be adjusted to the local time zone (see [list of supported time zones](http://php.net/manual/en/timezones.php)).
+Das `memory_limit` muss bei Bedarf z.B. bei sehr großen Reports oder umfangreichen Dokumenten erhöht werden.
+Der Wert (in Sekunden) von **session.gc_maxlifetime** sollte größer oder gleich dem **Session Timeout** in den [Systemeinstellungen](../systemeinstellungen.md) von i-doit sein.
+Der Parameter **date.timezone** sollte auf die lokale Zeitzone angepasst werden (siehe [Liste unterstützter Zeitzonen](http://php.net/manual/de/timezones.php)).
 
-### Apache HTTP Server Configuration
+### Apache HTTP Server Konfiguration
 
-The Welcome Page is deactivated by renaming:
+Die Welcome Page wird, durch umbenennen, deaktiviert:
 <!-- cSpell:disable -->
 ```sh
 sudo mv /etc/httpd/conf.d/welcome.conf{,.bak}
 sudo touch /etc/httpd/conf.d/welcome.conf
 ```
 <!-- cSpell:enable -->
-Now a new Virtual Host is created for i-doit:
+Nun wird ein neuer Virtual Host für i-doit angelegt:
 <!-- cSpell:disable -->
 ```sh
 sudo nano /etc/httpd/conf.d/i-doit.conf
 ```
 <!-- cSpell:enable -->
-This file receives the following content:
+Diese Datei erhält folgenden Inhalt:
 <!-- cSpell:disable -->
 ```apache
 <VirtualHost *:80>
@@ -152,60 +162,28 @@ This file receives the following content:
     CustomLog /var/log/httpd/idoit_access.log combined
 
     <Directory /var/www/html/>
-        ## See https://httpd.apache.org/docs/2.2/mod/core.html#allowoverride
         AllowOverride None
-
-        ## Apache Web server configuration file for i-doit
-        ##
-        ## This file requires:
-        ##
-        ## - Apache HTTPD >= 2.4 with enabled modules:
-        ##   - rewrite
-        ##   - expires
-        ##   - headers
-        ##   - authz_core
-        ##
-        ## For performance and security reasons we put these settings
-        ## directly into the VirtualHost configuration and explicitly set
-        ## "AllowOverride none". After each i-doit update check if the .htaccess file, in the i-doit directory,
-        ## has changed and add the changes in the VirtualHost configuration.
-        ##
-        ## See the i-doit Knowledge Base for more details:
-        ## <https://kb.i-doit.com/>
-
-        ## Disable directory indexes:
         Options -Indexes +SymLinksIfOwnerMatch
 
         <IfModule mod_authz_core.c>
             RewriteCond %{REQUEST_METHOD}  =GET
             RewriteRule "^$" "/index.php"
 
-            ## Deny access to meta files:
             <Files "*.yml">
                 Require all denied
             </Files>
-
-            ## Deny access to hidden files:
             <FilesMatch "^\.">
                 Require all denied
             </FilesMatch>
-
-            ## Deny access to bash scripts:
             <FilesMatch "^(controller|.*\.sh)$">
                 Require all denied
             </FilesMatch>
-
-            ## Deny access to all PHP files…
             <Files "*.php">
                 Require all denied
             </Files>
-
-            ## Deny access to wrongly created config backup files like ...inc.php.0123123 instead of ...inc.012341.php
             <FilesMatch "\.php\.\d+$">
                 Require all denied
             </FilesMatch>
-
-            ## …except some PHP files in root directory:
             <FilesMatch "^(index\.php|controller\.php|proxy\.php)$">
                 <IfModule mod_auth_kerb.c>
                     Require valid-user
@@ -214,29 +192,20 @@ This file receives the following content:
                     Require all granted
                 </IfModule>
             </FilesMatch>
-
-            ## …except some PHP files in src/:
             <Files "jsonrpc.php">
                 Require all granted
             </Files>
-
-            ## …except some PHP files in src/tools/php/:
             <FilesMatch "^(rt\.php|barcode_window\.php|barcode\.php)$">
                 Require all granted
             </FilesMatch>
-
-            ## …except some PHP files in src/tools/php/qr/:
             <FilesMatch "^(qr\.php|qr_img\.php)$">
                 Require all granted
             </FilesMatch>
-
-            ## …except some PHP files in src/tools/js/:
             <FilesMatch "^js\.php$">
                 Require all granted
             </FilesMatch>
         </IfModule>
 
-        ## Deny access to some directories:
         <IfModule mod_alias.c>
             RedirectMatch 403 /imports/.*$
             RedirectMatch 403 /log/.*$
@@ -246,10 +215,8 @@ This file receives the following content:
             RedirectMatch 403 /vendor/.*$
         </IfModule>
 
-        ## Cache static files:
         <IfModule mod_expires.c>
             ExpiresActive On
-            # A2592000 = 30 days
             ExpiresByType image/svg+xml A2592000
             ExpiresByType image/gif A2592000
             ExpiresByType image/png A2592000
@@ -260,13 +227,11 @@ This file receives the following content:
             ExpiresByType text/javascript A2592000
             ExpiresByType image/x-icon "access 1 year"
             ExpiresDefault "access 2 week"
-
             <IfModule mod_headers.c>
                 Header append Cache-Control "public"
             </IfModule>
         </IfModule>
 
-        ## Pretty URLs:
         <IfModule mod_rewrite.c>
             RewriteEngine On
             RewriteRule favicon\.ico$ images/favicon.ico [L]
@@ -276,12 +241,10 @@ This file receives the following content:
             RewriteRule .* index.php [L,QSA]
         </IfModule>
 
-        ## Deny access to all ini files…
         <Files "*.ini">
             Require all denied
         </Files>
-
-        </Directory>
+    </Directory>
 
     TimeOut 600
     ProxyTimeout 600
@@ -294,15 +257,15 @@ This file receives the following content:
 </VirtualHost>
 ```
 <!-- cSpell:enable -->
-!!! note "i-doit ships custom Apache settings in files named **.htaccess**. These must be reviewed after each update and updated in the VirtualHost configuration."
+!!! note "i-doit liefert abweichende Apache-Einstellungen in Dateien mit dem Namen **.htaccess** mit. Diese müssen nach jedem Update geprüft und in der VirtualHost Konfiguration aktualisiert werden."
 
-In the next step, the Apache HTTP Server is restarted:
+Im nächsten Schritt wird der Apache HTTP Server neu gestartet:
 <!-- cSpell:disable -->
 ```sh
 sudo systemctl restart httpd php-fpm
 ```
 <!-- cSpell:enable -->
-For Apache to have read and write permissions in the future i-doit installation directory, this must be allowed by **SELinux**:
+Damit Apache Lese- und Schreibrechte im künftigen Installationsverzeichnis von i-doit hat, muss dies von **SELinux** erlaubt werden:
 <!-- cSpell:disable -->
 ```sh
 sudo chown apache:apache -R /var/www/html
@@ -312,39 +275,32 @@ sudo restorecon -Rv /var/www/html
 <!-- cSpell:enable -->
 ### MariaDB
 
-To ensure MariaDB delivers good performance and can be operated securely, a few steps are needed that should be carried out meticulously. This starts with a secure installation. **The recommendations should be followed**. The **root** user should receive a secure password:
+Damit MariaDB eine gute Performance liefert und sicher betrieben werden kann, sind einige, wenige Schritte nötig, die penibel ausgeführt werden sollten. Dies fängt an mit einer sicheren Installation. **Den Empfehlungen sollte gefolgt werden**. Der Benutzer **root** sollte ein sicheres Passwort erhalten:
 
-!!! warning "Do **not** enable socket authentication for the root user, as this would prevent i-doit from connecting to the database."
+!!! warning "Aktiviere die Socket-Authentifizierung **nicht** für den Benutzer root, da dies i-doit daran hindern würde, eine Verbindung zur Datenbank herzustellen."
 <!-- cSpell:disable -->
 ```sh
 sudo mysql_secure_installation
 ```
 <!-- cSpell:enable -->
 
-Then MariaDB is set to [slow shutdown](https://mariadb.com/kb/en/innodb-system-variables/#innodb_fast_shutdown):
+Anschließend wird MariaDB auf [slow shutdown](https://mariadb.com/kb/en/innodb-system-variables/#innodb_fast_shutdown) gesetzt:
 <!-- cSpell:disable -->
 ```sh
 mysql -u root -p -e"SET GLOBAL innodb_fast_shutdown = 0"
 ```
 <!-- cSpell:enable -->
-A new file is created for the custom configuration settings:
+Für die abweichenden Konfigurationseinstellungen wird eine neue Datei erstellt:
 <!-- cSpell:disable -->
 ```sh
 sudo nano /etc/my.cnf.d/99-i-doit.cnf
 ```
 <!-- cSpell:enable -->
-This file contains the new configuration settings. **For optimal performance, these settings should be adjusted to the (virtual) hardware**:
+Diese Datei enthält die neuen Konfigurationseinstellungen. **Für eine optimale Performance sollten diese Einstellungen an die (virtuelle) Hardware angepasst werden**:
 <!-- cSpell:disable -->
 ```conf
 [mysqld]
-# This is the number 1 setting to look at for any performance optimization
-# It is where the data and indexes are cached: having it as large as possible will
-# ensure MySQL uses memory and not disks for most read operations.
-#
-# Typical values are 1G (1-2GB RAM), 5-6G (8GB RAM), 20-25G (32GB RAM), 100-120G (128GB RAM).
 innodb_buffer_pool_size = 1G
-# Redo log file size, the higher the better.
-# MySQL/MariaDB writes two of these log files in a default installation.
 innodb_log_file_size = 512M
 innodb_sort_buffer_size = 64M
 sort_buffer_size = 262144 # default
@@ -358,7 +314,6 @@ query_cache_size = 80M
 tmp_table_size = 32M
 max_connections = 200
 innodb_file_per_table = 1
-# Disable this (= 0) if you have slow harddisks
 innodb_flush_log_at_trx_commit = 1
 innodb_flush_method = O_DIRECT
 innodb_lru_scan_depth = 2048
@@ -369,13 +324,13 @@ innodb_stats_on_metadata = 0
 sql-mode = ""
 ```
 <!-- cSpell:enable -->
-Finally, MariaDB is restarted:
+Abschließend wird MariaDB gestartet:
 <!-- cSpell:disable -->
 ```sh
 sudo systemctl restart mariadb.service
 ```
 <!-- cSpell:enable -->
-Finally, we need to configure SELinux so that Apache can access the network and the database:
+Zum Schluss müssen wir noch SELinux konfigurieren, damit Apache auf das Netzwerk und die Datenbank zugreifen kann:
 <!-- cSpell:disable -->
 ```sh
 # Allow Apache to connect to the database
@@ -386,8 +341,8 @@ sudo setsebool -P httpd_can_network_connect 1
 sudo semanage port -a -t postgresql_port_t -p tcp 25321
 ```
 <!-- cSpell:enable -->
-## Next Step
+## Nächster Schritt
 
-The operating system is now prepared so that i-doit can be installed:
+Das Betriebssystem ist nun vorbereitet, sodass i-doit installiert werden kann:
 
-[Continue to **Setup**](../setup.md)
+[Weiter zu **Setup**](../setup.md)
