@@ -37,7 +37,7 @@ Zu einer vollumfänglichen IT-Dokumentation gehören oftmals auch Dokumente in F
 
 Mit der Version 1.xx von i-doit haben wir eine zusätzliche Variante mit aufgenommen die genutzt werden kann um Datenbanken innerhalb von i-doit zu dokumentieren.
 
-## [Dokumentation von End of Life Daten](./dokumentation-von-end-of-life-daten.md)
+## [Dokumentation von End of Life Daten](./end-of-life.md)
 
 Die Überwachung von End of Life (EOL) und End of Support (EOS) Daten ist essenziell für ein proaktives Lifecycle-Management. In i-doit gibt es verschiedene Strategien, um diese Daten zu pflegen, Lizenzen zu sparen und die Informationen für deine Kollegen intuitiv nutzbar zu machen.
 
