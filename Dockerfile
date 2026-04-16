@@ -1,13 +1,10 @@
-FROM python:3.15.0a8-bookworm AS i-doit-kb-build
+FROM python:3.14.4-alpine3.23 AS i-doit-kb-build
 
-RUN apt-get update && \
-    apt-get full-upgrade -y && \
-    apt-get install -y --no-install-recommends \
+RUN apk update && \
+    apk add \
+    --no-cache \
         gcc \
-        git \
-    && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+        git 
 
 WORKDIR /usr/src/app
 
