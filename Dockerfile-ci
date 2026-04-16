@@ -9,11 +9,15 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 SHELL ["/bin/bash", "-euxo", "pipefail", "-c"]
 
+RUN sed -i 's|http://|https://|g' /etc/apt/sources.list.d/ubuntu.sources
+
+RUN apt-get -o "Acquire::https::Verify-Peer=false" update && \
+    apt-get -o "Acquire::https::Verify-Peer=false" install -y ca-certificates
+
 RUN apt-get update; \
     apt-get full-upgrade -y; \
     apt-get install -y --no-install-recommends \
         apt-transport-https \
-        ca-certificates \
         curl \
         git \
         gnupg \
