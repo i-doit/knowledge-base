@@ -320,6 +320,10 @@ nav:
               - i-doit via XAMPP: installation/manual-installation/microsoft-windows-server/idoit-via-XAMPP.md
           - System Settings: installation/manual-installation/system-settings.md
           - Setup: installation/manual-installation/setup.md
+      - Docker Installation:
+          - installation/docker-installation/index.md
+          - Debian GNU/Linux: installation/docker-installation/debian.md
+          - Ubuntu GNU/Linux: installation/docker-installation/ubuntu.md
       - i-doit Virtual Eval Appliance:
           - installation/i-doit-virtual-eval-appliance/index.md
           - Import i-doit Appliance in VirtualBox: installation/i-doit-virtual-eval-appliance/virtual-box.md
