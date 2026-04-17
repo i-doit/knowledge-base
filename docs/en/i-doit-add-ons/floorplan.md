@@ -60,6 +60,27 @@ When the object is selected in edit mode, it is highlighted with a flashing outl
 
 [![edit Floorplan](../assets/images/en/i-doit-add-ons/floorplan/23-fp.gif)](../assets/images/en/i-doit-add-ons/floorplan/23-fp.gif)
 
+## Managing Objects Using Layers
+
+Organizing objects into different layers can help make the floor plan easier to read.
+By placing objects on different layers, you can group them and display them either below or above one another.
+
+To open the menu for editing layers, first click the Layers button.
+
+[![Layerbutton](../assets/images/en/i-doit-add-ons/floorplan/1-fp-e.png)](../assets/images/en/i-doit-add-ons/floorplan/1-fp-e.png)
+
+The Layers menu displays the objects currently placed in the floorplan. You can create a new layer using the **New Layer button**, and move objects to that layer by dragging and dropping them via the small grid dots.
+
+An object positioned above another object in the Layers menu will also be displayed above the object below it in the floorplan. The same applies to individual layers and the objects beneath them.
+
+[![Layeroder](../assets/images/en/i-doit-add-ons/floorplan/3-fp-e.png)](../assets/images/en/i-doit-add-ons/floorplan/3-fp-e.png)
+
+There are three visual states for objects within a room plan. You can change these states using the eye icon in the Layers menu. Clicking the eye icon makes the object more transparent, clicking it again hides the object completely.
+
+[![Visability](../assets/images/en/i-doit-add-ons/floorplan/2-fp-e.png)](../assets/images/en/i-doit-add-ons/floorplan/2-fp-e.png)
+
+Layers can be renamed by hovering over the current layer and using the Edit button, or you can remove the layer using the Delete button.
+
 ## Merging multiple Floorplan
 
 It should be possible to add a floorplan to a floorplan - let's think of a floor that contains several rooms. In this "floor" floorplan we want to position the "room" floorplan.
