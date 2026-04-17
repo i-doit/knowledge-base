@@ -21,7 +21,7 @@ Diese Anleitung beschreibt die Installation von i-doit unter **Internet Informat
 
 Das Installationspaket enthält alle benötigten Scripts:
 
-[:material-download: idoit-iis-installer.zip herunterladen](../../../../../assets/downloads/idoit-iis-installer.zip)
+[:material-download: idoit-iis-installer.zip herunterladen](../../../../assets/downloads/idoit-iis-installer.zip)
 
 Das Paket entpacken, zum Beispiel nach `C:\install\`. Die Ordnerstruktur danach:
 <!-- cSpell:disable -->
@@ -67,23 +67,23 @@ Die Installation dauert je nach Internetgeschwindigkeit **10 bis 20 Minuten**. A
 
 ## Was wird installiert
 
-| Komponente | Version | Speicherort |
-|---|---|---|
-| IIS | 10 (Windows-Feature) | Betriebssystem |
-| Visual C++ 2019 Redistributable | aktuell | System |
-| PHP | 8.2 NTS | `C:\PHP\` |
-| MariaDB | 10.6 | `C:\Program Files\MariaDB 10.6\` |
-| i-doit | neueste Version | `C:\inetpub\wwwroot\` |
+| Komponente                      | Version              | Speicherort                      |
+| ------------------------------- | -------------------- | -------------------------------- |
+| IIS                             | 10 (Windows-Feature) | Betriebssystem                   |
+| Visual C++ 2019 Redistributable | aktuell              | System                           |
+| PHP                             | 8.2 NTS              | `C:\PHP\`                        |
+| MariaDB                         | 10.6                 | `C:\Program Files\MariaDB 10.6\` |
+| i-doit                          | neueste Version      | `C:\inetpub\wwwroot\`            |
 
 ## Zugangsdaten nach der Installation
 
 !!! success "Standardzugänge nach der Installation"
-    | Zugang | Benutzer | Passwort |
-    |---|---|---|
-    | **i-doit** | `admin` | `admin` |
-    | **Admin Center** (`/admin/`) | `admin` | `admin123` |
-    | **MariaDB root** | `root` | `idoit_secure_password` |
-    | **MariaDB i-doit** | `idoit` | `idoit_secure_password` |
+    | Zugang                       | Benutzer | Passwort                |
+    | ---------------------------- | -------- | ----------------------- |
+    | **i-doit**                   | `admin`  | `admin`                 |
+    | **Admin Center** (`/admin/`) | `admin`  | `admin123`              |
+    | **MariaDB root**             | `root`   | `idoit_secure_password` |
+    | **MariaDB i-doit**           | `idoit`  | `idoit_secure_password` |
 
 !!! warning "Passwörter ändern"
     Die Standardpasswörter sollten nach der Installation geändert werden. Für produktive Systeme die Parameter `$DbRootPassword`, `$DbIdoitPassword` und `$AdminCenterPassword` am Anfang von `install.ps1` anpassen und die Installation erneut durchführen.
@@ -193,10 +193,10 @@ i-doit benötigt eine `web.config` in `C:\inetpub\wwwroot\` für URL-Umschreibun
 
 Nach der Installation laufen zwei Windows-Dienste:
 
-| Dienst | Verwaltung |
-|---|---|
-| **W3SVC** (IIS) | `iisreset` oder Dienste-Manager |
-| **MariaDB** | `net start MariaDB` / `net stop MariaDB` |
+| Dienst          | Verwaltung                               |
+| --------------- | ---------------------------------------- |
+| **W3SVC** (IIS) | `iisreset` oder Dienste-Manager          |
+| **MariaDB**     | `net start MariaDB` / `net stop MariaDB` |
 
 IIS neu starten:
 <!-- cSpell:disable -->
