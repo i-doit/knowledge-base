@@ -258,6 +258,6 @@ Der FastCGI-Handler wurde nicht korrekt registriert. Prüfen:
 
 ## Nächster Schritt
 
-Die Installation ist abgeschlossen. Im nächsten Schritt Lizenz einspielen und Einstellungen vornehmen:
+Die Installation ist abgeschlossen. Im nächsten Schritt die empfohlenen Systemeinstellungen für i-doit vornehmen:
 
-[Weiter zu **Setup**](../setup.md)
+[Weiter zu **Systemeinstellungen**](../systemeinstellungen.md)

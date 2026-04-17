@@ -258,6 +258,6 @@ The FastCGI handler was not registered correctly. Check:
 
 ## Next Step
 
-The installation is complete. Next, import the license and configure settings:
+The installation is complete. Next, apply the recommended system settings for i-doit:
 
-[Continue to **Setup**](../setup.md)
+[Continue to **System Settings**](../system-settings.md)

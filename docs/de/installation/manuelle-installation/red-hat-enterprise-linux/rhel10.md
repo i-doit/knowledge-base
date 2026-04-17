@@ -58,12 +58,6 @@ Das **CRB-Repository** (CodeReady Builder) wird über den Subscription Manager a
 sudo subscription-manager repos --enable codeready-builder-for-rhel-10-x86_64-rpms
 ```
 <!-- cSpell:enable -->
-Die PHP- und MariaDB-Module auf die empfohlenen Versionen setzen:
-<!-- cSpell:disable -->
-```sh
-sudo dnf module enable php:8.3 mariadb:10.11 -y
-```
-<!-- cSpell:enable -->
 Die Installation weiterer Pakete:
 <!-- cSpell:disable -->
 ```sh
@@ -307,10 +301,6 @@ sort_buffer_size = 262144 # default
 join_buffer_size = 262144 # default
 max_allowed_packet = 128M
 max_heap_table_size = 32M
-query_cache_min_res_unit = 4096
-query_cache_type = 1
-query_cache_limit = 5M
-query_cache_size = 80M
 tmp_table_size = 32M
 max_connections = 200
 innodb_file_per_table = 1
