@@ -318,6 +318,7 @@ nav:
           - Microsoft Windows Server:
               - installation/manuelle-installation/microsoft-windows-server/index.md
               - i-doit via XAMPP: installation/manuelle-installation/microsoft-windows-server/idoit-via-XAMPP.md
+              - i-doit unter IIS: installation/manuelle-installation/microsoft-windows-server/iis.md
           - Systemeinstellungen: installation/manuelle-installation/systemeinstellungen.md
           - Setup: installation/manuelle-installation/setup.md
       - Docker Installation:
