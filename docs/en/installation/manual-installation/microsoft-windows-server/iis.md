@@ -21,7 +21,7 @@ This guide describes the installation of i-doit on **Internet Information Servic
 
 The installation package contains all required scripts:
 
-[:material-download: Download idoit-iis-installer.zip](../../../../assets/downloads/idoit-iis-installer.zip)
+[:material-download: Download idoit-iis-installer.zip](../../../assets/downloads/idoit-iis-installer.zip)
 
 Extract the package, for example to `C:\install\`. The folder structure afterwards:
 <!-- cSpell:disable -->

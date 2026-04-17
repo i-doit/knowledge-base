@@ -21,7 +21,7 @@ Diese Anleitung beschreibt die Installation von i-doit unter **Internet Informat
 
 Das Installationspaket enthält alle benötigten Scripts:
 
-[:material-download: idoit-iis-installer.zip herunterladen](../../../../assets/downloads/idoit-iis-installer.zip)
+[:material-download: idoit-iis-installer.zip herunterladen](../../../assets/downloads/idoit-iis-installer.zip)
 
 Das Paket entpacken, zum Beispiel nach `C:\install\`. Die Ordnerstruktur danach:
 <!-- cSpell:disable -->
