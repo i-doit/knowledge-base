@@ -12,7 +12,7 @@ This guide describes the manual installation of i-doit as Docker containers on D
 
 ## System Requirements
 
-The general [system requirements](../../system-requirements.md) apply. Additionally required:
+The general [system requirements](../system-requirements.md) apply. Additionally required:
 
 - **Docker** ≥ 24 with Compose plugin
 - Root privileges or `sudo` access

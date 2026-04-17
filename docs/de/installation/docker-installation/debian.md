@@ -12,7 +12,7 @@ Diese Anleitung beschreibt die manuelle Installation von i-doit als Docker-Conta
 
 ## Systemvoraussetzungen
 
-Es gelten die allgemeinen [Systemvoraussetzungen](../../systemvoraussetzungen.md). Zusätzlich werden benötigt:
+Es gelten die allgemeinen [Systemvoraussetzungen](../systemvoraussetzungen.md). Zusätzlich werden benötigt:
 
 - **Docker** ≥ 24 mit Compose-Plugin
 - Root-Rechte oder `sudo`-Zugang
