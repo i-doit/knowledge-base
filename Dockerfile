@@ -11,12 +11,11 @@ RUN apt-get update && \
 
 WORKDIR /usr/src/app
 
-COPY requirements.txt .
-RUN pip install -U --no-cache-dir -r requirements.txt
-
 COPY . .
 
-RUN mkdocs build -f config/de/mkdocs.yml \
+RUN pip install -U --no-cache-dir -r requirements.txt \
+    && \
+    mkdocs build -f config/de/mkdocs.yml \
     && \
     mkdocs build -f config/en/mkdocs.yml
 
