@@ -110,13 +110,18 @@ max_allowed_packet = 128M
 max_connections = 200
 innodb_file_per_table = 1
 innodb_flush_log_at_trx_commit = 1
+innodb_flush_method = O_DIRECT
 tmp_table_size = 32M
 max_heap_table_size = 32M
 sort_buffer_size = 262144
 join_buffer_size = 262144
 innodb_sort_buffer_size = 64M
+innodb_stats_on_metadata = 0
+sql-mode = ""
 ```
 <!-- cSpell:enable -->
+
+!!! info "The query cache was removed in MariaDB 10.6. The `query_cache_*` settings found in older guides are no longer relevant and can be omitted."
 
 ### Cron Configuration
 
@@ -151,6 +156,10 @@ services:
       - ./mysql_data:/var/lib/mysql
       - ./config/mariadb.cnf:/etc/mysql/conf.d/idoit.cnf:ro
 
+  idoit-memcached:
+    image: memcached:alpine
+    restart: always
+
   idoit-web:
     build: .
     restart: always
@@ -163,6 +172,7 @@ services:
       - DB_HOST=idoit-db
     depends_on:
       - idoit-db
+      - idoit-memcached
 
   idoit-cron:
     build: .
@@ -174,10 +184,16 @@ services:
       - ./config/idoit-cron:/etc/cron.d/idoit:ro
     depends_on:
       - idoit-db
+      - idoit-memcached
 ```
 <!-- cSpell:enable -->
 
 !!! warning "Replace `idoit_secure_password` with a strong, unique password."
+
+After installation, enable Memcached in i-doit under **Administration → System Settings → Memcache**:
+
+- **Memcache Host**: `idoit-memcached`
+- **Memcache Port**: `11211`
 
 ## Download i-doit
 
@@ -236,6 +252,52 @@ After installation, i-doit is accessible at `http://<IP-address>/`.
 !!! success "Default credentials after installation"
     - **i-doit**: User `admin`, password `admin`
     - **Admin Center**: User `admin`, password `admin123`
+
+## Backup
+
+The following script creates daily backups of the database and i-doit directory under `/opt/idoit-backup/`:
+<!-- cSpell:disable -->
+```sh
+sudo mkdir -p /opt/idoit-backup
+sudo nano /opt/idoit-backup/backup.sh
+```
+<!-- cSpell:enable -->
+<!-- cSpell:disable -->
+```sh
+#!/bin/bash
+DATE=$(date +%Y-%m-%d)
+BACKUP_DIR="/opt/idoit-backup"
+INSTALL_DIR="/opt/idoit-docker"
+
+# Backup database
+docker compose -f "${INSTALL_DIR}/docker-compose.yml" exec -T idoit-db \
+    mysqldump -u root -pidoit_secure_password --all-databases \
+    > "${BACKUP_DIR}/db_${DATE}.sql"
+
+# Backup i-doit directory (excluding cache and temp)
+tar czf "${BACKUP_DIR}/html_${DATE}.tar.gz" \
+    --exclude="${INSTALL_DIR}/html/temp" \
+    --exclude="${INSTALL_DIR}/html/log" \
+    "${INSTALL_DIR}/html/"
+
+# Delete backups older than 14 days
+find "${BACKUP_DIR}" -name "*.sql" -o -name "*.tar.gz" | xargs ls -t | tail -n +29 | xargs rm -f 2>/dev/null
+
+echo "Backup ${DATE} complete."
+```
+<!-- cSpell:enable -->
+<!-- cSpell:disable -->
+```sh
+sudo chmod +x /opt/idoit-backup/backup.sh
+```
+<!-- cSpell:enable -->
+To run the script automatically every day:
+<!-- cSpell:disable -->
+```sh
+echo "0 2 * * * root /opt/idoit-backup/backup.sh >> /opt/idoit-backup/backup.log 2>&1" \
+    | sudo tee /etc/cron.d/idoit-backup
+```
+<!-- cSpell:enable -->
 
 ## Next Step
 
