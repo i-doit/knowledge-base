@@ -1,4 +1,4 @@
-FROM python:3.14.4-alpine3.23 AS i-doit-kb-build
+FROM python:3.15.0a8-alpine3.23 AS i-doit-kb-build
 
 RUN apk update && \
     apk add \
