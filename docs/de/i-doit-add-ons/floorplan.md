@@ -73,6 +73,27 @@ Im Editiermodus wird ein ausgewähltes Objekt durch einen blinkenden Umriss herv
 
 [![Editiermodus](../assets/images/de/i-doit-add-ons/floorplan/23-fp.gif)](../assets/images/de/i-doit-add-ons/floorplan/23-fp.gif)
 
+## Verwaltung von Objekten über Ebenen
+
+Das Einteilen von Objekten auf unterschiedliche Ebenen kann dabei helfen, den Raumplan übersichtlicher zu gestalten.
+Durch das einteilen von Objekten auf verschiedene Ebenen, kann man die Objekte gruppieren und unter oder übereinander darstellen lassen.
+
+Um das Menü für das bearbeiten der Ebenen zu öffnen, muss man zuerst auf den Ebenen Button klicken.
+
+[![Ebenenbutton](../assets/images/de/i-doit-add-ons/floorplan/1-fp-e.png)](../assets/images/de/i-doit-add-ons/floorplan/1-fp-e.png)
+
+In dem Ebenen Menü werden die aktuell im Raumplan plazierten Objekte angezeigt und über den **Neue Ebene Button** kann man eine neue Ebene erstellen und per Drag & Drop an dem kleinen Pünktchen Raster können Objekte in diese Ebene bewegt werden.
+
+Ein Objekt das in dem Ebenen Menü über einem anderen Objekt Positioniert ist, wird im Raumplan auch über das unterliegende Objekt angezeigt. Das selbe gilt auch für einzelne Ebenen und deren unterliegende Objekte.
+
+[![Zeichenordnung](../assets/images/de/i-doit-add-ons/floorplan/3-fp-e.png)](../assets/images/de/i-doit-add-ons/floorplan/3-fp-e.png)
+
+Es gibt 3 visuelle Zustände für die Objekte innerhalb eines Raumplans. Über das Augen Symbol innerhalb des Ebenen Menüs kann man die jeweiligen Zustände ändern. Ein Klick auf das Augen Symbol macht das Objekt transparenter, ein weitere Klick und das Objekt wird komplett ausgeblendet.
+
+[![Visualität](../assets/images/de/i-doit-add-ons/floorplan/2-fp-e.png)](../assets/images/de/i-doit-add-ons/floorplan/2-fp-e.png)
+
+Ebenen können umbenannt werden, indem man über die aktuelle Ebene hovert und den Editierten Button verwendet oder man kann die Ebene über den Löschen Button entfernen.
+
 ## Zusammenführung von Raumplänen
 
 Du kannst Raumplaene ineinander verschachteln -- z. B. ein Stockwerk, das mehrere Räume enthält. Dabei gelten folgende Regeln: Es werden maximal drei Ebenen von Grundrissen angezeigt.
