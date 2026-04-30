@@ -88,6 +88,10 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 ## Flows Add-on
 
+### Do not fill other fields than selected
+
+[Flows_1.3.0_hotfix_FLOW-473_9c5485d.zip :material-file-download:](../../assets/downloads/hotfixes/flows/Flows_1.3.0_hotfix_FLOW-473_9c5485d.zip){ .md-button .md-button--primary }
+
 ### Fix AutomationsButtons is not assigned error in the GUI (FLOW-428)
 
 !!! note "You need to install the fixed Version via the [Admin-Center](../admin-center.md)."
