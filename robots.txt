@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kb.i-doit.com/de/sitemap.xml
+Sitemap: https://kb.i-doit.com/en/sitemap.xml
