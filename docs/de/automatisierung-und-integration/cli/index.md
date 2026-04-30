@@ -14,11 +14,11 @@ Dieses Dokument beschreibt die Verwendung der i-doit console utility. Die i-doit
 
 ## Grundlagen der i-doit console utility
 
-Die Befehle der i-doit console utility werden über die Datei `console.php` ausgeführt, die sich im Hauptverzeichnis Ihrer i-doit-Installation befindet.
+Die Befehle der i-doit console utility werden über die Datei `console.php` ausgeführt, die sich im Hauptverzeichnis deiner i-doit-Installation befindet.
 
 ### Aufruf der Konsole
 
-Um einen Befehl auszuführen, müssen Sie in das i-doit-Installationsverzeichnis wechseln und die Datei mit PHP ausführen. Es ist auch möglich, den vollständigen Pfad zur Datei zu verwenden, um sie von einem beliebigen Ort aus auszuführen. Wichtig ist, dass der Befehl mit den Rechten des Webserver-Benutzers (z. B. `www-data`, `wwwrun` oder `apache`) ausgeführt wird, um Berechtigungsprobleme zu vermeiden.
+Um einen Befehl auszuführen, musst du in das i-doit-Installationsverzeichnis wechseln und die Datei mit PHP ausführen. Es ist auch möglich, den vollständigen Pfad zur Datei zu verwenden, um sie von einem beliebigen Ort aus auszuführen. Wichtig ist, dass der Befehl mit den Rechten des Webserver-Benutzers (z. B. `www-data`, `wwwrun` oder `apache`) ausgeführt wird, um Berechtigungsprobleme zu vermeiden.
 
 ```bash
 # In das i-doit-Verzeichnis wechseln (Pfad anpassen)
@@ -48,7 +48,7 @@ Diese Optionen können mit den meisten Befehlen kombiniert werden:
 | `--quiet`          | `-q`            | Unterdrückt alle Ausgaben außer Fehlermeldungen.                 |
 | `--verbose`        | `-v, -vv, -vvv` | Erhöht die Ausführlichkeit der Ausgabe (nützlich für Debugging). |
 | `--version`        | `-V`            | Zeigt die Version der i-doit console an.                         |
-| `--no-interaction` | `-n`            | Deaktiviert interaktive Nachfragen (z.B. "Sind Sie sicher?").    |
+| `--no-interaction` | `-n`            | Deaktiviert interaktive Nachfragen (z.B. "Bist du sicher?").    |
 
 -----
 
@@ -85,7 +85,7 @@ Synchronisiert Benutzer und Gruppen aus einem LDAP-Verzeichnis (z. B. Microsoft 
     ```bash
     sudo -u www-data php console.php ldap-sync --user=admin --password='geheim' --tenantId=1 --verbose
     ```
-    *Tipp:* Eine Beispiel-Konfigurationsdatei finden Sie hier: [Konfigurationsdatei](https://www.google.com/search?q=configuration-files.md%23example-for-the-command-ldap-sync)
+    *Tipp:* Eine Beispiel-Konfigurationsdatei findest du hier: [Konfigurationsdatei](https://www.google.com/search?q=configuration-files.md%23example-for-the-command-ldap-sync)
 
 #### import-jdisc
 
@@ -180,7 +180,7 @@ Fügt einen neuen Lizenz-Token zur i-doit-Installation hinzu.
 
 ### Dedizierter Benutzer für die i-doit console utility
 
-Richten Sie in der i-doit-Weboberfläche einen dedizierten Benutzer für Automatisierungsaufgaben ein. Vergeben Sie nur die unbedingt notwendigen Berechtigungen (z. B. Import-Rechte) an diesen Benutzer, anstatt den globalen `admin`-Account zu verwenden.
+Richte in der i-doit-Weboberfläche einen dedizierten Benutzer für Automatisierungsaufgaben ein. Vergib nur die unbedingt notwendigen Berechtigungen (z. B. Import-Rechte) an diesen Benutzer, anstatt den globalen `admin`-Account zu verwenden.
 
 ### Verwendung in Crontab
 
@@ -188,7 +188,7 @@ Die Befehle der i-doit console utility eignen sich hervorragend für die Automat
 
   * **Beispiel: Nächtlicher CSV-Import und Neuaufbau des Suchindex**
 
-    Öffnen Sie die Crontab des Webserver-Benutzers mit `sudo -u www-data crontab -e` und fügen Sie folgende Zeilen hinzu:
+    Öffne die Crontab des Webserver-Benutzers mit `sudo -u www-data crontab -e` und füge folgende Zeilen hinzu:
 
     ```crontab
     # Führe den CSV-Import jeden Tag um 02:00 Uhr aus
@@ -202,13 +202,13 @@ Die Befehle der i-doit console utility eignen sich hervorragend für die Automat
 
 ### Einen Befehl und seine Optionen finden
 
-Um alle verfügbaren Befehle aufzulisten, führen Sie `console.php` ohne Argumente aus:
+Um alle verfügbaren Befehle aufzulisten, führe `console.php` ohne Argumente aus:
 
 ```bash
 sudo -u www-data php console.php
 ```
 
-Um die spezifischen Optionen und Parameter für einen einzelnen Befehl zu sehen, verwenden Sie die Option `--help` oder `-h`:
+Um die spezifischen Optionen und Parameter für einen einzelnen Befehl zu sehen, verwende die Option `--help` oder `-h`:
 
 ```bash
 sudo -u www-data php console.php import-csv --help

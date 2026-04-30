@@ -1,6 +1,6 @@
 ---
 title: Rechteverwaltung
-description: Rechteverwaltung
+description: "Wer darf was in i-doit sehen und bearbeiten? Diese häufig gestellte Frage rührt daher, ein Rechtekonzept für die eigene IT-Dokumentation zu etablieren."
 icon: rights-management
 status:
 lang: de
@@ -13,7 +13,7 @@ Diese häufig gestellte Frage rührt daher, ein Rechtekonzept für die eigene IT
 Nicht jede Person, die Login-berechtigt ist, darf sensible Daten sehen oder gar bearbeiten.
 i-doit verfügt über eine umfassende Rechteverwaltung, die die eigene IT-Dokumentation vor unbefugtem Zugriff schützt und die Integrität wahrt.
 
-Personen und Personengruppen
+## Personen und Personengruppen
 
 Rechte können an Personen und Personengruppen vergeben werden. Wird ein Recht an eine Gruppe vergeben, erben alle Personen, die dieser Gruppe angehören, dieses Recht. Login-berichtigte Benutzer werden als Objekt vom Typ Person in i-doit gespeichert. Die entsprechenden Gruppen sind vom Typ Personengruppe.
 

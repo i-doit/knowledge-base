@@ -1,12 +1,19 @@
+---
+title: Azure AD (SAML) Authentifizierung
+description: "Diese Anleitung beschreibt die Einrichtung von Single Sign-On (SSO) für i-doit mit SAML."
+icon:
+status:
+lang: de
+---
 # Azure AD (SAML) Authentifizierung
 
-!!! warning "Bitte erstellen Sie vor jeder Änderung an einer Schnittstelle/Import einen vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist kann dieses dann wiederhergestellt werden"
+!!! warning "Bitte erstelle vor jeder Änderung an einer Schnittstelle/Import ein vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist, kann dieses dann wiederhergestellt werden"
 
-In dieser Anleitung beschreiben wir die Einrichtung von Single-Sign-On (SSO) für i-doit mit Hilfe von SAML. In diesem Beispiel nutzen wir Mellon als Authenticator gegen Azure AD via SAML.
+Diese Anleitung beschreibt die Einrichtung von Single Sign-On (SSO) für i-doit mit SAML. Als Authenticator wird Mellon gegen Azure AD eingesetzt.
 
 ## Vorbereitungen
 
-Wir nutzen für die Beispielkonfiguration ein Debian 11 Server mit Apache, Mellon und installierten i-doit.
+Die Beispielkonfiguration verwendet einen Debian 11 Server mit Apache, Mellon und installiertem i-doit.
 
 ### Basiskonfiguration
 
@@ -23,32 +30,32 @@ Als Systemarchitektur sollte ein x86 in 64bit zum Einsatz kommen
 
 ## Mellon Konfiguration
 
-Wir erstellen hierzu ein Verzeichnis unter `/etc/apache2` und legen hier unsere Konfigurationsdaten ab.
+Erstelle ein Verzeichnis unter `/etc/apache2` für die Konfigurationsdaten.
 
 ```shell
 sudo mkdir -p /etc/apache2/mellon
 cd /etc/apache2/mellon
 ```
 
-Mit folgendem Befehl erstellen wir unsere Mellon Metadaten "URLs bitte anpassen"
+Erstelle die Mellon-Metadaten mit folgendem Befehl (passe die URLs an deine Umgebung an):
 
 ```shell
 /usr/sbin/mellon_create_metadata https://tu2-samlsso.synetics.test/ "https://tu2-samlsso.synetics.test/mellon"
 ```
 
-Dies erstellt nun folgende Dateien
+Dieser Befehl erstellt folgende Dateien:
 
     https_tu2_samlsso.synetics.test_.cert
     https_tu2_samlsso.synetics.test_.key
     https_tu2_samlsso.synetics.test_.xml
 
-Nun müssen wir unsere Mellon Konfiguration anlegen.
+Lege die Mellon-Konfiguration an:
 
 ```shell
 sudo nano /etc/apache2/conf-available/mellon.conf
 ```
 
-Folgende Direktiven werden anhand des Beispiels eingefügt:
+Fuege die folgenden Direktiven ein:
 
 ```shell
 <Location / >
@@ -63,7 +70,7 @@ Folgende Direktiven werden anhand des Beispiels eingefügt:
 
 ## Apache2 Konfiguration
 
-Zuerst erstellen wir ein selbst signiertes Zertifikat "Name kann individuell sein"
+Erstelle zuerst ein selbst signiertes Zertifikat (der Name ist frei wählbar):
 
 ```shell
 openssl req -newkey rsa:3072 -new -x509 -days 3652 -nodes -out /etc/ssl/certs/mywebserver.pem -keyout /etc/ssl/private/mywebserver.key
@@ -81,13 +88,13 @@ Common Name (e.g. server FQDN or YOUR name) []:mywebserver.example.com
 Email Address []:your_email_address
 ```
 
-VHost erstellen:
+Erstelle einen VHost:
 
 ```shell
 sudo nano /etc/apache2/sites-available/mywebserver.conf
 ```
 
-Beispiel:
+Beispiel-Konfiguration:
 
 ```shell
 <IfModule mod_ssl.c>
@@ -121,7 +128,7 @@ Beispiel:
 
 ## Anmeldung SSO für i-doit aktivieren
 
-Hierzu müssen wir in den **System settings** Tab des [Admin-Center](../../../administration/admin-center.md) und passen die dortige Konfiguration wie folgt an.
+Öffne den Tab **System settings** im [Admin-Center](../../../administration/admin-center.md) und passe die Konfiguration wie folgt an:
 
 !!! attention "Wichtige Information zu Kontakten"
 
@@ -133,23 +140,23 @@ Solange die Konfigurationen auf dem Linux Server noch nicht aktiviert wurde, kö
 
 ## Azure AD (SAML)
 
-Damit wir nun noch die benötigte XML für die Mellon Konfiguration erhalten, müssen wir folgende Schritte ausführen (Beispiel):
+Um die benötigte XML für die Mellon-Konfiguration zu erhalten, führe die folgenden Schritte aus:
 
 ### Erstellen einer benutzerdefinierten Unternehmensanwendung
 
-Wir melden uns im Azure AD und gehen dann auf Unternehmensanwendungen.
+Melde dich im Azure AD an und navigiere zu **Unternehmensanwendungen**.
 
 [![Azure-AD-Unternehmensanwendung](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen.png)
 
-Erstellen einer eigene benutzerdefinierte Anwendung.
+Erstelle eine eigene benutzerdefinierte Anwendung.
 
 [![Azure-AD-Unternehmensanwendung-2](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen-2.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen-2.png)
 
-SSO einrichten.
+Richte SSO ein.
 
 [![Azure-AD-Unternehmensanwendung-3](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen-3.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen-3.png)
 
-Nun wählen wir die Methode SAML aus und im nächsten Schritt stellen wir unsere `https_tu2_samlsso.synetics.test_.xml` bereit indem wir auf den Button `Metadatendatei hochladen` klicken.
+Wähle die Methode **SAML** und stelle im nächsten Schritt die Datei `https_tu2_samlsso.synetics.test_.xml` bereit, indem du auf **Metadatendatei hochladen** klickst.
 
 !!! info "https_tu2_samlsso.synetics.test_.xml"
 
@@ -157,7 +164,7 @@ Nun wählen wir die Methode SAML aus und im nächsten Schritt stellen wir unsere
 
 [![Azure-AD-Unternehmensanwendung-4](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen-4.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen-4.png)
 
-Nun Speichern wir die Konfiguration.
+Speichere die Konfiguration.
 
 !!! attention "Test"
 
@@ -165,53 +172,50 @@ Nun Speichern wir die Konfiguration.
 
 [![Azure-AD-Unternehmensanwendung-5](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen-5.jpg)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen-5.jpg)
 
-Im Anschluss laden wir die Metadaten XML herunter da diese im späteren Verlauf noch benötigt wird.
+Lade anschließend die Metadaten-XML herunter -- du benötigst sie im weiteren Verlauf.
 
 [![Azure-AD-Unternehmensanwendung-6](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen-6.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen-6.png)
 
-Damit die Benutzer den Zugriff auf die Unternehmensanwendung erhalten, muss die Zuweisung angepasst werden.
+Passe die Zuweisung an, damit die Benutzer Zugriff auf die Unternehmensanwendung erhalten.
 
 [![Azure-AD-Unternehmensanwendung-7](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen-7.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen-7.png)
 
-Zuletzt müssen wir dann noch den eindeutigen Benutzerbezeichner anpassen, damit Mellon die E-Mail Adresse des Benutzers an i-doit weiterleiten kann.
+Passe abschließend den eindeutigen Benutzerbezeichner an, damit Mellon die E-Mail-Adresse des Benutzers an i-doit weiterleiten kann.
 
-Hierzu öffnen wir in der Verwaltung der Unternehmensanwendung den Punkt `Einmaliges Anmelden`.
-Anschließend sehen wir im Hauptbereich `Attribute und Ansprüche` und bearbeiten diese.
+Öffne dazu in der Verwaltung der Unternehmensanwendung den Punkt **Einmaliges Anmelden**. Im Hauptbereich findest du **Attribute und Ansprueche** -- bearbeite diese.
 
 [![Azure-AD-Unternehmensanwendung-8](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen-8.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen-8.png)
 
-Nun Editieren wir unter `Erfolgerlicher Anspruch` den ersten Anspruch der angezeigt wird.
+Editiere unter **Erforderlicher Anspruch** den ersten angezeigten Anspruch.
 
 [![Azure-AD-Unternehmensanwendung-9](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen-9.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen-9.png)
 
-Das Namensbezeichnerformat muss zwingend auf `E-Mail-Adresse` geändert werden.
-Das Quellattribut muss auf `user.mail` geändert werden.
-Anschließend speichern wir die Konfiguration.
+Ändere das **Namensbezeichnerformat** zwingend auf `E-Mail-Adresse` und das **Quellattribut** auf `user.mail`. Speichere anschließend die Konfiguration.
 
 [![Azure-AD-Unternehmensanwendung-10](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen-10.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen-10.png)
 
-An dieser Stelle sind wir fertig mit der Konfiguration unserer Unternehmensanwendung in Azure AD.
+Die Konfiguration der Unternehmensanwendung in Azure AD ist damit abgeschlossen.
 
 ## Aktivierung der Konfigurationen auf dem Linux Server
 
 ### Metadaten XML bereitstellen
 
-Die zuvor erstellte Metadaten XML müssen wir nun auf unserem Linuxserver im Verzeichnis `/etc/apache2/mellon` bereitstellen damit Mellon diese nutzen kann.
+Stelle die zuvor erstellte Metadaten-XML auf deinem Linux-Server im Verzeichnis `/etc/apache2/mellon` bereit, damit Mellon sie nutzen kann.
 
 !!!attention "Dateiname"
 
     Bitte den Namen der Datei anhand der `mellon.conf` auf `AzureAD_metadata.xml` anpassen.
     Alternativ den Dateinamen in der `mellon.conf` anpassen.
 
-Da wir nun alle Konfigurationen soweit erstellt haben, können wir diese testen und alle notwendigen Mods aktivieren.
+Teste nun die Konfiguration und aktiviere alle notwendigen Module.
 
-### Config testen
+### Konfiguration testen
 
 ```shell
 sudo apache2ctl configtest
 ```
 
-### Mods, Configs aktivieren
+### Module und Configs aktivieren
 
 ```shell
 sudo a2enmod ssl
@@ -220,10 +224,9 @@ sudo a2ensite mywebserver.conf
 sudo systemctl restart apache2
 ```
 
-An dieser Stelle sind wir mit der Konfiguration des Linux Servers fertig.
+Die Konfiguration des Linux-Servers ist damit abgeschlossen.
 
-Wenn wir nun die URL wieder in unserem Browser öffnen `https://tu2-samlsso.synetics.test` werden wir zur Azure AD Anmeldung weitergeleitet.
-Nach erfolgreicher Anmeldung werden wir dann wieder auf unser i-doit weitergeleitet und sind erfolgreich angemeldet
+Wenn du jetzt die URL `https://tu2-samlsso.synetics.test` in deinem Browser öffnest, wirst du zur Azure AD-Anmeldung weitergeleitet. Nach erfolgreicher Anmeldung gelangst du direkt in dein i-doit.
 
 !!! info "Fallback auf Anmeldemaske"
     Sollte sich ein Benutzer anmelden, der in i-doit noch nicht vorhanden ist, dann wird dieser automatisch auf die Anmeldemaske von i-doit weitergeleitet und kann sich mit einem lokalen Benutzer anmelden.

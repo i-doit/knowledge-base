@@ -1,16 +1,25 @@
+---
+title: Installation
+description: "Once you have met the requirements, download the latest stable version of the i-doit add-on from the i-doit customer portal."
+icon:
+status:
+lang: en
+---
 # Installation
 
-After you’ve met the [requirements](./requirements.md) download the latest stable version of the i-doit add-on from the [i-doit customer portal](https://center.i-doit.com/).
+Once you have met the [requirements](./requirements.md), download the latest stable version of the i-doit add-on from the [i-doit customer portal](../../administration/customer-portal.md).
 
-Install the downloaded ZIP file [like any other i-doit add-on](./../index.md).
+[![Checkmk](../../assets/images/de/i-doit-add-ons/checkmk2/checkmk-hauptseite.png)](../../assets/images/de/i-doit-add-ons/checkmk2/checkmk-hauptseite.png)
 
-## Adding the Checkmk 2 add-on categories
+Install the downloaded ZIP file [like any other i-doit add-on](../index.md).
 
-The add-on additionally makes the "Checkmk Host" and "Checkmk Tags" category available for all object types. The category can be linked to the desired object types via the object type configuration and [Edit data structure](../../system-administration/administration/data-structure/edit-data-structure.md). In this way, only those object types appear that are specified by the user in order to keep the selection list clear.
+## Adding the Checkmk 2 Add-on Categories
 
-## Run idoitcmk where you want
+The add-on additionally makes the "Checkmk Host" and "Checkmk Tags" categories available for all object types. The category can be linked to the desired object types via the object type configuration and via [Edit data structure](../../administration/management/data-structure/edit-data-structure.md). This way, only the object types you specify appear, keeping the selection list clear.
 
-The ZIP file includes the binary idoitcmk which you can install on any other computer beneath the i-doit host. Make it executable and move it to a directory within your PATH so you can run it inside your terminal. For example, execute on a GNU/Linux or MacOS host:
+## Run idoitcmk wherever you want
+
+The ZIP file contains the idoitcmk binary, which you can run on any other computer outside the i-doit host. Make it executable and move it to a directory in your PATH so you can run it in your terminal. For example, run it on a GNU/Linux or macOS host:
 
 ```shell
 unzip idoit-cmk2-*.zip
@@ -18,15 +27,15 @@ chmod 755 idoitcmk
 sudo mv idoitcmk /usr/local/bin/
 ```
 
-To be up-to-date you need to repeat those steps.
+To stay up to date, you need to repeat these steps.
 
-## Run idoitcmk on the same host as i-doit
+## Run idoitcmk on the same machine as i-doit
 
-On a GNU/Linux host the following steps are not quite different than the ones above. Make the binary executable and create a symbolic link to a directory within your PATH. In this example i-doit is installed at /var/www/html:
+On a GNU/Linux host, the following steps do not differ significantly from those above. Make the binary executable and create a symbolic link to a directory in your PATH. In this example, i-doit is installed under /var/www/html:
 
 ```shell
 chmod 755 /var/www/html/idoitcmk
 sudo ln -s /var/www/html/idoitcmk /usr/local/bin/
 ```
 
-To be up-to-date you need to download and install the ZIP file.
+To stay up to date, you need to repeat these steps.

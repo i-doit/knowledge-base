@@ -1,32 +1,43 @@
 ---
-title: Two-factor Authentication (2FA)
+title: Two-Factor Authentication (2FA)
 description: Two-factor authentication options for i-doit
 icon: material/two-factor-authentication
 status:
 lang: en
 ---
 
-# Two-factor Authentication (2FA)
+!!! warning "Please create a complete backup before making any changes to an interface/import. If the result is not satisfactory, the backup can then be restored"
 
-## Integrated Two-factor Authentication
+Two-factor authentication (2FA) protects your i-doit access with an additional security layer. In addition to the password, you need a time-based code from an authenticator app when logging in.
 
-### Activate 2FA
+[![Two-Factor Authentication](../../assets/images/de/benutzerauthentifizierung-und-verwaltung/2fa.png)](../../assets/images/de/benutzerauthentifizierung-und-verwaltung/2fa.png)
 
-To activate 2FA you need to access the **Two-factor Authentication** setting at **User settings** → **Password and login**.<br>
-Click `Edit` and now click `Activate`, after entering the 6-digit authentication code the 2FA authentication is enabled.
+## Integrated Two-Factor Authentication
 
-The next time you log in, you will be asked for the 6-digit authentication code.
+### Enabling 2FA
 
-### Deactivate 2FA
+To enable 2FA for your user:
 
-To deactivate 2FA you need to access the **Two-factor Authentication** setting at **User settings** → **Password and login**.<br>
-Click `Edit` and now click `Deactivate`, after entering the 6-digit authentication code the 2FA authentication is disabled.
+1. Navigate to **User Settings → Password and Login**.
+2. Click **Edit** in the **Two-Factor Authentication** section.
+3. Click **Enable** and scan the displayed QR code with your authenticator app.
+4. Enter the 6-digit code from the app to complete the setup.
 
-!!! note "An administrator has the option of deactivating 2FA for users via the [administration](../../system-administration/administration/two-factor-authentication.md)."
+From the next login, i-doit will request the 6-digit authenticator code in addition to the password.
 
-## External Two-factor Authentication
+### Disabling 2FA
 
-Here we will provide links to external 2FA authentication methods
+To disable 2FA:
 
--   [Google](https://code.google.com/archive/p/google-authenticator-apache-module/wikis/GoogleAuthenticatorApacheModule.wiki)
--   [Apache Guacamole](https://guacamole.apache.org/doc/gug/totp-auth.html)
+1. Navigate to **User Settings → Password and Login**.
+2. Click **Edit** in the **Two-Factor Authentication** section.
+3. Click **Disable** and confirm with the 6-digit code from your authenticator app.
+
+!!! note "An administrator can also disable 2FA for individual users via the [Administration](../../administration/management/two-factor-authentication.md)."
+
+## External Two-Factor Authentication
+
+Alternatively, you can set up 2FA at the web server level using external modules:
+
+-   [Google Authenticator Apache Module](https://code.google.com/archive/p/google-authenticator-apache-module/wikis/GoogleAuthenticatorApacheModule.wiki)
+-   [Apache Guacamole TOTP](https://guacamole.apache.org/doc/gug/totp-auth.html)

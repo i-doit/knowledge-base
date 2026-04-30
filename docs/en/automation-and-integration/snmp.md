@@ -1,91 +1,75 @@
+---
+title: SNMP
+description: "With the SNMP category, you read SNMP values from objects in real time and display them in i-doit."
+icon:
+status:
+lang: en
+---
 # SNMP
 
-The SNMP category allows you to read out the SNMP values of objects and display them in realtime. Using the example scenario of querying a switch we will discuss the requirements and execution in this article.
+With the SNMP category, you read SNMP values from objects in real time and display them in i-doit. This article shows the setup using the example of a switch.
 
-## Requirements
+!!! info ""
+    This article was last verified for i-doit version 1.18.2
 
-i-doit requires the SNMP module of PHP in order to use this category. In Debian you can install the module with the following command:
+## Prerequisites
+
+1. Install the SNMP module for PHP. On Debian:
+
+        sudo apt-get install php-snmp
+
+2. Assign the SNMP category to the desired object type via [Edit Data Structure](../administration/management/data-structure/edit-data-structure.md) (in this example: Router).
+
+3. Ensure that a valid host address is documented in the corresponding category.
+
+[![snmp-hostaddress](../assets/images/de/automatisierung-und-integration/service-desk/snmp/1-snmp.png)](../assets/images/de/automatisierung-und-integration/service-desk/snmp/1-snmp.png)
+
+First test the SNMP connection via SSH on the server. Install the `snmp` package for the `snmpwalk` command and check reachability:
 
 ```shell
-sudo apt-get install php5-snmp
+snmpwalk -v 2c -c public 192.168.10.1 1.3.6.1.2.1.2.2.1.1
 ```
 
-Afterwards, you have to assign the SNMP category to the desired object type with the **Data structure editor**. In our example we only used the **Switch** object type.
+!!! info
+    We will skip the details on SNMP and this command at this point. Information about OID .1.3.6.1.2.1.2.2.1.1 can be found, for example, here: [http://www.oid-info.com/get/1.3.6.1.2.1.2.2.1](http://www.oid-info.com/get/1.3.6.1.2.1.2.2.1)
 
-Furthermore, we need a valid host address which in turn needs to be documented in the respective category of course.
+A successful result looks, for example, like this:
 
-[![object](../assets/images/en/automation-and-integration/snmp/1-snmp.png)](../assets/images/en/automation-and-integration/snmp/1-snmp.png)
+    iso.3.6.1.2.1.2.2.1.1.1 = INTEGER: 1
+    iso.3.6.1.2.1.2.2.1.1.2 = INTEGER: 2
+    iso.3.6.1.2.1.2.2.1.1.3 = INTEGER: 3
+    iso.3.6.1.2.1.2.2.1.1.4 = INTEGER: 4
+    iso.3.6.1.2.1.2.2.1.1.5 = INTEGER: 5
+    iso.3.6.1.2.1.2.2.1.1.6 = INTEGER: 6
+    iso.3.6.1.2.1.2.2.1.1.7 = INTEGER: 7
+    iso.3.6.1.2.1.2.2.1.1.8 = INTEGER: 8
+    iso.3.6.1.2.1.2.2.1.1.9 = INTEGER: 9
+    iso.3.6.1.2.1.2.2.1.1.10 = INTEGER: 10
+    iso.3.6.1.2.1.2.2.1.1.11 = INTEGER: 11
 
-In order to avoid failed attempts we test the SNMP connection "manually" by accessing the console of the server via SSH. For this purpose, we install the "snmp" package in order to be provided with the "snmpwalk" command. Afterwards, we use a standard call of the switch which will supply us with the list of all interfaces.
+The query shows 11 ports. If timeouts or other errors occur, check:
 
-```shell
-sudo apt-get install snmpsnmpwalk -v 2c -c public 192.168.10.13 .1.3.6.1.2.1.2.2.1.1
-```
+*   Network connectivity to the device
+*   SNMP in the firewall rules
+*   Whether the SNMP server is running and the i-doit server has access
+*   Whether the selected SNMP community (here: `public`) is correct
 
-!!! info "At this point we omit the details on the subject of SNMP and this call. Information about the OID .1.3.6.1.2.1.2.2.1.1 can be found here for example: [http://www.oid-info.com/get/1.3.6.1.2.1.2.2.1](http://www.oid-info.com/get/1.3.6.1.2.1.2.2.1)"
+Now switch to the SNMP category in i-doit. There, i-doit automatically shows the primary IP address and the default community `public`.
 
+For a practical example, use OID `1.3.6.1.2.1.2.2.1.1.14.x` (erroneous packets per interface, where `x` is the interface index). Build a list with it:
 
-In our case the results look like this:
+[![snmp-list](../assets/images/de/automatisierung-und-integration/service-desk/snmp/2-snmp.png)](../assets/images/de/automatisierung-und-integration/service-desk/snmp/2-snmp.png)
 
-iso.3.6.1.2.1.2.2.1.1.1 = INTEGER: 1
+Save the category. On the next visit, i-doit reads the SNMP values in real time and displays them.
 
-iso.3.6.1.2.1.2.2.1.1.2 = INTEGER: 2
+The following table lists useful OIDs to get started:
 
-iso.3.6.1.2.1.2.2.1.1.3 = INTEGER: 3
+| OID URL                                                                                      | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [http://oid-info.com/get/1.3.6.1.2.1.1.1](http://oid-info.com/get/1.3.6.1.2.1.1.1)           | "A textual description of the entity. This value should include the full name and version identification of the system's hardware type, software operating-system, and networking software."                                                                                                                                                                                                                                                                                                                                               |
+| [http://oid-info.com/get/1.3.6.1.2.1.2.2.1.2](http://oid-info.com/get/1.3.6.1.2.1.2.2.1.2)   | "A textual string containing information about the interface. This string should include the name of the manufacturer, the product name and the version of the interface hardware/software."                                                                                                                                                                                                                                                                                                                                               |
+| [http://oid-info.com/get/1.3.6.1.2.1.2.2.1.14](http://oid-info.com/get/1.3.6.1.2.1.2.2.1.14) | "For packet-oriented interfaces, the number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol. For character- oriented or fixed-length interfaces, the number of inbound transmission units that contained errors preventing them  <br>from being deliverable to a higher-layer protocol.  <br>Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime." |
+| [http://oid-info.com/get/1.3.6.1.2.1.1.4](http://oid-info.com/get/1.3.6.1.2.1.1.4)           | "The textual identification of the contact person for  <br>this managed node, together with information on how to contact this person. If no contact information is known, the value is the zero-length string."                                                                                                                                                                                                                                                                                                                           |
+| [http://oid-info.com/get/1.3.6.1.2.1.1.3](http://oid-info.com/get/1.3.6.1.2.1.1.3)           | "The time (in hundredths of a second) since the  <br>network management portion of the system was last re-initialized."                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
-iso.3.6.1.2.1.2.2.1.1.4 = INTEGER: 4
-
-iso.3.6.1.2.1.2.2.1.1.5 = INTEGER: 5
-
-iso.3.6.1.2.1.2.2.1.1.6 = INTEGER: 6
-
-iso.3.6.1.2.1.2.2.1.1.7 = INTEGER: 7
-
-iso.3.6.1.2.1.2.2.1.1.8 = INTEGER: 8
-
-iso.3.6.1.2.1.2.2.1.1.9 = INTEGER: 9
-
-iso.3.6.1.2.1.2.2.1.1.10 = INTEGER: 10
-
-iso.3.6.1.2.1.2.2.1.1.11 = INTEGER: 11
-
-iso.3.6.1.2.1.2.2.1.1.12 = INTEGER: 12
-
-iso.3.6.1.2.1.2.2.1.1.13 = INTEGER: 13
-
-iso.3.6.1.2.1.2.2.1.1.14 = INTEGER: 14
-
-iso.3.6.1.2.1.2.2.1.1.15 = INTEGER: 15
-
-iso.3.6.1.2.1.2.2.1.1.16 = INTEGER: 16
-
-iso.3.6.1.2.1.2.2.1.1.17 = INTEGER: 17
-
-iso.3.6.1.2.1.2.2.1.1.18 = INTEGER: 18
-
-iso.3.6.1.2.1.2.2.1.1.19 = INTEGER: 19
-
-iso.3.6.1.2.1.2.2.1.1.20 = INTEGER: 20
-
-iso.3.6.1.2.1.2.2.1.1.21 = INTEGER: 21
-
-iso.3.6.1.2.1.2.2.1.1.22 = INTEGER: 22
-
-iso.3.6.1.2.1.2.2.1.1.23 = INTEGER: 23
-
-iso.3.6.1.2.1.2.2.1.1.24 = INTEGER: 24
-
-The query was successful and we are dealing with a 24port switch. If timeouts or similar issues arise at this point, you should check the network connectivity to verify whether SNMP is allowed under the firewall rules, the SNMP server is running and whether the i-doit server has access permissions for the SNMP server. Of course also the selected SNMP community (in our example public) has to be available.
-
-Now we switch back to the SNMP category in i-doit. The primary IP address of the switch is automatically shown there and the standard SNMP community public is offered.
-
-Since we are not interested in the interface indices, we will concern ourselves with the OID for the list of faulty packets per interface. This has the OID .1.3.6.1.2.1.2.2.1.1.14.x, where x stands for the index of the respective interface.
-
-With these details we build 24 entries for the corresponding interfaces:  
-
-Afterwards, we save the category.
-
-!!! info "Optional"
-    In the command line example the OIDs are shown with a dot. This is not necessary in the SNMP category and is therefore optional.  
-
-When you click on the category again, the SNMP values are loaded and displayed in realtime. Unfortunately, the test shows that there are packet errors in two interfaces. Therefore we conclude the practical example at this point and begin to search for the reason of the packet errors.
+[![snmp-values](../assets/images/de/automatisierung-und-integration/service-desk/snmp/3-snmp.png)](../assets/images/de/automatisierung-und-integration/service-desk/snmp/3-snmp.png)

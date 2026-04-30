@@ -1,15 +1,13 @@
+---
+title: Automatische Installation
+description: "Der schnellste Weg zu einem lauffähigen i-doit: Ein Script installiert und konfiguriert auf einem frischen Linux-System alles Nötige — Apache, PHP,..."
+icon:
+status:
+lang: de
+---
 # Automatische Installation
 
-Dieser Artikel behandelt die automatische [Installation](index.md) von i-doit. Auf einem frisch installierten GNU/Linux-Betriebssystem werden alle nötigen Konfigurationsschritte durchgeführt und i-doit installiert. Zusätzlich werden Cronjobs, Backups und weitere nützliche CLI-Werkzeuge mitgeliefert. Dazu wird lediglich ein Script ausgeführt.
-
-## Umfang
-
-✔ Software-Pakete installieren<br>
-✔ Software-Pakete konfigurieren<br>
-✔ i-doit installieren<br>
-✔ Cronjobs einrichten<br>
-✔ Backups einrichten<br>
-✔ Restore einrichten
+Der schnellste Weg zu einem lauffähigen i-doit: Ein Script installiert und konfiguriert auf einem frischen Linux-System alles Nötige — Apache, PHP, MariaDB, i-doit selbst sowie Cronjobs und Backups.
 
 ## Voraussetzungen
 

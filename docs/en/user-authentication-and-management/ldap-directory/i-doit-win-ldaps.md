@@ -6,40 +6,37 @@ status:
 lang: en
 ---
 
-## Summary
+!!! warning "Please create a complete backup before making any changes to an interface/import. If the result is not satisfactory, the backup can then be restored"
 
-The article provides a guide for configuring an LDAPS connection with i-doit for Windows using Apache2 HTTPD
+This guide shows you how to set up an encrypted LDAPS connection between i-doit and your Active Directory on Windows with Apache2 HTTPD.
 
-### 1. Export and Copy the Domain Controller Certificate
+## Step 1: Export and Copy Domain Controller Certificate
 
-We describe how to export the certificate [here](ldap-tls.md).
-After creating the certificate, copy it to the `C:\openldap\sysconf\` folder (create if not present).
+Export the certificate as described in the guide [LDAPS Debian Configuration](ldap-tls.md). Then copy the exported certificate to the folder `C:\openldap\sysconf\` (create the folder if it does not exist).
 
-### 2. Create ldap.conf
+## Step 2: Create ldap.conf
 
-Create the file `ldap.conf` in the `C:\openldap\sysconf\` folder.
-Open `ldap.conf` with a text editor and insert the following:
+Create the file `ldap.conf` in the folder `C:\openldap\sysconf\`. Open it with a text editor and add the following content:
 
 ```conf
 # Instruct client to NOT request a server's cert.
 TLS_REQCERT never
-# Define the location of CA Cert
+# Define location of CA Cert
 TLS_CACERTDIR C:\openldap\sysconf\
 ```
 
-### 3. Edit Apache2 HTTPD Configuration
+## Step 3: Edit Apache2 HTTPD Configuration
 
-Open `httpd.conf` under `C:\i-doit\apache-2.4\conf\` with a text editor, and insert the following before the `LoadModule...` block:
+Open `httpd.conf` under `C:\i-doit\apache-2.4\conf\` with a text editor and add the following entry before the `LoadModule...` block:
 
 ```conf
 LoadModule authnz_ldap_module modules/mod_authnz_ldap.so
 ```
 
-Then restart Apache2 HTTPD via the command prompt with: `C:\i-doit\apache-2.4\bin\httpd.exe -k restart`
+Then restart Apache2 HTTPD via the command prompt: `C:\i-doit\apache-2.4\bin\httpd.exe -k restart`
 
-### 4. Create an LDAP Server Entry in i-doit
+## Step 4: Create LDAP Server Entry in i-doit
 
-Now, log in to i-doit and create a new server entry under `Administration -> Import and Interfaces -> LDAP -> Server`.
-Fill in all the necessary fields and set `TLS` to `LDAPS`.
+Log in to i-doit and create a new server entry under **Administration > Import and Interfaces > LDAP > Server**. Fill in all required fields and set **TLS** to **LDAPS**.
 
-[![i-doit Configuration](../../assets/images/en/user-authentication-and-management/ldap-directory/i-doit-win-ldaps/i-doit-conf.png)](../../assets/images/en/user-authentication-and-management/ldap-directory/i-doit-win-ldaps/i-doit-conf.png)
+[![i-doit Configuration](../../assets/images/de/benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/i-doit-win-ldaps/i-doit-conf.png)](../../assets/images/de/benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/i-doit-win-ldaps/i-doit-conf.png)

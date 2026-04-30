@@ -1,120 +1,127 @@
-# Life and Documentation Cycle
+---
+title: Life and documentation cycle
+description: "The life and documentation cycle in i-doit represents the stage an IT component is in -- and the state the documentation itself is in."
+icon:
+status:
+lang: en
+---
+# Life and documentation cycle
 
-IT components come and go. You plan, purchase and operate them and take them out of service eventually. Bingo: This article is about the lifecycle management. It plays an important role in the [IT documentation](../glossary.md), since it can be used to track the state that a component has or should have. Furthermore, it should be possible to archive or delete the [IT documentation](../glossary.md) itself.
+The life and documentation cycle in i-doit represents the stage an IT component is in -- and the state the documentation itself is in.
 
-## Lifecycle of IT Components
+IT components go through a life cycle: they are planned, procured, operated and eventually decommissioned. i-doit makes this cycle traceable. At the same time, you can also archive and delete the documentation itself.
 
-The lifecycle of an IT component is documented in the CMDB status. The following CMD states are available with a fresh i-doit installation:
+## Life cycle of IT components
 
--   **planned**
--   **ordered**
--   **delivered**
--   **assembled**
--   **tested**
--   **in operation (not editable)**
--   **defect**
--   **inoperative (not editable)**
--   **under repair**
--   **delivered from repair**
--   **stored**
--   **scrapped**
+The life cycle of an IT component is documented in the **CMDB status**. With a fresh installation of _i-doit_, the following **CMDB statuses** are available:
+
+-   **Planned**
+-   **Ordered**
+-   **Delivered**
+-   **Assembled**
+-   **Tested**
+-   **In operation (not editable)**
+-   **Defective**
+-   **Out of operation (not editable)**
+-   **In repair**
+-   **Delivered from repair**
+-   **Stored**
+-   **Scrapped**
 -   **i-doit Status (not editable)**
 -   **Template (not editable)**
 
-The **CMDB status** can be displayed as a column in the object lists in order to see the target condition of a documented object as fast as possible.
+The **CMDB status** can be displayed as a column in the object lists to quickly look up the target state of a documented object.
 
-[![CMDB status](../assets/images/en/basics/life-and-documentation-cycle/1-ladc.png)](../assets/images/en/basics/life-and-documentation-cycle/1-ladc.png)
+[![cmdb-status](../assets/images/de/grundlagen/lebens-und-dokumentationszyklus/1-lud.png)](../assets/images/de/grundlagen/lebens-und-dokumentationszyklus/1-lud.png)
 
 !!! success "Planning"
+    By mapping the life cycle, it is possible to use _i-doit_ for planning. Whether a procurement, a major update or a relocation is pending -- the IT documentation is always included and provides valid information.
 
-    By representing the lifecycle it is possible to use _i-doit_ for planning. Whether there is an upcoming big update or a relocation - the IT documentation is always present and offers valid statements.
+### Specifying CMDB status per object
 
-### Set CMDB Status Per Object
+To map the entire life cycle of an object, the [attribute](../glossary.md) **CMDB status** in the [category](../glossary.md) **General** is used per [object](../glossary.md). When a new object is created, it receives **In operation** as its **CMDB status**, unless something else is explicitly specified.
 
-To represent the complete lifecycle of an [object](../glossary.md), the CMDB status [attribute](../glossary.md) in the **General** category is used per [object](../glossary.md). If a new object is created, it receives **in operation** as its **CMDB status**, if not explicitly set to a different state.
+[![cmdb-status-per-object](../assets/images/de/grundlagen/lebens-und-dokumentationszyklus/2-lud.png)](../assets/images/de/grundlagen/lebens-und-dokumentationszyklus/2-lud.png)
 
-[![Set CMDB Status Per Object](../assets/images/en/basics/life-and-documentation-cycle/2-ladc.png)](../assets/images/en/basics/life-and-documentation-cycle/2-ladc.png)
+### Managing CMDB status
 
-### Manage CMDB Status
+Adding, changing or deleting a **CMDB status** is done via **Administration → Predefined content → CMDB status**. The following information is required per **CMDB status**:
 
-The adding, changing or deleting of a **CMDB status** is carried out via **Administration → Predefined content → CMDB status**. For each **CMDB status** the following information is needed:
+-   Unique name or [language constant (for translation)](../administration/multilingual-support.md)
+-   Unique constant (helpful for example when using the [API](../i-doit-add-ons/api/index.md))
+-   Color (used in object lists, the **General** category, in the [**CMDB Explorer**](../evaluation/cmdb-explorer/index.md) and in many other places)
 
--   Unique name/ [language constant (for translation)](../system-administration/localization.md)
--   Unique constant (helpful for using the [API](../i-doit-add-ons/api/index.md), for example)
--   Color (is used in object lists, the **General** category, in the **CMDB-Explorer** and many other cases)
+[![cmdb-status-manage](../assets/images/de/grundlagen/lebens-und-dokumentationszyklus/3-lud.png)](../assets/images/de/grundlagen/lebens-und-dokumentationszyklus/3-lud.png)
 
-[![Manage CMDB Status](../assets/images/en/basics/life-and-documentation-cycle/3-ladc.png)](../assets/images/en/basics/life-and-documentation-cycle/3-ladc.png)
+## Life cycle of IT documentation
 
-## Lifecycle of the IT Documentation
-
-Apart from the objects that are to be documented, the documentation itself can also be subject to a lifecycle. A documentation artifact can be archived once it is not needed anymore. An artifact can also be marked as deleted, so that a person who is responsible for the IT documentation can irrevocably remove this artifact via the **Purge** function.
+In addition to the objects being documented, the documentation itself can be subject to a life cycle. If a documentation artifact is no longer needed, it can be archived. Likewise, an artifact can be marked as deleted so that a person responsible for the IT documentation can irrevocably delete it via **Purge**.
 
 !!! success "Deletion process"
+    For larger environments, it is worthwhile to establish the necessary processes for archiving and deleting documentation artifacts. When should archiving occur? Who may clean up the IT documentation? Such questions should definitely be clarified within the team. To grant only certain users or user groups the right to archive or irrevocably delete, the permission system of _i-doit_ provides the necessary settings.
 
-    It may be worthwhile for bigger environments to establish the required processes for the archiving and deleting of documentation artifacts. At what point shall parts of the documentation be archived? Who may clean up the IT documentation? These kind of questions need to be addressed by the team. The permission system of i-doitvides the required settings to assign the rights to archive or to purge parts of the documentation to specific users.
+### Conditions
 
-### States
+Virtually all documentation artifacts (objects, category entries, values in [**Dialog+** fields](dialog-admin.md) and more) receive a condition:
 
-Almost all documentation artifacts (objects, category entries, values in [**Dialog+**\-fields](./dialog-admin.md) etc.) receive a state:
+-   **Normal**:<br> During regular work (creating, editing), every artifact receives this condition and can be used everywhere.
+-   **Archived**:<br> The artifact is hidden from the IT documentation. Further use, for example links, is no longer possible.
+-   **Deleted**:<br> The artifact is to be irrevocably deleted (**Purge**), but still fully exists with all relationships in the IT documentation. Otherwise, this condition is the same as **Archived**.
 
--   **Normal**: When working normally (create, edit), each artifact receives this state and can be used anywhere.
--   **Archived**: The artifact is hidden in the [IT documentation](../glossary.md). Further use, e.g. linking, is not possible anymore.
--   **Deleted**: The artifact is supposed to be purged but still exists completely with all relations in the IT documentation. Apart from this, the state is similar to **Archived**.
+The cycle provides that every documentation artifact receives the condition **Normal**. Later follows **Archived**, then **Deleted**. A restoration to the previous condition is possible at any time.
 
-The cycle provides that every documentation artifact receives the **Normal** status. Later on, the states will be **Archived** and then **Deleted**. A restoration to the respective previous state is possible at any time.
+In addition to these three conditions, there are special cases for objects:
 
-In addition to these three states there are also special cases concerning objects:
+-   **Incomplete**:<br> If a new object is created but not saved, it receives this condition. This happens, for example, when an object is created but the **Save** button is not clicked. These objects can only be found via a report and then used further. Therefore, they should be regularly deleted. This can be done via **Administration → [Tenant name] Administration → System repair and cleanup → Remove incomplete objects**. Alternatively, this can also happen automatically. More on this further down in this article.
+-   **Template**:<br> An object can serve as a [template](../efficient-documentation/templates.md) for further objects.
+-   **Change template**:<br> An object can serve as a change template for [mass changes](../efficient-documentation/mass-change.md).
 
--   **Unfinished**: This state is assigned to a new object that has been created but not saved. This happens, for example, when a new object is created but the **Save** button is not pressed. These objects can only be found via a report and can then be used. You should remove the unfinished objects on a regular basis via **Administration → [Tenant Name] management → Repair and clean up → Remove unfinished objects**. As an alternative, the unfinished objects can be removed automatically. More details can be found further below.
--   **Template**: An object can be used as a [template](../efficient-documentation/templates.md) for other objects.
--   **Change template**: An object can be used as a change template for [mass changing](../efficient-documentation/mass-change.md).
+If a documentation artifact is to be irrevocably deleted, the **Purge** function follows after marking as **Deleted**. However, this is not a condition, because all data (including the previous condition and any logbook entries) is lost, so it can no longer be traced that this object ever existed. This function should therefore be used with caution.
 
-If you want to delete a documentation artifact irrevocably, mark it as as **Deleted** first and then use the **Purge** function. This, however, is not a state because all data (including the previous state and any logbook entries) will be deleted during the **Purge** process. This means that the object and its existence can't be traced anymore; thus you should use the function with particular caution.
+### Archiving, marking as deleted or irrevocably deleting (purge) objects
 
-### Archive Objects, Mark them as Deleted or Purge them
+You can see the condition of an object in the **General** category. To change the condition of one or more objects:
 
-The state of an object is visible in the **General** category. If you wish to archive an object, mark it as deleted or purge it, you can do so via the [object lists](./object-list/index.md). For this purpose, the checkboxes of the corresponding objects are marked and one of the buttons **Archive**, **Delete** or **Purge** needs to be pressed.
+1. Open the [object list](object-list/index.md).
+2. Check the checkboxes of the desired objects.
+3. Click **Archive**, **Delete** or **Purge**.
 
-It is only possible to change to the next possible state. If an object is in the **Normal** state, it will only be possible to change it to the **Archived** state. You can only delete an object by using the filtered list of archived objects in the right-hand corner. Using **Recycle** changes the object to its previous state.
+[![archive-or-purge-objects](../assets/images/de/grundlagen/lebens-und-dokumentationszyklus/4-lud.png)](../assets/images/de/grundlagen/lebens-und-dokumentationszyklus/4-lud.png)
 
-[![object-status](../assets/images/en/basics/life-and-documentation-cycle/4-ladc.png)](../assets/images/en/basics/life-and-documentation-cycle/4-ladc.png)
+You can only change to the next possible condition. An object with the status **Normal** can only be **archived** from the list. To delete, filter for archived objects in the upper right corner and then change to the **Deleted** condition. With **Restore** you can return to the previous condition at any time.
 
-There is no further query when purging an object except if relations to other objects exist.
+When irrevocably deleting (**Purge**), there is no confirmation prompt -- unless relationships to other objects exist.
 
-### Archive Category Entries, Mark them as Deleted or Purge them
+### Archiving, marking as deleted or irrevocably deleting (purge) category entries
 
-A similar functionality as with the objects exists for some [list categories](../glossary.md) ("Multi-value"). With this function you can archive category entries, mark them as deleted or purge them.
+A similar functionality as for objects exists for some [list categories](../glossary.md) ("multi-value"). Through this, category entries can be archived, marked as deleted and purged.
 
-### Simplified Deleting (Quickpurge)
+### Simplified deletion (Quickpurge)
 
-In order to purge a documentation artifact it first has to be archived and marked as deleted. To shorten this cycle, it is possible to activate the **Quickpurge** button. This is done via **Administration → [Tenant Name] management → Settings for CMDB → CMDB → Activate Quickpurge button**. By this means you can purge an object or category entry regardless of its state.
+Normally you must first archive a documentation artifact and then mark it as deleted before you can irrevocably delete it. To shorten this cycle, activate the **Quickpurge** button under **Administration → [Tenant name] Administration → CMDB → Enable Quickpurge button**. This allows you to immediately and irrevocably delete an object or category entry regardless of the current condition.
 
-### Listing of all Objects that are Archived or Marked as Deleted
+### Listing all archived or deleted objects
 
-In order to receive a list with all objects which are archived or marked as deleted, you can use a report which can be configured via the Query Builder.
+To list all archived or deleted objects, it is best to create a [report](../evaluation/report-manager.md) via the query editor.
 
-### Remove Objects or Category Entries that are Unfinished/ Archived/ Marked as Deleted Collectively (**Purge**)
+### Bulk deletion (purge) of incomplete/archived/deleted objects or category entries
 
-In almost all cases, unfinished objects are unwanted since they are not visible and thus can not be edited. However, also archived objects or objects marked as deleted are often undesired. The same applies to category entries. Therefore it is a good idea to purge these unwanted documentation artifacts. To this end you can use two methods: manual or automatic delection.
+Almost always, incomplete objects are unwanted, because they are not visible and therefore cannot be edited. But archived or deleted objects are also often unwanted. The same applies to category entries. Therefore, it makes sense to permanently delete (**Purge**) these unwanted documentation artifacts. Two methods exist for this: manual or automatic deletion.
 
-#### Manual Deletion
+#### Manual deletion
 
-You can delete the artifacts via the web GUI. The respective function is located at **Administration → [Tenant Name] management → Repair and clean up → Objects** or **Categories**. After using one of the provided buttons, a notification showing the amount of objects/ category entries which you are about to delete, will be displayed. After the deleting process it also shows statistics of the amount of objects/ category entries that have been deleted.
+You delete these artifacts via the Web GUI under **Administration → [Tenant name] Administration → System repair and cleanup → Objects** or **Categories**. After clicking one of the offered buttons, i-doit shows you the number of objects or category entries to be deleted. After deletion, a statistic with the number of deleted entries appears at the bottom of the page.
 
-#### Automated Deletion
+#### Automatic deletion
 
-The [controller](../automation-and-integration/cli/index.md) also offers a possibility to delete undesired objects irrevocably. The corresponding handler is called cleanup_objects. The -t parameter determines the group of objects that are to be deleted based on their states:
+The [i-doit console utility](../automation-and-integration/cli/index.md) also offers you the option to irrevocably delete unwanted objects. Additional options are shown by the `--help` option.
 
--   -t 1: delete unfinished objects
--   -t 3: delete archived objects
--   -t 4: delete objects that are marked as deleted
+```shell
+sudo -u www-data console.php system-objectcleanup -u admin -p admin -i 1 --objectStatus 3
+```
 
-Example for the deletion of unfinished objects:
+The automation consists of regularly executing the call via a cronjob.
 
-    sudo -u www-data console.php system-objectcleanup -u admin -p admin -i 1 --objectStatus 3
+### Condition changes in the logbook
 
-The automation consists of executing the controller on a regular basis via cron job. An example with other important cron jobs can be found in [the article regarding the controller](../automation-and-integration/cli/index.md).
-
-### Change of States in the Logbook
-
-Changes of states are recorded completely in the logbook. Only when an object/ category entry is purged, the associated logbook entries will be permanently deleted.
+Condition changes are fully recorded in the logbook. Only when an object or category entry is irrevocably deleted (**Purge**) are all associated logbook entries also permanently deleted.

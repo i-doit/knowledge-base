@@ -1,6 +1,6 @@
 ---
 title: cmdb.object_type_groups
-description: cmdb.object_type_groups
+description: "Read object type groups."
 icon: material/api
 #status: updated
 lang: de
@@ -104,3 +104,9 @@ You can use any combination of filters. Filters are logically associated with AN
       ]
     }
     ```
+
+## Siehe auch
+
+- [API v1 Methoden](index.md) — Übersicht aller API v1 Methoden
+- [API Add-on](../../index.md) — Einstieg in das API Add-on
+- [i-doit Add-ons](../../../index.md) — Alle verfügbaren Add-ons

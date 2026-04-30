@@ -1,6 +1,6 @@
 ---
 title: Workflow
-description: Workflow
+description: "Mit dem Workflow-System erstellst du einmalige Auftraege und wiederkehrende Checklisten und weist sie verantwortlichen Personen und Objekten zu."
 icon: addons/workflow
 status:
 lang: de
@@ -8,15 +8,15 @@ lang: de
 
 # Workflow
 
-Das workflow-System in i-doit ist ein erweiterbares Modul, welches workflows erzeugt. Somit lassen sich einmalige AUFTRÄGE, aber auch wiederkehrende CHECKLISTEN erstellen und an die verantwortlichen Personen und Objekte zuweisen. Involvierte Personen werden über status basierte Benachrichtigungen informiert.
+Mit dem Workflow-System erstellst du einmalige Aufträge und wiederkehrende Checklisten und weist sie verantwortlichen Personen und Objekten zu. Involvierte Personen werden über statusbasierte Benachrichtigungen informiert.
 
 ## Workflow-Typen
 
-Der WORKFLOW-TYP verhält sich wie eine Schablone und umfasst alle notwendigen Parameter, welche zur Ausführung notwendig sind. Diese Schablone lässt sich über eine Verwaltungsoberfläche bearbeiten. Über diese lassen sich ebenso neue Schablonen anlegen.
+Ein Workflow-Typ ist eine Schablone mit allen notwendigen Parametern. Du bearbeitest bestehende Schablonen oder legst neue über die Verwaltungsoberfläche an.
 
 ## Der Workflow
 
-Ein workflow beschreibt eine terminierte vom Benutzer auszuführende Aktion wie beispielsweise das Austauschen des Band-Mediums eines speziellen Backup-Servers. Jegliche Workflow Zuweisung muss von den entsprechenden Personen akzeptiert werden. Nach erfolgreichem Abschluss kann ein Statusbericht eingereicht werden.
+Ein Workflow beschreibt eine terminierte Aktion -- z. B. das Austauschen des Band-Mediums eines Backup-Servers. Jede Workflow-Zuweisung muss von den zuständigen Personen akzeptiert werden. Nach Abschluss kann ein Statusbericht eingereicht werden.
 
 ## Vordefinierte Workflow-Typen
 
@@ -26,11 +26,11 @@ Ein Arbeitsauftrag ist eine terminierte von wählbaren Benutzern auszuführende 
 
 ### Checkliste
 
-Mit dem speziellen workflow-Typ CHECKLISTEN können täglich, wöchentlich und jährlich wiederkehrende Aufträge generiert werden, indem zu dem reinen Startdatum eine periodische Zeitfolge angegeben und die entsprechende Option der Wiederholung ausgewählt wird. Diese wiederkehrenden workflows lassen sich ebenfalls terminiert beenden.
+Mit Checklisten generierst du täglich, wöchentlich oder jaehrlich wiederkehrende Aufträge. Gib dazu zum Startdatum eine periodische Zeitfolge an und wähle die Wiederholungsoption. Wiederkehrende Workflows lassen sich ebenfalls terminiert beenden.
 
 ## Parameter der Vorlagen
 
-Für die beiden workflow-Typen TASK (Arbeitsauftrag) und CHECKLIST gibt es bereits vorgefertigte Parameter, welche bei Erstellung eines neuen workflows berücksichtigt werden. Die beiden Datumstypen für Start- und Enddatum werden bei jedem neu angelegten workflow-Typen automatisch erstellt. Die anderen Parameter können nach Belieben erstellt und einem neuen Typen zugeordnet werden:
+Für die Workflow-Typen **TASK** (Arbeitsauftrag) und **CHECKLIST** stehen vorgefertigte Parameter bereit. Start- und Enddatum werden automatisch erstellt. Weitere Parameter legst du nach Bedarf an:
 
 *   Text
 *   Einzeiliges Textfeld
@@ -43,7 +43,7 @@ Für die beiden workflow-Typen TASK (Arbeitsauftrag) und CHECKLIST gibt es berei
 *   Ja / Nein
 *   Zwei Radiobuttons zur Auswahl
 
-Die Bezeichnung und der Schlüssel bei einem neuen workflow-Typen kann frei gewählt werden, die Reihenfolge gibt an, in welcher Reihenfolge die Felder untereinander angezeigt werden. Nach leerem Feld überprüfen gibt eine Fehlermeldung aus, wenn das Feld nicht ausgefüllt wurde und versucht wird den workflow zu speichern.
+Bezeichnung und Schlüssel eines neuen Workflow-Typs wählst du frei. Die **Reihenfolge** bestimmt die Anzeigeposition der Felder. **Nach leerem Feld überprüfen** gibt eine Fehlermeldung aus, wenn ein Pflichtfeld beim Speichern leer ist.
 
 ## Workflows im Objekt
 

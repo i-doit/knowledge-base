@@ -1,3 +1,10 @@
+---
+title: OCS Inventory NG
+description: "Mit dem Release von i-doit 1.18.2 haben wir die bislang integrierte OCS Funktionalität aus dem Kern herausgelöst."
+icon:
+status:
+lang: de
+---
 # OCS Inventory NG
 
 !!! info "Hinweis"

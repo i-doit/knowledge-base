@@ -1,3 +1,10 @@
+---
+title: Standorte
+description: "Die Verortung von Hardware & Co."
+icon:
+status:
+lang: de
+---
 # Standorte
 
 Die Verortung von Hardware & Co. ist ein essentieller Bestandteil von i-doit. In diesem Artikel wird erklärt, wie man Standorte dokumentiert und [Objekte](../grundlagen/struktur-it-dokumentation.md) dort platziert.

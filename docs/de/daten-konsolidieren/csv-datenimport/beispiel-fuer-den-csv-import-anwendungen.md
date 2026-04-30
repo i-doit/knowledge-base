@@ -1,15 +1,22 @@
+---
+title: Beispiel Anwendungen
+description: In diesem Beispiel importierst du Anwendungen mit möglichst vielen Detailinformationen per CSV.
+icon:
+status:
+lang: de
+---
 # Beispiel Anwendungen
 
-!!! warning "Bitte erstellen Sie vor jeder Änderung an einer Schnittstelle/Import einen vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist kann dieses dann wiederhergestellt werden"
+!!! warning "Bitte erstelle vor jeder Änderung an einer Schnittstelle/Import ein vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist, kann dieses dann wiederhergestellt werden"
 
-In diesem Beispiel wollen wir Anwendungen importieren. Wir möchten so viele Informationen zu einer Anwendung importieren wie möglich.
+In diesem Beispiel importierst du Anwendungen mit möglichst vielen Detailinformationen per CSV.
 
 !!! note "Dieser Artikel wurde zuletzt für i-doit Version 1.16.2 geprüft"
 
-Für den Import können wir folgende Informationen importieren:
+### Welche Daten kannst du importieren?
 
--   Objekttyp → Um welchen Objekttypen soll es sich Handeln
--   Objekt-Titel → Wie heißt die Anwendung
+-   Objekttyp → Um welchen Objekttypen soll es sich handeln
+-   Objekt-Titel → Wie heisst die Anwendung
 -   Anwendung - Spezifikation → Welche Spezifikation hat die Anwendung?
 -   Anwendung - Hersteller → Wer hat die Anwendung hergestellt?
 -   Anwendung - Installationsart → Wird die Anwendung automatisch oder manuell installiert?
@@ -35,21 +42,28 @@ Beispiel CSV Datei für diesen Import:
     C__OBJTYPE__APPLICATION;Anwendungz;Spezifikation;"Hersteller Delta";Automatisch;"Kein RegKey";"/etc/Anwendungz/";Anwendungz PRO,Anwendungz ENTERPRISE,Anwendungz BUSINESS;Pro,Enterprise,Business;10,11,12;;4.19.37;2,3,4
     ```
 
-Bei diesem Import werden keine Abhängigkeiten vorausgesetzt. Da wir neue Anwendungen erstellen, sowie Daten zu diesen Anwendungen.
+Dieser Import hat keine Abhängigkeiten -- du erstellst neue Anwendungen inklusive aller zugehörigen Daten.
 
-Für den Import begeben wir uns wieder in den CSV Import Bereich. Die Einstellungen im oberen Bereich bleiben auf den Standard Einstellungen und wir klicken auf Mapping vorbereiten.
+### Schritt-fur-Schritt-Anleitung
+
+1. Navigiere zum CSV-Import unter **Extras → Import → CSV Import**
+2. Lade die CSV-Datei hoch und klicke auf **Fur Import verwenden**
+3. Belasse die Einstellungen im oberen Bereich auf den Standardwerten und klicke auf **Mapping vorbereiten**
 
 [![CSV Mapping](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/1-csva.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/1-csva.png)
 
-Jetzt können wir im unteren Bereich die Import Konfiguration wie folgt vornehmen, und danach den Import Vorgang starten:
+4. Konfiguriere im unteren Bereich die Zuweisungen wie im Screenshot gezeigt
+5. Starte den Import
 
 [![CSV Zuweisung](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/2-csva.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/2-csva.png)
 
-Sollten wir alles richtig gemacht haben, erscheinen nun die einzelnen Anwendungen in der Listenansicht.
+### Ergebnis
+
+Nach dem Import findest du die Anwendungen in der Listenansicht:
 
 [![Anwendungs-Objekte](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/3-csva.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/3-csva.png)
 
-Außerdem sind die Kategorien `Anwendungen → Varianten` und `Version` gefüllt.
+Die Kategorien `Anwendungen → Varianten` und `Version` sind ebenfalls gefullt:
 
 [![Anwendungs-Varianten](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/4-csva.png)](../../assets/images/de/daten-konsolidieren/csv-import/csv-anwendungen/4-csva.png)
 

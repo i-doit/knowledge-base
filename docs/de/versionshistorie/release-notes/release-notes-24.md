@@ -1,3 +1,10 @@
+---
+title: Release Notes 24
+description: "We're happy to announce i-doit 24."
+icon:
+status:
+lang: de
+---
 # Release Notes 24
 
 We're happy to announce i-doit 24. As always, we will provide you with bugfixes together with helpful features for a better software experience. We encourage you to [update](../../wartung-und-betrieb/update-einspielen.md) to this release as soon as possible to benefit from all these contents.

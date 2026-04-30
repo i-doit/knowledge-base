@@ -1,3 +1,10 @@
+---
+title: Arbeitsplätze
+description: "In i-doit können IT-Arbeitsplätze dokumentiert werden."
+icon:
+status:
+lang: de
+---
 # Arbeitsplätze
 
 In i-doit können IT-Arbeitsplätze dokumentiert werden. Auf diese Weise hat man jederzeit im Blick, welcher Mitarbeiter über welche IT-Komponenten verfügt und wo sie zu finden sind.

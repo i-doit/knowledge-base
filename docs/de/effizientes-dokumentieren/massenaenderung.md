@@ -1,3 +1,10 @@
+---
+title: Massenänderung
+description: "Die Massenänderung ist eine Funktion in i-doit, mit der auf Basis von Änderungsvorlagen mehrere Objekte in einem Schritt geändert werden können."
+icon:
+status:
+lang: de
+---
 # Massenänderung
 
 Die Massenänderung ist eine Funktion in i-doit, mit der auf Basis von Änderungsvorlagen mehrere [Objekte](../grundlagen/struktur-it-dokumentation.md) in einem Schritt geändert werden können. Bei dieser Änderung übernehmen die ausgewählten Objekte die [Attribute](../grundlagen/struktur-it-dokumentation.md) der Änderungsvorlage.
@@ -7,14 +14,14 @@ Aufruf
 
 Du findest die Massenänderung unter **Extras → CMDB → Massenänderung**. Hier ist es möglich, vorhandene Änderungsvorlagen einzusehen und zu bearbeiten, neue Änderungsvorlagen anzulegen und Objekte gemäß der Vorlagen anzupassen.
 
-[![massenaenderung-finden](../assets/images/de/effizientes-dokumentieren/massenaenderung/1-mae.png)](../assets/images/de/effizientes-dokumentieren/massenaenderung/1-mae.png)
+[![massenänderung-finden](../assets/images/de/effizientes-dokumentieren/massenaenderung/1-mae.png)](../assets/images/de/effizientes-dokumentieren/massenaenderung/1-mae.png)
 
 Erstellen einer Änderungsvorlage
 --------------------------------
 
 Sobald du die Massenänderung aufgerufen hast kannst du unter **Neue Vorlage erstellen**  im Baum-Menü auf der linken Seite eine Änderungsvorlage erstellen. Im ersten Schritt wirst du aufgefordert, festzulegen, welchem [Objekttyp](../grundlagen/struktur-it-dokumentation.md) die Vorlage angehören soll. Wähle diesen im Drop-Down-Menü aus und bestätige mit der Schaltfläche **Neue Vorlage erstellen**. Die nun folgende Konfiguration einer Vorlage ist identisch zur Erstellung eines regulären Objekts. Hinterlege alle Inhalte, die du später auf die Objekte übertragen möchtest und speichere deine Eingaben.
 
-[![massenaenderung-erstellen](../assets/images/de/effizientes-dokumentieren/massenaenderung/2-mae.png)](../assets/images/de/effizientes-dokumentieren/massenaenderung/2-mae.png)
+[![massenänderung-erstellen](../assets/images/de/effizientes-dokumentieren/massenaenderung/2-mae.png)](../assets/images/de/effizientes-dokumentieren/massenaenderung/2-mae.png)
 
 !!! info "Hinweis"
 
@@ -25,7 +32,7 @@ Vorhandene Änderungsvorlagen einsehen, bearbeiten und löschen
 
 In der Massenänderung kannst du dir unter **Vorhandene Vorlagen** im Baum-Menü auf der linken Seite alle bisher erstellten Änderungsvorlagen anzeigen lassen. Um eine der Änderungsvorlagen zu bearbeiten, kannst du diese anklicken. Wenn du die Checkbox einer oder mehrerer Änderungsvorlagen aktivierst, kannst du die ausgewählten Änderungsvorlagen mit der Schaltfläche **Purge** vom System entfernen. Bitte sei dir sicher, dass du die ausgewählten Änderungsvorlagen löschen möchtest, weil gelöschte Änderungsvorlagen nicht wiederhergestellt werden können.
 
-[![massenaenderung-loeschen](../assets/images/de/effizientes-dokumentieren/massenaenderung/3-mae.png)](../assets/images/de/effizientes-dokumentieren/massenaenderung/3-mae.png)
+[![massenänderung-löschen](../assets/images/de/effizientes-dokumentieren/massenaenderung/3-mae.png)](../assets/images/de/effizientes-dokumentieren/massenaenderung/3-mae.png)
 
 Ändern von Objektinformationen mit einer Änderungsvorlage
 ---------------------------------------------------------
@@ -51,4 +58,4 @@ Wenn du die Kategorien unangetastet lässt, werden unter keinen Umständen Inhal
 
 Sobald alle Einstellungen deinen Anforderungen entsprechen kannst du die Änderungen mit der Schaltfläche **Massenänderung durchführen** auf die Objekte übertragen.
 
-[![massenaenderung-durchfuehren](../assets/images/de/effizientes-dokumentieren/massenaenderung/4-mae.png)](../assets/images/de/effizientes-dokumentieren/massenaenderung/4-mae.png)
+[![massenänderung-durchführen](../assets/images/de/effizientes-dokumentieren/massenaenderung/4-mae.png)](../assets/images/de/effizientes-dokumentieren/massenaenderung/4-mae.png)

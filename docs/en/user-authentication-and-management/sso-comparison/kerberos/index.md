@@ -1,49 +1,54 @@
+---
+title: Single Sign On (SSO)
+description: "For automatic login to i-doit within an intranet, Single Sign-On (SSO) is the recommended approach."
+icon:
+status:
+lang: en
+---
 # Single Sign On (SSO)
 
-The authentication via Single Sign On (SSO) is well suited for an automated sign on to i-doit within an intranet.
+!!! warning "Please create a complete backup before making any changes to an interface/import. If the result is not satisfactory, the backup can then be restored"
 
-!!! info "This article was last checked for i-doit version 1.17.2"
+For automatic login to i-doit within an intranet, Single Sign-On (SSO) is the recommended approach. This article describes the setup using the Apache module **auth_kerb**.
 
-!!! info "This tutorial does not work anymore with Debian 11 because the Apache2 module mod_auth_kerb is not available anymore."
+!!! info
+    This article was last verified for i-doit version 1.17.2
 
-    You should use [GSSAPI](../gssapi/index.md) instead.
+!!! info
+    This guide no longer works with Debian 11, as the Apache2 module **mod_auth_kerb** is no longer available there.
+    Use [GSSAPI](../gssapi/index.md) instead.
 
-Requirements and Assumptions
+## Prerequisites
 
-The following conditions are the basis of this article:
+*   i-doit is [installed](../../../installation/manual-installation/setup.md) on GNU/Linux.
+*   An Active Directory (AD) running on Windows Server 2008/2012 is used for authentication.
 
-*   i-doit is [installed](../../../installation/manual-installation/setup.md) on a GNU/Linux system
-*   An [Active Directory (AD)](../../ldap-directory/index.md) on Windows Server 2008/2012 is used for the authentication.
+!!! warning "Case sensitivity"
 
-This article describes how Single Sign On (SSO) is set up in an Apache web server with auth_kerb.
+    Pay close attention to upper and lower case in the configuration.
 
-!!! attention "Case sensitivity"
-    Special attention needs to be paid to upper and lower case letters in the configuration.
+## Configure Active Directory (AD)
 
-Configure Active Directory (AD)
--------------------------------
-
-In AD a user is generated for the SSO access. Example:
+Create a user in the AD for SSO access. Example:
 
 *   Server name of i-doit: **idoit.mydomain.local**
 *   AD domain: **addomain.local**
 *   SSO user: **ssouser**
-*   Password: **password**
+*   Password: **passwort**
 
-A keytab file is generated on an AD domain controller using the admin user with help of the ktpass utilities.
+Generate a keytab file on an AD Domain Controller using the admin user via the ktpass utility:
 
 ```shell
 ktpass -princ HTTP/idoit.mydomain.local@ADDOMAIN.LOCAL -mapuser ssouser@ADDOMAIN.LOCAL -crypto RC4-HMAC-NT -ptype KRB5_NT_PRINCIPAL -pass passwort -out c:\krb5.keytab
 ```
 
-The generated krb5.keytab file is then copied to the _i-doit_ server at /etc/krb5.keytab.
+Copy the generated file `krb5.keytab` to the i-doit server at `/etc/krb5.keytab`.
 
-Afterwards, **Active Directory Users and Computers** is opened (adsiedit.msc). At **View** the **Advanced Features** option is activated. Now the SSO user object is opened. Search for the values **userPrincipalName** and servicePrincipalName in the **Attribute Editor** tab. In both cases **exactly one entry** with the value **HTTP/idoit.mydomain.local** needs to be set.
+Then open **Active Directory Users and Computers** (`adsiedit.msc`). Enable the **Advanced Features** option under **View**. Open the SSO user object and check in the **Attribute Editor** tab the values **userPrincipalname** and **servicePrincipalname** -- both must contain **exactly one entry** with the value `HTTP/idoit.mydomain.local`.
 
-Configure Apache Webserver
---------------------------
+## Configure Apache web server
 
-The module auth_kerb is required for the Apache web server.
+For the Apache web server you need the `auth_kerb` module.
 
 Debian GNU/Linux or Ubuntu Linux:
 
@@ -51,29 +56,31 @@ Debian GNU/Linux or Ubuntu Linux:
 sudo apt install libapache2-mod-auth-kerb
 ```
 
-Suse Linux Enterprise Server (SLES):
+SUSE Linux Enterprise Server (SLES):
 
 ```shell
 sudo zypper in apache2-mod_auth_kerb
 ```
 
-Activate the module:
+Enable the module:
 
 ```shell
 sudo a2enmod auth_kerb
 ```
 
-Now the configuration for Kerberos will be written (replace dc.mydomain.local by the domain controller):
+Create the Kerberos configuration (replace `dc.mydomain.local` with your Domain Controller):
 
-```shell
+```conf
     # cat /etc/krb5.conf
     [libdefaults]
+
     default_realm = ADDOMAIN.LOCAL
 
     [realms]
     ADDOMAIN.LOCAL = {
     admin_server = dc.mydomain.local
     kdc          = dc.mydomain.local
+
     }
 
     [domain_realm]
@@ -82,22 +89,21 @@ Now the configuration for Kerberos will be written (replace dc.mydomain.local by
     mydomain.local = ADDOMAIN.LOCAL
 ```
 
-Execute the following command to test the configuration:
+Test the configuration with the following command:
 
 ```shell
 kinit ssouser@ADDOMAIN.LOCAL
 ```
 
-The password of the SSO user is requested. With the command
+You will be asked for the SSO user's password. Check with `klist` whether a valid ticket exists:
 
 ```shell
 klist
 ```
-you can check whether or not a valid ticket exists.
 
-Subsequently, the Apache configuration for the VHost at which _i-doit_ is accessible is supplemented within the Directory directive:
+Then add the Apache configuration for the VHost under which i-doit is accessible, within the Directory directive:
 
-```shell
+```conf
     <Directory "/path/to/i-doit/">
         AuthType Kerberos
         KrbAuthRealms ADDOMAIN.LOCAL
@@ -109,40 +115,35 @@ Subsequently, the Apache configuration for the VHost at which _i-doit_ is access
     </Directory>
 ```
 
-In order to apply the changes the Apache web server needs to be restarted:
-
-### Debian GNU/Linux or Ubuntu or Suse Linux Enterprise Server (SLES):
+Restart the Apache web server for the changes to take effect:
 
 ```shell
 sudo systemctl restart apache2.service
 ```
 
-Configure i-doit
-----------------
+## Configure i-doit
 
-From version 1.5 on SSO can be configured via the web GUI of i-doit. The corresponding settings can be found at **Administration → System settings**. There **SSO** needs to be activated.
+You can find the SSO setting in the Admin Center under **System settings > Single Sign on**. Enable **SSO** there.
 
-Browser Client-side Configuration
----------------------------------
+## Configure browser on the client side
 
-Lastly, each browser needs to be configured to automatically use SSO.
+For SSO to be used automatically, each browser must be configured accordingly.
 
 ### Microsoft Internet Explorer (IE)
 
-The _i-doit_ server needs to be added to the local intranet sites in the IE settings. After this, the item **Automatic logon with current username and password** has to be enabled under **User Authentication** within the **Custom level** option. Furthermore, make sure that you activate the option **Integrated Windowa authentication** in the **Advanced** tab of the **Internet options**.
+Add the i-doit server to the local intranet sites in the IE settings. Under **Custom Level > User Authentication**, enable the option **Automatic logon with current username and password**. Also ensure that under **Advanced > Internet Options** the checkbox **Integrated Windows Authentication** is set.
 
 ### Mozilla Firefox and Google Chrome
 
-SSO is also possible for these browsers. Extensive information about the configuration can be found on the internet. You can find an example for Firefox [here](https://superuser.com/questions/664656/how-to-configure-firefox-for-ntlm-sso-single-sign-on).
+SSO is also possible for these browsers. Details on the configuration can be found widely on the internet; for Firefox, for example, [here](https://superuser.com/questions/664656/how-to-configure-firefox-for-ntlm-sso-single-sign-on).
 
-Troubleshooting
----------------
+## Troubleshooting
 
-Should you have problems regarding the authentication the following questions and hints may be of help:
+If problems occur during authentication, check the following points:
 
-*   Compare the time settings in Linux and Windows DC. Are they the same?
-*   In most cases the server is only accessible via the full FQDN i-doit.mydomain.local.
-*   Does the _i-doit_ server have access to the domain controller? Is there a firewall between these two?
+*   Compare time settings on Linux and Windows DC: Are they the same?
+*   The server is in most cases only reachable via the full FQDN idoit.mydomain.local
+*   Does the _i-doit_ server have access to the Domain Controller? Is there a firewall in between?
 *   Is the SSO domain user unlocked?
-*   Can the DC be resolved per DNS from the _i-doit_ server?
-*   Does the web server have read permission for the krb5.keytab file?
+*   Can the DC be resolved via DNS from the _i-doit_ server?
+*   Does the web server have read permissions on the file krb5.keytab?

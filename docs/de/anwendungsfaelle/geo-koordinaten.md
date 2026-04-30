@@ -1,3 +1,10 @@
+---
+title: "Geo-Koordinaten"
+description: "Jedes Objekt in i-doit lässt sich mit geografischen Koordinaten in Form von Breiten- und Längengrad versehen."
+icon:
+status:
+lang: de
+---
 # Geo-Koordinaten
 
 Jedes [Objekt](../grundlagen/struktur-it-dokumentation.md) in i-doit lässt sich mit geografischen Koordinaten in Form von Breiten- und Längengrad versehen.

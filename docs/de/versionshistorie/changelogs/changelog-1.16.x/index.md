@@ -1,3 +1,10 @@
+---
+title: Changelog 1.16.X
+description: "*   Changelog 1.16.3"
+icon:
+status:
+lang: de
+---
 # Changelog 1.16.X
 
 *   [Changelog 1.16.3](changelog-1.16.3.md)

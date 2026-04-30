@@ -1,3 +1,10 @@
+---
+title: Changelog ältere Versionen
+description: "*   Changelog 1.4"
+icon:
+status:
+lang: de
+---
 # Changelog ältere Versionen
 
 *   [Changelog 1.4](changelog-1.4.md)

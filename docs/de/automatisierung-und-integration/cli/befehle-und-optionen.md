@@ -1,13 +1,13 @@
 ---
 title: Befehle und Optionen
-description: Befehle und Optionen
+description: "Aktiviert installierte Add-ons für den gewünschten Mandanten"
 icon: material/console
 lang: de
 ---
 
 # Befehle und Optionen
 
-!!! warning "Bitte erstellen Sie vor jeder Änderung an einer Schnittstelle/Import einen vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist kann dieses dann wiederhergestellt werden"
+!!! warning "Bitte erstelle vor jeder Änderung an einer Schnittstelle/Import ein vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist, kann dieses dann wiederhergestellt werden"
 
 !!! attention "Hinweise"
     Sämtliche Beispiele auf dieser Seite beziehen sich auf die Verwendung des i-doit Benutzers mit der Kombination Benutzername/Passwort: **admin**/**admin**.<br>
@@ -55,7 +55,7 @@ lang: de
 | [report-refresher](#report-refresher)                                     | Aktualisiert einen oder alle Berichte.                                                                                                                                     |
 | [search](#search)                                                         | In i-doit suchen                                                                                                                                                           |
 | [search-index](#search-index)                                             | Suchindex erstellen/erneuern                                                                                                                                               |
-| [strip-description-html](#strip-description-html)                         | Mit diesem Befehl können Sie html-Tags im Beschreibungsfeld aller Kategorien und Objekte entfernen                                                                         |
+| [strip-description-html](#strip-description-html)                         | Mit diesem Befehl kannst du HTML-Tags im Beschreibungsfeld aller Kategorien und Objekte entfernen                                                                         |
 | [sync-dynamic-groups](#sync-dynamic-groups)                               | Synchronisiert dynamische Gruppenmitglieder neu                                                                                                                            |
 | [system-autoincrement](#system-autoincrement)                             | auto_increment von MariaDB-/MySQL-Tabellen auf einen positiven Integer-Wert setzen (Betrifft die Datenstruktur! Mit Vorsicht zu nutzen!)                                   |
 | [system-categorycleanup](#system-categorycleanup)                         | Bereinigt optional Kategorieeinträge, die sich im Status unfertig, archiviert oder gelöscht befinden                                                                       |
@@ -574,7 +574,7 @@ sudo -u www-data php console.php import-xml --user admin --password admin --tena
 
 ### install
 
-Installieren Sie die i-doit Anwendung
+Installiere die i-doit Anwendung
 
 **Optionen:**
 
@@ -934,7 +934,7 @@ Verschickt die auf der i-doit Oberfläche konfigurierten Benachrichtigungen
 | Parameter (Kurzform) | Parameter (Langform)                            | Beschreibung                                                                                     |
 | -------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 |                      | --notification-ids=[NOTIFICATION-IDS ]          | Übergabe bestimmter zu sendender Benachrichtigungs-IDs 1,2,3                                     |
-|                      | --notification-type-ids=[NOTIFICATION-TYPE-IDS] | Übergeben Sie spezifische IDs für die zu sendenden Benachrichtigungen 1,2,3                      |
+|                      | --notification-type-ids=[NOTIFICATION-TYPE-IDS] | Übergib spezifische IDs für die zu sendenden Benachrichtigungen 1,2,3                      |
 | -u                   | --user=[USERNAME]                               | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
 | -p                   | --password=[PASSWORD]                           | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
 | -i                   | --tenantId=[TENANT-ID]                          | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
@@ -1063,7 +1063,7 @@ sudo -u www-data php console.php search-index --user admin --password admin --te
 
 ### strip-description-html
 
-Mit diesem Befehl können Sie html-Tags im Beschreibungsfeld aller Kategorien und Objekte entfernen
+Mit diesem Befehl kannst du HTML-Tags im Beschreibungsfeld aller Kategorien und Objekte entfernen
 
 **Optionen:**
 
@@ -1619,7 +1619,7 @@ sudo -u www-data php console.php idoit:set-update-capability enable --user admin
 
 ### system:tenant-export
 
-Exportieren Sie Ihre Mandantendaten inklusive hochgeladener Dateien in einem ZIP-Paket.
+Exportiere deine Mandantendaten inklusive hochgeladener Dateien in einem ZIP-Paket.
 
 **Optionen**
 
@@ -1643,7 +1643,7 @@ sudo -u www-data php console.php system:tenant-export --user admin --password ad
 
 ### system:tenant-import
 
-Importieren Sie Ihre Mandantendaten inklusive hochgeladener Dateien aus einem ZIP-Paket.
+Importiere deine Mandantendaten inklusive hochgeladener Dateien aus einem ZIP-Paket.
 
 **Optionen**
 

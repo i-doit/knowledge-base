@@ -6,57 +6,70 @@ status:
 lang: en
 ---
 
-Via the **Floorplan** [add-on](./index.md) it is possible for you to assign graphical plans to all [objects](../basics/structure-of-the-it-documentation.md) which are location objects, to match them with measurements and to position the locally assigned objects in this plan.
+You can find practical examples on our [Blog](https://www.i-doit.com/blog/floorplan-add-on-1-5-der-new-grundriss-editor/).
 
-[![Floorplan](../assets/images/en/i-doit-add-ons/floorplan/1-fp.png)](../assets/images/en/i-doit-add-ons/floorplan/1-fp.png)
+With the [add-on](./index.md) **Floorplan**, you assign graphical plans to location [objects](../basics/it-documentation-structure.md), add a scale to them, and position the spatially assigned objects within them.
 
-This add-on is [installed via the admin center](./index.md). Afterwards you will find it at **Add-ons → Floorplan**.
+[![Floorplan](../assets/images/de/i-doit-add-ons/floorplan/1-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/1-fp.png)
 
-[![Access](../assets/images/en/i-doit-add-ons/floorplan/2-fp.png)](../assets/images/en/i-doit-add-ons/floorplan/2-fp.png)
+The add-on is installed via the [Admin Center](./index.md). Afterwards, it can be accessed under **Add-ons → Floorplan**.
 
-## Rights assignment
+[![Installed](../assets/images/de/i-doit-add-ons/floorplan/2-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/2-fp.png)
 
-Under **Administration → User permissions → Floorplan**, rights for persons and groups of persons can be adjusted.
+## Assigning rights
 
-[![Rights assignment](../assets/images/en/i-doit-add-ons/floorplan/3-fp.png)](../assets/images/en/i-doit-add-ons/floorplan/3-fp.png)
+Under **Administration → Permissions → Floorplan**, [permissions for persons and person groups](../efficient-documentation/permission-management/index.md) can be adjusted.
 
-## Create a Floorplan
+[![Assigning rights](../assets/images/de/i-doit-add-ons/floorplan/3-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/3-fp.png)
 
-[![formats](../assets/images/en/i-doit-add-ons/floorplan/4-fp.png)](../assets/images/en/i-doit-add-ons/floorplan/4-fp.png)
+## Creating a floorplan
 
-To create a room plan, click on the **Plus** symbol next to the respective location object in the location view and then save the floorplan. After click on **Edit** the **Change background image** button can be used to place graphics such as the floorplan of a room in the background of the floorplan. A Layout can be created and saved using the **Layout-Editor**. A scale can be added to this graphic using the **Set scale** button. The dimensioning of the room helps with the subsequent positioning of objects so that they can be displayed to scale according to their defined form factor. The following graphic formats are supported for the floorplan: `bmp`, `png`, `jpg`, `jpeg`, `gif`. The maximum file size is limited to **5 MB**. It is also possible to create different **layers** and show or hide them.
+[![Creating a floorplan](../assets/images/de/i-doit-add-ons/floorplan/4-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/4-fp.png)
 
-## Assign and Place Objects
+To create a floorplan:
 
-The location list can be used to display all spatially assigned objects:
+1. In the location view, click the **Plus** icon next to the desired location object and save the floorplan.
+2. Click **Edit** to modify the plan.
+3. Via **Change background**, you place a graphic (e.g., a floor layout) in the background. Alternatively, you can create a layout directly in the **Layout editor**.
+4. With **Set scale**, you add a scale to the graphic. This way, objects are later displayed to scale according to their form factor.
 
-[![Assign Objects](../assets/images/en/i-doit-add-ons/floorplan/9-fp.png)](../assets/images/en/i-doit-add-ons/floorplan/9-fp.png)
+Supported graphic formats: `bmp`, `png`, `jpg`, `jpeg`, `gif` (max. **5 MB**). You can also create different **layers** and show or hide them.
 
-All objects can be placed on the room plan using the green **Plus** symbol, which is displayed as soon as the mouse is moved over the row. It is possible to place all assigned objects directly by clicking on the corresponding button in the room row.
+## Assigning and placing objects
 
-Once the objects are on the plan, you can select them by clicking on them and then move them. Don't forget to click on **Edit** first.
+Via the location list, you display all spatially assigned objects:
 
-## Adjust and Form Objects on the Floorplan
+[![Assigned objects](../assets/images/de/i-doit-add-ons/floorplan/9-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/9-fp.png)
 
-In the left area you will find the option to further adjust and form objects. As soon as an object is selected it can be edited:
+To place objects on the floorplan:
 
-[![Change position](../assets/images/en/i-doit-add-ons/floorplan/15-fp.svg)](../assets/images/en/i-doit-add-ons/floorplan/15-fp.svg) **Choose / create objectform**: The form of the object can be adjusted as desired. Custom forms can be saved.
+1. Hover over an object in the list -- the green **Plus** icon appears.
+2. Click the **Plus** icon to place the object. Alternatively, place all assigned objects at once using the button in the room row.
+3. Click **Edit** to select and move already placed objects by clicking.
 
-[![Center](../assets/images/en/i-doit-add-ons/floorplan/16-fp.svg)](../assets/images/en/i-doit-add-ons/floorplan/16-fp.svg) **Center on object**: The selected object is centered in the middle of the screen.
+## Customizing and shaping objects on the floorplan
 
-[![Rotate](../assets/images/en/i-doit-add-ons/floorplan/17-fp.svg)](../assets/images/en/i-doit-add-ons/floorplan/17-fp.svg) **Rotate**: The object can be rotated in any desired way.
+In the left area, you customize selected objects. Select an object to use the following options:
 
-[![Unposition object](../assets/images/en/i-doit-add-ons/floorplan/18-fp.svg)](../assets/images/en/i-doit-add-ons/floorplan/18-fp.svg) **Unposition object**: The object disappears from the floorplan but can be added again using the object list.
+**Orientation**: Define the orientation (top, bottom, right, left). A triangle points in the chosen direction.
 
-[![radius](../assets/images/en/i-doit-add-ons/floorplan/19-fp.png)](../assets/images/en/i-doit-add-ons/floorplan/19-fp.png) This button opens a pop-up where you can define the object radius. The radius can be colored, displayed transparently and configured in various units of measurement.
+[![Change position](../assets/images/de/i-doit-add-ons/floorplan/15-fp.svg)](../assets/images/de/i-doit-add-ons/floorplan/15-fp.svg) **Select and create object shape**: The shape of the object can be customized freely. Custom shapes can be saved.
 
-[![Form factor](../assets/images/en/i-doit-add-ons/floorplan/20-fp.png)](../assets/images/en/i-doit-add-ons/floorplan/20-fp.png) The objects data from the **Form factor** [category](../basics/structure-of-the-it-documentation.md) are applied via this button. The object will be scaled and displayed accordingly to the set scale of the floorplan.
+[![Center](../assets/images/de/i-doit-add-ons/floorplan/16-fp.svg)](../assets/images/de/i-doit-add-ons/floorplan/16-fp.svg)**Center on object**: The selected object is centered in the middle of the screen.
 
-[![selection list](../assets/images/en/i-doit-add-ons/floorplan/21-fp.png)](../assets/images/en/i-doit-add-ons/floorplan/21-fp.png) Certain object types can be shown or hidden within the floorplan using this selection list in the lower area.
+[![Rotate](../assets/images/de/i-doit-add-ons/floorplan/17-fp.svg)](../assets/images/de/i-doit-add-ons/floorplan/17-fp.svg) **Rotate object**: The object can be rotated freely.
 
-[![The selected](../assets/images/en/i-doit-add-ons/floorplan/22-fp.png)](../assets/images/en/i-doit-add-ons/floorplan/22-fp.png) The selected object within the floorplan will be opened in a new tab inside the browser when you click this button.
+[![Unposition object](../assets/images/de/i-doit-add-ons/floorplan/18-fp.svg)](../assets/images/de/i-doit-add-ons/floorplan/18-fp.svg) **Remove positioning**: The object disappears from the floorplan but can be added again via the object list.
 
-When the object is selected in edit mode, it is highlighted with a flashing outline and further options for changing the shape and free rotation are available. The labeling can also be rotated.
+[![radius](../assets/images/de/i-doit-add-ons/floorplan/19-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/19-fp.png) **Define object radius**: Opens a popup to color the radius, display it transparently, and configure it in different units of measurement.
+
+[![icon](../assets/images/de/i-doit-add-ons/floorplan/20-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/20-fp.png) **Apply form factor**: Adopts the data from the [category](../basics/it-documentation-structure.md) **Form factor** and scales the object to scale.
+
+[![icon](../assets/images/de/i-doit-add-ons/floorplan/21-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/21-fp.png) **Filter object types**: Show or hide specific object types in the floorplan.
+
+[![icon](../assets/images/de/i-doit-add-ons/floorplan/22-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/22-fp.png) **Open object**: Opens the selected object in a new browser tab.
+
+In edit mode, a selected object is highlighted by a blinking outline. Additionally, options for changing the shape, free rotation, and rotating the label are available.
 
 [![edit Floorplan](../assets/images/en/i-doit-add-ons/floorplan/23-fp.gif)](../assets/images/en/i-doit-add-ons/floorplan/23-fp.gif)
 
@@ -81,83 +94,85 @@ There are three visual states for objects within a room plan. You can change the
 
 Layers can be renamed by hovering over the current layer and using the Edit button, or you can remove the layer using the Delete button.
 
-## Merging multiple Floorplan
+## Merging floorplans
 
-It should be possible to add a floorplan to a floorplan - let's think of a floor that contains several rooms. In this "floor" floorplan we want to position the "room" floorplan.
-We need to set some basic rules here - for example, we show only three levels of floorplan, that is:
+You can nest floorplans within each other -- e.g., a floor containing multiple rooms. The following rules apply: A maximum of three levels of layouts are displayed.
 
 ```text
 Base floorplan:
 -   obj A
 -   obj B
--   floorplan A:
+-   Floorplan A:
     -   obj C
     -   obj D
--   floorplan B:
+-   Floorplan B:
     -   obj E
     -   obj F
-    -   floorplan C (display as a empty block without its positioned objects)
+    -   Floorplan C (displayed as empty block without its positioned objects)
         -   obj G
         -   obj H
 ```
 
-Let us imagine we are currently viewing "main floorplan". We should be able to see the nested "floorplan A" and inside of that we should be able to see "floorplan B" (including "obj E" and "obj F"). But "floorplan C" will not be displayed as floorplan - instead it will look like a basic object, because we limit the nested floorplan to three levels (to prevent recursion, memory and performance issues).
+In the "Base" floorplan, you see the nested "Floorplan A", and within it "Floorplan B" (including "obj E" and "obj F"). "Floorplan C", however, is only displayed as a simple object -- nesting is liwithed to three levels to avoid recursion and performance issues.
 
 ### How it works
 
-If you are viewing "main floorplan" you can move "floorplan A" and "floorplan B" like the other objects ("obj A" and "obj B") - you can not edit anything inside this imported
+In the "Base" floorplan, you move "Floorplan A" and "Floorplan B" like other objects -- however, you cannot edit the content of the nested floorplans here.
 
 ### When can a nested floorplan be displayed?
 
-In order to display "floorplan A" as floorplan inside "main floorplan" it has to fulfill one of these conditions:
+For "Floorplan A" to appear as a floorplan within the "Base" floorplan, it must meet one of the following conditions:
 
--   Have a background image
--   Have a layout
+-   have a background image
+-   have a layout
 
-If one of these conditions is met, you will see the following icon, when editing a floorplan object (inside another floorplan): [![icon](../assets/images/en/i-doit-add-ons/floorplan/add-on-icon.svg)](../assets/images/en/i-doit-add-ons/floorplan/add-on-icon.svg)
+If a condition is met, the floorplan icon appears when editing: [![icon](../assets/images/de/i-doit-add-ons/floorplan/add-on-icon.svg)](../assets/images/de/i-doit-add-ons/floorplan/add-on-icon.svg)
 
-The floorplan should be scaled to the previous object size, the layout / background image will be used to determine the scale.
+The floorplan is scaled to the previous object size. The layout or background image determines the scale.
 
-## Floorplan Profiles
+## Floorplan profiles
 
-[![Floorplan Profiles](../assets/images/en/i-doit-add-ons/floorplan/24-fp.png)](../assets/images/en/i-doit-add-ons/floorplan/24-fp.png)
+[![Profile](../assets/images/de/i-doit-add-ons/floorplan/24-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/24-fp.png)
 
-Profiles can be created so that only certain objects or attributes of the objects are displayed. A profile is supplied with the program. Of course, you can also create your own profiles.
+With profiles, you control which objects and attributes are displayed in the floorplan. A default profile is included.
 
-[![profiles](../assets/images/en/i-doit-add-ons/floorplan/25-fp.png)](../assets/images/en/i-doit-add-ons/floorplan/25-fp.png)
+[![Profile](../assets/images/de/i-doit-add-ons/floorplan/25-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/25-fp.png)
 
-To create a new profile, click on the **Create a new profile** button. It is also possible to duplicate a profile.
-After clicking on **Create new profile** we get to the editing view. Here we first assign the name of the profile. Then we can choose whether **Open object view when clicking on object** should be activated and whether **Double-click on object to open in new tab** should be activated.
+To create a new profile:
+
+1. Click **Create new profile** (or duplicate an existing one).
+2. Enter a **name**.
+3. Specify whether **Clicking on object opens object view** and **Double-clicking on object opens it in a new tab** should be enabled.
 
 ### Visualization options
 
-[![Highlight color](../assets/images/en/i-doit-add-ons/floorplan/27-fp.png)](../assets/images/en/i-doit-add-ons/floorplan/27-fp.png)
+[![Visualization options](../assets/images/de/i-doit-add-ons/floorplan/27-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/27-fp.png)
 
-**Highlight color**: Here you can click to select a color that outlines the object when it is clicked.
+**Highlight color**: Here you select a color by clicking that outlines the object when it is clicked.
 
-**Show object radius**: This defines whether the object radius is displayed by default.
+**Display object radius**: Here you specify whether the object radius is displayed by default.
 
 ### Default values
 
-[![filter](../assets/images/en/i-doit-add-ons/floorplan/29-fp.png)](../assets/images/en/i-doit-add-ons/floorplan/29-fp.png)
+[![Filter](../assets/images/de/i-doit-add-ons/floorplan/29-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/29-fp.png)
 
-## Object Information
+### Object information
 
-[![attributes](../assets/images/en/i-doit-add-ons/floorplan/30-fp.png)](../assets/images/en/i-doit-add-ons/floorplan/30-fp.png)
+[![Attributes](../assets/images/de/i-doit-add-ons/floorplan/30-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/30-fp.png)
 
-This object information is then displayed in the object view under object information.
+This object information is displayed in the object view under **Object information**.
 
-[![object information](../assets/images/en/i-doit-add-ons/floorplan/31-fp.png)](../assets/images/en/i-doit-add-ons/floorplan/31-fp.png)
+[![Object information](../assets/images/de/i-doit-add-ons/floorplan/31-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/31-fp.png)
 
 ### Settings
 
-Under Settings, you can define the profile globally or for specific users as the default.
+Under **Settings**, you can define the profile as default globally or for specific users.
 
-[![defaults](../assets/images/en/i-doit-add-ons/floorplan/32-fp.png)](../assets/images/en/i-doit-add-ons/floorplan/32-fp.png)
+[![Settings](../assets/images/de/i-doit-add-ons/floorplan/32-fp.png)](../assets/images/de/i-doit-add-ons/floorplan/32-fp.png)
 
 ## Export
 
-A Floorplan can be exported as SVG or PNG file using the [![Export](../assets/images/en/i-doit-add-ons/floorplan/33-fp.svg)](../assets/images/en/i-doit-add-ons/floorplan/33-fp.svg) button.
+Floorplans can be exported as SVG or PNG files via the [![Export](../assets/images/de/i-doit-add-ons/floorplan/33-fp.svg)](../assets/images/de/i-doit-add-ons/floorplan/33-fp.svg) button.
 
 ## Releases
 <!-- cSpell:disable -->

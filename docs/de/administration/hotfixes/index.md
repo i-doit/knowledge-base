@@ -9,16 +9,15 @@ lang: de
 
 !!! success "Hotfixes für Version **38**"
 
-Ein Hotfix beseitigt einen bestimmten Fehler und werden in der Regel als ZIP-Datei zur Verfügung gestellt. Die ZIP-Datei wird im **Installationsverzeichnis** von i-doit entpackt. Die Abfrage, ob Dateien beim Entpacken überschrieben werden sollen, muss bestätigt werden.
+Ein Hotfix beseitigt einen bestimmten Fehler und wird als ZIP-Datei bereitgestellt. Du entpackst die ZIP-Datei im **Installationsverzeichnis** von i-doit und bestätigst das Überschreiben vorhandener Dateien.
 
-Falls ein Hotfix zur Ausführung des Updates einer älteren Version notwendig ist, ist dieser im [Hotfix Archiv](hotfix-archiv/index.md) zu finden.
+Hotfixes für ältere Versionen findest du im [Hotfix Archiv](hotfix-archiv/index.md).
 
-Da es sich hierbei um Hotfixes handelt, empfehlen wir, diese nur einzuspielen, wenn diese für den sauberen Betrieb Ihrer Installation notwendig sind oder Sie durch den Support zur Verwendung aufgefordert werden. Bitte stellen Sie sicher, dass vor der Verwendung dieser Hotfixes ein [Backup von i-doit](../../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) erstellt wurde.
-
-Sollten Sie nach der Verwendung der Hotfixes mit dem Support in Kontakt treten, ergänzen Sie bitte den Hinweis auf dessen Verwendung.
+!!! tip "Empfehlung"
+    Spiele Hotfixes nur ein, wenn sie für den sauberen Betrieb deiner Installation notwendig sind oder der Support dich dazu auffordert. Erstelle vorher immer ein [Backup von i-doit](../../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md). Wenn du nach der Verwendung eines Hotfixes den Support kontaktierst, weise bitte darauf hin.
 
 !!! warning "**Einverständniserklärung**"
-    Mit dem Herunterladen eines Hotfixes erklären Sie, dass Sie die oben genannten Hinweise vollständig gelesen und verstanden haben.
+    Mit dem Herunterladen eines Hotfixes erklärst du, dass du die oben genannten Hinweise vollständig gelesen und verstanden hast.
 
 ## Anwendung bei GNU/Linux
 

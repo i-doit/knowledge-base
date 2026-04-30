@@ -1,3 +1,10 @@
+---
+title: Release Notes 33
+description: "We are happy to announce the release of i-doit 33."
+icon:
+status:
+lang: de
+---
 # Release Notes 33
 
 We are happy to announce the release of i-doit 33. First of all, you may have already noticed, we have decreased the frequency of our releases again on a common request. This will help you to catch up with our latest version without the need to perform an update every month. Within this release, you will find a lot of security and quality changes which are listed in detail in our [changelog](../changelogs/changelog-33.md). These changes are accompanied by new core features and a brand new Add-on "Flows" which you will learn about more in the corresponding section of these release notes. Along with this, we also made compatibility adjustments which allows the usage of PHP 8.3 so we are prepared for improving technically even further in the future.

@@ -1,40 +1,49 @@
-# Informationen aus i-doit und checkmk lesen
+---
+title: "Informationen aus i-doit und Checkmk lesen"
+description: "Die folgenden Befehle geben dir einen schnellen Überblick über deine i-doit- und Checkmk-Konfiguration."
+icon:
+status:
+lang: de
+---
+# Informationen aus i-doit und Checkmk lesen
 
-Die folgenden Befehle geben Ihnen einen schnellen Überblick über Ihre i-doit- und checkmk Konfiguration. Sie sind sehr nützlich für Debugging- und Testzwecke, ohne Ihre Daten zu verändern.
+Die folgenden Befehle geben dir einen schnellen Überblick über deine i-doit- und Checkmk-Konfiguration. Sie sind sehr nuetzlich für Debugging- und Testzwecke, ohne deine Daten zu verändern.
+
+[![Checkmk](../../assets/images/de/i-doit-add-ons/checkmk2/checkmk-hauptseite.png)](../../assets/images/de/i-doit-add-ons/checkmk2/checkmk-hauptseite.png)
 
 ## i-doit Objekte
 
-Auflisten der i-doit Objekte mit dem Befehl fetch-objects:
+Liste die i-doit-Objekte mit dem Befehl fetch-objects auf:
 
 ```shell
 idoitcmk fetch-objects
 ```
 
-Holt alle verfügbaren Informationen über i-doit-Objekte:
+Hole alle verfügbaren Informationen über i-doit-Objekte:
 
 ```shell
 idoitcmk fetch-objects -v
 ```
 
-Geben Sie --help für Kommandozeilenoptionen ein, um diese Objekte zu filtern.
+Gib --help für Kommandozeilenoptionen ein, um diese Objekte zu filtern.
 
 ## Checkmk-Hosts
 
-Auflisten der checkmk Hosts mit dem Befehl fetch-hosts:
+Liste die Checkmk-Hosts mit dem Befehl fetch-hosts auf:
 
 ```shell
 idoitcmk fetch-hosts
 ```
 
-Holt alle verfügbaren Informationen über checkmk Hosts:
+Hole alle verfügbaren Informationen über Checkmk-Hosts:
 
 ```shell
 idoitcmk fetch-hosts -v
 ```
 
-Geben Sie --help für Kommandozeilenoptionen ein, um diese Hosts zu filtern.
+Gib --help für Kommandozeilenoptionen ein, um diese Hosts zu filtern.
 
-Holt alle Hosts, aber ohne "effektive" Attribute, die von Regelsätzen, Ordnern, etc. geerbt werden:
+Hole alle Hosts, aber ohne "effektive" Attribute, die von Regelsätzen, Ordnern usw. geerbt werden:
 
 ```shell
 idoitcmk fetch-hosts -v -s check_mk.webAPI.effectiveAttributes=false
@@ -42,4 +51,4 @@ idoitcmk fetch-hosts -v -s check_mk.webAPI.effectiveAttributes=false
 
 ## Objekte und Hosts vergleichen
 
-Der Befehl [match](./abgleich-von-objekten-aus-i-doit-mit-hosts-aus-checkmk.md) vergleicht Objekte aus i-doit mit Hosts aus checkmk und gibt detaillierte Berichte aus.
+Der Befehl [match](./abgleich-von-objekten-aus-i-doit-mit-hosts-aus-checkmk.md) vergleicht Objekte aus i-doit mit Hosts aus Checkmk und gibt detaillierte Berichte aus.

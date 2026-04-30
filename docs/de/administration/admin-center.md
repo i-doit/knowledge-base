@@ -1,6 +1,6 @@
 ---
 title: Admin-Center
-description: Admin-Center
+description: Das Admin-Center ist die zentrale, mandantenübergreifende Administrationsoberfläche von i-doit.
 icon: admin-center
 status:
 lang: de
@@ -8,221 +8,190 @@ lang: de
 
 # Admin-Center
 
-Das Admin-Center ist eine in i-doit integrierte separate Administrations-Oberfläche. Hierüber werden mandantenübergreifende Einstellungen konfiguriert.
+Das Admin-Center ist die zentrale, mandantenübergreifende Administrations-Oberfläche von i-doit. Hier konfigurierst du systemweite Einstellungen, verwaltest Mandanten und Lizenzen und installierst Add-ons.
 
 !!! tip "Add-ons und Subskriptionen sind nun auch über das [Add-on & Subscription Center](add-on-and-subscription-center.md) verwaltbar."
 
-## Zugangsdaten
+## Zugangsdaten und Anmeldung
 
-!!! attention "Achtung!"
-    Sollten Sie sich nicht mehr einloggen können, dann kann das Passwort nur über das [i-doit console utility](../automatisierung-und-integration/cli/index.md) geändert werden!
+Für das Admin-Center gelten **separate Zugangsdaten** — nicht dein normaler i-doit Login. Du legst sie bei der [Installation von i-doit](../installation/manuelle-installation/setup.md) fest.
 
-Für das Admin-Center gelten **separate Zugangsdaten**. Diese können bei der [Installation von i-doit](../installation/manuelle-installation/setup.md) festgelegt werden. Sollte dieser Schritt übersprungen werden, ist erst einmal kein Zugang zum Admin-Center möglich.
+Du erreichst das Admin-Center auf zwei Wegen:
 
-## Anmeldung
-
-Das Admin-Center ist über die [Login-Maske von i-doit](../grundlagen/erstanmeldung.md) zu erreichen. Unterhalb der Maske befindet sich der Link **Admin-Center**.
+1. Über den Link **Admin-Center** unterhalb der i-doit Login-Maske
+2. Direkt über die URL `https://deine-instanz/admin/`
 
 [![Anmeldung](../assets/images/de/administration/admin-center/1-ac.png)](../assets/images/de/administration/admin-center/1-ac.png)
 
-Alternativ kann im Browser die URL zum Admin-Center eingegeben werden. Dabei wird dem Link zu i-doit ein `/admin/` nachgestellt:
-
-<https://demo.i-doit.com/admin/>
-
-[![Anmeldung](../assets/images/de/administration/admin-center/2-ac.png)](../assets/images/de/administration/admin-center/2-ac.png)
+!!! warning "Passwort vergessen?"
+    Wenn du dich nicht mehr einloggen kannst, kann das Passwort nur über das [i-doit console utility](../automatisierung-und-integration/cli/index.md) zurückgesetzt werden.
 
 !!! info "Englische Oberfläche"
-    Das Admin-Center ist vollständig in englisch gehalten.
+    Das Admin-Center ist vollständig auf Englisch gehalten.
 
-## Übersicht
+## Übersicht (Home)
 
-Im Bereich **Home** wird die derzeit installierte Version von i-doit angezeigt. Unter dem Punkt **Actions** kann das **i-doit environment info file** heruntergeladen werden. Dies ist eine XML-Datei mit wichtigen Systemeinstellungen, die beim [Troubleshooting](../administration/troubleshooting/index.md) sehr hilfreich sein können.
+Zeigt die installierte i-doit-Version. Unter **Actions** kannst du das **i-doit environment info file** herunterladen — eine XML-Datei mit Systemeinstellungen, die beim [Troubleshooting](troubleshooting/index.md) sehr hilfreich ist.
 
 [![Übersicht](../assets/images/de/administration/admin-center/3-ac.png)](../assets/images/de/administration/admin-center/3-ac.png)
 
-## Mandanten
+## Mandanten (Tenants)
 
-Im Bereich **Tenants** werden die Mandanten verwaltet. Dies wird allerdings nur bei einer Multi-Mandanten-Lizenz von i-doit relevant. Neue Mandanten können über die Schaltfläche "Add new tenant" erzeugt werden. Bestehende Mandanten können außerdem bearbeitet, (de)aktiviert oder vollständig gelöscht werden. Ein gelöschter Mandant kann nur über ein [BackUp](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) wiederhergestellt werden.
+Hier verwaltest du Mandanten — relevant bei Multi-Mandanten-Lizenzen. Du kannst neue Mandanten erzeugen, bestehende (de-)aktivieren oder löschen.
+
+!!! warning "Ein gelöschter Mandant lässt sich nur über ein [Backup](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) wiederherstellen."
 
 [![Mandanten](../assets/images/de/administration/admin-center/4-ac.png)](../assets/images/de/administration/admin-center/4-ac.png)
 
-## Lizenzen
+## Lizenzen (Licenses)
 
-Über den Bereich **Licenses** wird die [Lizenzierung](../wartung-und-betrieb/lizenzierung.md) vorgenommen.
+Hier spielst du deine [Lizenz](../wartung-und-betrieb/lizenzierung.md) ein.
 
 [![Lizenzen](../assets/images/de/administration/admin-center/5-ac.png)](../assets/images/de/administration/admin-center/5-ac.png)
 
 ## Add-ons
 
-Im Bereich **Add-ons** werden die [i-doit Add-ons](../i-doit-add-ons/index.md) verwaltet. Jede Funktionalität von i-doit ist in einem Modul gekapselt. Viele davon gehören zum Kern (**core**) von i-doit, einige davon gelten als **extension**, wenn sie bei der Installation bereits installiert sind, oder als **addon**, wenn sie zusätzlich installiert werden können.
+Hier installierst und verwaltest du [i-doit Add-ons](../i-doit-add-ons/index.md).
 
 [![Add-ons](../assets/images/de/administration/admin-center/6-ac.png)](../assets/images/de/administration/admin-center/6-ac.png)
 
-## Support
-
-Bei einem Klick auf den Bereich **Support** wird das <help.i-doit.com></https.help.i-doit.com> in einem neuen Tab geöffnet. Dort können Sie Tickets erstellen und den Bearbeitungsstand einsehen.
-
 ## System settings
 
-Hier finden Sie die system bezogenen Einstellungen. Auch finden Sie hier den Link zu den [Expert settings](#expert-settings-system-bezogen) auf der rechten Seite.
+[![Admin Center System Settings](../assets/images/de/administration/admin-center-system-settings.png)](../assets/images/de/administration/admin-center-system-settings.png)
+
+!!! info "Seit i-doit v25"
+    Die system-weiten Einstellungen sind seit Version 25 ins Admin Center gewandert. Mandanten-spezifische Einstellungen findest du weiterhin unter [Verwaltung → Experteneinstellungen](verwaltung/mandanten-name-verwaltung/experteneinstellungen.md).
 
 ### Login
 
-| Option                    | Wert   |
-| ------------------------- | ------ |
-| Welcome message for login | String |
-
-### LDAP Debug settings
-
-| Option     | Wert         |
-| ---------- | ------------ |
-| LDAP Debug | Ja oder Nein |
-
-Einstellung kann auch via [Expert settings](#expert-settings-system-bezogen) geändert werden. Die Option heißt `ldap.debug`.
-
-### SMTP
-
-| Option         | Wert              |
-| -------------- | ----------------- |
-| SMTP Host      | Hostname oder URL |
-| SMTP Port      | Port              |
-| SMTP Username  | Username          |
-| SMTP Password  | Password          |
-| SMTP TLS       | Ja oder Nein      |
-| Sender         | E-Mail Adresse    |
-| Name           | Name              |
-| Timeout        | Wert in Sekunden  |
-| SMTP Debug     | Ja oder Nein      |
-| Subject prefix | String            |
-
-Zusätzlich gibt es einen Button, der die SMTP Verbindung testet.
+| Einstellung                   | Beschreibung                                                                                                                                      |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Welcome message for login** | Text der auf der Anmeldeseite angezeigt wird — z.B. "Wartungsfenster: Sonntag 02:00-06:00 Uhr" oder Hinweise für neue Benutzer. HTML ist möglich. |
 
 ### Proxy
 
-| Option          | Wert                 |
-| --------------- | -------------------- |
-| Active          | Ja oder Nein         |
-| Host/IP-Address | Host oder IP address |
-| Port            | Port                 |
-| Username        | Username             |
-| Password        | Password             |
+Wenn deine i-doit-Installation keinen direkten Internetzugang hat (z.B. für Lizenzprüfung oder das Add-on & Subscription Center), konfiguriere hier den HTTP-Proxy.
+
+| Einstellung           | Beschreibung                                |
+| --------------------- | ------------------------------------------- |
+| **Active**            | Proxy aktivieren/deaktivieren               |
+| **Host/IP-Address**   | Hostname oder IP des Proxy-Servers          |
+| **Port**              | Proxy-Port (Standard: 3128 für Squid)       |
+| **Username/Password** | Falls der Proxy Authentifizierung erfordert |
+
+### SMTP
+
+E-Mail-Konfiguration für [Benachrichtigungen](../auswertungen/benachrichtigungen.md), Passwort-Reset-Mails und Wartungsvertrag-Erinnerungen. Ohne korrekte SMTP-Konfiguration werden **keine E-Mails** versendet.
+
+| Einstellung                | Beschreibung                                                                                   |
+| -------------------------- | ---------------------------------------------------------------------------------------------- |
+| **SMTP Host**              | Hostname des Mailservers, z.B. `smtp.firma.de`                                                 |
+| **SMTP Port**              | Port — `587` für STARTTLS (empfohlen), `465` für SSL, `25` für unverschlüsselt                 |
+| **SMTP Username/Password** | Zugangsdaten für den Mailserver                                                                |
+| **SMTP TLS**               | TLS-Verschlüsselung aktivieren — **unbedingt einschalten** wenn dein Mailserver es unterstützt |
+| **Sender**                 | Absender-Adresse, z.B. `idoit@firma.de`. Muss vom Mailserver akzeptiert werden.                |
+| **Name**                   | Anzeigename des Absenders, z.B. `i-doit CMDB`                                                  |
+| **Timeout**                | Verbindungs-Timeout in Sekunden (Standard: 60)                                                 |
+| **SMTP Debug**             | Bei `Yes` werden SMTP-Dialoge ins Log geschrieben — hilfreich wenn Mails nicht ankommen        |
+| **Subject prefix**         | Wird jedem Betreff vorangestellt, z.B. `[i-doit]`. Hilft beim Filtern in Outlook/Thunderbird.  |
+
+!!! tip "Verbindung testen"
+    Unter der SMTP-Konfiguration gibt es einen **Test**-Button. Nutze ihn nach jeder Änderung um sicherzustellen, dass Mails tatsächlich versendet werden.
 
 ### Security
 
-| Option     | Wert         |
-| ---------- | ------------ |
-| CSRF-Token | Ja oder Nein |
+| Einstellung    | Beschreibung                                                                                                                                                                           |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **CSRF-Token** | Schutz gegen Cross-Site Request Forgery. Bei `Yes` (Standard) wird bei jedem Formular ein Token geprüft. **Nicht deaktivieren** — es sei denn, ein Add-on hat Kompatibilitätsprobleme. |
 
 ### Session
 
-| Option          | Wert             |
-| --------------- | ---------------- |
-| Session timeout | Wert in Sekunden |
+| Einstellung         | Beschreibung                                                                                                                                                                                 |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Session timeout** | Nach wie vielen Sekunden Inaktivität wird der Benutzer automatisch abgemeldet. Standard: `3600` (1 Stunde). In sicherheitskritischen Umgebungen auf `1800` (30 Minuten) oder weniger setzen. |
 
 ### Single Sign On
 
-| Option          | Wert             |
-| --------------- | ---------------- |
-| Active          | Ja oder Nein     |
-| Default tenant  | Dropdown Auswahl |
-| Use Domain Part | Ja oder Nein     |
+| Einstellung         | Beschreibung                                                                                                                                                |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Active**          | SSO aktivieren/deaktivieren. Voraussetzung: ein [SSO-Verfahren](../benutzerauthentifizierung-und-verwaltung/sso-vergleich/index.md) muss konfiguriert sein. |
+| **Default tenant**  | Welcher Mandant bei SSO-Anmeldung automatisch ausgewählt wird                                                                                               |
+| **Use Domain Part** | Bei `Yes` wird der Benutzername mit der Domain (z.B. `tester@i-doit.com`) für den Login verwendet                                                           |
 
 ### System Parameters
 
-| Option                 | Wert     |
-| ---------------------- | -------- |
-| PHP Timezone           | Zeitzone |
-| File upload directory  | Pfad     |
-| Image upload directory | Pfad     |
+| Einstellung                | Beschreibung                                                                                                 |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| **PHP Timezone**           | Zeitzone für Datumsanzeigen, z.B. `Europe/Berlin`. Muss mit der PHP-Zeitzone des Servers übereinstimmen.     |
+| **File upload directory**  | Verzeichnis für hochgeladene Dateien. Standard: `upload/files/` relativ zum i-doit Installationsverzeichnis. |
+| **Image upload directory** | Verzeichnis für hochgeladene Bilder (Objektbilder, Floorplan-Bilder).                                        |
 
 ### User interface
 
-| Option                            | Wert                                           |
-| --------------------------------- | ---------------------------------------------- |
-| Wiki URL                          | URL                                            |
-| Sortfunction for login tenantlist | Title<br>Custom (configurable in Admin-Center) |
+| Einstellung                           | Beschreibung                                                                          |
+| ------------------------------------- | ------------------------------------------------------------------------------------- |
+| **Wiki URL**                          | URL zu einem externen Wiki. Wird in der Oberfläche als Link angezeigt.                |
+| **Sortfunction for login tenantlist** | Sortierung der Mandantenliste auf der Login-Seite: nach Titel oder benutzerdefiniert. |
 
-## Konfiguration
+## Expert settings (system-weit)
 
-Im Bereich Config werden drei Punkte konfiguriert:
+Über den Link **Expert settings** oben rechts auf der System-Settings-Seite erreichst du die system-weiten Key/Value-Experteneinstellungen. Hier sind die wichtigsten:
 
--   Über **Admin-Center Credentials** können die Zugangsdaten zum Admin-Center geändert werden.
--   Über **Security configuration** kann die `Encryption method` ausgewählt werden. Sofern verfügbar.
--   Über **Connection to i-doit System Database** kann der Zugang zur [System-Datenbank](../software-entwicklung/datenbank-modell/index.md) geändert werden.
+### Rechtesystem
+
+| Key                            | Standard | Was passiert wenn du es änderst?                                                                                                                                                                                   |
+| ------------------------------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `auth.active`                  | `1`      | Bei `0` wird das **gesamte Rechtesystem deaktiviert** — jeder Benutzer kann alles sehen und bearbeiten. Nur in Notfällen verwenden, z.B. wenn du dich durch eine fehlerhafte Rechtekonfiguration ausgesperrt hast. |
+| `api.authenticated-users-only` | `1`      | Bei `1` müssen API-Anfragen mit gültigen Benutzerdaten (Basic Auth) authentifiziert werden — nicht nur mit dem API-Key. **Empfohlen** für Produktionsumgebungen.                                                   |
+
+### CMDB-Verhalten
+
+| Key                                           | Standard         | Was passiert wenn du es änderst?                                                                                                          |
+| --------------------------------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `cmdb.quickpurge`                             | `0`              | Bei `1` können Objekte **direkt und unwiderruflich gelöscht** werden — ohne Archivieren → Löschen → Purgen. **Gefährlich in Produktion.** |
+| `cmdb.unique.hostname`                        | `0`              | Bei `1` werden doppelte Hostnamen verhindert.                                                                                             |
+| `cmdb.unique.ip-address`                      | `0`              | Bei `1` werden doppelte IP-Adressen verhindert. **Empfohlen.**                                                                            |
+| `cmdb.unique.object-title`                    | `0`              | Bei `1` müssen Objektnamen eindeutig sein.                                                                                                |
+| `cmdb.unique.layer-2-net`                     | `0`              | Bei `1` werden doppelte VLAN-IDs verhindert.                                                                                              |
+| `cmdb.limits.obj-browser.objects-in-viewmode` | `8`              | Maximale Anzahl Objekte im Objekt-Browser.                                                                                                |
+| `cmdb.limits.port-lists-vlans`                | `5`              | Wie viele VLANs in der Portliste angezeigt werden.                                                                                        |
+| `cmdb.object.title.cable-prefix`              | `KABEL_DEFAULT_` | Prefix für automatisch generierte Kabel-Objektnamen.                                                                                      |
+| `cmdb.objtype.X.auto-inventory-no`            | (leer)           | Muster für automatische Inventarnummern. Ersetze `X` durch die Objekttyp-ID. Beispiel: `SRV-%COUNTER%` → `SRV-001`.                       |
+
+### Sicherheit und Passwörter
+
+| Key                           | Standard | Was passiert wenn du es änderst?                                                                                     |
+| ----------------------------- | -------- | -------------------------------------------------------------------------------------------------------------------- |
+| `security.passwort.minlength` | (leer)   | Mindestlänge für Benutzerpasswörter. Setze diesen Wert in Produktionsumgebungen auf mindestens **8**, besser **12**. |
+
+### Logging und Debug
+
+| Key                   | Standard | Was passiert wenn du es änderst?                                                                                              |
+| --------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `ldap.debug`          | `1`      | LDAP-Debug-Logging. Bei `0` deaktiviert — spart Log-Volumen in Produktion.                                                    |
+| `logbook.changes`     | `1`      | Bei `0` werden Änderungen nicht mehr im Logbuch protokolliert. **Nicht deaktivieren** — du verlierst die Nachvollziehbarkeit. |
+| `logging.cmdb.import` | `1`      | Logging von Import-Vorgängen (CSV, JDisc).                                                                                    |
+| `debug-bar.enabled`   | `1`      | PHP Debug Bar anzeigen. In Produktion auf `0` setzen.                                                                         |
+
+### GUI und E-Mail-Templates
+
+| Key                          | Standard               | Beschreibung                                              |
+| ---------------------------- | ---------------------- | --------------------------------------------------------- |
+| `gui.empty_value`            | (leer)                 | Darstellung leerer Felder in der UI, z.B. `—` oder `n/a`. |
+| `gui.wysiwyg`                | `1`                    | WYSIWYG-Editor für Beschreibungsfelder aktivieren.        |
+| `email.template.maintenance` | (Template)             | E-Mail-Vorlage für Wartungsvertrag-Benachrichtigungen.    |
+| `email.template.password`    | `Ihr Passwort lautet:` | E-Mail-Text beim Passwort-Versand.                        |
+| `maxlength.dialog_plus`      | `110`                  | Maximale Zeichenlänge für Dialog+-Einträge.               |
+
+## Konfiguration (Config)
+
+Hier änderst du drei grundlegende Einstellungen:
+
+- **Admin-Center Credentials** — Zugangsdaten zum Admin-Center ändern
+- **Security configuration** — Verschlüsselungsmethode auswählen
+- **Connection to i-doit System Database** — Datenbankzugangsdaten ändern
 
 [![Konfiguration](../assets/images/de/administration/admin-center/7-ac.png)](../assets/images/de/administration/admin-center/7-ac.png)
 
-Die Einstellungen können in **Notfällen** in der Datei `src/config.inc.php` im Installationsverzeichnis von i-doit geändert werden. Diese Datei wird bei der [Installation von i-doit](../installation/manuelle-installation/setup.md) erstellt. Wird ein [Update von i-doit](../wartung-und-betrieb/update-einspielen.md) eingespielt, wird automatisch ein [Backup](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) der Datei erstellt. Im Dateinamen wird das Datum des Updates angeben.
-
-## Expert settings (System bezogen)
-
-Die Experteneinstellungen für das komplette System befinden sich im Admin-Center. Sie erreichen diese über die [System settings](#system-settings)
-
-| Key                                             | Value                                                                                                                                                             | Description                            |
-| ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- |
-| system.email.password                           | -                                                                                                                                                                 | system.email.port                      |
-| admin.active_license_distribution               | 1                                                                                                                                                                 |                                        |
-| api.authenticated-users-only                    | 1                                                                                                                                                                 |                                        |
-| api.status                                      | 1                                                                                                                                                                 |                                        |
-| api.validation                                  | 1                                                                                                                                                                 |                                        |
-| auth.active                                     | 1                                                                                                                                                                 |                                        |
-| barcode.type                                    | qr                                                                                                                                                                |                                        |
-| cmdb.connector.suffix-schema                    | -                                                                                                                                                                 |                                        |
-| cmdb.limits.connector-lists-assigned_connectors | 5                                                                                                                                                                 |                                        |
-| cmdb.limits.obj-browser.objects-in-viewmode     | 8                                                                                                                                                                 |                                        |
-| cmdb.limits.port-lists-layer2                   | 5                                                                                                                                                                 |                                        |
-| cmdb.limits.port-lists-vlans                    | 5                                                                                                                                                                 |                                        |
-| cmdb.limits.port-overview-default-vlan-only     | 0                                                                                                                                                                 |                                        |
-| cmdb.limits.port-overview-vlans                 | -                                                                                                                                                                 |                                        |
-| cmdb.object-browser.max-objects                 | -                                                                                                                                                                 |                                        |
-| cmdb.object.title.cable-prefix                  | KABEL_DEFAULT_                                                                                                                                                    |                                        |
-| cmdb.objtype.X.auto-inventory-no                | -                                                                                                                                                                 |                                        |
-| cmdb.quickpurge                                 | 0                                                                                                                                                                 |                                        |
-| cmdb.renew-properties                           | 1                                                                                                                                                                 |                                        |
-| cmdb.unique.hostname                            | 0                                                                                                                                                                 |                                        |
-| cmdb.unique.ip-address                          | 0                                                                                                                                                                 |                                        |
-| cmdb.unique.layer-2-net                         | 0                                                                                                                                                                 |                                        |
-| cmdb.unique.object-title                        | 0                                                                                                                                                                 |                                        |
-| debug_bar.storeDirectory                        | /tmp/idoit_debugbar                                                                                                                                               |                                        |
-| debug-bar.enabled                               | 1                                                                                                                                                                 |                                        |
-| email.template.maintenance                      | `Your maintenance contract: %s timed out.\n<strong>Contract information</strong>:\nStart: %s\nEnd: %s\nSupport-Url: %s\nContract-Number: %s\nCustomer-Number: %s` |                                        |
-| email.template.password                         | Ihr Passwort lautet:                                                                                                                                              |                                        |
-| gui.empty_value                                 | -                                                                                                                                                                 |                                        |
-| gui.empty_values                                | -                                                                                                                                                                 |                                        |
-| gui.forum-link                                  | 0                                                                                                                                                                 |                                        |
-| gui.leftcontent.width                           |                                                                                                                                                                   |                                        |
-| gui.wiki-url                                    |                                                                                                                                                                   |                                        |
-| gui.wysiwyg                                     | 1                                                                                                                                                                 |                                        |
-| gui.wysiwyg-all-controls                        | 1                                                                                                                                                                 |                                        |
-| import.object.keep-status                       | 0                                                                                                                                                                 |                                        |
-| ldap.debug                                      | 1                                                                                                                                                                 |                                        |
-| ldap.default-group                              |                                                                                                                                                                   |                                        |
-| logbook.changes                                 | 1                                                                                                                                                                 |                                        |
-| logging.cmdb.import                             | 1                                                                                                                                                                 |                                        |
-| login.tenantlist.sortby                         | isys_mandator__sort                                                                                                                                               |                                        |
-| maxlength.dialog_plus                           | 110                                                                                                                                                               |                                        |
-| mysql.unbuffered-queries                        | 0                                                                                                                                                                 |                                        |
-| proxy.active                                    | 0                                                                                                                                                                 |                                        |
-| proxy.host                                      | -                                                                                                                                                                 |                                        |
-| proxy.password                                  | -                                                                                                                                                                 |                                        |
-| proxy.port                                      | -                                                                                                                                                                 |                                        |
-| proxy.username                                  | -                                                                                                                                                                 |                                        |
-| qrcode.config                                   | -                                                                                                                                                                 |                                        |
-| reports.browser-url                             | -                                                                                                                                                                 |                                        |
-| security.passwort.minlength                     | -                                                                                                                                                                 |                                        |
-| session.sso.active                              | 0                                                                                                                                                                 |                                        |
-| session.sso.mandator-id                         | 1,2                                                                                                                                                               | Reihenfolge für die Anmeldung über sso |
-| session.time                                    | 3600                                                                                                                                                              |                                        |
-| system.devmode                                  | -                                                                                                                                                                 |                                        |
-| system.email.connection-timeout                 | -                                                                                                                                                                 |                                        |
-| system.email.from                               | <i-doit@example-domain.int>                                                                                                                                       |                                        |
-| system.email.name                               | -                                                                                                                                                                 |                                        |
-| system.email.smtp-auto-tls                      | 0                                                                                                                                                                 |                                        |
-| system.email.smtp-host                          | -                                                                                                                                                                 |                                        |
-| system.email.smtpdebug                          | 0                                                                                                                                                                 |                                        |
-| system.email.subject-prefix                     | \[i-doit\]                                                                                                                                                        |                                        |
-| system.email.username                           | -                                                                                                                                                                 |                                        |
-| system.last-change                              | 1689077222                                                                                                                                                        |                                        |
-| system.login.welcome-message                    | -                                                                                                                                                                 |                                        |
-| system.security.csrf                            | 1                                                                                                                                                                 |                                        |
-| system.show-proc-time                           | 0                                                                                                                                                                 |                                        |
+!!! tip "Notfall-Zugang"
+    Im Notfall kannst du die Datenbankeinstellungen direkt in der Datei `src/config.inc.php` im Installationsverzeichnis ändern. Bei einem [Update](../wartung-und-betrieb/update-einspielen.md) legt i-doit automatisch ein Backup dieser Datei an.

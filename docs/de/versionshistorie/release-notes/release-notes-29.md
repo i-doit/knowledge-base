@@ -1,3 +1,10 @@
+---
+title: Release Notes 29
+description: "We're happy to announce i-doit 29."
+icon:
+status:
+lang: de
+---
 # Release Notes 29
 
 We're happy to announce i-doit 29. This version will get a lot of tweaks and improvements under the hood.

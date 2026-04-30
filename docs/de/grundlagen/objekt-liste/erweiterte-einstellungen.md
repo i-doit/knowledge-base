@@ -1,6 +1,6 @@
 ---
 title: Erweiterte Einstellungen
-description:
+description: "Die erweiterten Einstellungen ermöglichen dir, das Verhalten der Objekt-Listen an deine Anforderungen anzupassen -- von der Anzahl der Einträge pro..."
 icon:
 status:
 lang: de
@@ -8,11 +8,13 @@ lang: de
 
 # Erweiterte Einstellungen
 
-Viele Parameter bezüglich der [Objekt-Listen](index.md) lassen sich gemäß den Anforderungen anpassen. Dies steigert die Übersichtlichkeit und sichert die Möglichkeit, schnell Zugriff auf die gewünschten Inhalte zu erhalten.
+Die erweiterten Einstellungen ermöglichen dir, das Verhalten der [Objekt-Listen](index.md) an deine Anforderungen anzupassen -- von der Anzahl der Einträge pro Seite bis hin zu Lösch-Optionen.
+
+[![Erweiterte Einstellungen](../../assets/images/de/grundlagen/objekt-liste/erweiterte-einstellungen.png)](../../assets/images/de/grundlagen/objekt-liste/erweiterte-einstellungen.png)
 
 ## Anzahl der Objekte pro Seite anpassen
 
-Es ist möglich, dem System die Anzahl der dargestellten [Objekte](../struktur-it-dokumentation.md) pro Seite vorzugeben. Hierbei handelt es sich um eine benutzerspezifische Einstellung, sodass jeder Benutzer eigenständig die Objekte pro Seite für seine eigene Ansicht festlegen kann. Die Anzahl kann unter **Verwaltung → Benutzereinstellungen → Benutzeroberfläche**  angegeben und festgelegt werden. Ein sehr hoher Wert kann die Performance verringern.
+Du legst die Anzahl der dargestellten [Objekte](../struktur-it-dokumentation.md) pro Seite unter **Verwaltung → Benutzereinstellungen → Benutzeroberfläche** fest. Da es sich um eine benutzerspezifische Einstellung handelt, kann jeder Benutzer seinen eigenen Wert wählen. Beachte: Ein sehr hoher Wert kann die Performance verringern.
 
 ## Maximallänge von Objekttiteln
 
@@ -20,7 +22,7 @@ Abhängig davon, wie viele Attribute beziehungsweise Spalten in einer Liste darg
 
 ## Schaltfläche Quickpurge (de)aktivieren
 
-Die [Aktionsleiste in Objekt-Listen](,,/../aktionsleiste.md) kann um den Button [**Quickpurge**](../lebens-und-dokumentationszyklus.md) erweitert werden. Unter **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name] → CMDB → Quickpurge-Button aktivieren** wird im Drop-Down-Menü der Wert  **ja** ausgewählt, um den Button zu zeigen, beziehungsweise **nein**, um den Button nicht zu zeigen.
+Die [Aktionsleiste in Objekt-Listen](aktionsleiste.md) kann um den Button [**Quickpurge**](../lebens-und-dokumentationszyklus.md) erweitert werden. Unter **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name] → CMDB → Quickpurge-Button aktivieren** wird im Drop-Down-Menü der Wert  **ja** ausgewählt, um den Button zu zeigen, beziehungsweise **nein**, um den Button nicht zu zeigen.
 
 ## Drag'n'Drop (de-)aktivieren
 
@@ -28,4 +30,4 @@ Per Drag'n'Drop lässt sich ein Objekt einem anderen [Objekttypen](../struktur-i
 
 ## Templates in Objekt-Listen anzeigen
 
-Templates werden in i-doit nicht in den Objekt-Listen dargestellt. Doch dieser Zustand kann neben Norma, Archiviert und Gelöscht als Template angezeigt werden. Dies ist unter **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name] → Templates → Template Filter in den Objektlisten anzeigen** möglich.
+Templates werden in i-doit nicht in den Objekt-Listen dargestellt. Doch dieser Zustand kann neben Normal, Archiviert und Gelöscht als Template angezeigt werden. Dies ist unter **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name] → Templates → Template Filter in den Objektlisten anzeigen** möglich.

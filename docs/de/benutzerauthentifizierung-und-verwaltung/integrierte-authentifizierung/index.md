@@ -9,17 +9,17 @@ lang: de
 # Integrierte Authentifizierung
 
 !!! warning "Backup-Hinweis"
-    Bitte erstellen Sie vor jeder Änderung an einer Schnittstelle oder einem Import ein vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist, kann dieses problemlos wiederhergestellt werden.
+    Bitte erstelle vor jeder Änderung an einer Schnittstelle oder einem Import ein vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist, kann dieses problemlos wiederhergestellt werden.
 
 ## Überblick
 
-i-doit bietet eine flexible Auswahl an Authentifizierungsmethoden, die auf verschiedene Anwendungsfälle und Sicherheitsanforderungen zugeschnitten sind. Diese Seite gibt Ihnen einen Überblick über die verfügbaren Optionen von der einfachen lokalen Anmeldung über die Anbindung an ein zentrales Active Directory bis hin zu erweiterten Verfahren wie Single Sign-On (SSO) oder der Zwei-Faktor-Authentifizierung (2FA).
+i-doit bietet eine flexible Auswahl an Authentifizierungsmethoden, die auf verschiedene Anwendungsfälle und Sicherheitsanforderungen zugeschnitten sind. Diese Seite gibt dir einen Überblick über die verfügbaren Optionen von der einfachen lokalen Anmeldung über die Anbindung an ein zentrales Active Directory bis hin zu erweiterten Verfahren wie Single Sign-On (SSO) oder der Zwei-Faktor-Authentifizierung (2FA).
 
 ---
 
 ## Lokale Benutzer
 
-Lokale Benutzer werden direkt in i-doit als Objekte vom Typ "Person" verwaltet und sind sofort einsatzbereit. Ihre größte Stärke liegt darin, als **unabhängiger Notfallzugang** zu fungieren, falls zentrale Authentifizierungssysteme wie LDAP/AD einmal nicht erreichbar sein sollten.
+Lokale Benutzer werden direkt in i-doit als Objekte vom Typ "Person" verwaltet und sind sofort einsatzbereit. Die größte Stärke liegt darin, als **unabhängiger Notfallzugang** zu fungieren, falls zentrale Authentifizierungssysteme wie LDAP/AD einmal nicht erreichbar sein sollten.
 
 Weiterführende Links:
 

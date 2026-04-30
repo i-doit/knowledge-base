@@ -1,25 +1,31 @@
+---
+title: Benutzerdefinierte Objekttypen
+description: "Benutzerdefinierte Objekttypen ermöglichen dir, eigene Objekttypen in i-doit anzulegen -- für alle Objekte, die sich den vorhandenen Standard-Objekttypen..."
+icon:
+status:
+lang: de
+---
 # Benutzerdefinierte Objekttypen
 
-In der Standard-Installation von _i-doit_ wird eine Vielzahl von [Objekttypen](../glossar.md) bereitgestellt. Es ist jedoch wahrscheinlich , dass du [Objekte](../glossar.md) dokumentieren möchtest, die sich den bestehenden Objekttypen nicht zuordnen lassen. Aus diesem Grund ist es möglich, eigene Objekttypen, also benutzerdefinierte Objekttypen, zu erzeugen und auszuprägen.
+Benutzerdefinierte Objekttypen ermöglichen dir, eigene [Objekttypen](../glossar.md) in i-doit anzulegen -- für alle [Objekte](../glossar.md), die sich den vorhandenen Standard-Objekttypen nicht zuordnen lassen.
 
-Zugriff auf die Konfiguration
+## Zugriff auf die Konfiguration
 
-Die Möglichkeit, benutzerdefinierte Objekttypen zu erstellen findest du unter **Verwaltung → CMBD-Einstellungen → Objekttyp-Konfiguration → [Objekttyp-Gruppe]**. Hier ist es dir möglich, neue Objekttypen zu erstellen und bestehende Objekttypen zu bearbeiten. 
+Du erstellst und bearbeitest benutzerdefinierte Objekttypen unter **Verwaltung → CMDB-Einstellungen → Objekttyp-Konfiguration → [Objekttyp-Gruppe]**.
 
-Alternativ kannst du über die Bezeichnung der [Objekttypgruppe](../glossar.md) oberhalb der [Objekttyp-Liste](../glossar.md) im [Baum-Menü](../glossar.md) auf der linken Seite ebenfalls zur Objekttyp-Konfiguration gelangen. Klicke hierzu nur auf den Link und du befindest dich direkt in der Auflistung der Objekttypen dieser Objekttypgruppe und kannst diese bearbeiten.
+Alternativ klickst du im [Baum-Menü](../glossar.md) auf der linken Seite auf die Bezeichnung der [Objekttypgruppe](../glossar.md) oberhalb der [Objekttyp-Liste](../glossar.md). So gelangst du direkt zur Auflistung der Objekttypen dieser Gruppe und kannst sie bearbeiten.
 
 [![objektsicht](../assets/images/de/grundlagen/benutzerdefinierte-objekttypen/1-bo.png)](../assets/images/de/grundlagen/benutzerdefinierte-objekttypen/1-bo.png)
 
-In der Listenansicht der Objekttyp-Konfiguration verwende die Schaltfläche **Neu** um mit der Konfiguration eines eigenen Objekttyps zu beginnen.
+Klicke in der Listenansicht der Objekttyp-Konfiguration auf die Schaltfläche **Neu**, um einen eigenen Objekttyp anzulegen.
 
 [![liste-objekttyp-konfiguration](../assets/images/de/grundlagen/benutzerdefinierte-objekttypen/2-bo.png)](../assets/images/de/grundlagen/benutzerdefinierte-objekttypen/3-bo.png)
 
-Nun kannst du deinen eigenen Objekttyp konfigurieren.
+Anschließend konfigurierst du deinen Objekttyp.
 
 [![objekttyp-konfiguration](../assets/images/de/grundlagen/benutzerdefinierte-objekttypen/3-bo.png)](../assets/images/de/grundlagen/benutzerdefinierte-objekttypen/3-bo.png)
 
-Felder in der Konfiguration
----------------------------
+## Felder in der Konfiguration
 
 Folgende Felder werden in der Konfiguration neuer und bestehender Objekttypen angezeigt:
 

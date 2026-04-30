@@ -1,3 +1,10 @@
+---
+title: Release Notes 36
+description: "Wir freuen uns, die Veröffentlichung von i-doit 36 bekannt zu geben."
+icon:
+status:
+lang: de
+---
 # Release Notes 36
 <!-- cSpell:disable -->
 

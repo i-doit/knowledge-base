@@ -1,6 +1,6 @@
 ---
 title: cmdb.filter
-description: cmdb.filter
+description: "For example, get all objects with {Attribute} and {Attribute} which where updated in a specific time frame."
 icon: material/api
 #status: updated
 lang: de
@@ -52,3 +52,9 @@ JSON key **result** contains an array of JSON objects. Each object contains a se
         "id": 1
     }
     ```
+
+## Siehe auch
+
+- [API v1 Methoden](index.md) — Übersicht aller API v1 Methoden
+- [API Add-on](../../index.md) — Einstieg in das API Add-on
+- [i-doit Add-ons](../../../index.md) — Alle verfügbaren Add-ons

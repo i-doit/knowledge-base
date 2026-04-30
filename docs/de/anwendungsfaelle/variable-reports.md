@@ -45,7 +45,7 @@ Für diesen Anwendungsfall heißt das: Der Report "sucht" nach jenen Objekten, i
 
 [![abfrage-editor](../assets/images/de/anwendungsfaelle/variable-reports/5-vr.png)](../assets/images/de/anwendungsfaelle/variable-reports/5-vr.png)
 
-Daher muss stets ein Objekt auswählt werden, um den Report ausfüllen zu können. In diesem Fall geschieht dies indem man zum Report eine Kategorie erstellt, die den Report innerhalb eines Objektes ausführt. Diese wird **Bereichsdrucker rückwärtig** genannt, dem Objekttyp **Raum** zugeordnet und als Single-Value-Kategorie definiert. Zudem erhält sich ein namenloses Attribut mit dem **Feldtyp Report**. Unter **Zusatz** können Sie dann den Namen des oben erstellten Reports auswählen.
+Daher muss stets ein Objekt auswählt werden, um den Report ausfüllen zu können. In diesem Fall geschieht dies indem man zum Report eine Kategorie erstellt, die den Report innerhalb eines Objektes ausführt. Diese wird **Bereichsdrucker rückwärtig** genannt, dem Objekttyp **Raum** zugeordnet und als Single-Value-Kategorie definiert. Zudem erhält sich ein namenloses Attribut mit dem **Feldtyp Report**. Unter **Zusatz** kannst du dann den Namen des oben erstellten Reports auswählen.
 
 [![report-1](../assets/images/de/anwendungsfaelle/variable-reports/6-vr.png)](../assets/images/de/anwendungsfaelle/variable-reports/6-vr.png)
 

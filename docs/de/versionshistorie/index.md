@@ -1,3 +1,10 @@
+---
+title: Version History
+description: "Wann erschien welches Release von i-doit?"
+icon:
+status:
+lang: de
+---
 # Version History
 
 Wann erschien welches Release von i-doit?

@@ -1,14 +1,21 @@
+---
+title: "Backup-Script für Daten und Dateien"
+description: Folgendes Backup Script dient als Beispiel wie eine einfache Datensicherung eingerichtet werden kann.
+icon:
+status:
+lang: de
+---
 # Backup-Script für Daten und Dateien
 
 Folgendes Backup Script dient als **Beispiel** wie eine einfache Datensicherung eingerichtet werden kann. Es ersetzt keine professionelle Lösung!
 
 !!! danger "Auf eigene Gefahr"
-    Dieses Script löscht Dateien! Bitte auf eigene Gefahr anwenden! synetics übernimmt weder Garantie noch Support und schließt eine Haftung für Folgeschäden aus.
+    Dieses Script löscht Dateien! Bitte auf eigene Gefahr anwenden! i-doit GmbH übernimmt weder Garantie noch Support und schließt eine Haftung für Folgeschäden aus.
 
 **bbbs.sh**
 
     #!/bin/bash
-    
+
     #### System requirements
     #### The following tools need to be installed:
     ###
@@ -20,31 +27,31 @@ Folgendes Backup Script dient als **Beispiel** wie eine einfache Datensicherung 
     ###
     ### Debian install example:
     ### apt-get install samba-common cifs-utils ncftp mysql-client tar
-    
+
     ## Global configuration options
     glob_machine="idoitserver"                  #Machine name to label backup files
     glob_date=$(date +"%Y-%m-%d_%H%M")          #Date format to label backup files (default is 2015-12-12_1755)
     glob_path="/tmp/backup/${glob_machine}"     #Specify local backup path
     glob_delete=0                               #Delete local files immediately after CIFS or FTP copy?
-    
+
     ## Database backup configuration
     backup_database=1                           #Database backup enabled?
     db_user=""                                  #MySQL username
     db_pass=""                                  #MySQL password
     db_host="127.0.0.1"                         #MySQL host
     db_names="idoit_system idoit_data"          #Database names to backup separated with space
-    
+
     ## File backup configuration
     backup_file=1                               #File backup enabled?
     file_files="/var/www"                       #File paths to backup separated with space
-    
+
     ## FTP configuration
     copy_ftp=0                                  #Copy files to FTP server?
     ftp_user=""                                 #FTP username
     ftp_pass=""                                 #FTP password
     ftp_host=""                                 #FTP servername or IP address
     ftp_path="/backup/path"                     #Backup path on FTP server
-    
+
     ## CIFS configuration
     copy_cifs=0                                 #Copy files to CIFS Share?
     cifs_user=""                                #CIFS username
@@ -52,13 +59,13 @@ Folgendes Backup Script dient als **Beispiel** wie eine einfache Datensicherung 
     cifs_path="//cifs/file/share/path"          #CIFS backup path
     cifs_mount="/tmp/backup/cifs_mnt"           #CIFS share mount point
     cifs_domain=""                              #CIFS domain name
-    
+
     ## Old files deletion
     delete_file=0                               #Delete old local backups?
     delete_file_age=7                           #Delete local backups older than x days
     delete_cifs=0                               #Delete old cifs backups?
     delete_cifs_age=7                           #Delete cifs backups older than x days
-    
+
     #-------------------------- Stop editing here --------------------------
     mkdir -p ${glob_path}
     umask 177
@@ -79,19 +86,19 @@ Folgendes Backup Script dient als **Beispiel** wie eine einfache Datensicherung 
                 tmp_sqlfile=${glob_path}/${glob_machine}__${i}__${glob_date}.sql
                 echo "Dumping MYSQL database ${i} to file ${tmp_sqlfile}"
                 /usr/bin/mysqldump --user=${db_user} --password=${db_pass} --host=${db_host} ${i} > ${tmp_sqlfile}
-                
+
                 if [ $copy_ftp -eq 1 ];
                 then
                     echo "Copying ${tmp_sqlfile} to FTP server ${ftp_host}"
                     /usr/bin/ncftpput -u ${ftp_user} -p ${ftp_pass} ${ftp_host} ${ftp_path} ${tmp_sqlfile}
                 fi
-                
+
                 if [ $copy_cifs -eq 1 ];
                 then
                     echo "Copying ${tmp_sqlfile} to CIFS share ${cifs_path}"
                     cp -f ${tmp_sqlfile} ${cifs_mount}
                 fi
-                
+
                 if [ $glob_delete -eq 1 ];
                 then
                     echo "Immediately deleting file ${tmp_sqlfile}"
@@ -112,25 +119,25 @@ Folgendes Backup Script dient als **Beispiel** wie eine einfache Datensicherung 
                 echo "Packing files ${i} to ${tmp_filesfile}"
                 tar czf ${tmp_filesfile} $i
                 j=$((j + 1))
-                
+
                 if [ $copy_ftp -eq 1 ];
                 then
-                    echo "Copying ${tmp_filesfile} to FTp server ${ftp_host}"
+                    echo "Copying ${tmp_filesfile} to FTP server ${ftp_host}"
                     /usr/bin/ncftpput -u ${ftp_user} -p ${ftp_pass} ${ftp_host} ${ftp_path} ${tmp_filesfile}
                 fi
-                
+
                 if [ $copy_cifs -eq 1 ];
                 then
                     echo "Copying ${tmp_filesfile} to CIFS share ${cifs_path}"
                     cp -f ${tmp_filesfile} ${cifs_mount}
                 fi
-                
+
                 if [ $glob_delete -eq 1 ];
                 then
                     echo "Immediately deleting file ${tmp_filesfile}"
                     rm -f ${tmp_filesfile}
                 fi
-                
+
             fi
         done
     fi
@@ -159,3 +166,9 @@ Folgendes Backup Script dient als **Beispiel** wie eine einfache Datensicherung 
         echo "umounting CIFS share ${cifs_mount}"
         umount ${cifs_mount}
     fi
+
+## Siehe auch
+
+- [Wartung und Betrieb](../index.md) — Übersicht zu Wartung und Betrieb
+- [Installation](../../installation/index.md) — i-doit installieren
+- [Systemvoraussetzungen](../../installation/systemvoraussetzungen.md) — Hardware- und Softwareanforderungen

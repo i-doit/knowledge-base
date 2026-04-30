@@ -6,39 +6,41 @@ status:
 lang: en
 ---
 
-In this article we explain in just a few steps which packages need to be installed and configured. We use a environment without **desktop** .
+We explain which packages need to be installed and configured in a few steps in this article. We use an environment **without a desktop**.
 
 !!! warning ""
-    When you install Debian, you eventually reach a "Software selection" dialog which has a list of checkboxes to choose the software you want to install initially. This has a "Debian desktop environment" checkbox, pre-ticked; de-selecting that, and leaving all the other desktop environment checkboxes un-ticked (GNOME, Xfce, etc.), will result in a GUI-less installation:
+    When you install Debian, you will eventually reach a "Software selection" dialog that contains a list of checkboxes for selecting the software you want to install initially. Here, the "Debian desktop environment" checkbox is already checked. If you uncheck this checkbox and leave all other desktop environment checkboxes (GNOME, Xfce, etc.) unchecked, this results in a GUI-less installation:
 
-    [![Software selection](../../../assets/images/en/installation/manual-installation/debian/gui.png)](../../../assets/images/en/installation/manual-installation/debian/gui.png)
+    [![Software selection](../../../assets/images/de/installation/manuelle-installation/debian/gui.png)](../../../assets/images/de/installation/manuelle-installation/debian/gui.png)
 
 ## System Requirements
 
-The general [system requirements](../../system-requirements.md) apply.
+The general [system requirements](../../system-requirements.md).
 
-This article refers to [**Debian GNU/Linux 13 "trixie"**](https://www.debian.org/index.en.html). In order to find out which Debian version is used you can carry out the following command:
+This article refers to [**Debian GNU/Linux 13 "trixie"**](https://debian.org/). To determine which Debian version is in use, you can run the following command in the console:
 
 ```shell
 cat /etc/debian_version
 ```
 
-As system architecture you should use a x86 in 64bit:
+The system architecture should be x86 in 64-bit:
 
 ```shell
 uname -m
 ```
 
-**x86_64** means 64bit, **i386** or **i686** only 32bit.
+**x86_64** means 64-bit, **i386** or **i686** means only 32-bit.
 
-## Installation of the Packages
+## Package installation
 
-The default package repositories of Debian GNU/Linux already supply the necessary packages to install:
+The standard repositories of Debian GNU/Linux already include all necessary packages to install
 
--   the **Apache** web server 2.4
--   the script language **PHP** 8.4
--   the database management system **MariaDB** 11.8 and
+-   the **Apache** web server 2.4,
+-   the scripting language **PHP** 8.4,
+-   the database management system **MariaDB** 11.8, and
 -   the caching server **memcached**
+
+to install:
 
 ```shell
 apt update
@@ -47,17 +49,17 @@ apt install apache2 libapache2-mod-php mariadb-client mariadb-server memcached u
 
 ## Configuration
 
-The installed packages for Apache web server, PHP and MariaDB already supply configuration files. It is recommended to save changed settings in separate files instead of adjusting the already existing configuration files. Otherwise, any differences to the existing files would be pointed out or even overwritten during each package upgrade. The settings of the default configuration are supplemented or overwritten by user-defined settings.
+The installed packages for Apache web server, PHP, and MariaDB already come with configuration files. It is recommended to store custom settings in separate files rather than modifying the existing configuration files. With each package upgrade, any divergent settings would be flagged or overwritten. The default configuration settings are supplemented or overridden by the custom ones.
 
 ### PHP
 
-First of all, a new file is created and filled with the required settings:
+First, a new file is created and populated with the required settings:
 
 ```shell
 sudo nano /etc/php/8.4/mods-available/i-doit.ini
 ```
 
-!!! example "This file contains the following content specified by us. For more information about the parameters, have a look at [PHP.net](https://www.php.net/manual/de/ini.core.php)"
+!!! example "This file receives the following content as specified by us. For more information about the parameters, visit [PHP.net](https://www.php.net/manual/en/ini.core.php)"
 
 ```ini
 allow_url_fopen = Yes
@@ -85,16 +87,17 @@ session.cookie_lifetime = 0
 mysqli.default_socket = /var/run/mysqld/mysqld.sock
 ```
 
-The `memory_limit` must be increased if necessary, e.g. for very large reports or extensive documents.<br>
-The value (in seconds) of `session.gc_maxlifetime` should be the same or greater than the `Session Timeout` in the [system settings](../system-settings.md) of i-doit.<br>
-The `date.timezone` parameter should be adjusted to the local time zone (see [List of supported time zones](http://php.net/manual/en/timezones.php)).<br>
-Afterwards, the required PHP modules are activated and the Apache web server is restarted:
+The `memory_limit` must be increased if needed, e.g., for very large reports or extensive documents.<br>
+The value (in seconds) of **session.gc_maxlifetime** should be greater than or equal to the **Session Timeout** in the [system settings](../system-settings.md) of i-doit.<br>
+The **date.timezone** parameter should be adjusted to the local time zone (see [list of supported time zones](http://php.net/manual/en/timezones.php)).
+
+Then the required PHP modules are activated and the Apache web server is restarted:
 
 ```shell
 sudo phpenmod i-doit memcached
 ```
 
-### Apache Webserver
+### Apache Web Server
 
 The default VHost is deactivated and a new one is created:
 
@@ -103,7 +106,7 @@ sudo a2dissite 000-default
 sudo nano /etc/apache2/sites-available/i-doit.conf
 ```
 
-!!! example "This file contains the following content specified by us. For more information about the parameters, see [httpd.apache.org](https://httpd.apache.org/docs/2.4/en/mod/core.html)"
+!!! example "This file receives the following content as specified by us. For more information about the parameters, visit [httpd.apache.org](https://httpd.apache.org/docs/2.4/en/mod/core.html)"
 <!-- cSpell:disable -->
 ```shell
 <VirtualHost *:80>
@@ -260,9 +263,9 @@ DocumentRoot /var/www/html
 </VirtualHost>
 ```
 <!-- cSpell:enable -->
-!!! note "i-doit includes differing Apache settings in files with the name **.htaccess**. The setting has to checked after each update and added to the Apache configuration if necessary. The .htaccess file is located in the i-doit directory, e.g. `/var/www/html/.htaccess`."
+!!! note "i-doit ships custom Apache settings in files named **.htaccess**. These must be reviewed after each update and updated in the VirtualHost configuration. The .htaccess file is located in the i-doit directory, e.g., `/var/www/html/.htaccess`."
 
-With the next step you activate the new VHost and the necessary Apache module **rewrite** and the Apache web server is restarted:
+In the next step, the new VHost and the required Apache module **rewrite** are activated, and the Apache web server is restarted:
 
 ```shell
 sudo a2ensite i-doit
@@ -272,25 +275,25 @@ sudo systemctl restart apache2 php8.4-fpm
 
 ### MariaDB
 
-To ensure that MariaDB delivers good performance and can be operated securely, you should not only follow our instructions, but also inform yourself further. Starting with a secure installation where the recommendations should be followed. In addition, the user **root** should be given a secure password.
+To ensure MariaDB delivers good performance and can be operated securely, you should not only follow our guide but also inform yourself further. Starting with a secure installation where the recommendations should be followed. Additionally, the **root** user should receive a secure password.
 
 ```shell
 sudo mariadb-secure-installation
 ```
 
-The mode for shutting down InnoDB still needs to be changed. The value `0` causes a complete cleanup and a merge of the change buffers to be performed before MariaDB is shut down:
+The InnoDB shutdown mode still needs to be changed. The value `0` causes a full purge and change buffer merge to be performed before MariaDB shuts down:
 
 ```shell
-mysql -uroot -p -e"SET GLOBAL innodb_fast_shutdown = 0"
+mysql -u root -p -e "SET GLOBAL innodb_fast_shutdown = 0"
 ```
 
-A new file is created for the different configuration settings and our standard configuration is inserted:
+A new file is created for the custom configuration settings and our default configuration is inserted:
 
 ```shell
 sudo nano /etc/mysql/mariadb.conf.d/99-i-doit.cnf
 ```
 
-!!! example "This file contains the new configuration settings. For **optimal performance, these settings should be adapted to the (virtual) hardware**. For optimal settings, please refer to [mariadb.com](https://mariadb.com/kb/en/optimization-and-tuning/)"
+!!! example "This file contains the new configuration settings. For **optimal performance, these settings should be adjusted to the (virtual) hardware**. For optimal settings, please refer to [mariadb.com](https://mariadb.com/kb/en/optimization-and-tuning/)"
 
 ```ini
 [mysqld]
@@ -329,7 +332,7 @@ table_open_cache_instances = 8
 sql-mode = ""
 ```
 
-Finally, MariaDB is restarted:
+Finally, MariaDB is started:
 
 ```shell
 sudo systemctl restart mysql
@@ -337,7 +340,6 @@ sudo systemctl restart mysql
 
 ## Next Step
 
-setup.md
-Now the operating system is prepared and i-doit can be installed.
+The operating system is now prepared so that i-doit can be installed:
 
-[Proceed with **Setup**](../setup.md){ .md-button .md-button--primary }
+[Continue to **Setup**](../setup.md){ .md-button .md-button--primary }

@@ -1,24 +1,33 @@
-# Advanced Settings
+---
+title: Advanced settings
+description: "The advanced settings allow you to adjust the behavior of object lists to your requirements -- from the number of entries per page to deletion options."
+icon:
+status:
+lang: en
+---
 
-Many parameters concerning the [object lists](index.md) can be adapted according to your requirements. This increases clarity and provides the possibility to gain access to desired contents quickly.
+# Advanced settings
 
-## Adapting the Number of Objects per Page
+The advanced settings allow you to adjust the behavior of [object lists](index.md) to your requirements -- from the number of entries per page to deletion options.
 
-You have the possibility to define the number of displayed [objects](../structure-of-the-it-documentation.md) per page for the system. This is a custom setting so that all users are able to determine the objects per page for their own view individually. You can enter and set the number with [**Administration → User settings → User interface**](../../system-administration/administration/user-settings/user-interface/index.md). A very high value may reduce performance.
+[![Advanced-settings](../../assets/images/de/grundlagen/objekt-liste/erweiterte-einstellungen.png)](../../assets/images/de/grundlagen/objekt-liste/erweiterte-einstellungen.png)
 
-## Maximum Length of Object Titles
+## Adjusting the number of objects per page
 
-Depending on how many attributes or columns are to be displayed in a list, it may be useful to limit the maximum length of the object title. Should an [object title](../unique-references.md) exceed this length, it will be abbreviated with three dots (...) from the specified length. You can adapt the maximum length with [**Administration → [Tenant-Name] management → [Tenant-Name] Settings → Maximum lengths → Object title in lists**](../../system-administration/administration/tenant-management/settings-for-tenant.md#maximum-lengths). Enter the desired maximum length as a positive integer into the text field.
+You set the number of displayed [objects](../it-documentation-structure.md) per page under **Administration → User settings → User interface**. Since this is a user-specific setting, each user can choose their own value. Note: A very high value can reduce performance.
 
-## Activation/Deactivation of the Quickpurge button
+## Maximum length of object titles
 
-You can add the [**Quickpurge**](../../system-administration/administration/tenant-management/settings-for-tenant.md#cmdb) button to the action bar in object lists. With **Administration → [Tenant-Name] management → [Tenant-Name] Settings → Activate quickpurge button** you can either select **Yes** to display the button or **No** so that it isn't shown.
+Depending on how many attributes or columns are displayed in a list, it may be useful to limit the maximum length of the object title. If an [object title](../unique-references.md) exceeds this length, it is abbreviated with three dots (...) from the specified length. The maximum length can be adjusted under **Administration → [Tenant name] Administration → Settings for [Tenant name] → Maximum length of strings → Object title in lists**. Enter the desired maximum character length as a positive integer in the text field.
 
-## Activation/ Deactivation of the Drag and Drop function
+## (De)activating the Quickpurge button
 
-An object can be assigned to another [object type](../structure-of-the-it-documentation.md) by using the drag and drop function. With [**Administration → [Tenant-Name] management → [Tenant-Name] → Settings Graphical interface → Drag 'n' Drop of objects**](../../system-administration/administration/tenant-management/settings-for-tenant.md#graphical-interface) you can either activate the function by
-choosing **Yes** or deactivate it by choosing **No**.
+The [action bar in object lists](action-bar.md) can be extended with the [**Quickpurge**](../life-and-documentation-cycle.md) button. Under **Administration → [Tenant name] Administration → Settings for [Tenant name] → CMDB → Enable Quickpurge button**, select the value **yes** in the drop-down menu to show the button, or **no** to hide it.
 
-## Display of Templates in Object Lists
+## (De)activating drag-and-drop
 
-Templates aren't displayed in object lists in i-doit. However, you can display them beside Norma, Archived and Deleted as templates. Use [**Administration → [Tenant-Name] management → [Tenant-Name] Settings → Templates → Show template filter in object lists**](../../system-administration/administration/tenant-management/settings-for-tenant.md#templates) to carry out the corresponding settings.
+Via drag-and-drop, an object can be assigned to another [object type](../it-documentation-structure.md). Under **Administration → [Tenant name] Administration → Settings for [Tenant name] → Interface display → Drag 'n' Drop of objects**, the function can be deactivated by selecting the value **no** or activated by selecting **yes**.
+
+## Showing templates in object lists
+
+Templates are not displayed in object lists in i-doit by default. However, this condition can be shown alongside Normal, Archived and Deleted as Template. This is possible under **Administration → [Tenant name] Administration → Settings for [Tenant name] → Templates → Show template filter in object lists**.

@@ -1,51 +1,56 @@
-# H-Inventory
+---
+title: "h-inventory"
+description: "With h-inventory, you automatically inventory hardware, software, and entire networks."
+icon:
+status:
+lang: en
+---
+# h-inventory
 
-!!! warning "Please create a complete backup before making any changes to an interface/import. If the result is not satisfying, it can then be restored"
+!!! warning "Please create a complete backup before making any changes to an interface/import. If the result is not satisfactory, the backup can then be restored"
 
-h-inventory is an open source software for automatic inventory of hardware and software components as well as entire networks. The software is available on SourceForge at [http://sourceforge.net/projects/h-inventory/](http://sourceforge.net/projects/h-inventory/) for various operating systems.
+With h-inventory, you automatically inventory hardware, software, and entire networks. The open-source software is available on SourceForge at [http://sourceforge.net/projects/h-inventory/](http://sourceforge.net/projects/h-inventory/) for various operating systems.
 
-i-doit is able to import data from the inventory tool h-inventory. The data exported there in XML format is prepared during import to such an extent that the information necessary for a CMDB can be taken over as far as possible. In this way, a lot of essential information can be collected automatically as the basis for a CMDB or IT documentation, in order to be manually enriched with further information in a later step.
+i-doit imports the data exported by h-inventory in XML format and adopts all CMDB-relevant information. This allows you to quickly build a data foundation that you can then further enrich manually.
 
-**The following data can be transferred from h-inventory:**
+**The following data can be imported from h-inventory:**
 
-**[![h-inventory-transfer](../assets/images/en/consolidate-data/h-inventory/1-hi.png)](../assets/images/en/consolidate-data/h-inventory/1-hi.png)**
+[![Attributes and categories](../assets/images/de/daten-konsolidieren/h-inventory/1-hinv.jpg)](../assets/images/de/daten-konsolidieren/h-inventory/1-hinv.jpg)
 
-Before an import, i-doit must be configured accordingly.
+## Configuration
 
-Configuration
--------------
+Before importing, configure the interface under **Administration → Import and Interfaces → H-Inventory → Configuration**. In the **Object Matching Profile** parameter, you define [how already documented objects are identified](identify-objects-during-imports.md). Recognized objects are updated during import instead of being created as duplicates.
 
-For a manual data import, the configuration is located under Administration → Interfaces / External Data → Import → h-Inventory → Configuration. There, only the parameter Object Matching Profile is used to specify [how already documented objects are to be identified](object-identification-during-imports.md). Identified objects are updated during data import.
+## Inventorying a Windows Client
 
-Inventory of a Microsoft Windows Client via H-Inventory
--------------------------------------------------------
+To scan a Windows client with h-inventory:
 
-Download the H-Inventory package from i-doit → Tools → Import → Scripts
+1. Download the H-Inventory package under **Extras → CMDB → Import → H-Inventory**.
+2. Extract the archive.
+3. Enter the IP addresses to be scanned in the **computer.txt** file.
+4. Run **scan.bat**.
 
-[![h-inventory-transfer](../assets/images/en/consolidate-data/h-inventory/2-hi.png)](../assets/images/en/consolidate-data/h-inventory/2-hi.png)
+[![XML Import](../assets/images/de/daten-konsolidieren/h-inventory/1-hinv.jpg)](../assets/images/de/daten-konsolidieren/h-inventory/1-hinv.jpg)
 
-Unpack the archive.
+After the scan is complete, you will find the export as **computername-xx.xml** in the same directory.
 
-Enter the IP address(es) to be scanned in computer.txt Execute scan.bat.
+## Graphical Import
 
-After successful execution of the script, the export is located in the file "computername-xx.xml" in the same directory.
+To import the scan results via the web interface:
 
-Graphical import of an H-Inventory export
------------------------------------------
+1. Navigate to **Extras → Import → Import**.
+2. Upload the XML file.
+3. Select the file from the list of uploaded exports.
+4. Select the object type **Client** and the import method **inventory** (for H-Inventory).
+5. Start the import with **Next >>**.
 
-i-doit -> Tools -> Import -> Import
+The imported client is now available in i-doit.
 
-Upload XML file
+## Import via Console
 
-Select file from the list of uploaded exports
+You can also automate the import. Use the [i-doit console utility](../automation-and-integration/cli/index.md) for this:
 
-Select appropriate object type and import method - in this case client and inventory (for H-Inventory)
+1. Ensure the XML file is accessible on the server.
+2. Start the import via the console.
 
-Import with "Next "".
-
-The imported client is now available
-
-Import eines H-Inventory Exports per Konsole
---------------------------------------------
-
-Besides the possibility to upload the XML file via the i-doit interface and import the information, this process can also be automated. The i-doit [Console](../automation-and-integration/cli/index.md) is used for this purpose. Before the import can be executed, it must be ensured that the XML file is available to the system. To do this, the XML file must be copied to the i-doit directory imports or stored there directly. Afterwards the import can be started via the console. A description of the possible parameters and an example call can be found in the [corresponding article](../automation-and-integration/cli/index.md) for the import-hinventory command.
+All parameters and an example call are available via the `--help` option.

@@ -1,3 +1,10 @@
+---
+title: Bearbeitungssperre
+description: "Kollaboratives Arbeiten an der IT-Dokumentation bringt auch so manche Fallstricke mit sich."
+icon:
+status:
+lang: de
+---
 # Bearbeitungssperre
 
 Kollaboratives Arbeiten an der IT-Dokumentation bringt auch so manche Fallstricke mit sich. Damit sich Änderungen von Benutzern nicht gegenseitig überschreiben, bringt i-doit eine Bearbeitungssperre mit. Diese räumt einem Benutzer exklusive Schreibrechte ein. Alle anderen Benutzer erhalten in der Zeit der Sperre lediglich Leserechte.

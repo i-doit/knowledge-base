@@ -1,24 +1,32 @@
+---
+title: Events
+description: "With the Events add-on, you automate actions when changes are made to your IT documentation."
+icon:
+status:
+lang: en
+---
 # Events
 
-The Event [add-on](./index.md) allow for a high degree of automation when working with the [IT documentation](../glossary.md). If something is changed in the IT documentation, then third-party system will be informed about these changes. If, for example, a new VM is documented in i-doit, it can automatically be created and provisioned on a virtualization host.
+With the Events [add-on](./index.md), you automate actions when changes are made to your [IT documentation](../glossary.md). When something is changed in i-doit, you can automatically notify third-party systems. For example, if you document a new VM, it can be automatically created and provisioned on a virtualization host.
 
-## Rights assignment
+!!! info "You can find a practical example on our [Blog](https://www.i-doit.com/blog/event-add-on/)"
 
-Under **Administration → User permissions → Events**, [rights for persons and groups of persons](../efficient-documentation/rights-management/index.md) can be adjusted.
+## Assigning rights
 
-[![Rights assignment](../assets/images/en/i-doit-add-ons/events/1-eve.png)](../assets/images/en/i-doit-add-ons/events/1-eve.png)
+Under **Administration → Permissions → Events**, [permissions for persons and person groups](../efficient-documentation/permission-management/index.md) can be adjusted.
+
+[![Assigning rights](../assets/images/de/i-doit-add-ons/events/1-eve.png)](../assets/images/de/i-doit-add-ons/events/1-eve.png)
 
 ## Configuration
 
-The configuration is accessed via **Administration → Add-ons → Events → Hooks**.
+The configuration is accessed via **Administration → Add-ons → Events → Hooks**.
 
-[![Configuration](../assets/images/en/i-doit-add-ons/events/2-eve.png)](../assets/images/en/i-doit-add-ons/events/2-eve.png)
+[![Configuration](../assets/images/de/i-doit-add-ons/events/2-eve.png)](../assets/images/de/i-doit-add-ons/events/2-eve.png)
 
-!!! attention "404 Page not Found"
+!!! attention "404 Not Found"
+    If only an error message appears when accessing the event configuration, stating that the page could not be found, this is most likely due to an incorrect [web server configuration](../administration/management/tenant-management/index.md). Both the Apache rewrite module must be activated and reading the .htaccess file in the i-doit installation directory must be perwithted (AllowOverride All).
 
-    When you try to access the event configuration and receive an error message, stating that the page could not be found, this is in all likelihood due to a faulty [configuration of the web server](../installation/manual-installation/system-settings.md). The Apache module rewrite has to be activated and the processing of the .htaccess file in the installation folder of i-doit needs to be permitted (AllowOverride All).
-
-Events are combined with commands. An event is triggered by a hook, an internal routine in i-doit. The following events are available:
+You combine events with command calls. An event is triggered by a hook -- i.e., during an internal routine in i-doit. The following events are available:
 
 -   [Category](../glossary.md)
     -   Create (only via the web GUI)
@@ -31,15 +39,19 @@ Events are combined with commands. An event is triggered by a hook, an internal 
     -   Create/Save
     -   Purge
 
-Thus there exist matching events for all [states in the IT documentation](../basics/life-and-documentation-cycle.md). As many event-to-command combinations as desired are possible.
+For all [states in IT documentation](../basics/life-and-documentation-cycle.md), there are corresponding events. You can create any number of event-to-command-call combinations.
 
-The command is carried out immediately once the configured event occurs. A shell script is executed for this purpose. This requires the rights to be executed by the user or group with whose rights the web server is running. On a Debian-based operating system this is the user www-data with the group of the same name. Because of this, the script under GNU/Linux requires the right bit for executing (x). The programming language is arbitrary but it should be supported by the operating system (Bash, PHP, Python, Perl etc.).
+When a configured event occurs, i-doit immediately executes a shell script. Note the following:
 
-[![command](../assets/images/en/i-doit-add-ons/events/3-eve.png)](../assets/images/en/i-doit-add-ons/events/3-eve.png)
+- The script must be executable by the user or group under which the web server runs (on Debian: `www-data`).
+- On GNU/Linux, set the execute permission bit (`chmod +x`).
+- Any programming language is supported, as long as the operating system supports it (Bash, PHP, Python, Perl, etc.).
 
-Information about the event is referred to the shell script. The information is encoded as JSON with BASE64. The following is an example of a JSON string when saving a category entry (the BASE64 decoding already took place):
+[![Command call](../assets/images/de/i-doit-add-ons/events/3-eve.png)](../assets/images/de/i-doit-add-ons/events/3-eve.png)
 
-```sh
+The shell script receives information about the event as BASE64-encoded JSON. Here is an example after decoding -- it shows saving a category entry:
+
+```shell
 {
     "success": 0,
     "objectID": "2912",
@@ -142,31 +154,31 @@ Information about the event is referred to the shell script. The information is 
 }
 ```
 
-You can see that the **General** category was saved successfully for the "Headquarter Network" object.
+In this example, the **General** category for the object "Headquarter Network" was successfully saved.
 
-Additional parameters that are given to the shell script can also be set. These are static, in other words without a placeholder.
+You can configure additional static parameters that are passed to the shell script. Placeholders are not supported.
 
 !!! success "i-doit Controller"
-
-    The described shell scripts are not only suited to control third-party systems but also i-doit itself. There is no reason not to use such a shell script in order to access the command line tool of i-doit, the [controller](../automation-and-integration/cli/index.md) or the [API](index.md). This way, automated tasks can be handled within the IT documentation.
+    The described shell scripts are not only suitable for controlling third-party systems but also i-doit itself. There is nothing preventing you from calling i-doit's command-line tool, the [Controller](../automation-and-integration/cli/index.md), or the [API](./api/index.md) via such a shell script. This allows automated tasks to be performed within the IT documentation.
 
 !!! success "Performance"
+    The command calls are executed **synchronously** -- when clicking **Save**, i-doit waits until the shell script has finished. With many or extensive scripts, this can slow down the web GUI.
 
-    The commands are executed synchronously. For example, they are executed immediately as soon as the **Save** button is used and the system will wait until the shell script has ended. With many and/or extensive shell scripts this slow will down the web GUI of i-doit and thus negatively affect its usability. Because of this, it may be worthwhile to build a queue: i-doit runs a shell script which loads the parameters and stores them in a queue (for example in a temporary file). Another script is executed which processes this queue, using Cronjob or something similar. This way, an asynchronous workflow is created so that the usability of i-doit is not appreciably affected.
+    **Recommendation:** Build a queue. Your shell script receives the parameters and saves them to a temporary file. A separate cron job then processes this queue asynchronously. This way, the user does not experience any delay.
 
 ## Logging
 
-When an event is triggered and it is linked to a command, then this execution is logged. The last 500 entries are listed at **Administration → Add-ons → Events → History (Log)**.
+Each execution of an event command call is logged. The last 500 entries can be found under **Administration → Add-ons → Events → History (Log)**.
 
-[![Logging](../assets/images/en/i-doit-add-ons/events/4-eve.png)](../assets/images/en/i-doit-add-ons/events/4-eve.png)
+[![Logging](../assets/images/de/i-doit-add-ons/events/4-eve.png)](../assets/images/de/i-doit-add-ons/events/4-eve.png)
 
 ## Releases
 
 | Version | Date | Changelog |
 | --- | --- | --- |
-| 1.3 | 2022-09-05 | [Task] Change link to Knowledgebase  <br>[Task] PHP 8.0 Compatibility  <br>[Task] Design Compatibility  <br>[Bug]  Events are not triggered when changing/assigning roles |
-| 1.2 |     | [Improvement] The event contains information about the user  <br>[Bug] Custom category constants are not passed, when ranking entries |
-| 1.1.1 | 2019-07-31 | [Bug] Drop-down empty in hooks for object types<br> |
-| 1.1 | 2019-01-30 | [Bug] Constant of user defined categories is missing<br> |
+| 1.3 | 05.09.2022 | [Task] Change link to knowledgebase<br>[Task] PHP 8.0 Compatibilit<br>[Task] Design Compatibility<br>[Bug] Events are not triggered when changing/assigning roles |
+| 1.2 |     | [Improvement] The event contains information about the user<br>[Bug] Custom category constants are not passed, when ranking entries |
+| 1.1.1 | 31.07.2019 | [Bug] Drop-down empty in hooks for object types<br> |
+| 1.1 | 30.01.2019 | [Bug] Constant of user defined categories is missing<br> |
 | 1.0.1 |     | [Bug] i-doit 1.12 compatibility<br> |
-| 1.0 | 2018-07-03 | Initial release |
+| 1.0 | 03.07.2018 | Initial release |

@@ -1,6 +1,6 @@
 ---
-title: cmdb.object
-description: cmdb.object
+title: cmdb.objects
+description: "Fetch a list of objects"
 icon: material/api
 #status: updated
 lang: de

@@ -1,6 +1,15 @@
+---
+title: Usage
+description: "Simply run the application to output some basic information:"
+icon:
+status:
+lang: en
+---
 # Usage
 
-Just run the application to print some basic information:
+Simply run the application to output some basic information:
+
+[![Checkmk](../../assets/images/de/i-doit-add-ons/checkmk2/checkmk-hauptseite.png)](../../assets/images/de/i-doit-add-ons/checkmk2/checkmk-hauptseite.png)
 
 ```shell
 idoitcmk
@@ -20,9 +29,11 @@ or
 idoitcmk COMMAND --help
 ```
 
+
+
 ## Version information
 
-Which version of idoitcmk are the using? Just run
+Which version of idoitcmk are you using? Simply run:
 
 ```shell
 idoitcmk --version
@@ -30,7 +41,7 @@ idoitcmk --version
 
 ## List all commands
 
-If you want to know which commands are available you can get a complete list with:
+If you want to know which commands are available, you can output a complete list:
 
 ```shell
 idoitcmk list
@@ -38,22 +49,22 @@ idoitcmk list
 
 ## User interaction
 
-Before this application will ever alter data it will asked the user for permission. For example:
+Before this application changes data, it will ask you for permission. For example:
 
-17 hosts in Check_MK will be updated
-Do you like to proceed? [Y|n]:
+***17 hosts in Check_MK will be updated***
+***Do you want to continue? [Y|n]:***
 
-Default value is highlighted in upper-case (Y) so you can just hit enter to proceed.
+The default value is highlighted in uppercase (Y), so you can simply press Enter to continue.
 
-If you like to automate execution without any user interaction use option -y or --yes:
+If you want to execute without user interaction, use the -y or --yes option:
 
 ```shell
 idoitcmk push --yes
 ```
 
-## Fetch status information
+## Retrieving status information
 
-If you want to make sure everything is alright perform various tests:
+If you want to make sure everything is in order, run various tests:
 
 ```shell
 idoitcmk status
@@ -62,29 +73,29 @@ idoitcmk status
 The following tests are included:
 
 *   PHP environment
-*   Connection to i-doit JSON-RPC API
-*   Connection to Checkmk Web API
-*   Connection to Checkmk Livestatus API
+*   Connection to the i-doit JSON-RPC API
+*   Connection to the Checkmk Web API
+*   Connection to the Checkmk Livestatus API
 
 ## Verbosity
 
-During execution this application will print out more or less useful information. You can set the preferred level of verbosity with two options. Increase verbosity with -v or --verbose, decrease it with -q or --quiet. These log levels are available:
+During execution, this application outputs more or less useful information. You can set the desired level of verbosity with two options. Increase verbosity with -v or --verbose, decrease it with -q or --quiet. These log levels are available:
 
-| Level       | Color  | Option                   | Description                                      |
-| ----------- | ------ | ------------------------ | ------------------------------------------------ |
-| Fatal error | Red    | Always on                | Abort execution immediately                      |
-| Error       | Red    | Always on                | Something important went wrong                   |
-| Warning     | Yellow | Always on                | Skip a step due to lack of information           |
-| Notice      | Yellow | Disable with -q/--quiet  | Everything is alright but you should notice this |
-| Info        | Green  | Disable with -q/--quiet  | Just a information what is going on              |
-| Debug       | Grey   | Enable with -v/--verbose | Print out everything you got                     |
+| Level       | Color | Option                       | Description                                                   |
+| ----------- | ----- | ---------------------------- | -------------------------------------------------------------- |
+| Fatal error | Red   | Always on                    | Immediate abort of execution                                   |
+| Error       | Red   | Always on                    | Something important went wrong                             |
+| Warning     | Yellow | Always on                    | Skipping a step due to insufficient information               |
+| Notice      | Yellow | Disabled with -q/--quiet    | Everything is fine, but you should note the following      |
+| Info        | Green | Disabled with -q/--quiet     | Just information about what is going on                              |
+| Debug       | Gray  | Enabled with -v/--verbose    | Output everything                                                 |
 
-Disable colored output with option --no-colors. This is very useful for logging purposes, for example:
+Disable colored output with the --no-colors option. This is very useful for logging, for example:
 
 ```shell
 idoitcmk push --verbose --no-colors --yes > idoitcmk.log
 ```
 
-## Super-user rights
+## Superuser rights
 
-!!! info "Notice: There is no need to run this script in a production environment with super-user rights like root."
+Note: It is not necessary to run this script in a production environment with superuser rights like root.

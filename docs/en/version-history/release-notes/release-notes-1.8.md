@@ -1,35 +1,40 @@
+---
+title: Release Notes 1.8
+description: "> System requirements"
+icon:
+status:
+lang: en
+---
 # Release Notes 1.8
 
 > System Requirements
-> -------------------
-> 
-> i-doit 1.8 has no changes in its system requirements.
-> 
+> ---------------------
+>
+> i-doit 1.8 has no changed system requirements.
+>
 > Migrations
-> ----------
-> 
-> User-defined list views will be migrated when upgrading.
-> 
-> Standard Lists
-> --------------
-> 
-> Starting with i-doit 1.8 all standard, non customized object lists are redefined with new columns. These columns fit better into the object type context. If you want to use the old columns, please customize yourself an object list matching the old style.
-> 
-> Object matching
+> -----------
+>
+> Custom list views are migrated during the update.
+>
+> Default Lists
 > ---------------
-> 
-> Starting from i-doit 1.8 imports functions now match existing objects against imported objects with a new function. The feature comes with default settings that comply with the existing behaviour.
-> 
-> Please check the settings before the next import at **Administration → Interfaces → Import → Object-Matching Profiles**.
-> 
+>
+> Starting with i-doit 1.8, all object lists not customized by the user have been updated with new, more meaningful columns. If you prefer the old formatting, you will need to restore it by creating your own customized object list.
+>
+> Object Matching
+> ---------------
+>
+> Starting with i-doit 1.8, imports use the new object matching function. This feature is delivered with default settings that essentially correspond to the known behavior of i-doit.
+>
+> Please check the settings before the next import under **Administration → Interfaces → Import → Object Matching Profiles**.
+>
 > API
 > ---
-> 
-> The api is not longer part of our official package and is separately released as a module.
-> 
-> 
-> 
+>
+> The API is no longer part of the official package and is now published as a separate module. For more information, please refer to our Knowledge Base entry: [API](../../i-doit-add-ons/api/index.md)
+>
 > Floorplan Extension
-> -------------------
-> 
-> The Floorplan extension has to be updated in order to work with i-doit version 1.8. Please download the floorplan extension separately.
+> ---------------------
+>
+> The Floorplan extension must be updated together with version 1.8. Please download the Floorplan extension separately.

@@ -1,18 +1,60 @@
-# Technische Betriebsdokumentation, CMDB und ITSM-Tool-Integration mit i-doit
+---
+title: "Willkommen in der i-doit Knowledge Base"
+description: "Schön, dass du hier bist!"
+icon:
+status:
+lang: de
+---
+# Willkommen in der i-doit Knowledge Base
 
----------------------------------------------------------------------------
+Schön, dass du hier bist! Diese Knowledge Base ist deine zentrale Anlaufstelle für alles rund um i-doit — von der ersten Installation bis zur professionellen IT-Dokumentation im Unternehmenseinsatz.
 
-Mit i-doit hast du dich für eine Lösung entschieden, die du auf den geforderten Dokumentationsbedarf zuschneiden kannst. Unsere Knowledge Base (KB) bietet alles Wissenswerte rund um i-doit - sowohl für den Einstieg, als auch für die professionelle Nutzung der Software.
+Hier findest du Schritt-für-Schritt-Anleitungen, Best Practices und Lösungen für den täglichen Umgang mit deiner [CMDB](glossar.md). Egal ob du gerade erst startest oder i-doit bereits produktiv einsetzt: Wir helfen dir, das Beste aus deiner IT-Dokumentation herauszuholen.
 
-Diese Knowledge Base soll dir den Umgang mit der Software erleichtern. Bitte verwende viel Augenmaß bei Setup und Befüllung der [CMDB](glossar.md). Sie ist das zentrale Element bei der Verwaltung von IKT-Umgebungen. Gleichzeitig ist die CMDB Basis für die Integration von Daten aus anderen ITSM-Tools, beispielsweise für Inventarisierung, Monitoring oder Ticketing.
+---
 
-Dein Vorteil: Als Vermittler und Regisseur der ITIL-Disziplinen sorgt i-doit dafür, dass die spezialisierten Tools ihre Daten austauschen und dir eine zunehmend geschlossene Sicht auf dein ITSM erlauben.
+## Erste Schritte
 
-Wir freuen uns, wenn diese Knowledge Base einige der womöglich offenen Fragen klären kann, um dir den Umgang mit dem Programm noch einfacher und nützlicher zu gestalten und um dich schnell an die für dich wichtigen Funktionen heranzuführen.
+Du bist neu bei i-doit? Dann starte hier:
 
-Natürlich sind wir an Feedback interessiert. Die Fortentwicklung einer professionellen [IT-Dokumentation](glossar.md) lebt schließlich von den Anforderungen und Wünschen, die "draußen im Feld" in der täglichen Praxis entstehen. Daher freuen wir uns auf deine Rückmeldung unter **[feedback@i-doit.com](mailto:feedback@i-doit.com)**.
+-   [Wie beginne ich zu dokumentieren?](einfuehrung/wie-beginne-ich-zu-dokumentieren.md) — Der perfekte Einstieg
+-   [Checkliste für die IT-Dokumentation](einfuehrung/checkliste-fuer-die-it-dokumentation.md) — Nichts vergessen
+-   [Installation](installation/index.md) — i-doit installieren und einrichten
+-   [Erstanmeldung](grundlagen/erstanmeldung.md) — Dein erster Login
+
+## Häufig genutzte Themen
+
+-   [Objekte und Objekttypen](grundlagen/objekttyp-konfiguration.md) — Das Herzstück der CMDB
+-   [Kategorien und Attribute](grundlagen/kategorien-und-attribute.md) — Daten strukturieren
+-   [CSV-Datenimport](daten-konsolidieren/csv-datenimport/index.md) — Daten aus anderen Systemen übernehmen
+-   [JDisc Discovery](daten-konsolidieren/jdisc/index.md) — Netzwerk automatisch inventarisieren
+-   [Report Manager](auswertungen/report-manager.md) — Auswertungen und Berichte erstellen
+-   [API (JSON-RPC)](i-doit-add-ons/api/index.md) — i-doit programmgesteuert steuern
+-   [LDAP-Anbindung](benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md) — Benutzer aus dem Verzeichnisdienst synchronisieren
+
+## Für Profis
+
+-   [Rechteverwaltung](effizientes-dokumentieren/rechteverwaltung/index.md) — Wer darf was?
+-   [i-doit Add-ons](i-doit-add-ons/index.md) — Funktionsumfang erweitern
+-   [Automatisierung und Integration](automatisierung-und-integration/index.md) — Monitoring, Service Desk und mehr anbinden
+-   [i-doit console](automatisierung-und-integration/cli/index.md) — Kommandozeile für Automatisierung
+
+## Immer aktuell
+
+-   [Release Notes](versionshistorie/release-notes/index.md) — Was ist neu?
+-   [Changelogs](versionshistorie/changelogs/index.md) — Alle Änderungen im Detail
+-   [FAQ](faq.md) — Häufig gestellte Fragen
+-   [Glossar](glossar.md) — Begriffe rund um i-doit
+
+## Hilfe und Feedback
+
+Du findest nicht, was du suchst? Wir sind für dich da:
+
+-   [i-doit Community Forum](https://community.i-doit.com/) — Austausch mit anderen Anwendern
+-   [i-doit Help Center](https://help.i-doit.com/) — Bekannte Fehler und Lösungen
+-   [help@i-doit.com](mailto:help@i-doit.com) — Unser Support-Team hilft dir weiter
+-   [feedback@i-doit.com](mailto:feedback@i-doit.com) — Deine Ideen und Anregungen sind willkommen
 
 Wir wünschen dir einen erfolgreichen Start mit i-doit!
 
-Herzlichen Gruß aus Düsseldorf<br>
 Dein i-doit Team

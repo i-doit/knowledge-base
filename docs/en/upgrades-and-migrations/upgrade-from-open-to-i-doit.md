@@ -1,87 +1,81 @@
 ---
-title: Upgrade from i-doit open to i-doit
-description: Upgrade from i-doit open to i-doit
-icon: material/arrow-up-bold-hexagon-outline
+title: Upgrade from i-doit open to pro
+description: "How to upgrade from i-doit open to i-doit with extended features."
+icon: fontawesome/brands/linux
 status:
 lang: en
 ---
 
-# Upgrade from i-doit open to i-doit
+How to upgrade from _i-doit open_ to _i-doit_ with extended features.
 
-How do you switch from _i-doit_ _open_ to _i-doit_ with added functionality in a quick and easy way?
+## Motivation
 
-Motivation
-----------
+_i-doit_ offers [significantly more features](https://www.i-doit.org/cmdb-it-documentation/), compared to the open variant that make your daily work easier.
 
-What are the advantages of documenting the IT infrastructure rather with the _i-doit_ version than with the _i-doit_ _open_ version? The reason is simple: _[i-doit offers considerably more functions](https://www.i-doit.org/cmdb-it-documentation/)_ which can be of great help for your daily work.
-
-_i-doit_ in Seven Steps
----------------------------
-
-Here is a quick overview about the necessary steps before going further into details:
+## Overview: Seven Steps to _i-doit_
 
 1. Preparation
-2. Download and implementation of the update
-3. Installation of the _i-doit_ extension
-4. License activation
-5. Clear cache
+2. Download and apply the pro update
+3. Install the pro add-on
+4. Apply license
+5. Clear caches
 6. Configure permissions
-7. Finishing work
+7. Post-processing
 
-Preparation
------------
+## Preparation
 
-Important: This procedure is irreversible. It is essential to create a [backup](../maintenance-and-operation/backup-and-recovery/index.md)! After upgrading, a valid [license for _i-doit_](../maintenance-and-operation/licensing.md) is required. The [system requirements](../installation/system-requirements.md) and [system settings](../installation/manual-installation/system-settings.md) must also be met.
+!!! warning "This process cannot be undone. Create a working [backup](../maintenance-and-operation/backup-and-restore/index.md)!"
 
-Should you use an older version of the _i-doit open_ installation, you have to bear the following facts in mind:
+After the upgrade, you will need a valid [license for i-doit](../maintenance-and-operation/licensing.md). Make sure that the [system requirements](../installation/system-requirements.md) and [settings](../installation/manual-installation/system-settings.md) are met.
 
-*   When you use _i-doit open_ version **0.9.x** or older, an upgrade is not possible.
-*   When you use _i-doit open_ **1.4.x**, you have to upgrade to the newest version starting from version 1.8.
-*   When you have installed i-doit open **1.8.x** or higher, you can continue with the upgrade.
+For older open installations, note:
 
-You can download the most current version from [i-doit.org](http://i-doit.org/).
+*   If i-doit open **0.9.x** or older is installed, an upgrade is not possible.
+*   If i-doit open **1.4.x** is installed, it must first be updated to the latest version from 1.8.
+*   If i-doit open **1.8.x** or higher is installed, the upgrade can proceed.
 
-Download and Implementation of the Update
-------------------------------------------------
+The current version is available for download at [i-doit.org](http://i-doit.org/) .
 
-Download the update package of _i-doit_ from the [customer portal](../system-administration/customer-portal.md) and carry out an update [in the usual way](../maintenance-and-operation/update.md). It is important that the version number of the installed _i-doit open_ version corresponds to the desired _i-doit_ version. Example: You have to use update package _i-doit_ 1.8, when your installed version is _i-doit open_ 1.8.
+## Download and Apply the pro Update
 
-The upgrade doesn't work with the installation packet of the _i-doit_ version.
+1. Download the update package of the pro variant from the [customer portal](../administration/customer-portal.md) .
+2. Apply it [as usual](../maintenance-and-operation/i-doit-update.md) .
 
-Installation of the _i-doit-addon_
---------------------------------------
+The version numbers must match: If i-doit open 1.8 is installed, use the update package i-doit 1.8. The installation package of the pro variant does **not** work for the upgrade.
 
-After upgrading to the version you have to install the addon. The addon is available in the [Admin-Center](../system-administration/admin-center.md) under **Add-ons**. Here you can find the installation button.
+## Install the pro Add-on
 
-License Activation
-------------------
+After the update, install the pro add-on in the [Admin Center](../administration/admin-center.md) under **Add-ons**.
 
-The upgrade is completed now and the last step is the activation of a valid license. You can activate it directly in the [Admin-Center under **Licenses**](../maintenance-and-operation/licensing.md).
+## Apply License
 
-Clear Cache
------------
+Apply the valid license [in the Admin Center under **Licenses**](../maintenance-and-operation/licensing.md) .
 
-Now we log off from the Admin-Center and log in again to _i-doit_. Now we click through **Administration** → **System tools → Cache / Database** to the button **Clear complete Cache**. We clear the browser cache by pressing **CTRL+F5**.
+## Clear Caches
 
-Configure Permissions
----------------------
+1. Log out of the Admin Center and log in to i-doit.
+2. Navigate to **Administration → System Tools → Cache / Database** and click **Clear entire cache**.
+3. Clear the browser cache with **CTRL+F5**.
 
-In contrast to _i-doit open, i-doit_ does possess a free configurable [authorization system](../system-administration/administration/user-permissions.md). For this reason, the user who is logged in at this moment will not have all permissions.
+## Configure Permissions
 
-To give your admin-user full access in a few steps, go to **Administration** → **Authorization system** → **Authorization system reset** and give your user full access to _i-doit_ by entering the credentials for the [Admin-Center](../system-administration/admin-center.md).
+Unlike i-doit open, i-doit has a comprehensive [permissions system](../efficient-documentation/permission-management/index.md). Your user does not yet have all permissions after the upgrade.
 
-Now you can configure the assignment of permissions for persons and groups of persons.
+To get full access:
 
-Finishing Work
---------------
+1. Navigate to **Administration → Permissions System → Reset Permissions System**.
+2. Enter the credentials for the [Admin Center](../administration/admin-center.md) .
 
-If you have not yet done so, you should carry out the following steps to ensure a flawless performance of _i-doit_:
+Then configure the permissions for other persons and person groups.
 
-*   [Set up and test Backup and Restore](../maintenance-and-operation/backup-and-recovery/index.md)
-*   [Set up Cronjobs](../automation-and-integration/cli/index.md) (with the controller)
-*   [Carry out an optional update to the current _i-doit_ version:](../maintenance-and-operation/update.md) With a valid license it is possible and recommended that you always update to the newest version of _i-doit_.  
+## Post-Processing
 
-Downgrade to _i-doit open_?
----------------------------
+Make sure the following items are completed:
 
-It's not intended to go back to an older version of _i-doit_. This is also the case for downgrades from _i-doit_ to the _i-doit open_ variant.
+*   [Set up and test backup and restore](../maintenance-and-operation/backup-and-restore/index.md)
+*   [Set up cron jobs](../automation-and-integration/cli/index.md) (with the controller)
+*   [Optionally update to the current pro version:](../maintenance-and-operation/i-doit-update.md) With a valid license, it is possible and highly recommended to always update to the latest version of i-doit.
+
+## Downgrade to i-doit open?
+
+A downgrade from _i-doit_ to _i-doit open_ is not planned and is not supported.

@@ -1,6 +1,15 @@
+---
+title: Lebens und Dokumentationszyklus
+description: "Der Lebens- und Dokumentationszyklus bildet in i-doit ab, in welchem Stadium sich eine IT-Komponente befindet -- und in welchem Zustand die Dokumentation..."
+icon:
+status:
+lang: de
+---
 # Lebens und Dokumentationszyklus
 
-IT-Komponenten kommen und gehen. Sie werden geplant, angeschafft, betrieben und irgendwann wieder ausgemustert. Bingo: Es geht um das Life Cycle Management. In der [IT-Dokumentation](../glossar.md) spielt dies eine wichtige Rolle, weil hierbei nachvollzogen werden kann, welchen Status eine Komponente haben soll bzw. hat. Zudem soll die IT-Dokumentation an sich archiviert und gelöscht werden können.
+Der Lebens- und Dokumentationszyklus bildet in i-doit ab, in welchem Stadium sich eine IT-Komponente befindet -- und in welchem Zustand die Dokumentation selbst steht.
+
+IT-Komponenten durchlaufen einen Lebenszyklus: Sie werden geplant, angeschafft, betrieben und irgendwann ausgemustert. i-doit macht diesen Zyklus nachvollziehbar. Gleichzeitig kannst du auch die Dokumentation selbst archivieren und löschen.
 
 ## Lebenszyklus von IT-Komponenten
 
@@ -63,7 +72,7 @@ Der Zyklus sieht vor, dass jedes Dokumentations-Artefakt den Zustand **Normal** 
 
 Neben diesen drei Zuständen existieren bei Objekten Sonderfälle:
 
--   **Unfertig**:<br> Wird ein neues Objekt erstellt, aber nicht gespeichert, erhält es diesen Zustand. Dies passiert beispielsweise, wenn ein Objekt zwar neu angelegt, aber der Button **Speichern** nicht gedrückt wird. Diese Objekte lassen sich nur über einen Report aufspüren und dann weiter verwenden. Daher sollten diese regelmäßig gelöscht werden. Dies kann über **Verwaltung → [Mandanten-Name] Verwaltung → Systemreparatur und Bereinigung → Unfertige Objekte entfernen** gemacht werden. Alternativ kann dies auch automatisch geschehen. Mehr dazu finden Sie weiter unten in diesem Artikel.
+-   **Unfertig**:<br> Wird ein neues Objekt erstellt, aber nicht gespeichert, erhält es diesen Zustand. Dies passiert beispielsweise, wenn ein Objekt zwar neu angelegt, aber der Button **Speichern** nicht gedrückt wird. Diese Objekte lassen sich nur über einen Report aufspüren und dann weiter verwenden. Daher sollten diese regelmäßig gelöscht werden. Dies kann über **Verwaltung → [Mandanten-Name] Verwaltung → Systemreparatur und Bereinigung → Unfertige Objekte entfernen** gemacht werden. Alternativ kann dies auch automatisch geschehen. Mehr dazu findest du weiter unten in diesem Artikel.
 -   **Template**:<br> Ein Objekt kann als [Vorlage](../effizientes-dokumentieren/templates.md) für weitere Objekte fungieren.
 -   **Änderungsvorlage**:<br> Ein Objekt kann als Änderungsvorlage für die [Massenänderung](../effizientes-dokumentieren/massenaenderung.md) fungieren.
 
@@ -71,13 +80,17 @@ Soll ein Dokumentations-Artefakt unwiderruflich gelöscht werden, folgt nach der
 
 ### Objekte archivieren, als gelöscht markieren oder unwiderruflich löschen (purge)
 
-Der Zustand eines Objekts ist in der **Allgemein**\-Kategorie sichtbar. Sollen ein oder mehrere Objekte archiviert, als gelöscht markiert oder unwiderruflich gelöscht werden, geschieht dies über die [Objekt-Liste](objekt-liste/index.md). Dazu werden die Checkboxen der jeweiligen Objekte markiert und einer der Buttons **Archivieren**, **Löschen** oder **Purge** gedrückt.
+Den Zustand eines Objekts siehst du in der **Allgemein**-Kategorie. Um ein oder mehrere Objekte in einen anderen Zustand zu versetzen, gehst du so vor:
+
+1. Öffne die [Objekt-Liste](objekt-liste/index.md).
+2. Markiere die Checkboxen der gewünschten Objekte.
+3. Klicke auf **Archivieren**, **Löschen** oder **Purge**.
 
 [![objekte-archivieren-oder-purgen](../assets/images/de/grundlagen/lebens-und-dokumentationszyklus/4-lud.png)](../assets/images/de/grundlagen/lebens-und-dokumentationszyklus/4-lud.png)
 
-Es kann immer nur in den nächstmöglichen Zustand gewechselt werden. Ist ein Objekt im Status **Normal**, kann aus der Liste heraus nur der zum nächsten Zustand **archiviert** gewechselt werden. Gelöscht kann dann erst aus der oben rechts nach archivierten Objekten gefilterten Liste heraus werden. Zudem kann mit **Wiederherstellen** wieder auf den vorherigen Zustand gewechselt werden.
+Du kannst immer nur in den nächstmöglichen Zustand wechseln. Ein Objekt im Status **Normal** kannst du aus der Liste heraus nur **archivieren**. Zum Löschen filterst du oben rechts nach archivierten Objekten und wechselst dann in den Zustand **Gelöscht**. Mit **Wiederherstellen** kehrst du jederzeit zum vorherigen Zustand zurück.
 
-Beim unwiderruflichen Löschen (**Purge**) gibt es keine Rückfrage, außer es existieren Beziehungen zu anderen Objekten.
+Beim unwiderruflichen Löschen (**Purge**) erfolgt keine Rückfrage -- es sei denn, es bestehen Beziehungen zu anderen Objekten.
 
 ### Kategorie-Einträge archivieren, als gelöscht markieren oder unwiderruflich löschen (Purge)
 
@@ -85,11 +98,11 @@ Eine ähnliche Funktionalität wie bei Objekten existiert bei manchen [Listen-Ka
 
 ### Vereinfachtes Löschen (Quickpurge)
 
-Soll ein Dokumentations-Artefakt unwiderruflich gelöscht werden, muss es zuvor erst archiviert und dann als gelöscht markiert werden. Um diesen Zyklus abzukürzen, bietet sich an, den Button **Quickpurge** zu aktivieren. Dies geschieht unter **Verwaltung → [Mandanten-Name] Verwaltung → CMDB → Quickpurge-Button aktivieren**. Auf diese Weise kann ein Objekt oder ein Kategorie-Eintrag unabhängig vom Zustand unwiderruflich gelöscht werden.
+Normalerweise musst du ein Dokumentations-Artefakt erst archivieren und dann als gelöscht markieren, bevor du es unwiderruflich löschen kannst. Um diesen Zyklus abzukürzen, aktivierst du den Button **Quickpurge** unter **Verwaltung → [Mandanten-Name] Verwaltung → CMDB → Quickpurge-Button aktivieren**. Damit kannst du ein Objekt oder einen Kategorie-Eintrag unabhängig vom aktuellen Zustand sofort unwiderruflich löschen.
 
 ### Auflisten aller archivierten oder als gelöscht markierten Objekte
 
-Um eine Liste mit allen archivierten oder als gelöscht markierten Objekte zu erhalten, bietet sich ein [Report](../auswertungen/report-manager.md) an, der über den Abfrage-Editor zusammengestellt werden kann.
+Um alle archivierten oder als gelöscht markierten Objekte aufzulisten, erstellst du am besten einen [Report](../auswertungen/report-manager.md) über den Abfrage-Editor.
 
 ### Unfertige/archivierte/gelöscht markierte Objekte oder Kategorie-Einträge gesammelt löschen (Purge)
 
@@ -97,11 +110,11 @@ Fast immer sind unfertige Objekte unerwünscht, denn sie sind nicht sichtbar und
 
 #### Manuelles Löschen
 
-Über die Web GUI lassen sich diese Artefakte löschen. Die entsprechende Funktionalität befindet sich unter **Verwaltung → [Mandanten-Name] Verwaltung → Systemreparatur und Bereinigung → Objekte** bzw. **Kategorien**. Nach dem Drücken eines der angebotenen Buttons wird eine Meldung mit der Anzahl der zu löschenden Objekte oder Kategorie-Einträge angezeigt und nach dem Löschen am unteren Ende der Seite eine Statistik angezeigt, wie viele Objekte bzw. Kategorie-Einträge gelöscht wurden.
+Du löschst diese Artefakte über die Web GUI unter **Verwaltung → [Mandanten-Name] Verwaltung → Systemreparatur und Bereinigung → Objekte** bzw. **Kategorien**. Nach dem Klick auf einen der angebotenen Buttons zeigt i-doit dir die Anzahl der zu löschenden Objekte oder Kategorie-Einträge an. Nach dem Löschen erscheint am unteren Seitenrand eine Statistik mit der Anzahl der gelöschten Einträge.
 
 #### Automatisches Löschen
 
-Das [i-doit console utility](../automatisierung-und-integration/cli/index.md) bietet ebenfalls eine Möglichkeit, unerwünschte Objekte unwiderruflich zu löschen. Weitere Optionen können über die `--help` Option für den Befehl eingesehen werden.
+Das [i-doit console utility](../automatisierung-und-integration/cli/index.md) bietet dir ebenfalls die Möglichkeit, unerwünschte Objekte unwiderruflich zu löschen. Weitere Optionen zeigt dir die `--help` Option.
 
 ```shell
 sudo -u www-data console.php system-objectcleanup -u admin -p admin -i 1 --objectStatus 3

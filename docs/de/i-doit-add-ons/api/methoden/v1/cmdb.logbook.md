@@ -1,6 +1,6 @@
 ---
 title: cmdb.logbook
-description: cmdb.logbook
+description: "Read access to the i-doit logbook."
 icon: material/api
 #status: updated
 lang: de

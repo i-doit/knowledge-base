@@ -1,7 +1,14 @@
+---
+title: ((OTRS)) Community Edition Help Desk
+description: "((OTRS)) Community Edition is a web application for building and operating a service desk."
+icon:
+status:
+lang: en
+---
 # ((OTRS)) Community Edition Help Desk
 
-[((OTRS)) Community Edition](https://otrscommunityedition.com/) is a web application for setting up and operating a service desk. This application and i-doit are able to exchange data via ((OTRS)) Community Edition modules. By this means, ((OTRS)) Community Edition tickets with objects from i-doit can be linked with each other.
+[((OTRS)) Community Edition](https://otrscommunityedition.com/) is a web application for building and operating a service desk. This application and i-doit can exchange data via ((OTRS)) Community Edition modules. In this way, ((OTRS)) Community Edition tickets can be linked with objects from i-doit.
 
-## ((OTRS)) Community Edition-Modules
+## ((OTRS)) Community Edition Modules
 
-Currently there are several ((OTRS)) Community Edition modules and you can find an up-to-date list of them on the i-doit [i-doit website](https://www.i-doit.com/en/i-doit/add-ons/).
+Currently, several actively maintained ((OTRS)) Community Edition modules exist. [A list can be found on the i-doit.com website.](https://www.i-doit.com/i-doit/add-ons/)

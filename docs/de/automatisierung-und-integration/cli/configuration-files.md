@@ -8,7 +8,7 @@ lang: de
 
 # Verwendung von Konfigurationsdateien für die i-doit console utility
 
-Die Verwendung einer Konfigurationsdatei (`.ini`) ist eine leistungsstarke Methode, um Konsolen-Befehle auszuführen, insbesondere komplexe. Sie ermöglicht es Ihnen, alle Optionen in einer wiederverwendbaren Datei vorzudefinieren.
+Die Verwendung einer Konfigurationsdatei (`.ini`) ist eine leistungsstarke Methode, um Konsolen-Befehle auszuführen, insbesondere komplexe. Sie ermöglicht es dir, alle Optionen in einer wiederverwendbaren Datei vorzudefinieren.
 
 **Hauptvorteile:**
 * **Sicherheit**: Vermeidet die direkte Eingabe von Passwörtern in der Kommandozeile, wo sie im Shell-Verlauf protokolliert werden können.
@@ -16,13 +16,13 @@ Die Verwendung einer Konfigurationsdatei (`.ini`) ist eine leistungsstarke Metho
 * **Wiederverwendbarkeit**: Speichert verschiedene Konfigurationen für unterschiedliche Aufgaben, ohne sie jedes Mal neu eingeben zu müssen.
 
 !!! warning "Zuerst ein Backup erstellen"
-    Bitte erstellen Sie ein vollständiges Backup, bevor Sie Änderungen über eine Schnittstelle oder einen Import vornehmen. Sollte das Ergebnis nicht zufriedenstellend sein, kann es so wiederhergestellt werden.
+    Bitte erstelle ein vollständiges Backup, bevor du Änderungen über eine Schnittstelle oder einen Import vornimmst. Sollte das Ergebnis nicht zufriedenstellend sein, kann es so wiederhergestellt werden.
 
 -----
 
 ## Die Struktur einer `.ini`-Datei
 
-Sie können Ihre Konfigurationsdateien zur besseren Organisation an einem beliebigen Ort speichern. Um eine Datei zu verwenden, geben Sie den Pfad mit der Option `--config` oder `-c` an.
+Du kannst deine Konfigurationsdateien zur besseren Organisation an einem beliebigen Ort speichern. Um eine Datei zu verwenden, gib den Pfad mit der Option `--config` oder `-c` an.
 
 Jede Konfigurationsdatei folgt der gleichen Grundstruktur mit drei Abschnitten:
 
@@ -32,7 +32,7 @@ Jede Konfigurationsdatei folgt der gleichen Grundstruktur mit drei Abschnitten:
 
 [commandOptions]
 # Für Standard-Befehlsoptionen wie --user oder --tenantId.
-# Verwenden Sie den Langnamen der Option ohne die vorangestellten "--".
+# Verwende den Langnamen der Option ohne die vorangestellten "--".
 # Optionen ohne Wert (Flags) werden einfach nur mit ihrem Namen aufgelistet.
 user=benutzername
 password=passwort

@@ -1,6 +1,6 @@
 ---
 title: Kategorien programmieren
-description: Kategorien programmieren
+description: "Kategorien sind das Kernstück von i-doit."
 icon:
 status:
 lang: de
@@ -8,7 +8,7 @@ lang: de
 
 # Kategorien programmieren
 
-Kategorien sind das Kernstück von i-doit. Sie ermöglichen die Pflege von Informatione für spezifische Themenbereiche und bieten
+Kategorien sind das Kernstück von i-doit. du ermöglichen die Pflege von Informatione für spezifische Themenbereiche und bieten
 darüber hinaus weitere Funktionalitäten, um diese Daten sinnvoll zu nutzen. Sollte das Standardset an Kategorien mal nicht den
 Anforderungen genügen, schaffen "benutzerdefinierte Kategorien" Abhilfe. So können simple Anwendungsfälle über eine grafische
 Konfigurationsoberfläche ohne jegliche Programmierkenntnisse abgebildet werden. Sobald der Anwendungsfall jedoch eine mittlere
@@ -43,7 +43,7 @@ noch eine vierte Datei hinzu:
 
 ### Data-Access-Object PHP Klasse
 
-Die sogenannte "Data-Access-Object"-Klasse (kurz DAO) wird benötigt, um die Attribute einer Kategorie zu definieren. Sie
+Die sogenannte "Data-Access-Object"-Klasse (kurz DAO) wird benötigt, um die Attribute einer Kategorie zu definieren. du
 beinhaltet zusätzlich alle notwendigen Methoden, um mit den Daten der Datenbank zu interagieren. Das bedeutet: lesen, schreiben
 und löschen (CRUD).
 
@@ -467,7 +467,7 @@ Beispiele folgen im Bereich "[Smarty Plugins](#smarty-plugins)".
 
 ### Liste vorbereiten via `process_list()` (nur Multi-Value-Kategorien)
 
-Diese Methode wird aufgerufen, sobald ein User in eine Multi-Value-Kategorie navigiert. Sie ist hauptsächlich dafür verantwortlich
+Diese Methode wird aufgerufen, sobald ein User in eine Multi-Value-Kategorie navigiert. du ist hauptsächlich dafür verantwortlich
 die Tabelle vorzubereiten. Für gewöhnlich muss diese Methode nicht selbst implementiert werden - einzig Kategorien vom Typ "
 Zuweisung" müssen dies tun, um die "Hinzufügen" -Schaltfläche mit einer "Objekt-Browser"-Instanz zu koppeln.
 
@@ -562,7 +562,7 @@ Popup-Klassen erben immer von `isys_component_popup` und beinhalten mindestens z
   von `$this->getModalJs(...)` erzeugt wird. Üblicherweise beinhaltet das HTML auch noch ein Formular-Feld, dass den jeweiligen
   Popup-Wert beinhaltet.
 * `handle_smarty_request`<br>
-  Diese Methode wird via Ajax-Request aufgerufen, wenn der Popup-Trigger aktiviert wurde. Sie muss das Popup spezifische
+  Diese Methode wird via Ajax-Request aufgerufen, wenn der Popup-Trigger aktiviert wurde. du muss das Popup spezifische
   Smarty-Template rendern und den Request mittels die; beenden. i-doit wird das Template im Frontend empfangen, in das HTML des
   Popups einbetten und darstellen.
 

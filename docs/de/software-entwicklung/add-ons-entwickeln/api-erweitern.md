@@ -1,3 +1,10 @@
+---
+title: API erweitern
+description: "Mit der API-Version 2.0 haben wir eine neue Möglichkeit eingeführt, um Endpunkte zu erweitern."
+icon:
+status:
+lang: de
+---
 # API erweitern
 
 Mit der API-Version 2.0 haben wir eine neue Möglichkeit eingeführt, um Endpunkte zu erweitern.
@@ -36,9 +43,9 @@ class Example implements EndpointInterface
     public function getDefinition(): EndpointDefinition
     {
         return new EndpointDefinition(
-            'endpoint.example.v2', 
-            'Description of this new endpoint', 
-            [ /* parameters */ ], 
+            'endpoint.example.v2',
+            'Description of this new endpoint',
+            [ /* parameters */ ],
             [ /* example request*/ ],
             [ /* example response */ ]
         );
@@ -72,8 +79,8 @@ isys_application::instance()->container->get('api.endpoints')
 
 ### Registrierung über tagged service
 
-Wenn Sie in Ihrem Add-on eigene Services definieren, die dem Dependency Injection Container hinzugefügt werden,
-können Sie Ihre Endpunkte automatisch registrieren lassen, indem Sie das Tag `'api.endpoint'` verwenden:
+Wenn du in deinem Add-on eigene Services definieren, die dem Dependency Injection Container hinzugefügt werden,
+kannst du deine Endpunkte automatisch registrieren lassen, indem du das Tag `'api.endpoint'` verwenden:
 
 ```yaml
 services:
@@ -98,7 +105,7 @@ public function request(Request $request): JsonRpcResponse
 ### Endpunkt definition
 
 Die Endpunktdefinition enthält notwendige Informationen wie beispielsweise den Namen des Endpunkts, eine Beschreibung und verfügbare Parameter.
-Optional können auch Beispiele für Requests und Responses hinzugefügt werden. 
+Optional können auch Beispiele für Requests und Responses hinzugefügt werden.
 
 ### Endpunkt request
 
@@ -116,8 +123,8 @@ Optionale Parameter können einen Standardwert definieren, für den Fall, dass s
 
 ```php
 return new EndpointDefinition(
-    'endpoint.example.v2', 
-    'Description of this new endpoint', 
+    'endpoint.example.v2',
+    'Description of this new endpoint',
     [
         new RequiredParameter('object', Parameter::TYPE_INTEGER, 'Numeric object ID', fn ($id) => $id > 0),
         new OptionalParameter('categories', Parameter::TYPE_ARRAY, 'Array of category constants', function ($categories) {
@@ -129,7 +136,7 @@ return new EndpointDefinition(
 
             return true;
         })
-    ], 
+    ],
     [ /* example request*/ ],
     [ /* example response */ ]
 );
@@ -239,3 +246,9 @@ Es wird die Klasse isys\_api\_model\_cmdb initialisiert und innerhalb der "route
 
         return $this;
     }
+
+## Siehe auch
+
+- [Add-ons entwickeln](index.md) — Leitfaden zur Add-on-Entwicklung
+- [Software-Entwicklung](../index.md) — Übersicht der Entwickler-Dokumentation
+- [API Add-on](../../i-doit-add-ons/api/index.md) — Schnittstelle für externe Zugriffe

@@ -1,6 +1,6 @@
 ---
 title: Listenansicht Konfigurieren
-description:
+description: "Die Ansicht der Objekt-Listen kann pro Liste und pro Benutzer individuell konfiguriert werden."
 icon:
 status:
 lang: de
@@ -51,16 +51,16 @@ Ohne festgelegte Sortierung werden die Objekte nach deren [ID](../eindeutige-ref
 
 ## Filterung beeinflussen
 
-Eine Objekt-Liste kann bereits beim Laden gefiltert werden. Hierzu wird im Drop-Down-Menü **Standardfilter** das Attribut ausgewählt und im Textfeld rechts daneben der Wert angegeben, nach dem gefiltert werden soll. Wenn man in der Listenansicht nicht jedes mal ein zu filterndes Attribut auswählen möchte kann der Filter für alle Felder gesetzt werden.
+Du kannst eine Objekt-Liste bereits beim Laden filtern. Wähle dazu im Drop-Down-Menü **Standardfilter** das gewünschte Attribut aus und gib im Textfeld rechts daneben den Filterwert ein. Möchtest du nicht jedes Mal ein Attribut auswählen, setze den Filter auf alle Felder.
 
 ## Arten, ein Objekt zu öffnen
 
-Häufig genügt nicht der Blick auf die Objekt-Liste, um alle geforderten Attribute abzurufen. Daher kann ein Objekt über die Liste geöffnet werden. Hierfür existieren zwei Wege:
+Oft reicht der Blick auf die Objekt-Liste nicht aus, um alle benötigten Attribute abzurufen. Du kannst ein Objekt auf zwei Wegen direkt aus der Liste heraus öffnen:
 
-*   Objekt öffnen durch Klicken auf die entsprechende Zeile in der Objekt-Liste: Hierzu ist die Checkbox **Bei dieser Liste soll das Objekt über den Klick auf die Zeile geöffnet werden.** zu wählen.
-*   Über die Auswahl der Checkbox eines Objekts und den Button **Editieren** wird das Objekt geöffnet (und gleichzeitig editiert).
+*   **Per Zeilenklick**: Aktiviere die Checkbox **Bei dieser Liste soll das Objekt über den Klick auf die Zeile geöffnet werden.** Dann öffnest du ein Objekt mit einem Klick auf seine Zeile.
+*   **Per Editieren-Button**: Markiere die Checkbox eines Objekts und klicke auf **Editieren**. Das Objekt wird geöffnet und ist sofort im Bearbeitungsmodus.
 
-Die erste Option kann für alle Benutzer und alle Objekt-Listen gleichzeitig aktiviert werden. In der [Verwaltung](../../administration/verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md#datenbank) befindet sich der Button **Zeilenklick in Objektlisten aktivieren**.
+Die Zeilenklick-Option kannst du für alle Benutzer und alle Objekt-Listen gleichzeitig aktivieren. In der [Verwaltung](../../administration/verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md#datenbank) findest du dazu den Button **Zeilenklick in Objektlisten aktivieren**.
 
 ## Konfiguration zurücksetzen
 

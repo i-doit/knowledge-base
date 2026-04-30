@@ -1,6 +1,6 @@
 ---
 title: cmdb.objects_by_relation
-description: cmdb.objects_by_relation
+description: "Return objects by relation."
 icon: material/api
 #status: updated
 lang: de
@@ -205,3 +205,9 @@ Default relation types are:
       }
     }
     ```
+
+## Siehe auch
+
+- [API v1 Methoden](index.md) — Übersicht aller API v1 Methoden
+- [API Add-on](../../index.md) — Einstieg in das API Add-on
+- [i-doit Add-ons](../../../index.md) — Alle verfügbaren Add-ons

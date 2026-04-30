@@ -1,3 +1,10 @@
+---
+title: "Bootstrapping eines Add-ons (init.php)"
+description: "In erster Ebene des Add-on-Verzeichnisses muss eine init.php\\-Datei liegen."
+icon:
+status:
+lang: de
+---
 # Bootstrapping eines Add-ons (init.php)
 
 In erster Ebene des Add-on-Verzeichnisses muss eine init.php\-Datei liegen. Diese wird vom i-doit-System automatisch inkludiert, um das Add-on im Kern zu registrieren. Vom Entwickler sollte die init.php dazu genutzt werden, um Add-on-spezifische Vorbereitungen zu treffen. Dazu gehört unter anderem das Definieren von Konstanten oder das Registrieren der Autoloader und Routen. Ebenso können hier Callbacks via "Signal-Slot"-Komponente registriert werden.

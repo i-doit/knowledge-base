@@ -1,6 +1,6 @@
 ---
 title: SMTP Konfiguration (E-Mail)
-description: SMTP Konfiguration (E-Mail)
+description: "i-doit versendet automatisiert E-Mails bei bestimmten Events oder Zustandsabfragen -- etwa für Benachrichtigungen oder Workflows."
 icon: mail-back
 status:
 lang: de
@@ -8,12 +8,12 @@ lang: de
 
 # SMTP Konfiguration (E-Mail)
 
-_i-doit_ ist in der Lage, beim Eintreten verschiedener Events oder bei Abfragen von bestimmten Zuständen automatisiert E-Mails zu versenden.
+_i-doit_ versendet automatisiert E-Mails bei bestimmten Events oder Zustandsabfragen -- etwa für Benachrichtigungen oder Workflows.
 
 !!! warning "Console"
-    Die Konfiguration ist unbedingt notwendig, wenn automatisiert E-Mail Benachrichtigungen über das [CLI](../automatisierung-und-integration/cli/index.md) mit den [Benachrichtigungen](../auswertungen/benachrichtigungen.md) oder Workflows verwendet wird. Es können sonst keine E-Mails versandt werden!
+    Diese Konfiguration ist zwingend erforderlich, wenn du automatisierte E-Mail-Benachrichtigungen über das [CLI](../automatisierung-und-integration/cli/index.md) mit den [Benachrichtigungen](../auswertungen/benachrichtigungen.md) oder Workflows nutzt. Ohne sie werden keine E-Mails versendet!
 
-Die Einbindung eines Mailservers ist in der **Verwaltung** unter **Import und Schnittstellen → SMTP Konfiguration (E-Mail)** zu finden.
+Die SMTP-Konfiguration findest du unter **Verwaltung → Import und Schnittstellen → SMTP Konfiguration (E-Mail)**.
 
 [![smtp-konfiguration](../assets/images/de/automatisierung-und-integration/1-smtp.png)](../assets/images/de/automatisierung-und-integration/1-smtp.png)
 

@@ -1,22 +1,22 @@
 ---
 title: i-doit 33 update und Flows Installation
-description: i-doit 33 update und Flows Installation
+description: "Hier beschreiben wir, wie du i-doit auf Version 33 aktualisierst, um das Flows Add-on installieren zu können."
 icon:
 status:
 lang: de
 ---
 
-Hier beschreiben wir wie i-doit auf Version **33** aktualisiert um das Flows Add-on installieren zu können.
+Hier beschreiben wir, wie du i-doit auf Version **33** aktualisierst, um das Flows Add-on installieren zu können.
 
 ## 1. i-doit 33 Update
 <!--//TODO add a selection -->
-Um das Flows Add-on und alle neuen Funktionen nutzen zu können, muss zuvor i-doit auf Version 33 aktualisiert werden.
+Um das Flows Add-on und alle neuen Funktionen nutzen zu können, musst du i-doit zuvor auf Version 33 aktualisieren.
 
-### Update über den online Updater
+### Update über den Online-Updater
 
-!!! hint "Version 33 wird sofort über den online Updater verfügbar sein"
+!!! hint "Version 33 ist sofort über den Online-Updater verfügbar."
 
-Wenn die Instanz das Internet erreichen kann, sollte das Update über den Updater genutzt werden. Ausgangssituation ist eine Anmeldung in i-doit mit Administrator Rechten.
+Wenn deine Instanz das Internet erreichen kann, nutze das Update über den Updater. Voraussetzung ist eine Anmeldung in i-doit mit Administratorrechten.
 
 #### Schritt 1: Öffnen der Verwaltung in i-doit 32
 
@@ -34,15 +34,15 @@ Wenn die Instanz das Internet erreichen kann, sollte das Update über den Update
 
 ### Offline Update vorbereiten und den Updater aufrufen
 
-Wenn die Instanz keinen Internetzugang hat, muss das Update-Paket manuell in den i-doit-Stammordner extrahiert werden.
+Wenn deine Instanz keinen Internetzugang hat, musst du das Update-Paket manuell in den i-doit-Stammordner extrahieren.
 
 #### Schritt 1: i-doit 33 Updater herunterladen
 
-Update Paket aus dem [Kundenportal](../../administration/kundenportal.md) heruntergeladen.
+Lade das Update-Paket aus dem [Kundenportal](../../administration/kundenportal.md) herunter.
 
 #### Schritt 2: `idoit-33-update.zip` in den i-doit Ordner verschieben
 
-Das Update-Paket kann (beispielsweise per [WinSCP](https://winscp.net/eng/docs/lang:de)) auf dem Server abgelegt werden. Verschiebe danach das Paket in das Hauptverzeichnis von **i-doit**, wenn du es nicht schon direkt dort abgelegt hast. Das geht mit diesem Befehl:
+Das Update-Paket kannst du (beispielsweise per [WinSCP](https://winscp.net/eng/docs/lang:de)) auf dem Server ablegen. Verschiebe danach das Paket in das Hauptverzeichnis von **i-doit**, wenn du es nicht schon direkt dort abgelegt hast:
 
 ```shell
 sudo mv idoit-33-update.zip /var/www/html/
@@ -52,21 +52,21 @@ sudo mv idoit-33-update.zip /var/www/html/
 
 #### Schritt 3: ZIP Datei entpacken
 
-In den i-doit Ordner wechseln:
+Wechsle in den i-doit-Ordner:
 
 ```shell
 cd /var/www/html/
 ```
 
-Die ZIP Datei entpacken und alle Dateien überschreiben lassen:
+Entpacke die ZIP-Datei und lass alle Dateien überschreiben:
 
 ```shell
 unzip idoit-33-update.zip
 ```
 
-Jetzt werden die Dateirechte angepasst, sodass der Webserver lesend wie schreibend Zugriff auf **i-doit** hat.
+Jetzt passt du die Dateirechte an, sodass der Webserver lesend wie schreibend Zugriff auf **i-doit** hat.
 
-!!! info "Die hier genutzte Benutzer:Gruppen Kombination **www-data:www-data** bezieht sich auf **Debian** oder **Ubuntu** Linux. Sollten ein anderes Betriebssystem genutzt werden, muss die genutzte Benutzer:Gruppen Kombination angepasst werden. Siehe [hier](../../installation/manuelle-installation/setup.md#installationspaket-herunterladen-und-entpacken)"
+!!! info "Die hier genutzte Benutzer:Gruppen-Kombination **www-data:www-data** bezieht sich auf **Debian** oder **Ubuntu** Linux. Wenn du ein anderes Betriebssystem nutzt, musst du die Benutzer:Gruppen-Kombination anpassen. Siehe [hier](../../installation/manuelle-installation/setup.md#installationspaket-herunterladen-und-entpacken)."
 
 !!! quote ""
     === "Debian & Ubuntu"
@@ -111,11 +111,11 @@ Jetzt werden die Dateirechte angepasst, sodass der Webserver lesend wie schreibe
 
 <!--//TODO add a selection -->
 
-Mit i-doit 33 wurde das Feature [Subscription & Add-ons](../../administration/add-on-and-subscription-center.md) hinzugefügt, worüber auch Add-ons direkt installiert werden können. Das Flows Add-on kann aber auch wie üblich über das [Admin-Center](../../administration/admin-center.md) installiert werden.
+Mit i-doit 33 wurde das Feature [Subscription & Add-ons](../../administration/add-on-and-subscription-center.md) hinzugefügt, worüber du Add-ons direkt installieren kannst. Das Flows Add-on kannst du aber auch wie gewohnt über das [Admin-Center](../../administration/admin-center.md) installieren.
 
 ### (Online) Flows Add-on über Subscription & Add-ons installieren
 
-Um das **Subscription & Add-ons** Feature nutzen zu können, wird der Lizenztoken benötigt, der hier neu eingegeben und gespeichert wird.
+Um das **Subscription & Add-ons**-Feature nutzen zu können, benötigst du den Lizenztoken. Gib ihn hier ein und speichere ihn.
 
 #### Schritt 1: Subscription & Add-ons öffnen
 
@@ -133,11 +133,11 @@ Um das **Subscription & Add-ons** Feature nutzen zu können, wird der Lizenztoke
 
 ### (Offline) Flows Add-on über das Admin-Center installieren
 
-Kann die i-doit Instanz nicht auf das Internet bzw. das [Subskription & Add-ons]() backend zugreifen, muss das Add-on aus dem [Kundenportal](../../administration/kundenportal.md) heruntergeladen werden. Anschließend wird es über das [Admin-Center](../../administration/admin-center.md) installiert.
+Wenn deine i-doit-Instanz nicht auf das Internet bzw. das [Subscription & Add-ons](../../administration/add-on-and-subscription-center.md)-Backend zugreifen kann, lädst du das Add-on aus dem [Kundenportal](../../administration/kundenportal.md) herunter und installierst es über das [Admin-Center](../../administration/admin-center.md).
 
 #### Schritt 1: Flows Add-on aus dem Kundenportal herunterladen
 
-Zuerst im Kundenportal unter <https://center.i-doit.com> einloggen und dort unter Add-ons das Flows Add-on herunterladen
+Logge dich zuerst im Kundenportal unter <https://center.i-doit.com> ein und lade dort unter Add-ons das Flows Add-on herunter.
 
 #### Schritt 2: Admin-Center öffnen
 
@@ -149,7 +149,7 @@ Zuerst im Kundenportal unter <https://center.i-doit.com> einloggen und dort unte
 
 #### Schritt 4: Flows Add-on installieren
 
-Klicken Sie auf die Überschrift **Add-ons** und wählen Sie die **Flows ZIP Datei** aus, nachdem Sie auf **Install/update Add-on** geklickt haben:
+Klicke auf die Überschrift **Add-ons**, dann auf **Install/update Add-on** und wähle die **Flows-ZIP-Datei** aus:
 
 [![Admin-Center installieren](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/install-2.2-3.png)](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/install-2.2-3.png)
 
@@ -158,43 +158,42 @@ Klicken Sie auf die Überschrift **Add-ons** und wählen Sie die **Flows ZIP Dat
 ## 3. Automatisierte Ausführung von flows
 
 Das Flows Add-on wird mit zwei CLI-Befehlen geliefert. Beide Befehle werden benötigt, damit das Flows Add-on funktioniert.
-<!-- //TODO clarify if this canlead to problems when a crontab is executed while the cron is running
-Das Flows Add-on wird mit zwei CLI-Befehlen geliefert. Beide Befehle werden benötigt, damit das Flows-Add-on vollständig funktioniert. Es gibt zwei Möglichkeiten, die CLI-Befehle einzurichten. Die Befehle können z.B. über einen **Crontab** ausgeführt werden. Wir haben auch ein Service-Installationsskript mit dem Namen **create-daemon.sh** erstellt, das sich im Flows Add-on Ordner unter `i-doit/src/classes/modules/synetics_flows/` befindet.
---->
-### Verwenden des Systemdienst Installationsskriptes
 
-Zuerst müssen wir die Ausführungsrechte für die Datei festlegen. Verwenden Sie den Befehl im Ordner i-doit:
+Das Flows Add-on wird mit zwei CLI-Befehlen geliefert. Beide Befehle werden benötigt, damit das Flows-Add-on vollständig funktioniert. Es gibt zwei Möglichkeiten, die CLI-Befehle einzurichten. Die Befehle können z.B. über einen **Crontab** ausgeführt werden. Wir haben auch ein Service-Installationsskript mit dem Namen **create-daemon.sh** erstellt, das sich im Flows Add-on Ordner unter `i-doit/src/classes/modules/synetics_flows/` befindet.
+
+### Systemdienst-Installationsskript verwenden
+
+Lege zuerst die Ausführungsrechte für die Datei fest. Verwende dazu den folgenden Befehl im i-doit-Ordner:
 
 ```shell
 sudo chmod +x src/classes/modules/synetics_flows/create-daemon.sh
 ```
 
-Nun kann **create-daemon.sh** ausgeführt werden, um einen Dienst für die automatische Ausführung der flows zu erstellen und zu aktivieren. **Jeder Mandant benötigt einen eigenen Service**
+Nun kannst du **create-daemon.sh** ausführen, um einen Dienst für die automatische Ausführung der Flows zu erstellen und zu aktivieren. **Jeder Mandant benötigt einen eigenen Service.**
 
--   `-i` benötigt eine Mandanten-ID, kann über Konsolenbefehl eingesehen werden [tenant-list](../../automatisierung-und-integration/cli/index.md)
--   `-u` braucht einen **i-doit admin-user** im ausgewählten Mandant
--   `-p` benötigt ein **i-doit admin-user-passwort** im ausgewählten Mandant
+-   `-i` Mandanten-ID (einsehbar per Konsolenbefehl [tenant-list](../../automatisierung-und-integration/cli/index.md))
+-   `-u` **i-doit-Admin-User** im ausgewählten Mandanten
+-   `-p` **Passwort des Admin-Users** im ausgewählten Mandanten
 
 ```shell
 sudo src/classes/modules/synetics_flows/create-daemon.sh -u admin-user -p admin-user-password -i 1
 ```
 
 * * *
-<!-- //TODO clarify if this canlead to problems when a crontab is executed while the cron is running
+
 ### Erstellen eines Crontabs
 
-Erstellen Sie eine Crontab für den Apache-Benutzer. Beispiel für Debian:
+Erstelle eine Crontab für den Apache-Benutzer. Beispiel für Debian:
 
 ```shell
 sudo crontab -u www-data -e
 ```
 
-Fügen Sie die folgenden Zeilen am Ende der Datei ein, nachdem Sie die i-doit Anmeldeinformationen ersetzt haben. Möglicherweise müssen Sie auch die Mandanten-ID ersetzen.
+Füge die folgenden Zeilen am Ende der Datei ein, nachdem du die i-doit-Anmeldeinformationen ersetzt hast. Gegebenenfalls musst du auch die Mandanten-ID anpassen.
 
 ```shell
 * * * * * /usr/bin/php /var/www/html/console.php flows:time-trigger --user admin-user --password admin-user-password --tenantId 1
 * * * * * /usr/bin/php /var/www/html/console.php flows:perform ---user admin-user --password admin-user-password --tenantId 1
 ```
---->
 
-Wenn Sie Fragen haben oder weitere Unterstützung benötigen, wenden Sie sich bitte an uns unter <help@i-doit.com>.
+Wenn du Fragen hast oder weitere Unterstützung benötigst, wende dich bitte an uns unter <help@i-doit.com>.

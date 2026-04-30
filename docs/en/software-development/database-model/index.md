@@ -1,66 +1,72 @@
+---
+title: "Database Model"
+description: "i-doit stores most content and settings in a Database Management System (DBMS)."
+icon:
+status:
+lang: en
+---
 # Database Model
 
-*   [Category Tables 1.10](./category-tables-1.10.md)
-*   [Category Tables 1.9](./category-tables-1.9.md)
+i-doit stores most content and settings in a Database Management System (DBMS). [MySQL or MariaDB](../../installation/system-requirements.md) are used as the DBMS. But how is the database model of i-doit structured?
 
-Most of the settings and contents are saved in a Database Management System (DBMS) by i-doit. [MySQL or MariaDB](../../installation/system-requirements.md) are applied as DBMS. But how is the structure of the i-doit database model?
+Fundamentals
+---------------
 
-Basics
-------
+Some of the over 400 tables in the tenant database are structured according to a defined naming scheme. For example, all i-doit tables have the prefix "isys\_".
 
-Some of the over 400 tables of the tenant database are structured with help of a defined names scheme. For example, this is the reason why all i-doit tables have the prefix "isys\_".
-
-Other identifiers for CMDB categories are "cats" for specific categories and "catg" for global categories. They end with the English name of the relevant category and the suffix \_list (for example, _isys\_catg\_model\_list_, _isys\_catg\_memory\_list_). The tables category accounts for 50% of the complete database. Another major part of the tables are dialog lists with which combo boxes are filled. Many of these special lists contain values about type and manufacturer and can be recognized because of their names, such as "type" or "manufacturer".
+CMDB categories follow with the identifier "cats" for specific and "catg" for global categories, ending with the English designation of the respective category and the suffix \_list (e.g., isys\_catg\_model\_list, isys\_catg\_memory\_list). The category tables make up 50% of the entire database. An additional large portion of the tables are dialog lists, which are used to fill combo boxes. Many of these special lists contain values for type and manufacturer and are thus recognizable by names such as "type" or "manufacturer".
 
 References (Foreign Keys)
--------------------------
+-------------------------------
 
-To avoid redundancies within the data scheme the i-doit databases are structured in a relational way and normalized according to the scheme of the third normal form. Foreign keys have a uniform designation (see also the paragraph for "Name Scheme") so that you can recognize them immediately.
+To avoid redundancy within the data schema, the i-doit databases are relationally structured and normalized according to the third normal form. Foreign keys have a consistent naming convention (see the section "Naming Scheme"), making them immediately apparent.
 
-Name Scheme
------------
+Naming Scheme
+------------
 
-Besides the designation of the single tables, there is a consistent concept for names which runs through all field designations of the i-doit tables. It starts with the name of the table, followed by the actual name of the column. For example, the id field of the table _isys\_catg\_cpu\_list_ is called:
+In addition to the naming of individual tables, a consistent naming scheme runs through all field names of i-doit tables. It begins with the name of the table, followed by the actual column name. Thus, the ID field of the table isys\_catg\_cpu\_list is, for example:
 
     isys_catg_cpu_list__id
-        /\              /\
-     Table CPU            Column (ID)
+    /\              /\
+    Table CPU            Column (ID)
     isys_catg_cpu_list__title
-        /\               /\
-     Table CPU            Column(title)
+    /\               /\
+    Table CPU            Column (Title)
 
-Correspondingly, references to other fields (foreign keys) follow a similar principle. A reference always contains the complete name of the referenced column, so you can always see to which table column the reference points by means of the name.
 
-Example object reference of a category:   
+References to other fields (foreign keys) follow an analogous principle. A reference always includes the complete name of the referenced column, so the name always reveals which table column the reference points to.
+
+Example of an object reference in a category:
+
 
     isys_catg_cpu_list__isys_obj__id
     /\                 /\      /\
-    Table CPU      Table Obj.    Column
+    Table CPU    Table Obj.   Column
 
 Objects
 -------
 
-Each object is a data record in the _isys\_obj_ table. Characteristics, such as the object type (servers, clients, routers etc.), creation date, status (normal, archived, deleted) and some additional attributes, are recorded in this table. The determination of the object type is carried out through referencing of the table _isys\_obj\_type_ in which the respective characteristics and location (infrastructure, software etc.) are saved.
+Every object is a record in the table _isys\_obj_. This table stores properties such as the object type (server, client, router, etc.), the creation date, the status (Normal, Archived, Deleted), and some additional attributes. The object type is determined by referencing the table _isys\_obj\_type_, which contains the respective configuration and location (infrastructure, software, etc.).
 
 Global and Specific Categories
-------------------------------
+----------------------------------
 
-Each category is reflected in the database as individual table and is in a 1:n relation to the object. As a basic principle there is a distinction between single values and lists. Single values are simple entries (for example, accounting or form factor) and only one entry per object exists in the table. On the other hand, lists enable multiple entries (CPU, memory, ports ...). In each data record of the global category there is a reference to a single object.
+Each category is represented in the database as its own table and has a 1:n relationship to the object. A fundamental distinction is made between lists and single values. Single values are simple entries (e.g., Accounting or Form Factor), of which exactly one entry per object exists in the table. Lists, on the other hand, allow multiple entries (CPU, Memory, Ports, etc.). In each record of a global category, an individual object is referenced.
 
-Example for the structure of the global category for a graphic card and global category for IP addresses:
+Example structure of the global category Graphics Card and the global category IP Addresses:
 
-_isys\_catg\_graphic\_list_ is above the foreign key _isys\_catg\_graphic\_list\_\_isys\_obj\_\_id_ in relation to the object. Through the same scheme the IP address is in relation to the object:  
-_isys\_catg\_ip\_list_ contains the foreign key _isys\_catg\_ip\_list\_\_isys\_obj\_\_id_.
+isys\_catg\_graphic\_list is related to the object via the foreign key isys\_catg\_graphic\_list\_\_isys\_obj\_\_id. Via the same schema, the IP address is connected to the object:
+isys\_catg\_ip\_list contains the foreign key isys\_catg\_ip\_list\_\_isys\_obj\_\_id.
 
-This results in the following SQL statement for the determination of all objects, their graphic cards and IP details:
+This results in the following SQL statement to retrieve all objects with their graphics card and IP information:
 
     SELECT
-      isys_obj__title,
-      isys_catg_graphic_list__title,
-      isys_catg_graphic_list__memory,
-      isys_memory_unit__title,
-      isys_catg_ip_list__hostname,
-      isys_catg_ip_list__address
+    isys_obj__title,
+    isys_catg_graphic_list__title,
+    isys_catg_graphic_list__memory,
+    isys_memory_unit__title,
+    isys_catg_ip_list__hostname,
+    isys_catg_ip_list__address
     FROM isys_obj
     INNER JOIN isys_catg_graphic_list
     ON isys_catg_graphic_list__isys_obj__id = isys_obj__id
@@ -69,69 +75,69 @@ This results in the following SQL statement for the determination of all objects
     INNER JOIN isys_catg_ip_list
     ON isys_catg_ip_list__isys_obj__id = isys_obj__id
 
-The same also applies to specific categories. A query for all net details of all net objects looks as follows:
+Specific categories behave the same way. The query for network information of all network objects would look as follows:
 
     SELECT
-      isys_obj__title,
-      isys_cats_net_list__address,
-      isys_cats_net_list__dhcp_range_from,
-      isys_cats_net_list__dhcp_range_to,
-      isys_cats_net_list__dhcp,
-      isys_cats_net_list__def_gw
+    isys_obj__title,
+    isys_cats_net_list__address,
+    isys_cats_net_list__dhcp_range_from,
+    isys_cats_net_list__dhcp_range_to,
+    isys_cats_net_list__dhcp,
+    isys_cats_net_list__def_gw
     FROM
     isys_cats_net_list
     INNER JOIN isys_obj
     ON isys_cats_net_list__isys_obj__id = isys_obj__id
 
-**Diagram: Relation between categories and objects**
+**Diagram: Relationship between categories and objects**
 
-[![Diagram: Relation between categories and objects](../../assets/images/en/software-development/database-model/1-dm.png)](../../assets/images/en/software-development/database-model/1-dm.png)
+**[![datenbankmodell-beziehungen](../../assets/images/de/software-entwicklung/datenbank-modell/1-dm.png)](../../assets/images/de/software-entwicklung/datenbank-modell/1-dm.png)
 **
 
-In the diagram you can see how an object is linked to the global category CPU. This category again accesses Dialog+ entries, such as manufacturer and type. The same happens with the global category Form factor which accesses the form factor type.
+The graphic shows how an object is linked to the global category CPU. This category in turn accesses Dialog+ entries such as the manufacturer and the type. The same happens with the global category Form Factor, which accesses the form factor type.
 
-[![Diagram: Relation between categories and objects](../../assets/images/en/software-development/database-model/1-dm.png)](../../assets/images/en/software-development/database-model/1-dm.png)
+[![datenbankmodell-formfaktor](../../assets/images/de/software-entwicklung/datenbank-modell/2-dm.png)](../../assets/images/de/software-entwicklung/datenbank-modell/2-dm.png)
 
-This diagram illustrates the relations of an object to the category "Host address" (IP). The object (for example, Server1) is in the the table _isys\_obj_, the allocated IP addresses are in the table _isys\_catg\_ip\_list_. Because of the detailed level of characteristics of the host address three additional tables are referenced beside the basic details (hostname, address ...):
+This illustration explains the relationships of an object to the "Host Address" (IP) category. The object itself (e.g., server1) is located in the table isys\_obj. The assigned IP addresses are in the table isys\_catg\_ip\_list. Due to the detailed configuration depth of the host address, three additional tables are referenced besides the basic information (hostname, address, etc.):
 
-*   _isys\_connection_, containing the connection to the net object
-*   _isys\_ip\_assignment_, determining the form of assignment of the IP (DHCP, static)
-*   _isys\_net\_type_, providing the net type
+*   isys\_connection, which contains the connection to the network object
+*   isys\_ip\_assignment, which determines the assignment type of the IP (DHCP, static)
+*   isys\_net\_type, which returns the network type
 
 Users, Contacts, Persons, Person Groups
----------------------------------------
+---------------------------------------------
 
-Contacts, which may consist both of internal users and external persons in i-doit, are recorded in the table _isys\_obj_ with the respective object types. Internal users differ from external "contacts" only by the filling of content with i-doit authentication parameters (such as user name or password) in the table _isys\_cats\_person\_list_. Groups (and right groups) are saved in _isys\_obj_ by the system_._
+Contacts, which in i-doit can encompass both internal users and external persons, are stored in the table _isys\_obj_ with the corresponding object type. Internal users differ from external "contacts" only by the population of the i-doit authentication parameters (specifically: username, password) in the table _isys\_cats\_person\_list_. Groups (and permission groups) are stored by the system in _isys\_obj_.
 
 Logbook
 -------
 
-The logbook consists of entries in the table _isys\_logbook_. This table again has some references to other tables. Important are the following tables:
+The logbook consists of entries in the table isys\_logbook. This table again contains some references to other tables. The following tables are important:
 
-*   _isys\_logbook\_archive_ (archived logbook entries)
-*   _isys\_logbook\_event_ (events, such as created, changed or deleted)
-*   _isys\_logbook\_level_ (alarm level for coloured presentation in the logbook and priority)
-*   _isys\_logbook\_source_ (where was the event triggered, for example, internal or external source, Nagios etc.)
+*   isys\_logbook\_archive (Archived log entries)
+*   isys\_logbook\_event (Events such as Created, Changed, Deleted, etc.)
+*   isys\_logbook\_level (Alarm level for color display in the logbook and urgency)
+*   isys\_logbook\_source (Origin of the event, e.g., internal, external, Nagios, etc.)
 
-Overview of the Table
----------------------
+Table Overview
+-----------------
 
-CMDB categories
+CMDB Categories
 
 *   isysgui\_catg
 *   isysgui\_cats
 *   isysgui\_custom
 
-Dialog table for accounting (isys\_catg\_account\_list)
+Dialog Table for Accounting (isys\_catg\_account\_list)
 
 *   isys\_account
 
-Tables for cable connections
+Cabling Tables
 
 *   isys\_cable\_connection
 *   isys\_cable\_type
 
-Global categories
+Global Categories
 
 *   isys\_catg\_access\_list
 *   isys\_catg\_accounting\_list
@@ -184,7 +190,7 @@ Global categories
 *   isys\_catg\_virtual\_machine\_list
 *   isys\_catg\_workflow\_list
 
-Specific categories
+Specific Categories
 
 *   isys\_cats\_access\_point\_list
 *   isys\_cats\_ac\_list
@@ -218,77 +224,77 @@ Specific categories
 *   isys\_cats\_wan\_list
 *   isys\_cats\_ws\_net\_type\_list
 
-Connections between objects and categories
+Connections between Objects and Categories
 
 *   isys\_connection
 
-Contact references
+Contact References
 
 *   isys\_contact
 *   isys\_contact\_data\_item
 *   isys\_contact\_type
 
-Object combinations
+Object Combinations
 
 *   isys\_container
 
-Dialog: Type of the mobile contract
+Dialog: Mobile Contract Type
 
 *   isys\_cp\_contract\_type
 
-Information about version and revision of the i-doit database
+Information about Version and Revision of the i-doit Database
 
 *   isys\_db\_init
 
-Dependencies, type of dependency
+Dependencies, Dependency Type
 
 *   isys\_dependency
 *   isys\_dep\_type
 
-Connection table for drive to storage
+Link Table for Drive to Storage
 
 *   isys\_drive\_list\_2\_stor\_list
 
-Export templates
+Export Templates
 
 *   isys\_export
 
-Dialog: FC port medium
+Dialog: FC Port Medium
 
 *   isys\_fc\_port\_medium
 
 Files
 
-*   isys\_file\_category (category)
-*   isys\_file\_group (group)
-*   isys\_file\_physical (path to physical file)
-*   isys\_file\_type (file types)
+*   isys\_file\_category (Category)
+*   isys\_file\_group (Grouping)
+*   isys\_file\_physical (Path to physical file)
+*   isys\_file\_type (File types)
 
-Group administration
+Group Management
 
 *   isys\_group
 
-Connection table of the _rights groups_ to modules, objects, contacts or user sessions
+Link Table of Permission Groups to Modules, Objects, Contacts, or User Sessions
 
 *   isys\_group\_2\_isys\_module
 *   isys\_group\_2\_isys\_obj
 *   isys\_group\_2\_isys\_person\_intern
 *   isys\_group\_2\_isys\_user\_session
 
-Dialog: IP assignment
+Dialog: IP Assignment
 
 *   isys\_ip\_assignment
 
-LDAP configuration
+LDAP Configuration
 
-*   isys\_ldap (connection to LDAP server)
-*   isys\_ldap\_directory (directory types)
+*   isys\_ldap (Connection to LDAP server)
+*   isys\_ldap\_directory (Directory types)
 
-T
+Location Image
 
 *   isys\_location\_image
 
-Registration of locked objects (objects in process)
+Registration of Locked Objects (Objects being edited)
 
 *   isys\_lock
 
@@ -302,19 +308,19 @@ Logbook
 *   isys\_logbook\_level
 *   isys\_logbook\_source
 
-Dialog: Reaction time for maintenance contracts
+Dialog: Reaction Times for Maintenance Contracts
 
 *   isys\_maintenance\_reaction\_rate
 
-Dialog: Title of the working memory
+Dialog: Memory Name
 
 *   isys\_memory\_title
 
-Dialog: Title of the model
+Dialog: Model Designation
 
 *   isys\_model\_title
 
-Module administration
+Module Management
 
 *   isys\_module
 
@@ -323,7 +329,7 @@ Monitor
 *   isys\_monitor\_resolution
 *   isys\_monitor\_unit
 
-Tables for the Nagios configuration
+Tables for Nagios Configuration
 
 *   isys\_nagios\_commands
 *   isys\_nagios\_config
@@ -337,63 +343,63 @@ Tables for the Nagios configuration
 *   isys\_nagios\_service\_escalations
 *   isys\_nagios\_timeperiods
 
-Dialogs for specific category Net (Layer 3-Net)
+Dialogs for Specific Category Network (Layer 3 Network)
 
 *   isys\_net\_dns\_domain
 *   isys\_net\_dns\_server
 *   isys\_net\_type
 *   isys\_net\_type\_title
 
-Table for CMDB objects (configuration items)
+Table for CMDB Objects (Configuration Items)
 
 *   isys\_obj
 
-Table for CMDB object types (CI types)
+Table for CMDB Object Types (CI Types)
 
 *   isys\_obj\_type
 
-Object type group and connection table of object types to global categories
+Object Type Group and Link Table of Object Types to Global Categories
 
 *   isys\_obj\_type\_2\_isysgui\_catg
 *   isys\_obj\_type\_2\_isysgui\_catg\_overview
 *   isys\_obj\_type\_group
 
-Table for organisations
+Table for Organizations
 
 *   isys\_organisation\_intern\_iop
 
-Table for contacts
+Table for Contacts
 
 *   isys\_person\_extern
 *   isys\_person\_intern
 *   isys\_person\_intern\_iop
 
-Port dialogs
+Port Dialogs
 
 *   isys\_port\_duplex
 *   isys\_port\_negotiation
 *   isys\_port\_speed
 *   isys\_port\_standard
 
-Power connection
+Power Connection
 
 *   isys\_power\_con
 *   isys\_power\_female\_socket
 *   isys\_power\_fuse\_ampere
 *   isys\_power\_male\_plug
 
-Category General: Intended purpose
+Category General: Purpose
 
 *   isys\_purpose
 
-Role and rights administration
+Role and Permission Management
 
 *   isys\_right
 
 *   isys\_right\_2\_isys\_role
 *   isys\_role
 
-SAN capacity unit
+SAN Capacity Unit
 
 *   isys\_san\_capacity\_unit
 
@@ -405,23 +411,23 @@ Service
 
 *   isys\_service\_manufacturer
 
-Raid level
+RAID Level
 
 *   isys\_stor\_raid\_level
 
-Tape library
+Tape Library
 
 *   isys\_tapelib\_type
 
-Object tree groups (infrastructure, software, others)
+Object Tree Groups (Infrastructure, Software, Other)
 
 *   isys\_tree\_group
 
-Time unit
+Time Unit
 
 *   isys\_unit\_of\_time
 
-User locales, sessions and settings
+User Locales, Sessions, and Settings
 
 *   isys\_user\_locale
 *   isys\_user\_mydoit
@@ -435,7 +441,7 @@ WAN
 *   isys\_wan\_role
 *   isys\_wan\_type
 
-Wifi specifications
+WiFi Specifications
 
 *   isys\_wf\_type\_2\_wf\_tp
 *   isys\_wlan\_auth
@@ -444,7 +450,7 @@ Wifi specifications
 *   isys\_wlan\_function
 *   isys\_wlan\_standard
 
-Tables for workflow management
+Tables for Workflow Management
 
 *   isys\_workflow
 *   isys\_workflow\_2\_isys\_workflow\_action
@@ -456,95 +462,95 @@ Tables for workflow management
 *   isys\_workflow\_template\_parameter
 *   isys\_workflow\_type
 
-Temporary tables
+Temporary Tables
 
 *   temp\_obj\_data
 
-Dialog-Plus Tables
-------------------
+Dialog Plus Tables
+--------------------
 
-*   isys\_ac\_air\_quantity\_unit => Air-conditioning system: unit for air quantity
+*   isys\_ac\_air\_quantity\_unit => Air conditioning: Air volume unit
 
-*   isys\_ac\_refrigerating\_capacity\_unit => Air-conditioning system: unit for cooling capacity
+*   isys\_ac\_refrigerating\_capacity\_unit => Air conditioning: Cooling capacity unit
 
-*   isys\_guarantee\_period\_unit => Guarantee period: unit
+*   isys\_guarantee\_period\_unit => Warranty period: Unit
 
-*   isys\_memory\_unit => Memory: unit
+*   isys\_memory\_unit => Memory: Unit
 
-*   isys\_stor\_unit => Storage: unit
+*   isys\_stor\_unit => Storage: Unit
 
-*   isys\_temp\_unit => Temperature: unit
+*   isys\_temp\_unit => Temperature: Unit
 
-*   isys\_ac\_type => Air-conditioning system: type
+*   isys\_ac\_type => Air conditioning: Type
 
-*   isys\_catd\_drive\_type => Drive: type
+*   isys\_catd\_drive\_type => Drive: Type
 
-*   isys\_catg\_cpu\_type => CPU: type
+*   isys\_catg\_cpu\_type => CPU: Type
 
-*   isys\_catg\_formfactor\_type => Form factor
+*   isys\_catg\_formfactor\_type => Form Factor
 
-*   isys\_cats\_prt\_type => Printer: type
+*   isys\_cats\_prt\_type => Printer: Type
 
-*   isys\_client\_type => Client: type
+*   isys\_client\_type => Client: Type
 
-*   isys\_controller\_type => Controller: type
+*   isys\_controller\_type => Controller: Type
 
-*   isys\_filesystem\_type => File system
+*   isys\_filesystem\_type => File System
 
-*   isys\_memory\_type => Memory: type
+*   isys\_memory\_type => Memory: Type
 
-*   isys\_monitor\_type => Monitor: type
+*   isys\_monitor\_type => Monitor: Type
 
-*   isys\_port\_type => Port: type
+*   isys\_port\_type => Port: Type
 
-*   isys\_power\_fuse\_type => Power object: fuse type
+*   isys\_power\_fuse\_type => Power Object: Fuse Type
 
-*   isys\_power\_connection\_type => Power object: type of the connector
+*   isys\_power\_connection\_type => Power Object: Socket Type
 
-*   isys\_room\_type => Room: type
+*   isys\_room\_type => Room: Type
 
-*   isys\_stor\_con\_type => Storage: connection
+*   isys\_stor\_con\_type => Storage: Connection
 
-*   isys\_stor\_type => Storage: device type
+*   isys\_stor\_type => Storage: Device Type
 
-*   isys\_ui\_con\_type => Interface: connection type
+*   isys\_ui\_con\_type => Interface: Connection Type
 
-*   isys\_ui\_plugtype => Interface: plug type
+*   isys\_ui\_plugtype => Interface: Plug Type
 
-*   isys\_application\_manufacturer => Applications: manufacturer
+*   isys\_application\_manufacturer => Applications: Manufacturer
 
-*   isys\_catg\_cpu\_manufacturer => CPU: manufacturer
+*   isys\_catg\_cpu\_manufacturer => CPU: Manufacturer
 
-*   isys\_controller\_manufacturer => Controller: manufacturer
+*   isys\_controller\_manufacturer => Controller: Manufacturer
 
-*   isys\_graphic\_manufacturer => Graphic cards: manufacturer
+*   isys\_graphic\_manufacturer => Graphics Cards: Manufacturer
 
-*   isys\_memory\_manufacturer => Memory: manufacturer
+*   isys\_memory\_manufacturer => Memory: Manufacturer
 
-*   isys\_model\_manufacturer => Model: manufacturer
+*   isys\_model\_manufacturer => Model: Manufacturer
 
-*   isys\_sound\_manufacturer => Sound cards: manufacturer
+*   isys\_sound\_manufacturer => Sound Cards: Manufacturer
 
-*   isys\_stor\_manufacturer => Storage: manufacturer
+*   isys\_stor\_manufacturer => Storage: Manufacturer
 
-*   isys\_controller\_model => Controller: model
+*   isys\_controller\_model => Controller: Model
 
-*   isys\_stor\_model => Storage: model
+*   isys\_stor\_model => Storage: Model
 
-*   isys\_depth\_unit => Form factor: unit
+*   isys\_depth\_unit => Form Factor: Unit
 
-*   isys\_iface\_manufacturer => Interface: manufacturer
+*   isys\_iface\_manufacturer => Interface: Manufacturer
 
-*   isys\_iface\_model => Interface: model
+*   isys\_iface\_model => Interface: Model
 
-*   isys\_pc\_manufacturer => Consumer: manufacturer
+*   isys\_pc\_manufacturer => Consumer: Manufacturer
 
-*   isys\_pc\_model => Consumer: model
+*   isys\_pc\_model => Consumer: Model
 
-*   isys\_plug\_type => Port: plug
+*   isys\_plug\_type => Port: Plug
 
-*   isys\_netx\_ifacel\_type => log. interface: type
+*   isys\_netx\_ifacel\_type => Logical Interface: Type
 
-*   isys\_fc\_port\_type => FC port: type
+*   isys\_fc\_port\_type => FC Port: Type
 
-*   isys\_access\_type => Access: access type
+*   isys\_access\_type => Access: Access Type

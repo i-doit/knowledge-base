@@ -1,7 +1,14 @@
+---
+title: Attributvalidierung und Pflichtfelder
+description: Wer die Eindeutigkeit von Attributen sicherstellen möchte oder bei der Pflege von bestimmten Feldern nur definierte Werte erwartet oder Felder zu...
+icon:
+status:
+lang: de
+---
 # Attributvalidierung und Pflichtfelder
 
 !!! info
-    Ein Praxisbeispiel finden Sie auf unserem [Blog](https://www.i-doit.com/blog/validierung-von-daten-und-eingaben-in-i-doit/)
+    Ein Praxisbeispiel findest du auf unserem [Blog](https://www.i-doit.com/blog/validierung-von-daten-und-eingaben-in-i-doit/)
 
 Wer die Eindeutigkeit von [Attributen](../glossar.md) sicherstellen möchte oder bei der Pflege von bestimmten Feldern nur definierte Werte erwartet oder Felder zu Pflichtfeldern machen möchte, findet bei i-doit die entsprechenden Funktionen.
 
@@ -65,4 +72,4 @@ In der Regel wird der Validierungs-/Attributs-Cache beim Anlegen einer neuen Kon
 
 ## Reguläre Ausdrücke testen
 
-Um reguläre Ausdrücke im Voraus zu überprüfen, verwenden Sie bitte Ihr bevorzugtes Testwerkzeug. Um die Syntax zu testen, verwenden Sie zum Beispiel [regex101](https://regex101.com/).
+Um reguläre Ausdrücke im Voraus zu überprüfen, verwende bitte dein bevorzugtes Testwerkzeug. Um die Syntax zu testen, verwende zum Beispiel [regex101](https://regex101.com/).

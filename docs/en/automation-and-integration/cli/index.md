@@ -1,6 +1,6 @@
 ---
 title: i-doit console utility
-description: i-doit console utility commands
+description: Commands of the i-doit console utility
 icon: material/console
 status:
 lang: en
@@ -8,53 +8,53 @@ lang: en
 
 # i-doit console utility
 
-This document describes the usage of the i-doit console utility. The i-doit console utility allows for the automation of administrative tasks, data import, and the integration of i-doit into existing system landscapes.
+This document describes the usage of the i-doit console utility. The i-doit console utility enables the automation of administrative tasks, the import of data, and the integration of i-doit into existing system landscapes.
 
 -----
 
-## Basics of the i-doit console utility
+## Basics of the i-doit Console Utility
 
-The i-doit console utility commands are executed via the `console.php` file located in the main directory of your i-doit installation.
+The commands of the i-doit console utility are executed via the file `console.php`, which is located in the main directory of your i-doit installation.
 
-### Running the Console
+### Accessing the Console
 
-To run a command, you need to switch to the i-doit installation directory and execute the file with PHP. It is also possible to use the full path to the file, to run it from anywhere. It is important that the command is run with the permissions of the web server user (e.g., `www-data`, `wwwrun` or `apache`) to avoid permission issues.
+To execute a command, you must switch to the i-doit installation directory and execute the file with PHP. It is also possible to specify the full path to the file to execute it from any location. It is important that the command is executed with the permissions of the web server user (e.g., `www-data`, `wwwrun`, or `apache`) to avoid permission problems.
 
 ```bash
-# Change to the i-doit directory (adjust path)
+# Switch to the i-doit directory (adjust path)
 cd /var/www/html
 
-# Execute command as webserver user
+# Execute command as web server user
 sudo -u www-data php console.php <COMMAND> [OPTIONS]
 ```
 
 ### Authentication
 
-Almost every command requires authentication with i-doit. The following parameters are essential for this:
+Almost every command requires authentication against i-doit. The following parameters are essential:
 
   * `--user <USERNAME>`: The username of an i-doit user with the necessary permissions.
-  * `--password <PASSWORD>`: The user's password.
+  * `--password <PASSWORD>`: The password of the user.
   * `--tenantId <TENANT-ID>`: The ID of the tenant in which the command should be executed. The default ID is `1`.
 
-**Security Note:** Providing the password directly as a parameter can be a security risk, as it is visible in the process list and the shell history.
+**Security note:** Specifying the password directly as a parameter can pose a security risk, as it is visible in the process list and shell history.
 
 ### General (Global) Options
 
 These options can be combined with most commands:
 
-| Option             | Alias           | Description                                                   |
-| ------------------ | --------------- | ------------------------------------------------------------- |
-| `--help`           | `-h`            | Displays the help for a specific command.                     |
-| `--quiet`          | `-q`            | Suppresses all output except for error messages.              |
-| `--verbose`        | `-v, -vv, -vvv` | Increases the verbosity of the output (useful for debugging). |
-| `--version`        | `-V`            | Displays the version of the i-doit console.                   |
-| `--no-interaction` | `-n`            | Disables interactive prompts (e.g., "Are you sure?").         |
+| Option             | Alias           | Description                                                        |
+| ------------------ | --------------- | ------------------------------------------------------------------ |
+| `--help`           | `-h`            | Shows help for a specific command.                                 |
+| `--quiet`          | `-q`            | Suppresses all output except error messages.                       |
+| `--verbose`        | `-v, -vv, -vvv` | Increases the verbosity of the output (useful for debugging).      |
+| `--version`        | `-V`            | Shows the version of the i-doit console.                           |
+| `--no-interaction` | `-n`            | Disables interactive prompts (e.g., "Are you sure?").              |
 
 -----
 
 ## Important Command Categories and Examples
 
-The i-doit console utility commands can be divided into logical groups.
+The commands of the i-doit console utility can be divided into logical groups.
 
 ### Import and Synchronization
 
@@ -85,11 +85,11 @@ Synchronizes users and groups from an LDAP directory (e.g., Microsoft Active Dir
     ```bash
     sudo -u www-data php console.php ldap-sync --user=admin --password='secret' --tenantId=1 --verbose
     ```
-    *Tip:* You can find an example configuration file here [Configuration file](configuration-files.md#example-for-the-command-ldap-sync)
+    *Tip:* An example configuration file can be found here: [Configuration file](configuration-files.md)
 
 #### import-jdisc
 
-Imports data from the JDisc network discovery solution.
+Imports data from the network discovery solution JDisc.
 
   * **Syntax:**
     ```bash
@@ -104,11 +104,11 @@ Imports data from the JDisc network discovery solution.
 
 ### System Administration and Maintenance
 
-These commands assist in the maintenance and care of the i-doit instance.
+These commands assist with maintaining and managing the i-doit instance.
 
 #### search-index
 
-Rebuilds the search index. Necessary if the search in the web interface returns no or outdated results.
+Rebuilds the search index. Necessary when the search in the web interface returns no or outdated results.
 
   * **Syntax:**
     ```bash
@@ -121,7 +121,7 @@ Rebuilds the search index. Necessary if the search in the web interface returns 
 
 #### system-categorycleanup
 
-Cleans up category data for objects that have been archived or deleted.
+Cleans up category data from objects that have been archived or deleted.
 
   * **Syntax:**
     ```bash
@@ -140,7 +140,7 @@ Manages installed add-ons and licenses via the command line.
 
 #### addon-list
 
-Lists all available add-ons and their status (enabled/disabled).
+Lists all available add-ons and their status (activated/deactivated).
 
   * **Example:**
     ```bash
@@ -149,7 +149,7 @@ Lists all available add-ons and their status (enabled/disabled).
 
 #### addon-activate / addon-deactivate
 
-Activates or deactivates a specific add-on. The identifier is displayed by the [addon-list](#addon-list) command.
+Activates or deactivates a specific add-on. The identifier is shown by the [addon-list](#addon-list) command.
 
   * **Syntax:**
     ```bash
@@ -167,7 +167,7 @@ Adds a new license token to the i-doit installation.
 
   * **Syntax:**
     ```bash
-    php console.php license-key [AUTHENTICATION] --key <LICENSETOKEN> --no-interaction
+    php console.php license-key [AUTHENTICATION] --key <LICENSE_TOKEN> --no-interaction
     ```
   * **Example:**
     ```bash
@@ -178,128 +178,128 @@ Adds a new license token to the i-doit installation.
 
 ## Automation
 
-### Dedicated i-doit console utility User
+### Dedicated User for the i-doit Console Utility
 
-Set up a dedicated user in the i-doit web interface for automation tasks. Grant only the absolutely necessary permissions (e.g., import permissions) to this user instead of using the global `admin` account.
+Set up a dedicated user in the i-doit web interface for automation tasks. Grant only the strictly necessary permissions (e.g., import rights) to this user instead of using the global `admin` account.
 
-### Usage in Cronjobs
+### Usage in Crontab
 
-The i-doit console utility commands are excellently suited for automation via cronjobs.
+The commands of the i-doit console utility are well suited for automation via crontab. You can find so-called "crontab generator" pages on the internet for assistance.
 
   * **Example: Nightly CSV import and search index rebuild**
 
-    Open the web server user's crontab with `sudo -u www-data crontab -e` and add the following lines:
+    Open the crontab of the web server user with `sudo -u www-data crontab -e` and add the following lines:
 
     ```crontab
-    # Run the CSV import every day at 2:00 AM
+    # Run the CSV import every day at 02:00
     0 2 * * * /usr/bin/php /var/www/html/console.php console.php import-csv --user=cli-user --password='secret' --tenantId=1 --importFile=/var/www/imports/idoit-Demo-CSV-Import.csv --importProfileId=1 --csvSeparator=";" --multiValueMode=column --quiet
 
-    # Rebuild the search index every day at 2:30 AM
+    # Rebuild the search index every day at 02:30
     30 2 * * * /usr/bin/php /var/www/html/console.php search-index --user=cli-user --password='secret' --tenantId=1 --quiet
     ```
 
-!!! note "[Using the Task Scheduler on Microsoft Windows](../task-scheduling-and-cronjobs.md#windows-task-scheduler)"
+!!! note "[Using the Task Scheduler on Microsoft Windows](https://www.google.com/search?q=../task-scheduling-and-cronjobs.md%23windows-task-scheduler)"
 
 ### Finding a Command and its Options
 
-To list all available commands, run `console.php` without any arguments:
+To list all available commands, execute `console.php` without arguments:
 
 ```bash
 sudo -u www-data php console.php
 ```
 
-To see the specific options and parameters for a single command, use the `--help` or `-h` option:
+To see the specific options and parameters for an individual command, use the `--help` or `-h` option:
 
 ```bash
 sudo -u www-data php console.php import-csv --help
 ```
 
-## Available i-doit console utility commands without add-ons
+## Available Commands of the i-doit Console Utility (without Add-ons)
 
 ```text
 i-doit console utility 35
 
 Usage:
-command [options] [arguments]
+  command [options] [arguments]
 
 Options:
--h, --help            Display help for the given command. When no command is given display help for the list command
--q, --quiet           Do not output any message
--V, --version         Display this application version
-    --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
--n, --no-interaction  Do not ask any interactive question
--v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+  -h, --help            Shows help for the specified command. If no command is given, shows help for the list command
+  -q, --quiet           Do not output any messages
+  -V, --version         Display this application version
+      --ansi|--no-ansi  Force (or disable with --no-ansi) ANSI output
+  -n, --no-interaction  Do not ask any interactive questions
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output, and 3 for debug output
 
 Available commands:
-    addon-activate                      Activate add-on
-    addon-deactivate                    Deactivate add-on
-    addon-install                       Install add-on
-    addon-license-check                 This command checks if a specific add-on is licensed.
-    addon-list                          Shows list of installed addons
-    addon-uninstall                     Deactivate add-on
-    admin-center-password-reset         With this command you can reset the Admin-Center password
-    auth-cleanup                        Cleanup all auth paths
-    check_mk-export                     Exports i-doit objects and Host Tags to Check_MK WATO configuration files
-    check_mk-livestatus                 Imports monitoring status changes from Livestatus to the i-doit Logbook
-    clear-credentials                   It removes both attributes username and password from the users "login" category
-    completion                          Dump the shell completion script
-    contracts-outdated                  Updates status of outdated contracts
-    extend-contracts                    Automatically extend the runtime of not-cancelled contracts
+    addon-activate                      Activate an add-on
+    addon-deactivate                    Deactivate an add-on
+    addon-install                       Install an add-on
+    addon-license-check                 This command checks whether a specific add-on is licensed.
+    addon-list                          Shows a list of installed add-ons
+    addon-uninstall                     Uninstall an add-on
+    admin-center-password-reset         With this command you can reset the Admin Center password
+    auth-cleanup                        Clean up all auth paths
+    check_mk-export                     Exports i-doit objects and host tags to Check_MK WATO configuration files
+    check_mk-livestatus                 Imports status changes from Livestatus into the i-doit logbook
+    clear-credentials                   Removes the username and password attributes from the "Login" category of the user
+    completion                          Outputs the shell completion script
+    contracts-outdated                  Updates the status of expired contracts
+    extend-contracts                    Automatically extends the runtime of non-cancelled contracts
     help                                Display help for a command
-    import-csv                          Imports CSV formatted files (Using a predefined CSV Import filter, defined in the GUI)
-    import-csvprofiles                  List all available csv profiles
+    import-csv                          Imports CSV-formatted files (using a predefined CSV import filter defined in the GUI)
+    import-csvprofiles                  Lists all available CSV profiles
     import-hinventory                   Imports files formatted in the hInventory XML syntax
     import-jdisc                        Imports data from a JDisc server (SQL server access is defined in the GUI)
-    import-jdiscdiscovery               Triggers a JDisc discovery (API Access to the JDisc server is defined in the GUI)
-    import-ocs                          Imports data from an OCS inventory NG server (SQL server access is defined in the GUI)
-    import-syslog                       Imports data from a Syslog server textfile to the i-doit Logbook
+    import-jdiscdiscovery               Triggers a JDisc Discovery (API access to the JDisc server is defined in the GUI)
+    import-ocs                          Imports data from an OCS Inventory NG server (SQL server access is defined in the GUI)
+    import-syslog                       Imports data from a syslog server text file into the i-doit logbook
     import-xml                          Imports files formatted in the i-doit XML syntax
     install                             Install the i-doit application
-    jdisc-create-server                 Creates a JDisc server, based on given input
+    jdisc-create-server                 Creates a JDisc server based on the entered data
     ldap-sync                           Synchronizes LDAP user accounts with i-doit user objects
-    ldap-syncdn                         Synchronizes LDAP user DN attributes with i-doit user objects (Only needs to be run when migrating between different LDAP sources)
-    license-add                         Add license into i-doit
-    license-assign                      Assign hosting license to i-doit tenant
-    license-check                       Checks if i-doit tenant is licensed
+    ldap-syncdn                         Synchronizes LDAP user DN attributes with i-doit user objects (only needs to be executed when migrating between different LDAP sources)
+    license-add                         Add a license to i-doit
+    license-assign                      Assign a hosting license to an i-doit tenant
+    license-check                       Checks whether the i-doit tenant is licensed
     license-import                      Import licenses from the i-doit server
-    license-key                         Set license key for i-doit
-    license-list                        List of the licenses:  ID, Product, Type (type of license), From (start of license), Expire (expiration date of license), Licensed (max amount of licensed objects), Tenants (max amount of tenants), Environment
-    license-remove                      Remove license from i-doit
+    license-key                         Set a license key for i-doit
+    license-list                        List of licenses: ID, product, type (license type), from (license start), expire (license expiration date), licensed (max. number of licensed objects), tenants (max. number of tenants)
+    license-remove                      Remove a license from i-doit
     list                                List commands
     migrate-uploaded-files              Migrates uploaded files in i-doit <v1.13 to v.1.14>
-    notifications-list                  Lists all notification types and notifications for later usage
-    notifications-send                  Sends out e-mails for notifications defined in the notification add-on
-    report-export                       Executes an i-doit report and saves it to a file as CSV, TXT, PDF or XML
+    notifications-list                  Lists all notification types and notifications for later use
+    notifications-send                  Sends emails for notifications defined in the Notifications add-on
+    report-export                       Executes an i-doit report and saves it as a CSV, TXT, PDF, or XML file
     report-refresher                    Refreshes one or all reports.
-    search                              Triggers a search and gives the results as formatted text table
-    search-index                        Deletes current search index and create it
-    strip-description-html              With this command you can strip html tags in description field of all categories and objects
-    sync-dynamic-groups                 Synchronize dynamic group members
-    system-autoincrement                Changes the initial autoincrement value for all i-doit database tables (Affects everything, Object-IDs, category entries, etc. Use with caution!)
-    system-categorycleanup              Purges optionally category entries that are in the state unfinished, archived or deleted
+    search                              Triggers a search and returns the results as a formatted text table
+    search-index                        Deletes the current search index and recreates it
+    strip-description-html              With this command you can remove HTML tags from the description field of all categories and objects
+    sync-dynamic-groups                 Synchronize members of dynamic groups
+    system-autoincrement                Changes the initial auto-increment value for all i-doit database tables (affects everything: object IDs, category entries, etc. Use with caution!)
+    system-categorycleanup              Optionally cleans up category entries that are in incomplete, archived, or deleted state
     system-checkforupdates              Checks for i-doit core updates
-    system-convert-non-innodb-tables    Converts all tables which are not in INNODB to INNODB (Affects database encoding. Use with caution!)
-    system-convert-non-utf8-tables      Changes all non-UTF8-tables to UTF8 (Affects database encoding. Use with caution!)
-    system-location-fix                 Performs the location fix from the systemtools GUI
-    system-objectcleanup                Purges optionally objects that are in the state unfinished, archived or deleted
-    system-objectrelations              Regenerates all object relation names
+    system-convert-non-innodb-tables    Converts all non-InnoDB tables to InnoDB (affects database encoding. Use with caution!)
+    system-convert-non-utf8-tables      Changes all non-UTF8 tables to UTF8 (affects database encoding. Use with caution!)
+    system-location-fix                 Executes the location fix from the system tools in the GUI
+    system-objectcleanup                Optionally cleans up objects that are in incomplete, archived, or deleted state
+    system-objectrelations              Regenerates all object relationship names
     system-refresh-table-configuration  Refreshes all available list configurations (object types and categories)
     system-set-settings                 Set system settings
-    tenant-create                       Create tenant in i-doit
-    tenant-disable                      Disables the tenant with specific id
-    tenant-enable                       Enables the tenant with specific id
-    tenant-list                         Shows list of available tenants
-    tenant-remove                       Remove the i-doit Tenant
-    tenant-set-settings                 This command enables you to set tenant related settings by providing a settings list based on json
+    tenant-create                       Create a tenant in i-doit
+    tenant-disable                      Disables the tenant with the specified ID
+    tenant-enable                       Activates the tenant with the specified ID
+    tenant-list                         Shows a list of available tenants
+    tenant-remove                       Remove the i-doit tenant
+    tenant-set-settings                 This command allows you to set tenant-specific settings by providing a settings list based on JSON
     uninstall                           Uninstall the i-doit application
     update                              Update the i-doit application
 idoit
-    idoit:feature-manager               [idoit:fm] With this command it will be possible to activate a set of features in i-doit.
-    idoit:set-env-var                   With this command it will be possible to set environmental variables for i-doit.
-    idoit:set-update-capability         Dis- and enable the i-doit update capability
+    idoit:feature-manager               [idoit:fm] With this command it is possible to activate a set of features in i-doit.
+    idoit:set-env-var                   With this command it is possible to set environment variables for i-doit.
+    idoit:set-update-capability         Enable and disable the i-doit update capability
 logbook
-    logbook:archive                     Archives Logbook entries (Settings are defined in the GUI)
+    logbook:archive                     Archives logbook entries (settings are defined in the GUI)
 system
-    system:tenant-export                Export your tenant data including uploaded files in a ZIP package.
-    system:tenant-import                Import your tenant data including uploaded files from a ZIP package generated from the system:tenant-export command.
+    system:tenant-export                Export your tenant data including uploaded files into a ZIP package.
+    system:tenant-import                Import your tenant data including uploaded files from a ZIP package generated with the system:tenant-export command.
 ```

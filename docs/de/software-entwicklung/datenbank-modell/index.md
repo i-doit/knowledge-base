@@ -1,3 +1,10 @@
+---
+title: "Datenbank-Modell"
+description: "i-doit speichert die meisten Inhalte und Einstellungen in einem Database Management System (DBMS) ab."
+icon:
+status:
+lang: de
+---
 # Datenbank-Modell
 
 i-doit speichert die meisten Inhalte und Einstellungen in einem Database Management System (DBMS) ab. Als DBMS kommen [MySQL oder MariaDB](../../installation/systemvoraussetzungen.md) zum Einsatz. Doch wie ist das Datenbank-Modell von i-doit aufgebaut?
@@ -6,7 +13,7 @@ Grundsätzliches
 ---------------
 
 Einige der insgesamt über 400 Tabellen der Mandanten Datenbank sind über ein definiertes Namensschema aufgebaut. So haben beispielsweise alle i-doit Tabellen das Präfix "isys\_".
-  
+
 CMDB Kategorien folgen mit der Kennung "cats" für spezifisch und "catg" globale Kategorien und enden mit der englischen Bezeichnung der entsprechenden Kategorie und dem Suffix \_list (z.B. isys\_catg\_model\_list, isys\_catg\_memory\_list). Die Kategorie Tabellen machen 50% der gesamten Datenbank aus. Ein weiterer großer Teil der Tabellen sind Dialog Listen, mit denen Comboboxen gefüllt werden. Viele dieser speziellen Listen beinhalten Werte über Typ und Hersteller und sind somit durch Namen wie zum Beispiel "type" oder "manufacturer" erkenntlich.
 
 Referenzierungen (Foreign Keys)
@@ -48,7 +55,7 @@ Jede Kategorie spiegelt sich in der Datenbank als eigene Tabelle wieder und steh
 
 Beispielaufbau globale Kategorie Grafikkarte und globale Kategoire IP Adressen:
 
-isys\_catg\_graphic\_list steht über den Fremdschlüssel isys\_catg\_graphic\_list\_\_isys\_obj\_\_id in Beziehnung zum Objekt. Über das gleiche Schema steht die IP Adresse in Verbindung zum Objekt:  
+isys\_catg\_graphic\_list steht über den Fremdschlüssel isys\_catg\_graphic\_list\_\_isys\_obj\_\_id in Beziehnung zum Objekt. Über das gleiche Schema steht die IP Adresse in Verbindung zum Objekt:
 isys\_catg\_ip\_list beinhaltet den Fremdschlüssel isys\_catg\_ip\_list\_\_isys\_obj\_\_id.
 
 Somit ergibt sich folgenes SQL Statement für die Ermittlung alle Objekte, dessen Grafikkarte und IP Infos:
@@ -84,7 +91,7 @@ Spezifische Kategorien verhalten sich gleich. Die Abfrage der Netzinformationen 
 
 **Diagramm: Beziehung zwischen Kategorien und Objekten**
 
-**[![datenbankmodell-beziehungen](../../assets/images/de/software-entwicklung/datenbank-modell/1-dm.png)](../../assets/images/de/software-entwicklung/datenbank-modell/1-dm.png)  
+**[![datenbankmodell-beziehungen](../../assets/images/de/software-entwicklung/datenbank-modell/1-dm.png)](../../assets/images/de/software-entwicklung/datenbank-modell/1-dm.png)
 **
 
 In der Grafik ist zu sehen wie ein Objekt mit der globalen Kategorie CPU verknüpft ist. Diese Kategorie greift wiederum auf  Dialog+ Einträge wie den Hersteller und den Typ zu. Das gleiche geschieht mit der globalen Kategorie Formfaktor, die auf den Formfaktor-Typ zugreift.

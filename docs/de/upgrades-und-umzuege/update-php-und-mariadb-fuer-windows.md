@@ -6,7 +6,7 @@ status:
 lang: de
 ---
 
-In diesem Artikel zeigen wir Ihnen, wie Sie PHP und MariaDB für Ihre [i-doit Windows](../installation/manuelle-installation/microsoft-windows-server/index.md) Installation updaten.
+In diesem Artikel zeigen wir dir, wie du PHP und MariaDB für deine [i-doit Windows](../installation/manuelle-installation/microsoft-windows-server/index.md) Installation updaten.
 
 ## Update Pakete
 
@@ -19,8 +19,8 @@ Das entsprechende Paket kann hier heruntergeladen werden: [x64 Thread Safe](http
 
 !!! warning "Es muss unbedingt eine Zip Datei sein und die 'x64 Thread Safe' Version"
 
-Überprüfen Sie vorab, ob die PHP Version auch mit Ihrer i-doit Version übereinstimmt!
-Hier finden Sie unsere [Kompatibilitätsmatrix](../installation/systemvoraussetzungen.md#kompatibilitatsmatrix).
+Überprüfe vorab, ob die PHP Version auch mit deiner i-doit Version übereinstimmt!
+Hier findest du unsere [Kompatibilitätsmatrix](../installation/systemvoraussetzungen.md#kompatibilitatsmatrix).
 
 ### MariaDB 10.11 installer herunterladen
 
@@ -32,7 +32,7 @@ Um erfolgreich aus MariaDB 10.11 Updaten zu können benötigen wir die [MariaDB 
 
 ## MariaDB und PHP updaten
 
-!!! warning "Machen Sie vor den folgenden Schritten unbedingt ein [Backup](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) oder einen Snapshot!"
+!!! warning "Mache vor den folgenden Schritten unbedingt ein [Backup](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) oder einen Snapshot!"
 
 ### Apache Service stoppen
 
@@ -40,14 +40,14 @@ Zuerst muss der Apache2 Service gestoppt werden. Dies kann entweder über das "D
 
 **"Dienste" Fenster:**
 
-Suchen Sie unter den angezeigten Diensten den **Apache2.4** Dienst und klicken Sie auf **"Den Dienst beenden"**
+Suche unter den angezeigten Diensten den **Apache2.4** Dienst und klickst du auf **"Den Dienst beenden"**
 
 [![Apache Service stoppen Fenster](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/2-pum.png)](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/2-pum.png)
 
 **Konsole:**
 
-Über **Windowstaste + R** können Sie, wenn Sie **cmd** eingeben, die Windowskonsole öffnen.
-Dort geben Sie dann den folgenden **Befehl** ein:
+Über **Windowstaste + R** kannst du, wenn du **cmd** eingeben, die Windowskonsole öffnen.
+Dort gibst du dann den folgenden **Befehl** ein:
 
 ```winbatch
 C:\ProgramData\i-doit\apache-2.4\bin\httpd.exe -k stop
@@ -57,11 +57,11 @@ C:\ProgramData\i-doit\apache-2.4\bin\httpd.exe -k stop
 
 Nachdem der Apache2.4 Service erfolgreich beendet wurde, kann nun die MariaDB msi Datei ausgeführt werden, um das Update zu starten.
 
-Nachdem Sie der Lizenz zugestimmt haben, wählen Sie die Option **"Do not create a new database. Optionally upgrade existing instances"** aus.
+Nachdem du der Lizenz zugestimmt haben, wählst du die Option **"Do not create a new database. Optionally upgrade existing instances"** aus.
 
 [![upgrade existing instances](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/3-pum.png)](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/3-pum.png)
 
-Anschließend ändern Sie den Pfad auf **"C:\ProgramData\"** und klicken Sie dann auf **"Installieren"**
+Anschließend änderst du den Pfad auf **"C:\ProgramData\"** und klickst dann auf **"Installieren"**
 
 [![ProgramData](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/4-pum.png)](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/4-pum.png)
 
@@ -69,11 +69,11 @@ Zuletzt muss noch die Option "Launch Wizard to Upgrade existing MariaDB or MySQL
 
 [![Haken](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/5-pum.png)](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/5-pum.png)
 
-In dem neuen Fenster das Sich daraufhin öffnet wählen Sie dann den MySQL Service aus und klicken auf **"Upgrade"**.
+In dem neuen Fenster das Sich daraufhin öffnet wählst du dann den MySQL Service aus und klicken auf **"Upgrade"**.
 
 [![upgrade existing instances](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/6-pum.png)](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/6-pum.png)
 
-!!! info "Sollte das Upgrade Fenster nicht auftauchen, können Sie die MariaDB 10.11 Upgrade Wizard EXE manuell unter **C:\ProgramData\MariaDB10.11\bin** finden und ausführen."
+!!! info "Sollte das Upgrade Fenster nicht auftauchen, kannst du die MariaDB 10.11 Upgrade Wizard EXE manuell unter **C:\ProgramData\MariaDB10.11\bin** finden und ausführen."
 
 Damit ist MariaDB erfolgreich auf MariaDB 10.11 aktualisiert.
 
@@ -93,6 +93,6 @@ Zuletzt muss der Apache2.4 Service wieder eingeschaltet werden und somit ist PHP
 
 ### Überprüfen
 
-Überprüfen Sie zuletzt, ob das Update erfolgreich war, indem Sie in der Verwaltung unter **"System Config Check"** die Versionen überprüfen
+Überprüfe zuletzt, ob das Update erfolgreich war, indem du in der Verwaltung unter **"System Config Check"** die Versionen überprüfen
 
 [![check version](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/7-pum.png)](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/7-pum.png)

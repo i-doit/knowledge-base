@@ -4,11 +4,11 @@ description: Eine Anleitung um Kundenstandorte in i-doit darzustellen
 lang: de
 ---
 
-Kunden haben oftmals mehrere Standorte, diese sollen hierarchisch dargestellt und jeweils IT-Komponenten zugeordnet werden.
+In diesem Artikel erfährst du, wie du Kunden mit mehreren Standorten hierarchisch in i-doit abbildest und IT-Komponenten zuordnest.
 
 ## Aufgabenstellung
 
-Wir statten unsere Kunden mit Hard- und Software-Komponenten aus. Daher ist es essentiell, sowohl unsere Kunden als auch die dort verwendeten IT-Komponenten zu dokumentieren. Um eine einfache Übersicht zu generieren, möchten wir die Standortsicht von i-doit nutzen.
+Du stattest deine Kunden mit Hard- und Software-Komponenten aus und möchtest sowohl die Kunden als auch deren IT-Komponenten dokumentieren. Die Standortsicht von i-doit liefert dafür eine übersichtliche Darstellung.
 
 [![Standortsicht](../assets/images/de/anwendungsfaelle/abbildung-von-kundenstandorten/1-avk.png)](../assets/images/de/anwendungsfaelle/abbildung-von-kundenstandorten/1-avk.png)
 
@@ -16,7 +16,12 @@ Wir statten unsere Kunden mit Hard- und Software-Komponenten aus. Daher ist es e
 
 ## Konfiguration
 
-Alles, was zur Konfiguration benötigt wird, befindet sich in der **Objekttyp-Konfiguration**, zu erreichen über **Verwaltung → Datenstruktur → Objekttypen**. Kunden legen wir als eigenständigen Objekttyp **Kunde** ab. Der Objekttyp wird als **Standort** definiert. Zudem sollten mindestens die Kategorien **Standort** und **Räumlich zugeordnete Objekte** zugeordnet werden. Ggf. sind weitere Kategorien (**Organisation**, **Anschrift**, **E-Mail-Adressen**, **Kontaktzuweisung**, **Zugriff**) hilfreich, um die Kunden so detailliert wie nötig zu dokumentieren.
+So richtest du den Objekttyp ein:
+
+1. Öffne **Verwaltung → Datenstruktur → Objekttypen**.
+2. Erstelle einen neuen Objekttyp **Kunde** und definiere ihn als **Standort**.
+3. Ordne mindestens die Kategorien **Standort** und **Raeumlich zugeordnete Objekte** zu.
+4. Optional ergänzt du weitere Kategorien wie **Organisation**, **Anschrift**, **E-Mail-Adressen**, **Kontaktzuweisung** oder **Zugriff**.
 
 [![Objekttyp-Konfiguration](../assets/images/de/anwendungsfaelle/abbildung-von-kundenstandorten/3-avk.png)](../assets/images/de/anwendungsfaelle/abbildung-von-kundenstandorten/3-avk.png)
 
@@ -24,4 +29,8 @@ Alles, was zur Konfiguration benötigt wird, befindet sich in der **Objekttyp-Ko
 
 ## Anwendung
 
-Beim Anlegen eines neuen Kunden sollte dieser der [Root-Lokation](../glossar.md) zu geordnet werden. Auch verschachtelte Konstrukte mit Sub-Kunden ist möglich. Hierfür werden Sub-Kunden anderen Kunden räumlich zugeordnet. Unterhalb der Kunden können nun beliebig viele Objekte zugeordnet werden. Dies geschieht über die Kategorie "Räumlich zugeordnete Objekte" oder alternativ über die Kategorie "Standort" innerhalb der Objekte, die zugeordnet werden sollen.
+So legst du einen Kunden an:
+
+1. Erstelle ein neues Kunden-Objekt und ordne es der [Root-Lokation](../glossar.md) zu.
+2. Für verschachtelte Strukturen ordnest du Sub-Kunden räumlich anderen Kunden zu.
+3. Weise den Kunden beliebig viele Objekte zu -- entweder über die Kategorie **Raeumlich zugeordnete Objekte** im Kunden oder über die Kategorie **Standort** im jeweiligen Objekt.

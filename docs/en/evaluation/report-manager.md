@@ -1,6 +1,6 @@
 ---
 title: Report Manager
-description: Report Manager
+description: "Reporting is a suitable tool for condensing, preparing, and sharing data with third parties."
 icon: report-manager
 status:
 lang: en
@@ -8,160 +8,160 @@ lang: en
 
 # Report Manager
 
-The reporting system is a useful instrument to gather, process and send data to a third party. Therefore _i-doit_ possesses a report manager which can process all data from the [IT documentation](../glossary.md) completely.
+Reporting is a suitable tool for condensing, preparing, and sharing data with third parties. _i-doit_ therefore includes a Report Manager that can fully process data from the [IT documentation](../glossary.md).
 
 ## Overview
 
-You can access the report manager via **Extras → Report Manager** in the in the main navigation section. On the left side of the navigation tree the items **Reports**, **Online repository** and **Views** are displayed. In the following text, these items are described in greater detail. If the report manager or the items in the navigation tree only appear incompletely or do not appear at all, this is due to missing permissions.
+The Report Manager can be accessed via the main navigation bar under **Extras → Report Manager**. In the navigation tree on the left side, the items **Reports**, **Online Repository**, and **Views** appear, which are described below. If the Report Manager or the items in the navigation tree do not appear or appear incompletely, this is due to missing permissions.
 
-[![Overview](../assets/images/en/evaluation/report-manager/1-rm.png)](../assets/images/en/evaluation/report-manager/1-rm.png)
+[![Overview](../assets/images/de/auswertungen/report-manager/1-rm.png)](../assets/images/de/auswertungen/report-manager/1-rm.png)
 
-## Report-Special Add-on
+## Report Special Add-on
 
-The Report-Special add-on imports approximately 50 predefined reports. For more information about the add-on, please visit the [customer portal](../system-administration/customer-portal.md).
+With the Report Special add-on, approximately 50 pre-built reports are imported. More information about the add-on can be found in the [Customer Portal](../administration/customer-portal.md).
 
-## Evaluate a Report
+## Evaluating a Report
 
-Created reports can be found in the **Reports** item. When the [setup of _i-doit_](../installation/manual-installation/setup.md) hast just been finished, there will not be any reports in this section yet.
+The self-created reports are located under **Reports**. After the [setup of _i-doit_](../installation/manual-installation/setup.md), there are no reports in this area yet.
 
-[![Reports](../assets/images/en/evaluation/report-manager/2-rm.png)](../assets/images/en/evaluation/report-manager/2-rm.png)
+[![evaluate-report](../assets/images/de/auswertungen/report-manager/2-rm.png)](../assets/images/de/auswertungen/report-manager/2-rm.png)
 
-Upon clicking on a report in the list, this report will be executed with the current data. In _i-doit_ the results list of a report is set out in tabular from. Reports are always focused on objects and their attributes. For each line of results, the focus is on a main object and details of any attributes and relations to other objects may be indicated. By clicking a line the corresponding object will be loaded.
+Click on a report in the list to execute it with the current data. The result list is presented in tabular form. Reports always focus on objects and their attributes -- each result row focuses on a main object, for which any attributes such as relationships to other objects may be specified. Click on a row to open the corresponding object.
 
-[![Reports](../assets/images/en/evaluation/report-manager/3-rm.png)](../assets/images/en/evaluation/report-manager/3-rm.png)
+[![evaluate-report2](../assets/images/de/auswertungen/report-manager/3-rm.png)](../assets/images/de/auswertungen/report-manager/3-rm.png)
 
-The table provides various functionalities (sorting and filtering of columns, pagination). Furthermore, reports can be exported into various formats (plain text, CSV, XML and PDF). Export to CSV format is recommended for further processing in spreadsheet software.
+The table offers various functionalities (column sorting, filtering by a column, pagination). Furthermore, a report can be exported to various formats (plain text, CSV, XML, and PDF). For further processing with a spreadsheet program or similar, export to CSV format is recommended.
 
-An object of type **Object group** can be generated from a report. The objects from the report are statically assigned to the category of the same name. Alternatively, it is possible to create an object of type **Object group** whose object assignments are dynamic. To do this, select the appropriate setting in the **Type** category and select a report. From now on, this object group will always contain the current list of objects that the assigned report returns as a result. This happens at runtime.
+From a report, you can generate an object of type **Object Group**. The objects from the report are statically assigned to the category of the same name. Alternatively, you create an **Object Group** with dynamic assignment: Select the corresponding setting in the **Type** category and link a report. The object group then always contains the current result list of the report -- determined at runtime.
 
-## Categorize Reports
+## Categorizing Reports
 
-Reports can be categorized. By default, they are assigned to the **Global** category, which is available by default and cannot be deleted. The advantage of categorization lies in the authorization concept: For each category, you can specify who is allowed to access it. If you are on the Reports page, you can create new categories or edit existing ones via the **Categories** item. The optional description field is helpful here.
+Reports can be organized into categories. By default, they are assigned to the **Global** category, which cannot be deleted. The advantage: You can define per category who is allowed to access it. On the **Reports** page, you create or edit categories via the **Categories** item. The optionally description field helps with orientation.
 
-[![Categories](../assets/images/en/evaluation/report-manager/4-rm.png)](../assets/images/en/evaluation/report-manager/4-rm.png)
+[![categorize-reports](../assets/images/de/auswertungen/report-manager/4-rm.png)](../assets/images/de/auswertungen/report-manager/4-rm.png)
 
-!!! note "Check permissions"
-    If it is impossible to create or edit report categories, it is advisable to check the permissions for this and to make sure that the currently logged in user is authorized and has the corresponding permissions.
+!!! info "Note"
+    If it is not possible to create and/or edit report categories, it is advisable to check the permissions and ensure that the currently logged-in user has the necessary permissions.
 
-## Create or Edit Reports
+## Creating or Editing a Report
 
-Reports can be copied. To do so, mark a report and click the **Duplicate** button. You can delete a report via the **Purge** button. This step is irreversible.
+You can copy reports by selecting a report and clicking **Duplicate**. Via the **Purge** button, you irrevocably delete a report.
 
-[![Duplicate](../assets/images/en/evaluation/report-manager/5-rm.png)](../assets/images/en/evaluation/report-manager/5-rm.png)
+[![create-or-edit-reports](../assets/images/de/auswertungen/report-manager/5-rm.png)](../assets/images/de/auswertungen/report-manager/5-rm.png)
 
-There are two ways to create a report, which will be further explained in the following.
+Two methods are available for creating a report, which are explained in more detail below.
 
-### Query Builder
+### Query Editor
 
-The query editor provides a graphical interface for creating a new report or editing an existing one. It is accessed via the New button. Alternatively, the Query Editor button can be found next to this button in the drop-down field. If you want to edit an existing report, select the checkbox next to the report and click one of the buttons mentioned above.
+The Query Editor provides a graphical interface for creating or editing reports. Access it via the **New** button or select **Query Editor** from the drop-down field next to it. To edit an existing report, check the checkbox next to the report and click one of the mentioned buttons.
 
-[![query builder](../assets/images/en/evaluation/report-manager/6-rm.png)](../assets/images/en/evaluation/report-manager/6-rm.png)
+[![query-editor](../assets/images/de/auswertungen/report-manager/6-rm.png)](../assets/images/de/auswertungen/report-manager/6-rm.png)
 
-The title and category are essential. It is also often helpful to provide a brief description. The report can be tested using the **Check** button. A maximum of 25 results are displayed in a pop-up window.
+Essential are the title and the category. Additionally, it is often helpful to provide a short description. Via the **Check** button, the report can be tested. A popup displays a maximum of 25 results.
 
 #### Advanced Options
 
-[![Advanced Options](../assets/images/en/evaluation/report-manager/7-rm.png)](../assets/images/en/evaluation/report-manager/7-rm.png)
+[![advanced-options](../assets/images/de/auswertungen/report-manager/7-rm.png)](../assets/images/de/auswertungen/report-manager/7-rm.png)
 
 The following advanced options are available.
 
-| Option                                      | Description                                                                                                                                                                                                                                                                               |
-| ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Show HTML**                               | If the option is set to Yes, HTML is also displayed in reports.                                                                                                                                                                                                                           |
-| **Grouped multivalue presentation**         | This option groups multivalue entries to an object one below the other.                                                                                                                                                                                                                   |
-| **Show objects with empty assignments?**    | This option refers to sub-queries of objects that are associated which each other. Should the attribute representing this assignment be empty, i.e. that no object is related, the result will be empty when the option is set to **No**. Otherwise the cell in the result will be empty. |
-| **Keep description format**                 | Should the format of the description field be retained?                                                                                                                                                                                                                                   |
-| **Display relation objects?**               | There is a relation object for each relation between two objects. When you select **Yes**, the relation object will also be shown in the result.                                                                                                                                          |
-| **Sorting**                                 | Some selected attributes can be sorted automatically as soon as the report is executed. With this option you can additionally choose whether you want to sort in ascending or descending order.                                                                                           |
-| **Status filter for multivalue categories** | Should archived, deleted, normal, unfinished or all multivalue entries from categories be displayed?                                                                                                                                                                                      |
-| **Status filter for assigned objects**      | Should archived, deleted, normal, unfinished or all Objects from assignment categories be displayed?                                                                                                                                                                                      |
+| Option                                          | Description                                                                                                                                                                                                                                                                                                    |
+| ----------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Show HTML**                                   | If the option is set to Yes, HTML is also displayed in reports.                                                                                                                                                                                                                                                |
+| **Grouped multivalue display**                  | This option groups multi-value entries for an object beneath each other.                                                                                                                                                                                                                                       |
+| **Show objects with empty links?**              | This option relates to sub-queries for objects that are in a relationship. If the attribute representing this relationship is empty, i.e., no object is in a relationship, the result will be empty if the option is set to **No**. Otherwise, the cell in the result remains empty.                              |
+| **Preserve description field format**           | Should the format of the description field be preserved?                                                                                                                                                                                                                                                       |
+| **Also output relationship objects?**           | Behind every relationship between two objects is a relationship object. If this option is set to **Yes**, the relationship object is also displayed in the result.                                                                                                                                              |
+| **Sorting**                                     | Some selected attributes can be automatically sorted as soon as the report is executed. This option additionally allows you to set whether the sorting is ascending or descending.                                                                                                                               |
+| **Status filter for multi-value categories**    | Should archived, deleted, normal, unfinished, or all multi-value entries from categories be displayed?                                                                                                                                                                                                         |
+| **Status filter for assigned objects**          | Should archived, deleted, normal, incomplete, or all objects from assignment categories be displayed?                                                                                                                                                                                                           |
 
 #### Output
 
-[![Output](../assets/images/en/evaluation/report-manager/8-rm.png)](../assets/images/en/evaluation/report-manager/8-rm.png)
+[![Output](../assets/images/de/auswertungen/report-manager/8-rm.png)](../assets/images/de/auswertungen/report-manager/8-rm.png)
 
-In the **Output** area, you can define the columns of the results list. To do this, select the desired attributes from the three category types **Global**, **Specific**, and **User-defined**. Each attribute defines a column. The order of the columns can be determined using drag and drop.
+In the **Output** area, you define the columns of the result list. Select the desired attributes from the three category types **Global**, **Specific**, and **Custom**. Each attribute defines a column whose order you set via drag and drop.
 
-Some selected attributes can be sorted automatically when the report is executed. Use the radio box next to the selected attribute for this purpose. If no attribute is selected, the results are sorted by object ID.
+Via the radio button next to an attribute, you activate automatic sorting. If no attribute is selected, sorting is by object ID.
 
-If an object reference is selected as an attribute, additional attributes of the related object can be selected using the magnifying glass icon. Clicking on the magnifying glass opens another query based on the principle described above. These subqueries can of course be turned into subqueries themselves (recursively).
+If you select an object reference as an attribute, you can add further attributes of the linked object via the displayed magnifying glass. These sub-queries can be nested arbitrarily (recursively).
 
 #### Conditions
 
-[![Conditions](../assets/images/en/evaluation/report-manager/9-rm.png)](../assets/images/en/evaluation/report-manager/9-rm.png)
+[![Conditions](../assets/images/de/auswertungen/report-manager/9-rm.png)](../assets/images/de/auswertungen/report-manager/9-rm.png)
 
-Any desired conditions can be stated using the **Conditions** item. In order to check for a particular attribute, this attribute is selected together with the matching category. After this, the logical query will be built: Which value does the attribute need to match (or not)? Typical statements such as =, !=, <, > etc. are possible here and conform to the field types of the attribute. The selection also conforms to the selected attribute.
+Under **Conditions**, you specify the desired filter criteria. Select the attribute to be checked with the matching category and construct the logical query: What value must the attribute match (or not)? Typical operators such as `=`, `!=`, `<`, `>` are available depending on the field type.
 
-Simple nestings using _and_ or _or_ are possible by setting additional conditions using the + button and condition blocks. Conditions are removed using the **-** button. Empty condition blocks are removed automatically.
+Via the **+** button, you add more conditions and nest them with **and** or **or**. Via the **-** button, you remove conditions. Empty condition blocks are automatically removed.
 
-Conditions can be set for attributes of objects being in relation by choosing the attribute with the object relation and setting the condition to **Linked attribute**. After that, more conditions can be set in additional condition blocks.
+To set conditions on attributes of linked objects, select the attribute with the object relationship and set the condition to **Linked attribute**. In a sub-condition block, you then specify the further conditions.
 
-#### Updating reports after an update
+#### Updating Reports After an Update
 
-i-doit updates may also change the query editor, resulting in queries being structured differently than before. To ensure that reports always use the current logic, it is necessary to update these queries. This can be done either via [Repair and cleanup](../system-administration/administration/tenant-management/repair-and-clean-up.md) or via a [CLI command](../automation-and-integration/cli/index.md).
+Through i-doit updates, the Query Editor may also change, so that queries are constructed differently than before. To ensure that reports always use the current logic, it is necessary to update these queries. This is possible either via the [Administration](../administration/management/tenant-management/system-repair-and-cleanup.md) or via the [i-doit console utility](../automation-and-integration/cli/index.md).
 
 [![Update reports](../assets/images/de/auswertungen/report-manager/15-rm.png)](../assets/images/de/auswertungen/report-manager/15-rm.png)
 
 ### SQL Editor
 
-Every report can be created or edited in the SQL editor - including the ones that are created in the query builder. Starting from the **Reports** overview page either click the drop-down field next to **New** or select an existing report and click the drop-down field next to **Edit** and choose the **SQL editor**.
+Every report can be created or edited via the SQL Editor -- including those created with the Query Editor. Click on the drop-down field next to **New** on the **Reports** overview page, or select an existing report, click the drop-down field next to **Edit**, and choose **SQL Editor**.
 
-!!! info "Switching between query editor and SQL editor"
-    If a report is created or edited using the SQL editor, it cannot be edited subsequently using the query editor. Background: The SQL editor provides the full range of SQL functions. Since the query editor is limited to a subset of SQL (which is sufficient in most cases), this difference could destroy the query you have created.
+!!! info "Switching between Query and SQL Editor"
+    If a report is created or edited with the SQL Editor, subsequent editing with the Query Editor is no longer possible. Background: The SQL Editor provides the full spectrum of SQL. Since the Query Editor is limited to a subset of SQL (which is sufficient in most cases), the created query could be destroyed by this difference.
 
-[![SQL-editor](../assets/images/en/evaluation/report-manager/10-rm.png)](../assets/images/en/evaluation/report-manager/10-rm.png)
+[![sql-editor](../assets/images/de/auswertungen/report-manager/10-rm.png)](../assets/images/de/auswertungen/report-manager/10-rm.png)
 
-The query is written in SQL in the form field **SQL query**. Knowledge of the database structure of _i-doit_ is required for this. It is important to always query objects and to select the ID of the object as the first (invisible) column:
+In the **SQL Query** form field, you write the query in SQL. Knowledge of the database structure of i-doit is required here. Important: You must always query objects and select the object ID as the first (invisible) column:
 
 ```sql
 SELECT obj_main.isys_obj__id AS '__id__' FROM isys_obj AS obj_main;
 ```
 
-The column names can be entered in a multilingual way and will be translated automatically by _i-doit_ in realtime:
+Column names can be specified multilingually and are automatically translated by _i-doit_ during the real-time query:
 
 ```sql
 obj_main.isys_obj__title AS 'LC__UNIVERSAL__TITLE###1'
 ```
 
-!!! success Design complex reports
-    The following approaches are useful for designing complex reports that utilize many features of SQL:
+!!! success "Designing complex reports"
+    To design complex reports that leverage many SQL features, the following approach is recommended:
 
-    1.  Create the report using the query builder (as far as possible)
+    1.  Create the report with the Query Editor (as far as possible)
     2.  Copy the report
-    3.  Edit the copy using the SQL editor
+    3.  Edit the copy with the SQL Editor
 
-    This has the advantage that there is no need to know the database structure of _i-doit_ and that the prepared report can still be edited using the query builder.
+    Advantages are that you do not necessarily need to know the database structure of i-doit and that you can still edit the prepared report with the Query Editor.
 
-## Export/Import reports
+## Exporting/Importing Reports
 
-Reports can also be exported and imported. It is possible to select the corresponding report via the checkbox and export it via the button at the top of the list into a file. This file can be imported into another installation or another tenant to be available there. If this report was created via query builder, it can also be edited with the query builder in the new instance.
+You can export and import reports. Select the desired report via the checkbox and click the export button. The exported file can be imported into another instance or another tenant. Reports created with the Query Editor remain editable via the Query Editor even after import.
 
-When transferring a report, please note that the conditions and output referring individual/custom content (i.e. a specific object ID or a custom category) might have to be edited, because the result of the report might differ from the expectations.
+Note when transferring: Conditions and outputs that refer to individual content (e.g., an object ID or a custom category) must be edited afterward if they are not identical in the target instance.
 
 ## Online Repository
 
-Some previously created reports are already available for download on the internet. These can be executed directly or saved locally via the **Online repository** item. An internet connection is required for this.
+Pre-built reports are available for download on the internet. Via the **Online Repository** item, you can execute them directly or save them locally. An existing internet connection is required.
 
-[![Online repository](../assets/images/en/evaluation/report-manager/11-rm.png)](../assets/images/en/evaluation/report-manager/11-rm.png)
+[![online-repository](../assets/images/de/auswertungen/report-manager/11-rm.png)](../assets/images/de/auswertungen/report-manager/11-rm.png)
 
 ## Report Views
 
-**Report views** provide additional features and views for the reports mentioned above. New ones cannot be created, existing ones cannot be edited or deleted.
+**Report Views** offer additional functions and views beyond the reports described above. New ones cannot be created, and existing ones cannot be edited or deleted.
 
-[![Report views](../assets/images/en/evaluation/report-manager/12-rm.png)](../assets/images/en/evaluation/report-manager/12-rm.png)
+[![report-views](../assets/images/de/auswertungen/report-manager/12-rm.png)](../assets/images/de/auswertungen/report-manager/12-rm.png)
 
-Selection of useful **Report views**:
+Selection of useful **Report Views**:
 
-*   **QR codes**: Processing and printing of multiple labels simultaneously which can also contain a QR code as well as additional information and a logo.
-*   **Devices in a location (list format)**
+*   **QR Codes**: Preparing and printing multiple labels simultaneously that can contain a QR code as well as additional information and a logo.
+*   **Devices at a location (list format)**
 *   **Network connections**
 *   **Open cable connections**
 
-[![Report views](../assets/images/en/evaluation/report-manager/13-rm.png)](../assets/images/en/evaluation/report-manager/13-rm.png)
+[![report-views-2](../assets/images/de/auswertungen/report-manager/13-rm.png)](../assets/images/de/auswertungen/report-manager/13-rm.png)
 
-## Automatic Export of Reports
+## Automated Report Export
 
-You can export existing reports automatically as a file without needing to intervene manually. Use the command line tool of _i-doit_, the [controller](../automation-and-integration/cli/index.md), for this purpose. The matching controller handler is report. When the controller is executed without further statements, the help will appear:
+Existing reports can be automatically exported as files without manual user intervention. This is done via the [i-doit console utility](../automation-and-integration/cli/index.md) using `report-export`.
 
 ```shell
 sudo -u www-data php console.php report-export --help
@@ -190,24 +190,26 @@ Help:
     Executes an i-doit report and saves it to a file as CSV, TXT, PDF or XML
 ```
 
-For example, the automation can be carried out by a cron job.
+Automation can be accomplished, for example, through a cron job.
 
-!!! info "Report-based Notification"
-    For reports that are positive and get results, _i-doit_ can send matching [e-mails](./notifications.md).
+!!! info "Report-based notification"
+    _i-doit_ can send appropriate [emails](notifications.md) for positive reports, i.e., reports with results.
 
-## Assign Permissions
+## Assigning Permissions
 
-You can assign permissions for the report manager to users and user groups (represented in _i-doit_ by the object types **Persons** and **Person groups**). With **Administration → Authorization system → Rights → Report manager** you can assign the following permissions:
+You can assign permissions for the Report Manager to users and user groups (object types **Persons** and **Person Groups**). The configuration can be found under **Administration > Permissions > Report Manager**. The following permissions are available:
 
-*   **Create new reports**
-*   **Online repository**
-*   **Report views**
-*   **Categories**
-*   **Reports in categories**
+*   **Online Repository**
+*   **Report Views**
 *   **Reports**
+*   **Reports in categories**
+*   **Categories**
+*   **Export report**
+*   **Import report**
+*   **Self-created reports**
 
-[![Assign Permissions](../assets/images/en/evaluation/report-manager/14-rm.png)](../assets/images/en/evaluation/report-manager/14-rm.png)
+[![assign-permissions](../assets/images/de/auswertungen/report-manager/14-rm.png)](../assets/images/de/auswertungen/report-manager/14-rm.png
 
 ## Variable Reports
 
-You can use [variable reports](../use-cases/variable-reports.md) to display object specific data, rather than static object data through a normal report.
+With [Variable Reports](../use-cases/variable-reports.md), you can display data that is object-specific, rather than static as with normal reports.

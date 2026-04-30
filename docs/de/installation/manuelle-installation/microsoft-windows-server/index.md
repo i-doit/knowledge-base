@@ -1,6 +1,6 @@
 ---
 title: Microsoft Windows Server
-description: Microsoft Windows Server
+description: "Wie i-doit unter dem Betriebssystem Windows installiert wird, beschreiben wir in diesem Artikel."
 icon: material/microsoft-windows
 status:
 lang: de
@@ -55,7 +55,7 @@ Der Speicherort der PHP, MariaDB oder Apache Konfiguration:
 
 ## Credentials
 
-Hier finden Sie die Login Daten für den i-doit Windows installer:
+Hier findest du die Login Daten für den i-doit Windows Installer:
 
 | Plattform                 | Benutzername          | Password |
 | ------------------------- | --------------------- | -------- |
@@ -68,24 +68,24 @@ Die i-doit Login Daten finden Sie [hier](../../../grundlagen/erstanmeldung.md).
 
 ## HTTPS einrichten (optional)
 
-Die folgende Anleitung zeigt, wie Sie SSL für Windows mit i-doit einrichten. Es werden nur die notwendigen Schritte beschrieben, die benötigt werden um HTTPS zu konfigurieren. Dieser Abschnitt kann übersprungen werden.
+Die folgende Anleitung zeigt, wie du SSL für Windows mit i-doit einrichtest. Es werden nur die notwendigen Schritte beschrieben, die benötigt werden um HTTPS zu konfigurieren. Dieser Abschnitt kann übersprungen werden.
 
 ### Voraussetzungen
 
-Vorab benötigen Sie ein gültiges Zertifikat im `.crt` und `.key` Format. Dieses können Sie mit OpenSSL erstellen. OpenSSL können Sie z.B. hier herunterladen und installieren: [OpenSSL](https://slproweb.com/products/Win32OpenSSL.html). Sobald OpenSSL installiert ist, können Sie Win64 OpenSSL Command Prompt über die Windows-Suchleiste öffnen, indem Sie nach "OpenSSL" suchen.
-Hier geben Sie nun folgenden Befehl ein, um das Zertifikat zu erstellen:
+Vorab benötigst du ein gültiges Zertifikat im `.crt` und `.key` Format. Dieses kannst du mit OpenSSL erstellen. OpenSSL kannst du z.B. hier herunterladen und installieren: [OpenSSL](https://slproweb.com/products/Win32OpenSSL.html). Sobald OpenSSL installiert ist, kannst du Win64 OpenSSL Command Prompt über die Windows-Suchleiste öffnen, indem du nach "OpenSSL" suchst.
+Hier gibst du nun folgenden Befehl ein, um das Zertifikat zu erstellen:
 
 ```batch
 OpenSSL req -x509 -sha256 -nodes -days 365 -newkey rsa:4096 -keyout private.key -out certificate.crt
 ```
 
-Das Zertifikat und der Private Key wurden nun in dem Ordner erstellt, in dem der Befehl ausgeführt wurde. Kopieren Sie diese z.B. in den Ordner `ProgramData\i-doit\apache-2.4\conf\extra\`.
+Das Zertifikat und der Private Key wurden nun in dem Ordner erstellt, in dem der Befehl ausgeführt wurde. Kopiere diese z.B. in den Ordner `ProgramData\i-doit\apache-2.4\conf\extra\`.
 
 ### Konfigurationsschritte
 
 #### 1. **Erstellen der ssl.conf-Datei**
 
-Navigieren Sie zu Ihrem i-doit-Ordner unter `ProgramData\i-doit\apache-2.4\conf\extra\` und erstellen Sie die Datei `ssl.conf`. Die Datei sollte folgenden Inhalt haben:
+Navigiere zu deinem i-doit-Ordner unter `ProgramData\i-doit\apache-2.4\conf\extra\` und erstelle die Datei `ssl.conf`. Die Datei sollte folgenden Inhalt haben:
 <!-- cSpell:disable -->
 ```conf
 <VirtualHost *:443>
@@ -117,14 +117,14 @@ Navigieren Sie zu Ihrem i-doit-Ordner unter `ProgramData\i-doit\apache-2.4\conf\
 </VirtualHost>
 ```
 <!-- cSpell:enable -->
-**Hinweis:** Passen Sie die Pfade und Konfigurationseinstellungen entsprechend Ihrer eigenen Umgebung an und stellen Sie sicher, dass Ihr Zertifikat und privater Schlüssel in den angegebenen Pfaden vorhanden sind.
+**Hinweis:** Passe die Pfade und Konfigurationseinstellungen entsprechend deiner eigenen Umgebung an und stelle sicher, dass dein Zertifikat und privater Schlüssel in den angegebenen Pfaden vorhanden sind.
 
 #### 2. **Anpassungen in der httpd.conf**
 
-Bearbeiten Sie die `httpd.conf`-Datei, die sich unter `i-doit\apache-2.4\conf\` befindet:
+Bearbeite die `httpd.conf`-Datei, die sich unter `i-doit\apache-2.4\conf\` befindet:
 
--   Fügen Sie `Listen 443` hinzu und kommentieren Sie `Listen 80` aus. Dadurch wird i-doit nicht mehr über http erreichbar sein.
--   Fügen Sie außerdem folgende Zeilen ein: `LoadModule ssl_module modules/mod_ssl.so` und `Include conf/extra/ssl.conf`
+-   Füge `Listen 443` hinzu und kommentiere `Listen 80` aus. Dadurch wird i-doit nicht mehr über http erreichbar sein.
+-   Füge außerdem folgende Zeilen ein: `LoadModule ssl_module modules/mod_ssl.so` und `Include conf/extra/ssl.conf`
 
 Die Datei sollte dann so aussehen, wenn vorher nichts geändert wurde:
 <!-- cSpell:disable -->
@@ -241,18 +241,18 @@ LogLevel warn
 <!-- cSpell:enable -->
 #### 3. **Apache-Webserver neustarten**
 
--   Drücken Sie ++windows+r++ , geben Sie `cmd` ein und drücken Sie Enter.
--   Oder geben Sie `cmd` in der Windows-Suchleiste ein, um die Eingabeaufforderung zu öffnen
+-   Drücke ++windows+r++ , gib `cmd` ein und drücke Enter.
+-   Oder gib `cmd` in der Windows-Suchleiste ein, um die Eingabeaufforderung zu öffnen
 
-Geben Sie den folgenden Befehl ein, um den Apache-Webserver neu zu starten:
+Gib den folgenden Befehl ein, um den Apache-Webserver neu zu starten:
 
 ```batch
 C:\ProgramData\i-doit\apache-2.4\bin\httpd.exe -k restart
 ```
 
-Der Apache-Webserver wurde nun neu gestartet. Prüfen Sie die installation und ob i-doit über HTTPS erreichbar ist.
+Der Apache-Webserver wurde nun neu gestartet. Prüfe die Installation und ob i-doit über HTTPS erreichbar ist.
 
-Das wars! Ihre i-doit-Installation ist jetzt für SSL auf Windows konfiguriert.
+Das wars! Deine i-doit-Installation ist jetzt für SSL auf Windows konfiguriert.
 
 ### Deinstallation
 
@@ -307,7 +307,6 @@ Es werden die folgenden Inhalte installiert:
 -   **JDisc JDisc Discovery Dependency Mapping 5.X(Add-on)**
 -   **JDisc Discovery Device History 5.X(Add-on)**
 -   **JDisc Discovery Measurement 5.X(Add-on)**
--   **JDisc Discovery Measurement 5.X(Add-on)**
 -   **JDisc Discovery Security 5.X(Add-on)**
 -   **JDisc Discovery WEB UI 5.X(Add-on)**
 
@@ -332,7 +331,7 @@ Die Konfigurationsdateien von PHP, MariaDB oder Apache finden Sie in den folgend
 
 ## Credentials
 
-Hier finden Sie die Login Daten für den i-doit Windows installer:
+Hier findest du die Login Daten für den i-doit Windows Installer:
 <!-- cSpell:disable -->
 | Plattform                  | Benutzername                    | Password       |
 | -------------------------- | ------------------------------- | -------------- |
@@ -377,7 +376,7 @@ Jetzt muss noch der i-doit Ordner gelöscht werden und der PHP `PATH` muss aus d
 
 ### Verbessertes Laden der Website
 
-Unter Windows braucht i-doit im Browser länger zum Laden. Dies liegt in der Regel an der Konfiguration des Virenscanners unter Windows, für die folgenden i-doit Verzeichnisse sollten Sie hier eine Ausnahme machen:
+Unter Windows braucht i-doit im Browser länger zum Laden. Dies liegt in der Regel an der Konfiguration des Virenscanners unter Windows, für die folgenden i-doit Verzeichnisse solltest du hier eine Ausnahme machen:
 
 -   [Pfad](#konfiguration)`\htdocs\admin`
 -   [Pfad](#konfiguration)`\htdocs\images`

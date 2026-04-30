@@ -1,4 +1,14 @@
 ---
+title: Mariadb Database Corruption
+description: "title: MariaDB Database Corruption Errors"
+icon:
+status:
+lang: de
+---
+
+[![mariadb-database-corruption.png](../../assets/images/de/administration/troubleshooting/mariadb-database-corruption.png)](../../assets/images/de/administration/troubleshooting/mariadb-database-corruption.png)
+
+---
 title: MariaDB Database Corruption Errors
 description: MariaDB Fehler und wie man diese löst
 icon:
@@ -6,9 +16,11 @@ status:
 lang: de
 ---
 
+Dieser Artikel beschreibt typische MariaDB-Fehler nach einer Datenbankbeschädigung und zeigt einen möglichen Lösungsweg.
+
 ## Fehlermeldungen
 
-Die folgenden Fehlermeldungen können unter den verschiedensten Umständen auftreten. Durch einen Stromausfall während ein neues Update ausstand, oder während eines Updates des Betriebssystems, diese Fehler sind meistens durch Database corruption ausgelöst worden.
+Die folgenden Fehlermeldungen treten häufig nach einem Stromausfall, einem abgebrochenen Update oder einem Betriebssystem-Update auf -- sie deuten in der Regel auf eine Datenbankbeschädigung hin:
 
 -   Upgrade after a crash is not supported
 -   Generic Database error
@@ -17,28 +29,38 @@ Die folgenden Fehlermeldungen können unter den verschiedensten Umständen auftr
 
 ## Möglicher Lösungsansatz
 
-!!! warning "Wir übernehmen keine Verantwortung für diese Lösungsansätze und können nicht garantieren, dass die Fehler durch die Lösungsansätze behoben werden! Stellen Sie sicher, dass Sie vorher ein Backup oder einen Snapshot erstellt haben."
+!!! warning "Wir übernehmen keine Verantwortung für diese Lösungsansätze und können nicht garantieren, dass die Fehler dadurch behoben werden. Stelle sicher, dass du vorher ein Backup oder einen Snapshot erstellt hast."
 
-Diese Fehler können behoben werden, indem Sie die Datenbank Dateien (ib_logfile0 and ib_logfile1) in einen anderen Standort verschieben.
-Diese Dateien sind System tablespaces für die InnoDB Infrastruktur und enthalten wichtige Classes für InnoDB.
-Mehr Informationen über diese Dateien finden Sie [**hier**](https://dba.stackexchange.com/questions/27083/what-exactly-are-iblog-files-in-mysql).
+Die Ursache liegt oft in beschädigten InnoDB-Log-Dateien (`ib_logfile0` und `ib_logfile1`). Diese Dateien sind System-Tablespaces für die InnoDB-Infrastruktur. Mehr Informationen findest du [hier](https://dba.stackexchange.com/questions/27083/what-exactly-are-iblog-files-in-mysql).
 
-Bevor Sie die folgenden Schritte befolgen, sollten Sie eine Kopie der beiden Dateien erstellen, damit Sie diese wiederherstellen können falls es zu Fehlern kommen sollte.
+### Schritt-für-Schritt-Anleitung
 
-1. Verbinden Sie sich via SSH mit root rechten zu Ihrem Server.
-2. Navigieren Sie zu /var/lib/mysql.
-3. Wenn die Dateien ib_logfile0 und ib_logfile1 vorhanden sind, ändern Sie deren Namen oder verschieben Sie diese in einen anderen Ordner.
-4. Stoppen und starten Sie den MySQL Service
+1. Verbinde dich via SSH mit Root-Rechten zu deinem Server.
+2. Erstelle eine Sicherungskopie der beiden Dateien:
+
+    ```shell
+    sudo cp /var/lib/mysql/ib_logfile0 /var/lib/mysql/ib_logfile0.bak
+    sudo cp /var/lib/mysql/ib_logfile1 /var/lib/mysql/ib_logfile1.bak
+    ```
+
+3. Benenne die Dateien um oder verschiebe sie in einen anderen Ordner:
+
+    ```shell
+    sudo mv /var/lib/mysql/ib_logfile0 /tmp/
+    sudo mv /var/lib/mysql/ib_logfile1 /tmp/
+    ```
+
+4. Starte den MySQL/MariaDB-Service neu:
 
     ```shell
     sudo service mysql stop
     sudo service mysql start
     ```
 
-5. Überprüfen Sie den MariaDB Service Status
+5. Überprüfe den Service-Status:
 
     ```shell
-    Systemctl status mariadb.service
+    systemctl status mariadb.service
     ```
 
 Nach diesen Schritten sollten die Fehler behoben sein.

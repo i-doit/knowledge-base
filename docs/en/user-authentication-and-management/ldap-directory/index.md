@@ -1,97 +1,110 @@
-# LDAP / Active Directory (AD)
+---
+title: LDAP-directory/Active Directory (AD)
+description: "Connect i-doit to your central directory with the LDAP/AD interface."
+#icon: material/
+status:
+lang: en
+---
 
-i-doit offers an interface for the authentication/ authorization and synchronization of data from a LDAP folder or an active directory (AD).
+!!! warning "Please create a complete backup before making any changes to an interface/import. If the result is not satisfactory, the backup can then be restored"
 
-## Requirements
+The LDAP/AD interface connects i-doit to your central directory. Users log in with their familiar credentials, and you can automatically synchronize persons and person groups.
+
+!!! info ""
+    A practical example can be found on our [Blog](https://www.i-doit.com/blog/ldap-integration-mit-i-doit/)
+
+## Prerequisites
 
 i-doit supports the following directory services:
 
--   [OpenLDAP](https://en.wikipedia.org/wiki/OpenLDAP)
--   [Microsoft Active Directory (AD)](https://en.wikipedia.org/wiki/Active_Directory)
--   [Novel eDirectory](https://en.wikipedia.org/wiki/NetIQ_eDirectory) (previously Directory Services)
+*   [OpenLDAP](https://de.wikipedia.org/wiki/OpenLDAP)
+*   [Microsoft Active Directory (AD)](https://de.wikipedia.org/wiki/Active_Directory)
+*   [Novel eDirectory](https://de.wikipedia.org/wiki/Novell_eDirectory) (formerly Directory Services)
 
-The [PHP-Extension php_ldap](http://de.php.net/manual/en/ldap.setup.php) has to be installed and activated for the communication with an active directory (AD) / LDAP folder. If you have installed _i-doit_ according to our installation guide, then the module will already be available.
+The [PHP extension php_ldap](http://de.php.net/manual/de/ldap.setup.php) must be installed and enabled. If you have followed the installation instructions, the extension is already present on your system.
 
-Don't forget to allow LDAP connection if you are using **SELinux** with `setsebool -P httpd_can_connect_ldap on`. The -P is for Permanent
-Verify it via `getsebool -a | grep httpd`
+!!! tip "SELinux"
+    If you are using SELinux, you must explicitly allow LDAP connections: `setsebool -P httpd_can_connect_ldap on` (the `-P` flag makes the setting permanent). Check the status with `getsebool -a | grep httpd`.
 
-### Required Permissions for the LDAP Sync
+### Required rights for the LDAP sync
 
 A user for the `ldap-sync` command requires the following minimum permissions:
 
-**1. Administration (Execute Command)**
+**1. Administration (command execute)**
 
-- Condition **Commands** and `All` permissions for the `SyncCommand` parameter.
+- Condition **Commands** and `All` rights for the parameter `SyncCommand`.
 
-**2. CMDB (Edit Objects & Groups)**
+**2. CMDB (edit objects & groups)**
 
-- Condition **Category in Object Type "Persons"** and `All` permissions for the `Persons - Person group memberships` category.
+- Condition **category in object type "Persons"** and `All` rights for the category `Persons - person group membership`.
 
 
-### Subsequent Installation under [Debian GNU/Linux](../../installation/manual-installation/debian/index.md)
+### Subsequent installation on Debian GNU/Linux
 
 ```shell
-sudo apt install php7-ldap
+sudo apt install php-ldap
 sudo service apache2 restart
 ```
 
-### Subsequent Installation under [Windows](../../installation/manual-installation/microsoft-windows-server/index.md)
+### Subsequent installation on [Windows](../../installation/manual-installation/microsoft-windows-server/index.md)
 
-The file php.ini (usually at C:\xampp\php\php.ini) has to be modified. Activate loading of the php_ldap extension in a text editor.
+Edit the file `php.ini` (typically located at `C:\xampp\php\php.ini`). Enable the extension `php_ldap` by removing the semicolon at the beginning of the line.
 
 From the line
 
-```shell
+```ini
 ;extension=php_ldap.dll
 ```
 
-the ";" is deleted, resulting in
+becomes
 
-```shell
+```ini
 extension=php_ldap.dll
 ```
 
-Sometimes it may also be necessary to copy the files `ssleay32.dll` and `libeay32.dll` (in most cases they are located at `C:\xampp\apache\bin\`, however, this varies from version to version) to the php\ folder. The Apache web server has to be restarted afterwards.
+Depending on the version, it may be necessary to copy the files `ssleay32.dll` and `libeay32.dll` (usually located under `C:\xampp\apache\bin\`) into the `php\` directory. Then restart the Apache web server.
 
 ## Configuration
 
-In i-doit the configuration is located at **Administration → Import and interfaces → LDAP**.
+The configuration is located in i-doit under **Administration → Import and Interfaces → LDAP**.
 
 ### Server
 
-Under **Administration → Import and interfaces → LDAP → Server** you can configure one or more instances. All servers are queried during the login process until a login has been found. In case there are multiple [tenants](../../system-administration/multi-tenant.md), they are all queried one after another. The databases that produced a positive result in the query are offered for the login.
+Under **Administration → Import and Interfaces → LDAP → Server** you configure one or more LDAP servers. During login, i-doit queries all configured servers one after another until a successful authentication occurs. With multiple [tenants](../../administration/multi-tenancy.md), all databases are offered where the query returns a positive result.
 
-### LDAP Connection for Look ups (Reading)
+### LDAP Connection for Lookups (read-only)
 
-| Field name                                 | Content                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Active**                                 | Do you want to query the server during login?                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| **Directory**                              | Mandatory field: Which type of directory is queried?                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| **LDAP Version**                           | In which version does the directory exist? (Default: **3**)                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| **Enable LDAP Paging**                     | Should the maximum number of search results be activated/overridden?  <br>Then the results will be transmitted "in packets".<br><br>In an LDAP search process, it must always be taken into account that the LDAP server has an upper limit on the number of results returned per search query. For example, you search for all user objects in an entire OU structure, but only 500 users are returned as results, even though there must be well over 2000 users on the server. |
-| **LDAP Page Limit**                        | How many results should be returned per "packet"?                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| **IP / Host name**                         | Mandatory field: The IP or the host name of the server.                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| **Port**                                   | Mandatory field: Via which port is the query carried out? (Default: **389**)                                                                                                                                                                                                                                                                                                                                                                                                      |
-| **TLS**                                    | Should the query be encrypted? On Debian-based operating systems, the root CA certificate is copied to the directory `/usr/local/share/ca-certificates/` and then activated with `sudo update-ca-certificates`.                                                                                                                                                                                                                                                                   |
-| **TLS-Certificate**                        | The certificate is selected here. If none has been uploaded yet, it can be uploaded directly.                                                                                                                                                                                                                                                                                                                                                                                     |
-| **TLS-certificate checking strategy**      | **Allow**: The peer certificate is requested. If no certificate is provided, the session continues normally. If an invalid certificate is provided, it is ignored and the session continues normally.<br>**Demand**: The peer certificate is requested. If no certificate is provided or an invalid certificate is provided, the session is terminated immediately.                                                                                                               |
-| **Admin username (DN)**                    | Mandatory field: The path to the user object which has reading permissions for the directory.<br><br>(Example: **CN=idoit,OU=tree,DC=synetics,DC=int**)                                                                                                                                                                                                                                                                                                                           |
-| **Password**                               | Mandatory field: The password of the user stated above.                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| **Use admin user for all read operations** | If the option "Use admin user for all read requests" is activated, each LDAP server query is checked with the administrator account from the LDAP server configuration                                                                                                                                                                                                                                                                                                            |
-| **Time limit**                             | Limit for the maximum duration of the query. (Default: **30**)                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Field name                                            | Content                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Active**                                          | Should the server be queried during login?                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| **Directory**                                       | **Required field**: What type of directory is being queried?                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **LDAP Version**                                    | Which version of the directory is in use? (default: 3)                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **Enable LDAP Paging**                              | Should the maximum number of search results be enabled/overridden? If so, the results are transmitted packet by packet.<br><br>_In an LDAP search process, you must always consider that the LDAP server may impose an upper limit on results returned per query. For example, you search for all user objects in an entire OU structure but only receive 500 users as a result, even though well over 2000 users exist on the server._ |
+| **LDAP Page Limit**                                 | How many results should be returned per "package"?                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| **IP / Hostname**                                   | **Required field**: The IP or hostname of the server                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **Port**                                            | **Required field**: Through which port is the query performed? (default: 389)                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| **TLS**                                             | Should the query be encrypted? On Debian-based operating systems the Root CA certificate is copied to the directory `/usr/local/share/ca-certificates/` and subsequently enabled with `sudo update-ca-certificates`.                                                                                                                                                                                                                                                                              |
+| **TLS Certificate**                                 | Here the certificate is selected. If none has been uploaded yet, it can be uploaded directly.                                                                                                                                                                                                                                                                                                                                                                                                    |
+| **TLS Certificate Check Strategy**                  | **Allow**: The peer certificate is requested. If no certificate is provided, the session continues normally. If an invalid certificate is provided, it is ignored and the session continues normally.<br>**Demand**: The peer certificate is requested. If no certificate is provided or an invalid certificate is provided, the session is immediately terminated.                                                                                                                                  |
+| **Admin username (DN)**                             | **Required field**: The path to the user object that has read access to the directory.<br><br>(Example: CN=idoit,OU=tree,DC=synetics,DC=int)                                                                                                                                                                                                                                                                                                                                                     |
+| **Password**                                        | **Required field**: The password of the specified user                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **Use admin user for all read queries**             | When the option "Use admin user for all read queries" is enabled, every LDAP server query is verified using the administrator account from the LDAP server configuration                                                                                                                                                                                                                                                                                                                         |
+| **Time limit**                                      | Limit for the maximum duration of the query. (default: 30)                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 
-### LDAP Parameters for the _i-doit_ Login
+_Known solutions for TLS connection problems can be found at [LDAP via TLS](../../administration/troubleshooting/ldap-via-tls.md)_
 
-The parameters stated here determine where users are to be searched in the directory.
+### LDAP parameters for i-doit login
 
-| Field name                   | Content                                                                                                                                                                                                                                                                                                                                                                                     |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Unique identifier**        | AD synchronization often results in changed records not being synchronized due to a changed name (marriage or similar).  <br>The "old" record is archived here and a new one is imported.  <br>Therefore a different attribute can be selected as unique identifier. See [category extension](../../system-administration/administration/import-and-interfaces/ldap/attribute-extension.md) |
-| **Filter**                   | The filter is automatically filled by the values defined in the lower area. It is also possible to insert the filter **manually**. To do this, click on the **Manually edit** button.                                                                                                                                                                                                       |
-| **Search for users in (OU)** | Mandatory field: The path to the organizational unit in which the users are stored in the directory.<br><br>(Example: **OU=tree,DC=synetics,DC=int**)                                                                                                                                                                                                                                       |
-| **Recursive search**         | When activating the recursive search, also the folders beneath the stated organizational units are searched. This is not recommended for large directories and should be bypassed by the creation of multiple servers.                                                                                                                                                                      |
+These parameters determine where i-doit searches for users in the directory.
 
-In addition to this the filter can be further defined. The options behind this have no effect yet for a single filter line. Once the query is extended using "Add filter", the additional options come into effect.
+| Field name                          | Content                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Unique identifier**             | During AD synchronization, it can happen that changed records are no longer synchronized correctly due to a changed name (e.g. marriage). The "old" record is then archived and a new one is imported. Therefore, a different attribute can be selected as the unique identifier. See **[Attribute extension](../../administration/management/import-and-interfaces/ldap/attribute-extension.md)** |
+| **Filter**                        | The filter is automatically filled by the values defined in the section below. It is also possible to edit the filter **manually**. To do so, click the **Edit manually** button.                                                                                                                                                                                                                                                                                         |
+| **Search for users in (OU)**      | **Required field**: The path to the organizational unit where the users are stored in the directory.<br><br>(Example: OU=tree,DC=synetics,DC=int)                                                                                                                                                                                                                                                                                                                        |
+| **Recursive search**              | When recursive search is enabled, the directories below the specified organizational unit are also searched. For large directories this is not recommended and should be avoided by creating multiple servers.                                                                                                                                                                                                                                                             |
+
+You can further refine the filter. With a single filter line, the additional options have no effect yet. Only when you extend the query via **Add filter** do they take effect.
 
 Append to last filter:
 
@@ -105,84 +118,89 @@ Append as new filter:
 (&(objectClass=user)(&(test=test)))
 ```
 
-Create new term:
+Form new term:
 
 ```shell
 (&(&(objectClass=user))(test=test))
 ```
 
-You can then test the configuration specified above in the bottom section. Optimally, the following notification is displayed:
+In the lower section of the page you can test the configuration. On success, the following message appears:
 
 ```shell
 Connection OK!
 XX object(s) found in OU=tree,OU=synetics,DC=synetics,DC=int.
 ```
 
-If the error message is not clear enough in the event of a failure, the debug level can be increased so that further outputs are written into the Apache error log. In Debian-based operating systems the error log can be found at /var/log/apache2/error.log.
+If the error message is not informative enough, increase the debug level. This causes i-doit to write more detailed output to the Apache error log. On Debian-based systems you can find it at `/var/log/apache2/error.log`.
 
-### Object identification
+### Identifying objects
 
-Without any further setting, e.g. Unique identifier, is identified using the login attribute from the category Persons → Login.
+Without additional settings (e.g. **Unique identifier**), i-doit identifies objects based on the **Login** attribute from the **category Persons > Login**.
 
 ### Directories
 
-Afterwards you can set up the mapping via **Administration → Import and interfaces → LDAP → Directories**. It is used to query basic information during the login process about the user who is logging in and to save it for the user that is going to be created in _i-doit_. After choosing the applicable  directory the assignment can be carried out. However, the fields are filled by default and generally do not need any changes.
+Under **Administration → Import and Interfaces → LDAP → Directories** you set up the attribute mapping. During login, i-doit queries basic information about the user and stores it in the person object. Select the applicable directory and adjust the assignment as needed. As a rule, the fields are already correctly pre-filled.
 
-### Import of custom LDAP Attributes
+### Import custom LDAP attributes
 
-It is also possible to save custom attributes from the LDAP in the master data via the import of persons. At **Administration → Import and interfaces → LDAP → Attribute extensions** further fields can be configured for this category. A field with the corresponding name is shown once the name has been set. The filling is carried out through the corresponding key.
+You can also import custom LDAP attributes into the master data. Configure additional fields under **Administration → Import and Interfaces → LDAP → [Attribute extension](../../administration/management/import-and-interfaces/ldap/attribute-extension.md)**. Once you have defined a name, the field appears in the master data and is populated during sync via the associated key.
 
-### Periodic Synchronization
+### Regular synchronization
 
-The required configuration for this has already been made in the previous steps. Now you only have to set up an appropriate [i-doit console utility](../../automation-and-integration/cli/index.md)for the synchronization. Additional fields can also be configured for synchronization.
+You have already completed the basic configuration in the previous steps. Now set up the appropriate [i-doit console utility](../../automation-and-integration/cli/index.md) command to execute the synchronization on a regular basis. Optionally, configure additional fields to be synchronized.
 
-### Advanced Configuration
+### Extended configuration
 
-An example can be found [here](../../automation-and-integration/cli/configuration-files.md). This file can be extended and customized with login data, tenant and attributes. The configuration file is then moved to `/src/handler/config/`.<br>
-So that this file is considered e.g. with the ldap-sync Command, this must be indicated with the sync over a further parameter `-c /path/` also (further information to the [i-doit console utility](../../automation-and-integration/cli/index.md)).
+An example can be found [here](../../automation-and-integration/cli/configuration-files.md). This file can be extended with login credentials, tenant, and additional options. For the `ldap-sync` command to consider it, specify it via the parameter `-c /path/`. Additional information can be found at the [i-doit console utility](../../automation-and-integration/cli/index.md).
 
-| Parameter                     | Purpose                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **import_rooms**              | When set to "true", also rooms are created with the synchronization.(Default: **false**)                                                                                                                                                                                                                                                                                                                                         |
-| **defaultCompany**            | Through this the users added by the LDAP synchronization are assigned automatically to the configured organization. (Default: **empty**)<br><br>e.g .<br><br>defaultCompany='i-doit'                                                                                                                                                                                                                                             |
-| **deletedUsersBehaviour**     | Can be set to **archive**, **delete** or **disable_login** to set users to the status [archived or deleted](../../basics/life-and-documentation-cycle.md) when they cannot be found anymore via the synchronization. A user that is archived or deleted cannot log in to _i-doit_ anymore!<br><br>Or you just deactivate the login for the users.<br><br>(Default: **archive**)<br><br>e.g.<br><br>deletedUsersBehaviour=archive |
-| **disabledUsersBehaviour**    | Can be set to **archive**, **delete** or **disable_login** to set users to the status [archived or deleted](../../basics/life-and-documentation-cycle.md) when they cannot be found anymore via the synchronization. A user that is archived or deleted cannot log in to _i-doit_ anymore!<br><br>Or you just deactivate the login for the users.<br><br>e.g.<br><br>disabledUsersBehaviour=archive                              |
-| **rooms**                     | As seen in the example, an assignment of an user to a **room** can be predefined here. The assignment is carried out via the contact assignment without a role.<br><br>e.g. <br><br>rooms\["Raum B"] = \["Person A", "Person C", "Person D"]                                                                                                                                                                                     |
-| **attributes**                | The respective fields from the directory are linked with attributes in _i-doit_ using the "Attributes". These complement the assigned attributes described in the above mentioned part of the guide.<br><br>e.g.<br><br>attributes\[department]=department                                                                                                                                                                       |
-| **autoReactivateUsers**       | This is only relevant for Novel Directory Services (NDS) and OpenLDAP. During synchronization all users are activated again with this and deactivated according to the common principle, if applicable.<br><br>e.g.<br><br>autoReactivateUsers=false                                                                                                                                                                             |
-| **ignoreUsersWithAttributes** | This function helps to prevent synchronization of unwanted directory objects.<br><br>The user will not be synchronized if the **ignoreFunction** fails for all selected attributes.<br><br>e.g.<br><br>ignoreUsersWithAttributes\[\]\="samaccountname"                                                                                                                                                                           |
-| **ignoreFunction**            | This can be any function name which can be called through call\_user\_func or the defined functions.<br><br>Defined functions:<br><br>empty  <br>!empty  <br>isset  <br>!isset<br><br>e.g,<br><br>ignoreFunction\=empty                                                                                                                                                                                                          |
-| syncEmptyAttributes           | If values were deleted/emptied from fields in AD, they are transferred to i-doit.<br><br>syncEmptyAttributes=true                                                                                                                                                                                                                                                                                                                |
+| Parameter                     | Purpose                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **import_rooms**              | When set to true, rooms are also created during synchronization (default: false)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| **defaultCompany**            | This causes users added through LDAP synchronization to be automatically assigned to the configured organization. (default: empty)<br><br>Example:<br><br>defaultCompany='i-doit'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| **deletedUsersBehaviour**     | Can be set to **archive**, **delete**, or **disable_login** to [archive or delete](../../basics/life-and-documentation-cycle.md) users who are no longer found during synchronization. An archived/deleted user can no longer log in to i-doit.<br><br>deletedUserBehavior=archive sets the user status to archived<br>deletedUserBehavior=delete sets the user status to deleted<br>deletedUserBehavior=disable\_login sets the user status to normal and disables login<br><br>(default: **archive)**<br><br>Example:<br><br>deletedUsersBehaviour=archive |
+| **disabledUsersBehaviour**    | Can be set to **archive**, **delete**, or **disable_login** to [archive or delete](../../basics/life-and-documentation-cycle.md) users who are no longer found during synchronization. An archived/deleted user can no longer log in to i-doit.<br><br>Alternatively, only the login for those users can be disabled.<br><br>Example:<br><br>disabledUsersBehaviour=archive                                                                                                                                                                                                                                                                                                          |
+| **rooms**                     | As shown in the example, a fixed assignment of users to a room can be defined here, which is applied during synchronization. The assignment is realized via the contact assignment without a role.<br><br>Example:<br><br>rooms\["Room B"] = \["Person A", "Person C", "Person D"]                                                                                                                                                                                                                                                                                                                                                                                                        |
+| **attributes**                | This maps the respective fields from the directory to attributes in i-doit. These supplement the assigned attributes from the upper part of the guide.<br><br>Example:<br><br>attributes\[department]=department                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| **autoReactivateUsers**       | Only relevant for Novel Directory Services (NDS) and OpenLDAP. This causes all users to be re-enabled first during synchronization and then disabled again according to the regular principle, if applicable.<br><br>Example:<br><br>autoReactivateUsers=false                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **ignoreUsersWithAttributes** | This function helps prevent synchronization of unwanted directory objects.<br><br>The user is not synchronized when the ignoreFunction fails for all selected attributes.<br><br>Example:<br><br>ignoreUsersWithAttributes\[\] = "samaccountname"                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| **ignoreFunction**            | This can be any function name callable via call\_user\_func or the defined functions.<br><br>Defined functions:<br><br>empty<br>!empty<br>isset<br>!isset<br><br>Example:<br><br>ignoreFunction\=empty                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| **syncEmptyAttributes**       | If values have been deleted/cleared from fields in AD, they are adopted in i-doit<br><br>syncEmptyAttributes=true                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
-### Console
+### Automatic assignment of persons to person groups
 
-In order to use the console correctly, the [article](../../automation-and-integration/cli/index.md) should be familiar with it. A simple synchronization without the advanced configuration is provided by the option ldap-sync. A description of the parameters as well as a corresponding example can be found in the corresponding [chapter](../../automation-and-integration/cli/index.md#ldap-sync).
+The automatic assignment ensures that users receive the permissions of their person group automatically after login.
 
-### Automated Assignment of Persons to Person Groups
+To set up the assignment:
 
-The automated assignment makes sure that the specified permissions of the person group are assigned automatically upon log in. The attribute **LDAP group (Mapping)** in the **master data** of a **person group** has to be filled with a valid group from your directory in order for the assignment to happen. The groups assigned to the user object in the directory are queried and compared to the attribute **LDAP group (Mapping)** of the _i-doit_ person groups once a user is logging in or the synchronization is initiated. If there is a match, the group is assigned and the other groups are queried.
+1. Open the **master data** of a **person group** in i-doit.
+2. Enter the name of the corresponding LDAP/AD group in the **LDAP Group (Mapping)** attribute.
 
-[![Automated Assignment of Persons to Person Groups](../../assets/images/en/automation-and-integration/ldap/1-ldap.png)](../../assets/images/en/automation-and-integration/ldap/1-ldap.png)
+During login or synchronization, i-doit compares the user's group memberships in the directory with the configured mappings. If they match, the person group is automatically assigned.
+
+[![ldap-autozuweisung](../../assets/images/de/automatisierung-und-integration/ldap/1-ldap.png)](../../assets/images/de/automatisierung-und-integration/ldap/1-ldap.png)
 
 !!! info "memberOf with OpenLDAP"
-    The automatic assignment is based on LDAP querying in which groups there is a user. The memberOf attribute plays an important role in this connection. This attribute has to be available as an overlay. However, in many default installations of OpenLDAP this is not the case. Useful information about the required configurations can be found in [this](http://www.adimian.com/blog/2014/10/how-to-enable-memberof-using-openldap/) and [this article](https://technicalnotes.wordpress.com/2014/04/19/openldap-setup-with-memberof-overlay/).
+    The automatic assignment relies on the LDAP query that determines which groups a user belongs to. The memberOf attribute plays an important role here. This attribute must be available as an overlay, which is not the case in many default installations of OpenLDAP. Good articles on the required configuration can be found [here](http://www.adimian.com/blog/2014/10/how-to-enable-memberof-using-openldap/) and [here](https://technicalnotes.wordpress.com/2014/04/19/openldap-setup-with-memberof-overlay/).
 
-### Synchronize persons and groups of persons
+### Synchronizing persons and person groups
 
-Since version 1.15 persons and groups of persons can be synchronized from LDAP/AD. Thereby the persons become members of the group assigned to them in Directory. As long as the group is also found with the configured filter.<br>
-Prerequisite is that the user with whom the command is executed also has supervisor rights on the categories ("Group memberships" and "Person groups > Members") and supervisor rights on the object types ("Persons" and "Person groups").
+Since version 1.15, i-doit synchronizes persons and person groups from LDAP/AD. In this process, persons are automatically assigned to the groups they belong to in LDAP, provided those groups are captured by the configured filter.
 
-[![Synchronize persons and groups of persons](../../assets/images/en/automation-and-integration/ldap/2-ldap.png)](../../assets/images/en/automation-and-integration/ldap/2-ldap.png)
+A detailed guide can be found in the article [Import users and groups from AD/LDAP](../ldap-directory/user-group-synchronization.md).
+
+The executing user requires supervisor permissions on the categories **Group membership** and **Person groups > Members** as well as on the object types **Persons** and **Person groups**.
+
+[![ldap-sync](../../assets/images/de/automatisierung-und-integration/ldap/2-ldap.png)](../../assets/images/de/automatisierung-und-integration/ldap/2-ldap.png)
 
 ## Logging
 
-A log file named `ldap_YYYY-MM-DD.log` can be found within the `log/` folder in the i-doit installation. The logging can be activated or deactivated in the [Admin-Center](../../system-administration/admin-center.md#system-settings) or via the [expert settings](../../system-administration/admin-center.md#expert-settings-system-related) in the [Admin-Center](../../system-administration/admin-center.md#system-settings).
+In the `log/` directory of your i-doit installation you will find the log file `ldap_YYYY-MM-DD.log`. Logging is configured in the [Admin Center](../../administration/admin-center.md#system-settings) or via the [Expert settings](../../administration/admin-center.md#expert-settings-system-bezogen).
 
-## Running the ldap-sync
+## Executing the ldap-sync
 
-The ldap-sync can only be executed via the console of the server. To be able to use the console properly, you should know the [i-doit console utility](../../automation-and-integration/cli/index.md) about it. A simple synchronization without the advanced configuration serves the option ldap-sync. A description of the parameters can be found in the [i-doit console utility](../../automation-and-integration/cli/index.md).
+The ldap-sync is executed via the command line of the server. First familiarize yourself with the [i-doit console utility](../../automation-and-integration/cli/index.md). For a simple synchronization without extended configuration, use the `ldap-sync` command.
 
-**Example within the i-doit folder**
+**Example usage from the i-doit directory**
 
 ```shell
 sudo -u www-data php console.php ldap-sync --user admin --password admin --tenantId 1 --verbose --ldapServerId 1

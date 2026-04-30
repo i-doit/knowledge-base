@@ -1,55 +1,57 @@
 ---
-title: Structural analysis
-description: As part of the structural analysis, ensure that all objects required to document the information scope are created in i-doit.
+title: Structural Analysis
+description: As part of the structural analysis, you ensure that all objects required for documenting the information domain have been created in i-doit.
+icon:
+status:
 lang: en
 ---
 
-# Structural analysis
+# Structural Analysis
 
-As part of the structural analysis, ensure that all objects required to document the information scope are created in i-doit.
+As part of the structural analysis, you ensure that all objects required for documenting the information domain have been created in i-doit.
 
-## To document
+## What to capture
 
 - Business processes with associated applications
 - IT systems, ICS systems, other devices
 - Rooms and locations
 - Communication links
 
-## Target object groups
+## Target Object Groups
 
-- Statically group similar objects and assign them to the information scope
+- Group similar objects statically and assign them to the information domain
 
-To reduce complexity, similar objects should be grouped in the target object group object type. The group type must remain static. The target object group is then assigned to the information scope via the "Information scopes" category.
+To reduce complexity, you group similar objects in the Target Object Group object type. The object group type must remain set to "static". You then assign the Target Object Group to the information domain via the "Information Domains" category.
 
-[![Target object groups](../../assets/images/en/i-doit-add-ons/viva2/structural-analysis/targetobjectgroup-example.png)](../../assets/images/en/i-doit-add-ons/viva2/structural-analysis/targetobjectgroup-example.png){:target="_blank"}
+[![Target Object Groups](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/zielobjektgruppe-beispiel.png)](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/zielobjektgruppe-beispiel.png){:target="_blank"}
 
-!!! note "Technically, a target object group can be assigned to multiple information scopes, but it is recommended to assign a target object group to only one information scope."
+!!! note "It is technically possible to assign a Target Object Group to multiple information domains, but it is recommended to always assign a target group to only one information domain."
 
-## Individual objects
+## Individual Objects
 
-If there are individual objects that need to be assigned to the information scope and require module assignments, there are two ways to proceed:
+If there are individual objects that need to be assigned to the information domain and have modules assigned to them, there are two ways to accomplish this:
 
-1.  Create a target object group for this object and assign the object as the only member of that group. The target object group is then assigned to the information scope as usual.
-2.  Use the Quick Configuration Wizard to assign the "IT-Grundschutz (target objects)" category to the object type. In this case, the object is assigned directly to the information scope.
+1.  A Target Object Group is created for this object, and the object is assigned as the only member of this object group. The Target Object Group is then assigned to the information domain in the normal way.
+2.  The "IT-Grundschutz (Target Objects)" category is assigned to this object's object type via the Quick Configuration Wizard. In this case, the object is directly assigned to the information domain.
 
 ## Responsibilities
 
-For all relevant objects, responsibilities should be documented via the "Contact assignment" category.
+For all relevant objects, responsibilities should be documented via the Contact Assignment category.
 
-## Cleaned network diagram
+## Cleaned Network Plan
 
-The cleaned network diagram should be linked in the "Information scope" category of the information scope.
+The cleaned network plan should be linked in the "Information Domain" category on the information domain.
 
-[![Adjusted-network](../../assets/images/en/i-doit-add-ons/viva2/structural-analysis/adjusted-network.png)](../../assets/images/en/i-doit-add-ons/viva2/structural-analysis/adjusted-network.png){:target="_blank"}
+[![Cleaned Network Plan](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/netzplan.png)](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/netzplan.png){:target="_blank"}
 
-## Communication link
+## Communication Links
 
-The communication link to be documented are created in i-doit via the new [Communication link object type](objecttypes-categories.md#communication-link).
+The communication links to be documented are maintained via the new [Communication Link object type](objecttypes-categories.md#kommunikationsverbindung) in i-doit.
 
-[![Communication-link](../../assets/images/en/i-doit-add-ons/viva2/structural-analysis/communication-link.png)](../../assets/images/en/i-doit-add-ons/viva2/structural-analysis/communication-link.png){:target="_blank"}
+[![Communication Links](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/kommunikationsverbindungen.png)](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/kommunikationsverbindungen.png){:target="_blank"}
 
-Communication link are usually assigned directly to the information scope, which is why the "IT-Grundschutz (target objects)" category is initially assigned to the "Communication link" object type. In the "Information scopes" category, the corresponding information scope must then be assigned.
+Communication links are typically assigned directly to the information domain, which is why the "IT-Grundschutz (Target Objects)" category is initially assigned to the "Communication Link" object type. In the "Information Domains" category, you then assign the corresponding information domain.
 
-If objects are entered as "connection participants" in the "Communication link" category, the protection needs of those objects are inherited to the communication link in the protection needs assessment.
+If objects are entered as "connection participants" in the "Communication Link" category, the protection needs from these objects are inherited to the communication link in the protection needs assessment.
 
-[<- Back](objecttypes-categories.md){ .md-button } · [Protection needs assessment ->](assessment-of-protection.md){ .md-button .md-button--primary }
+[<- Back](objecttypes-categories.md){ .md-button } · [Protection Needs Assessment ->](assessment-of-protection.md){ .md-button .md-button--primary }

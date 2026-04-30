@@ -1,135 +1,137 @@
 ---
-title: Setup of the ISMS Add-on
-description: Guide for the complete setup of the ISMS Add-on in i-doit.
+title: Setting Up the ISMS Add-on
+description: Guide for the complete setup of the ISMS add-on in i-doit.
+icon:
+status:
 lang: en
 ---
 
-# Setup of the ISMS Add-on
+# Setting Up the ISMS Add-on
 
-This document describes the complete setup of the ISMS Add-on in i-doit.
+This document describes the complete setup of the ISMS add-on in i-doit.
 
 * * *
 
-## Setup of the ISMS Add-on
+## Setting Up the ISMS Add-on
 
-Before use, four basic steps must be completed.
+Before using the add-on, you must complete four basic steps.
 
-### 1. Define assessment criteria
+### 1. Define Assessment Criteria
 
-- Define criteria for **likelihood of occurrence** and **extent of damage**
-- Values must be integers and serve as axis labels in the **risk matrix**
+- Define criteria for **probability of occurrence** and **impact**
+- The values must be integers and serve as axis labels in the **risk matrix**
 
 !!! example "For example"
-    | Level | Designation | Description of likelihood of occurrence |
-    | ----- | ----------- | --------------------------------------- |
-    | 1     | Low         | Occurs every 10 years                   |
-    | 2     | Normal      | Occurs every year                       |
-    | 3     | High        | Occurs several times per year           |
-    | 4     | Very high   | Occurs daily                            |
+    | Level | Name      | Description of probability of occurrence |
+    | ----- | --------- | ---------------------------------------- |
+    | 1     | Low       | Occurs every 10 years                    |
+    | 2     | Normal    | Occurs every year                        |
+    | 3     | High      | Occurs several times per year            |
+    | 4     | Very high | Occurs daily                             |
 
-The level should be a positive integer, with the criteria sorted in ascending order. The description of the likelihood of occurrence is optional.
+The level should be a positive integer, by which the criteria are sorted in ascending order. The description of the probability of occurrence is optional.
 
-[![Assessment Criteria](../../assets/images/en/i-doit-add-ons/isms/configuration/1-assessment-criteria.png)](../../assets/images/en/i-doit-add-ons/isms/configuration/1-assessment-criteria.png)
+[![Assessment criteria](../../assets/images/de/i-doit-add-ons/isms/configuration/1-bewertungskriterien.png)](../../assets/images/de/i-doit-add-ons/isms/configuration/1-bewertungskriterien.png)
 
-### 2. Define incident scenarios
+### 2. Create Damage Scenarios
 
 **Examples:**
-- Financial damages
-- Legal violations or breaches of contract
-- Data protection violations
-- Negative external impact
+- Financial damage
+- Violations of laws or contracts
+- Data protection breaches
+- Negative public perception
 
 !!! example "For example"
-    | Designation | Description      | Assessment Criteria            |
-    | ----------- | ---------------- | ------------------------------ |
-    | 1           | Financial Impact | Low: Less than €5,000          |
-    |             |                  | Normal: From €5,000 to €50,000 |
-    |             |                  | High: From €50,000 to €500,000 |
-    |             |                  | Very high: More than €500,000  |
+    | Identifier | Name             | Assessment Criteria              |
+    | ---------- | ---------------- | -------------------------------- |
+    | 1          | Financial Impact | Low: Less than 5,000 EUR         |
+    |            |                  | Normal: From 5,000 to 50,000 EUR |
+    |            |                  | High: From 50,000 to 500,000 EUR |
+    |            |                  | Very high: More than 500,000 EUR |
 
-For each assessment criterion, appropriate expressions should be created. The incident scenarios can be oriented based on those defined in the BSI IT Baseline Protection. The designation serves for sorting.
+Create appropriate specifications for each assessment criterion. You can orient the damage scenarios to those defined in the BSI IT-Grundschutz. The identifier is used for sorting.
 
-[![incident Scenarios](../../assets/images/en/i-doit-add-ons/isms/configuration/2-incident-scenarios.png)](../../assets/images/en/i-doit-add-ons/isms/configuration/2-incident-scenarios.png)
+[![Damage scenarios](../../assets/images/de/i-doit-add-ons/isms/configuration/2-schadensszenarien.png)](../../assets/images/de/i-doit-add-ons/isms/configuration/2-schadensszenarien.png)
 
-### 3. Define risk classes and risk formula
+### 3. Define Risk Classes and Risk Formula
 
-- Configuration under **Add-ons → ISMS → Risk Classes**
-- The **risk matrix** is based on the assessment criteria and the chosen calculation formula
+- Configuration under **Add-ons > ISMS > Risk Classes**
+- The **risk matrix** is based on the assessment criteria and the selected calculation formula
 - Risk classes can be individually customized and color-coded
 
 #### Risk Classes
 
-For further evaluation, it is now necessary to choose how critical a risk level is assessed. Colors can be defined for this purpose.
+For further evaluation, you now choose how critical a risk level is assessed. You can define colors for this.
 
 | Color                                 | Risk Level |
 | ------------------------------------- | ---------- |
-| Red, values are less than or equal    | -          |
-| Yellow, values are less than or equal | 6          |
-| Green, values are less than or equal  | 3          |
+| Red, for values less than or equal    | -          |
+| Yellow, for values less than or equal | 6          |
+| Green, for values less than or equal  | 3          |
 
-The chosen values result in a risk matrix.
+The selected values result in a risk matrix.
 
-[![Risk Classes](../../assets/images/en/i-doit-add-ons/isms/configuration/3-risk-classes.png)](../../assets/images/en/i-doit-add-ons/isms/configuration/3-risk-classes.png)
+[![Risk classes](../../assets/images/de/i-doit-add-ons/isms/configuration/3-risikoklassen.png)](../../assets/images/de/i-doit-add-ons/isms/configuration/3-risikoklassen.png)
 
-#### Risk formula and risk matrix
+#### Risk Formula and Risk Matrix
 
-!!! note
-    If no assessment criteria are defined, the risk matrix will not be displayed.
+!!! note "If no assessment criteria are defined, the risk matrix will not be displayed."
 
-The risk formula defines how the risk level is calculated from the assessment criteria. Example for the formula "Maximum risk assessment + likelihood of occurrence = risk level":
+The risk formula defines how the risk level is calculated from the assessment criteria. Example for the formula "Maximum risk evaluation + probability of occurrence = risk level":
 
-[![Risk Classes](../../assets/images/en/i-doit-add-ons/isms/configuration/3-risk-matrix.png)](../../assets/images/en/i-doit-add-ons/isms/configuration/3-risk-matrix.png)
-!!! tip "Manually override fields in the risk matrix"
-    In the risk matrix, individual fields can be manually overridden. To do this, click on the desired field and select the desired risk class.
+[![Risk classes](../../assets/images/de/i-doit-add-ons/isms/configuration/3-risikomatrix.png)](../../assets/images/de/i-doit-add-ons/isms/configuration/3-risikomatrix.png)
 
-### 4. Add measures
+!!! tip "Manually override risk matrix fields"
+    In the risk matrix, you can manually override individual fields. Click on the desired field and select the desired risk class.
 
-- Measures can be created manually or imported from catalogs via **CSV import**
-- For ISO 27001, it is recommended to import the measures from **Annex A**
-- Catalogs are included in the add-on package and can be imported via the i-doit CSV import:
-  - **Extras → CMDB Import → CSV Import**
+### 4. Add Measures
+
+- You can create measures manually or import them via **CSV** from catalogs
+- For ISO 27001, importing the measures from **Annex A** is recommended
+- The catalogs are included in the add-on package and can be imported via the i-doit CSV import:
+  - **Extras > CMDB Import > CSV Import**
   - Catalogs are located in the add-on directory under: `src/classes/modules/iso27001/Catalogs/`
   - Load import profile: **ISMS universal (new)**
   - Start import
 
-[![Add measures](../../assets/images/en/i-doit-add-ons/isms/configuration/4-import-profile-load.png)](../../assets/images/en/i-doit-add-ons/isms/configuration/4-import-profile-load.png)
+[![Adding measures](../../assets/images/de/i-doit-add-ons/isms/configuration/4-import-profil-laden.png)](../../assets/images/de/i-doit-add-ons/isms/configuration/4-import-profil-laden.png)
 
-Since a risk always consists of **threat and vulnerability**, it is also recommended to create these object types.
+Since a risk always consists of a **threat and a vulnerability**, it is recommended to also create these object types.
 
-| File                                                       | Standard                  | Description                                       | Version | Language | Number of licensed objects |
-| ---------------------------------------------------------- | ------------------------- | ------------------------------------------------- | ------- | -------- | -------------------------- |
-| ISO27001_Massnahmen_AnhangA(de).csv                        | DIN EN ISO/IEC 27001      | Maßnahmen Anhang A                                | 2022    | DE       | ~93                        |
-| ISO27001_Controls_AnnexA(en).csv                           | DIN EN ISO/IEC 27001      | Controls Appendix A                               | 2022    | EN       | ~93                        |
-| IT-Grundschutz-Kompendium_Elementare Gefaehrdungen(de).csv | BSI Grundschutzkompendium | Elementargefährdungen als Bedrohung/Schwachstelle | -       | DE       | ~47                        |
-| IT-Grundschutz-Kompendium_Elementary_Threats(en).csv       | BSI Grundschutzkompendium | Elementary threats as threat/vulnerabilities      | -       | EN       | ~47                        |
-| IT-Grundschutz-Kompendium_Anforderungen(de).csv            | BSI Grundschutzkompendium | Anforderungen aus den Bausteinen als Maßnahmen    | 2023    | DE       | ~1834                      |
-| NIS2-Anforderungen(openkritis.de).csv                      | NIS2                      | Anforderungen aus NIS2 als Maßnahmen              | -       | DE       | ~36                        |
+| File                                                       | default                    | Description                                  | Version | Language | Number of Licensed Objects |
+| ---------------------------------------------------------- | -------------------------- | -------------------------------------------- | ------- | -------- | -------------------------- |
+| ISO27001_Massnahmen_AnhangA(de).csv                        | DIN EN ISO/IEC 27001       | Annex A measures                             | 2022    | DE       | ~93                        |
+| ISO27001_Controls_AnnexA(en).csv                           | DIN EN ISO/IEC 27001       | Controls Appendix A                          | 2022    | EN       | ~93                        |
+| IT-Grundschutz-Kompendium_Elementare Gefaehrdungen(de).csv | BSI Grundschutz Compendium | Elementary threats as threat/vulnerability   | -       | DE       | ~47                        |
+| IT-Grundschutz-Kompendium_Elementary_Threats(en).csv       | BSI Grundschutz Compendium | Elementary threats as threat/vulnerabilities | -       | EN       | ~47                        |
+| IT-Grundschutz-Kompendium_Anforderungen(de).csv            | BSI Grundschutz Compendium | Requirements from modules as measures        | 2023    | DE       | ~1834                      |
+| NIS2-Anforderungen(openkritis.de).csv                      | NIS2                       | NIS2 requirements as measures                | -       | DE       | ~36                        |
 
 * * *
 
-## Optional settings
+## Optionally Settings
 
-In the tenant settings, the option **"Filter report views by location rights"** can be enabled.
+In the tenant settings, you can activate the option **"Filter report views by location rights"**.
 
-The ISMS add-on supports rights management by location to enable flexible and secure information management. In the tenant settings of i-doit, the option "Filter report views by location rights" can be enabled.
+The ISMS add-on supports rights assignment by location to enable flexible and secure management of information.
 
 ### What does this setting do?
 
-When the option is enabled, only the risk assessments that the respective user is allowed to see are displayed in the report views provided by the ISMS add-on. Specifically, it checks whether the user has the "View" right for the "ISMS" category on the corresponding objects.
+If the option is active, only the risk assessments that you are permitted to see are displayed in the report views provided by the ISMS add-on. Specifically, it checks whether you have the "View" right for the "ISMS" category on the corresponding objects.
 
-### Assign measures by location
+### Assigning Measures to Locations
 
-Additionally, it is possible to configure the "Location" category on objects of the type "SOA measure" or "Measure Annex A". This allows measures to be assigned to specific locations.
+Additionally, you can configure the "Location" category for objects of the type "SOA Measure" or "Annex A Measure." This allows measures to be assigned to specific locations.
 
-### Advantages of this feature:
+### Benefits of this Feature
 
-- Locations can maintain the implementation status of their own measures.
-- Users only see the measures of their own location.
-- A central point can create reports for all locations or filtered by individual locations.
+- Locations maintain the implementation status of their own measures themselves.
+- You only see the measures of your own location.
+- A central office can create reports for all locations or filtered by individual locations.
 
 !!! note
-    "The "Location" category can be enabled for SOA measures and Measure Annex A.
+    The "Location" category can be activated for SOA measures and Annex A measures.
 
 * * *
 
-[<- Start](index.md){ .md-button} · [View risk assessment ->](risk-assessment.md){ .md-button .md-button--primary}
+[<- Back to overview](index.md){ .md-button} · [View risk assessment ->](risk-assessment.md){ .md-button .md-button--primary}

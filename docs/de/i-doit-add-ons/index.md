@@ -1,6 +1,6 @@
 ---
 title: i-doit Add-ons
-description: i-doit Add-ons
+description: "Mit i-doit stehen die IT-Dokumentation und die CMDB im Vordergrund."
 icon: add-ons
 status:
 lang: de
@@ -15,10 +15,10 @@ Neben diesen Add-ons existieren viele weitere, die von unseren Partnern und exte
 ## Download
 
 Add-ons sind als installierbare ZIP-Dateien erhältlich. Diese werden über das [Admin-Center](../administration/admin-center.md#add-ons) installiert.
-Im [Kundenportal](../administration/kundenportal.md) können Kunden Add-ons herunterladen. Lizenzpflichtige Add-ons (siehe oben) werden im Kaufprozess in Ihrem Kundenkonto zum Download freigeschaltet.
-Wenn Sie irgendwelche Add-ons vermissen, die Sie gekauft haben, kontaktieren Sie bitte [help@i-doit.com](mailto:help@i-doit.com) für Hilfe.
+Im [Kundenportal](../administration/kundenportal.md) können Kunden Add-ons herunterladen. Lizenzpflichtige Add-ons (siehe oben) werden im Kaufprozess in deinem Kundenkonto zum Download freigeschaltet.
+Wenn du irgendwelche Add-ons vermissen, die du gekauft haben, kontaktiere bitte [help@i-doit.com](mailto:help@i-doit.com) für Hilfe.
 
-Evaluierungsbenutzer können alle kostenlosen und kommerziellen Add-ons im Evaluierungsprozess herunterladen. Für alle Add-ons gibt es auf Ihrer persönlichen Evaluierungsseite [https://center.i-doit.com](https://center.i-doit.com) Download-Buttons. Alle lizenzpflichtigen Add-ons sind in der Evaluierungslizenz lizenziert.
+Evaluierungsbenutzer können alle kostenlosen und kommerziellen Add-ons im Evaluierungsprozess herunterladen. Für alle Add-ons gibt es auf deiner persönlichen Evaluierungsseite [https://center.i-doit.com](https://center.i-doit.com) Download-Buttons. Alle lizenzpflichtigen Add-ons sind in der Evaluierungslizenz lizenziert.
 
 ## Installation
 

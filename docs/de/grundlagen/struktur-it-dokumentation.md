@@ -1,28 +1,33 @@
+---
+title: "Struktur der IT-Dokumentation"
+description: "Die Struktur der IT-Dokumentation beschreibt, wie i-doit deine IT-Dokumentation organisiert."
+icon:
+status:
+lang: de
+---
 # Struktur der IT-Dokumentation
 
-Wie i-doit die [IT-Dokumentation](../glossar.md) strukturiert, ist Thema dieses Artikels. Hierbei geht es vor allem um das Vokabular, das in i-doit Verwendung findet, wie die Begriffe in Zusammenhang stehen und wie dies in der Web GUI dargestellt wird.
+Die Struktur der IT-Dokumentation beschreibt, wie i-doit deine [IT-Dokumentation](../glossar.md) organisiert. Du lernst hier die zentralen Begriffe kennen -- von Objekttypgruppen über Objekte bis hin zu Attributen -- und siehst, wie sie in der Web GUI zusammenspielen.
 
-Von der Navigation
-------------------
+## Von der Navigation
 
-Nach der [Anmeldung](erstanmeldung.md) erscheint zunächst das [Dashboard mit Widgets](dashboard-und-widgets.md). Von dort aus lässt sich die IT-Dokumentation erkunden. Vom Hauptnavigationsleiste (der schwarze Bereich oben) erreicht man fast alle Funktionen in i-doit.
+Nach der [Anmeldung](erstanmeldung.md) erscheint zunächst das [Dashboard mit Widgets](dashboard-und-widgets.md). Von dort aus erkundest du die IT-Dokumentation. Über die Hauptnavigationsleiste (der schwarze Bereich oben) erreichst du fast alle Funktionen in i-doit.
 
 [![Navigation](../assets/images/de/grundlagen/struktur-der-it-dokumentation/1-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/1-sitdoku.png)
 
-Um sich zu orientieren, wo man sich befindet, hilft ein Blick auf die Brotkrumen-Navigation. Von dort aus lassen sich übergeordnete Seiten ansteuern.
+Um dich zu orientieren, wirf einen Blick auf die Brotkrumen-Navigation. Von dort aus steuerst du übergeordnete Seiten an.
 
 [![Navigation-2](../assets/images/de/grundlagen/struktur-der-it-dokumentation/2-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/2-sitdoku.png)
 
-Von Gruppen, Typen und Kategorisierungen
-----------------------------------------
+## Von Gruppen, Typen und Kategorisierungen
 
-Objekttypengruppen umfassen Objekttypen instantiieren Objekte erben Kategorien beinhalten Attribute. Alles klar? Noch einmal langsam und ganz von vorn.
+Die Hierarchie in i-doit folgt einer klaren Logik: **Objekttypgruppen** fassen **Objekttypen** zusammen, aus Objekttypen entstehen **Objekte**, diesen sind **Kategorien** zugeordnet, und Kategorien enthalten **Attribute**. Die folgenden Abschnitte erklären jeden dieser Begriffe im Detail.
 
 [![Objekttypgruppen](../assets/images/de/grundlagen/struktur-der-it-dokumentation/3-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/3-sitdoku.png)
 
 ### Objekttypgruppe
 
-In einer gelebten und gut gefüllten IT-Dokumentation kommen nicht selten viele Objekttypen zum Einsatz. Damit sich diese Fülle übersichtlich präsentiert, können gleichartige Objekttypen gruppiert werden. Diese Objekttypgruppen erscheinen in der Hauptnavigationsleiste (oberster Bereich) von i-doit.
+Eine Objekttypgruppe fasst gleichartige Objekttypen zusammen, um Übersichtlichkeit zu schaffen. In einer gut gefüllten IT-Dokumentation kommen viele Objekttypen zum Einsatz -- die Gruppierung hilft, den Überblick zu behalten. Die Objekttypgruppen erscheinen in der Hauptnavigationsleiste (oberster Bereich) von i-doit.
 
 [![Objekttypgruppen-2](../assets/images/de/grundlagen/struktur-der-it-dokumentation/4-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/5-sitdoku.png)
 
@@ -32,21 +37,23 @@ In unserem Beispiel betrachten wir die Objekttypgruppe "Hardware".
 
 ### Objekttyp
 
-Als Objekttyp bezeichnen wir die Zusammenfassung aller Objekte desselben Typs. Beispiele sind "Router", "Server" oder "Anwendungen". Üblicherweise wird diese Zusammenfassung auch als "Klasse" bezeichnet. In ITIL© wird der Begriff "CI-Typ" (Original: "CI Type") verwendet.
+Ein Objekttyp ist die Zusammenfassung aller Objekte desselben Typs -- zum Beispiel "Router", "Server" oder "Anwendungen". In anderen Kontexten spricht man auch von "Klasse" oder in ITIL von "CI-Typ" (CI Type).
 
-i-doit enthält in der Standard-Installation bereits eine Vielzahl an vor konfigurierten Objekttypen. Sollten diese nicht ausreichen, lassen sich [eigene Objekttypen erstellen](benutzerdefinierte-objekttypen.md).
+i-doit enthält in der Standard-Installation bereits eine Vielzahl vorkonfigurierter Objekttypen. Reichen diese nicht aus, kannst du [eigene Objekttypen erstellen](benutzerdefinierte-objekttypen.md).
 
-Pro Objekttyp existiert eine [Objektliste](objekt-liste/index.md), die alle diesem Objekttyp zugeordneten Objekte mit einigen Attributen auflistet. Als Beispiel betrachten wir die Objektliste für den Objekttyp "Virtualisierungsserver".
+Pro Objekttyp existiert eine [Objektliste](objekt-liste/index.md), die alle zugeordneten Objekte mit ausgewählten Attributen auflistet. Als Beispiel dient die Objektliste für den Objekttyp "Virtualisierungsserver".
 
 [![Objekttyp](../assets/images/de/grundlagen/struktur-der-it-dokumentation/6-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/6-sitdoku.png)
 
 ### Objekt
 
-Zu jedem Artefakt, das dokumentiert werden soll, muss entschieden werden, als was es gespeichert wird. Beispielsweise wird ein einzelner Server oftmals als ein zusammenhängendes Konstrukt betrachtet. In diesem Fall wird ein Server als Objekt in i-doit angelegt. Objekte sind in i-doit alle Dinge, die wir in einer IT-Dokumentation dokumentieren, gleich ob es sich um physische Geräte wie Server oder Clients oder logische Konstrukte wie Netze oder Services handelt. Ein Objekt definiert sich durch seinen Objekttyp, der bestimmt, welche Attribute für das Objekt mit Werten belegt werden kann. In ITIL© wird der Begriff "Configuration Item (CI)" verwendet. Im Asset Management ist der Begriff "Asset Value" verbreitet. Wir möchten durch den Begriff "Objekt" eine abstraktere und damit allgemeingültige sowie vielseitig verwendbare Definition etablieren.
+Ein Objekt repräsentiert ein einzelnes dokumentiertes Artefakt in i-doit -- egal ob physisches Gerät (Server, Client) oder logisches Konstrukt (Netz, Service). Ein Objekt definiert sich durch seinen Objekttyp, der festlegt, welche Attribute du mit Werten belegen kannst.
 
-In i-doit gibt es in der Standard-Installation einige Objekte, die für die korrekte Funktionsweise essentiell sind. Dazu gehören Benutzer-Objekte vom Objekttyp "Personen", weiterhin "Personengruppen" für die Rechte und "[Layer-3-Netze](../anwendungsfaelle/ip-adress-management.md)". Zudem gibt es nicht sichtbare Objekte, z. B. die "Root-Lokation" für Standorte. Diese lassen sich nicht löschen.
+In ITIL spricht man von "Configuration Item (CI)", im Asset Management von "Asset". Der Begriff "Objekt" in i-doit ist bewusst abstrakter und damit allgemeingültig gehalten.
 
-Jedes Objekt in i-doit erhält einen Titel. Dieser wird als Attribut in der Kategorie "Allgemein" dokumentiert. Synoym wird dieses Attribut auch "Bezeichnung", "Name", "Objekt-Link" genannt.
+In der Standard-Installation existieren bereits einige essentielle Objekte: Benutzer-Objekte vom Objekttyp "Personen", "Personengruppen" für die Rechteverwaltung und "[Layer-3-Netze](../anwendungsfaelle/ip-adress-management.md)". Dazu kommen nicht sichtbare Objekte wie die "Root-Lokation" für Standorte -- diese lassen sich nicht löschen.
+
+Jedes Objekt erhält einen Titel, der als Attribut in der Kategorie "Allgemein" gespeichert wird. Synonyme dafür sind "Bezeichnung", "Name" und "Objekt-Link".
 
 [![Objekt](../assets/images/de/grundlagen/struktur-der-it-dokumentation/7-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/7-sitdoku.png)
 
@@ -54,7 +61,13 @@ Im Beispiel beleuchten wir das Objekt mit dem Objekt-Titel "ESX1". Dazu reicht e
 
 ### Kategorie
 
-Thematisch zusammenhängende Attribute werden pro Objekt in Kategorien zusammengefasst. Es gibt drei Typen von Kategorien: globale, spezifische und [benutzerdefinierte](benutzerdefinierte-kategorien.md). Zudem unterteilen sie sich in Single- und Multi-Value-Kategorien (Listen-Kategorien). Manche Kategorien sind rückwärtig, andere wiederum dienen als View. Einige sind fest jedem Objekttyp und somit jedem Objekt zugeordnet, andere lassen sich flexibel pro Objekttyp zu- und abwählen Zu guter Letzt gibt es spezielle Kategorien wie "Allgemein" oder die "Übersichtsseite".
+Kategorien fassen thematisch zusammenhängende Attribute pro Objekt zusammen. Es gibt drei Typen:
+
+- **Globale Kategorien** -- können jedem Objekttyp zugeordnet werden
+- **Spezifische Kategorien** -- sind für bestimmte Objekttypen gedacht
+- **[Benutzerdefinierte Kategorien](benutzerdefinierte-kategorien.md)** -- von dir selbst erstellt
+
+Zusätzlich unterscheidet man zwischen Single-Value- und Multi-Value-Kategorien (Listen-Kategorien). Manche Kategorien sind rückwärtig, andere dienen als View. Einige sind fest jedem Objekttyp zugeordnet, andere lassen sich flexibel zu- und abwählen.
 
 Kategorien werden im linken Navigationsbaum in der Objektsicht angezeigt.
 
@@ -64,7 +77,7 @@ Oberhalb des linken Navigationsbaums werden die statischen Kategorien als Icons 
 
 [![Icons](../assets/images/de/grundlagen/struktur-der-it-dokumentation/9-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/9-sitdoku.png)
 
-Kategorien haben in der Regel zwei Ansichten: eine zum Lesen und eine zum Bearbeiten. Um Attribute in einer Kategorie zu bearbeiten, klickt man in der Aktionsleiste auf den Button **Editieren**.
+Kategorien haben in der Regel zwei Ansichten: eine zum Lesen und eine zum Bearbeiten. Um Attribute in einer Kategorie zu bearbeiten, klickst du in der Aktionsleiste auf den Button **Editieren**.
 
 [![Kategorien](../assets/images/de/grundlagen/struktur-der-it-dokumentation/10-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/10-sitdoku.png)
 
@@ -92,7 +105,7 @@ Eine globale Kategorie kann prinzipiell jedem Objekttypen zugeordnet werden, sod
 
 #### Spezifische Kategorie
 
-Eine spezifische Kategorie unterschiedet sich von einer globalen Kategorie dahingehend, dass deren Attribute einen sehr speziellen Fokus haben, der sich in der Regel nur für einen oder wenige Objekttypen eignet. Ein Beispiel ist die Kategorie "Schrank", die dem gleichnamigen Objekttypen "Schrank" zugeordnet ist und eine Rack-Ansicht dem Benutzer präsentiert.
+Eine spezifische Kategorie unterscheidet sich von einer globalen Kategorie dahingehend, dass deren Attribute einen sehr speziellen Fokus haben, der sich in der Regel nur für einen oder wenige Objekttypen eignet. Ein Beispiel ist die Kategorie "Schrank", die dem gleichnamigen Objekttypen "Schrank" zugeordnet ist und eine Rack-Ansicht dem Benutzer präsentiert.
 
 #### Single-Value-Kategorie
 
@@ -108,7 +121,7 @@ Eine Kategorie, die von einem Benutzer angelegt und mit einem oder mehreren Attr
 
 #### Rückwärtige Kategorie
 
-Stehen zwei oder mehrere Objekte in Beziehung zueinander, wird dies in der dafür bestimmten Kategorie festgehalten. Beispielsweise können in der Kategorie "Kontaktzuweisung" beliebig viele Personen, Personengruppen etc. als Kontakt für ein Objekt hinterlegt werden. Damit auch innerhalb dieser Personen und Personengruppen ersichtlich ist, welchen Objekten diese als Kontakt zugeordnet sind, existiert eine weitere Kategorie "Zugeordnete Objekte". Da dieselben Informationen dort zur Verfügung stehen, aber nur einmal gespeichert und in einem anderen Kontext dargestellt werden, handelt es sich um eine rückwärtige Kategorie.
+Eine rückwärtige Kategorie zeigt Beziehungsdaten aus der Perspektive des verknüpften Objekts. Beispiel: In der Kategorie "Kontaktzuweisung" ordnest du Personen einem Objekt zu. Die verknüpfte Person sieht dieselbe Information in ihrer rückwärtigen Kategorie "Zugeordnete Objekte". Die Daten werden nur einmal gespeichert, aber aus beiden Blickwinkeln dargestellt.
 
 #### View-Kategorie
 
@@ -130,7 +143,6 @@ In der Web GUI von i-doit werden Attribute von Objekten über Formularfelder ges
 
 [![Attributfeld](../assets/images/de/grundlagen/struktur-der-it-dokumentation/16-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/16-sitdoku.png)
 
-Von Beziehungen
----------------
+## Von Beziehungen
 
-In i-doit können nicht nur IT-Komponenten für sich alleinstehend dokumentiert werden, sondern diese auch in Beziehung gesetzt werden. Es gibt verschiedene bereits vorkonfigurierte Beziehungsarten, die angepasst und erweitert werden können. Jede Beziehung ist ein eigenes (nicht lizenzpflichtiges) Objekt, das automatisch erstellt, bearbeitet oder gelöscht wird.
+In i-doit dokumentierst du nicht nur einzelne IT-Komponenten, sondern setzt sie auch zueinander in Beziehung. Es gibt verschiedene vorkonfigurierte Beziehungsarten, die du anpassen und erweitern kannst. Jede Beziehung ist ein eigenes (nicht lizenzpflichtiges) Objekt, das i-doit automatisch erstellt, bearbeitet oder löscht. Mehr dazu erfährst du im Artikel [Objekt-Beziehungen](objekt-beziehungen.md).

@@ -9,7 +9,7 @@ note: linked in A&S Center
 
 Damit du auf das Add-on & Subscription Center zugreifen kannst und dein i-doit lizenziert ist, brauchst du einen gültigen Lizenz Token. Den erhältst du, wenn du i-doit evaluierst oder gekauft hast. Mit dem Lizenz Token authentifizierst du deine i-doit Instanz gegenüber dem Lizenzserver und rufst deinen Lizenzschlüssel ab. Wenn du deinen Lizenz Token nicht mehr findest, nutze die Anleitung unten oder melde dich bei unserem Vertriebsteam.
 
-!!! success "Bei Fragen zur Lizenz oder zum Vertrag wenden Sie sich bitte an das Sales Team  via<br>Telefon: [+49 211 699 31-185](tel:+4921169931185) <br>E-Mail: [sales@i-doit.com](mailto:sales@i-doit.com)"
+!!! success "Bei Fragen zur Lizenz oder zum Vertrag wende dich bitte an das Sales Team via<br>Telefon: [+49 211 699 31-185](tel:+4921169931185) <br>E-Mail: [sales@i-doit.com](mailto:sales@i-doit.com)"
 
 ## Übersicht
 
@@ -53,7 +53,7 @@ $g_license_token = 'abcdefg1234567890';
 
 ## Wie kann ich meinen Token zurücksetzen?
 
-Wenn du den Token nicht mehr findest, klicke auf die "Token zurücksetzen" Schaltfläche unten. Dann wirst du zur "Token zurücksetzen" Seite im Kundenportal weitergeleitet. Dort kannst du einen neuen Token anfordern. Folge einfach den Anweisungen auf der dort.
+Wenn du den Token nicht mehr findest, klicke auf die "Token zurücksetzen" Schaltfläche unten. Dann wirst du zur "Token zurücksetzen" Seite im Kundenportal weitergeleitet. Dort kannst du einen neuen Token anfordern. Folge einfach den Anweisungen dort.
 
 !!! warning "WICHTIG: Der alte Token wird inaktiv, sobald ein neuer Token erzeugt wird. Der neue Token muss **aktiviert** werden."
     [HIER DRÜCKEN zum Zurücksetzen des Tokens  :material-key-link:](https://center.i-doit.com/portal/reset-token){: target="_blank" .md-button }

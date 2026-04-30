@@ -1,6 +1,6 @@
 ---
 title: Security and Protection
-description: Security and Protection
+description: Secure your i-doit installation — from system hardening and TLS to API security
 icon: material/security
 status:
 lang: en
@@ -8,455 +8,491 @@ lang: en
 
 # Security and Protection
 
-In many cases, the IT documentation encloses very sensitive data which have to be protected. In this article we examine which protective mechanisms are effective to secure an i-doit installation. Particularly, our protection objectives are confidentiality, integrity, availability, authenticity and authorization.
+Your IT documentation is the memory of your organization -- it contains network diagrams, credentials, contract details, and infrastructure knowledge. An attacker who gains access to your CMDB effectively has a blueprint of your entire IT. That is why i-doit deserves the same level of protection as any other critical system.
 
-!!! info "Why is this article so extensive?"
-    Admittedly, this article is long. The subject "Information Security of Web Applications" is a very wide field which you can discuss at large.
+This article follows the classic protection goals: **confidentiality**, **integrity**, **availability**, **authenticity**, and **authorization**. The measures are organized by timing -- before installation, after installation, and during ongoing operation.
 
-    Nevertheless: On account of the quantity of sensible measures we merely scratch the surface and refer to further information wherever possible. Hence, this article is intended as a collection of ideas. The mentioned single measures should always be treated with a healthy common sense and the necessary know-how.
+!!! info "Collection of ideas, not a mandatory checklist"
+    Not every measure fits every environment. An internal test system needs less hardening than a production CMDB with 50,000 objects. Evaluate each recommendation with common sense -- and document deliberate exceptions.
 
-!!! info "Why are these measurements not a part of the installation?"
-    The tips we describe in this article do not belong to the normal extent of an [i-doit installation](../installation/index.md) and are no necessary [system requirements](../installation/system-requirements.md). They are additional safety measures mainly concerning the operating system and the installed packages.
+---
 
-## Before Installing i-doit
+## Before installation
 
-Before you [install](../installation/index.md) i-doit, you can already carry out some measures to strengthen the system on which i-doit is based. As an example, we use a Debian GNU/Linux for an i-doit installation.
+Before you [install](../installation/index.md) i-doit, you should harden the underlying system. The examples refer to **Debian GNU/Linux** or **Ubuntu** but can be adapted to other distributions.
 
-### User Rights: Less is More
+### Minimal Operating System
 
-Users who are logged on to the operating system and do not have all possible permissions from the start can also cause potentially less (accidental) damage. **Thus you should not use the registration as a super user (root)**. As an established alternative, you can apply [sudo](https://wiki.debian.org/sudo) which enables you to execute commands with the root rights temporarily.
+Install only what is necessary for operation: Apache, PHP, and MariaDB. The less software running, the smaller the attack surface.
 
-Many services run with users or groups. Apache under Debian GNU/Linux runs with the user www-data and the group of the same name.
+```shell
+# Show running services:
+systemctl list-units --type=service --state=running
 
-### Securing SSH
+# Check open ports:
+sudo ss -tulpen
+```
 
-Beside Apache, SSH is the only service which can be reached from the outside. **SSH is used for the administration of the system via the command line.** The configuration of the SSH server is under /etc/ssh/sshd_config. The default installation already offers a good degree of security which we can raise, however, even further.
+Disable and remove unnecessary services:
 
-To limit common brute force attacks you should not permit the registration as super user (root):
-<!-- cSpell:disable -->
+```shell
+# Example: remove printer service
+sudo systemctl disable --now cups.service
+sudo apt purge cups
+```
+
+The principle of minimalism also applies to Apache and PHP -- disable unnecessary modules:
+
+```shell
+sudo a2dismod proxy status
+sudo phpdismod xdebug
+```
+
+!!! warning "phpMyAdmin"
+    Do **not** install phpMyAdmin on production systems. It makes the database accessible via the browser and has repeatedly been affected by security vulnerabilities in the past. Use the command line (`mysql`) or a local tool like DBeaver via an SSH tunnel instead.
+
+### Less Privileges Is More
+
+Never work permanently as superuser (root). Use [sudo](https://wiki.debian.org/sudo) for commands that require root privileges. Services like Apache run under their own users (e.g., `www-data`) -- this limits the damage if a service is compromised.
+
+### Secure SSH
+
+SSH, alongside Apache, is often the only externally accessible service. The configuration is located at `/etc/ssh/sshd_config`.
+
+**Disable root login:**
+
 ```shell
 PermitRootLogin no
 ```
 
-Instead of having to remember passwords, you can use the public-key procedure. For this purpose, you create a pair consisting of public and private key on the client:
+**Set up public key authentication:**
 
 ```shell
-ssh-keygen -t rsa -f mykey -b 4096 -C myemail@example.org
+ssh-keygen -t ed25519 -f ~/.ssh/idoit-server -C "admin@company.com"
+ssh-copy-id -i ~/.ssh/idoit-server.pub idoitadm@i-doit.example.org
 ```
 
-Then you copy the public key to the server:
-
-```shell
-ssh-copy-key -i ~/.ssh/mykey.pub idoitadm@i-doit.example.org
-```
-<!-- cSpell:enable -->
-Afterwards, you change the procedure of passwords to public keys in the configuration of the SSH server:
+**Disable password login** (only after key-based login is working!):
 
 ```shell
 PubkeyAuthentication yes
 PasswordAuthentication no
 ```
 
-After that, the SSH service has to be restarted:
+Then restart the SSH service:
 
 ```shell
 sudo systemctl restart ssh.service
 ```
 
-### Update, Updates, Updates
+### Updates, Updates, Updates
 
-Probably the most important tip is: **Keep your system up-to-date**. In IT terms: You cannot have information security without patch management. It is especially important to keep the i-doit installation, the corresponding operating system, the clients accessing i-doit and the web browser constantly up-to-date. Also third-party systems communicating with i-doit should be current at all times.
+Keep the entire system up to date -- this includes i-doit itself, the operating system, and all connected third-party systems. Security vulnerabilities in outdated software are one of the most common attack vectors.
 
-It is inconvenient to install updates manually. When you do not use automation and a central control system, you can leave the updates to the operating system. Debian GNU/Linux offers the application of [unattended updates](https://wiki.debian.org/UnattendedUpgrades). With this function you can get the package repositories and carry out (security) updates and even upgrades of packages. Besides, the administrators are informed via e-mail.
-
-### Minimum Operating System
-
-A minimum operating system is characterized by the fact that only applications and services which are really essential for its operation are installed. **The subjective is to limit the whole system to its core function (in our case: i-doit).** That means that we basically only need Apache, PHP and MariaDB/MySQL and a few additional applications and services, which are mentioned in this article. Everything else, such as a graphical user interface with desktop, a printer service or a Minecraft server, can be disregarded.
-
-To some extent, a usual installation involves unnecessary baggage and first of all we aim to get rid of this burden. With this in mind, we should take a closer look at running processes and open ports:
+For automatic security updates on Debian/Ubuntu, [Unattended Upgrades](https://wiki.debian.org/UnattendedUpgrades) is a good choice:
 
 ```shell
-# Running services which are administered by Systemd:
-systemctl list-units
-
-# Show running processes and system resources clearly:
-htop
-
-# Currently open ports:
-sudo netstat -tulpen
+sudo apt install unattended-upgrades
+sudo dpkg-reconfigure unattended-upgrades
 ```
 
-Unnecessary components can be deactivated, stopped, or even deleted from the system.
-Here you can see an example:
+### Secure MariaDB
 
-```shell
-# Beispiel: Deactivate and stop CUPS printer service:
-sudo systemctl disable cups.service
-sudo systemctl stop cups.service
+First, run `mysql_secure_installation` -- this removes test databases, anonymous users, and sets a root password.
 
-# Delete CUPS printer service:
-sudo apt remove cups
+Then check the configured users:
 
-# Delete CUPS printer service including configuration:
-sudo apt purge cups
+```sql
+SELECT user, host FROM mysql.user;
 ```
 
-**The minimum principle does not only apply to the operating system, but also to installed services and applications.** There are many more modules for Apache and PHP than those which are actually required for a smooth operation of i-doit. Examples: mod_proxy for Apache or xdebug for PHP should only be installed and activated if they are really required.
+Delete unwanted entries (e.g., wildcards `%` or external addresses). Only `localhost`, `127.0.0.1`, and `::1` should be allowed. Make sure the default port **3306 is not accessible from the outside**.
 
-You can deactivate the modules with these commands:
-<!-- cSpell:disable -->
-```shell
-sudo a2dismod proxy
-sudo phpdismod xdebug
-```
-<!-- cSpell:enable -->
-Some customers install the [phpMyAdmin](https://www.phpmyadmin.net/) web application as i-doit uses MariaDB/MySQL in the background. We strongly advise against doing so, because as a result the protected database is made available to the outside. In the past years, phpMyAdmin has been a negative example with regard to security gaps and this could aggravate the problems. phpMyAdmin is a useful tool, but not on a productive system with sensitive data.
+### Secure PHP
 
-### Backup and Restore
-
-**Backups are essential.** If you do not create any backups, you act with gross negligence. The fact that it is crucial to carry out backups on a regular basis should be clear to everyone. However, what is the best approach? For i-doit we prepared an article regarding the [saving and recovering of the IT documentation](./backup-and-recovery/index.md). In this article, we left aside how often (daily, weekly ...) and with which strategies (full backup, incremental backup, differential backup, image) you should approach the subject. Organizations are responsible to decide on guidelines for themselves, because the demands for acceptable solutions regarding data loss as well as downtimes and recovery times are different for every company.
-
-**Equally important as a backup is the recovery of data, the restores.** You may have heard the following: If you do not test the restores, you also do not have a working backup.
-
-This raises another important question: What if the complete infrastructure is not available and the IT documentation is also affected? Our tip: Very helpful is **a second instance which runs independently of the remaining IT infrastructure**. Many customers apply i-doit on a virtual machine. You can export the virtual machine regularly and keep it in safe custody, for example, on a USB-Stick in a fire-resistant safe. So to speak this is a cold standby, in the truest sense of the word. In the event of emergency, you can launch the virtual machine on a notebook. For maximum compatibility, you can apply the [OVF file format](https://en.wikipedia.org/wiki/Open_Virtualization_Format) for virtual machines. This format is supported by current virtualisers, such as VMware and VirtualBox.
-
-### Securing MariaDB/MySQL
-
-The command line tool **mysql_secure_installation** takes over the task of **basic securing measures for Maria DB/MySQL**. Among other things, it sets up a password for the user root (if this has not yet been done). Afterwards, we should make ourselves familiar with the DBMS. For this purpose, we log in as root:
-<!-- cSpell:disable -->
-```shell
-mysql -uroot -p -hlocalhost
-```
-<!-- cSpell:enable -->
-Now we try to get an overview about the current users:
+Always keep PHP on the latest patch level. The settings required for i-doit can be found in the [system settings](../installation/manual-installation/system-settings.md). Additional hardening can be achieved via a dedicated configuration file:
 
 ```shell
-SELECT * FROM mysql.user;
+sudo nano /etc/php/8.2/mods-available/zz_security.ini
 ```
 
-We should delete unwanted entries. Unwanted users have a wildcard (%) under host or addresses which are accessible from the outside. The hosts localhost, 127.0.0.1 (IPv4) and :: 1 (IPv6) are welcome.
-
-It is important that the service is not accessible from the outside. Often the service runs under the default port 3306. Also for MariaDB/MySQL there are dedicated **application firewalls**. Among other things, they are able to prevent damaged SQL queries. At the moment, we do not have a specific recommendation.
-
-### Securing PHP
-
-We do not join the usual ranting and raving relating to PHP because we can adequately "harden" the script language for our purposes. An important message is as follows: **PHP should always be up to date with the newest patch**. In this regard, you have to consider which major PHP versions (5.x, 7.x) are supported by PHP developers and which PHP packages are supported by the used distribution. Often distributions do not count on the latest major versions, but maintain older, more stable versions. These are patched with bug and security fixes. Therefore you should always download PHP updates as quickly as possible.
-
-We already described the required settings for the operation of i-doit in the [tenant management](../system-administration/administration/tenant-management/index.md). **You can supplement these settings by additional ones.** For this purpose, we create a new.ini file:
-
-```shell
-sudo editor /etc/php/7.2/mods-available/zz_security.ini
-```
-
-Carry out the following settings:
-<!-- cSpell:disable -->
-```shell
-;; Restriction to directories which PHP may access:
+```ini
+;; Restrict file access to i-doit and temp:
 open_basedir = "/var/www/html/:/tmp/"
 
-;; Disable unnecessary methods:
-disable_functions = pcntl_alarm,pcntl_fork,pcntl_waitpid,pcntl_wait,pcntl_wifexited,pcntl_wifstopped,pcntl_wifsignaled,pcntl_wifcontinued,pcntl_wexitstatus,pcntl_wtermsig,pcntl_wstopsig,pcntl_signal,pcntl_signal_dispatch,pcntl_get_last_error,pcntl_strerror,pcntl_sigprocmask,pcntl_sigwaitinfo,pcntl_sigtimedwait,pcntl_exec,pcntl_getpriority,pcntl_setpriority,
+;; Disable unnecessary functions:
+disable_functions = pcntl_alarm,pcntl_fork,pcntl_waitpid,pcntl_wait,pcntl_wifexited,pcntl_wifstopped,pcntl_wifsignaled,pcntl_wifcontinued,pcntl_wexitstatus,pcntl_wtermsig,pcntl_wstopsig,pcntl_signal,pcntl_signal_dispatch,pcntl_get_last_error,pcntl_strerror,pcntl_sigprocmask,pcntl_sigwaitinfo,pcntl_sigtimedwait,pcntl_exec,pcntl_getpriority,pcntl_setpriority
 
-;; Do not send used PHP version in HTTP headers:
+;; Do not expose PHP version in HTTP headers:
 expose_php = Off
 ```
-<!-- cSpell:enable -->
-Afterwards, the settings have to be activated:
+
+Enable:
 
 ```shell
-sudo php5enmod zz_security
+sudo phpenmod zz_security
 sudo systemctl restart apache2.service
 ```
 
-The **security extension** **[Suhosin](https://suhosin.org/)** is available for PHP. It deeply affects the implementation of PHP methods. Partly, this makes sense, but it also leads to the risk of impairing a 100% function of i-doit. At the moment, we cannot recommend specific settings.
+!!! tip "Adjust PHP version"
+    Replace `8.2` with the PHP version you are using. Which versions i-doit supports can be found in the [system requirements](../installation/system-requirements.md).
 
-### Transport Encryption
+### Backup and Restore
 
-i-doit is a client server application, in other words, there is a server instance which communicates with a client instance via a network. Furthermore, i-doit is able to communicate via interfaces with other server instances, for example, [LDAP](../user-authentication-and-management/ldap-directory/index.md) for the registration of users.
+Backups are your last line of defense -- against attacks, human error, and hardware failures. Read the article on [backing up and restoring data](backup-and-restore/index.md).
 
-In order to secure these communication connections, you can use the transport encryption via TLS. For example, you can equip the Apache web server with a trustworthy X.509 certificate, so that a web browser can **access the IT documentation via HTTPS**. You should keep a lot of things in mind in connection with certificates, such as the period of validity, chain of trust, used ciphers and hashes. Mozilla offers a suitable [generator for the Apache configuration](https://mozilla.github.io/server-side-tls/ssl-config-generator/) and provides a lot of [background information about the TLS on the server side](https://wiki.mozilla.org/Security/Server_Side_TLS). Other good sources are the [SSL Labs by Qualys](https://www.ssllabs.com/ssltest/) and the website [securityheaders.io](http://securityheaders.io) which also carry out suitable tests of the configuration.
+Equally important: **Test restores regularly.** A backup that cannot be restored is worthless.
 
-Here is an example for Debian GNU/Linux 8.x to establish different types of security mechanisms. You have to adjust the corresponding paths and domain names:
-<!-- cSpell:disable -->
+**Encrypt backups:** When backups are stored on external media or in the cloud, encrypt them -- e.g., with `gpg`:
+
 ```shell
-<IfModule mod_headers.c>
-    ## See <https://securityheaders.io/>:
-    Header always set Content-Security-Policy "default-src 'unsafe-inline' 'unsafe-eval' data: http://i-doit.example.net:80 https://i-doit.example.net:443"
-    Header always set X-Frame-Options "SAMEORIGIN"
-    Header always set X-XSS-Protection "1; mode=block"
-    Header always set X-Content-Type-Options "nosniff"
+mysqldump -u idoit -p idoit_data | gzip | gpg --symmetric --cipher-algo AES256 -o backup_$(date +%F).sql.gz.gpg
+```
 
-    ## Avoid information about the Web server:
+For emergencies, a **second, independent instance** is recommended -- e.g., an exported VM in OVF format on a USB drive in a fireproof safe.
+
+---
+
+## Transport Encryption (TLS)
+
+Secure the communication between browser and server with TLS so that credentials and CMDB data are not transmitted in plain text over the network.
+
+### Let's Encrypt (Recommended)
+
+The easiest way to obtain a trusted certificate is [Let's Encrypt](https://letsencrypt.org/) with the ACME client [Certbot](https://certbot.eff.org/):
+
+```shell
+sudo apt install certbot python3-certbot-apache
+sudo certbot --apache -d cmdb.company.com
+```
+
+Certbot automatically configures Apache and sets up certificate renewal via cronjob. Test the renewal:
+
+```shell
+sudo certbot renew --dry-run
+```
+
+### Apache TLS Configuration
+
+If you use your own certificates, use a modern TLS configuration. Use the [Mozilla SSL Configuration Generator](https://ssl-config.mozilla.org/) for a current configuration tailored to your Apache version.
+
+Example for Apache with security headers:
+
+```apache
+<IfModule mod_headers.c>
+    # Redirect HTTP to HTTPS
+    Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains"
+    # Prevent clickjacking
+    Header always set X-Frame-Options "SAMEORIGIN"
+    # Prevent MIME sniffing
+    Header always set X-Content-Type-Options "nosniff"
+    # Restrict referrer
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    # Hide server version
     Header unset Server
 </IfModule>
 
-## Avoid information about the Web server:
 ServerSignature Off
 ServerTokens    Prod
 
 <IfModule mod_ssl.c>
-        ## See <https://mozilla.github.io/server-side-tls/ssl-config-generator/>:
-        SSLProtocol             all -SSLv3 -TLSv1 -TLSv1.1
-        SSLCipherSuite          ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256
-        SSLHonorCipherOrder     on
-        SSLCompression          off
+    SSLProtocol             all -SSLv3 -TLSv1 -TLSv1.1
+    SSLCipherSuite          ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305
+    SSLHonorCipherOrder     off
+    SSLCompression          off
+    SSLSessionTickets       off
 
-        SSLUseStapling  on
-        SSLStaplingResponderTimeout     5
-        SSLStaplingReturnResponderErrors        off
-        SSLStaplingCache        shmcb:/var/run/ocsp(128000)
-
-        Header always set Strict-Transport-Security "max-age=15768000; includeSubDomains"
+    SSLUseStapling          on
+    SSLStaplingCache        shmcb:/var/run/ocsp(128000)
+    SSLStaplingResponderTimeout 5
 </IfModule>
 
-<IfModule mod_ssl.c>
-        <VirtualHost *:443>
-                ServerAdmin info@i-doit.example.net
-                Servername i-doit.example.net
+<VirtualHost *:443>
+    ServerName cmdb.company.com
+    DocumentRoot /var/www/html/
 
-                DocumentRoot /var/www/html/
+    <Directory /var/www/html/>
+        Options FollowSymLinks
+        AllowOverride All
+    </Directory>
 
-                <Directory /var/www/html/>
-                        Options FollowSymLinks
-                        AllowOverride All
-                </Directory>
+    SSLEngine on
+    SSLCertificateFile      /etc/letsencrypt/live/cmdb.company.com/fullchain.pem
+    SSLCertificateKeyFile   /etc/letsencrypt/live/cmdb.company.com/privkey.pem
 
-                CustomLog /var/log/apache2/access.log combined
-                ServerSignature Off
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
 
-                LogLevel info ssl:warn
-                ErrorLog ${APACHE_LOG_DIR}/error.log
-
-                SSLEngine on
-
-                SSLCertificateFile      /etc/ssl/i-doit.example.net.crt
-                SSLCertificateKeyFile   /etc/ssl/i-doit.example.net.key
-
-                ## Let i-doit know about some SSL settings (see <https://httpd.apache.org/docs/2.4/mod/mod_ssl.html#ssloptions>):
-                <FilesMatch "\.(php)$">
-                        SSLOptions +StdEnvVars
-                </FilesMatch>
-        </VirtualHost>
-</IfModule>
+# HTTP → HTTPS Redirect
+<VirtualHost *:80>
+    ServerName cmdb.company.com
+    Redirect permanent / https://cmdb.company.com/
+</VirtualHost>
 ```
-<!-- cSpell:enable -->
-Additional **securing with help of client certificates** takes this method yet a step further. Here not only the client checks the trustworthiness of the server certificate, but also the web server checks the web browser for authenticity.
+
+Check your configuration with:
+
+- [SSL Labs by Qualys](https://www.ssllabs.com/ssltest/) -- Evaluate TLS configuration
+- [securityheaders.io](https://securityheaders.io/) -- Check security headers
+
+### Client Certificates
+
+A step further is securing access via client certificates: not only does the browser verify the server certificate, but the web server also verifies the client. This is a strong additional authentication layer but requires distributing and managing client certificates.
 
 ### Data Encryption
 
-**The encryption of hard disks/ SSDs safeguards your data in case of theft.** Hence, it is usual to encode data on clients and this is also required in [common standards](https://www.bsi.bund.de/EN/Home/home_node.html). Encoding is rather rare in case of servers as it is often seen as obstructive with regard to the administration. Fortunately, it is rather seldom that servers are stolen and there are other protective measures which can prevent theft. However, if the hardware i-doit runs on is not located in your own data center but provided by a service company, you might want to take steps and consider data encryption. Sometimes in smaller companies, i-doit is even installed on notebooks.
+**Full disk encryption protects against theft.** On GNU/Linux, **dm-crypt/LUKS** is widely used -- many distributions offer this during installation. On Windows, BitLocker and VeraCrypt are available.
 
-When you decide to encrypt your data, you have several possibilities: Under GNU/Linux you can use the common dm-crypt/LUKS. Many distributions offer data encoding already during the installation process. Under Windows you can user BitLocker and Veracrypt.
+This is especially relevant when the hardware is not located in your own data center or when i-doit runs on a laptop.
 
-### Firewall and Open Ports
+---
 
-**Every port which is not open to the outside helps to reduce attack vectors.** As i-doit is a web application, the ports 80 and 443 are often sufficient. Apache can be limited with the Lists setting in the file /etc/apache2/ports.conf and a suitable VHost configuration. By no means should MariaDB/MySQL be accessible from the outside. To administer the system via SSH, a port has to be opened (default port: 22).
+## After installation
 
-**But beware of "Security by Obscurity" as this method is an extremely poor protective measure.** With this method you use non-default ports consisting of four or five figures. Apache often runs under port 8080 and SSH under port 8022. This method presents no big challenge for an attacker, because port scanners like nmap can find these open ports without any problems.
+### File System Permissions
 
-Preventing the ICMP (for example, used by ping) is also [a bad idea](http://shouldiblockicmp.com/).
-
-If you cannot limit a service by means of your own configuration, a firewall helps. A comfortable **application firewall** under GNU/Linux is ufw which you can activate in just a few steps and which sets up rules for iptables in the background:
+Set restrictive file permissions:
 
 ```shell
-sudo apt install ufw
-sudo ufw allow 80/tcp
-sudo ufw allow 443/tcp
-sudo ufw allow 22/tcp
-sudo ufw disable
-sudo ufw enable
-```
-
-A **web application firewall** is especially suitable for web servers. A very popular application is [mod\_security](https://www.digitalocean.com/community/tutorials/how-to-set-up-mod_security-with-apache-on-debian-ubuntu), which is an extension for Apache.
-
-An external **dedicated firewall** is very useful, but of course its implementation and operation are more complex. i-doit should be enabled to search for updates and to access online repositories (for example, for [reports](../evaluation/report-manager.md) and [templates](../i-doit-add-ons/documents/index.md)):
-
-| Host                                                               | Protocol  | Port    | Description                                                                                                                                                                                                                                          |
-| ------------------------------------------------------------------ | --------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **[login.i-doit.com](https://login.i-doit.com)**                   | **HTTPS** | **443** | Download of updates for i-doit and its add-ons                                                                                                                                                                                                       |
-| **[reports-ng.i-doit.org](https://reports-ng.i-doit.org)**         | **HTTPS** | **443** | Online repositories (for example, for [reports](../evaluation/report-manager.md))                                                                                                                                                                    |
-| **[r.i-doit.com](https://r.i-doit.com)**                           | **HTTPS** | **443** | Online Repositories (for example, for [templates](../i-doit-add-ons/documents/index.md))                                                                                                                                                             |
-| **[news.i-doit.com](https://news.i-doit.com)**                     | **HTTPS** | **443** | News about i-doit in the dashboard (open version)                                                                                                                                                                                                    |
-| **[i-doit.com](https://www.i-doit.com/en/)**                       | **HTTPS** | **443** | Search for updates of the pro version                                                                                                                                                                                                                |
-| **[i-doit.org](https://i-doit.org)**                               | **HTTPS** | **443** | Search for updates of the pro version                                                                                                                                                                                                                |
-| **[crm-gateway.i-doit.com](https://crm-gateway.i-doit.com)**       | **HTTPS** | **443** | Retrieves available downloads via the license token                                                                                                                                                                                                  |
-| **[lizenzen.i-doit.com](https://lizenzen.i-doit.com)**             | **HTTPS** | **443** | Retrieve licenses via token                                                                                                                                                                                                                          |
-| **[center.i-doit.com/portal/](https://center.i-doit.com/portal/)** | **HTTPS** | **443** | Access to the Add-on & Subscription Center. IP addresses: <br>`159.69.103.121`<br>`78.46.236.49`<br>`2a01:4f8:c01f:289a::`<br>`2a01:4f8:1c17:a07c::`<br>`35.158.127.51`<br>`35.158.127.52`<br>`35.158.127.53`<br>`159.69.103.121`<br>`195.46.236.49` |
-
-If one or more interfaces to third-party applications are configured, you also have to enable access respectively:
-
-| Interface                                                                                                                                                                                             | Protocol       | Default port   |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- | -------------- |
-| [Sending e-mails](../evaluation/notifications.md)                                                                                                                                                     | **SMTP**       | **25/465/587** |
-| [LDAP/AD](../user-authentication-and-management/ldap-directory/index.md)                                                                                                                              | **LDAP**       | **389/636**    |
-| [Livestatus](../automation-and-integration/network-monitoring/fetch-data-with-livestatus-ndo.md)                                                                                                      | **Livestatus** | **6557**       |
-| [NDOUtils/IDOUtils](../automation-and-integration/index.md)                                                                                                                                           | **MySQL**      | **3306**       |
-| [((OTRS)) Community Edition Help Desk](../automation-and-integration/service-desk/otrscommunity-help-desk.md), [Request Tracker](../automation-and-integration/service-desk/request-tracker.md), iTop | **HTTP/HTTPS** | **80/443**     |
-| [JDisc Discovery](../consolidate-data/jdisc/index.md)                                                                                                                                                 | **PostgreSQL** | **25321**      |
-| [JDisc Discovery graphQL](../consolidate-data/jdisc/index.md)                                                                                                                                         | **HTTPS**      | **443**        |
-| [JDisc Discovery](../consolidate-data/jdisc/index.md)                                                                                                                                                 | **HTTP**       | **9000**       |
-| OCS Inventory NG                                                                                                                                                                                      | **MySQL**      | **3306**       |
-
-### Security Frameworks
-
-Security frameworks provide additional protection ensuring that services, applications and users may only carry out authorized operations. [SELinux](https://en.wikipedia.org/wiki/Security-Enhanced_Linux) and [AppArmor](https://en.wikipedia.org/wiki/AppArmor) are common under GNU/Linux. They are included in most distributions, but are deactivated in many cases. It is useful for i-doit to limit Apache so that the service **may only access certain directories with corresponding read and/or write permissions**.
-
-Currently, there is a bug in selinux-policy-default under Debian GNU/Linux preventing a sensible application of SELinux. At a later time, we will explore this issue in depth.
-
-### Automatic Defense against Attacks
-
-**These days you can only manage to recognize and fend off attacks at an early stage in an automated way.** A small but excellent tool to help you is [fail2ban](http://www.fail2ban.org/). It continuously analyses log files of current services to recognize attacks. Therefore fail2ban is able to thwart brute force attacks on SSH very fast. You can configure the settings in such a way that the matching IP address is disabled via iptables after three successive failed logins.
-
-fail2ban offers pre-configured jails for SSH, Apache and MariaDB/MySQL.
-
-## After the Installation of i-doit
-
-Directly after the installation we take further measures.
-
-### Authorizations in the File System
-
-**The file system provides many possibilities to exclude unauthorized access to code and data.** Debian GNU/Linux usually applies Ext4. For this purpose, you can use the standard tools chown, chmod and chattr:
-
-```shell
-# Change to the installation directory of i-doit:
 cd /var/www/html/
 
-# Apache should have full control over files and directories:
+# Give Apache ownership:
 sudo chown www-data:www-data -R .
 
-# We limit this control to reading and executing:
-
-sudo find . -type d -name \* -exec chmod 550 {} \;
-
+# Restrict to read and execute:
+sudo find . -type d -exec chmod 550 {} \;
 sudo find . -type f -exec chmod 440 {} \;
 
-sudo chmod 550 controller tenants import updatecheck *.sh
-
-# We seal these rights, so that not even root may change anything:
-sudo chattr -R +i .
-
-# Well, i-doit should be allowed to write in some directories:
-for dir in "log/ imports/ temp/ upload/"; do sudo chattr -R -i "$dir" && sudo find "$dir" -type d -name \* -exec chmod 770 {} \;; done
+# Write permissions only for directories that need them:
+for dir in log/ imports/ temp/ upload/; do
+    sudo find "$dir" -type d -exec chmod 770 {} \;
+done
 ```
 
-Some restrictions have to be cancelled temporarily with an i-doit update:
+Before an [update](i-doit-update.md), temporarily relax the restrictions:
 
 ```shell
-# Change to the installation directory of i-doit:
 cd /var/www/html/
-sudo chattr -R -i .
-sudo find . -type d -name \* -exec chmod 775 {} \;
+sudo find . -type d -exec chmod 775 {} \;
 sudo find . -type f -exec chmod 664 {} \;
-sudo chmod 774 controller *.sh setup/*.sh
 ```
-
-After you carried out the update, you should reactivate the restrictions.
 
 ### Secure Passwords
 
-Those who want to just quickly set up i-doit for test purposes unfortunately often forget to consider safe passwords. This should not be the case: If you choose **secure passwords consequently from the beginning**, you do not have to bother to remedy these potential safety gaps afterwards. The specific passwords are as follows:
+Set secure passwords for all accounts from the start. The default passwords after installation are publicly known -- change them immediately.
 
-*   MySQL user set up by i-doit for databases
-*   User for the Admin-Center
-*   Default user in i-doit (admin, reader, author, editor)
+#### Default Users in i-doit
 
-#### MySQL User
+The users **admin**, **reader**, **author**, and **editor** have the password set to the same as the username by default. This is the most important point after installation:
 
-This user is already created during the [setup](../installation/manual-installation/setup.md). The password can be changed afterwards with a few SQL commands. We assume that the user is called idoit and that the name of the [system database](../software-development/database-model/index.md) is idoit_system. At first you log in:
-<!-- cSpell:disable -->
-```shell
-mysql -uroot -p -hlocalhost
+- Change all default passwords
+- Create a dedicated [person object](../basics/it-documentation-structure.md) for each real user
+- [Archive](../basics/life-and-documentation-cycle.md) the default users after setup
+
+#### Admin Center Password
+
+You can change the password in the [Admin Center](../administration/admin-center.md) under **Config** or directly in the file `src/config.inc.php`.
+
+#### MySQL Users
+
+```sql
+ALTER USER 'idoit'@'localhost' IDENTIFIED BY 'ASecurePassword!2026';
 ```
-<!-- cSpell:enable -->
-Then you change the password:
-<!-- cSpell:disable -->
-```shell
-ALTER USER 'idoit'@'localhost' IDENTIFIED BY 'thisistotallysecure!!11';
+
+Also store the new password in the system database:
+
+```sql
+UPDATE idoit_system.isys_mandator
+SET isys_mandator__db_pass = 'ASecurePassword!2026'
+WHERE isys_mandator__db_user = 'idoit';
 ```
-<!-- cSpell:enable -->
-This password has also to be communicated to i-doit. First in the system database, so that the [tenants' databases](../software-development/database-model/index.md) can be accessed:
-<!-- cSpell:disable -->
-```shell
-UPDATE idoit_system.isys_mandator SET isys_mandator__db_pass = 'thisistotallysecure!!11' WHERE isys_mandator__db_user = 'idoit';
-```
-<!-- cSpell:enable -->
-Lastly, the password has to be stored in the central configuration, so that the system database can be accessed. This can be made either under **Config** in the Admin-Center or in the file src/config.inc.php in the installation directory of i-doit.
 
-#### User for the Admin-Center
+Additionally, update it in `src/config.inc.php` or in the Admin Center under **Config**.
 
-This user is also created during the setup. Afterwards, you can change the password under Config. Alternatively, you can edit the file src/config.inc.php.
-
-#### Default User in i-doit
-
-The users admin, reader, author and editor are already generated during the setup. The best practice is to never use these users but to create a [person object](../basics/structure-of-the-it-documentation.md) for each user instead. The person objects for admin etc. cannot be deleted, but archived. By this means, you exclude the login. If you do not want to do without these default users, you should urgently change their passwords as they are identical to the user name. You can implement the changes in the respective person object in respective person object in the **Persons → Login** category.
-
-#### Default User under Linux
-
-A default user is created already during the installation of the operating system. This default user also deserves a secure password which you can change retrospectively with:
+#### Linux Users
 
 ```shell
 passwd
 ```
 
-### Activation of CSRF Tokens
+### Enable CSRF Protection
 
-i-doit supplies several measures to impede attacks called [**Cross-Site-Request-Forgery** (CSRF or XSRF)](https://en.wikipedia.org/wiki/Cross-site_request_forgery). You can activate these measures under **Administration → System settings → Security → CSRF-Token** by choosing **Yes**.
+Cross-Site Request Forgery (CSRF) is an attack where a user unknowingly performs actions in i-doit because they clicked a manipulated link. Enable protection in the [Admin Center](../administration/admin-center.md) under:
 
-### Two-factor Authentication
+**System Settings > Security > CSRF Token > Yes**
 
-Nowadays, a login with only user name and user password is regarded as outdated. **Additional authentication mechanisms provide a gain in security.** When one additional mechanism is applied, the method is referred to as two-factor authentication; when more than two factors are applied this is called multi-factor authentication. A common form of implementation is the application of a (USB) token.
+### Two-Factor Authentication
 
-i-doit enables additional mechanisms through the underlying Apache web server. For example, the [**single-sign-on procedure**](../user-authentication-and-management/sso-comparison/index.md) is based on it. The procedure can be used to activate and to configure other mechanisms directly in the web server. As long as the procedure informs i-doit through relevant HTTP headers for which user the authentication was successful, the possibilities are virtually limitless.
+i-doit offers built-in [two-factor authentication (2FA)](../user-authentication-and-management/2fa/index.md). This requires users to provide an additional code from an authenticator app in addition to their password. Especially recommended for admin accounts and users with write access.
 
-### Monitoring and Logs
+Additional authentication mechanisms can be set up via the Apache web server, e.g., via [Single Sign-On (SSO)](../user-authentication-and-management/sso-comparison/index.md).
 
-All effected measures should be monitored constantly, preferably in an automated way.
+### Configure Session Timeout
 
-The system is in good hands in a [Network Monitoring](../automation-and-integration/network-monitoring/index.md), such as Nagios or Check\_MK. There is hardly anything which cannot be monitored by this means. For example, it is important to keep an eye on the operating system and the (virtual) hardware with running processes, memory consumption, logged on users, available updates etc. **For i-doit you should ensure that Apache, MariaDB/MySQL and the available storage space are monitored.**
+By default, sessions in i-doit remain active for a very long time. For security-critical environments, you should shorten the session timeout so that forgotten browser windows do not remain open indefinitely.
 
-Beside the network monitoring, there are other services which **monitor logs**. Before you start with the installation of a full-fledged log server (for example, [Logstash](https://www.elastic.co/products/logstash)), you could try smaller tools, like [Logwatch](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-logwatch-log-analyzer-and-reporter-on-a-vps). Logwatch monitors the log files of Apache, SSH and other services and sends a report which is easy to read per e-mail on a daily basis.
+The setting can be found in the [expert settings](../administration/management/tenant-management/expert-settings.md) under `session.time` -- the value is specified in seconds. A sensible value for production environments is **3600** (1 hour).
 
-Also i-doit produces log files constantly. You can find them in the installation directory under the log/ directory. It is worth evaluating the logs (regularly), not only when you are [searching for errors](../system-administration/troubleshooting/index.md).
+### Secure the API
 
-After [Cronjobs](../automation-and-integration/cli/index.md) have been set up, nobody seems to be interested in them anymore. However, this can be disastrous, because possibly nobody notices when something is going wrong during the automatic execution. Therefore, it is advisable to **redirect the outputs of running jobs in log files** and to send e-mails, when required.
+The [JSON-RPC API](../i-doit-add-ons/api/index.md) is a powerful tool -- and an attractive attack target. If you use the API, you should secure it specifically:
 
-Speaking of e-mails: When you want the system to send e-mails (like Logwatch does on a daily basis), you should test the process beforehand. A suitable SMTP server should be accessible. Perhaps it helps to use a simple service, like [sSMTP](https://wiki.debian.org/sSMTP), as a relay server.
+- **Keep the API key secret** -- the key grants full access. Treat it like a password.
+- **Restrict access by IP** -- allow API access only from known systems. You can do this via the Apache configuration or a firewall rule:
 
-Another possibility to check the system constantly for weak spots from the outside is the application of  a vulnerability scanner, like [OpenVAS](http://www.openvas.org/)[.](http://www.openvas.org/)
+```apache
+<Location "/src/jsonrpc.php">
+    Require ip 192.168.1.0/24
+    Require ip 10.0.0.50
+</Location>
+```
 
-## Thinking Outside the Box
+- **Create a dedicated API user** -- do not use the admin account for API access. Create a dedicated user with minimal permissions.
+- **Disable the API** if it is not needed -- the add-on can be deactivated in [Administration](../administration/management/import-and-interfaces/index.md).
 
-There are numerous other measures which are beyond the actual installation, but which are worth being pointed out.
+---
 
-### High Availability
+## Firewall and Network
 
-!!! info "Truly necessary?"
-    Often people ask us how to set up i-doit in the most effective way. Quickly, the focus lies on redundant systems but in most cases such a system is oversized and too complex. Before you take a sledgehammer to crack a nut and use a huge apparatus of hardware and software for your IT documentation, it is better to set up one (!) simple but sophisticated system and maintain it regularly. As far as we know, no customer required a redundant system for i-doit due to performance reasons so far, as the system requirements are rather moderate. i-doit works smoothly with the stated demands even in case of a) many data and b) many users working at the same time.
+### Minimize Open Ports
 
-To enhance the availability of the IT documentation, it can be helpful to run the single services **redundantly** and on dedicated systems (Bare Metal, VM or Container). To operate i-doit, you require an Apache webserver which can be controlled redundantly by one or even several Load Balancers. You can store the databases on a MariaDB cluster, which is administered, for example, by [MaxScale](https://mariadb.com/products/mariadb-maxscale). The data stored by i-doit in the file system can be saved in a (distributed) storage system. And also the cache, which is administered by memcached, can be swapped out.
+Every closed port reduces the attack surface. For i-doit, the following ports are typically sufficient:
 
-But that is enough material for another article.
+| Port | Service | Note |
+|------|---------|------|
+| **443** | HTTPS | i-doit web interface |
+| **22** | SSH | Administration (ideally only from the admin network) |
 
-In order to start on a small scale, you should take a closer look at the underlying hardware: RAID, ECC memory protection for the RAM and redundant power supply units (with truly different phase currents, at best protected by USP, generator etc.) are common preventive measures.
+MariaDB (3306) should **never** be accessible from the outside.
 
-### Reliable Network
+A simple firewall with **ufw**:
 
-You should also consider the network infrastructure in which the i-doit system runs and is accessed.
+```shell
+sudo apt install ufw
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw allow 443/tcp
+sudo ufw allow 22/tcp
+sudo ufw enable
+```
 
-One method can be a direct separation of the internet. A **HTTP proxy** would permit the system to download updates.
+!!! warning "Security by Obscurity"
+    Non-standard ports (e.g., 8080, 8022) do not provide real protection. Port scanners like nmap find open ports in seconds.
 
-Another measure is the application of a **dedicated net for the administration**. Thus, you could take the open port for SSH out of the "line of fire". Only the core function, the Apache web server, would be accessible. We leave it up to you to decide whether you achieve this by physically separating the subnets or by VLAN or VPN.
+For Apache, there is also the web application firewall [mod_security](https://www.digitalocean.com/community/tutorials/how-to-set-up-mod_security-with-apache-on-debian-ubuntu), which detects and blocks attack patterns in HTTP requests.
 
-### IPv4 versus IPv6
+### Firewall Rules for i-doit
 
-For many of the described measures it is irrelevant whether IP is used in version 4 or 6. IPv6 is not used widely in organizations. If IPv6 is not used at all (which would be a pity), it should be deactivated. If you use it, however, you should treat it as safely as IPv4. If services listen to the outside with opened ports, you should carry out the same settings for IPv4 as well as IPv6. If necessary, customize the firewall rules.
+For i-doit to download updates, verify licenses, and use online repositories, the following destinations must be reachable:
 
-Routing and address assignment in IPv6 nets differ from IPv4 nets. If you do not pay attention, you could accidentally make the system available to the worldwide internet, although this was excluded with IPv4.
+| Host | Protocol | Port | Purpose |
+|------|----------|------|---------|
+| [login.i-doit.com](https://login.i-doit.com) | HTTPS | 443 | Updates for i-doit and add-ons |
+| [center.i-doit.com](https://center.i-doit.com) | HTTPS | 443 | Add-on & Subscription Center<br>IPs: `159.69.103.121`, `78.46.236.49`, `35.158.127.51`, `35.158.127.52`, `35.158.127.53`<br>IPv6: `2a01:4f8:c01f:289a::`, `2a01:4f8:1c17:a07c::` |
+| [crm-gateway.i-doit.com](https://crm-gateway.i-doit.com) | HTTPS | 443 | Downloads via license token |
+| [lizenzen.i-doit.com](https://lizenzen.i-doit.com) | HTTPS | 443 | Retrieve licenses via token |
+| [reports-ng.i-doit.org](https://reports-ng.i-doit.org) | HTTPS | 443 | Online repository for [reports](../evaluation/report-manager.md) |
+| [r.i-doit.com](https://r.i-doit.com) | HTTPS | 443 | Online repository for [templates](../i-doit-add-ons/documents/index.md) |
+| [i-doit.com](https://www.i-doit.com) | HTTPS | 443 | Update check |
 
-## Additional Links
+### Interfaces to Third-Party Applications
 
-If you want to delve deeper into the matter (and who would not want to after studying this article?), you can find further information here:
+| Interface | Protocol | Default Port |
+|-----------|----------|--------------|
+| [Send emails](../evaluation/notifications.md) | SMTP | 25 / 465 / 587 |
+| [LDAP/AD](../user-authentication-and-management/ldap-directory/index.md) | LDAP / LDAPS | 389 / 636 |
+| [JDisc Discovery](../consolidate-data/jdisc/index.md) | PostgreSQL | 25321 |
+| [JDisc Discovery](../consolidate-data/jdisc/index.md) | HTTP | 9000 |
+| [JDisc Discovery GraphQL](../consolidate-data/jdisc/index.md) | HTTPS | 443 |
+| [Livestatus](../automation-and-integration/network-monitoring/query-data-with-livestatus.md) | Livestatus | 6557 |
+| [Znuny Help Desk](../automation-and-integration/service-desk/otrscommunity-help-desk.md), [Request Tracker](../automation-and-integration/service-desk/request-tracker.md) | HTTP/HTTPS | 80 / 443 |
 
-*   The blog article "[My First 10 Minutes On a Server - Primer for Securing Ubuntu](https://www.codelitt.com/blog/my-first-10-minutes-on-a-server-primer-for-securing-ubuntu/)" is a good start for a (secure) administration of a Linux operating system.
-*   In connection with the IT-Grundschutz standard (standard for basic IT protection) the German Federal Office for Information Security (BSI) issues [IT-Grundschutz catalogues](https://www.bsi.bund.de/EN/Home/home_node.html) which list a lot of risks affecting IT in daily life. In addition, the BSI provides suitable measures to minimize the risks. In many cases, the catalogues serve as a source for other standards and norms, such as ISO27001. Particularly the following catalogue components are a good read for the safe operation of i-doit: B 3.101 General Server, B 3.102 Servers under Unix, B 3.304 Virtualization, B 5.4 Web Servers, B 5.7 Databases, B 5.21 Web Applications, B 5.24 Web Services. You can download the latest catalogue from the [IT-Grundschutz International website](https://www.bsi.bund.de/EN/Home/home_node.html).
-*   The [Open Web Application Security Project (OWASP)](https://www.owasp.org/index.php/Main_Page) is a non-profit NGO dedicated to ensure information security of web applications. They point out current attack scenarios, but also measures to minimize the risks.
+### Trusted Network
+
+- **No direct internet access** -- place i-doit behind a reverse proxy or in an internal network. Use an HTTP proxy for updates.
+- **Dedicated admin network** -- allow SSH only from the management network so that only the core function (HTTPS) is accessible from the office network.
+
+### IPv4 vs. IPv6
+
+If IPv6 is not used in your network, disable it on the server. If it is used, firewall rules and service configurations must cover **both protocols** -- a firewall with only IPv4 rules does not protect against IPv6 access.
+
+---
+
+## Security Frameworks
+
+On GNU/Linux, [SELinux](https://en.wikipedia.org/wiki/SELinux) and [AppArmor](https://en.wikipedia.org/wiki/AppArmor) provide additional protection against unauthorized actions. They allow you to confine Apache so that it can only access specific directories -- even if an attacker exploits a vulnerability in PHP.
+
+### Automatically Block Attacks
+
+[fail2ban](http://www.fail2ban.org/) analyzes log files and automatically blocks IP addresses after repeated failed login attempts:
+
+```shell
+sudo apt install fail2ban
+```
+
+Pre-configured rules exist for SSH, Apache, and MariaDB. For i-doit itself, you can create a custom rule that detects failed logins in the Apache logs.
+
+---
+
+## Monitoring and Logs
+
+### Monitor the System
+
+Monitor the system with a [network monitoring](../automation-and-integration/network-monitoring/index.md) solution like Checkmk or Nagios. Important metrics:
+
+- CPU and memory utilization
+- Available disk space
+- Apache and MariaDB processes
+- Certificate validity (TLS)
+- Backup success
+
+### Evaluate Logs
+
+The i-doit log files are located in the `log/` directory of the installation. Evaluate them regularly -- especially after updates and when unexpected behavior occurs.
+
+For automatic log monitoring, [Logwatch](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-logwatch-log-analyzer-and-reporter-on-a-vps) is suitable:
+
+```shell
+sudo apt install logwatch
+```
+
+Logwatch analyzes logs from Apache, SSH, and other services and sends a daily report via email.
+
+If the system needs to send emails, set up an SMTP relay -- e.g., with [msmtp](https://marlam.de/msmtp/).
+
+---
+
+## Regular Security Audits
+
+Security is not a one-time project but an ongoing process. Conduct regular audits (e.g., quarterly):
+
+| Checkpoint | How |
+|------------|-----|
+| Operating system up to date? | `apt update && apt list --upgradable` |
+| PHP version still supported? | Check [system requirements](../installation/system-requirements.md) |
+| i-doit up to date? | Check [release notes](../version-history/release-notes/index.md) |
+| Default passwords changed? | Test login with admin/admin |
+| Backup functional? | Perform restore on test system |
+| TLS configuration current? | [SSL Labs](https://www.ssllabs.com/ssltest/) |
+| Unused users present? | Check user list in i-doit |
+| Open ports minimal? | `sudo ss -tulpen` |
+| API access restricted? | Check Apache logs for unknown IPs |
+| File permissions correct? | `find /var/www/html -perm -o+w` |
+
+---
+
+## High Availability
+
+!!! info "Really necessary?"
+    In most cases, a single, well-maintained system is sufficient. The system requirements for i-doit are moderate. Before planning a redundant setup, invest in a well-thought-out backup concept and fast recoverability instead.
+
+For increased availability, you can run the services on dedicated systems: Apache behind a load balancer, MariaDB in a cluster (e.g., with [MaxScale](https://mariadb.com/products/mariadb-maxscale)), files in distributed storage.
+
+On a smaller scale, RAID, ECC RAM, and redundant power supplies on different power phases (ideally with a UPS) help.
+
+## Further Reading
+
+- [BSI IT-Grundschutz](https://www.bsi.bund.de/grundschutz/) -- Systematic IT security
+- [Mozilla SSL Configuration Generator](https://ssl-config.mozilla.org/) -- Generate TLS configurations
+- [CIS Benchmarks](https://www.cisecurity.org/cis-benchmarks) -- Hardening guidelines for operating systems and services

@@ -1,1281 +1,1287 @@
-# Category Tables 1.10
+---
+title: "Category Tables 1.10"
+description: "Via the URL parameter load=property_infos the category tables for the currently installed version of i-doit are created."
+icon:
+status:
+lang: en
+---
+# category-tablen 1.10
 
-!!! info "Generate this content automatically"
+!!! info "Create this content automatically"
 
-    You can create this content on your own i-doit host. Pass the parameter load=property_infos to the URL, for example:  [https://demo.i-doit.com/?load=property_infos](https://demo.i-doit.com/?load=property_infos).You need to be logged-in.
+    Via the URL parameter load=property_infos, the category tables for the currently installed version of i-doit are created. A user must be logged in. Example: [https://demo.i-doit.com/?load=property_infos](https://demo.i-doit.com/?load=property_infos)
 
+Global Categories
+------------------
 
-Global categories
------------------
+### Allgemein
 
-### General
+#### table: isys\_catg\_global\_list
 
-#### Tabelle: isys\_catg\_global\_list
-
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
 | ID  | int | isys\_obj | isys\_obj\_\_id |     |     |
-| Title | text | isys\_obj | isys\_obj\_\_title |     |     |
+| designation | text | isys\_obj | isys\_obj\_\_title |     |     |
 | Status | int | isys\_catg\_global\_list | isys\_obj\_\_status |     |     |
-| Creation date | text | isys\_obj | isys\_obj\_\_created |     |     |
-| Created by | text | isys\_obj | isys\_obj\_\_created\_by |     |     |
-| Last change | text | isys\_obj | isys\_obj\_\_updated |     |     |
-| Last change by | text | isys\_obj | isys\_obj\_\_updated\_by |     |     |
-| Purpose | int | isys\_catg\_global\_list | isys\_catg\_global\_list\_\_isys\_purpose\_\_id | isys\_purpose | isys\_purpose\_\_id |
-| Category | int | isys\_catg\_global\_list | isys\_catg\_global\_list\_\_isys\_catg\_global\_category\_\_id | isys\_catg\_global\_category | isys\_catg\_global\_category\_\_id |
+| creationsdatum | text | isys\_obj | isys\_obj\_\_created |     |     |
+| Erprovides von | text | isys\_obj | isys\_obj\_\_created\_by |     |     |
+| Letzte Change | text | isys\_obj | isys\_obj\_\_updated |     |     |
+| Letzte Change durch | text | isys\_obj | isys\_obj\_\_updated\_by |     |     |
+| Einsatzzweck | int | isys\_catg\_global\_list | isys\_catg\_global\_list\_\_isys\_purpose\_\_id | isys\_purpose | isys\_purpose\_\_id |
+| category | int | isys\_catg\_global\_list | isys\_catg\_global\_list\_\_isys\_catg\_global\_category\_\_id | isys\_catg\_global\_category | isys\_catg\_global\_category\_\_id |
 | SYSID | text | isys\_obj | isys\_obj\_\_sysid |     |     |
-| CMDB status | int | isys\_catg\_global\_list | isys\_obj\_\_isys\_cmdb\_status\_\_id | isys\_cmdb\_status | isys\_cmdb\_status\_\_id |
-| Object type | int | isys\_catg\_global\_list | isys\_obj\_\_isys\_obj\_type\_\_id | isys\_obj\_type | isys\_obj\_type\_\_id |
+| CMDB-Status | int | isys\_catg\_global\_list | isys\_obj\_\_isys\_cmdb\_status\_\_id | isys\_cmdb\_status | isys\_cmdb\_status\_\_id |
+| objecttyp | int | isys\_catg\_global\_list | isys\_obj\_\_isys\_obj\_type\_\_id | isys\_obj\_type | isys\_obj\_type\_\_id |
 | Tags | int | global\_tag | isys\_obj\_\_id | isys\_tag\_2\_isys\_obj | isys\_obj\_\_id |
 | Description | text\_area | isys\_obj | isys\_obj\_\_description |     |     |
 
-### Model
+### Modell
 
-#### Tabelle: isys\_catg\_model\_list
+#### table: isys\_catg\_model\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Manufacturer | int | isys\_catg\_model\_list | isys\_catg\_model\_list\_\_isys\_model\_manufacturer\_\_id | isys\_model\_manufacturer | isys\_model\_manufacturer\_\_id |
-| Model | int | isys\_catg\_model\_list | isys\_catg\_model\_list\_\_isys\_model\_title\_\_id | isys\_model\_title | isys\_model\_title\_\_id |
-| Product ID | text | isys\_catg\_model\_list | isys\_catg\_model\_list\_\_productid |     |     |
+| Hersteller | int | isys\_catg\_model\_list | isys\_catg\_model\_list\_\_isys\_model\_manufacturer\_\_id | isys\_model\_manufacturer | isys\_model\_manufacturer\_\_id |
+| Modell | int | isys\_catg\_model\_list | isys\_catg\_model\_list\_\_isys\_model\_title\_\_id | isys\_model\_title | isys\_model\_title\_\_id |
+| Produkt-ID | text | isys\_catg\_model\_list | isys\_catg\_model\_list\_\_productid |     |     |
 | Service Tag | text | isys\_catg\_model\_list | isys\_catg\_model\_list\_\_service\_tag |     |     |
 | Serial number | text | isys\_catg\_model\_list | isys\_catg\_model\_list\_\_serial |     |     |
 | Firmware | text | isys\_catg\_model\_list | isys\_catg\_model\_list\_\_firmware |     |     |
 | Description | text\_area | isys\_catg\_model\_list | isys\_catg\_model\_list\_\_description |     |     |
 
-### Form factor
+### Formfaktor
 
-#### Tabelle: isys\_catg\_formfactor\_list
+#### table: isys\_catg\_formfactor\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Form factor | int | isys\_catg\_formfactor\_list | isys\_catg\_formfactor\_list\_\_isys\_catg\_formfactor\_type\_\_id | isys\_catg\_formfactor\_type | isys\_catg\_formfactor\_type\_\_id |
-| Rack units | int | isys\_catg\_formfactor\_list | isys\_catg\_formfactor\_list\_\_rackunits |     |     |
-| Dimension unit | int | isys\_catg\_formfactor\_list | isys\_catg\_formfactor\_list\_\_isys\_depth\_unit\_\_id | isys\_depth\_unit | isys\_depth\_unit\_\_id |
-| Width | float | isys\_catg\_formfactor\_list | isys\_catg\_formfactor\_list\_\_installation\_width |     |     |
-| Height | float | isys\_catg\_formfactor\_list | isys\_catg\_formfactor\_list\_\_installation\_height |     |     |
-| Depth | float | isys\_catg\_formfactor\_list | isys\_catg\_formfactor\_list\_\_installation\_depth |     |     |
-| Weight | float | isys\_catg\_formfactor\_list | isys\_catg\_formfactor\_list\_\_installation\_weight |     |     |
-| weight unit | int | isys\_catg\_formfactor\_list | isys\_catg\_formfactor\_list\_\_isys\_weight\_unit\_\_id | isys\_weight\_unit | isys\_weight\_unit\_\_id |
+| Formfaktor | int | isys\_catg\_formfactor\_list | isys\_catg\_formfactor\_list\_\_isys\_catg\_formfactor\_type\_\_id | isys\_catg\_formfactor\_type | isys\_catg\_formfactor\_type\_\_id |
+| heightneinheiten | int | isys\_catg\_formfactor\_list | isys\_catg\_formfactor\_list\_\_rackunits |     |     |
+| unit of measurement | int | isys\_catg\_formfactor\_list | isys\_catg\_formfactor\_list\_\_isys\_depth\_unit\_\_id | isys\_depth\_unit | isys\_depth\_unit\_\_id |
+| Breite | float | isys\_catg\_formfactor\_list | isys\_catg\_formfactor\_list\_\_installation\_width |     |     |
+| height | float | isys\_catg\_formfactor\_list | isys\_catg\_formfactor\_list\_\_installation\_height |     |     |
+| Tiefe | float | isys\_catg\_formfactor\_list | isys\_catg\_formfactor\_list\_\_installation\_depth |     |     |
+| Gewicht | float | isys\_catg\_formfactor\_list | isys\_catg\_formfactor\_list\_\_installation\_weight |     |     |
+| Gewichtseinheit | int | isys\_catg\_formfactor\_list | isys\_catg\_formfactor\_list\_\_isys\_weight\_unit\_\_id | isys\_weight\_unit | isys\_weight\_unit\_\_id |
 | Description | text\_area | isys\_catg\_formfactor\_list | isys\_catg\_formfactor\_list\_\_description |     |     |
 
 ### CPU
 
-#### Tabelle: isys\_catg\_cpu\_list
+#### table: isys\_catg\_cpu\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_catg\_cpu\_list | isys\_catg\_cpu\_list\_\_title |     |     |
-| Manufacturer | int | isys\_catg\_cpu\_list | isys\_catg\_cpu\_list\_\_isys\_catg\_cpu\_manufacturer\_\_id | isys\_catg\_cpu\_manufacturer | isys\_catg\_cpu\_manufacturer\_\_id |
-| Type | int | isys\_catg\_cpu\_list | isys\_catg\_cpu\_list\_\_isys\_catg\_cpu\_type\_\_id | isys\_catg\_cpu\_type | isys\_catg\_cpu\_type\_\_id |
-| CPU frequency | float | isys\_catg\_cpu\_list | isys\_catg\_cpu\_list\_\_frequency |     |     |
-| CPU frequency unit | int | isys\_catg\_cpu\_list | isys\_catg\_cpu\_list\_\_isys\_frequency\_unit\_\_id | isys\_frequency\_unit | isys\_frequency\_unit\_\_id |
-| CPU cores | int | isys\_catg\_cpu\_list | isys\_catg\_cpu\_list\_\_cores |     |     |
+| designation | text | isys\_catg\_cpu\_list | isys\_catg\_cpu\_list\_\_title |     |     |
+| Hersteller | int | isys\_catg\_cpu\_list | isys\_catg\_cpu\_list\_\_isys\_catg\_cpu\_manufacturer\_\_id | isys\_catg\_cpu\_manufacturer | isys\_catg\_cpu\_manufacturer\_\_id |
+| Typ | int | isys\_catg\_cpu\_list | isys\_catg\_cpu\_list\_\_isys\_catg\_cpu\_type\_\_id | isys\_catg\_cpu\_type | isys\_catg\_cpu\_type\_\_id |
+| CPU-Frequenz | float | isys\_catg\_cpu\_list | isys\_catg\_cpu\_list\_\_frequency |     |     |
+| CPU-Frequenz Einheit | int | isys\_catg\_cpu\_list | isys\_catg\_cpu\_list\_\_isys\_frequency\_unit\_\_id | isys\_frequency\_unit | isys\_frequency\_unit\_\_id |
+| CPU-Kerne | int | isys\_catg\_cpu\_list | isys\_catg\_cpu\_list\_\_cores |     |     |
 | Description | text\_area | isys\_catg\_cpu\_list | isys\_catg\_cpu\_list\_\_description |     |     |
 
-### Memory
+### Speicher
 
-#### Tabelle: isys\_catg\_memory\_list
+#### table: isys\_catg\_memory\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Quantity | int | isys\_catg\_memory\_list | isys\_catg\_memory\_list\_\_quantity |     |     |
-| Title | int | isys\_catg\_memory\_list | isys\_catg\_memory\_list\_\_isys\_memory\_title\_\_id | isys\_memory\_title | isys\_memory\_title\_\_id |
-| Manufacturer | int | isys\_catg\_memory\_list | isys\_catg\_memory\_list\_\_isys\_memory\_manufacturer\_\_id | isys\_memory\_manufacturer | isys\_memory\_manufacturer\_\_id |
-| Type | int | isys\_catg\_memory\_list | isys\_catg\_memory\_list\_\_isys\_memory\_type\_\_id | isys\_memory\_type | isys\_memory\_type\_\_id |
-| Total capacity | float | isys\_catg\_memory\_list | isys\_catg\_memory\_list\_\_capacity |     |     |
-| Capacity | float | isys\_catg\_memory\_list | isys\_catg\_memory\_list\_\_capacity |     |     |
-| Memory unit | int | isys\_catg\_memory\_list | isys\_catg\_memory\_list\_\_isys\_memory\_unit\_\_id | isys\_memory\_unit | isys\_memory\_unit\_\_id |
+| Anzahl | int | isys\_catg\_memory\_list | isys\_catg\_memory\_list\_\_quantity |     |     |
+| designation | int | isys\_catg\_memory\_list | isys\_catg\_memory\_list\_\_isys\_memory\_title\_\_id | isys\_memory\_title | isys\_memory\_title\_\_id |
+| Hersteller | int | isys\_catg\_memory\_list | isys\_catg\_memory\_list\_\_isys\_memory\_manufacturer\_\_id | isys\_memory\_manufacturer | isys\_memory\_manufacturer\_\_id |
+| Typ | int | isys\_catg\_memory\_list | isys\_catg\_memory\_list\_\_isys\_memory\_type\_\_id | isys\_memory\_type | isys\_memory\_type\_\_id |
+| total capacity | float | isys\_catg\_memory\_list | isys\_catg\_memory\_list\_\_capacity |     |     |
+| capacity | float | isys\_catg\_memory\_list | isys\_catg\_memory\_list\_\_capacity |     |     |
+| Speichereinheit | int | isys\_catg\_memory\_list | isys\_catg\_memory\_list\_\_isys\_memory\_unit\_\_id | isys\_memory\_unit | isys\_memory\_unit\_\_id |
 | Description | text\_area | isys\_catg\_memory\_list | isys\_catg\_memory\_list\_\_description |     |     |
 
-### Network
+### Netzwerk
 
-#### Tabelle: isys\_catg\_netp\_list
+#### table: isys\_catg\_netp\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_title |     |     |
-| Manufacturer | int | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_isys\_iface\_manufacturer\_\_id | isys\_iface\_manufacturer | isys\_iface\_manufacturer\_\_id |
-| Model | int | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_isys\_iface\_model\_\_id | isys\_iface\_model | isys\_iface\_model\_\_id |
+| designation | text | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_title |     |     |
+| Hersteller | int | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_isys\_iface\_manufacturer\_\_id | isys\_iface\_manufacturer | isys\_iface\_manufacturer\_\_id |
+| Modell | int | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_isys\_iface\_model\_\_id | isys\_iface\_model | isys\_iface\_model\_\_id |
 | Serial number | text | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_serial |     |     |
-| Slotnumber | text | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_slotnumber |     |     |
+| Slotnummer | text | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_slotnumber |     |     |
 | Description | text\_area | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_description |     |     |
 
-### Power consumer
+### Stromverbraucher
 
-#### Tabelle: isys\_catg\_pc\_list
+#### table: isys\_catg\_pc\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_catg\_pc\_list | isys\_catg\_pc\_list\_\_title |     |     |
-| Active | int | isys\_catg\_pc\_list | isys\_catg\_pc\_list\_\_active |     |     |
-| Manufacturer | int | isys\_catg\_pc\_list | isys\_catg\_pc\_list\_\_isys\_pc\_manufacturer\_\_id | isys\_pc\_manufacturer | isys\_pc\_manufacturer\_\_id |
-| Model | int | isys\_catg\_pc\_list | isys\_catg\_pc\_list\_\_isys\_pc\_model\_\_id | isys\_pc\_model | isys\_pc\_model\_\_id |
+| designation | text | isys\_catg\_pc\_list | isys\_catg\_pc\_list\_\_title |     |     |
+| Aktiv | int | isys\_catg\_pc\_list | isys\_catg\_pc\_list\_\_active |     |     |
+| Hersteller | int | isys\_catg\_pc\_list | isys\_catg\_pc\_list\_\_isys\_pc\_manufacturer\_\_id | isys\_pc\_manufacturer | isys\_pc\_manufacturer\_\_id |
+| Modell | int | isys\_catg\_pc\_list | isys\_catg\_pc\_list\_\_isys\_pc\_model\_\_id | isys\_pc\_model | isys\_pc\_model\_\_id |
 | Volt | text | isys\_catg\_pc\_list | isys\_catg\_pc\_list\_\_volt |     |     |
 | Watt | text | isys\_catg\_pc\_list | isys\_catg\_pc\_list\_\_watt |     |     |
 | Ampere | text | isys\_catg\_pc\_list | isys\_catg\_pc\_list\_\_ampere |     |     |
 | BTU | text | isys\_catg\_pc\_list | isys\_catg\_pc\_list\_\_btu |     |     |
-| Target object | int | output | isys\_catg\_pc\_list\_\_isys\_catg\_connector\_list\_\_id |     |     |
-| Assigned to connector | int | connected | isys\_catg\_pc\_list\_\_isys\_catg\_connector\_list\_\_id |     |     |
-| Assigned Input/Output | int | isys\_catg\_pc\_list | isys\_catg\_connector\_list\_\_isys\_catg\_connector\_list\_\_id |     |     |
+| Zielobjekt | int | output | isys\_catg\_pc\_list\_\_isys\_catg\_connector\_list\_\_id |     |     |
+| Connected to connector | int | connected | isys\_catg\_pc\_list\_\_isys\_catg\_connector\_list\_\_id |     |     |
+| Associated Eingang/Ausgang | int | isys\_catg\_pc\_list | isys\_catg\_connector\_list\_\_isys\_catg\_connector\_list\_\_id |     |     |
 | Description | text\_area | isys\_catg\_pc\_list | isys\_catg\_pc\_list\_\_description |     |     |
 
-### Interface
+### interface
 
-#### Tabelle: isys\_catg\_ui\_list
+#### table: isys\_catg\_ui\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_catg\_ui\_list | isys\_catg\_ui\_list\_\_title |     |     |
-| Connection type | int | isys\_catg\_ui\_list | isys\_catg\_ui\_list\_\_isys\_ui\_con\_type\_\_id | isys\_ui\_con\_type | isys\_ui\_con\_type\_\_id |
-| Plug type | int | isys\_catg\_ui\_list | isys\_catg\_ui\_list\_\_isys\_ui\_plugtype\_\_id | isys\_ui\_plugtype | isys\_ui\_plugtype\_\_id |
+| designation | text | isys\_catg\_ui\_list | isys\_catg\_ui\_list\_\_title |     |     |
+| connectionstyp | int | isys\_catg\_ui\_list | isys\_catg\_ui\_list\_\_isys\_ui\_con\_type\_\_id | isys\_ui\_con\_type | isys\_ui\_con\_type\_\_id |
+| Anschlusstyp | int | isys\_catg\_ui\_list | isys\_catg\_ui\_list\_\_isys\_ui\_plugtype\_\_id | isys\_ui\_plugtype | isys\_ui\_plugtype\_\_id |
 | Connected to | int | connected | isys\_catg\_ui\_list\_\_isys\_catg\_connector\_list\_\_id |     |     |
-| Assigned to connector | int | connected | isys\_catg\_ui\_list\_\_isys\_catg\_connector\_list\_\_id |     |     |
-| Assigned Input/Output | int | isys\_catg\_ui\_list | isys\_catg\_connector\_list\_\_isys\_catg\_connector\_list\_\_id |     |     |
+| Connected to connector | int | connected | isys\_catg\_ui\_list\_\_isys\_catg\_connector\_list\_\_id |     |     |
+| Associated Eingang/Ausgang | int | isys\_catg\_ui\_list | isys\_catg\_connector\_list\_\_isys\_catg\_connector\_list\_\_id |     |     |
 | Description | text\_area | isys\_catg\_ui\_list | isys\_catg\_ui\_list\_\_description |     |     |
 | Relation direction | int | isys\_catg\_ui\_list | isys\_catg\_connector\_list\_\_isys\_catg\_relation\_list\_\_id |     |     |
 
-### Software assignment
+### Softwarezuweisung
 
-#### Tabelle: isys\_catg\_application\_list
+#### table: isys\_catg\_application\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Application | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
-| Type | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_catg\_application\_type\_\_id | isys\_catg\_application\_type | isys\_catg\_application\_type\_\_id |
-| Priority | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_catg\_application\_priority\_\_id | isys\_catg\_application\_priority | isys\_catg\_application\_priority\_\_id |
-| Assigned license | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_cats\_lic\_list\_\_id | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_id |
-| Assigned license key | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_cats\_lic\_list\_\_id | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_id |
-| Database schema | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_catg\_relation\_list\_\_id | isys\_cats\_database\_access\_list | isys\_cats\_database\_access\_list\_\_id |
+| Anwendung | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
+| Typ | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_catg\_application\_type\_\_id | isys\_catg\_application\_type | isys\_catg\_application\_type\_\_id |
+| priority | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_catg\_application\_priority\_\_id | isys\_catg\_application\_priority | isys\_catg\_application\_priority\_\_id |
+| Zugewiesene Lizenz | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_cats\_lic\_list\_\_id | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_id |
+| Zugewiesener license key | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_cats\_lic\_list\_\_id | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_id |
+| database schema | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_catg\_relation\_list\_\_id | isys\_cats\_database\_access\_list | isys\_cats\_database\_access\_list\_\_id |
 | Service | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_catg\_relation\_list\_\_id | isys\_catg\_its\_components\_list | isys\_catg\_its\_components\_list\_\_id |
-| Variant | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_cats\_app\_variant\_list\_\_id | isys\_cats\_app\_variant\_list | isys\_cats\_app\_variant\_list\_\_id |
-| Version number | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_catg\_version\_list\_\_id | isys\_catg\_version\_list | isys\_catg\_version\_list\_\_id |
-| Inherit nagios services | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_bequest\_nagios\_services |     |     |
+| Variante | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_cats\_app\_variant\_list\_\_id | isys\_cats\_app\_variant\_list | isys\_cats\_app\_variant\_list\_\_id |
+| Versionsnummer | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_catg\_version\_list\_\_id | isys\_catg\_version\_list | isys\_catg\_version\_list\_\_id |
+| Nagios services vererben | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_bequest\_nagios\_services |     |     |
 | Description | text\_area | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_description |     |     |
 
-### Access
+### Zugriff
 
-#### Tabelle: isys\_catg\_access\_list
+#### table: isys\_catg\_access\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Primary access URL | text | isys\_catg\_access\_list | isys\_catg\_access\_list\_\_url |     |     |
-| Title | text | isys\_catg\_access\_list | isys\_catg\_access\_list\_\_title |     |     |
-| Access type | int | isys\_catg\_access\_list | isys\_catg\_access\_list\_\_isys\_access\_type\_\_id | isys\_access\_type | isys\_access\_type\_\_id |
+| Primarye Accesss-URL | text | isys\_catg\_access\_list | isys\_catg\_access\_list\_\_url |     |     |
+| designation | text | isys\_catg\_access\_list | isys\_catg\_access\_list\_\_title |     |     |
+| Zugriffstyp | int | isys\_catg\_access\_list | isys\_catg\_access\_list\_\_isys\_access\_type\_\_id | isys\_access\_type | isys\_access\_type\_\_id |
 | Host\[:Port\]/URL | text | isys\_catg\_access\_list | isys\_catg\_access\_list\_\_url |     |     |
 | Host\[:Port\]/URL | text | isys\_catg\_access\_list | isys\_catg\_access\_list\_\_id |     |     |
-| Primary? | int | isys\_catg\_access\_list | isys\_catg\_access\_list\_\_primary |     |     |
+| Primary | int | isys\_catg\_access\_list | isys\_catg\_access\_list\_\_primary |     |     |
 | Description | text\_area | isys\_catg\_access\_list | isys\_catg\_access\_list\_\_description |     |     |
 
-### Backup
+### Datensicherung
 
-#### Tabelle: isys\_catg\_backup\_list
+#### table: isys\_catg\_backup\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_catg\_backup\_list | isys\_catg\_backup\_list\_\_title |     |     |
-| Backed up by | int | isys\_catg\_backup\_list | isys\_catg\_backup\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
-| Backup type | int | isys\_catg\_backup\_list | isys\_catg\_backup\_list\_\_isys\_backup\_type\_\_id | isys\_backup\_type | isys\_backup\_type\_\_id |
-| Cycle | int | isys\_catg\_backup\_list | isys\_catg\_backup\_list\_\_isys\_backup\_cycle\_\_id | isys\_backup\_cycle | isys\_backup\_cycle\_\_id |
-| Path to save | text | isys\_catg\_backup\_list | isys\_catg\_backup\_list\_\_path\_to\_save |     |     |
+| designation | text | isys\_catg\_backup\_list | isys\_catg\_backup\_list\_\_title |     |     |
+| Wird gesichert von | int | isys\_catg\_backup\_list | isys\_catg\_backup\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
+| Art des Backups | int | isys\_catg\_backup\_list | isys\_catg\_backup\_list\_\_isys\_backup\_type\_\_id | isys\_backup\_type | isys\_backup\_type\_\_id |
+| Zyklus | int | isys\_catg\_backup\_list | isys\_catg\_backup\_list\_\_isys\_backup\_cycle\_\_id | isys\_backup\_cycle | isys\_backup\_cycle\_\_id |
+| path for zu sichernde Daten | text | isys\_catg\_backup\_list | isys\_catg\_backup\_list\_\_path\_to\_save |     |     |
 | Description | text\_area | isys\_catg\_backup\_list | isys\_catg\_backup\_list\_\_description |     |     |
 
-### Emergency plan assignment
+### Notfallplanzuweisung
 
-#### Tabelle: isys\_catg\_emergency\_plan\_list
+#### table: isys\_catg\_emergency\_plan\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_catg\_emergency\_plan\_list | isys\_catg\_emergency\_plan\_list\_\_title |     |     |
-| Assigned emergency plan | int | isys\_catg\_emergency\_plan\_list | isys\_catg\_emergency\_plan\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
-| Time need | text | isys\_catg\_emergency\_plan\_list | isys\_catg\_emergency\_plan\_list\_\_id |     |     |
-| Time need (Unit) | text | isys\_catg\_emergency\_plan\_list | isys\_catg\_emergency\_plan\_list\_\_id |     |     |
-| Date of emergency practice | text | isys\_catg\_emergency\_plan\_list | isys\_catg\_emergency\_plan\_list\_\_id |     |     |
+| designation | text | isys\_catg\_emergency\_plan\_list | isys\_catg\_emergency\_plan\_list\_\_title |     |     |
+| Zugewiesener Notfallplan | int | isys\_catg\_emergency\_plan\_list | isys\_catg\_emergency\_plan\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
+| Zeitbedarf | text | isys\_catg\_emergency\_plan\_list | isys\_catg\_emergency\_plan\_list\_\_id |     |     |
+| Zeitbedarf (Einheit) | text | isys\_catg\_emergency\_plan\_list | isys\_catg\_emergency\_plan\_list\_\_id |     |     |
+| date emergency exercise | text | isys\_catg\_emergency\_plan\_list | isys\_catg\_emergency\_plan\_list\_\_id |     |     |
 | Description | text\_area | isys\_catg\_emergency\_plan\_list | isys\_catg\_emergency\_plan\_list\_\_description |     |     |
 
-### Files
+### fileen
 
-#### Tabelle: isys\_catg\_file\_list
+#### table: isys\_catg\_file\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| File | int | isys\_catg\_file\_list | isys\_catg\_file\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
+| file | int | isys\_catg\_file\_list | isys\_catg\_file\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
 | Revision | int | isys\_catg\_file\_list | isys\_file\_version\_\_revision |     |     |
 | HTTP-Link (extern) | text | isys\_catg\_file\_list | isys\_catg\_file\_list\_\_link |     |     |
 | Description | text\_area | isys\_catg\_file\_list | isys\_catg\_file\_list\_\_description |     |     |
 
-### Contact assignment
+### Kontaktzuweisung
 
-#### Tabelle: isys\_catg\_contact\_list
+#### table: isys\_catg\_contact\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Contact | int | isys\_catg\_contact\_list | isys\_catg\_contact\_list\_\_id |     |     |
-| Primary contact | int | isys\_catg\_contact\_list | isys\_catg\_contact\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
-| Contact | int | isys\_catg\_contact\_list | isys\_catg\_contact\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
+| Kontakt | int | isys\_catg\_contact\_list | isys\_catg\_contact\_list\_\_id |     |     |
+| Primaryer Kontakt | int | isys\_catg\_contact\_list | isys\_catg\_contact\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
+| Kontakt | int | isys\_catg\_contact\_list | isys\_catg\_contact\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
 | Primary | int | isys\_catg\_contact\_list | isys\_catg\_contact\_list\_\_primary\_contact |     |     |
-| Role | int | isys\_catg\_contact\_list | isys\_catg\_contact\_list\_\_isys\_contact\_tag\_\_id | isys\_contact\_tag | isys\_contact\_tag\_\_id |
-| Contact | text | isys\_catg\_contact\_list | isys\_catg\_contact\_list\_\_isys\_connection\_\_id |     |     |
+| Rolle | int | isys\_catg\_contact\_list | isys\_catg\_contact\_list\_\_isys\_contact\_tag\_\_id | isys\_contact\_tag | isys\_contact\_tag\_\_id |
+| Kontakte | text | isys\_catg\_contact\_list | isys\_catg\_contact\_list\_\_isys\_connection\_\_id |     |     |
 | Description | text\_area | isys\_catg\_contact\_list | isys\_catg\_contact\_list\_\_description |     |     |
 
-### Logbook
+### logbook
 
-#### Tabelle: isys\_catg\_logb\_list
+#### table: isys\_catg\_logb\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Date | date\_time | isys\_catg\_logb\_list | isys\_logbook\_\_date |     |     |
-| Object | int | isys\_catg\_logb\_list | isys\_catg\_logb\_list\_\_isys\_obj\_\_id |     |     |
-| Event | int | isys\_catg\_logb\_list | isys\_logbook\_\_isys\_logbook\_event\_\_id | isys\_logbook\_event | isys\_logbook\_event\_\_id |
-| Source | int | isys\_catg\_logb\_list | isys\_logbook\_\_isys\_logbook\_source\_\_id | isys\_logbook\_source | isys\_logbook\_source\_\_id |
-| User | int | isys\_catg\_logb\_list | isys\_logbook\_\_isys\_obj\_\_id |     |     |
-| Object type | text | isys\_catg\_logb\_list | isys\_logbook\_\_obj\_type\_static |     |     |
-| Category | text | isys\_catg\_logb\_list | isys\_logbook\_\_category\_static |     |     |
-| Alarm level | text | isys\_catg\_logb\_list | isys\_logbook\_\_isys\_logbook\_level\_\_id | isys\_logbook\_level | isys\_logbook\_level\_\_id |
-| User | text | isys\_catg\_logb\_list | isys\_logbook\_\_user\_name\_static |     |     |
-| Event | text | isys\_catg\_logb\_list | isys\_logbook\_\_event\_static |     |     |
-| Comment | text | isys\_catg\_logb\_list | isys\_logbook\_\_comment |     |     |
-| Changes | text | isys\_catg\_logb\_list | isys\_logbook\_\_changes |     |     |
-| Access type | int | isys\_catg\_logb\_list | isys\_logbook\_\_isys\_logbook\_reason\_\_id | isys\_logbook\_reason | isys\_logbook\_reason\_\_id |
+| Datum | date\_time | isys\_catg\_logb\_list | isys\_logbook\_\_date |     |     |
+| object | int | isys\_catg\_logb\_list | isys\_catg\_logb\_list\_\_isys\_obj\_\_id |     |     |
+| Ereignis | int | isys\_catg\_logb\_list | isys\_logbook\_\_isys\_logbook\_event\_\_id | isys\_logbook\_event | isys\_logbook\_event\_\_id |
+| Quelle | int | isys\_catg\_logb\_list | isys\_logbook\_\_isys\_logbook\_source\_\_id | isys\_logbook\_source | isys\_logbook\_source\_\_id |
+| user | int | isys\_catg\_logb\_list | isys\_logbook\_\_isys\_obj\_\_id |     |     |
+| objecttyp | text | isys\_catg\_logb\_list | isys\_logbook\_\_obj\_type\_static |     |     |
+| category | text | isys\_catg\_logb\_list | isys\_logbook\_\_category\_static |     |     |
+| Alarmlevel | text | isys\_catg\_logb\_list | isys\_logbook\_\_isys\_logbook\_level\_\_id | isys\_logbook\_level | isys\_logbook\_level\_\_id |
+| user | text | isys\_catg\_logb\_list | isys\_logbook\_\_user\_name\_static |     |     |
+| Ereignis | text | isys\_catg\_logb\_list | isys\_logbook\_\_event\_static |     |     |
+| Kommentar | text | isys\_catg\_logb\_list | isys\_logbook\_\_comment |     |     |
+| Changeen | text | isys\_catg\_logb\_list | isys\_logbook\_\_changes |     |     |
+| Zugriffstyp | int | isys\_catg\_logb\_list | isys\_logbook\_\_isys\_logbook\_reason\_\_id | isys\_logbook\_reason | isys\_logbook\_reason\_\_id |
 | Description | text\_area | isys\_catg\_logb\_list | isys\_logbook\_\_description |     |     |
 
 ### Controller
 
-#### Tabelle: isys\_catg\_controller\_list
+#### table: isys\_catg\_controller\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_catg\_controller\_list | isys\_catg\_controller\_list\_\_title |     |     |
-| Type | int | isys\_catg\_controller\_list | isys\_catg\_controller\_list\_\_isys\_controller\_type\_\_id | isys\_controller\_type | isys\_controller\_type\_\_id |
-| Manufacturer | int | isys\_catg\_controller\_list | isys\_catg\_controller\_list\_\_isys\_controller\_manufacturer\_\_id | isys\_controller\_manufacturer | isys\_controller\_manufacturer\_\_id |
-| Model | int | isys\_catg\_controller\_list | isys\_catg\_controller\_list\_\_isys\_controller\_model\_\_id | isys\_controller\_model | isys\_controller\_model\_\_id |
+| designation | text | isys\_catg\_controller\_list | isys\_catg\_controller\_list\_\_title |     |     |
+| Typ | int | isys\_catg\_controller\_list | isys\_catg\_controller\_list\_\_isys\_controller\_type\_\_id | isys\_controller\_type | isys\_controller\_type\_\_id |
+| Hersteller | int | isys\_catg\_controller\_list | isys\_catg\_controller\_list\_\_isys\_controller\_manufacturer\_\_id | isys\_controller\_manufacturer | isys\_controller\_manufacturer\_\_id |
+| Modell | int | isys\_catg\_controller\_list | isys\_catg\_controller\_list\_\_isys\_controller\_model\_\_id | isys\_controller\_model | isys\_controller\_model\_\_id |
 | Description | text\_area | isys\_catg\_controller\_list | isys\_catg\_controller\_list\_\_description |     |     |
 
-### Location
+### Standort
 
-#### Tabelle: isys\_catg\_location\_list
+#### table: isys\_catg\_location\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Location path | text | isys\_catg\_location\_list | isys\_catg\_location\_list\_\_parentid |     |     |
-| Location | int | isys\_catg\_location\_list | isys\_catg\_location\_list\_\_parentid |     |     |
-| Assembly | int | isys\_catg\_location\_list | isys\_catg\_location\_list\_\_option |     |     |
-| Insertion | int | isys\_catg\_location\_list | isys\_catg\_location\_list\_\_insertion |     |     |
-| Position in the rack | int | isys\_catg\_location\_list | isys\_catg\_location\_list\_\_pos |     |     |
+| Standort-path | text | isys\_catg\_location\_list | isys\_catg\_location\_list\_\_parentid |     |     |
+| Standort | int | isys\_catg\_location\_list | isys\_catg\_location\_list\_\_parentid |     |     |
+| Montage | int | isys\_catg\_location\_list | isys\_catg\_location\_list\_\_option |     |     |
+| Einschub | int | isys\_catg\_location\_list | isys\_catg\_location\_list\_\_insertion |     |     |
+| Position im Schrank | int | isys\_catg\_location\_list | isys\_catg\_location\_list\_\_pos |     |     |
 | GPS | text | isys\_catg\_location\_list | isys\_catg\_location\_list\_\_gps |     |     |
-| Latitude | text | isys\_catg\_location\_list | isys\_catg\_location\_list\_\_gps |     |     |
-| Longitude | text | isys\_catg\_location\_list | isys\_catg\_location\_list\_\_gps |     |     |
+| Breitengrad | text | isys\_catg\_location\_list | isys\_catg\_location\_list\_\_gps |     |     |
+| lengthngrad | text | isys\_catg\_location\_list | isys\_catg\_location\_list\_\_gps |     |     |
 | LC\_\_CMDB\_\_CATG\_\_LOCATION\_\_SNMP\_SYSLOCATION | text | isys\_catg\_location\_list | isys\_catg\_location\_list\_\_snmp\_syslocation |     |     |
 | Description | text\_area | isys\_catg\_location\_list | isys\_catg\_location\_list\_\_description |     |     |
 
-### Object picture
+### objectbild
 
-#### Tabelle: isys\_catg\_image\_list
+#### table: isys\_catg\_image\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Uploaded images | json | isys\_catg\_image\_list | isys\_catg\_image\_list\_\_image\_link |     |     |
-| File | text | isys\_catg\_image\_list | isys\_catg\_image\_list\_\_image\_link |     |     |
+| Hochgeladene Bilder | json | isys\_catg\_image\_list | isys\_catg\_image\_list\_\_image\_link |     |     |
+| file | text | isys\_catg\_image\_list | isys\_catg\_image\_list\_\_image\_link |     |     |
 | Description | text\_area | isys\_catg\_image\_list | isys\_catg\_image\_list\_\_description |     |     |
 
-### Manual assignment
+### Handbuchzuweisung
 
-#### Tabelle: isys\_catg\_manual\_list
+#### table: isys\_catg\_manual\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_catg\_manual\_list | isys\_catg\_manual\_list\_\_title |     |     |
-| Manual file | int | isys\_catg\_manual\_list | isys\_catg\_manual\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
+| designation | text | isys\_catg\_manual\_list | isys\_catg\_manual\_list\_\_title |     |     |
+| Handbuch file | int | isys\_catg\_manual\_list | isys\_catg\_manual\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
 | Description | text\_area | isys\_catg\_manual\_list | isys\_catg\_manual\_list\_\_description |     |     |
 
-### Sound card
+### Soundkarte
 
-#### Tabelle: isys\_catg\_sound\_list
+#### table: isys\_catg\_sound\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Manufacturer | int | isys\_catg\_sound\_list | isys\_catg\_sound\_list\_\_isys\_sound\_manufacturer\_\_id | isys\_sound\_manufacturer | isys\_sound\_manufacturer\_\_id |
-| Title | text | isys\_catg\_sound\_list | isys\_catg\_sound\_list\_\_title |     |     |
+| Hersteller | int | isys\_catg\_sound\_list | isys\_catg\_sound\_list\_\_isys\_sound\_manufacturer\_\_id | isys\_sound\_manufacturer | isys\_sound\_manufacturer\_\_id |
+| designation | text | isys\_catg\_sound\_list | isys\_catg\_sound\_list\_\_title |     |     |
 | Description | text\_area | isys\_catg\_sound\_list | isys\_catg\_sound\_list\_\_description |     |     |
 
-### locally assigned objects
+### Spatial assignede objects
 
-#### Tabelle: isys\_catg\_virtual\_list
+#### table: isys\_catg\_virtual\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Object | int | isys\_catg\_virtual\_list | isys\_catg\_location\_list\_\_isys\_obj\_\_id |     |     |
+| object | int | isys\_catg\_virtual\_list | isys\_catg\_location\_list\_\_isys\_obj\_\_id |     |     |
 
-### Graphic card
+### Grafikkarte
 
-#### Tabelle: isys\_catg\_graphic\_list
+#### table: isys\_catg\_graphic\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_catg\_graphic\_list | isys\_catg\_graphic\_list\_\_title |     |     |
-| Manufacturer | int | isys\_catg\_graphic\_list | isys\_catg\_graphic\_list\_\_isys\_graphic\_manufacturer\_\_id | isys\_graphic\_manufacturer | isys\_graphic\_manufacturer\_\_id |
-| Memory | float | isys\_catg\_graphic\_list | isys\_catg\_graphic\_list\_\_memory |     |     |
-| Memory unit | int | isys\_catg\_graphic\_list | isys\_catg\_graphic\_list\_\_isys\_memory\_unit\_\_id | isys\_memory\_unit | isys\_memory\_unit\_\_id |
+| designation | text | isys\_catg\_graphic\_list | isys\_catg\_graphic\_list\_\_title |     |     |
+| Hersteller | int | isys\_catg\_graphic\_list | isys\_catg\_graphic\_list\_\_isys\_graphic\_manufacturer\_\_id | isys\_graphic\_manufacturer | isys\_graphic\_manufacturer\_\_id |
+| Speicher | float | isys\_catg\_graphic\_list | isys\_catg\_graphic\_list\_\_memory |     |     |
+| Speichereinheit | int | isys\_catg\_graphic\_list | isys\_catg\_graphic\_list\_\_isys\_memory\_unit\_\_id | isys\_memory\_unit | isys\_memory\_unit\_\_id |
 | Description | text\_area | isys\_catg\_graphic\_list | isys\_catg\_graphic\_list\_\_description |     |     |
 
-### Virtual machine
+### Virtuelle Maschine
 
-#### Tabelle: isys\_catg\_virtual\_machine\_list
+#### table: isys\_catg\_virtual\_machine\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Virtual machine | int | isys\_catg\_virtual\_machine\_list | isys\_catg\_virtual\_machine\_list\_\_vm |     |     |
-| Running on host | int | connection\_vm | isys\_catg\_virtual\_machine\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
-| Virtualization system | int | isys\_catg\_virtual\_machine\_list | isys\_catg\_virtual\_machine\_list\_\_isys\_vm\_type\_\_id | isys\_vm\_type | isys\_vm\_type\_\_id |
-| Configuration file | text | isys\_catg\_virtual\_machine\_list | isys\_catg\_virtual\_machine\_list\_\_config\_file |     |     |
-| Host in cluster | int | isys\_catg\_virtual\_machine\_list | isys\_catg\_virtual\_machine\_list\_\_primary |     |     |
+| Virtuelle Maschine | int | isys\_catg\_virtual\_machine\_list | isys\_catg\_virtual\_machine\_list\_\_vm |     |     |
+| Runs auf Host | int | connection\_vm | isys\_catg\_virtual\_machine\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
+| Virtualisierungs-System | int | isys\_catg\_virtual\_machine\_list | isys\_catg\_virtual\_machine\_list\_\_isys\_vm\_type\_\_id | isys\_vm\_type | isys\_vm\_type\_\_id |
+| Configurations file | text | isys\_catg\_virtual\_machine\_list | isys\_catg\_virtual\_machine\_list\_\_config\_file |     |     |
+| Host im Cluster | int | isys\_catg\_virtual\_machine\_list | isys\_catg\_virtual\_machine\_list\_\_primary |     |     |
 | Description | text\_area | isys\_catg\_virtual\_machine\_list | isys\_catg\_virtual\_machine\_list\_\_description |     |     |
 
-### Accounting
+### Buchhaltung
 
-#### Tabelle: isys\_catg\_accounting\_list
+#### table: isys\_catg\_accounting\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Inventory number | text | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_inventory\_no |     |     |
-| Account | int | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_isys\_account\_\_id | isys\_account | isys\_account\_\_id |
-| Date of invoice | date | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_acquirementdate |     |     |
-| Purchased at | int | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_isys\_contact\_\_id | isys\_contact | isys\_contact\_\_id |
-| Investment costs | double | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_price |     |     |
-| Operation expense | double | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_operation\_expense |     |     |
-| Operation expense (Unit) | int | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_isys\_interval\_\_id | isys\_interval | isys\_interval\_\_id |
-| Cost unit | int | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_isys\_catg\_accounting\_cost\_unit\_\_id | isys\_catg\_accounting\_cost\_unit | isys\_catg\_accounting\_cost\_unit\_\_id |
-| Delivery note number | text | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_delivery\_note\_no |     |     |
-| Procurement | int | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_isys\_catg\_accounting\_procurement\_\_id | isys\_catg\_accounting\_procurement | isys\_catg\_accounting\_procurement\_\_id |
-| Delivery date | date | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_delivery\_date |     |     |
-| Invoice no. | text | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_invoice\_no |     |     |
-| Order no. | text | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_order\_no |     |     |
-| Period of warranty | int | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_guarantee\_period |     |     |
-| Warranty period | int | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_isys\_guarantee\_period\_unit\_\_id | isys\_guarantee\_period\_unit | isys\_guarantee\_period\_unit\_\_id |
-| Remainder warranty | text | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_id |     |     |
-| Guarantee period by | int | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_guarantee\_period\_base |     |     |
-| Order date | date | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_order\_date |     |     |
-| Guarantee date | date | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_id |     |     |
-| Remainder warranty | text | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_id |     |     |
+| Inventarnummer | text | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_inventory\_no |     |     |
+| Kostenstelle | int | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_isys\_account\_\_id | isys\_account | isys\_account\_\_id |
+| Rechnungsdatum | date | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_acquirementdate |     |     |
+| Eingekauft bei | int | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_isys\_contact\_\_id | isys\_contact | isys\_contact\_\_id |
+| Investitionskosten | double | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_price |     |     |
+| Betriebskosten | double | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_operation\_expense |     |     |
+| Betriebskosten (Einheit) | int | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_isys\_interval\_\_id | isys\_interval | isys\_interval\_\_id |
+| cost center | int | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_isys\_catg\_accounting\_cost\_unit\_\_id | isys\_catg\_accounting\_cost\_unit | isys\_catg\_accounting\_cost\_unit\_\_id |
+| Lieferschein-Nummer | text | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_delivery\_note\_no |     |     |
+| Beschaffungsart | int | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_isys\_catg\_accounting\_procurement\_\_id | isys\_catg\_accounting\_procurement | isys\_catg\_accounting\_procurement\_\_id |
+| Lieferdatum | date | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_delivery\_date |     |     |
+| Rechnungs-Nr. | text | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_invoice\_no |     |     |
+| Bestell-Nr. | text | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_order\_no |     |     |
+| Garantiezeitraum | int | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_guarantee\_period |     |     |
+| Garantiezeitraum Einheit | int | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_isys\_guarantee\_period\_unit\_\_id | isys\_guarantee\_period\_unit | isys\_guarantee\_period\_unit\_\_id |
+| Restgarantie | text | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_id |     |     |
+| Garantiezeitraum nach | int | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_guarantee\_period\_base |     |     |
+| Bestelldatum | date | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_order\_date |     |     |
+| Garantiedatum | date | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_id |     |     |
+| Restgarantie | text | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_id |     |     |
 | Description | text\_area | isys\_catg\_accounting\_list | isys\_catg\_accounting\_list\_\_description |     |     |
 
 ### Port
 
-#### Tabelle: isys\_catg\_port\_list
+#### table: isys\_catg\_port\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_catg\_port\_list | isys\_catg\_port\_list\_\_title |     |     |
-| Connected interface | int | isys\_catg\_port\_list | isys\_catg\_port\_list\_\_isys\_catg\_netp\_list\_\_id | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_id |
-| Type | int | isys\_catg\_port\_list | isys\_catg\_port\_list\_\_isys\_port\_type\_\_id | isys\_port\_type | isys\_port\_type\_\_id |
-| Mode | int | isys\_catg\_port\_list | isys\_catg\_port\_list\_\_isys\_port\_mode\_\_id | isys\_port\_mode | isys\_port\_mode\_\_id |
-| Plug | int | isys\_catg\_port\_list | isys\_catg\_port\_list\_\_isys\_plug\_type\_\_id | isys\_plug\_type | isys\_plug\_type\_\_id |
+| designation | text | isys\_catg\_port\_list | isys\_catg\_port\_list\_\_title |     |     |
+| Linked Interface | int | isys\_catg\_port\_list | isys\_catg\_port\_list\_\_isys\_catg\_netp\_list\_\_id | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_id |
+| Typ | int | isys\_catg\_port\_list | isys\_catg\_port\_list\_\_isys\_port\_type\_\_id | isys\_port\_type | isys\_port\_type\_\_id |
+| Modus | int | isys\_catg\_port\_list | isys\_catg\_port\_list\_\_isys\_port\_mode\_\_id | isys\_port\_mode | isys\_port\_mode\_\_id |
+| Stecker | int | isys\_catg\_port\_list | isys\_catg\_port\_list\_\_isys\_plug\_type\_\_id | isys\_plug\_type | isys\_plug\_type\_\_id |
 | Negotiation | int | isys\_catg\_port\_list | isys\_catg\_port\_list\_\_isys\_port\_negotiation\_\_id | isys\_port\_negotiation | isys\_port\_negotiation\_\_id |
 | Duplex | int | isys\_catg\_port\_list | isys\_catg\_port\_list\_\_isys\_port\_duplex\_\_id | isys\_port\_duplex | isys\_port\_duplex\_\_id |
-| Speed | float | isys\_catg\_port\_list | isys\_catg\_port\_list\_\_port\_speed\_value |     |     |
-| Unit | int | isys\_catg\_port\_list | isys\_catg\_port\_list\_\_isys\_port\_speed\_\_id | isys\_port\_speed | isys\_port\_speed\_\_id |
-| Standard | int | isys\_catg\_port\_list | isys\_catg\_port\_list\_\_isys\_port\_standard\_\_id | isys\_port\_standard | isys\_port\_standard\_\_id |
-| MAC-address | text | isys\_catg\_port\_list | isys\_catg\_port\_list\_\_mac |     |     |
+| Geschwindigkeit | float | isys\_catg\_port\_list | isys\_catg\_port\_list\_\_port\_speed\_value |     |     |
+| Einheit | int | isys\_catg\_port\_list | isys\_catg\_port\_list\_\_isys\_port\_speed\_\_id | isys\_port\_speed | isys\_port\_speed\_\_id |
+| default | int | isys\_catg\_port\_list | isys\_catg\_port\_list\_\_isys\_port\_standard\_\_id | isys\_port\_standard | isys\_port\_standard\_\_id |
+| MAC-Adresse | text | isys\_catg\_port\_list | isys\_catg\_port\_list\_\_mac |     |     |
 | MTU | text | isys\_catg\_port\_list | isys\_catg\_port\_list\_\_mtu |     |     |
-| Connected with | int | connected\_connector | isys\_catg\_port\_list\_\_isys\_catg\_connector\_list\_\_id |     |     |
-| Assigned to connector | int | connected | isys\_catg\_port\_list\_\_isys\_catg\_connector\_list\_\_id |     |     |
-| Assigned Input/Output | int | isys\_catg\_port\_list | isys\_catg\_connector\_list\_\_isys\_catg\_connector\_list\_\_id |     |     |
-| Cable ID | int | isys\_catg\_port\_list | isys\_catg\_connector\_list\_\_isys\_cable\_connection\_\_id |     |     |
-| Active | int | isys\_catg\_port\_list | isys\_catg\_port\_list\_\_state\_enabled |     |     |
-| Host address | int | isys\_catg\_port\_list | isys\_catg\_port\_list\_\_id | isys\_catg\_ip\_list\_2\_isys\_catg\_port\_list | isys\_catg\_ip\_list\_2\_isys\_catg\_port\_list\_\_isys\_catg\_port\_list\_\_id |
-| Layer 2 Net | int | isys\_catg\_port\_list | isys\_catg\_port\_list\_\_id |     |     |
-| Connected interface (HBA) | int | isys\_catg\_port\_list | isys\_catg\_port\_list\_\_isys\_catg\_hba\_list\_\_id | isys\_catg\_hba\_list | isys\_catg\_hba\_list\_\_id |
-| Standard VLAN | int | isys\_catg\_port\_list | isys\_catg\_port\_list\_\_id | isys\_cats\_layer2\_net\_assigned\_ports\_list | isys\_catg\_port\_list\_\_id |
+| Connected to | int | connected\_connector | isys\_catg\_port\_list\_\_isys\_catg\_connector\_list\_\_id |     |     |
+| Connected to connector | int | connected | isys\_catg\_port\_list\_\_isys\_catg\_connector\_list\_\_id |     |     |
+| Associated Eingang/Ausgang | int | isys\_catg\_port\_list | isys\_catg\_connector\_list\_\_isys\_catg\_connector\_list\_\_id |     |     |
+| Kabel-ID | int | isys\_catg\_port\_list | isys\_catg\_connector\_list\_\_isys\_cable\_connection\_\_id |     |     |
+| Aktiv | int | isys\_catg\_port\_list | isys\_catg\_port\_list\_\_state\_enabled |     |     |
+| Hostadresse | int | isys\_catg\_port\_list | isys\_catg\_port\_list\_\_id | isys\_catg\_ip\_list\_2\_isys\_catg\_port\_list | isys\_catg\_ip\_list\_2\_isys\_catg\_port\_list\_\_isys\_catg\_port\_list\_\_id |
+| Layer-2-Netz | int | isys\_catg\_port\_list | isys\_catg\_port\_list\_\_id |     |     |
+| Linked Interface (HBA) | int | isys\_catg\_port\_list | isys\_catg\_port\_list\_\_isys\_catg\_hba\_list\_\_id | isys\_catg\_hba\_list | isys\_catg\_hba\_list\_\_id |
+| default VLAN | int | isys\_catg\_port\_list | isys\_catg\_port\_list\_\_id | isys\_cats\_layer2\_net\_assigned\_ports\_list | isys\_catg\_port\_list\_\_id |
 | Description | text\_area | isys\_catg\_port\_list | isys\_catg\_port\_list\_\_description |     |     |
 | Relation direction | int | isys\_catg\_port\_list | isys\_catg\_connector\_list\_\_isys\_catg\_relation\_list\_\_id |     |     |
 
 ### Interface
 
-#### Tabelle: isys\_catg\_netp\_list
+#### table: isys\_catg\_netp\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_title |     |     |
-| Manufacturer | int | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_isys\_iface\_manufacturer\_\_id | isys\_iface\_manufacturer | isys\_iface\_manufacturer\_\_id |
-| Model | int | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_isys\_iface\_model\_\_id | isys\_iface\_model | isys\_iface\_model\_\_id |
+| designation | text | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_title |     |     |
+| Hersteller | int | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_isys\_iface\_manufacturer\_\_id | isys\_iface\_manufacturer | isys\_iface\_manufacturer\_\_id |
+| Modell | int | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_isys\_iface\_model\_\_id | isys\_iface\_model | isys\_iface\_model\_\_id |
 | Serial number | text | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_serial |     |     |
-| Slotnumber | text | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_slotnumber |     |     |
+| Slotnummer | text | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_slotnumber |     |     |
 | Description | text\_area | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_description |     |     |
 
-### logical Ports
+### Logische Ports
 
-#### Tabelle: isys\_catg\_log\_port\_list
+#### table: isys\_catg\_log\_port\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_catg\_log\_port\_list | isys\_catg\_log\_port\_list\_\_title |     |     |
-| Net(s) | int | isys\_catg\_log\_port\_list | isys\_catg\_log\_port\_list\_\_id |     |     |
+| designation | text | isys\_catg\_log\_port\_list | isys\_catg\_log\_port\_list\_\_title |     |     |
+| Netz(e) | int | isys\_catg\_log\_port\_list | isys\_catg\_log\_port\_list\_\_id |     |     |
 | MAC | text | isys\_catg\_log\_port\_list | isys\_catg\_log\_port\_list\_\_mac |     |     |
-| Type | int | isys\_catg\_log\_port\_list | isys\_catg\_log\_port\_list\_\_isys\_netx\_ifacel\_type\_\_id | isys\_netx\_ifacel\_type | isys\_netx\_ifacel\_type\_\_id |
-| Allocation | int | isys\_catg\_log\_port\_list | isys\_catg\_log\_port\_list\_\_id |     |     |
-| Parent port | int | log\_port | isys\_catg\_log\_port\_list\_\_parent | isys\_catg\_log\_port\_list | isys\_catg\_log\_port\_list\_\_id |
-| Standard | int | isys\_catg\_log\_port\_list | isys\_catg\_log\_port\_list\_\_isys\_netp\_ifacel\_standard\_\_id | isys\_netp\_ifacel\_standard | isys\_netp\_ifacel\_standard\_\_id |
-| Active | int | isys\_catg\_log\_port\_list | isys\_catg\_log\_port\_list\_\_active |     |     |
-| Host address | int | isys\_catg\_log\_port\_list | isys\_catg\_log\_port\_list\_\_id |     |     |
-| Assigned to connector | int | isys\_catg\_log\_port\_list | isys\_catg\_log\_port\_list\_\_isys\_catg\_log\_port\_list\_\_id |     |     |
+| Typ | int | isys\_catg\_log\_port\_list | isys\_catg\_log\_port\_list\_\_isys\_netx\_ifacel\_type\_\_id | isys\_netx\_ifacel\_type | isys\_netx\_ifacel\_type\_\_id |
+| Zuweisung | int | isys\_catg\_log\_port\_list | isys\_catg\_log\_port\_list\_\_id |     |     |
+| Eltern-Port | int | log\_port | isys\_catg\_log\_port\_list\_\_parent | isys\_catg\_log\_port\_list | isys\_catg\_log\_port\_list\_\_id |
+| default | int | isys\_catg\_log\_port\_list | isys\_catg\_log\_port\_list\_\_isys\_netp\_ifacel\_standard\_\_id | isys\_netp\_ifacel\_standard | isys\_netp\_ifacel\_standard\_\_id |
+| Aktiv | int | isys\_catg\_log\_port\_list | isys\_catg\_log\_port\_list\_\_active |     |     |
+| Hostadresse | int | isys\_catg\_log\_port\_list | isys\_catg\_log\_port\_list\_\_id |     |     |
+| Connected to connector | int | isys\_catg\_log\_port\_list | isys\_catg\_log\_port\_list\_\_isys\_catg\_log\_port\_list\_\_id |     |     |
 | Description | text\_area | isys\_catg\_log\_port\_list | isys\_catg\_log\_port\_list\_\_description |     |     |
 
-### Drive
+### Laufwerk
 
-#### Tabelle: isys\_catg\_drive\_list
+#### table: isys\_catg\_drive\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Drive letter | text | isys\_catg\_drive\_list | isys\_catg\_drive\_list\_\_driveletter |     |     |
-| Title | text | isys\_catg\_drive\_list | isys\_catg\_drive\_list\_\_title |     |     |
-| System drive | int | isys\_catg\_drive\_list | isys\_catg\_drive\_list\_\_system\_drive |     |     |
-| Filesystem | int | isys\_catg\_drive\_list | isys\_catg\_drive\_list\_\_isys\_filesystem\_type\_\_id | isys\_filesystem\_type | isys\_filesystem\_type\_\_id |
-| Capacity | float | isys\_catg\_drive\_list | isys\_catg\_drive\_list\_\_capacity |     |     |
-| Memory unit | int | c\_unit | isys\_catg\_drive\_list\_\_isys\_memory\_unit\_\_id | isys\_memory\_unit | isys\_memory\_unit\_\_id |
+| Laufwerksbuchstabe | text | isys\_catg\_drive\_list | isys\_catg\_drive\_list\_\_driveletter |     |     |
+| designation | text | isys\_catg\_drive\_list | isys\_catg\_drive\_list\_\_title |     |     |
+| Systemlaufwerk | int | isys\_catg\_drive\_list | isys\_catg\_drive\_list\_\_system\_drive |     |     |
+| filesystem | int | isys\_catg\_drive\_list | isys\_catg\_drive\_list\_\_isys\_filesystem\_type\_\_id | isys\_filesystem\_type | isys\_filesystem\_type\_\_id |
+| capacity | float | isys\_catg\_drive\_list | isys\_catg\_drive\_list\_\_capacity |     |     |
+| Speichereinheit | int | c\_unit | isys\_catg\_drive\_list\_\_isys\_memory\_unit\_\_id | isys\_memory\_unit | isys\_memory\_unit\_\_id |
 | Serial number | text | isys\_catg\_drive\_list | isys\_catg\_drive\_list\_\_serial |     |     |
-| Software RAID group | int | isys\_catg\_drive\_list | isys\_catg\_drive\_list\_\_id\_\_raid\_pool | isys\_catg\_raid\_list | isys\_catg\_raid\_list\_\_id |
-| Type | int | isys\_catg\_drive\_list | isys\_catg\_drive\_list\_\_isys\_catd\_drive\_type\_\_id | isys\_catd\_drive\_type | isys\_catd\_drive\_type\_\_id |
-| On device | int | isys\_catg\_drive\_list | isys\_catg\_drive\_list\_\_isys\_catg\_stor\_list\_\_id | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_id |
-| On device Raid-Array | int | isys\_catg\_drive\_list | isys\_catg\_drive\_list\_\_isys\_catg\_raid\_list\_\_id | isys\_catg\_raid\_list | isys\_catg\_raid\_list\_\_id |
-| On device Logical devices (Client) | int | isys\_catg\_drive\_list | isys\_catg\_drive\_list\_\_isys\_catg\_ldevclient\_list\_\_id | isys\_catg\_ldevclient\_list | isys\_catg\_ldevclient\_list\_\_id |
-| Object type constant | text | isys\_catg\_drive\_list | isys\_catg\_drive\_list\_\_const |     |     |
-| Free Diskspace | float | isys\_catg\_drive\_list | isys\_catg\_drive\_list\_\_free\_space |     |     |
-| Memory unit | int | fs\_unit | isys\_catg\_drive\_list\_\_free\_space\_\_isys\_memory\_unit\_\_id | isys\_memory\_unit | isys\_memory\_unit\_\_id |
-| Used Diskspace | float | isys\_catg\_drive\_list | isys\_catg\_drive\_list\_\_used\_space |     |     |
-| Memory unit | int | us\_unit | isys\_catg\_drive\_list\_\_used\_space\_\_isys\_memory\_unit\_\_id | isys\_memory\_unit | isys\_memory\_unit\_\_id |
+| Software-RAID-Gruppe | int | isys\_catg\_drive\_list | isys\_catg\_drive\_list\_\_id\_\_raid\_pool | isys\_catg\_raid\_list | isys\_catg\_raid\_list\_\_id |
+| Typ | int | isys\_catg\_drive\_list | isys\_catg\_drive\_list\_\_isys\_catd\_drive\_type\_\_id | isys\_catd\_drive\_type | isys\_catd\_drive\_type\_\_id |
+| Auf device | int | isys\_catg\_drive\_list | isys\_catg\_drive\_list\_\_isys\_catg\_stor\_list\_\_id | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_id |
+| Auf device Raid-Array | int | isys\_catg\_drive\_list | isys\_catg\_drive\_list\_\_isys\_catg\_raid\_list\_\_id | isys\_catg\_raid\_list | isys\_catg\_raid\_list\_\_id |
+| Auf device Logische devicee (Client) | int | isys\_catg\_drive\_list | isys\_catg\_drive\_list\_\_isys\_catg\_ldevclient\_list\_\_id | isys\_catg\_ldevclient\_list | isys\_catg\_ldevclient\_list\_\_id |
+| objecttyp Konstante | text | isys\_catg\_drive\_list | isys\_catg\_drive\_list\_\_const |     |     |
+| Freier Speicher | float | isys\_catg\_drive\_list | isys\_catg\_drive\_list\_\_free\_space |     |     |
+| Speichereinheit | int | fs\_unit | isys\_catg\_drive\_list\_\_free\_space\_\_isys\_memory\_unit\_\_id | isys\_memory\_unit | isys\_memory\_unit\_\_id |
+| Belegter Speicher | float | isys\_catg\_drive\_list | isys\_catg\_drive\_list\_\_used\_space |     |     |
+| Speichereinheit | int | us\_unit | isys\_catg\_drive\_list\_\_used\_space\_\_isys\_memory\_unit\_\_id | isys\_memory\_unit | isys\_memory\_unit\_\_id |
 | Description | text\_area | isys\_catg\_drive\_list | isys\_catg\_drive\_list\_\_description |     |     |
 
-### Device
+### device
 
-#### Tabelle: isys\_catg\_stor\_list
+#### table: isys\_catg\_stor\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Type | int | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_isys\_stor\_type\_\_id | isys\_stor\_type | isys\_stor\_type\_\_id |
-| Title | text | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_title |     |     |
-| Manufacturer | int | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_isys\_stor\_manufacturer\_\_id | isys\_stor\_manufacturer | isys\_stor\_manufacturer\_\_id |
-| Model | int | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_isys\_stor\_model\_\_id | isys\_stor\_model | isys\_stor\_model\_\_id |
-| Memory unit | int | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_isys\_memory\_unit\_\_id | isys\_memory\_unit | isys\_memory\_unit\_\_id |
-| Capacity | double | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_capacity |     |     |
+| Typ | int | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_isys\_stor\_type\_\_id | isys\_stor\_type | isys\_stor\_type\_\_id |
+| designation | text | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_title |     |     |
+| Hersteller | int | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_isys\_stor\_manufacturer\_\_id | isys\_stor\_manufacturer | isys\_stor\_manufacturer\_\_id |
+| Modell | int | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_isys\_stor\_model\_\_id | isys\_stor\_model | isys\_stor\_model\_\_id |
+| Speichereinheit | int | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_isys\_memory\_unit\_\_id | isys\_memory\_unit | isys\_memory\_unit\_\_id |
+| capacity | double | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_capacity |     |     |
 | Hotspare | int | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_hotspare |     |     |
-| Connection | int | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_isys\_stor\_con\_type\_\_id | isys\_stor\_con\_type | isys\_stor\_con\_type\_\_id |
+| Anschluss | int | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_isys\_stor\_con\_type\_\_id | isys\_stor\_con\_type | isys\_stor\_con\_type\_\_id |
 | Controller | int | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_isys\_catg\_controller\_list\_\_id | isys\_catg\_controller\_list | isys\_catg\_controller\_list\_\_id |
-| Hardware RAID group | int | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_isys\_catg\_raid\_list\_\_id | isys\_catg\_raid\_list | isys\_catg\_raid\_list\_\_id |
+| Hardware-RAID-Gruppe | int | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_isys\_catg\_raid\_list\_\_id | isys\_catg\_raid\_list | isys\_catg\_raid\_list\_\_id |
 | Serial number | text | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_serial |     |     |
 | Description | text\_area | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_description |     |     |
-| LTO Type | int | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_isys\_stor\_lto\_type\_\_id | isys\_stor\_lto\_type | isys\_stor\_lto\_type\_\_id |
-| FC Address | text | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_fc\_address |     |     |
+| LTO Typ | int | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_isys\_stor\_lto\_type\_\_id | isys\_stor\_lto\_type | isys\_stor\_lto\_type\_\_id |
+| FC Adresse | text | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_fc\_address |     |     |
 | Firmware | text | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_firmware |     |     |
 
-### FC port
+### FC-Port
 
-#### Tabelle: isys\_catg\_fc\_port\_list
+#### table: isys\_catg\_fc\_port\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_catg\_fc\_port\_list | isys\_catg\_fc\_port\_list\_\_title |     |     |
-| Type | int | isys\_catg\_fc\_port\_list | isys\_catg\_fc\_port\_list\_\_isys\_fc\_port\_type\_\_id | isys\_fc\_port\_type | isys\_fc\_port\_type\_\_id |
-| Connected controller | int | isys\_catg\_fc\_port\_list | isys\_catg\_fc\_port\_list\_\_isys\_catg\_hba\_list\_\_id | isys\_catg\_hba\_list | isys\_catg\_hba\_list\_\_id |
-| Assigned Input/Output | int | isys\_catg\_fc\_port\_list | isys\_catg\_connector\_list\_\_isys\_catg\_connector\_list\_\_id |     |     |
+| designation | text | isys\_catg\_fc\_port\_list | isys\_catg\_fc\_port\_list\_\_title |     |     |
+| Typ | int | isys\_catg\_fc\_port\_list | isys\_catg\_fc\_port\_list\_\_isys\_fc\_port\_type\_\_id | isys\_fc\_port\_type | isys\_fc\_port\_type\_\_id |
+| Verbundener Controller | int | isys\_catg\_fc\_port\_list | isys\_catg\_fc\_port\_list\_\_isys\_catg\_hba\_list\_\_id | isys\_catg\_hba\_list | isys\_catg\_hba\_list\_\_id |
+| Associated Eingang/Ausgang | int | isys\_catg\_fc\_port\_list | isys\_catg\_connector\_list\_\_isys\_catg\_connector\_list\_\_id |     |     |
 | Medium | int | isys\_catg\_fc\_port\_list | isys\_catg\_fc\_port\_list\_\_isys\_fc\_port\_medium\_\_id | isys\_fc\_port\_medium | isys\_fc\_port\_medium\_\_id |
-| Speed | int | isys\_catg\_fc\_port\_list | isys\_catg\_fc\_port\_list\_\_port\_speed |     |     |
-| Speed unit | int | isys\_catg\_fc\_port\_list | isys\_catg\_fc\_port\_list\_\_isys\_port\_speed\_\_id | isys\_port\_speed | isys\_port\_speed\_\_id |
+| Geschwindigkeit | int | isys\_catg\_fc\_port\_list | isys\_catg\_fc\_port\_list\_\_port\_speed |     |     |
+| Geschwindigkeit Einheit | int | isys\_catg\_fc\_port\_list | isys\_catg\_fc\_port\_list\_\_isys\_port\_speed\_\_id | isys\_port\_speed | isys\_port\_speed\_\_id |
 | Node WWN | text | isys\_catg\_fc\_port\_list | isys\_catg\_fc\_port\_list\_\_wwn |     |     |
 | Port WW(P)N | text | isys\_catg\_fc\_port\_list | isys\_catg\_fc\_port\_list\_\_wwpn |     |     |
-| SAN zone and connection type | int | isys\_catg\_fc\_port\_list | isys\_catg\_fc\_port\_list\_\_id |     |     |
-| Target object | int | isys\_catg\_fc\_port\_list | isys\_catg\_fc\_port\_list\_\_isys\_catg\_connector\_list\_\_id |     |     |
-| Connection | int | connected | isys\_catg\_fc\_port\_list\_\_isys\_catg\_connector\_list\_\_id |     |     |
-| Connection | int | connected | isys\_catg\_fc\_port\_list\_\_isys\_catg\_connector\_list\_\_id |     |     |
+| SAN zone and link type | int | isys\_catg\_fc\_port\_list | isys\_catg\_fc\_port\_list\_\_id |     |     |
+| Zielobjekt | int | isys\_catg\_fc\_port\_list | isys\_catg\_fc\_port\_list\_\_isys\_catg\_connector\_list\_\_id |     |     |
+| Anschluss | int | connected | isys\_catg\_fc\_port\_list\_\_isys\_catg\_connector\_list\_\_id |     |     |
+| connection | int | connected | isys\_catg\_fc\_port\_list\_\_isys\_catg\_connector\_list\_\_id |     |     |
 | Description | text\_area | isys\_catg\_fc\_port\_list | isys\_catg\_fc\_port\_list\_\_description |     |     |
 | Relation direction | int | isys\_catg\_fc\_port\_list | isys\_catg\_connector\_list\_\_isys\_catg\_relation\_list\_\_id |     |     |
 
-### Host address
+### Hostadresse
 
-#### Tabelle: isys\_catg\_ip\_list
+#### table: isys\_catg\_ip\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Primary hostaddress | text | isys\_catg\_ip\_list | isys\_catg\_ip\_list\_\_isys\_cats\_net\_ip\_addresses\_list\_\_id | isys\_cats\_net\_ip\_addresses\_list | isys\_cats\_net\_ip\_addresses\_list\_\_id |
-| Primary hostname | text | isys\_catg\_ip\_list | isys\_catg\_ip\_list\_\_hostname |     |     |
-| Type | int | isys\_catg\_ip\_list | isys\_catg\_ip\_list\_\_isys\_net\_type\_\_id | isys\_net\_type | isys\_net\_type\_\_id |
+| Primarye Hostadresse | text | isys\_catg\_ip\_list | isys\_catg\_ip\_list\_\_isys\_cats\_net\_ip\_addresses\_list\_\_id | isys\_cats\_net\_ip\_addresses\_list | isys\_cats\_net\_ip\_addresses\_list\_\_id |
+| Primaryer Hostname | text | isys\_catg\_ip\_list | isys\_catg\_ip\_list\_\_hostname |     |     |
+| Typ | int | isys\_catg\_ip\_list | isys\_catg\_ip\_list\_\_isys\_net\_type\_\_id | isys\_net\_type | isys\_net\_type\_\_id |
 | Primary | int | isys\_catg\_ip\_list | isys\_catg\_ip\_list\_\_primary |     |     |
-| Active | int | isys\_catg\_ip\_list | isys\_catg\_ip\_list\_\_active |     |     |
-| Net | int | isys\_catg\_ip\_list | isys\_cats\_net\_ip\_addresses\_list\_\_isys\_obj\_\_id |     |     |
-| Net zone | int | isys\_catg\_ip\_list | isys\_catg\_ip\_list\_\_isys\_obj\_\_id\_\_zone |     |     |
-| Address allocation IPv4 | int | isys\_catg\_ip\_list | isys\_catg\_ip\_list\_\_isys\_ip\_assignment\_\_id | isys\_ip\_assignment | isys\_ip\_assignment\_\_id |
-| IPv4 address | text | ipv4 | isys\_catg\_ip\_list\_\_isys\_cats\_net\_ip\_addresses\_list\_\_id | isys\_cats\_net\_ip\_addresses\_list | isys\_cats\_net\_ip\_addresses\_list\_\_id |
-| Address allocation IPv6 | int | isys\_catg\_ip\_list | isys\_catg\_ip\_list\_\_isys\_ipv6\_assignment\_\_id | isys\_ipv6\_assignment | isys\_ipv6\_assignment\_\_id |
-| IPv6 scope | int | isys\_catg\_ip\_list | isys\_catg\_ip\_list\_\_isys\_ipv6\_scope\_\_id | isys\_ipv6\_scope | isys\_ipv6\_scope\_\_id |
-| IPv6 address | text | ipv6 | isys\_catg\_ip\_list\_\_isys\_cats\_net\_ip\_addresses\_list\_\_id | isys\_cats\_net\_ip\_addresses\_list | isys\_cats\_net\_ip\_addresses\_list\_\_id |
-| Host address | text | isys\_catg\_ip\_list | isys\_catg\_ip\_list\_\_isys\_cats\_net\_ip\_addresses\_list\_\_id | isys\_cats\_net\_ip\_addresses\_list | isys\_cats\_net\_ip\_addresses\_list\_\_id |
+| Aktiv | int | isys\_catg\_ip\_list | isys\_catg\_ip\_list\_\_active |     |     |
+| Netz | int | isys\_catg\_ip\_list | isys\_cats\_net\_ip\_addresses\_list\_\_isys\_obj\_\_id |     |     |
+| Netzbereich | int | isys\_catg\_ip\_list | isys\_catg\_ip\_list\_\_isys\_obj\_\_id\_\_zone |     |     |
+| Adressvergabe IPv4 | int | isys\_catg\_ip\_list | isys\_catg\_ip\_list\_\_isys\_ip\_assignment\_\_id | isys\_ip\_assignment | isys\_ip\_assignment\_\_id |
+| IPv4-Adresse | text | ipv4 | isys\_catg\_ip\_list\_\_isys\_cats\_net\_ip\_addresses\_list\_\_id | isys\_cats\_net\_ip\_addresses\_list | isys\_cats\_net\_ip\_addresses\_list\_\_id |
+| Adressvergabe IPv6 | int | isys\_catg\_ip\_list | isys\_catg\_ip\_list\_\_isys\_ipv6\_assignment\_\_id | isys\_ipv6\_assignment | isys\_ipv6\_assignment\_\_id |
+| IPv6 validitysbereich | int | isys\_catg\_ip\_list | isys\_catg\_ip\_list\_\_isys\_ipv6\_scope\_\_id | isys\_ipv6\_scope | isys\_ipv6\_scope\_\_id |
+| IPv6-Adresse | text | ipv6 | isys\_catg\_ip\_list\_\_isys\_cats\_net\_ip\_addresses\_list\_\_id | isys\_cats\_net\_ip\_addresses\_list | isys\_cats\_net\_ip\_addresses\_list\_\_id |
+| Hostadresse | text | isys\_catg\_ip\_list | isys\_catg\_ip\_list\_\_isys\_cats\_net\_ip\_addresses\_list\_\_id | isys\_cats\_net\_ip\_addresses\_list | isys\_cats\_net\_ip\_addresses\_list\_\_id |
 | Hostname | text | isys\_catg\_ip\_list | isys\_catg\_ip\_list\_\_hostname |     |     |
 | Domain | text | isys\_catg\_ip\_list | isys\_catg\_ip\_list\_\_domain |     |     |
 | DNS Server | int | dns | isys\_catg\_ip\_list\_\_id | isys\_catg\_ip\_list\_2\_isys\_catg\_ip\_list | isys\_catg\_ip\_list\_\_id |
-| DNS Server address | text | dns | isys\_catg\_ip\_list\_\_id | isys\_catg\_ip\_list\_2\_isys\_catg\_ip\_list | isys\_catg\_ip\_list\_\_id |
-| Search domain | int | dns\_domain | isys\_catg\_ip\_list\_\_id | isys\_catg\_ip\_list\_2\_isys\_net\_dns\_domain | isys\_catg\_ip\_list\_\_id |
-| Default gateway for the net | int | gateway | isys\_catg\_ip\_list\_\_id |     |     |
-| Assigned port | int | isys\_catg\_ip\_list | isys\_catg\_ip\_list\_\_isys\_catg\_port\_list\_\_id | isys\_catg\_port\_list | isys\_catg\_port\_list\_\_id |
-| Assigned port | int | isys\_catg\_ip\_list | isys\_catg\_ip\_list\_\_isys\_catg\_log\_port\_list\_\_id | isys\_catg\_log\_port\_list | isys\_catg\_log\_port\_list\_\_id |
-| Host addresses | text | isys\_catg\_ip\_list | isys\_catg\_ip\_list\_\_isys\_cats\_net\_ip\_addresses\_list\_\_id |     |     |
+| DNS Server Adresse | text | dns | isys\_catg\_ip\_list\_\_id | isys\_catg\_ip\_list\_2\_isys\_catg\_ip\_list | isys\_catg\_ip\_list\_\_id |
+| search domains | int | dns\_domain | isys\_catg\_ip\_list\_\_id | isys\_catg\_ip\_list\_2\_isys\_net\_dns\_domain | isys\_catg\_ip\_list\_\_id |
+| Default gateway for the network | int | gateway | isys\_catg\_ip\_list\_\_id |     |     |
+| Linked Port | int | isys\_catg\_ip\_list | isys\_catg\_ip\_list\_\_isys\_catg\_port\_list\_\_id | isys\_catg\_port\_list | isys\_catg\_port\_list\_\_id |
+| Linked Port | int | isys\_catg\_ip\_list | isys\_catg\_ip\_list\_\_isys\_catg\_log\_port\_list\_\_id | isys\_catg\_log\_port\_list | isys\_catg\_log\_port\_list\_\_id |
+| Hostadressen | text | isys\_catg\_ip\_list | isys\_catg\_ip\_list\_\_isys\_cats\_net\_ip\_addresses\_list\_\_id |     |     |
 | Hostname (FQDN) | text | isys\_catg\_ip\_list | isys\_catg\_ip\_list\_\_id |     |     |
-| Aliases | text | isys\_catg\_ip\_list | isys\_catg\_ip\_list\_\_id |     |     |
+| Aliase | text | isys\_catg\_ip\_list | isys\_catg\_ip\_list\_\_id |     |     |
 | Description | text\_area | isys\_catg\_ip\_list | isys\_catg\_ip\_list\_\_description |     |     |
 
 ### Version
 
-#### Tabelle: isys\_catg\_version\_list
+#### table: isys\_catg\_version\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Version number | text | isys\_catg\_version\_list | isys\_catg\_version\_list\_\_title |     |     |
+| Versionsnummer | text | isys\_catg\_version\_list | isys\_catg\_version\_list\_\_title |     |     |
 | Servicepack | text | isys\_catg\_version\_list | isys\_catg\_version\_list\_\_servicepack |     |     |
 | Kernel | text | isys\_catg\_version\_list | isys\_catg\_version\_list\_\_kernel |     |     |
 | Patchlevel | text | isys\_catg\_version\_list | isys\_catg\_version\_list\_\_hotfix |     |     |
 | Description | text\_area | isys\_catg\_version\_list | isys\_catg\_version\_list\_\_description |     |     |
 
-### Connectors
+### connectors
 
-#### Tabelle: isys\_catg\_connector\_list
+#### table: isys\_catg\_connector\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_catg\_connector\_list | isys\_catg\_connector\_list\_\_title |     |     |
-| In-/Output | int | isys\_catg\_connector\_list | isys\_catg\_connector\_list\_\_type |     |     |
-| Wiring system | int | isys\_catg\_connector\_list | isys\_catg\_connector\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
+| designation | text | isys\_catg\_connector\_list | isys\_catg\_connector\_list\_\_title |     |     |
+| Ein-/Ausgang | int | isys\_catg\_connector\_list | isys\_catg\_connector\_list\_\_type |     |     |
+| Leitungsnetz | int | isys\_catg\_connector\_list | isys\_catg\_connector\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
 | Interface | int | isys\_catg\_connector\_list | isys\_catg\_connector\_list\_\_isys\_interface\_\_id | isys\_interface | isys\_interface\_\_id |
-| Color / wave lengths | int | fiber\_wave\_lengths | isys\_catg\_connector\_list\_\_id | isys\_catg\_connector\_list\_2\_isys\_fiber\_wave\_length | isys\_catg\_connector\_list\_\_id |
-| Connection type | int | isys\_catg\_connector\_list | isys\_catg\_connector\_list\_\_isys\_connection\_type\_\_id | isys\_connection\_type | isys\_connection\_type\_\_id |
-| Assigned to connector | int | connected\_connector | isys\_catg\_connector\_list\_\_id |     |     |
-| Assigned category type | text | isys\_catg\_connector\_list | isys\_catg\_connector\_list\_\_assigned\_category |     |     |
-| Cable | int | isys\_catg\_connector\_list | isys\_catg\_connector\_list\_\_isys\_cable\_connection\_\_id |     |     |
-| Used fiber/lead (RX) | int | isys\_catg\_connector\_list | isys\_catg\_connector\_list\_\_used\_fiber\_lead\_rx |     |     |
-| Used fiber/lead (TX) | int | isys\_catg\_connector\_list | isys\_catg\_connector\_list\_\_used\_fiber\_lead\_tx |     |     |
-| Assigned Input/Output | int | isys\_catg\_connector\_list | isys\_catg\_connector\_list\_\_isys\_catg\_connector\_list\_\_id |     |     |
+| Farbe / wavelengths | int | fiber\_wave\_lengths | isys\_catg\_connector\_list\_\_id | isys\_catg\_connector\_list\_2\_isys\_fiber\_wave\_length | isys\_catg\_connector\_list\_\_id |
+| Anschlussart | int | isys\_catg\_connector\_list | isys\_catg\_connector\_list\_\_isys\_connection\_type\_\_id | isys\_connection\_type | isys\_connection\_type\_\_id |
+| Connected to connector | int | connected\_connector | isys\_catg\_connector\_list\_\_id |     |     |
+| Associated categorytyp | text | isys\_catg\_connector\_list | isys\_catg\_connector\_list\_\_assigned\_category |     |     |
+| Kabel | int | isys\_catg\_connector\_list | isys\_catg\_connector\_list\_\_isys\_cable\_connection\_\_id |     |     |
+| Verwendete Faser/Ader (RX) | int | isys\_catg\_connector\_list | isys\_catg\_connector\_list\_\_used\_fiber\_lead\_rx |     |     |
+| Verwendete Faser/Ader (TX) | int | isys\_catg\_connector\_list | isys\_catg\_connector\_list\_\_used\_fiber\_lead\_tx |     |     |
+| Associated Eingang/Ausgang | int | isys\_catg\_connector\_list | isys\_catg\_connector\_list\_\_isys\_catg\_connector\_list\_\_id |     |     |
 | Description | text\_area | isys\_catg\_connector\_list | isys\_catg\_connector\_list\_\_description |     |     |
 | Relation direction | int | isys\_catg\_connector\_list | isys\_catg\_connector\_list\_\_isys\_catg\_relation\_list\_\_id |     |     |
 
-### Invoice
+### Rechnung
 
-#### Tabelle: isys\_catg\_invoice\_list
+#### table: isys\_catg\_invoice\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_catg\_invoice\_list | isys\_catg\_invoice\_list\_\_denotation |     |     |
-| Invoice Date | date | isys\_catg\_invoice\_list | isys\_catg\_invoice\_list\_\_date |     |     |
-| Amount | double | isys\_catg\_invoice\_list | isys\_catg\_invoice\_list\_\_amount |     |     |
-| Edited at | date | isys\_catg\_invoice\_list | isys\_catg\_invoice\_list\_\_edited |     |     |
-| Dispensing Tax Accounting | date | isys\_catg\_invoice\_list | isys\_catg\_invoice\_list\_\_financial\_accounting\_delivery |     |     |
-| Charged | int | isys\_catg\_invoice\_list | isys\_catg\_invoice\_list\_\_charged |     |     |
+| designation | text | isys\_catg\_invoice\_list | isys\_catg\_invoice\_list\_\_denotation |     |     |
+| Rechnungsdatum | date | isys\_catg\_invoice\_list | isys\_catg\_invoice\_list\_\_date |     |     |
+| Betrag | double | isys\_catg\_invoice\_list | isys\_catg\_invoice\_list\_\_amount |     |     |
+| Bearbeitet am | date | isys\_catg\_invoice\_list | isys\_catg\_invoice\_list\_\_edited |     |     |
+| Abgabe Finanzbuchhaltung | date | isys\_catg\_invoice\_list | isys\_catg\_invoice\_list\_\_financial\_accounting\_delivery |     |     |
+| Abgebucht | int | isys\_catg\_invoice\_list | isys\_catg\_invoice\_list\_\_charged |     |     |
 | Description | text\_area | isys\_catg\_invoice\_list | isys\_catg\_invoice\_list\_\_description |     |     |
 
-### Power supplier
+### Stromlieferant
 
-#### Tabelle: isys\_catg\_power\_supplier\_list
+#### table: isys\_catg\_power\_supplier\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | mine | isys\_catg\_connector\_list\_\_title |     |     |
+| designation | text | mine | isys\_catg\_connector\_list\_\_title |     |     |
 | Volt | text | isys\_catg\_power\_supplier\_list | isys\_catg\_power\_supplier\_list\_\_volt |     |     |
 | Watt | text | isys\_catg\_power\_supplier\_list | isys\_catg\_power\_supplier\_list\_\_watt |     |     |
 | Ampere | text | isys\_catg\_power\_supplier\_list | isys\_catg\_power\_supplier\_list\_\_ampere |     |     |
-| Target object | int | connected\_connector | isys\_catg\_power\_supplier\_list\_\_isys\_catg\_connector\_list\_\_id |     |     |
-| Assigned to connector | int | connected | isys\_catg\_power\_supplier\_list\_\_isys\_catg\_connector\_list\_\_id |     |     |
-| Assigned Input/Output | int | isys\_catg\_power\_supplier\_list | isys\_catg\_connector\_list\_\_isys\_catg\_connector\_list\_\_id |     |     |
-| Assigned category type | text | isys\_catg\_power\_supplier\_list | isys\_catg\_connector\_list\_\_assigned\_category |     |     |
+| Zielobjekt | int | connected\_connector | isys\_catg\_power\_supplier\_list\_\_isys\_catg\_connector\_list\_\_id |     |     |
+| Connected to connector | int | connected | isys\_catg\_power\_supplier\_list\_\_isys\_catg\_connector\_list\_\_id |     |     |
+| Associated Eingang/Ausgang | int | isys\_catg\_power\_supplier\_list | isys\_catg\_connector\_list\_\_isys\_catg\_connector\_list\_\_id |     |     |
+| Associated categorytyp | text | isys\_catg\_power\_supplier\_list | isys\_catg\_connector\_list\_\_assigned\_category |     |     |
 | Description | text\_area | isys\_catg\_power\_supplier\_list | isys\_catg\_power\_supplier\_list\_\_description |     |     |
 
-### Raid-Array
+### RAID-Verbund
 
-#### Tabelle: isys\_catg\_raid\_list
+#### table: isys\_catg\_raid\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Type | int | isys\_catg\_raid\_list | isys\_catg\_raid\_list\_\_isys\_raid\_type\_\_id | isys\_raid\_type | isys\_raid\_type\_\_id |
-| Title | text | isys\_catg\_raid\_list | isys\_catg\_raid\_list\_\_title |     |     |
+| RAID-Typ | int | isys\_catg\_raid\_list | isys\_catg\_raid\_list\_\_isys\_raid\_type\_\_id | isys\_raid\_type | isys\_raid\_type\_\_id |
+| designation | text | isys\_catg\_raid\_list | isys\_catg\_raid\_list\_\_title |     |     |
 | RAID Level | int | isys\_catg\_raid\_list | isys\_catg\_raid\_list\_\_isys\_stor\_raid\_level\_\_id | isys\_stor\_raid\_level | isys\_stor\_raid\_level\_\_id |
 | Controller | int | isys\_catg\_raid\_list | isys\_catg\_raid\_list\_\_isys\_catg\_controller\_list\_\_id | isys\_catg\_controller\_list | isys\_catg\_controller\_list\_\_id |
-| Connected devices | int | isys\_catg\_raid\_list | isys\_catg\_raid\_list\_\_id |     |     |
-| Total capacity | text | isys\_catg\_raid\_list | isys\_catg\_raid\_list\_\_id |     |     |
+| Verbundene devicee | int | isys\_catg\_raid\_list | isys\_catg\_raid\_list\_\_id |     |     |
+| total capacity | text | isys\_catg\_raid\_list | isys\_catg\_raid\_list\_\_id |     |     |
 | Description | text\_area | isys\_catg\_raid\_list | isys\_catg\_raid\_list\_\_description |     |     |
 
-### Logical devices (LDEV Server)
+### Logische devicee (LDEV server)
 
-#### Tabelle: isys\_catg\_sanpool\_list
+#### table: isys\_catg\_sanpool\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_catg\_sanpool\_list | isys\_catg\_sanpool\_list\_\_title |     |     |
+| designation | text | isys\_catg\_sanpool\_list | isys\_catg\_sanpool\_list\_\_title |     |     |
 | LUN | text | isys\_catg\_sanpool\_list | isys\_catg\_sanpool\_list\_\_lun |     |     |
-| Segment size (kB) | float | isys\_catg\_sanpool\_list | isys\_catg\_sanpool\_list\_\_segment\_size |     |     |
-| Memory-unit | int | isys\_catg\_sanpool\_list | isys\_catg\_sanpool\_list\_\_isys\_memory\_unit\_\_id | isys\_memory\_unit | isys\_memory\_unit\_\_id |
-| Capacity | double | isys\_catg\_sanpool\_list | isys\_catg\_sanpool\_list\_\_capacity |     |     |
-| Attached devices | int | isys\_catg\_sanpool\_list | isys\_catg\_sanpool\_list\_\_id | isys\_catg\_ldevclient\_list | isys\_catg\_ldevclient\_list\_\_isys\_catg\_sanpool\_list\_\_id |
-| Paths | text | isys\_catg\_sanpool\_list | isys\_catg\_sanpool\_list\_\_id |     |     |
-| Multipath technology | int | isys\_catg\_sanpool\_list | isys\_catg\_sanpool\_list\_\_isys\_ldev\_multipath\_\_id | isys\_ldev\_multipath | isys\_ldev\_multipath\_\_id |
-| Tier class | int | isys\_catg\_sanpool\_list | isys\_catg\_sanpool\_list\_\_isys\_tierclass\_\_id | isys\_tierclass | isys\_tierclass\_\_id |
-| Logical devices (Client) | int | isys\_catg\_sanpool\_list | isys\_catg\_sanpool\_list\_\_id | isys\_catg\_ldevclient\_list | isys\_catg\_ldevclient\_list\_\_isys\_catg\_sanpool\_list\_\_id |
+| segment size (kB) | float | isys\_catg\_sanpool\_list | isys\_catg\_sanpool\_list\_\_segment\_size |     |     |
+| Speicher-Einheit | int | isys\_catg\_sanpool\_list | isys\_catg\_sanpool\_list\_\_isys\_memory\_unit\_\_id | isys\_memory\_unit | isys\_memory\_unit\_\_id |
+| memory size | double | isys\_catg\_sanpool\_list | isys\_catg\_sanpool\_list\_\_capacity |     |     |
+| Zugeordnete devicee | int | isys\_catg\_sanpool\_list | isys\_catg\_sanpool\_list\_\_id | isys\_catg\_ldevclient\_list | isys\_catg\_ldevclient\_list\_\_isys\_catg\_sanpool\_list\_\_id |
+| pathe | text | isys\_catg\_sanpool\_list | isys\_catg\_sanpool\_list\_\_id |     |     |
+| Multipath Technologie | int | isys\_catg\_sanpool\_list | isys\_catg\_sanpool\_list\_\_isys\_ldev\_multipath\_\_id | isys\_ldev\_multipath | isys\_ldev\_multipath\_\_id |
+| Tierklasse | int | isys\_catg\_sanpool\_list | isys\_catg\_sanpool\_list\_\_isys\_tierclass\_\_id | isys\_tierclass | isys\_tierclass\_\_id |
+| Logische devicee (Client) | int | isys\_catg\_sanpool\_list | isys\_catg\_sanpool\_list\_\_id | isys\_catg\_ldevclient\_list | isys\_catg\_ldevclient\_list\_\_isys\_catg\_sanpool\_list\_\_id |
 | Description | text\_area | isys\_catg\_sanpool\_list | isys\_catg\_sanpool\_list\_\_description |     |     |
 
-### Logical devices (Client)
+### Logische devicee (Client)
 
-#### Tabelle: isys\_catg\_ldevclient\_list
+#### table: isys\_catg\_ldevclient\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_catg\_ldevclient\_list | isys\_catg\_ldevclient\_list\_\_title |     |     |
-| Path | int | isys\_catg\_ldevclient\_list | isys\_catg\_ldevclient\_list\_\_id |     |     |
-| Logical devices (LDEV Server) | int | isys\_catg\_ldevclient\_list | isys\_catg\_ldevclient\_list\_\_isys\_catg\_sanpool\_list\_\_id | isys\_catg\_sanpool\_list | isys\_catg\_sanpool\_list\_\_id |
-| Primary path | int | isys\_catg\_ldevclient\_list | isys\_catg\_ldevclient\_list\_\_primary\_path |     |     |
-| Multipath technology | int | isys\_catg\_ldevclient\_list | isys\_catg\_ldevclient\_list\_\_isys\_ldev\_multipath\_\_id | isys\_ldev\_multipath | isys\_ldev\_multipath\_\_id |
+| designation | text | isys\_catg\_ldevclient\_list | isys\_catg\_ldevclient\_list\_\_title |     |     |
+| path | int | isys\_catg\_ldevclient\_list | isys\_catg\_ldevclient\_list\_\_id |     |     |
+| Logische devicee (LDEV server) | int | isys\_catg\_ldevclient\_list | isys\_catg\_ldevclient\_list\_\_isys\_catg\_sanpool\_list\_\_id | isys\_catg\_sanpool\_list | isys\_catg\_sanpool\_list\_\_id |
+| Primaryer path | int | isys\_catg\_ldevclient\_list | isys\_catg\_ldevclient\_list\_\_primary\_path |     |     |
+| Multipath Technologie | int | isys\_catg\_ldevclient\_list | isys\_catg\_ldevclient\_list\_\_isys\_ldev\_multipath\_\_id | isys\_ldev\_multipath | isys\_ldev\_multipath\_\_id |
 | Description | text\_area | isys\_catg\_ldevclient\_list | isys\_catg\_ldevclient\_list\_\_description |     |     |
 
-### Host Bus Adapter (HBA)
+### Hostadapter (HBA)
 
-#### Tabelle: isys\_catg\_hba\_list
+#### table: isys\_catg\_hba\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_catg\_hba\_list | isys\_catg\_hba\_list\_\_title |     |     |
-| Type | int | isys\_catg\_hba\_list | isys\_catg\_hba\_list\_\_isys\_hba\_type\_\_id | isys\_hba\_type | isys\_hba\_type\_\_id |
-| Manufacturer | int | isys\_catg\_hba\_list | isys\_catg\_hba\_list\_\_isys\_controller\_manufacturer\_\_id | isys\_controller\_manufacturer | isys\_controller\_manufacturer\_\_id |
-| Model | int | isys\_catg\_hba\_list | isys\_catg\_hba\_list\_\_isys\_controller\_model\_\_id | isys\_controller\_model | isys\_controller\_model\_\_id |
+| designation | text | isys\_catg\_hba\_list | isys\_catg\_hba\_list\_\_title |     |     |
+| Typ | int | isys\_catg\_hba\_list | isys\_catg\_hba\_list\_\_isys\_hba\_type\_\_id | isys\_hba\_type | isys\_hba\_type\_\_id |
+| Hersteller | int | isys\_catg\_hba\_list | isys\_catg\_hba\_list\_\_isys\_controller\_manufacturer\_\_id | isys\_controller\_manufacturer | isys\_controller\_manufacturer\_\_id |
+| Modell | int | isys\_catg\_hba\_list | isys\_catg\_hba\_list\_\_isys\_controller\_model\_\_id | isys\_controller\_model | isys\_controller\_model\_\_id |
 | Description | text\_area | isys\_catg\_hba\_list | isys\_catg\_hba\_list\_\_description |     |     |
 
 ### Cluster
 
-#### Tabelle: isys\_catg\_cluster\_list
+#### table: isys\_catg\_cluster\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
 | Quorum | int | isys\_catg\_cluster\_list | isys\_catg\_cluster\_list\_\_quorum |     |     |
-| Administration service | text | isys\_catg\_cluster\_list | isys\_catg\_cluster\_adm\_service\_list\_\_isys\_obj\_\_id |     |     |
-| Cluster Members | text | isys\_catg\_cluster\_list | isys\_catg\_cluster\_members\_list\_\_isys\_obj\_\_id |     |     |
-| Cluster service assignment | text | isys\_catg\_cluster\_list | isys\_catg\_cluster\_service\_list\_\_isys\_obj\_\_id |     |     |
+| administrationsinstanz | text | isys\_catg\_cluster\_list | isys\_catg\_cluster\_adm\_service\_list\_\_isys\_obj\_\_id |     |     |
+| Clustermitglieder | text | isys\_catg\_cluster\_list | isys\_catg\_cluster\_members\_list\_\_isys\_obj\_\_id |     |     |
+| Clusterdienstzuweisung | text | isys\_catg\_cluster\_list | isys\_catg\_cluster\_service\_list\_\_isys\_obj\_\_id |     |     |
 | Description | text\_area | isys\_catg\_cluster\_list | isys\_catg\_cluster\_list\_\_description |     |     |
 
 ### Cluster
 
-#### Tabelle: isys\_catg\_cluster\_list
+#### table: isys\_catg\_cluster\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
 | Quorum | int | isys\_catg\_cluster\_list | isys\_catg\_cluster\_list\_\_quorum |     |     |
-| Administration service | text | isys\_catg\_cluster\_list | isys\_catg\_cluster\_adm\_service\_list\_\_isys\_obj\_\_id |     |     |
-| Cluster Members | text | isys\_catg\_cluster\_list | isys\_catg\_cluster\_members\_list\_\_isys\_obj\_\_id |     |     |
-| Cluster service assignment | text | isys\_catg\_cluster\_list | isys\_catg\_cluster\_service\_list\_\_isys\_obj\_\_id |     |     |
+| administrationsinstanz | text | isys\_catg\_cluster\_list | isys\_catg\_cluster\_adm\_service\_list\_\_isys\_obj\_\_id |     |     |
+| Clustermitglieder | text | isys\_catg\_cluster\_list | isys\_catg\_cluster\_members\_list\_\_isys\_obj\_\_id |     |     |
+| Clusterdienstzuweisung | text | isys\_catg\_cluster\_list | isys\_catg\_cluster\_service\_list\_\_isys\_obj\_\_id |     |     |
 | Description | text\_area | isys\_catg\_cluster\_list | isys\_catg\_cluster\_list\_\_description |     |     |
 
-### Shares
+### Freigabe
 
-#### Tabelle: isys\_catg\_shares\_list
+#### table: isys\_catg\_shares\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Share name | text | isys\_catg\_shares\_list | isys\_catg\_shares\_list\_\_title |     |     |
+| Freigabename | text | isys\_catg\_shares\_list | isys\_catg\_shares\_list\_\_title |     |     |
 | UNC-path | text | isys\_catg\_shares\_list | isys\_catg\_shares\_list\_\_unc\_path |     |     |
-| Volume | int | isys\_catg\_shares\_list | isys\_catg\_shares\_list\_\_isys\_catg\_drive\_list\_\_id | isys\_catg\_drive\_list | isys\_catg\_drive\_list\_\_id |
-| Local path | text | isys\_catg\_shares\_list | isys\_catg\_shares\_list\_\_path |     |     |
+| Laufwerk | int | isys\_catg\_shares\_list | isys\_catg\_shares\_list\_\_isys\_catg\_drive\_list\_\_id | isys\_catg\_drive\_list | isys\_catg\_drive\_list\_\_id |
+| Lokaler path | text | isys\_catg\_shares\_list | isys\_catg\_shares\_list\_\_path |     |     |
 | Description | text\_area | isys\_catg\_shares\_list | isys\_catg\_shares\_list\_\_description |     |     |
 
-### Cluster service assignment
+### Clusterdienstzuweisung
 
-#### Tabelle: isys\_catg\_cluster\_service\_list
+#### table: isys\_catg\_cluster\_service\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Type | int | isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_isys\_cluster\_type\_\_id | isys\_cluster\_type | isys\_cluster\_type\_\_id |
-| Cluster services | int | isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
-| Host addresses | int | isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_id | isys\_catg\_ip\_list\_2\_isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_id |
-| Volumes | int | isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_id | isys\_catg\_drive\_list\_2\_isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_id |
-| Shares | int | isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_isys\_obj\_\_id |     |     |
-| Runs on | int | isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_id |     |     |
-| Default server | int | isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_cluster\_members\_list\_\_id |     |     |
-| Database schema | int | isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_isys\_catg\_relation\_list\_\_id | isys\_cats\_database\_access\_list | isys\_cats\_database\_access\_list\_\_id |
+| Typ | int | isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_isys\_cluster\_type\_\_id | isys\_cluster\_type | isys\_cluster\_type\_\_id |
+| Clusterdienst | int | isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
+| Hostadressen | int | isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_id | isys\_catg\_ip\_list\_2\_isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_id |
+| Laufwerke | int | isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_id | isys\_catg\_drive\_list\_2\_isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_id |
+| Freigaben | int | isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_isys\_obj\_\_id |     |     |
+| Runs auf | int | isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_id |     |     |
+| default Server | int | isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_cluster\_members\_list\_\_id |     |     |
+| database schema | int | isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_isys\_catg\_relation\_list\_\_id | isys\_cats\_database\_access\_list | isys\_cats\_database\_access\_list\_\_id |
 | LC\_\_CMDB\_\_CATG\_\_CLUSTER\_\_SERVICE\_STATUS | int | isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_service\_status |     |     |
 | Description | text\_area | isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_description |     |     |
 
-### Cluster Members
+### Clustermitglieder
 
-#### Tabelle: isys\_catg\_cluster\_members\_list
+#### table: isys\_catg\_cluster\_members\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Cluster Member | int | isys\_catg\_cluster\_members\_list | isys\_catg\_cluster\_members\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
+| Clustermitglied | int | isys\_catg\_cluster\_members\_list | isys\_catg\_cluster\_members\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
 
-### Cluster memberships
+### Clustermitgliedschaften
 
-#### Tabelle: isys\_catg\_cluster\_members\_list
+#### table: isys\_catg\_cluster\_members\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
 | Cluster | int | isys\_catg\_cluster\_members\_list | isys\_catg\_cluster\_members\_list\_\_isys\_obj\_\_id | isys\_connection | isys\_connection\_\_isys\_obj\_\_id |
 
-### Computing resources
+### Rechenressourcen
 
-#### Tabelle: isys\_catg\_computing\_resources\_list
+#### table: isys\_catg\_computing\_resources\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
 | RAM | float | isys\_catg\_computing\_resources\_list | isys\_catg\_computing\_resources\_list\_\_ram |     |     |
-| Memory-unit | int | mem1 | isys\_catg\_computing\_resources\_list\_\_ram\_\_isys\_memory\_unit\_\_id | isys\_memory\_unit | isys\_memory\_unit\_\_id |
-| CPU frequency | float | isys\_catg\_computing\_resources\_list | isys\_catg\_computing\_resources\_list\_\_cpu |     |     |
-| CPU frequency unit | int | isys\_catg\_computing\_resources\_list | isys\_catg\_computing\_resources\_list\_\_cpu\_\_isys\_frequency\_unit\_\_id | isys\_frequency\_unit | isys\_frequency\_unit\_\_id |
-| Disc space | float | isys\_catg\_computing\_resources\_list | isys\_catg\_computing\_resources\_list\_\_disc\_space |     |     |
-| Disc space unit | int | mem2 | isys\_catg\_computing\_resources\_list\_\_ds\_\_isys\_memory\_unit\_\_id | isys\_memory\_unit | isys\_memory\_unit\_\_id |
-| Network bandwidth | float | isys\_catg\_computing\_resources\_list | isys\_catg\_computing\_resources\_list\_\_network\_bandwidth |     |     |
-| Network bandwidth unit | int | isys\_catg\_computing\_resources\_list | isys\_catg\_computing\_resources\_list\_\_nb\_\_isys\_port\_speed\_\_id | isys\_port\_speed | isys\_port\_speed\_\_id |
+| Speicher-Einheit | int | mem1 | isys\_catg\_computing\_resources\_list\_\_ram\_\_isys\_memory\_unit\_\_id | isys\_memory\_unit | isys\_memory\_unit\_\_id |
+| CPU-Frequenz | float | isys\_catg\_computing\_resources\_list | isys\_catg\_computing\_resources\_list\_\_cpu |     |     |
+| CPU-Frequenz Einheit | int | isys\_catg\_computing\_resources\_list | isys\_catg\_computing\_resources\_list\_\_cpu\_\_isys\_frequency\_unit\_\_id | isys\_frequency\_unit | isys\_frequency\_unit\_\_id |
+| Festplattenplatz | float | isys\_catg\_computing\_resources\_list | isys\_catg\_computing\_resources\_list\_\_disc\_space |     |     |
+| Speicher Einheit | int | mem2 | isys\_catg\_computing\_resources\_list\_\_ds\_\_isys\_memory\_unit\_\_id | isys\_memory\_unit | isys\_memory\_unit\_\_id |
+| Netzwerk Bandbreite | float | isys\_catg\_computing\_resources\_list | isys\_catg\_computing\_resources\_list\_\_network\_bandwidth |     |     |
+| Netzwerk Bandbreiten Einheit | int | isys\_catg\_computing\_resources\_list | isys\_catg\_computing\_resources\_list\_\_nb\_\_isys\_port\_speed\_\_id | isys\_port\_speed | isys\_port\_speed\_\_id |
 | Description | text\_area | isys\_catg\_computing\_resources\_list | isys\_catg\_computing\_resources\_list\_\_description |     |     |
 
 ### SNMP
 
-#### Tabelle: isys\_catg\_snmp\_list
+#### table: isys\_catg\_snmp\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
 | SNMP Community | int | isys\_catg\_snmp\_list | isys\_catg\_snmp\_list\_\_isys\_snmp\_community\_\_id | isys\_snmp\_community | isys\_snmp\_community\_\_id |
 | Description | text\_area | isys\_catg\_snmp\_list | isys\_catg\_snmp\_list\_\_description |     |     |
 
-### Virtualization host
+### Virtualisierungsserver
 
-#### Tabelle: isys\_catg\_virtual\_host\_list
+#### table: isys\_catg\_virtual\_host\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Virtualization host | int | isys\_catg\_virtual\_host\_list | isys\_catg\_virtual\_host\_list\_\_virtual\_host |     |     |
-| License Server | int | connection\_licence\_server | isys\_catg\_virtual\_host\_list\_\_license\_server | isys\_connection | isys\_connection\_\_id |
-| Administration service | int | connection\_administration\_service | isys\_catg\_virtual\_host\_list\_\_administration\_service | isys\_connection | isys\_connection\_\_id |
+| Virtualisierungsserver | int | isys\_catg\_virtual\_host\_list | isys\_catg\_virtual\_host\_list\_\_virtual\_host |     |     |
+| Lizenzserver | int | connection\_licence\_server | isys\_catg\_virtual\_host\_list\_\_license\_server | isys\_connection | isys\_connection\_\_id |
+| administrationsinstanz | int | connection\_administration\_service | isys\_catg\_virtual\_host\_list\_\_administration\_service | isys\_connection | isys\_connection\_\_id |
 | Description | text\_area | isys\_catg\_virtual\_host\_list | isys\_catg\_virtual\_host\_list\_\_description |     |     |
 
-### Virtualization host
+### Virtualisierungsserver
 
-#### Tabelle: isys\_catg\_virtual\_host\_list
+#### table: isys\_catg\_virtual\_host\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Virtualization host | int | isys\_catg\_virtual\_host\_list | isys\_catg\_virtual\_host\_list\_\_virtual\_host |     |     |
-| License Server | int | connection\_licence\_server | isys\_catg\_virtual\_host\_list\_\_license\_server | isys\_connection | isys\_connection\_\_id |
-| Administration service | int | connection\_administration\_service | isys\_catg\_virtual\_host\_list\_\_administration\_service | isys\_connection | isys\_connection\_\_id |
+| Virtualisierungsserver | int | isys\_catg\_virtual\_host\_list | isys\_catg\_virtual\_host\_list\_\_virtual\_host |     |     |
+| Lizenzserver | int | connection\_licence\_server | isys\_catg\_virtual\_host\_list\_\_license\_server | isys\_connection | isys\_connection\_\_id |
+| administrationsinstanz | int | connection\_administration\_service | isys\_catg\_virtual\_host\_list\_\_administration\_service | isys\_connection | isys\_connection\_\_id |
 | Description | text\_area | isys\_catg\_virtual\_host\_list | isys\_catg\_virtual\_host\_list\_\_description |     |     |
 
-### Guest systems
+### Gastsysteme
 
-#### Tabelle: isys\_catg\_virtual\_machine\_list
+#### table: isys\_catg\_virtual\_machine\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Guest systems | int | isys\_catg\_virtual\_machine\_list | isys\_catg\_virtual\_machine\_list\_\_isys\_obj\_\_id |     |     |
+| Gastsysteme | int | isys\_catg\_virtual\_machine\_list | isys\_catg\_virtual\_machine\_list\_\_isys\_obj\_\_id |     |     |
 | Hostname | text | isys\_catg\_virtual\_machine\_list | isys\_catg\_virtual\_machine\_list\_\_isys\_obj\_\_id |     |     |
-| Runs on | text | isys\_catg\_virtual\_machine\_list | isys\_catg\_virtual\_machine\_list\_\_primary |     |     |
+| Runs auf | text | isys\_catg\_virtual\_machine\_list | isys\_catg\_virtual\_machine\_list\_\_primary |     |     |
 
-### Virtual machine
+### Virtuelle Maschine
 
-#### Tabelle: isys\_catg\_virtual\_machine\_list
+#### table: isys\_catg\_virtual\_machine\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Virtual machine | int | isys\_catg\_virtual\_machine\_list | isys\_catg\_virtual\_machine\_list\_\_vm |     |     |
-| Running on host | int | connection\_vm | isys\_catg\_virtual\_machine\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
-| Virtualization system | int | isys\_catg\_virtual\_machine\_list | isys\_catg\_virtual\_machine\_list\_\_isys\_vm\_type\_\_id | isys\_vm\_type | isys\_vm\_type\_\_id |
-| Configuration file | text | isys\_catg\_virtual\_machine\_list | isys\_catg\_virtual\_machine\_list\_\_config\_file |     |     |
-| Host in cluster | int | isys\_catg\_virtual\_machine\_list | isys\_catg\_virtual\_machine\_list\_\_primary |     |     |
+| Virtuelle Maschine | int | isys\_catg\_virtual\_machine\_list | isys\_catg\_virtual\_machine\_list\_\_vm |     |     |
+| Runs auf Host | int | connection\_vm | isys\_catg\_virtual\_machine\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
+| Virtualisierungs-System | int | isys\_catg\_virtual\_machine\_list | isys\_catg\_virtual\_machine\_list\_\_isys\_vm\_type\_\_id | isys\_vm\_type | isys\_vm\_type\_\_id |
+| Configurations file | text | isys\_catg\_virtual\_machine\_list | isys\_catg\_virtual\_machine\_list\_\_config\_file |     |     |
+| Host im Cluster | int | isys\_catg\_virtual\_machine\_list | isys\_catg\_virtual\_machine\_list\_\_primary |     |     |
 | Description | text\_area | isys\_catg\_virtual\_machine\_list | isys\_catg\_virtual\_machine\_list\_\_description |     |     |
 
-### Virtual Switches
+### Virtuelle Switche
 
-#### Tabelle: isys\_catg\_virtual\_switch\_list
+#### table: isys\_catg\_virtual\_switch\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_catg\_virtual\_switch\_list | isys\_catg\_virtual\_switch\_list\_\_title |     |     |
+| designation | text | isys\_catg\_virtual\_switch\_list | isys\_catg\_virtual\_switch\_list\_\_title |     |     |
 | Ports | int | isys\_catg\_virtual\_switch\_list | isys\_catg\_virtual\_switch\_list\_\_id | isys\_virtual\_switch\_2\_port | isys\_virtual\_switch\_2\_port\_\_isys\_catg\_virtual\_switch\_list\_\_id |
-| Port groups | int | isys\_catg\_virtual\_switch\_list | isys\_virtual\_port\_group\_\_id | isys\_virtual\_port\_group | isys\_virtual\_port\_group\_\_isys\_catg\_virtual\_switch\_list\_\_id |
+| Portgruppen | int | isys\_catg\_virtual\_switch\_list | isys\_virtual\_port\_group\_\_id | isys\_virtual\_port\_group | isys\_virtual\_port\_group\_\_isys\_catg\_virtual\_switch\_list\_\_id |
 | Service Console Ports | int | isys\_catg\_virtual\_switch\_list | isys\_service\_console\_port\_\_id | isys\_service\_console\_port | isys\_service\_console\_port\_\_isys\_catg\_virtual\_switch\_list\_\_id |
 | VMKernel Ports | int | isys\_catg\_virtual\_switch\_list | isys\_vmkernel\_port\_\_id | isys\_vmkernel\_port | isys\_vmkernel\_port\_\_isys\_catg\_virtual\_switch\_list\_\_id |
 | Description | text\_area | isys\_catg\_virtual\_switch\_list | isys\_catg\_virtual\_switch\_list\_\_description |     |     |
 
-### Virtual devices
+### Virtuelle devicee
 
-#### Tabelle: isys\_catg\_virtual\_device\_list
+#### table: isys\_catg\_virtual\_device\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Device type | int | isys\_catg\_virtual\_device\_list | isys\_virtual\_device\_host\_\_isys\_catg\_stor\_list\_\_id | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_id |
-| Host LDEV client | int | isys\_catg\_virtual\_device\_list | isys\_virtual\_device\_host\_\_isys\_catg\_ldevclient\_list\_\_id | isys\_catg\_ldevclient\_list | isys\_catg\_ldevclient\_list\_\_id |
-| Assigned storage device (host) | int | isys\_catg\_virtual\_device\_list | isys\_virtual\_device\_host\_\_isys\_catg\_drive\_list\_\_id | isys\_catg\_drive\_list | isys\_catg\_drive\_list\_\_id |
-| Corresponding host port | int | isys\_catg\_virtual\_device\_list | isys\_virtual\_device\_host\_\_isys\_catg\_port\_list\_\_id | isys\_catg\_port\_list | isys\_catg\_port\_list\_\_id |
+| deviceetyp | int | isys\_catg\_virtual\_device\_list | isys\_virtual\_device\_host\_\_isys\_catg\_stor\_list\_\_id | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_id |
+| Host LDEV Client | int | isys\_catg\_virtual\_device\_list | isys\_virtual\_device\_host\_\_isys\_catg\_ldevclient\_list\_\_id | isys\_catg\_ldevclient\_list | isys\_catg\_ldevclient\_list\_\_id |
+| Associated Storage device (Host) | int | isys\_catg\_virtual\_device\_list | isys\_virtual\_device\_host\_\_isys\_catg\_drive\_list\_\_id | isys\_catg\_drive\_list | isys\_catg\_drive\_list\_\_id |
+| Associated Host Port | int | isys\_catg\_virtual\_device\_list | isys\_virtual\_device\_host\_\_isys\_catg\_port\_list\_\_id | isys\_catg\_port\_list | isys\_catg\_port\_list\_\_id |
 | Host interface | int | isys\_catg\_virtual\_device\_list | isys\_virtual\_device\_host\_\_isys\_catg\_ui\_list\_\_id | isys\_catg\_ui\_list | isys\_catg\_ui\_list\_\_id |
-| Local storage device | int | isys\_catg\_virtual\_device\_list | isys\_virtual\_device\_local\_\_isys\_catg\_stor\_list\_\_id | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_id |
-| Local port | int | isys\_catg\_virtual\_device\_list | isys\_virtual\_device\_local\_\_isys\_catg\_port\_list\_\_id | isys\_catg\_port\_list | isys\_catg\_port\_list\_\_id |
-| Host resource | int | isys\_catg\_virtual\_device\_list | isys\_virtual\_device\_local\_\_isys\_catg\_ui\_list\_\_id | isys\_catg\_ui\_list | isys\_catg\_ui\_list\_\_id |
-| Storage type | int | isys\_catg\_virtual\_device\_list | isys\_virtual\_device\_local\_\_isys\_virtual\_storage\_type\_\_id | isys\_virtual\_storage\_type | isys\_virtual\_storage\_type\_\_id |
-| Network type | int | isys\_catg\_virtual\_device\_list | isys\_virtual\_device\_local\_\_isys\_virtual\_network\_type\_\_id | isys\_virtual\_network\_type | isys\_virtual\_network\_type\_\_id |
+| Lokales Storage device | int | isys\_catg\_virtual\_device\_list | isys\_virtual\_device\_local\_\_isys\_catg\_stor\_list\_\_id | isys\_catg\_stor\_list | isys\_catg\_stor\_list\_\_id |
+| Lokaler Port | int | isys\_catg\_virtual\_device\_list | isys\_virtual\_device\_local\_\_isys\_catg\_port\_list\_\_id | isys\_catg\_port\_list | isys\_catg\_port\_list\_\_id |
+| Host Ressource | int | isys\_catg\_virtual\_device\_list | isys\_virtual\_device\_local\_\_isys\_catg\_ui\_list\_\_id | isys\_catg\_ui\_list | isys\_catg\_ui\_list\_\_id |
+| Speichertyp | int | isys\_catg\_virtual\_device\_list | isys\_virtual\_device\_local\_\_isys\_virtual\_storage\_type\_\_id | isys\_virtual\_storage\_type | isys\_virtual\_storage\_type\_\_id |
+| Netzwerktyp | int | isys\_catg\_virtual\_device\_list | isys\_virtual\_device\_local\_\_isys\_virtual\_network\_type\_\_id | isys\_virtual\_network\_type | isys\_virtual\_network\_type\_\_id |
 | Switch Port Group | int | isys\_catg\_virtual\_device\_list | isys\_virtual\_device\_host\_\_switch\_port\_group |     |     |
-| Cluster storage | text | isys\_virtual\_device\_host | isys\_virtual\_device\_host\_\_cluster\_storage |     |     |
-| Cluster interface | text | isys\_catg\_virtual\_device\_list | isys\_virtual\_device\_host\_\_cluster\_ui |     |     |
-| Local storage device | text | isys\_catg\_virtual\_device\_list | isys\_catg\_virtual\_device\_list\_\_disk\_image\_location |     |     |
-| Device type | text | isys\_catg\_virtual\_device\_list | isys\_catg\_virtual\_device\_list\_\_device\_type |     |     |
+| Cluster Speicher | text | isys\_virtual\_device\_host | isys\_virtual\_device\_host\_\_cluster\_storage |     |     |
+| Cluster Interface | text | isys\_catg\_virtual\_device\_list | isys\_virtual\_device\_host\_\_cluster\_ui |     |     |
+| Lokales Storage device | text | isys\_catg\_virtual\_device\_list | isys\_catg\_virtual\_device\_list\_\_disk\_image\_location |     |     |
+| deviceetyp | text | isys\_catg\_virtual\_device\_list | isys\_catg\_virtual\_device\_list\_\_device\_type |     |     |
 | Description | text\_area | isys\_catg\_virtual\_device\_list | isys\_catg\_virtual\_device\_list\_\_description |     |     |
-| Type | text | isys\_catg\_virtual\_device\_list | isys\_virtual\_network\_type\_\_title |     |     |
+| Typ | text | isys\_catg\_virtual\_device\_list | isys\_virtual\_network\_type\_\_title |     |     |
 
-### Backup (assigned Objects)
+### Datensicherung (assignede objects)
 
-#### Tabelle: isys\_catg\_backup\_list
+#### table: isys\_catg\_backup\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_catg\_backup\_list | isys\_catg\_backup\_list\_\_title |     |     |
-| Backups | int | isys\_catg\_backup\_list | isys\_catg\_backup\_list\_\_isys\_obj\_\_id |     |     |
-| Backup type | int | isys\_catg\_backup\_list | isys\_catg\_backup\_list\_\_isys\_backup\_type\_\_id | isys\_backup\_type | isys\_backup\_type\_\_id |
-| Cycle | int | isys\_catg\_backup\_list | isys\_catg\_backup\_list\_\_isys\_backup\_cycle\_\_id | isys\_backup\_cycle | isys\_backup\_cycle\_\_id |
-| Path to save | text | isys\_catg\_backup\_list | isys\_catg\_backup\_list\_\_path\_to\_save |     |     |
+| designation | text | isys\_catg\_backup\_list | isys\_catg\_backup\_list\_\_title |     |     |
+| Sichert | int | isys\_catg\_backup\_list | isys\_catg\_backup\_list\_\_isys\_obj\_\_id |     |     |
+| Art des Backups | int | isys\_catg\_backup\_list | isys\_catg\_backup\_list\_\_isys\_backup\_type\_\_id | isys\_backup\_type | isys\_backup\_type\_\_id |
+| Zyklus | int | isys\_catg\_backup\_list | isys\_catg\_backup\_list\_\_isys\_backup\_cycle\_\_id | isys\_backup\_cycle | isys\_backup\_cycle\_\_id |
+| path for zu sichernde Daten | text | isys\_catg\_backup\_list | isys\_catg\_backup\_list\_\_path\_to\_save |     |     |
 | Description | text\_area | isys\_catg\_backup\_list | isys\_catg\_backup\_list\_\_description |     |     |
 
-### Group memberships
+### Gruppenmitgliedschaft
 
-#### Tabelle: isys\_cats\_group\_list
+#### table: isys\_cats\_group\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Group | int | isys\_cats\_group\_list | isys\_cats\_group\_list\_\_isys\_obj\_\_id |     |     |
+| Gruppe | int | isys\_cats\_group\_list | isys\_cats\_group\_list\_\_isys\_obj\_\_id |     |     |
 | Description | text\_area | isys\_cats\_group\_list | isys\_cats\_group\_list\_\_description |     |     |
 
-### Service components
+### Service Komponenten
 
-#### Tabelle: isys\_catg\_its\_components\_list
+#### table: isys\_catg\_its\_components\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Assigned object | int | isys\_catg\_its\_components\_list | isys\_catg\_its\_components\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
-| Object type | int | itsc | isys\_obj\_\_isys\_obj\_type\_\_id |     |     |
+| Zugewiesenes object | int | isys\_catg\_its\_components\_list | isys\_catg\_its\_components\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
+| objecttyp | int | itsc | isys\_obj\_\_isys\_obj\_type\_\_id |     |     |
 
-### Service Logbook
+### Service logbook
 
-#### Tabelle: isys\_catg\_logb\_list
+#### table: isys\_catg\_logb\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Date | date\_time | isys\_catg\_logb\_list | isys\_logbook\_\_date |     |     |
-| Object | int | isys\_catg\_logb\_list | isys\_catg\_logb\_list\_\_isys\_obj\_\_id |     |     |
-| Event | int | isys\_catg\_logb\_list | isys\_logbook\_\_isys\_logbook\_event\_\_id | isys\_logbook\_event | isys\_logbook\_event\_\_id |
-| Source | int | isys\_catg\_logb\_list | isys\_logbook\_\_isys\_logbook\_source\_\_id |     |     |
-| User | int | isys\_catg\_logb\_list | isys\_logbook\_\_isys\_obj\_\_id |     |     |
-| Object type | text | isys\_catg\_logb\_list | isys\_logbook\_\_obj\_type\_static |     |     |
-| Category | text | isys\_catg\_logb\_list | isys\_logbook\_\_category\_static |     |     |
-| Alarm level | text | isys\_catg\_logb\_list | isys\_logbook\_\_isys\_logbook\_level\_\_id | isys\_logbook\_level | isys\_logbook\_level\_\_id |
-| User | text | isys\_catg\_logb\_list | isys\_logbook\_\_user\_name\_static |     |     |
-| Event | text | isys\_catg\_logb\_list | isys\_logbook\_\_event\_static |     |     |
-| Comment | text | isys\_catg\_logb\_list | isys\_logbook\_\_comment |     |     |
-| Changes | text | isys\_catg\_logb\_list | isys\_logbook\_\_changes |     |     |
+| Datum | date\_time | isys\_catg\_logb\_list | isys\_logbook\_\_date |     |     |
+| object | int | isys\_catg\_logb\_list | isys\_catg\_logb\_list\_\_isys\_obj\_\_id |     |     |
+| Ereignis | int | isys\_catg\_logb\_list | isys\_logbook\_\_isys\_logbook\_event\_\_id | isys\_logbook\_event | isys\_logbook\_event\_\_id |
+| Quelle | int | isys\_catg\_logb\_list | isys\_logbook\_\_isys\_logbook\_source\_\_id |     |     |
+| user | int | isys\_catg\_logb\_list | isys\_logbook\_\_isys\_obj\_\_id |     |     |
+| objecttyp | text | isys\_catg\_logb\_list | isys\_logbook\_\_obj\_type\_static |     |     |
+| category | text | isys\_catg\_logb\_list | isys\_logbook\_\_category\_static |     |     |
+| Alarmlevel | text | isys\_catg\_logb\_list | isys\_logbook\_\_isys\_logbook\_level\_\_id | isys\_logbook\_level | isys\_logbook\_level\_\_id |
+| user | text | isys\_catg\_logb\_list | isys\_logbook\_\_user\_name\_static |     |     |
+| Ereignis | text | isys\_catg\_logb\_list | isys\_logbook\_\_event\_static |     |     |
+| Kommentar | text | isys\_catg\_logb\_list | isys\_logbook\_\_comment |     |     |
+| Changeen | text | isys\_catg\_logb\_list | isys\_logbook\_\_changes |     |     |
 | Description | text\_area | isys\_catg\_logb\_list | isys\_catg\_logb\_list\_\_description |     |     |
 
-### Service assignment
+### Servicezuweisung
 
-#### Tabelle: isys\_catg\_its\_components\_list
+#### table: isys\_catg\_its\_components\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
 | Service | int | isys\_catg\_its\_components\_list | isys\_catg\_its\_components\_list\_\_isys\_obj\_\_id |     |     |
 | SYSID | text | isys\_catg\_its\_components\_list | isys\_obj\_\_sysid |     |     |
 
-### Relationship
+### Beziehungen
 
-#### Tabelle: isys\_catg\_relation\_list
+#### table: isys\_catg\_relation\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
 | Object 1 | int | masterobj | isys\_catg\_relation\_list\_\_isys\_obj\_\_id\_\_master | isys\_obj | isys\_obj\_\_id |
 | Object 2 | int | slaveobj | isys\_catg\_relation\_list\_\_isys\_obj\_\_id\_\_slave | isys\_obj | isys\_obj\_\_id |
-| Relation type | int | isys\_catg\_relation\_list | isys\_catg\_relation\_list\_\_isys\_relation\_type\_\_id | isys\_relation\_type | isys\_relation\_type\_\_id |
-| Weighting | int | isys\_catg\_relation\_list | isys\_catg\_relation\_list\_\_isys\_weighting\_\_id | isys\_weighting | isys\_weighting\_\_id |
+| Beziehungsart | int | isys\_catg\_relation\_list | isys\_catg\_relation\_list\_\_isys\_relation\_type\_\_id | isys\_relation\_type | isys\_relation\_type\_\_id |
+| Gewichtung | int | isys\_catg\_relation\_list | isys\_catg\_relation\_list\_\_isys\_weighting\_\_id | isys\_weighting | isys\_weighting\_\_id |
 | Service | int | isys\_catg\_relation\_list | isys\_catg\_relation\_list\_\_isys\_obj\_\_id\_\_itservice | isys\_obj | isys\_obj\_\_id |
 | Description | text\_area | isys\_catg\_relation\_list | isys\_catg\_relation\_list\_\_description |     |     |
 
-### Service Relation
+### Service Beziehung
 
-#### Tabelle: isys\_catg\_relation\_list
+#### table: isys\_catg\_relation\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
 | Object 1 | int | masterobj | isys\_catg\_relation\_list\_\_isys\_obj\_\_id\_\_master | isys\_obj | isys\_obj\_\_id |
 | Object 2 | int | slaveobj | isys\_catg\_relation\_list\_\_isys\_obj\_\_id\_\_slave | isys\_obj | isys\_obj\_\_id |
-| Relation type | int | isys\_catg\_relation\_list | isys\_catg\_relation\_list\_\_isys\_relation\_type\_\_id | isys\_relation\_type | isys\_relation\_type\_\_id |
-| Weighting | int | isys\_catg\_relation\_list | isys\_catg\_relation\_list\_\_isys\_weighting\_\_id | isys\_weighting | isys\_weighting\_\_id |
+| Beziehungsart | int | isys\_catg\_relation\_list | isys\_catg\_relation\_list\_\_isys\_relation\_type\_\_id | isys\_relation\_type | isys\_relation\_type\_\_id |
+| Gewichtung | int | isys\_catg\_relation\_list | isys\_catg\_relation\_list\_\_isys\_weighting\_\_id | isys\_weighting | isys\_weighting\_\_id |
 | Service | int | isys\_catg\_relation\_list | isys\_catg\_relation\_list\_\_isys\_obj\_\_id\_\_itservice | isys\_obj | isys\_obj\_\_id |
 | Description | text\_area | isys\_catg\_relation\_list | isys\_catg\_relation\_list\_\_description |     |     |
 
-### Database assignment
+### Datenbankzuweisung
 
-#### Tabelle: isys\_cats\_database\_access\_list
+#### table: isys\_cats\_database\_access\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Target schema | int | isys\_cats\_database\_access\_list | isys\_cats\_database\_access\_list\_\_isys\_obj\_\_id |     |     |
-| Software runs on | int | isys\_cats\_database\_access\_list | isys\_catg\_relation\_list\_\_isys\_obj\_\_id\_\_slave |     |     |
+| usedes database schema | int | isys\_cats\_database\_access\_list | isys\_cats\_database\_access\_list\_\_isys\_obj\_\_id |     |     |
+| Software runs auf | int | isys\_cats\_database\_access\_list | isys\_catg\_relation\_list\_\_isys\_obj\_\_id\_\_slave |     |     |
 | Description | text\_area | isys\_cats\_database\_access\_list | isys\_cats\_database\_access\_list\_\_description |     |     |
 
-### Service Type
+### Service Typ
 
-#### Tabelle: isys\_catg\_its\_type\_list
+#### table: isys\_catg\_its\_type\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Type | int | isys\_catg\_its\_type\_list | isys\_catg\_its\_type\_list\_\_isys\_its\_type\_\_id | isys\_its\_type | isys\_its\_type\_\_id |
+| Typ | int | isys\_catg\_its\_type\_list | isys\_catg\_its\_type\_list\_\_isys\_its\_type\_\_id | isys\_its\_type | isys\_its\_type\_\_id |
 | Description | text\_area | isys\_catg\_its\_type\_list | isys\_catg\_its\_type\_list\_\_description |     |     |
 
-### Passwords
+### passwords
 
-#### Tabelle: isys\_catg\_password\_list
+#### table: isys\_catg\_password\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_catg\_password\_list | isys\_catg\_password\_list\_\_title |     |     |
-| Username | text | isys\_catg\_password\_list | isys\_catg\_password\_list\_\_username |     |     |
-| Password | text | isys\_catg\_password\_list | isys\_catg\_password\_list\_\_password |     |     |
+| designation | text | isys\_catg\_password\_list | isys\_catg\_password\_list\_\_title |     |     |
+| username | text | isys\_catg\_password\_list | isys\_catg\_password\_list\_\_username |     |     |
+| password | text | isys\_catg\_password\_list | isys\_catg\_password\_list\_\_password |     |     |
 | Description | text\_area | isys\_catg\_password\_list | isys\_catg\_password\_list\_\_description |     |     |
 
 ### SOA-Stacks
 
-#### Tabelle: isys\_catg\_soa\_stacks\_list
+#### table: isys\_catg\_soa\_stacks\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_catg\_soa\_stacks\_list | isys\_catg\_soa\_stacks\_list\_\_title |     |     |
+| designation | text | isys\_catg\_soa\_stacks\_list | isys\_catg\_soa\_stacks\_list\_\_title |     |     |
 | SOA-Stacks | int | isys\_catg\_soa\_stacks\_list | isys\_connection\_\_isys\_obj\_\_id |     |     |
-| SOA-Component | int | isys\_catg\_soa\_stacks\_list | isys\_catg\_soa\_stacks\_list\_\_id |     |     |
+| SOA-Komponente | int | isys\_catg\_soa\_stacks\_list | isys\_catg\_soa\_stacks\_list\_\_id |     |     |
 | Service | int | isys\_catg\_soa\_stacks\_list | isys\_connection\_\_isys\_obj\_\_id |     |     |
 | Description | text\_area | isys\_catg\_soa\_stacks\_list | isys\_catg\_soa\_stacks\_list\_\_description |     |     |
 
-### Status-Planning
+### Status-Planung
 
-#### Tabelle: isys\_catg\_planning\_list
+#### table: isys\_catg\_planning\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| CMDB status | int | isys\_catg\_planning\_list | isys\_catg\_planning\_list\_\_isys\_cmdb\_status\_\_id | isys\_cmdb\_status | isys\_cmdb\_status\_\_id |
-| Validity period from | date | isys\_catg\_planning\_list | isys\_catg\_planning\_list\_\_start |     |     |
-| Validity period to | date | isys\_catg\_planning\_list | isys\_catg\_planning\_list\_\_end |     |     |
+| CMDB-Status | int | isys\_catg\_planning\_list | isys\_catg\_planning\_list\_\_isys\_cmdb\_status\_\_id | isys\_cmdb\_status | isys\_cmdb\_status\_\_id |
+| validity period von | date | isys\_catg\_planning\_list | isys\_catg\_planning\_list\_\_start |     |     |
+| validity period bis | date | isys\_catg\_planning\_list | isys\_catg\_planning\_list\_\_end |     |     |
 | Description | text\_area | isys\_catg\_planning\_list | isys\_catg\_planning\_list\_\_description |     |     |
 
-### Assigned cards
+### Linked Karten
 
-#### Tabelle: isys\_catg\_assigned\_cards\_list
+#### table: isys\_catg\_assigned\_cards\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Assigned cards | int | isys\_catg\_assigned\_cards\_list | isys\_catg\_assigned\_cards\_list\_\_isys\_obj\_\_id\_\_card |     |     |
+| Linked Karten | int | isys\_catg\_assigned\_cards\_list | isys\_catg\_assigned\_cards\_list\_\_isys\_obj\_\_id\_\_card |     |     |
 
-### SIM card
+### SIM-Karte
 
-#### Tabelle: isys\_catg\_sim\_card\_list
+#### table: isys\_catg\_sim\_card\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Type | int | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_isys\_cp\_contract\_type\_\_id | isys\_cp\_contract\_type | isys\_cp\_contract\_type\_\_id |
-| Assigned mobile phone | int | isys\_catg\_assigned\_cards\_list | isys\_catg\_assigned\_cards\_list\_\_isys\_obj\_\_id |     |     |
-| Network provider | int | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_isys\_network\_provider\_\_id | isys\_network\_provider | isys\_network\_provider\_\_id |
-| Telephone rate | int | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_isys\_telephone\_rate\_\_id | isys\_telephone\_rate | isys\_telephone\_rate\_\_id |
-| Start Date | date | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_start\_date |     |     |
-| End Date | date | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_end\_date |     |     |
-| Date for Notification | date | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_threshold\_date |     |     |
-| Card Number | text | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_card\_number |     |     |
-| Phone Number | text | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_phone\_number |     |     |
-| Client Number | text | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_client\_number |     |     |
+| Typ | int | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_isys\_cp\_contract\_type\_\_id | isys\_cp\_contract\_type | isys\_cp\_contract\_type\_\_id |
+| linkedes Mobiltelefon | int | isys\_catg\_assigned\_cards\_list | isys\_catg\_assigned\_cards\_list\_\_isys\_obj\_\_id |     |     |
+| Netzanbieter | int | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_isys\_network\_provider\_\_id | isys\_network\_provider | isys\_network\_provider\_\_id |
+| Tarif | int | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_isys\_telephone\_rate\_\_id | isys\_telephone\_rate | isys\_telephone\_rate\_\_id |
+| Anfangsdatum | date | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_start\_date |     |     |
+| Enddatum | date | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_end\_date |     |     |
+| date for notification | date | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_threshold\_date |     |     |
+| Kartennummer | text | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_card\_number |     |     |
+| Telefonnummer | text | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_phone\_number |     |     |
+| Kundennummer | text | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_client\_number |     |     |
 | Pin | text | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_pin |     |     |
 | Pin 2 | text | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_pin2 |     |     |
 | PUK | text | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_puk |     |     |
 | PUK2 | text | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_puk2 |     |     |
 | Serial number | text | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_serial\_number |     |     |
-| Twin Card | int | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_twincard |     |     |
-| Card Number (Twin Card) | text | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_tc\_card\_number |     |     |
-| Phone Number (Twin Card) | text | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_tc\_phone\_number |     |     |
-| Pin (Twin Card) | text | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_tc\_pin |     |     |
-| Pin 2 (Twin Card) | text | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_tc\_pin2 |     |     |
-| PUK (Twin Card) | text | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_tc\_puk |     |     |
-| PUK2 (Twin Card) | text | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_tc\_puk2 |     |     |
-| Serial number (Twin Card) | text | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_tc\_serial\_number |     |     |
-| Description (Twin Card) (Twin Card) | text\_area | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_optional\_info |     |     |
+| Twin-Karte | int | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_twincard |     |     |
+| Kartennummer (Twin-Karte) | text | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_tc\_card\_number |     |     |
+| Telefonnummer (Twin-Karte) | text | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_tc\_phone\_number |     |     |
+| Pin (Twin-Karte) | text | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_tc\_pin |     |     |
+| Pin 2 (Twin-Karte) | text | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_tc\_pin2 |     |     |
+| PUK (Twin-Karte) | text | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_tc\_puk |     |     |
+| PUK2 (Twin-Karte) | text | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_tc\_puk2 |     |     |
+| Serial number (Twin-Karte) | text | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_tc\_serial\_number |     |     |
+| Description (Twin-Karte) (Twin-Karte) | text\_area | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_optional\_info |     |     |
 | Description | text\_area | isys\_catg\_sim\_card\_list | isys\_catg\_sim\_card\_list\_\_description |     |     |
 
-### TSI service
+### TSI-Service
 
-#### Tabelle: isys\_catg\_tsi\_service\_list
+#### table: isys\_catg\_tsi\_service\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| TSI service ID | text | isys\_catg\_tsi\_service\_list | isys\_catg\_tsi\_service\_list\_\_tsi\_service\_id |     |     |
+| TSI-Service ID | text | isys\_catg\_tsi\_service\_list | isys\_catg\_tsi\_service\_list\_\_tsi\_service\_id |     |     |
 | Description | text\_area | isys\_catg\_tsi\_service\_list | isys\_catg\_tsi\_service\_list\_\_description |     |     |
 
-### Audit
+### audit
 
-#### Tabelle: isys\_catg\_audit\_list
+#### table: isys\_catg\_audit\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_catg\_audit\_list | isys\_catg\_audit\_list\_\_title |     |     |
-| Type | int | isys\_catg\_audit\_list | isys\_catg\_audit\_list\_\_type | isys\_catg\_audit\_type | isys\_catg\_audit\_type\_\_id |
-| Commission | int | isys\_catg\_audit\_list | isys\_catg\_audit\_list\_\_commission | isys\_contact | isys\_contact\_\_id |
-| Responsible | int | isys\_catg\_audit\_list | isys\_catg\_audit\_list\_\_responsible | isys\_contact | isys\_contact\_\_id |
-| Involved | int | isys\_catg\_audit\_list | isys\_catg\_audit\_list\_\_involved | isys\_contact | isys\_contact\_\_id |
-| Manufacturer's period | date | isys\_catg\_audit\_list | isys\_catg\_audit\_list\_\_period\_manufacturer |     |     |
-| Operator's period | date | isys\_catg\_audit\_list | isys\_catg\_audit\_list\_\_period\_operator |     |     |
-| Applied | date | isys\_catg\_audit\_list | isys\_catg\_audit\_list\_\_apply |     |     |
+| designation | text | isys\_catg\_audit\_list | isys\_catg\_audit\_list\_\_title |     |     |
+| Typ | int | isys\_catg\_audit\_list | isys\_catg\_audit\_list\_\_type | isys\_catg\_audit\_type | isys\_catg\_audit\_type\_\_id |
+| Beauftragt | int | isys\_catg\_audit\_list | isys\_catg\_audit\_list\_\_commission | isys\_contact | isys\_contact\_\_id |
+| Verantwortlich | int | isys\_catg\_audit\_list | isys\_catg\_audit\_list\_\_responsible | isys\_contact | isys\_contact\_\_id |
+| Beteiligt | int | isys\_catg\_audit\_list | isys\_catg\_audit\_list\_\_involved | isys\_contact | isys\_contact\_\_id |
+| Herstellerfrist | date | isys\_catg\_audit\_list | isys\_catg\_audit\_list\_\_period\_manufacturer |     |     |
+| Betreiberfrist | date | isys\_catg\_audit\_list | isys\_catg\_audit\_list\_\_period\_operator |     |     |
+| Performed | date | isys\_catg\_audit\_list | isys\_catg\_audit\_list\_\_apply |     |     |
 | Result | text\_area | isys\_catg\_audit\_list | isys\_catg\_audit\_list\_\_result |     |     |
-| Faults | text\_area | isys\_catg\_audit\_list | isys\_catg\_audit\_list\_\_fault |     |     |
-| Incidents | text\_area | isys\_catg\_audit\_list | isys\_catg\_audit\_list\_\_incident |     |     |
+| incidenten | text\_area | isys\_catg\_audit\_list | isys\_catg\_audit\_list\_\_fault |     |     |
+| incidents | text\_area | isys\_catg\_audit\_list | isys\_catg\_audit\_list\_\_incident |     |     |
 | Description | text\_area | isys\_catg\_audit\_list | isys\_catg\_audit\_list\_\_description |     |     |
 
-### Logical location
+### Logischer Standort
 
-#### Tabelle: isys\_catg\_logical\_unit\_list
+#### table: isys\_catg\_logical\_unit\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Parent object | int | isys\_catg\_logical\_unit\_list | isys\_catg\_logical\_unit\_list\_\_isys\_obj\_\_id\_\_parent |     |     |
+| Viageordnetes object | int | isys\_catg\_logical\_unit\_list | isys\_catg\_logical\_unit\_list\_\_isys\_obj\_\_id\_\_parent |     |     |
 | Description | text\_area | isys\_catg\_logical\_unit\_list | isys\_catg\_logical\_unit\_list\_\_description |     |     |
 
-### Workplace components
+### Zugewiesene end devices
 
-#### Tabelle: isys\_catg\_virtual\_list
+#### table: isys\_catg\_virtual\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Object | int | isys\_catg\_virtual\_list | isys\_catg\_logical\_unit\_list\_\_isys\_obj\_\_id | isys\_obj | isys\_obj\_\_id |
+| object | int | isys\_catg\_virtual\_list | isys\_catg\_logical\_unit\_list\_\_isys\_obj\_\_id | isys\_obj | isys\_obj\_\_id |
 
-### Assigned workstation
+### Zugewiesener Arbeitsplatz
 
-#### Tabelle: isys\_catg\_logical\_unit\_list
+#### table: isys\_catg\_logical\_unit\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Parent object | int | isys\_catg\_logical\_unit\_list | isys\_catg\_logical\_unit\_list\_\_isys\_obj\_\_id\_\_parent |     |     |
+| Viageordnetes object | int | isys\_catg\_logical\_unit\_list | isys\_catg\_logical\_unit\_list\_\_isys\_obj\_\_id\_\_parent |     |     |
 | Description | text\_area | isys\_catg\_logical\_unit\_list | isys\_catg\_logical\_unit\_list\_\_description |     |     |
 
-### Assigned Workplaces
+### Zugewiesene workstations
 
-#### Tabelle: isys\_catg\_logical\_unit\_list
+#### table: isys\_catg\_logical\_unit\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Assigned Workplaces | int | isys\_catg\_logical\_unit\_list | isys\_catg\_logical\_unit\_list\_\_isys\_obj\_\_id |     |     |
+| Zugewiesene workstations | int | isys\_catg\_logical\_unit\_list | isys\_catg\_logical\_unit\_list\_\_isys\_obj\_\_id |     |     |
 | Description | text\_area | isys\_catg\_logical\_unit\_list | isys\_catg\_logical\_unit\_list\_\_description |     |     |
 
-### Contract assignment
+### Vertragszuweisung
 
-#### Tabelle: isys\_catg\_contract\_assignment\_list
+#### table: isys\_catg\_contract\_assignment\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Assigned contract | int | isys\_catg\_contract\_assignment\_list | isys\_catg\_contract\_assignment\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
-| Contract begin | date | isys\_catg\_contract\_assignment\_list | isys\_catg\_contract\_assignment\_list\_\_contract\_start |     |     |
-| Contract end | date | isys\_catg\_contract\_assignment\_list | isys\_catg\_contract\_assignment\_list\_\_contract\_end |     |     |
-| Reaction rate | int | isys\_catg\_contract\_assignment\_list | isys\_catg\_contract\_assignment\_list\_\_reaction\_rate\_\_id | isys\_contract\_reaction\_rate | isys\_contract\_reaction\_rate\_\_id |
+| Zugewiesener Vertrag | int | isys\_catg\_contract\_assignment\_list | isys\_catg\_contract\_assignment\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
+| Vertragsbeginn | date | isys\_catg\_contract\_assignment\_list | isys\_catg\_contract\_assignment\_list\_\_contract\_start |     |     |
+| Vertragsende | date | isys\_catg\_contract\_assignment\_list | isys\_catg\_contract\_assignment\_list\_\_contract\_end |     |     |
+| Reaktionszeiten | int | isys\_catg\_contract\_assignment\_list | isys\_catg\_contract\_assignment\_list\_\_reaction\_rate\_\_id | isys\_contract\_reaction\_rate | isys\_contract\_reaction\_rate\_\_id |
 | Description | text\_area | isys\_catg\_contract\_assignment\_list | isys\_catg\_contract\_assignment\_list\_\_description |     |     |
 
 ### Stacking
 
-#### Tabelle: isys\_catg\_stacking\_list
+#### table: isys\_catg\_stacking\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
 | Chassis | int | isys\_catg\_stacking\_list | isys\_catg\_stacking\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
 
-### E-Mail addresses
+### E-Mail Adressen
 
-#### Tabelle: isys\_catg\_mail\_addresses\_list
+#### table: isys\_catg\_mail\_addresses\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| E-mail address | text | isys\_catg\_mail\_addresses\_list | isys\_catg\_mail\_addresses\_list\_\_title |     |     |
-| Primary email address | text | isys\_catg\_mail\_addresses\_list | isys\_catg\_mail\_addresses\_list\_\_title |     |     |
+| E-Mail Adresse | text | isys\_catg\_mail\_addresses\_list | isys\_catg\_mail\_addresses\_list\_\_title |     |     |
+| Primarye E-Mail-Adresse | text | isys\_catg\_mail\_addresses\_list | isys\_catg\_mail\_addresses\_list\_\_title |     |     |
 | Primary | int | isys\_catg\_mail\_addresses\_list | isys\_catg\_mail\_addresses\_list\_\_primary |     |     |
 | Description | text\_area | isys\_catg\_mail\_addresses\_list | isys\_catg\_mail\_addresses\_list\_\_description |     |     |
 
-### CUCM VoIP telephone
+### CUCM VoIP Telefon
 
-#### Tabelle: isys\_catg\_voip\_phone\_list
+#### table: isys\_catg\_voip\_phone\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Device protocol | text | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_device\_protocol |     |     |
+| devicee protocol | text | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_device\_protocol |     |     |
 | Description | text | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_description2 |     |     |
-| Device pool | text | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_device\_pool |     |     |
-| Common device configuration | text | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_common\_device\_configuration |     |     |
-| Button template | int | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_isys\_voip\_phone\_button\_template\_\_id | isys\_voip\_phone\_button\_template | isys\_voip\_phone\_button\_template\_\_id |
-| Softkey template | int | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_isys\_voip\_phone\_softkey\_template\_\_id | isys\_voip\_phone\_softkey\_template | isys\_voip\_phone\_softkey\_template\_\_id |
-| Common device profile | text | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_common\_profile |     |     |
-| Calling search space | text | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_calling\_search\_space |     |     |
-| AAR calling search space | text | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_aar\_calling\_search\_space |     |     |
-| Media resource group list | text | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_media\_resource\_group\_list |     |     |
-| User MOH audio source | text | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_user\_hold\_moh\_audio\_source |     |     |
-| Network MOH Audioquelle | text | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_network\_hold\_moh\_audio\_source |     |     |
-| Location | text | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_location |     |     |
-| AAR group | text | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_aar\_group |     |     |
-| User locale | text | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_user\_locale |     |     |
-| Network locale | text | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_network\_locale |     |     |
-| Built in bridge | text | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_built\_in\_bridge |     |     |
-| Privacy | text | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_privacy |     |     |
+| devicee-Pool | text | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_device\_pool |     |     |
+| Gemeinsame deviceekonfiguration | text | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_common\_device\_configuration |     |     |
+| Tastenbelegung | int | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_isys\_voip\_phone\_button\_template\_\_id | isys\_voip\_phone\_button\_template | isys\_voip\_phone\_button\_template\_\_id |
+| Programmable key assignment (softkeys) | int | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_isys\_voip\_phone\_softkey\_template\_\_id | isys\_voip\_phone\_softkey\_template | isys\_voip\_phone\_softkey\_template\_\_id |
+| Gemeinsame deviceeprofil | text | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_common\_profile |     |     |
+| Anrufauswahlzone | text | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_calling\_search\_space |     |     |
+| AAR Anrufauswahlzone | text | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_aar\_calling\_search\_space |     |     |
+| Medienressourcen Gruppenliste | text | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_media\_resource\_group\_list |     |     |
+| user MOH Audioquelle | text | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_user\_hold\_moh\_audio\_source |     |     |
+| Netzwerk MOH Audioquelle | text | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_network\_hold\_moh\_audio\_source |     |     |
+| Standort | text | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_location |     |     |
+| AAR Gruppe | text | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_aar\_group |     |     |
+| user-Gebietsschema | text | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_user\_locale |     |     |
+| Netzwerk Gebietsschema | text | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_network\_locale |     |     |
+| Eingebaute network bridge | text | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_built\_in\_bridge |     |     |
+| privacy | text | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_privacy |     |     |
 | Device Mobility Mode | text | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_device\_mobility\_mode |     |     |
-| Owner user ID | text | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_owner\_user\_id |     |     |
+| owner User-ID | text | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_owner\_user\_id |     |     |
 | Phone suite | text | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_phone\_suite |     |     |
-| Service provisioning | text | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_services\_provisioning |     |     |
+| Service-Bereitstellung | text | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_services\_provisioning |     |     |
 | Load name | text | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_load\_name |     |     |
 | Description | text\_area | isys\_catg\_voip\_phone\_list | isys\_catg\_voip\_phone\_list\_\_description |     |     |
 
-### CUCM VoIP line
+### CUCM VoIP Leitung
 
-#### Tabelle: isys\_catg\_voip\_phone\_line\_list
+#### table: isys\_catg\_voip\_phone\_line\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Directory number | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_directory\_number |     |     |
-| Route partition | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_route\_partition |     |     |
+| directory-Nummer | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_directory\_number |     |     |
+| Route-Partition | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_route\_partition |     |     |
 | Description | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_description2 |     |     |
-| Alerting name | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_alerting\_name |     |     |
-| ASCII Alerting name | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_ascii\_alerting\_name |     |     |
-| Allow Control of Device from CTI | int | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_allow\_cti\_control |     |     |
-| Associated devices | int | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_id |     |     |
-| Voice mail profile | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_voice\_mail\_profile |     |     |
-| Calling search space | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_calling\_search\_space |     |     |
-| Presence group | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_presence\_group |     |     |
-| User hold MOH audio source | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_user\_hold\_moh\_audio\_source |     |     |
-| Network hold MOH audio source | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_network\_hold\_moh\_audio\_source |     |     |
-| Auto answer | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_auto\_answer |     |     |
-| Call forward all | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_call\_forward\_all |     |     |
-| Secondary Calling Search Space for Forward All | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_sec\_calling\_search\_space |     |     |
-| Forward busy internal | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_forward\_busy\_internal |     |     |
-| Forward busy external | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_forward\_busy\_external |     |     |
-| Forward no answer internal | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_forward\_no\_answer\_internal |     |     |
-| Forward no answer external | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_forward\_no\_answer\_external |     |     |
-| Forward no coverage internal | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_forward\_no\_coverage\_internal |     |     |
-| Forward no coverage external | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_forward\_no\_coverage\_external |     |     |
-| Forward on CTI failure | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_forward\_on\_cti\_fail |     |     |
-| Forward unregistered internal | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_forward\_unregistered\_internal |     |     |
-| Forward unregistered external | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_forward\_unregistered\_external |     |     |
-| No answer ring duration | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_no\_answer\_ring\_duration |     |     |
-| Call pickup group | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_call\_pickup\_group |     |     |
+| Alarmierung Name | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_alerting\_name |     |     |
+| ASCII Alarmierung Name | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_ascii\_alerting\_name |     |     |
+| Telefon Steuerung via CTI erlauben | int | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_allow\_cti\_control |     |     |
+| Verbundene devicee | int | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_id |     |     |
+| Voice-Mail Profil | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_voice\_mail\_profile |     |     |
+| Anrufauswahlzone | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_calling\_search\_space |     |     |
+| presence group | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_presence\_group |     |     |
+| user MOH Audioquelle | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_user\_hold\_moh\_audio\_source |     |     |
+| Netzwerk MOH Audioquelle | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_network\_hold\_moh\_audio\_source |     |     |
+| Automatische Antwort | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_auto\_answer |     |     |
+| Alle Anrufe umleiten | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_call\_forward\_all |     |     |
+| Secondary Anrufauswahlzone for Anrufumleitung | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_sec\_calling\_search\_space |     |     |
+| Umleiten bei besetzt intern | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_forward\_busy\_internal |     |     |
+| Umleiten bei besetzt extern | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_forward\_busy\_external |     |     |
+| Umleiten bei keiner Antwort intern | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_forward\_no\_answer\_internal |     |     |
+| Umleiten bei keiner Antwort extern | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_forward\_no\_answer\_external |     |     |
+| Umleiten bei keiner Berichterstattung intern | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_forward\_no\_coverage\_internal |     |     |
+| Umleiten bei keiner Berichterstattung extern | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_forward\_no\_coverage\_external |     |     |
+| Umleitung bei CTI Fehler | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_forward\_on\_cti\_fail |     |     |
+| Umleitung bei unregistriert intern | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_forward\_unregistered\_internal |     |     |
+| Umleitung bei unregistriert extern | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_forward\_unregistered\_external |     |     |
+| Klingeldauer bei keiner Antwort | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_no\_answer\_ring\_duration |     |     |
+| Anrufvianahmegruppe | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_call\_pickup\_group |     |     |
 | Display | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_display |     |     |
-| ASCII display | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_ascii\_display |     |     |
-| Line text label | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_line\_text\_label |     |     |
-| ASCII Line text label | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_ascii\_line\_text\_label |     |     |
+| ASCII Display | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_ascii\_display |     |     |
+| Line title | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_line\_text\_label |     |     |
+| ASCII line title | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_ascii\_line\_text\_label |     |     |
 | Visual message waiting indicator policy | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_visual\_message\_indicator |     |     |
 | Audible message waiting indicator policy | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_audible\_message\_indicator |     |     |
-| Ring settings (Phone idle) | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_ring\_settings\_idle |     |     |
-| Ring settings (Phone active) | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_ring\_settings\_active |     |     |
+| Klingel-setting (Telefon im Leerlauf) | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_ring\_settings\_idle |     |     |
+| Klingel-setting (Telefon Aktiv) | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_ring\_settings\_active |     |     |
 | Call pickup group audio alert setting (phone idle) | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_call\_pickup\_group\_idle |     |     |
 | Call pickup group audio alert setting (phone active) | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_call\_pickup\_group\_active |     |     |
-| Recording option | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_recording\_option |     |     |
-| Recording profile | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_recording\_profile |     |     |
+| Aufnahmeoption | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_recording\_option |     |     |
+| Aufnahmeprofil | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_recording\_profile |     |     |
 | Monitoring calling search space | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_monitoring\_css |     |     |
-| Log missed calls | int | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_log\_missed\_calls |     |     |
-| External phone number mask | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_external\_phone\_number\_mask |     |     |
-| Maximum number of calls | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_max\_number\_of\_calls |     |     |
-| "Busy" trigger | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_busy\_trigger |     |     |
-| Caller name | int | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_caller\_name |     |     |
-| Caller number | int | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_caller\_number |     |     |
-| Redirected number | int | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_redirected\_number |     |     |
-| Dialed number | int | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_dialed\_number |     |     |
+| Verpasste Anrufe mitloggen | int | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_log\_missed\_calls |     |     |
+| Externe Rufnummer Maske | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_external\_phone\_number\_mask |     |     |
+| Maximale Anzahl an Anrufen | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_max\_number\_of\_calls |     |     |
+| "Besetzt" Trigger | text | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_busy\_trigger |     |     |
+| Name des Anrufers | int | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_caller\_name |     |     |
+| Nummer des Anrufers | int | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_caller\_number |     |     |
+| Umgeleitete Nummer | int | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_redirected\_number |     |     |
+| Selected number | int | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_dialed\_number |     |     |
 | Description | text\_area | isys\_catg\_voip\_phone\_line\_list | isys\_catg\_voip\_phone\_line\_list\_\_description |     |     |
 
-### Telephone/Fax
+### Telefon/Fax
 
-#### Tabelle: isys\_catg\_telephone\_fax\_list
+#### table: isys\_catg\_telephone\_fax\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Type | int | isys\_catg\_telephone\_fax\_list | isys\_catg\_telephone\_fax\_list\_\_isys\_telephone\_fax\_type\_\_id | isys\_telephone\_fax\_type | isys\_telephone\_fax\_type\_\_id |
-| Telephone number | text | isys\_catg\_telephone\_fax\_list | isys\_catg\_telephone\_fax\_list\_\_telephone\_number |     |     |
-| Fax number | text | isys\_catg\_telephone\_fax\_list | isys\_catg\_telephone\_fax\_list\_\_fax\_number |     |     |
-| Extension | text | isys\_catg\_telephone\_fax\_list | isys\_catg\_telephone\_fax\_list\_\_extension |     |     |
-| Pincode | text | isys\_catg\_telephone\_fax\_list | isys\_catg\_telephone\_fax\_list\_\_pincode |     |     |
-| IMEI number | text | isys\_catg\_telephone\_fax\_list | isys\_catg\_telephone\_fax\_list\_\_imei |     |     |
+| Typ | int | isys\_catg\_telephone\_fax\_list | isys\_catg\_telephone\_fax\_list\_\_isys\_telephone\_fax\_type\_\_id | isys\_telephone\_fax\_type | isys\_telephone\_fax\_type\_\_id |
+| Telefonnummer | text | isys\_catg\_telephone\_fax\_list | isys\_catg\_telephone\_fax\_list\_\_telephone\_number |     |     |
+| Faxnummer | text | isys\_catg\_telephone\_fax\_list | isys\_catg\_telephone\_fax\_list\_\_fax\_number |     |     |
+| Nebenstelle | text | isys\_catg\_telephone\_fax\_list | isys\_catg\_telephone\_fax\_list\_\_extension |     |     |
+| Pin-Code | text | isys\_catg\_telephone\_fax\_list | isys\_catg\_telephone\_fax\_list\_\_pincode |     |     |
+| IMEI-Nummer | text | isys\_catg\_telephone\_fax\_list | isys\_catg\_telephone\_fax\_list\_\_imei |     |     |
 | Description | text\_area | isys\_catg\_telephone\_fax\_list | isys\_catg\_telephone\_fax\_list\_\_description |     |     |
 
-### Smart Card Certificate
+### Smartcard Zertifikat
 
-#### Tabelle: isys\_catg\_smartcard\_certificate\_list
+#### table: isys\_catg\_smartcard\_certificate\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Card number | text | isys\_catg\_smartcard\_certificate\_list | isys\_catg\_smartcard\_certificate\_list\_\_cardnumber |     |     |
-| Barring password | text | isys\_catg\_smartcard\_certificate\_list | isys\_catg\_smartcard\_certificate\_list\_\_barring\_password |     |     |
-| PIN no. | text | isys\_catg\_smartcard\_certificate\_list | isys\_catg\_smartcard\_certificate\_list\_\_pin\_number |     |     |
-| Reference | text | isys\_catg\_smartcard\_certificate\_list | isys\_catg\_smartcard\_certificate\_list\_\_reference |     |     |
-| Expires on | date | isys\_catg\_smartcard\_certificate\_list | isys\_catg\_smartcard\_certificate\_list\_\_expires\_on |     |     |
+| Kartennummer | text | isys\_catg\_smartcard\_certificate\_list | isys\_catg\_smartcard\_certificate\_list\_\_cardnumber |     |     |
+| Sperrkennwort | text | isys\_catg\_smartcard\_certificate\_list | isys\_catg\_smartcard\_certificate\_list\_\_barring\_password |     |     |
+| PIN-Nr. | text | isys\_catg\_smartcard\_certificate\_list | isys\_catg\_smartcard\_certificate\_list\_\_pin\_number |     |     |
+| Referenznummer | text | isys\_catg\_smartcard\_certificate\_list | isys\_catg\_smartcard\_certificate\_list\_\_reference |     |     |
+| Runs aus am | date | isys\_catg\_smartcard\_certificate\_list | isys\_catg\_smartcard\_certificate\_list\_\_expires\_on |     |     |
 | Description | text\_area | isys\_catg\_smartcard\_certificate\_list | isys\_catg\_smartcard\_certificate\_list\_\_description |     |     |
 
-### Share Access
+### Freigabenzugriff
 
-#### Tabelle: isys\_catg\_share\_access\_list
+#### table: isys\_catg\_share\_access\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Selected object | int | isys\_catg\_share\_access\_list | isys\_catg\_share\_access\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
+| Selecteds object | int | isys\_catg\_share\_access\_list | isys\_catg\_share\_access\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
 | Mountpoint | text | isys\_catg\_share\_access\_list | isys\_catg\_share\_access\_list\_\_mountpoint |     |     |
-| Share name | int | isys\_catg\_share\_access\_list | isys\_catg\_share\_access\_list\_\_isys\_catg\_shares\_list\_\_id | isys\_catg\_shares\_list | isys\_catg\_shares\_list\_\_id |
+| Freigabename | int | isys\_catg\_share\_access\_list | isys\_catg\_share\_access\_list\_\_isys\_catg\_shares\_list\_\_id | isys\_catg\_shares\_list | isys\_catg\_shares\_list\_\_id |
 | Description | text\_area | isys\_catg\_share\_access\_list | isys\_catg\_share\_access\_list\_\_description |     |     |
 
-### Certificate
+### Zertifikat
 
-#### Tabelle: isys\_catg\_certificate\_list
+#### table: isys\_catg\_certificate\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Type | int | isys\_catg\_certificate\_list | isys\_catg\_certificate\_list\_\_isys\_certificate\_type\_\_id | isys\_certificate\_type | isys\_certificate\_type\_\_id |
-| Creation date | date | isys\_catg\_certificate\_list | isys\_catg\_certificate\_list\_\_created |     |     |
-| Expiration Date | date | isys\_catg\_certificate\_list | isys\_catg\_certificate\_list\_\_expire |     |     |
+| Typ | int | isys\_catg\_certificate\_list | isys\_catg\_certificate\_list\_\_isys\_certificate\_type\_\_id | isys\_certificate\_type | isys\_certificate\_type\_\_id |
+| Erstelldatum | date | isys\_catg\_certificate\_list | isys\_catg\_certificate\_list\_\_created |     |     |
+| Ablaufdatum | date | isys\_catg\_certificate\_list | isys\_catg\_certificate\_list\_\_expire |     |     |
 | Common Name | text | isys\_catg\_certificate\_list | isys\_catg\_certificate\_list\_\_common\_name |     |     |
 | Description | text\_area | isys\_catg\_certificate\_list | isys\_catg\_certificate\_list\_\_description |     |     |
 
 ### SLA
 
-#### Tabelle: isys\_catg\_sla\_list
+#### table: isys\_catg\_sla\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
 | Service-ID | text | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_service\_id |     |     |
-| SLA service level | int | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_service\_level |     |     |
-| SLA service level (Dialog) | int | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_isys\_sla\_service\_level\_\_id | isys\_sla\_service\_level | isys\_sla\_service\_level\_\_id |
-| Weekday | int | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_days |     |     |
-| Monday | text | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_monday\_time |     |     |
-| Tuesday | text | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_tuesday\_time |     |     |
-| Wednesday | text | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_wednesday\_time |     |     |
-| Thursday | text | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_thursday\_time |     |     |
-| Friday | text | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_friday\_time |     |     |
-| Saturday | text | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_saturday\_time |     |     |
-| Sunday | text | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_sunday\_time |     |     |
-| Reaction time | int | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_reaction\_time |     |     |
-| Reaktion time unit | int | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_reaction\_time\_unit | isys\_unit\_of\_time | isys\_unit\_of\_time\_\_id |
-| Recovery time | int | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_recovery\_time |     |     |
-| Recovery time unit | int | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_recovery\_time\_unit | isys\_unit\_of\_time | isys\_unit\_of\_time\_\_id |
-| Calendar | int | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_isys\_calendar\_\_id | isys\_calendar | isys\_calendar\_\_id |
+| SLA Servicelevel | int | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_service\_level |     |     |
+| SLA Servicelevel (Dialog) | int | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_isys\_sla\_service\_level\_\_id | isys\_sla\_service\_level | isys\_sla\_service\_level\_\_id |
+| Wochentag | int | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_days |     |     |
+| Montag | text | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_monday\_time |     |     |
+| Dienstag | text | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_tuesday\_time |     |     |
+| Mittwoch | text | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_wednesday\_time |     |     |
+| Donnerstag | text | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_thursday\_time |     |     |
+| Freitag | text | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_friday\_time |     |     |
+| Samstag | text | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_saturday\_time |     |     |
+| Sonntag | text | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_sunday\_time |     |     |
+| Reaktionszeit | int | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_reaction\_time |     |     |
+| Reaktionszeit Einheit | int | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_reaction\_time\_unit | isys\_unit\_of\_time | isys\_unit\_of\_time\_\_id |
+| Wiederherstellungszeit | int | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_recovery\_time |     |     |
+| Wiederherstellungszeit Einheit | int | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_recovery\_time\_unit | isys\_unit\_of\_time | isys\_unit\_of\_time\_\_id |
+| Kalender | int | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_isys\_calendar\_\_id | isys\_calendar | isys\_calendar\_\_id |
 | Description | text\_area | isys\_catg\_sla\_list | isys\_catg\_sla\_list\_\_description |     |     |
 
 ### LDAP
 
-#### Tabelle: isys\_catg\_ldap\_dn\_list
+#### table: isys\_catg\_ldap\_dn\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Distinguished name (DN) | text | isys\_catg\_ldap\_dn\_list | isys\_catg\_ldap\_dn\_list\_\_title |     |     |
+| Distinguished Name (DN) | text | isys\_catg\_ldap\_dn\_list | isys\_catg\_ldap\_dn\_list\_\_title |     |     |
 | Description | text\_area | isys\_catg\_ldap\_dn\_list | isys\_catg\_ldap\_dn\_list\_\_description |     |     |
 
-### Host definition
+### Host Definition
 
-#### Tabelle: isys\_catg\_nagios\_list
+#### table: isys\_catg\_nagios\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Export this configuration | int | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_is\_exportable |     |     |
-| Export configuration | int | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_export\_host | isys\_monitoring\_export\_config | isys\_monitoring\_export\_config\_\_id |
+| Diese Configuration exportieren | int | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_is\_exportable |     |     |
+| Exportkonfiguration | int | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_export\_host | isys\_monitoring\_export\_config | isys\_monitoring\_export\_config\_\_id |
 | Templates | text | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_host\_tpl |     |     |
 | host\_name | text | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_host\_name |     |     |
 | host\_name\_selection | int | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_host\_name\_selection |     |     |
 | Hostname | text | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_name1 |     |     |
 | Alias | text | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_alias |     |     |
-| IP Address | int | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_isys\_catg\_ip\_list\_\_id | isys\_catg\_ip\_list | isys\_catg\_ip\_list\_\_id |
+| IP-Adresse | int | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_isys\_catg\_ip\_list\_\_id | isys\_catg\_ip\_list | isys\_catg\_ip\_list\_\_id |
 | address\_selection | int | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_address\_selection |     |     |
-| Choose further objects as parent | text | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_parents |     |     |
-| Use the following objects as parents? | int | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_is\_parent |     |     |
+| Weitere objects als parent select | text | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_parents |     |     |
+| The following objects als parent benutzen? | int | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_is\_parent |     |     |
 | check\_command | int | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_check\_command | isys\_nagios\_commands | isys\_nagios\_commands\_\_id |
 | check\_command+ | int | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_check\_command\_plus | isys\_nagios\_commands\_plus | isys\_nagios\_commands\_plus\_\_id |
 | check\_command\_parameters | text | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_check\_command\_parameters |     |     |
@@ -1320,18 +1326,18 @@ Global categories
 | notes\_url | text | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_notes\_url |     |     |
 | display\_name | text | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_display\_name |     |     |
 | display\_name\_selection | int | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_display\_name\_selection |     |     |
-| Title | text | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_name2 |     |     |
+| Name | text | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_name2 |     |     |
 | custom\_object\_vars | text\_area | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_custom\_obj\_vars |     |     |
 | Description | text\_area | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_description |     |     |
 
-### Nagios group
+### Nagios Gruppe
 
-#### Tabelle: isys\_catg\_nagios\_group\_list
+#### table: isys\_catg\_nagios\_group\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Export this configuration | int | isys\_catg\_nagios\_group\_list | isys\_catg\_nagios\_group\_list\_\_is\_exportable |     |     |
-| Group type | int | isys\_catg\_nagios\_group\_list | isys\_catg\_nagios\_group\_list\_\_type |     |     |
+| Diese Configuration exportieren | int | isys\_catg\_nagios\_group\_list | isys\_catg\_nagios\_group\_list\_\_is\_exportable |     |     |
+| Gruppen-Typ | int | isys\_catg\_nagios\_group\_list | isys\_catg\_nagios\_group\_list\_\_type |     |     |
 | display\_name | text | isys\_catg\_nagios\_group\_list | isys\_catg\_nagios\_group\_list\_\_name |     |     |
 | display\_name\_selection | int | isys\_catg\_nagios\_group\_list | isys\_catg\_nagios\_group\_list\_\_name\_selection |     |     |
 | Alias | text | isys\_catg\_nagios\_group\_list | isys\_catg\_nagios\_group\_list\_\_alias |     |     |
@@ -1340,15 +1346,15 @@ Global categories
 | Action URL | text | isys\_catg\_nagios\_group\_list | isys\_catg\_nagios\_group\_list\_\_action\_url |     |     |
 | Description | text\_area | isys\_catg\_nagios\_group\_list | isys\_catg\_nagios\_group\_list\_\_description |     |     |
 
-### Nagios (service)
+### Nagios (Service)
 
-#### Tabelle: isys\_catg\_nagios\_service\_def\_list
+#### table: isys\_catg\_nagios\_service\_def\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Active | int | isys\_catg\_nagios\_service\_def\_list | isys\_catg\_nagios\_service\_def\_list\_\_is\_active |     |     |
+| Aktiv | int | isys\_catg\_nagios\_service\_def\_list | isys\_catg\_nagios\_service\_def\_list\_\_is\_active |     |     |
 | service\_description | text | isys\_catg\_nagios\_service\_def\_list | isys\_catg\_nagios\_service\_def\_list\_\_service\_description |     |     |
-| Service-template | text | isys\_catg\_nagios\_service\_def\_list | isys\_catg\_nagios\_service\_def\_list\_\_service\_template |     |     |
+| Service-Template | text | isys\_catg\_nagios\_service\_def\_list | isys\_catg\_nagios\_service\_def\_list\_\_service\_template |     |     |
 | check\_command | int | isys\_catg\_nagios\_service\_def\_list | isys\_catg\_nagios\_service\_def\_list\_\_check\_command | isys\_nagios\_commands | isys\_nagios\_commands\_\_id |
 | check\_command\_plus | int | isys\_catg\_nagios\_service\_def\_list | isys\_catg\_nagios\_service\_def\_list\_\_check\_command\_plus | isys\_nagios\_commands\_plus | isys\_nagios\_commands\_plus\_\_id |
 | check\_command\_parameters | text | isys\_catg\_nagios\_service\_def\_list | isys\_catg\_nagios\_service\_def\_list\_\_check\_command\_parameters |     |     |
@@ -1393,11 +1399,11 @@ Global categories
 | notes\_url | text | isys\_catg\_nagios\_service\_def\_list | isys\_catg\_nagios\_service\_def\_list\_\_notes\_url |     |     |
 | custom\_object\_vars | text\_area | isys\_catg\_nagios\_service\_def\_list | isys\_catg\_nagios\_service\_def\_list\_\_custom\_obj\_vars |     |     |
 
-### Nagios (service TPL)
+### Nagios (Service TPL)
 
-#### Tabelle: isys\_catg\_nagios\_service\_tpl\_def\_list
+#### table: isys\_catg\_nagios\_service\_tpl\_def\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
 | check\_command | int | isys\_catg\_nagios\_service\_tpl\_def\_list | isys\_catg\_nagios\_service\_tpl\_def\_list\_\_check\_command | isys\_catg\_nagios\_service\_tpl\_def\_list | isys\_catg\_nagios\_service\_tpl\_def\_list\_\_id |
 | name | text | isys\_catg\_nagios\_service\_tpl\_def\_list | isys\_catg\_nagios\_service\_tpl\_def\_list\_\_name |     |     |
@@ -1446,13 +1452,13 @@ Global categories
 
 ### Service definition
 
-#### Tabelle: isys\_catg\_nagios\_service\_def\_list
+#### table: isys\_catg\_nagios\_service\_def\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Active | int | isys\_catg\_nagios\_service\_def\_list | isys\_catg\_nagios\_service\_def\_list\_\_is\_active |     |     |
+| Aktiv | int | isys\_catg\_nagios\_service\_def\_list | isys\_catg\_nagios\_service\_def\_list\_\_is\_active |     |     |
 | service\_description | text | isys\_catg\_nagios\_service\_def\_list | isys\_catg\_nagios\_service\_def\_list\_\_service\_description |     |     |
-| Service-template | text | isys\_catg\_nagios\_service\_def\_list | isys\_catg\_nagios\_service\_def\_list\_\_service\_template |     |     |
+| Service-Template | text | isys\_catg\_nagios\_service\_def\_list | isys\_catg\_nagios\_service\_def\_list\_\_service\_template |     |     |
 | check\_command | int | isys\_catg\_nagios\_service\_def\_list | isys\_catg\_nagios\_service\_def\_list\_\_check\_command | isys\_nagios\_commands | isys\_nagios\_commands\_\_id |
 | check\_command\_plus | int | isys\_catg\_nagios\_service\_def\_list | isys\_catg\_nagios\_service\_def\_list\_\_check\_command\_plus | isys\_nagios\_commands\_plus | isys\_nagios\_commands\_plus\_\_id |
 | check\_command\_parameters | text | isys\_catg\_nagios\_service\_def\_list | isys\_catg\_nagios\_service\_def\_list\_\_check\_command\_parameters |     |     |
@@ -1497,19 +1503,19 @@ Global categories
 | notes\_url | text | isys\_catg\_nagios\_service\_def\_list | isys\_catg\_nagios\_service\_def\_list\_\_notes\_url |     |     |
 | custom\_object\_vars | text\_area | isys\_catg\_nagios\_service\_def\_list | isys\_catg\_nagios\_service\_def\_list\_\_custom\_obj\_vars |     |     |
 
-### Backwards service assignment
+### Backward Servicezuweisung
 
-#### Tabelle: isys\_catg\_nagios\_refs\_services\_list
+#### table: isys\_catg\_nagios\_refs\_services\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Assigned objects | int | isys\_catg\_nagios\_refs\_services\_list | isys\_catg\_nagios\_refs\_services\_list\_\_isys\_obj\_\_id\_\_host |     |     |
+| Zugewiesene objects | int | isys\_catg\_nagios\_refs\_services\_list | isys\_catg\_nagios\_refs\_services\_list\_\_isys\_obj\_\_id\_\_host |     |     |
 
-### Service-template definition
+### Service-Template definition
 
-#### Tabelle: isys\_catg\_nagios\_service\_tpl\_def\_list
+#### table: isys\_catg\_nagios\_service\_tpl\_def\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
 | check\_command | int | isys\_catg\_nagios\_service\_tpl\_def\_list | isys\_catg\_nagios\_service\_tpl\_def\_list\_\_check\_command | isys\_catg\_nagios\_service\_tpl\_def\_list | isys\_catg\_nagios\_service\_tpl\_def\_list\_\_id |
 | name | text | isys\_catg\_nagios\_service\_tpl\_def\_list | isys\_catg\_nagios\_service\_tpl\_def\_list\_\_name |     |     |
@@ -1556,73 +1562,19 @@ Global categories
 | notes\_url | text | isys\_catg\_nagios\_service\_tpl\_def\_list | isys\_catg\_nagios\_service\_tpl\_def\_list\_\_notes\_url |     |     |
 | custom\_object\_vars | text\_area | isys\_catg\_nagios\_service\_tpl\_def\_list | isys\_catg\_nagios\_service\_tpl\_def\_list\_\_custom\_obj\_vars |     |     |
 
-### Assigned objects
+### Zugewiesene objects
 
-#### Tabelle: isys\_catg\_virtual\_list
+#### table: isys\_catg\_virtual\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Assigned objects | int | isys\_catg\_virtual\_list | isys\_catg\_nagios\_service\_def\_list\_\_service\_template |     |     |
+| Zugewiesene objects | int | isys\_catg\_virtual\_list | isys\_catg\_nagios\_service\_def\_list\_\_service\_template |     |     |
 
-### Nagios (host TPL)
+### Nagios (Host TPL)
 
-#### Tabelle: isys\_catg\_nagios\_host\_tpl\_def\_list
+#### table: isys\_catg\_nagios\_host\_tpl\_def\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
-| --- | --- | --- | --- | --- | --- |
-| Hostname | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_name1 |     |     |
-| Nagios Host | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_export\_host | isys\_monitoring\_export\_config | isys\_monitoring\_export\_config\_\_id |
-| LC\_\_CATG\_\_NAGIOS\_HOST\_TPL\_DEF\_MAX\_CHECK\_ATTEMPTS | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_max\_check\_attempts |     |     |
-| LC\_\_CATG\_\_NAGIOS\_HOST\_TPL\_DEF\_CHECK\_PERIOD | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_check\_period | isys\_nagios\_timeperiods | isys\_nagios\_timeperiods\_\_id |
-| check\_period + | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_check\_period\_plus | isys\_nagios\_timeperiods\_plus | isys\_nagios\_timeperiods\_plus\_\_id |
-| LC\_\_CATG\_\_NAGIOS\_HOST\_TPL\_DEF\_NOTIFICATION\_INTERVAL | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_notification\_interval |     |     |
-| notification\_period | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_notification\_period | isys\_nagios\_timeperiods | isys\_nagios\_timeperiods\_\_id |
-| notification\_period + | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_notification\_period\_plus | isys\_nagios\_timeperiods\_plus | isys\_nagios\_timeperiods\_plus\_\_id |
-| display\_name | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_display\_name |     |     |
-| display\_name\_selection | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_display\_name\_selection |     |     |
-| check\_command | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_check\_command | isys\_nagios\_commands | isys\_nagios\_commands\_\_id |
-| check\_command+ | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_check\_command\_plus | isys\_nagios\_commands\_plus | isys\_nagios\_commands\_plus\_\_id |
-| check\_command\_parameters | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_check\_command\_parameters |     |     |
-| initial\_state | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_initial\_state |     |     |
-| check\_interval | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_check\_interval |     |     |
-| retry\_interval | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_retry\_interval |     |     |
-| active\_checks\_enabled | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_active\_checks\_enabled |     |     |
-| passive\_checks\_enabled | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_passive\_checks\_enabled |     |     |
-| obsess\_over\_host | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_obsess\_over\_host |     |     |
-| check\_freshness | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_check\_freshness |     |     |
-| freshness\_threshold | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_freshness\_threshold |     |     |
-| flap\_detection\_enabled | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_flap\_detection\_enabled |     |     |
-| flap\_detection\_options | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_flap\_detection\_options |     |     |
-| event\_handler | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_event\_handler |     |     |
-| event\_handler + | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_event\_handler\_plus | isys\_nagios\_commands\_plus | isys\_nagios\_commands\_plus\_\_id |
-| event\_handler\_parameters | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_event\_handler\_parameters |     |     |
-| event\_handler\_enabled | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_event\_handler\_enabled |     |     |
-| low\_flap\_threshold | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_low\_flap\_threshold |     |     |
-| high\_flap\_threshold | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_high\_flap\_threshold |     |     |
-| process\_perf\_data | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_process\_perf\_data |     |     |
-| retain\_status\_information | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_retain\_status\_information |     |     |
-| retain\_nonstatus\_information | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_retain\_nonstatus\_information |     |     |
-| first\_notification\_delay | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_first\_notification\_delay |     |     |
-| notification\_options | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_notification\_options |     |     |
-| notifications\_enabled | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_notifications\_enabled |     |     |
-| stalking\_options | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_stalking\_options |     |     |
-| escalations | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_escalations |     |     |
-| Title | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_name2 |     |     |
-| Description | text\_area | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_description |     |     |
-| action\_url | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_action\_url |     |     |
-| icon\_image | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_icon\_image |     |     |
-| icon\_image\_alt | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_icon\_image\_alt |     |     |
-| vrml\_image | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_vrml\_image |     |     |
-| statusmap\_image | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_statusmap\_image |     |     |
-| notes | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_notes |     |     |
-| notes\_url | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_notes\_url |     |     |
-| custom\_object\_vars | text\_area | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_custom\_obj\_vars |     |     |
-
-### Host-template definition
-
-#### Tabelle: isys\_catg\_nagios\_host\_tpl\_def\_list
-
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
 | Hostname | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_name1 |     |     |
 | Nagios Host | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_export\_host | isys\_monitoring\_export\_config | isys\_monitoring\_export\_config\_\_id |
@@ -1661,7 +1613,7 @@ Global categories
 | notifications\_enabled | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_notifications\_enabled |     |     |
 | stalking\_options | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_stalking\_options |     |     |
 | escalations | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_escalations |     |     |
-| Title | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_name2 |     |     |
+| Name | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_name2 |     |     |
 | Description | text\_area | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_description |     |     |
 | action\_url | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_action\_url |     |     |
 | icon\_image | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_icon\_image |     |     |
@@ -1672,23 +1624,77 @@ Global categories
 | notes\_url | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_notes\_url |     |     |
 | custom\_object\_vars | text\_area | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_custom\_obj\_vars |     |     |
 
-### Nagios (host)
+### Host-Template Definition
 
-#### Tabelle: isys\_catg\_nagios\_list
+#### table: isys\_catg\_nagios\_host\_tpl\_def\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Export this configuration | int | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_is\_exportable |     |     |
-| Export configuration | int | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_export\_host | isys\_monitoring\_export\_config | isys\_monitoring\_export\_config\_\_id |
+| Hostname | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_name1 |     |     |
+| Nagios Host | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_export\_host | isys\_monitoring\_export\_config | isys\_monitoring\_export\_config\_\_id |
+| LC\_\_CATG\_\_NAGIOS\_HOST\_TPL\_DEF\_MAX\_CHECK\_ATTEMPTS | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_max\_check\_attempts |     |     |
+| LC\_\_CATG\_\_NAGIOS\_HOST\_TPL\_DEF\_CHECK\_PERIOD | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_check\_period | isys\_nagios\_timeperiods | isys\_nagios\_timeperiods\_\_id |
+| check\_period + | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_check\_period\_plus | isys\_nagios\_timeperiods\_plus | isys\_nagios\_timeperiods\_plus\_\_id |
+| LC\_\_CATG\_\_NAGIOS\_HOST\_TPL\_DEF\_NOTIFICATION\_INTERVAL | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_notification\_interval |     |     |
+| notification\_period | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_notification\_period | isys\_nagios\_timeperiods | isys\_nagios\_timeperiods\_\_id |
+| notification\_period + | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_notification\_period\_plus | isys\_nagios\_timeperiods\_plus | isys\_nagios\_timeperiods\_plus\_\_id |
+| display\_name | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_display\_name |     |     |
+| display\_name\_selection | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_display\_name\_selection |     |     |
+| check\_command | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_check\_command | isys\_nagios\_commands | isys\_nagios\_commands\_\_id |
+| check\_command+ | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_check\_command\_plus | isys\_nagios\_commands\_plus | isys\_nagios\_commands\_plus\_\_id |
+| check\_command\_parameters | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_check\_command\_parameters |     |     |
+| initial\_state | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_initial\_state |     |     |
+| check\_interval | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_check\_interval |     |     |
+| retry\_interval | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_retry\_interval |     |     |
+| active\_checks\_enabled | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_active\_checks\_enabled |     |     |
+| passive\_checks\_enabled | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_passive\_checks\_enabled |     |     |
+| obsess\_over\_host | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_obsess\_over\_host |     |     |
+| check\_freshness | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_check\_freshness |     |     |
+| freshness\_threshold | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_freshness\_threshold |     |     |
+| flap\_detection\_enabled | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_flap\_detection\_enabled |     |     |
+| flap\_detection\_options | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_flap\_detection\_options |     |     |
+| event\_handler | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_event\_handler |     |     |
+| event\_handler + | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_event\_handler\_plus | isys\_nagios\_commands\_plus | isys\_nagios\_commands\_plus\_\_id |
+| event\_handler\_parameters | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_event\_handler\_parameters |     |     |
+| event\_handler\_enabled | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_event\_handler\_enabled |     |     |
+| low\_flap\_threshold | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_low\_flap\_threshold |     |     |
+| high\_flap\_threshold | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_high\_flap\_threshold |     |     |
+| process\_perf\_data | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_process\_perf\_data |     |     |
+| retain\_status\_information | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_retain\_status\_information |     |     |
+| retain\_nonstatus\_information | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_retain\_nonstatus\_information |     |     |
+| first\_notification\_delay | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_first\_notification\_delay |     |     |
+| notification\_options | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_notification\_options |     |     |
+| notifications\_enabled | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_notifications\_enabled |     |     |
+| stalking\_options | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_stalking\_options |     |     |
+| escalations | int | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_escalations |     |     |
+| Name | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_name2 |     |     |
+| Description | text\_area | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_description |     |     |
+| action\_url | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_action\_url |     |     |
+| icon\_image | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_icon\_image |     |     |
+| icon\_image\_alt | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_icon\_image\_alt |     |     |
+| vrml\_image | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_vrml\_image |     |     |
+| statusmap\_image | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_statusmap\_image |     |     |
+| notes | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_notes |     |     |
+| notes\_url | text | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_notes\_url |     |     |
+| custom\_object\_vars | text\_area | isys\_catg\_nagios\_host\_tpl\_def\_list | isys\_catg\_nagios\_host\_tpl\_def\_list\_\_custom\_obj\_vars |     |     |
+
+### Nagios (Host)
+
+#### table: isys\_catg\_nagios\_list
+
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
+| --- | --- | --- | --- | --- | --- |
+| Diese Configuration exportieren | int | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_is\_exportable |     |     |
+| Exportkonfiguration | int | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_export\_host | isys\_monitoring\_export\_config | isys\_monitoring\_export\_config\_\_id |
 | Templates | text | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_host\_tpl |     |     |
 | host\_name | text | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_host\_name |     |     |
 | host\_name\_selection | int | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_host\_name\_selection |     |     |
 | Hostname | text | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_name1 |     |     |
 | Alias | text | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_alias |     |     |
-| IP Address | int | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_isys\_catg\_ip\_list\_\_id | isys\_catg\_ip\_list | isys\_catg\_ip\_list\_\_id |
+| IP-Adresse | int | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_isys\_catg\_ip\_list\_\_id | isys\_catg\_ip\_list | isys\_catg\_ip\_list\_\_id |
 | address\_selection | int | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_address\_selection |     |     |
-| Choose further objects as parent | text | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_parents |     |     |
-| Use the following objects as parents? | int | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_is\_parent |     |     |
+| Weitere objects als parent select | text | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_parents |     |     |
+| The following objects als parent benutzen? | int | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_is\_parent |     |     |
 | check\_command | int | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_check\_command | isys\_nagios\_commands | isys\_nagios\_commands\_\_id |
 | check\_command+ | int | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_check\_command\_plus | isys\_nagios\_commands\_plus | isys\_nagios\_commands\_plus\_\_id |
 | check\_command\_parameters | text | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_check\_command\_parameters |     |     |
@@ -1733,47 +1739,47 @@ Global categories
 | notes\_url | text | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_notes\_url |     |     |
 | display\_name | text | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_display\_name |     |     |
 | display\_name\_selection | int | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_display\_name\_selection |     |     |
-| Title | text | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_name2 |     |     |
+| Name | text | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_name2 |     |     |
 | custom\_object\_vars | text\_area | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_custom\_obj\_vars |     |     |
 | Description | text\_area | isys\_catg\_nagios\_list | isys\_catg\_nagios\_list\_\_description |     |     |
 
-### Assigned objects
+### Zugewiesene objects
 
-#### Tabelle: isys\_catg\_virtual\_list
+#### table: isys\_catg\_virtual\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Assigned objects | text | isys\_catg\_virtual\_list | isys\_catg\_nagios\_list\_\_host\_tpl |     |     |
+| Zugewiesene objects | text | isys\_catg\_virtual\_list | isys\_catg\_nagios\_list\_\_host\_tpl |     |     |
 
-### Servicecheck assignment
+### Servicecheckzuweisung
 
-#### Tabelle: isys\_catg\_nagios\_refs\_services\_list
+#### table: isys\_catg\_nagios\_refs\_services\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Nagios service | int | isys\_catg\_nagios\_refs\_services\_list | isys\_catg\_nagios\_refs\_services\_list\_\_isys\_obj\_\_id\_\_service | isys\_obj | isys\_obj\_\_id |
+| Nagios Service | int | isys\_catg\_nagios\_refs\_services\_list | isys\_catg\_nagios\_refs\_services\_list\_\_isys\_obj\_\_id\_\_service | isys\_obj | isys\_obj\_\_id |
 
-### Nagios (application)
+### Nagios (Anwendungen)
 
-#### Tabelle: isys\_catg\_nagios\_refs\_services\_list
+#### table: isys\_catg\_nagios\_refs\_services\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Nagios service | int | isys\_catg\_nagios\_refs\_services\_list | isys\_catg\_nagios\_refs\_services\_list\_\_isys\_obj\_\_id\_\_service | isys\_obj | isys\_obj\_\_id |
+| Nagios Service | int | isys\_catg\_nagios\_refs\_services\_list | isys\_catg\_nagios\_refs\_services\_list\_\_isys\_obj\_\_id\_\_service | isys\_obj | isys\_obj\_\_id |
 
-### Servicecheck assignment
+### Servicecheckzuweisung
 
-#### Tabelle: isys\_catg\_nagios\_refs\_services\_list
+#### table: isys\_catg\_nagios\_refs\_services\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Nagios service | int | isys\_catg\_nagios\_refs\_services\_list | isys\_catg\_nagios\_refs\_services\_list\_\_isys\_obj\_\_id\_\_service | isys\_obj | isys\_obj\_\_id |
+| Nagios Service | int | isys\_catg\_nagios\_refs\_services\_list | isys\_catg\_nagios\_refs\_services\_list\_\_isys\_obj\_\_id\_\_service | isys\_obj | isys\_obj\_\_id |
 
-### Service dependencies
+### Nagios Service-Dependencies
 
-#### Tabelle: isys\_catg\_nagios\_service\_dep\_list
+#### table: isys\_catg\_nagios\_service\_dep\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
 | Host | int | chostdep | isys\_catg\_nagios\_service\_dep\_list\_\_host\_dep\_connection | isys\_catg\_nagios\_refs\_services\_list | isys\_catg\_nagios\_refs\_services\_list\_\_id |
 | Service (Master) | int | cservicedep | isys\_catg\_nagios\_service\_dep\_list\_\_service\_dep\_connection |     |     |
@@ -1785,795 +1791,795 @@ Global categories
 | dependency\_period+ | int | timeperiod\_plus\_b | isys\_catg\_nagios\_service\_dep\_list\_\_dep\_period\_plus | isys\_nagios\_timeperiods\_plus | isys\_nagios\_timeperiods\_plus\_\_id |
 | Description | text\_area | isys\_catg\_nagios\_service\_dep\_list | isys\_catg\_nagios\_service\_dep\_list\_\_description |     |     |
 
-### Address
+### Anschrift
 
-#### Tabelle: isys\_catg\_address\_list
+#### table: isys\_catg\_address\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Additional address information | text\_area | isys\_catg\_address\_list | isys\_catg\_address\_list\_\_address |     |     |
+| Adresszusatz | text\_area | isys\_catg\_address\_list | isys\_catg\_address\_list\_\_address |     |     |
 | Street | text | isys\_catg\_address\_list | isys\_catg\_address\_list\_\_street |     |     |
-| House number | text | isys\_catg\_address\_list | isys\_catg\_address\_list\_\_house\_no |     |     |
-| Floors | int | isys\_catg\_address\_list | isys\_catg\_address\_list\_\_stories |     |     |
-| Postal code | text | isys\_catg\_address\_list | isys\_catg\_address\_list\_\_postalcode |     |     |
-| City | text | isys\_catg\_address\_list | isys\_catg\_address\_list\_\_city |     |     |
+| Hausnummer | text | isys\_catg\_address\_list | isys\_catg\_address\_list\_\_house\_no |     |     |
+| Etagen | int | isys\_catg\_address\_list | isys\_catg\_address\_list\_\_stories |     |     |
+| Postleitzahl | text | isys\_catg\_address\_list | isys\_catg\_address\_list\_\_postalcode |     |     |
+| Ort | text | isys\_catg\_address\_list | isys\_catg\_address\_list\_\_city |     |     |
 | Region | text | isys\_catg\_address\_list | isys\_catg\_address\_list\_\_region |     |     |
-| Country | text | isys\_catg\_address\_list | isys\_catg\_address\_list\_\_country |     |     |
+| Land | text | isys\_catg\_address\_list | isys\_catg\_address\_list\_\_country |     |     |
 | Description | text\_area | isys\_catg\_address\_list | isys\_catg\_address\_list\_\_description |     |     |
 
 ### Monitoring
 
-#### Tabelle: isys\_catg\_monitoring\_list
+#### table: isys\_catg\_monitoring\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Active? | int | isys\_catg\_monitoring\_list | isys\_catg\_monitoring\_list\_\_active |     |     |
+| Aktiv? | int | isys\_catg\_monitoring\_list | isys\_catg\_monitoring\_list\_\_active |     |     |
 | Host | int | isys\_catg\_monitoring\_list | isys\_catg\_monitoring\_list\_\_isys\_monitoring\_hosts\_\_id | isys\_monitoring\_hosts | isys\_monitoring\_hosts\_\_id |
 | Hostname | text | isys\_catg\_monitoring\_list | isys\_catg\_monitoring\_list\_\_host\_name |     |     |
-| Hostname selection | int | isys\_catg\_monitoring\_list | isys\_catg\_monitoring\_list\_\_host\_name\_selection |     |     |
+| Hostname auswahl | int | isys\_catg\_monitoring\_list | isys\_catg\_monitoring\_list\_\_host\_name\_selection |     |     |
 | Description | text\_area | isys\_catg\_monitoring\_list | isys\_catg\_monitoring\_list\_\_description |     |     |
 
 ### Livestatus
 
-#### Tabelle: isys\_catg\_virtual\_list
+#### table: isys\_catg\_virtual\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
 | Livestatus | int | isys\_catg\_virtual\_list | isys\_catg\_monitoring\_list\_\_active |     |     |
-| Livestatus (button) | int | isys\_catg\_virtual\_list | isys\_catg\_monitoring\_list\_\_active |     |     |
+| Livestatus (Knopf) | int | isys\_catg\_virtual\_list | isys\_catg\_monitoring\_list\_\_active |     |     |
 
-### Vehicle
+### Fahrzeug
 
-#### Tabelle: isys\_catg\_vehicle\_list
+#### table: isys\_catg\_vehicle\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Licence plate | text | isys\_catg\_vehicle\_list | isys\_catg\_vehicle\_list\_\_licence\_plate |     |     |
+| Kennzeichen | text | isys\_catg\_vehicle\_list | isys\_catg\_vehicle\_list\_\_licence\_plate |     |     |
 | Description | text\_area | isys\_catg\_vehicle\_list | isys\_catg\_vehicle\_list\_\_description |     |     |
 
-### Aircraft
+### Flugzeug
 
-#### Tabelle: isys\_catg\_aircraft\_list
+#### table: isys\_catg\_aircraft\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Aircraft registration | text | isys\_catg\_aircraft\_list | isys\_catg\_aircraft\_list\_\_registration |     |     |
+| Luftfahrzeugkennzeichen | text | isys\_catg\_aircraft\_list | isys\_catg\_aircraft\_list\_\_registration |     |     |
 | Description | text\_area | isys\_catg\_aircraft\_list | isys\_catg\_aircraft\_list\_\_description |     |     |
 
-### Network connections
+### Netzwerkverbindungen
 
-#### Tabelle: isys\_catg\_net\_listener\_list
+#### table: isys\_catg\_net\_listener\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Layer 3/4 Protocol | int | isys\_catg\_net\_listener\_list | isys\_catg\_net\_listener\_list\_\_isys\_net\_protocol\_\_id | isys\_net\_protocol | isys\_net\_protocol\_\_id |
-| Layer 5-7 Protocol | int | isys\_catg\_net\_listener\_list | isys\_catg\_net\_listener\_list\_\_isys\_net\_protocol\_layer\_5\_\_id | isys\_net\_protocol\_layer\_5 | isys\_net\_protocol\_layer\_5\_\_id |
-| (Bind) ip address | int | isys\_catg\_net\_listener\_list | isys\_catg\_net\_listener\_list\_\_isys\_cats\_net\_ip\_addresses\_list\_\_id | isys\_cats\_net\_ip\_addresses\_list | isys\_cats\_net\_ip\_addresses\_list\_\_id |
-| Of  | int | isys\_catg\_net\_listener\_list | isys\_catg\_net\_listener\_list\_\_port\_from |     |     |
-| To  | int | isys\_catg\_net\_listener\_list | isys\_catg\_net\_listener\_list\_\_port\_to |     |     |
-| Opened by application | int | opened\_by | isys\_catg\_net\_listener\_list\_\_opened\_by | isys\_obj | isys\_obj\_\_id |
+| Layer 3/4 Protokoll | int | isys\_catg\_net\_listener\_list | isys\_catg\_net\_listener\_list\_\_isys\_net\_protocol\_\_id | isys\_net\_protocol | isys\_net\_protocol\_\_id |
+| Layer 5-7 Protokoll | int | isys\_catg\_net\_listener\_list | isys\_catg\_net\_listener\_list\_\_isys\_net\_protocol\_layer\_5\_\_id | isys\_net\_protocol\_layer\_5 | isys\_net\_protocol\_layer\_5\_\_id |
+| (Bind) IP-Adresse | int | isys\_catg\_net\_listener\_list | isys\_catg\_net\_listener\_list\_\_isys\_cats\_net\_ip\_addresses\_list\_\_id | isys\_cats\_net\_ip\_addresses\_list | isys\_cats\_net\_ip\_addresses\_list\_\_id |
+| Von | int | isys\_catg\_net\_listener\_list | isys\_catg\_net\_listener\_list\_\_port\_from |     |     |
+| Bis | int | isys\_catg\_net\_listener\_list | isys\_catg\_net\_listener\_list\_\_port\_to |     |     |
+| Geopens durch Applikation | int | opened\_by | isys\_catg\_net\_listener\_list\_\_opened\_by | isys\_obj | isys\_obj\_\_id |
 | Gateway | int | gateway | isys\_catg\_net\_listener\_list\_\_gateway | isys\_obj | isys\_obj\_\_id |
 | Description | text\_area | isys\_catg\_net\_listener\_list | isys\_catg\_net\_listener\_list\_\_description |     |     |
 
 ### Listener
 
-#### Tabelle: isys\_catg\_net\_listener\_list
+#### table: isys\_catg\_net\_listener\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Layer 3/4 Protocol | int | isys\_catg\_net\_listener\_list | isys\_catg\_net\_listener\_list\_\_isys\_net\_protocol\_\_id | isys\_net\_protocol | isys\_net\_protocol\_\_id |
-| Layer 5-7 Protocol | int | isys\_catg\_net\_listener\_list | isys\_catg\_net\_listener\_list\_\_isys\_net\_protocol\_layer\_5\_\_id | isys\_net\_protocol\_layer\_5 | isys\_net\_protocol\_layer\_5\_\_id |
-| (Bind) ip address | int | isys\_catg\_net\_listener\_list | isys\_catg\_net\_listener\_list\_\_isys\_cats\_net\_ip\_addresses\_list\_\_id | isys\_cats\_net\_ip\_addresses\_list | isys\_cats\_net\_ip\_addresses\_list\_\_id |
-| Of  | int | isys\_catg\_net\_listener\_list | isys\_catg\_net\_listener\_list\_\_port\_from |     |     |
-| To  | int | isys\_catg\_net\_listener\_list | isys\_catg\_net\_listener\_list\_\_port\_to |     |     |
-| Opened by application | int | opened\_by | isys\_catg\_net\_listener\_list\_\_opened\_by | isys\_obj | isys\_obj\_\_id |
+| Layer 3/4 Protokoll | int | isys\_catg\_net\_listener\_list | isys\_catg\_net\_listener\_list\_\_isys\_net\_protocol\_\_id | isys\_net\_protocol | isys\_net\_protocol\_\_id |
+| Layer 5-7 Protokoll | int | isys\_catg\_net\_listener\_list | isys\_catg\_net\_listener\_list\_\_isys\_net\_protocol\_layer\_5\_\_id | isys\_net\_protocol\_layer\_5 | isys\_net\_protocol\_layer\_5\_\_id |
+| (Bind) IP-Adresse | int | isys\_catg\_net\_listener\_list | isys\_catg\_net\_listener\_list\_\_isys\_cats\_net\_ip\_addresses\_list\_\_id | isys\_cats\_net\_ip\_addresses\_list | isys\_cats\_net\_ip\_addresses\_list\_\_id |
+| Von | int | isys\_catg\_net\_listener\_list | isys\_catg\_net\_listener\_list\_\_port\_from |     |     |
+| Bis | int | isys\_catg\_net\_listener\_list | isys\_catg\_net\_listener\_list\_\_port\_to |     |     |
+| Geopens durch Applikation | int | opened\_by | isys\_catg\_net\_listener\_list\_\_opened\_by | isys\_obj | isys\_obj\_\_id |
 | Gateway | int | gateway | isys\_catg\_net\_listener\_list\_\_gateway | isys\_obj | isys\_obj\_\_id |
 | Description | text\_area | isys\_catg\_net\_listener\_list | isys\_catg\_net\_listener\_list\_\_description |     |     |
 
-### Connection
+### connection
 
-#### Tabelle: isys\_catg\_net\_connector\_list
+#### table: isys\_catg\_net\_connector\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| (Source) ip address | int | isys\_catg\_net\_connector\_list | isys\_catg\_net\_connector\_list\_\_ip\_addresses\_list\_\_id | isys\_cats\_net\_ip\_addresses\_list | isys\_cats\_net\_ip\_addresses\_list\_\_id |
-| Of  | int | isys\_catg\_net\_connector\_list | isys\_catg\_net\_connector\_list\_\_port\_from |     |     |
-| To  | int | isys\_catg\_net\_connector\_list | isys\_catg\_net\_connector\_list\_\_port\_to |     |     |
+| (Source) IP-Adresse | int | isys\_catg\_net\_connector\_list | isys\_catg\_net\_connector\_list\_\_ip\_addresses\_list\_\_id | isys\_cats\_net\_ip\_addresses\_list | isys\_cats\_net\_ip\_addresses\_list\_\_id |
+| Von | int | isys\_catg\_net\_connector\_list | isys\_catg\_net\_connector\_list\_\_port\_from |     |     |
+| Bis | int | isys\_catg\_net\_connector\_list | isys\_catg\_net\_connector\_list\_\_port\_to |     |     |
 | Listener | int | isys\_catg\_net\_connector\_list | isys\_catg\_net\_connector\_list\_\_isys\_catg\_net\_listener\_list\_\_id | isys\_catg\_net\_listener\_list | isys\_catg\_net\_listener\_list\_\_id |
-| Connected with | int | isys\_catg\_net\_connector\_list | isys\_catg\_net\_connector\_list\_\_isys\_catg\_net\_listener\_list\_\_id | isys\_catg\_net\_listener\_list | isys\_catg\_net\_listener\_list\_\_id |
+| Connected to | int | isys\_catg\_net\_connector\_list | isys\_catg\_net\_connector\_list\_\_isys\_catg\_net\_listener\_list\_\_id | isys\_catg\_net\_listener\_list | isys\_catg\_net\_listener\_list\_\_id |
 | Gateway | int | gateway | isys\_catg\_net\_connector\_list\_\_gateway | isys\_obj | isys\_obj\_\_id |
 | Description | text\_area | isys\_catg\_net\_connector\_list | isys\_catg\_net\_connector\_list\_\_description |     |     |
 
-### Administration service
+### administrationsinstanz
 
-#### Tabelle: isys\_catg\_cluster\_adm\_service\_list
+#### table: isys\_catg\_cluster\_adm\_service\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Administration service (Object) | int | isys\_catg\_cluster\_adm\_service\_list | isys\_catg\_cluster\_adm\_service\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
-| Object type | int | isys\_catg\_cluster\_adm\_service\_list | isys\_obj\_\_isys\_obj\_type\_\_id |     |     |
+| administrationsinstanz (object) | int | isys\_catg\_cluster\_adm\_service\_list | isys\_catg\_cluster\_adm\_service\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
+| objecttyp | int | isys\_catg\_cluster\_adm\_service\_list | isys\_obj\_\_isys\_obj\_type\_\_id |     |     |
 
 ### JDisc Custom Attributes
 
-#### Tabelle: isys\_catg\_jdisc\_ca\_list
+#### table: isys\_catg\_jdisc\_ca\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Attribute | text | isys\_catg\_jdisc\_ca\_list | isys\_catg\_jdisc\_ca\_list\_\_title |     |     |
-| Value | text | isys\_catg\_jdisc\_ca\_list | isys\_catg\_jdisc\_ca\_list\_\_content |     |     |
-| Type | int | isys\_catg\_jdisc\_ca\_list | isys\_catg\_jdisc\_ca\_list\_\_isys\_jdisc\_ca\_type\_\_id | isys\_jdisc\_ca\_type | isys\_jdisc\_ca\_type\_\_id |
-| Folder | text\_area | isys\_catg\_jdisc\_ca\_list | isys\_catg\_jdisc\_ca\_list\_\_folder |     |     |
+| Attribut | text | isys\_catg\_jdisc\_ca\_list | isys\_catg\_jdisc\_ca\_list\_\_title |     |     |
+| value | text | isys\_catg\_jdisc\_ca\_list | isys\_catg\_jdisc\_ca\_list\_\_content |     |     |
+| Typ | int | isys\_catg\_jdisc\_ca\_list | isys\_catg\_jdisc\_ca\_list\_\_isys\_jdisc\_ca\_type\_\_id | isys\_jdisc\_ca\_type | isys\_jdisc\_ca\_type\_\_id |
+| folder | text\_area | isys\_catg\_jdisc\_ca\_list | isys\_catg\_jdisc\_ca\_list\_\_folder |     |     |
 | Description | text\_area | isys\_catg\_jdisc\_ca\_list | isys\_catg\_jdisc\_ca\_list\_\_description |     |     |
 
 ### NDO
 
-#### Tabelle: isys\_catg\_virtual\_list
+#### table: isys\_catg\_virtual\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| NDO state | text | isys\_catg\_virtual\_list |     |     |     |
-| NDO state button | text | isys\_catg\_virtual\_list |     |     |     |
+| NDO Status | text | isys\_catg\_virtual\_list |     |     |     |
+| NDO Status Button | text | isys\_catg\_virtual\_list |     |     |     |
 
-### Cable
+### Kabel
 
-#### Tabelle: isys\_catg\_cable\_list
+#### table: isys\_catg\_cable\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Cable type | int | isys\_catg\_cable\_list | isys\_catg\_cable\_list\_\_isys\_cable\_type\_\_id | isys\_cable\_type | isys\_cable\_type\_\_id |
-| Color | int | isys\_catg\_cable\_list | isys\_catg\_cable\_list\_\_isys\_cable\_colour\_\_id | isys\_cable\_colour | isys\_cable\_colour\_\_id |
-| Occupancy | int | isys\_catg\_cable\_list | isys\_catg\_cable\_list\_\_isys\_cable\_occupancy\_\_id | isys\_cable\_occupancy | isys\_cable\_occupancy\_\_id |
-| Cable length | float | isys\_catg\_cable\_list | isys\_catg\_cable\_list\_\_length |     |     |
-| Length unit | int | isys\_catg\_cable\_list | isys\_catg\_cable\_list\_\_isys\_depth\_unit\_\_id |     |     |
-| Maximal amount of fibers/leads | int | isys\_catg\_cable\_list | isys\_catg\_cable\_list\_\_max\_amount\_of\_fibers\_leads |     |     |
+| Art des Kabels | int | isys\_catg\_cable\_list | isys\_catg\_cable\_list\_\_isys\_cable\_type\_\_id | isys\_cable\_type | isys\_cable\_type\_\_id |
+| Farbe | int | isys\_catg\_cable\_list | isys\_catg\_cable\_list\_\_isys\_cable\_colour\_\_id | isys\_cable\_colour | isys\_cable\_colour\_\_id |
+| Belegung | int | isys\_catg\_cable\_list | isys\_catg\_cable\_list\_\_isys\_cable\_occupancy\_\_id | isys\_cable\_occupancy | isys\_cable\_occupancy\_\_id |
+| cable length | float | isys\_catg\_cable\_list | isys\_catg\_cable\_list\_\_length |     |     |
+| lengthneinheit | int | isys\_catg\_cable\_list | isys\_catg\_cable\_list\_\_isys\_depth\_unit\_\_id |     |     |
+| Maximale Anzahl an Fasern/Adern | int | isys\_catg\_cable\_list | isys\_catg\_cable\_list\_\_max\_amount\_of\_fibers\_leads |     |     |
 | connection | text | isys\_catg\_cable\_list | isys\_catg\_cable\_list\_\_isys\_obj\_\_id |     |     |
 | Description | text\_area | isys\_catg\_cable\_list | isys\_catg\_cable\_list\_\_description |     |     |
 
-### Data Source
+### Custom Identifier
 
-#### Tabelle: isys\_catg\_identifier\_list
+#### table: isys\_catg\_identifier\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
 | Key | text | isys\_catg\_identifier\_list | isys\_catg\_identifier\_list\_\_key |     |     |
 | Value | text | isys\_catg\_identifier\_list | isys\_catg\_identifier\_list\_\_value |     |     |
-| Initial Import | date\_time | isys\_catg\_identifier\_list | isys\_catg\_identifier\_list\_\_datetime |     |     |
-| Type | int | isys\_catg\_identifier\_list | isys\_catg\_identifier\_list\_\_isys\_catg\_identifier\_type\_\_id | isys\_catg\_identifier\_type | isys\_catg\_identifier\_type\_\_id |
-| Group | text | isys\_catg\_identifier\_list | isys\_catg\_identifier\_list\_\_group |     |     |
-| Last scan | text | isys\_catg\_identifier\_list | isys\_catg\_identifier\_list\_\_last\_scan |     |     |
-| Last updated | date\_time | isys\_catg\_identifier\_list | isys\_obj\_\_updated |     |     |
+| Zuletzt editiert | date\_time | isys\_catg\_identifier\_list | isys\_catg\_identifier\_list\_\_datetime |     |     |
+| Art | int | isys\_catg\_identifier\_list | isys\_catg\_identifier\_list\_\_isys\_catg\_identifier\_type\_\_id | isys\_catg\_identifier\_type | isys\_catg\_identifier\_type\_\_id |
+| Gruppe | text | isys\_catg\_identifier\_list | isys\_catg\_identifier\_list\_\_group |     |     |
+| Letzter Scan | text | isys\_catg\_identifier\_list | isys\_catg\_identifier\_list\_\_last\_scan |     |     |
+| Letzte update | date\_time | isys\_catg\_identifier\_list | isys\_obj\_\_updated |     |     |
 | Description | text\_area | isys\_catg\_identifier\_list | isys\_catg\_identifier\_list\_\_description |     |     |
 
-### Services
+### Service
 
-#### Tabelle: isys\_catg\_service\_list
+#### table: isys\_catg\_service\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Service number | text | isys\_catg\_service\_list | isys\_catg\_service\_list\_\_service\_number |     |     |
-| Service type | int | isys\_catg\_service\_list | isys\_catg\_service\_list\_\_isys\_service\_type\_\_id | isys\_service\_type | isys\_service\_type\_\_id |
-| Service category | int | isys\_catg\_service\_list | isys\_catg\_service\_list\_\_isys\_service\_category\_\_id | isys\_service\_category | isys\_service\_category\_\_id |
+| Service Nummer | text | isys\_catg\_service\_list | isys\_catg\_service\_list\_\_service\_number |     |     |
+| Art des Service | int | isys\_catg\_service\_list | isys\_catg\_service\_list\_\_isys\_service\_type\_\_id | isys\_service\_type | isys\_service\_type\_\_id |
+| Service-category | int | isys\_catg\_service\_list | isys\_catg\_service\_list\_\_isys\_service\_category\_\_id | isys\_service\_category | isys\_service\_category\_\_id |
 | Business Unit | int | isys\_catg\_service\_list | isys\_catg\_service\_list\_\_isys\_business\_unit\_\_id | isys\_business\_unit | isys\_business\_unit\_\_id |
-| Active in service catalogue | int | isys\_catg\_service\_list | isys\_catg\_service\_list\_\_active |     |     |
-| Service description internal | text\_area | isys\_catg\_service\_list | isys\_catg\_service\_list\_\_service\_description\_intern |     |     |
-| Service description external | text\_area | isys\_catg\_service\_list | isys\_catg\_service\_list\_\_service\_description\_extern |     |     |
-| Aliases | int | srv\_alias | isys\_catg\_service\_list\_\_id | isys\_catg\_service\_list\_2\_isys\_service\_alias | isys\_catg\_service\_list\_\_id |
+| Aktiv im Service-Katalog | int | isys\_catg\_service\_list | isys\_catg\_service\_list\_\_active |     |     |
+| Servicebeschreibung intern | text\_area | isys\_catg\_service\_list | isys\_catg\_service\_list\_\_service\_description\_intern |     |     |
+| Servicebeschreibung extern | text\_area | isys\_catg\_service\_list | isys\_catg\_service\_list\_\_service\_description\_extern |     |     |
+| Aliase | int | srv\_alias | isys\_catg\_service\_list\_\_id | isys\_catg\_service\_list\_2\_isys\_service\_alias | isys\_catg\_service\_list\_\_id |
 | Description | text\_area | isys\_catg\_service\_list | isys\_catg\_service\_list\_\_description |     |     |
 
-### Operating system
+### Betriebssystem
 
-#### Tabelle: isys\_catg\_application\_list
+#### table: isys\_catg\_application\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Operating system | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
-| Type | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_catg\_application\_type\_\_id | isys\_catg\_application\_type | isys\_catg\_application\_type\_\_id |
-| Priority | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_catg\_application\_priority\_\_id | isys\_catg\_application\_priority | isys\_catg\_application\_priority\_\_id |
-| Assigned license | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_cats\_lic\_list\_\_id | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_id |
-| Assigned license key | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_cats\_lic\_list\_\_id | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_id |
+| Betriebssystem | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
+| Typ | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_catg\_application\_type\_\_id | isys\_catg\_application\_type | isys\_catg\_application\_type\_\_id |
+| priority | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_catg\_application\_priority\_\_id | isys\_catg\_application\_priority | isys\_catg\_application\_priority\_\_id |
+| Zugewiesene Lizenz | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_cats\_lic\_list\_\_id | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_id |
+| Zugewiesener license key | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_cats\_lic\_list\_\_id | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_id |
 | Service | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_catg\_relation\_list\_\_id | isys\_catg\_its\_components\_list | isys\_catg\_its\_components\_list\_\_id |
-| Variant | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_cats\_app\_variant\_list\_\_id | isys\_cats\_app\_variant\_list | isys\_cats\_app\_variant\_list\_\_id |
-| Version number | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_catg\_version\_list\_\_id | isys\_catg\_version\_list | isys\_catg\_version\_list\_\_id |
+| Variante | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_cats\_app\_variant\_list\_\_id | isys\_cats\_app\_variant\_list | isys\_cats\_app\_variant\_list\_\_id |
+| Versionsnummer | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_catg\_version\_list\_\_id | isys\_catg\_version\_list | isys\_catg\_version\_list\_\_id |
 | Description | text\_area | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_description |     |     |
 
 ### QinQ SP-VLAN
 
-#### Tabelle: isys\_catg\_qinq\_list
+#### table: isys\_catg\_qinq\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Assigned SP-VLAN | int | isys\_catg\_qinq\_list | isys\_catg\_qinq\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
+| Zugewiesenes SP-VLAN | int | isys\_catg\_qinq\_list | isys\_catg\_qinq\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
 | Description | text\_area | isys\_catg\_qinq\_list | isys\_catg\_qinq\_list\_\_description |     |     |
 
-### Fiber/lead
+### Faser/Ader
 
-#### Tabelle: isys\_catg\_fiber\_lead\_list
+#### table: isys\_catg\_fiber\_lead\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
 | Label | text | isys\_catg\_fiber\_lead\_list | isys\_catg\_fiber\_lead\_list\_\_label |     |     |
-| Category | int | isys\_catg\_fiber\_lead\_list | isys\_catg\_fiber\_lead\_list\_\_isys\_fiber\_category\_\_id | isys\_fiber\_category | isys\_fiber\_category\_\_id |
-| Color | int | isys\_catg\_fiber\_lead\_list | isys\_catg\_fiber\_lead\_list\_\_isys\_cable\_colour\_\_id | isys\_cable\_colour | isys\_cable\_colour\_\_id |
-| Damping | float | isys\_catg\_fiber\_lead\_list | isys\_catg\_fiber\_lead\_list\_\_damping |     |     |
+| category | int | isys\_catg\_fiber\_lead\_list | isys\_catg\_fiber\_lead\_list\_\_isys\_fiber\_category\_\_id | isys\_fiber\_category | isys\_fiber\_category\_\_id |
+| Farbe | int | isys\_catg\_fiber\_lead\_list | isys\_catg\_fiber\_lead\_list\_\_isys\_cable\_colour\_\_id | isys\_cable\_colour | isys\_cable\_colour\_\_id |
+| attenuation | float | isys\_catg\_fiber\_lead\_list | isys\_catg\_fiber\_lead\_list\_\_damping |     |     |
 | Description | text\_area | isys\_catg\_fiber\_lead\_list | isys\_catg\_fiber\_lead\_list\_\_description |     |     |
 
 ### QinQ CE-VLAN
 
-#### Tabelle: isys\_catg\_qinq\_list
+#### table: isys\_catg\_qinq\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Assigned SP-VLAN | int | isys\_catg\_qinq\_list | isys\_catg\_qinq\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
+| Zugewiesenes SP-VLAN | int | isys\_catg\_qinq\_list | isys\_catg\_qinq\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
 
-### Images
+### Bilder
 
-#### Tabelle: isys\_catg\_images\_list
+#### table: isys\_catg\_images\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Filename | text | isys\_catg\_images\_list | isys\_catg\_images\_list\_\_filename |     |     |
-| Filecontent | text | isys\_catg\_images\_list | isys\_catg\_images\_list\_\_filecontent |     |     |
+| filename | text | isys\_catg\_images\_list | isys\_catg\_images\_list\_\_filename |     |     |
+| fileinhalte | text | isys\_catg\_images\_list | isys\_catg\_images\_list\_\_filecontent |     |     |
 
-### WAN Connection
+### WAN-Leitungen
 
-#### Tabelle: isys\_catg\_wan\_list
+#### table: isys\_catg\_wan\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_title |     |     |
-| Role | int | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_isys\_wan\_role\_\_id | isys\_wan\_role | isys\_wan\_role\_\_id |
-| Type | int | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_isys\_wan\_type\_\_id | isys\_wan\_type | isys\_wan\_type\_\_id |
-| Channels | int | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_channels |     |     |
-| Call number(s) | text\_area | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_call\_numbers |     |     |
-| Location of the connection | int | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_connection\_location | isys\_obj | isys\_obj\_\_id |
-| Capacity UP | float | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_capacity\_up |     |     |
-| Capacity UP unit | int | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_capacity\_up\_unit | isys\_wan\_capacity\_unit | isys\_wan\_capacity\_unit\_\_id |
-| Capacity DOWN | float | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_capacity\_down |     |     |
-| Capacity DOWN unit | int | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_capacity\_down\_unit | isys\_wan\_capacity\_unit | isys\_wan\_capacity\_unit\_\_id |
-| Max. Capacity UP | float | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_max\_capacity\_up |     |     |
-| Max. Capacity UP unit | int | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_max\_capacity\_up\_unit | isys\_wan\_capacity\_unit | isys\_wan\_capacity\_unit\_\_id |
-| Max. Capacity DOWN | float | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_max\_capacity\_down |     |     |
-| Max. Capacity DOWN unit | int | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_max\_capacity\_down\_unit | isys\_wan\_capacity\_unit | isys\_wan\_capacity\_unit\_\_id |
-| Projekt number | text | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_project\_no |     |     |
+| designation | text | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_title |     |     |
+| Rolle | int | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_isys\_wan\_role\_\_id | isys\_wan\_role | isys\_wan\_role\_\_id |
+| Typ | int | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_isys\_wan\_type\_\_id | isys\_wan\_type | isys\_wan\_type\_\_id |
+| channels | int | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_channels |     |     |
+| Rufnummer(n) | text\_area | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_call\_numbers |     |     |
+| Standort des Anschlusses | int | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_connection\_location | isys\_obj | isys\_obj\_\_id |
+| capacity UP | float | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_capacity\_up |     |     |
+| capacity UP Einheit | int | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_capacity\_up\_unit | isys\_wan\_capacity\_unit | isys\_wan\_capacity\_unit\_\_id |
+| capacity DOWN | float | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_capacity\_down |     |     |
+| capacity DOWN Einheit | int | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_capacity\_down\_unit | isys\_wan\_capacity\_unit | isys\_wan\_capacity\_unit\_\_id |
+| Max. capacity UP | float | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_max\_capacity\_up |     |     |
+| Max. capacity UP Einheit | int | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_max\_capacity\_up\_unit | isys\_wan\_capacity\_unit | isys\_wan\_capacity\_unit\_\_id |
+| Max. capacity DOWN | float | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_max\_capacity\_down |     |     |
+| Max. capacity DOWN Einheit | int | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_max\_capacity\_down\_unit | isys\_wan\_capacity\_unit | isys\_wan\_capacity\_unit\_\_id |
+| Projektnummer | text | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_project\_no |     |     |
 | VLAN-ID | int | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_vlan | isys\_obj | isys\_obj\_\_id |
-| Shopping cart number | text | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_shopping\_cart\_no |     |     |
-| Ticket number | text | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_ticket\_no |     |     |
-| Customer number | text | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_customer\_no |     |     |
-| Connected routers | int | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_id | isys\_catg\_wan\_list\_2\_router | isys\_catg\_wan\_list\_2\_router\_\_isys\_catg\_wan\_list\_\_id |
-| Connected nets | int | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_id | isys\_catg\_wan\_list\_2\_net | isys\_catg\_wan\_list\_2\_net\_\_isys\_catg\_wan\_list\_\_id |
+| Warenkorbnummer | text | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_shopping\_cart\_no |     |     |
+| Ticket Nr. | text | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_ticket\_no |     |     |
+| Kunden Nr. | text | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_customer\_no |     |     |
+| Verbundene Router | int | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_id | isys\_catg\_wan\_list\_2\_router | isys\_catg\_wan\_list\_2\_router\_\_isys\_catg\_wan\_list\_\_id |
+| Verbundene Netze | int | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_id | isys\_catg\_wan\_list\_2\_net | isys\_catg\_wan\_list\_2\_net\_\_isys\_catg\_wan\_list\_\_id |
 | Description | text\_area | isys\_catg\_wan\_list | isys\_catg\_wan\_list\_\_description |     |     |
 
 ### Remote Management Controller
 
-#### Tabelle: isys\_catg\_rm\_controller\_list
+#### table: isys\_catg\_rm\_controller\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Primary access URL | text | isys\_catg\_rm\_controller\_list | isys\_catg\_access\_list\_\_id |     |     |
+| Primarye AccesssURL | text | isys\_catg\_rm\_controller\_list | isys\_catg\_access\_list\_\_id |     |     |
 | Remote Management Controller | int | isys\_catg\_rm\_controller\_list | isys\_catg\_rm\_controller\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
 | Description | text\_area | isys\_catg\_rm\_controller\_list | isys\_catg\_rm\_controller\_list\_\_description |     |     |
 
-### Managed devices
+### Verwaltete devicee
 
-#### Tabelle: isys\_catg\_virtual\_list
+#### table: isys\_catg\_virtual\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
 | Remote Management Controller | int | isys\_catg\_virtual\_list | isys\_connection\_\_isys\_obj\_\_id |     |     |
 
-### Virtual managed objects
+### Virtuell gemanagte objects
 
-#### Tabelle: isys\_catg\_virtual\_list
+#### table: isys\_catg\_virtual\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Object | int | isys\_catg\_virtual\_list | isys\_catg\_virtual\_host\_list\_\_administration\_service |     |     |
+| object | int | isys\_catg\_virtual\_list | isys\_catg\_virtual\_host\_list\_\_administration\_service |     |     |
 
 ### VRRP
 
-#### Tabelle: isys\_catg\_vrrp\_list
+#### table: isys\_catg\_vrrp\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Type | int | isys\_catg\_vrrp\_list | isys\_catg\_vrrp\_list\_\_isys\_vrrp\_type\_\_id | isys\_vrrp\_type | isys\_vrrp\_type\_\_id |
+| Typ | int | isys\_catg\_vrrp\_list | isys\_catg\_vrrp\_list\_\_isys\_vrrp\_type\_\_id | isys\_vrrp\_type | isys\_vrrp\_type\_\_id |
 | VR ID | text | isys\_catg\_vrrp\_list | isys\_catg\_vrrp\_list\_\_vr\_id |     |     |
 | Description | text\_area | isys\_catg\_vrrp\_list | isys\_catg\_vrrp\_list\_\_description |     |     |
 
-### VRRP Member
+### Mitglieder
 
-#### Tabelle: isys\_catg\_vrrp\_member\_list
+#### table: isys\_catg\_vrrp\_member\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| VRRP member | int | isys\_catg\_vrrp\_member\_list | isys\_catg\_vrrp\_member\_list\_\_isys\_catg\_log\_port\_list\_\_id | isys\_catg\_log\_port\_list | isys\_catg\_log\_port\_list\_\_id |
+| VRRP Mitglied | int | isys\_catg\_vrrp\_member\_list | isys\_catg\_vrrp\_member\_list\_\_isys\_catg\_log\_port\_list\_\_id | isys\_catg\_log\_port\_list | isys\_catg\_log\_port\_list\_\_id |
 | Description | text\_area | isys\_catg\_vrrp\_member\_list | isys\_catg\_vrrp\_member\_list\_\_description |     |     |
 
-### Stack member
+### Stack Mitglieder
 
-#### Tabelle: isys\_catg\_stack\_member\_list
+#### table: isys\_catg\_stack\_member\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Member | int | isys\_catg\_stack\_member\_list | isys\_catg\_stack\_member\_list\_\_stack\_member | isys\_obj | isys\_obj\_\_id |
-| Mode | int | isys\_catg\_stack\_member\_list | isys\_catg\_stack\_member\_list\_\_mode |     |     |
+| Mitglied | int | isys\_catg\_stack\_member\_list | isys\_catg\_stack\_member\_list\_\_stack\_member | isys\_obj | isys\_obj\_\_id |
+| Modus | int | isys\_catg\_stack\_member\_list | isys\_catg\_stack\_member\_list\_\_mode |     |     |
 | Description | text\_area | isys\_catg\_stack\_member\_list | isys\_catg\_stack\_member\_list\_\_description |     |     |
 
-### Last login user
+### Letzter eingeloggter user
 
-#### Tabelle: isys\_catg\_last\_login\_user\_list
+#### table: isys\_catg\_last\_login\_user\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Last logged in user | text | isys\_catg\_last\_login\_user\_list | isys\_catg\_last\_login\_user\_list\_\_last\_login |     |     |
-| Type | text | isys\_catg\_last\_login\_user\_list | isys\_catg\_last\_login\_user\_list\_\_type |     |     |
+| Letzter eingeloggter user | text | isys\_catg\_last\_login\_user\_list | isys\_catg\_last\_login\_user\_list\_\_last\_login |     |     |
+| Typ | text | isys\_catg\_last\_login\_user\_list | isys\_catg\_last\_login\_user\_list\_\_type |     |     |
 | Description | text\_area | isys\_catg\_last\_login\_user\_list | isys\_catg\_last\_login\_user\_list\_\_description |     |     |
 
-### Net zone
+### Netzbereich
 
-#### Tabelle: isys\_catg\_virtual\_list
+#### table: isys\_catg\_virtual\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Scope | text | isys\_catg\_virtual\_list | isys\_cats\_net\_zone\_list\_\_isys\_obj\_\_id\_\_zone | isys\_obj | isys\_obj\_\_id |
+| Bereiche | text | isys\_catg\_virtual\_list | isys\_cats\_net\_zone\_list\_\_isys\_obj\_\_id\_\_zone | isys\_obj | isys\_obj\_\_id |
 
-### Options
+### Optionen
 
-#### Tabelle: isys\_catg\_net\_zone\_options\_list
+#### table: isys\_catg\_net\_zone\_options\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Zone color | text | isys\_catg\_net\_zone\_options\_list | isys\_catg\_net\_zone\_options\_list\_\_color |     |     |
-| Zone color | text | isys\_catg\_net\_zone\_options\_list | isys\_catg\_net\_zone\_options\_list\_\_domain |     |     |
+| Bereichsfarbe | text | isys\_catg\_net\_zone\_options\_list | isys\_catg\_net\_zone\_options\_list\_\_color |     |     |
+| Bereichsfarbe | text | isys\_catg\_net\_zone\_options\_list | isys\_catg\_net\_zone\_options\_list\_\_domain |     |     |
 | Description | text\_area | isys\_catg\_net\_zone\_options\_list | isys\_catg\_net\_zone\_options\_list\_\_description |     |     |
 
-### Scope
+### Bereiche
 
-#### Tabelle: isys\_catg\_virtual\_list
+#### table: isys\_catg\_virtual\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Scope | text | isys\_catg\_virtual\_list | isys\_cats\_net\_zone\_list\_\_isys\_obj\_\_id\_\_zone | isys\_obj | isys\_obj\_\_id |
+| Bereiche | text | isys\_catg\_virtual\_list | isys\_cats\_net\_zone\_list\_\_isys\_obj\_\_id\_\_zone | isys\_obj | isys\_obj\_\_id |
 
-Specific categories
--------------------
+Specific Categories
+----------------------
 
 ### Rack
 
-#### Tabelle: isys\_cats\_enclosure\_list
+#### table: isys\_cats\_enclosure\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Vertical slots (front side) | int | isys\_cats\_enclosure\_list | isys\_cats\_enclosure\_list\_\_vertical\_slots\_front |     |     |
-| Vertical slots (backside) | int | isys\_cats\_enclosure\_list | isys\_cats\_enclosure\_list\_\_vertical\_slots\_rear |     |     |
+| Vertikale bays (Frontseite) | int | isys\_cats\_enclosure\_list | isys\_cats\_enclosure\_list\_\_vertical\_slots\_front |     |     |
+| Vertikale bays (rear side) | int | isys\_cats\_enclosure\_list | isys\_cats\_enclosure\_list\_\_vertical\_slots\_rear |     |     |
 | Height unit sorting | text | isys\_cats\_enclosure\_list | isys\_cats\_enclosure\_list\_\_slot\_sorting |     |     |
 | Description | text\_area | isys\_cats\_enclosure\_list | isys\_cats\_enclosure\_list\_\_description |     |     |
 
-### Room
+### Raum
 
-#### Tabelle: isys\_cats\_room\_list
+#### table: isys\_cats\_room\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Type | int | isys\_cats\_room\_list | isys\_cats\_room\_list\_\_isys\_room\_type\_\_id | isys\_room\_type | isys\_room\_type\_\_id |
-| Room number | text | isys\_cats\_room\_list | isys\_cats\_room\_list\_\_number |     |     |
-| Floor | text | isys\_cats\_room\_list | isys\_cats\_room\_list\_\_floor |     |     |
+| Typ | int | isys\_cats\_room\_list | isys\_cats\_room\_list\_\_isys\_room\_type\_\_id | isys\_room\_type | isys\_room\_type\_\_id |
+| Raumnummer | text | isys\_cats\_room\_list | isys\_cats\_room\_list\_\_number |     |     |
+| Stockwerk | text | isys\_cats\_room\_list | isys\_cats\_room\_list\_\_floor |     |     |
 | Description | text\_area | isys\_cats\_room\_list | isys\_cats\_room\_list\_\_description |     |     |
 
-### Services
+### Dienste
 
-#### Tabelle: isys\_cats\_application\_list
+#### table: isys\_cats\_application\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Specification | text | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_specification |     |     |
-| Manufacturer | int | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_isys\_application\_manufacturer\_\_id | isys\_application\_manufacturer | isys\_application\_manufacturer\_\_id |
-| Installation | int | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_isys\_installation\_type\_\_id | isys\_installation\_type | isys\_installation\_type\_\_id |
-| Registration key | text | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_registration\_key |     |     |
-| Install path | text | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_install\_path |     |     |
-| Amount of installations | int | isys\_cats\_application\_list |     |     |     |
+| Spezifikation | text | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_specification |     |     |
+| Hersteller | int | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_isys\_application\_manufacturer\_\_id | isys\_application\_manufacturer | isys\_application\_manufacturer\_\_id |
+| installationsart | int | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_isys\_installation\_type\_\_id | isys\_installation\_type | isys\_installation\_type\_\_id |
+| Registrierungs-Key | text | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_registration\_key |     |     |
+| installationspfad | text | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_install\_path |     |     |
+| Anzahl installationen | int | isys\_cats\_application\_list |     |     |     |
 | Description | text\_area | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_description |     |     |
 
 ### Switch
 
-#### Tabelle: isys\_cats\_switch\_net\_list
+#### table: isys\_cats\_switch\_net\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| VLAN management protocol | int | isys\_cats\_switch\_net\_list | isys\_cats\_switch\_net\_list\_\_isys\_vlan\_management\_protocol\_\_id | isys\_vlan\_management\_protocol | isys\_vlan\_management\_protocol\_\_id |
-| Role | int | isys\_cats\_switch\_net\_list | isys\_cats\_switch\_net\_list\_\_isys\_switch\_role\_\_id | isys\_switch\_role | isys\_switch\_role\_\_id |
+| VLAN Management Protokoll | int | isys\_cats\_switch\_net\_list | isys\_cats\_switch\_net\_list\_\_isys\_vlan\_management\_protocol\_\_id | isys\_vlan\_management\_protocol | isys\_vlan\_management\_protocol\_\_id |
+| Rolle | int | isys\_cats\_switch\_net\_list | isys\_cats\_switch\_net\_list\_\_isys\_switch\_role\_\_id | isys\_switch\_role | isys\_switch\_role\_\_id |
 | Spanning Tree | int | isys\_cats\_switch\_net\_list | isys\_cats\_switch\_net\_list\_\_isys\_switch\_spanning\_tree\_\_id | isys\_switch\_spanning\_tree | isys\_switch\_spanning\_tree\_\_id |
 | Description | text\_area | isys\_cats\_switch\_net\_list | isys\_cats\_switch\_net\_list\_\_description |     |     |
 
-### WAN
+### WAN-Leitungen
 
-#### Tabelle: isys\_cats\_wan\_list
+#### table: isys\_cats\_wan\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Role | int | isys\_cats\_wan\_list | isys\_cats\_wan\_list\_\_isys\_wan\_role\_\_id | isys\_wan\_role | isys\_wan\_role\_\_id |
-| Type | int | isys\_cats\_wan\_list | isys\_cats\_wan\_list\_\_isys\_wan\_type\_\_id | isys\_wan\_type | isys\_wan\_type\_\_id |
-| Capacity | double | isys\_cats\_wan\_list | isys\_cats\_wan\_list\_\_capacity |     |     |
-| Capacity unit | int | isys\_cats\_wan\_list | isys\_cats\_wan\_list\_\_isys\_wan\_capacity\_unit\_\_id | isys\_wan\_capacity\_unit | isys\_wan\_capacity\_unit\_\_id |
+| Rolle | int | isys\_cats\_wan\_list | isys\_cats\_wan\_list\_\_isys\_wan\_role\_\_id | isys\_wan\_role | isys\_wan\_role\_\_id |
+| Typ | int | isys\_cats\_wan\_list | isys\_cats\_wan\_list\_\_isys\_wan\_type\_\_id | isys\_wan\_type | isys\_wan\_type\_\_id |
+| capacity | double | isys\_cats\_wan\_list | isys\_cats\_wan\_list\_\_capacity |     |     |
+| capacityseinheit | int | isys\_cats\_wan\_list | isys\_cats\_wan\_list\_\_isys\_wan\_capacity\_unit\_\_id | isys\_wan\_capacity\_unit | isys\_wan\_capacity\_unit\_\_id |
 | Description | text\_area | isys\_cats\_wan\_list | isys\_cats\_wan\_list\_\_description |     |     |
 
-### Emergency plan
+### Notfallplan
 
-#### Tabelle: isys\_cats\_emergency\_plan\_list
+#### table: isys\_cats\_emergency\_plan\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Time need | int | isys\_cats\_emergency\_plan\_list | isys\_cats\_emergency\_plan\_list\_\_calc\_time\_need |     |     |
-| Unit | int | isys\_cats\_emergency\_plan\_list | isys\_cats\_emergency\_plan\_list\_\_isys\_unit\_of\_time\_\_id | isys\_unit\_of\_time | isys\_unit\_of\_time\_\_id |
-| Date of emergency practice | date\_time | isys\_cats\_emergency\_plan\_list | isys\_cats\_emergency\_plan\_list\_\_practice\_actual\_date |     |     |
+| Zeitbedarf | int | isys\_cats\_emergency\_plan\_list | isys\_cats\_emergency\_plan\_list\_\_calc\_time\_need |     |     |
+| Einheit | int | isys\_cats\_emergency\_plan\_list | isys\_cats\_emergency\_plan\_list\_\_isys\_unit\_of\_time\_\_id | isys\_unit\_of\_time | isys\_unit\_of\_time\_\_id |
+| date emergency exercise | date\_time | isys\_cats\_emergency\_plan\_list | isys\_cats\_emergency\_plan\_list\_\_practice\_actual\_date |     |     |
 | Description | text\_area | isys\_cats\_emergency\_plan\_list | isys\_cats\_emergency\_plan\_list\_\_description |     |     |
 
-### Air conditioning
+### Klimaanlage
 
-#### Tabelle: isys\_cats\_ac\_list
+#### table: isys\_cats\_ac\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Type | int | isys\_cats\_ac\_list | isys\_cats\_ac\_list\_\_isys\_ac\_type\_\_id | isys\_ac\_type | isys\_ac\_type\_\_id |
-| Threshold | float | isys\_cats\_ac\_list | isys\_cats\_ac\_list\_\_threshold |     |     |
-| Memory-unit | int | isys\_cats\_ac\_list | isys\_cats\_ac\_list\_\_isys\_temp\_unit\_\_id | isys\_temp\_unit | isys\_temp\_unit\_\_id |
-| Capacity unit | int | isys\_cats\_ac\_list | isys\_cats\_ac\_list\_\_isys\_ac\_refrigerating\_capacity\_unit\_\_id | isys\_ac\_refrigerating\_capacity\_unit | isys\_ac\_refrigerating\_capacity\_unit\_\_id |
-| Refrigerating capacity | float | isys\_cats\_ac\_list | isys\_cats\_ac\_list\_\_capacity |     |     |
-| Air quantity | float | isys\_cats\_ac\_list | isys\_cats\_ac\_list\_\_air\_quantity |     |     |
+| Art | int | isys\_cats\_ac\_list | isys\_cats\_ac\_list\_\_isys\_ac\_type\_\_id | isys\_ac\_type | isys\_ac\_type\_\_id |
+| Schwellwert | float | isys\_cats\_ac\_list | isys\_cats\_ac\_list\_\_threshold |     |     |
+| Speicher-Einheit | int | isys\_cats\_ac\_list | isys\_cats\_ac\_list\_\_isys\_temp\_unit\_\_id | isys\_temp\_unit | isys\_temp\_unit\_\_id |
+| capacityseinheit | int | isys\_cats\_ac\_list | isys\_cats\_ac\_list\_\_isys\_ac\_refrigerating\_capacity\_unit\_\_id | isys\_ac\_refrigerating\_capacity\_unit | isys\_ac\_refrigerating\_capacity\_unit\_\_id |
+| cooling capacity | float | isys\_cats\_ac\_list | isys\_cats\_ac\_list\_\_capacity |     |     |
+| Luftmenge | float | isys\_cats\_ac\_list | isys\_cats\_ac\_list\_\_air\_quantity |     |     |
 | isys\_volume\_unit | int | isys\_cats\_ac\_list | isys\_cats\_ac\_list\_\_isys\_ac\_air\_quantity\_unit\_\_id | isys\_ac\_air\_quantity\_unit | isys\_ac\_air\_quantity\_unit\_\_id |
-| Width | float | isys\_cats\_ac\_list | isys\_cats\_ac\_list\_\_width |     |     |
-| Height | float | isys\_cats\_ac\_list | isys\_cats\_ac\_list\_\_height |     |     |
-| Depth | float | isys\_cats\_ac\_list | isys\_cats\_ac\_list\_\_depth |     |     |
+| Breite | float | isys\_cats\_ac\_list | isys\_cats\_ac\_list\_\_width |     |     |
+| height | float | isys\_cats\_ac\_list | isys\_cats\_ac\_list\_\_height |     |     |
+| Tiefe | float | isys\_cats\_ac\_list | isys\_cats\_ac\_list\_\_depth |     |     |
 | isys\_depth\_unit | int | isys\_cats\_ac\_list | isys\_cats\_ac\_list\_\_isys\_depth\_unit\_\_id | isys\_depth\_unit | isys\_depth\_unit\_\_id |
 | Description | text\_area | isys\_cats\_ac\_list | isys\_cats\_ac\_list\_\_description |     |     |
 
-### WiFi device
+### WiFi-device
 
-#### Tabelle: isys\_cats\_access\_point\_list
+#### table: isys\_cats\_access\_point\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_cats\_access\_point\_list | isys\_cats\_access\_point\_list\_\_title |     |     |
-| Function | int | isys\_cats\_access\_point\_list | isys\_cats\_access\_point\_list\_\_isys\_wlan\_function\_\_id | isys\_wlan\_function | isys\_wlan\_function\_\_id |
-| Standard | int | isys\_cats\_access\_point\_list | isys\_cats\_access\_point\_list\_\_isys\_wlan\_standard\_\_id | isys\_wlan\_standard | isys\_wlan\_standard\_\_id |
-| Channel | int | isys\_cats\_access\_point\_list | isys\_cats\_access\_point\_list\_\_isys\_wlan\_channel\_\_id | isys\_wlan\_channel | isys\_wlan\_channel\_\_id |
-| Broadcast SSID | int | isys\_cats\_access\_point\_list | isys\_cats\_access\_point\_list\_\_broadcast\_ssid |     |     |
+| designation | text | isys\_cats\_access\_point\_list | isys\_cats\_access\_point\_list\_\_title |     |     |
+| function | int | isys\_cats\_access\_point\_list | isys\_cats\_access\_point\_list\_\_isys\_wlan\_function\_\_id | isys\_wlan\_function | isys\_wlan\_function\_\_id |
+| default | int | isys\_cats\_access\_point\_list | isys\_cats\_access\_point\_list\_\_isys\_wlan\_standard\_\_id | isys\_wlan\_standard | isys\_wlan\_standard\_\_id |
+| Kanal | int | isys\_cats\_access\_point\_list | isys\_cats\_access\_point\_list\_\_isys\_wlan\_channel\_\_id | isys\_wlan\_channel | isys\_wlan\_channel\_\_id |
+| SSID viatragen | int | isys\_cats\_access\_point\_list | isys\_cats\_access\_point\_list\_\_broadcast\_ssid |     |     |
 | SSID | text | isys\_cats\_access\_point\_list | isys\_cats\_access\_point\_list\_\_ssid |     |     |
-| MAC filter | int | isys\_cats\_access\_point\_list | isys\_cats\_access\_point\_list\_\_mac\_filter |     |     |
-| Authentication | int | isys\_cats\_access\_point\_list | isys\_cats\_access\_point\_list\_\_isys\_wlan\_auth\_\_id | isys\_wlan\_auth | isys\_wlan\_auth\_\_id |
-| Encryption | int | isys\_cats\_access\_point\_list | isys\_cats\_access\_point\_list\_\_encryption | isys\_wlan\_encryption | isys\_wlan\_encryption\_\_id |
-| Key | text | isys\_cats\_access\_point\_list | isys\_cats\_access\_point\_list\_\_key |     |     |
+| MAC-Filter | int | isys\_cats\_access\_point\_list | isys\_cats\_access\_point\_list\_\_mac\_filter |     |     |
+| Authentifikation | int | isys\_cats\_access\_point\_list | isys\_cats\_access\_point\_list\_\_isys\_wlan\_auth\_\_id | isys\_wlan\_auth | isys\_wlan\_auth\_\_id |
+| encryption | int | isys\_cats\_access\_point\_list | isys\_cats\_access\_point\_list\_\_encryption | isys\_wlan\_encryption | isys\_wlan\_encryption\_\_id |
+| key | text | isys\_cats\_access\_point\_list | isys\_cats\_access\_point\_list\_\_key |     |     |
 | Description | text\_area | isys\_cats\_access\_point\_list | isys\_cats\_access\_point\_list\_\_description |     |     |
 
 ### Monitor
 
-#### Tabelle: isys\_cats\_monitor\_list
+#### table: isys\_cats\_monitor\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
 | Display | float | isys\_cats\_monitor\_list | isys\_cats\_monitor\_list\_\_display |     |     |
-| Unit | int | isys\_cats\_monitor\_list | isys\_cats\_monitor\_list\_\_isys\_depth\_unit\_\_id | isys\_depth\_unit | isys\_depth\_unit\_\_id |
-| Type | int | isys\_cats\_monitor\_list | isys\_cats\_monitor\_list\_\_isys\_monitor\_type\_\_id | isys\_monitor\_type | isys\_monitor\_type\_\_id |
-| Resolution | int | isys\_cats\_monitor\_list | isys\_cats\_monitor\_list\_\_isys\_monitor\_resolution\_\_id | isys\_monitor\_resolution | isys\_monitor\_resolution\_\_id |
+| Einheit | int | isys\_cats\_monitor\_list | isys\_cats\_monitor\_list\_\_isys\_depth\_unit\_\_id | isys\_depth\_unit | isys\_depth\_unit\_\_id |
+| Typ | int | isys\_cats\_monitor\_list | isys\_cats\_monitor\_list\_\_isys\_monitor\_type\_\_id | isys\_monitor\_type | isys\_monitor\_type\_\_id |
+| resolution | int | isys\_cats\_monitor\_list | isys\_cats\_monitor\_list\_\_isys\_monitor\_resolution\_\_id | isys\_monitor\_resolution | isys\_monitor\_resolution\_\_id |
 | Pivot | int | isys\_cats\_monitor\_list | isys\_cats\_monitor\_list\_\_pivot |     |     |
-| Speaker | int | isys\_cats\_monitor\_list | isys\_cats\_monitor\_list\_\_speaker |     |     |
+| Lautsprecher | int | isys\_cats\_monitor\_list | isys\_cats\_monitor\_list\_\_speaker |     |     |
 | Description | text\_area | isys\_cats\_monitor\_list | isys\_cats\_monitor\_list\_\_description |     |     |
 
-### Desktop
+### Arbeitsplatzsystem
 
-#### Tabelle: isys\_cats\_client\_list
+#### table: isys\_cats\_client\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Client type | int | isys\_cats\_client\_list | isys\_cats\_client\_list\_\_isys\_client\_type\_\_id | isys\_client\_type | isys\_client\_type\_\_id |
-| Keyboard Layout | text | isys\_cats\_client\_list | isys\_cats\_client\_list\_\_keyboard\_layout |     |     |
+| Typ des Clients | int | isys\_cats\_client\_list | isys\_cats\_client\_list\_\_isys\_client\_type\_\_id | isys\_client\_type | isys\_client\_type\_\_id |
+| Tastatur-Layout | text | isys\_cats\_client\_list | isys\_cats\_client\_list\_\_keyboard\_layout |     |     |
 | Description | text\_area | isys\_cats\_client\_list | isys\_cats\_client\_list\_\_description |     |     |
 
-### FC switch
+### FC-Switch
 
-#### Tabelle: isys\_cats\_switch\_fc\_list
+#### table: isys\_cats\_switch\_fc\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_cats\_switch\_fc\_list | isys\_cats\_switch\_fc\_list\_\_title |     |     |
-| Active | int | isys\_cats\_switch\_fc\_list | isys\_cats\_switch\_fc\_list\_\_unit\_active |     |     |
+| designation | text | isys\_cats\_switch\_fc\_list | isys\_cats\_switch\_fc\_list\_\_title |     |     |
+| Aktiv | int | isys\_cats\_switch\_fc\_list | isys\_cats\_switch\_fc\_list\_\_unit\_active |     |     |
 | Description | text\_area | isys\_cats\_switch\_fc\_list | isys\_cats\_switch\_fc\_list\_\_description |     |     |
 
 ### Routing
 
-#### Tabelle: isys\_cats\_router\_list
+#### table: isys\_cats\_router\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Routing protocol | int | isys\_cats\_router\_list | isys\_cats\_router\_list\_\_routing\_protocol | isys\_routing\_protocol | isys\_routing\_protocol\_\_id |
-| Gateway address | int | isys\_cats\_router\_list | isys\_cats\_router\_list\_\_id |     |     |
+| Routingprotokoll | int | isys\_cats\_router\_list | isys\_cats\_router\_list\_\_routing\_protocol | isys\_routing\_protocol | isys\_routing\_protocol\_\_id |
+| Gateway Adresse | int | isys\_cats\_router\_list | isys\_cats\_router\_list\_\_id |     |     |
 | Description | text\_area | isys\_cats\_router\_list | isys\_cats\_router\_list\_\_description |     |     |
 
-### Printer
+### Drucker
 
-#### Tabelle: isys\_cats\_prt\_list
+#### table: isys\_cats\_prt\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Type | int | isys\_cats\_prt\_list | isys\_cats\_prt\_list\_\_isys\_cats\_prt\_type\_\_id | isys\_cats\_prt\_type | isys\_cats\_prt\_type\_\_id |
-| Color | int | isys\_cats\_prt\_list | isys\_cats\_prt\_list\_\_iscolor |     |     |
+| Typ | int | isys\_cats\_prt\_list | isys\_cats\_prt\_list\_\_isys\_cats\_prt\_type\_\_id | isys\_cats\_prt\_type | isys\_cats\_prt\_type\_\_id |
+| Farbe | int | isys\_cats\_prt\_list | isys\_cats\_prt\_list\_\_iscolor |     |     |
 | Duplex | int | isys\_cats\_prt\_list | isys\_cats\_prt\_list\_\_isduplex |     |     |
 | Emulation | int | isys\_cats\_prt\_list | isys\_cats\_prt\_list\_\_isys\_cats\_prt\_emulation\_\_id | isys\_cats\_prt\_emulation | isys\_cats\_prt\_emulation\_\_id |
-| Paper format | int | isys\_cats\_prt\_list | isys\_cats\_prt\_list\_\_isys\_cats\_prt\_paper\_\_id | isys\_cats\_prt\_paper | isys\_cats\_prt\_paper\_\_id |
+| Papierformat | int | isys\_cats\_prt\_list | isys\_cats\_prt\_list\_\_isys\_cats\_prt\_paper\_\_id | isys\_cats\_prt\_paper | isys\_cats\_prt\_paper\_\_id |
 | Description | text\_area | isys\_cats\_prt\_list | isys\_cats\_prt\_list\_\_description |     |     |
 
-### Files
+### fileen
 
-#### Tabelle: isys\_cats\_file\_list
+#### table: isys\_cats\_file\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_cats\_file\_list | isys\_file\_version\_\_title |     |     |
-| Filename | int | isys\_cats\_file\_list | isys\_file\_version\_\_isys\_file\_physical\_\_id |     |     |
-| Category | int | isys\_cats\_file\_list | isys\_cats\_file\_list\_\_isys\_file\_category\_\_id | isys\_file\_category | isys\_file\_category\_\_id |
+| designation | text | isys\_cats\_file\_list | isys\_file\_version\_\_title |     |     |
+| filename | int | isys\_cats\_file\_list | isys\_file\_version\_\_isys\_file\_physical\_\_id |     |     |
+| category | int | isys\_cats\_file\_list | isys\_cats\_file\_list\_\_isys\_file\_category\_\_id | isys\_file\_category | isys\_file\_category\_\_id |
 | Revision | text | isys\_cats\_file\_list | isys\_file\_version\_\_revision |     |     |
-| Version Description | text\_area | isys\_cats\_file\_list | isys\_file\_version\_\_description |     |     |
+| Versions-Description | text\_area | isys\_cats\_file\_list | isys\_file\_version\_\_description |     |     |
 | Description | text\_area | isys\_cats\_file\_list | isys\_cats\_file\_list\_\_description |     |     |
 | Version | int | isys\_cats\_file\_list | isys\_cats\_file\_list\_\_isys\_file\_version\_\_id | isys\_file\_version | isys\_file\_version\_\_id |
-| MD5 Checksum | text | isys\_cats\_file\_list | isys\_file\_physical\_\_md5 |     |     |
+| MD5 Checksumme | text | isys\_cats\_file\_list | isys\_file\_physical\_\_md5 |     |     |
 
-### Applications
+### Anwendungen
 
-#### Tabelle: isys\_cats\_application\_list
+#### table: isys\_cats\_application\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Specification | text | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_specification |     |     |
-| Manufacturer | int | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_isys\_application\_manufacturer\_\_id | isys\_application\_manufacturer | isys\_application\_manufacturer\_\_id |
-| Installation | int | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_isys\_installation\_type\_\_id | isys\_installation\_type | isys\_installation\_type\_\_id |
-| Registration key | text | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_registration\_key |     |     |
-| Install path | text | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_install\_path |     |     |
-| Amount of installations | int | isys\_cats\_application\_list |     |     |     |
+| Spezifikation | text | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_specification |     |     |
+| Hersteller | int | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_isys\_application\_manufacturer\_\_id | isys\_application\_manufacturer | isys\_application\_manufacturer\_\_id |
+| installationsart | int | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_isys\_installation\_type\_\_id | isys\_installation\_type | isys\_installation\_type\_\_id |
+| Registrierungs-Key | text | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_registration\_key |     |     |
+| installationspfad | text | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_install\_path |     |     |
+| Anzahl installationen | int | isys\_cats\_application\_list |     |     |     |
 | Description | text\_area | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_description |     |     |
 
-### Net
+### Netz
 
-#### Tabelle: isys\_cats\_net\_list
+#### table: isys\_cats\_net\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_cats\_net\_list | isys\_cats\_net\_list\_\_title |     |     |
-| Type | int | isys\_cats\_net\_list | isys\_cats\_net\_list\_\_isys\_net\_type\_\_id | isys\_net\_type | isys\_net\_type\_\_id |
-| Net | text | isys\_cats\_net\_list | isys\_cats\_net\_list\_\_address |     |     |
-| Netmask | text | isys\_cats\_net\_list | isys\_cats\_net\_list\_\_mask |     |     |
-| Default Gateway | int | isys\_cats\_net\_list | isys\_cats\_net\_list\_\_isys\_catg\_ip\_list\_\_id |     |     |
-| Address from | text | isys\_cats\_net\_list | isys\_cats\_net\_list\_\_address\_range\_from |     |     |
-| Address to | text | isys\_cats\_net\_list | isys\_cats\_net\_list\_\_address\_range\_to |     |     |
-| DNS server | int | isys\_cats\_net\_list | isys\_cats\_net\_list\_\_id | isys\_cats\_net\_list\_2\_isys\_catg\_ip\_list | isys\_cats\_net\_list\_\_id |
+| designation | text | isys\_cats\_net\_list | isys\_cats\_net\_list\_\_title |     |     |
+| Typ | int | isys\_cats\_net\_list | isys\_cats\_net\_list\_\_isys\_net\_type\_\_id | isys\_net\_type | isys\_net\_type\_\_id |
+| Netz | text | isys\_cats\_net\_list | isys\_cats\_net\_list\_\_address |     |     |
+| Netzmaske | text | isys\_cats\_net\_list | isys\_cats\_net\_list\_\_mask |     |     |
+| defaultgateway | int | isys\_cats\_net\_list | isys\_cats\_net\_list\_\_isys\_catg\_ip\_list\_\_id |     |     |
+| Adresse von | text | isys\_cats\_net\_list | isys\_cats\_net\_list\_\_address\_range\_from |     |     |
+| Adresse bis | text | isys\_cats\_net\_list | isys\_cats\_net\_list\_\_address\_range\_to |     |     |
+| DNS-Server | int | isys\_cats\_net\_list | isys\_cats\_net\_list\_\_id | isys\_cats\_net\_list\_2\_isys\_catg\_ip\_list | isys\_cats\_net\_list\_\_id |
 | DNS domain | int | dns\_domain | isys\_cats\_net\_list\_\_id | isys\_cats\_net\_list\_2\_isys\_net\_dns\_domain | isys\_cats\_net\_list\_\_id |
 | CIDR-Suffix | int | isys\_cats\_net\_list | isys\_cats\_net\_list\_\_cidr\_suffix |     |     |
 | Reverse DNS | text | isys\_cats\_net\_list | isys\_cats\_net\_list\_\_reverse\_dns |     |     |
-| Layer-2-net assignment | int | isys\_cats\_net\_list | isys\_obj\_\_id |     |     |
-| Net | text | isys\_cats\_net\_list |     |     |     |
-| Address range | text | isys\_cats\_net\_list | isys\_obj\_\_id |     |     |
-| Net with suffix | text | isys\_cats\_net\_list | isys\_obj\_\_id |     |     |
-| Assigned addresses | text | isys\_cats\_net\_list | isys\_obj\_\_id |     |     |
+| Layer-2-Netz Zuordnung | int | isys\_cats\_net\_list | isys\_obj\_\_id |     |     |
+| Netz | text | isys\_cats\_net\_list |     |     |     |
+| Adressbereich | text | isys\_cats\_net\_list | isys\_obj\_\_id |     |     |
+| Network with suffix | text | isys\_cats\_net\_list | isys\_obj\_\_id |     |     |
+| Zugewiesene Adressen | text | isys\_cats\_net\_list | isys\_obj\_\_id |     |     |
 | Description | text\_area | isys\_cats\_net\_list | isys\_cats\_net\_list\_\_description |     |     |
 
-### Mobile radio
+### Mobilfunk
 
-#### Tabelle: isys\_cats\_mobile\_phone\_list
+#### table: isys\_cats\_mobile\_phone\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| IMEI number | text | isys\_cats\_mobile\_phone\_list | isys\_cats\_mobile\_phone\_list\_\_imei\_number |     |     |
+| IMEI-Nummer | text | isys\_cats\_mobile\_phone\_list | isys\_cats\_mobile\_phone\_list\_\_imei\_number |     |     |
 | Description | text\_area | isys\_cats\_mobile\_phone\_list | isys\_cats\_mobile\_phone\_list\_\_description |     |     |
 
-### Object group
+### objectgruppe
 
-#### Tabelle: isys\_cats\_group\_list
+#### table: isys\_cats\_group\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Object | int | isys\_cats\_group\_list | isys\_cats\_group\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
-| Object type | text | isys\_cats\_group\_list | connected\_type |     |     |
+| object | int | isys\_cats\_group\_list | isys\_cats\_group\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
+| objecttyp | text | isys\_cats\_group\_list | connected\_type |     |     |
 | Description | text\_area | isys\_cats\_group\_list | isys\_cats\_group\_list\_\_description |     |     |
 
-### License keys
+### license key
 
-#### Tabelle: isys\_cats\_lic\_list
+#### table: isys\_cats\_lic\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Key | text | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_key |     |     |
-| Serial | text | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_serial |     |     |
-| License Type | int | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_type |     |     |
-| Amount | int | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_amount |     |     |
-| Licenses in Use | int | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_id |     |     |
-| Licenses Free | int | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_id |     |     |
-| Start Date | date | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_start |     |     |
-| Expiration Date | date | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_expire |     |     |
-| Price Per Unit | double | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_cost |     |     |
-| Total Costs | double | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_id |     |     |
+| key | text | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_key |     |     |
+| Serial number | text | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_serial |     |     |
+| Lizenz Typ | int | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_type |     |     |
+| Anzahl | int | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_amount |     |     |
+| Lizenzen in Benutzung | int | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_id |     |     |
+| Freie Lizenzen | int | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_id |     |     |
+| Startdatum | date | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_start |     |     |
+| Ablaufdatum | date | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_expire |     |     |
+| Einzelpreis | double | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_cost |     |     |
+| Gesamtkosten | double | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_id |     |     |
 | Description | text\_area | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_description |     |     |
 
-### Current file
+### Aktuelle file
 
-#### Tabelle: isys\_cats\_file\_list
+#### table: isys\_cats\_file\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_cats\_file\_list | isys\_file\_version\_\_title |     |     |
-| Filename | int | isys\_cats\_file\_list | isys\_file\_version\_\_isys\_file\_physical\_\_id |     |     |
-| Category | int | isys\_cats\_file\_list | isys\_cats\_file\_list\_\_isys\_file\_category\_\_id | isys\_file\_category | isys\_file\_category\_\_id |
+| designation | text | isys\_cats\_file\_list | isys\_file\_version\_\_title |     |     |
+| filename | int | isys\_cats\_file\_list | isys\_file\_version\_\_isys\_file\_physical\_\_id |     |     |
+| category | int | isys\_cats\_file\_list | isys\_cats\_file\_list\_\_isys\_file\_category\_\_id | isys\_file\_category | isys\_file\_category\_\_id |
 | Revision | text | isys\_cats\_file\_list | isys\_file\_version\_\_revision |     |     |
-| Version Description | text\_area | isys\_cats\_file\_list | isys\_file\_version\_\_description |     |     |
+| Versions-Description | text\_area | isys\_cats\_file\_list | isys\_file\_version\_\_description |     |     |
 | Description | text\_area | isys\_cats\_file\_list | isys\_cats\_file\_list\_\_description |     |     |
 | Version | int | isys\_cats\_file\_list | isys\_cats\_file\_list\_\_isys\_file\_version\_\_id | isys\_file\_version | isys\_file\_version\_\_id |
-| MD5 Checksum | text | isys\_cats\_file\_list | isys\_file\_physical\_\_md5 |     |     |
+| MD5 Checksumme | text | isys\_cats\_file\_list | isys\_file\_physical\_\_md5 |     |     |
 
-### File versions
+### fileversionen
 
-#### Tabelle: isys\_file\_version\_list
+#### table: isys\_file\_version\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Filename | text | isys\_file\_version\_list | isys\_file\_physical\_\_filename\_original |     |     |
-| File content | text | isys\_file\_version\_list | isys\_file\_physical\_\_filename |     |     |
-| Title | text | isys\_file\_version\_list | isys\_file\_version\_\_title |     |     |
+| filename | text | isys\_file\_version\_list | isys\_file\_physical\_\_filename\_original |     |     |
+| file Inhalt | text | isys\_file\_version\_list | isys\_file\_physical\_\_filename |     |     |
+| designation | text | isys\_file\_version\_list | isys\_file\_version\_\_title |     |     |
 | Revision | text | isys\_file\_version\_list | isys\_file\_version\_\_revision |     |     |
-| Upload date | text | isys\_file\_version\_list | isys\_file\_physical\_\_date\_uploaded |     |     |
-| Version Description | text\_area | isys\_file\_version\_list | isys\_file\_version\_\_description |     |     |
-| MD5 Checksum | text | isys\_file\_version\_list | isys\_file\_physical\_\_md5 |     |     |
-| Upload from | text | isys\_file\_version\_list | isys\_file\_physical\_\_user\_id\_uploaded |     |     |
+| Upload Datum | text | isys\_file\_version\_list | isys\_file\_physical\_\_date\_uploaded |     |     |
+| Versions-Description | text\_area | isys\_file\_version\_list | isys\_file\_version\_\_description |     |     |
+| MD5 Checksumme | text | isys\_file\_version\_list | isys\_file\_physical\_\_md5 |     |     |
+| Upload von | text | isys\_file\_version\_list | isys\_file\_physical\_\_user\_id\_uploaded |     |     |
 
-### Assigned objects
+### Zugewiesene objects
 
-#### Tabelle: isys\_cats\_file\_list
+#### table: isys\_cats\_file\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Assigned objects | int | isys\_cats\_file\_list |     |     |     |
+| Zugewiesene objects | int | isys\_cats\_file\_list |     |     |     |
 
-### Emergency plan properties
+### Notfallplan propertyen
 
-#### Tabelle: isys\_cats\_emergency\_plan\_list
+#### table: isys\_cats\_emergency\_plan\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Time need | int | isys\_cats\_emergency\_plan\_list | isys\_cats\_emergency\_plan\_list\_\_calc\_time\_need |     |     |
-| Unit | int | isys\_cats\_emergency\_plan\_list | isys\_cats\_emergency\_plan\_list\_\_isys\_unit\_of\_time\_\_id | isys\_unit\_of\_time | isys\_unit\_of\_time\_\_id |
-| Date of emergency practice | date\_time | isys\_cats\_emergency\_plan\_list | isys\_cats\_emergency\_plan\_list\_\_practice\_actual\_date |     |     |
+| Zeitbedarf | int | isys\_cats\_emergency\_plan\_list | isys\_cats\_emergency\_plan\_list\_\_calc\_time\_need |     |     |
+| Einheit | int | isys\_cats\_emergency\_plan\_list | isys\_cats\_emergency\_plan\_list\_\_isys\_unit\_of\_time\_\_id | isys\_unit\_of\_time | isys\_unit\_of\_time\_\_id |
+| date emergency exercise | date\_time | isys\_cats\_emergency\_plan\_list | isys\_cats\_emergency\_plan\_list\_\_practice\_actual\_date |     |     |
 | Description | text\_area | isys\_cats\_emergency\_plan\_list | isys\_cats\_emergency\_plan\_list\_\_description |     |     |
 
-### assigned objects
+### assignede objects
 
-#### Tabelle: isys\_catg\_emergency\_plan\_list
+#### table: isys\_catg\_emergency\_plan\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_catg\_emergency\_plan\_list | isys\_catg\_emergency\_plan\_list\_\_isys\_obj\_\_id |     |     |
+| designation | text | isys\_catg\_emergency\_plan\_list | isys\_catg\_emergency\_plan\_list\_\_isys\_obj\_\_id |     |     |
 
-### Net type
+### Netzart
 
-#### Tabelle: isys\_cats\_ws\_net\_type\_list
+#### table: isys\_cats\_ws\_net\_type\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Net type | int | isys\_cats\_ws\_net\_type\_list | isys\_cats\_ws\_net\_type\_list\_\_isys\_net\_type\_title\_\_id | isys\_net\_type\_title | isys\_net\_type\_title\_\_id |
+| Netzart | int | isys\_cats\_ws\_net\_type\_list | isys\_cats\_ws\_net\_type\_list\_\_isys\_net\_type\_title\_\_id | isys\_net\_type\_title | isys\_net\_type\_title\_\_id |
 | Description | text\_area | isys\_cats\_ws\_net\_type\_list | isys\_cats\_ws\_net\_type\_list\_\_description |     |     |
 
-### Assigned objects
+### Zugeordnete objects
 
-#### Tabelle: isys\_cats\_ws\_net\_type\_list
+#### table: isys\_cats\_ws\_net\_type\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Assigned Objects | int | isys\_cats\_ws\_net\_type\_list | isys\_obj\_\_id |     |     |
+| Zugewiesene objects | int | isys\_cats\_ws\_net\_type\_list | isys\_obj\_\_id |     |     |
 
-### Wiring System
+### Leitungsnetz
 
-#### Tabelle: isys\_cats\_ws\_net\_type\_list
+#### table: isys\_cats\_ws\_net\_type\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Net type | int | isys\_cats\_ws\_net\_type\_list | isys\_cats\_ws\_net\_type\_list\_\_isys\_net\_type\_title\_\_id | isys\_net\_type\_title | isys\_net\_type\_title\_\_id |
+| Netzart | int | isys\_cats\_ws\_net\_type\_list | isys\_cats\_ws\_net\_type\_list\_\_isys\_net\_type\_title\_\_id | isys\_net\_type\_title | isys\_net\_type\_title\_\_id |
 | Description | text\_area | isys\_cats\_ws\_net\_type\_list | isys\_cats\_ws\_net\_type\_list\_\_description |     |     |
 
-### Uninterruptible power supply
+### Unterbrechungsfreie Stromversorgung
 
-#### Tabelle: isys\_cats\_ups\_list
+#### table: isys\_cats\_ups\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Type | int | isys\_cats\_ups\_list | isys\_cats\_ups\_list\_\_isys\_ups\_type\_\_id | isys\_ups\_type | isys\_ups\_type\_\_id |
-| Battery type | int | isys\_cats\_ups\_list | isys\_cats\_ups\_list\_\_isys\_ups\_battery\_type\_\_id | isys\_ups\_battery\_type | isys\_ups\_battery\_type\_\_id |
-| Quantity | int | isys\_cats\_ups\_list | isys\_cats\_ups\_list\_\_battery\_amount |     |     |
-| Charge time | int | isys\_cats\_ups\_list | isys\_cats\_ups\_list\_\_charge\_time |     |     |
-| Unit | int | charge\_time | isys\_cats\_ups\_list\_\_charge\_time\_\_isys\_unit\_of\_time\_\_id | isys\_unit\_of\_time | isys\_unit\_of\_time\_\_id |
-| Runtime under full load | int | isys\_cats\_ups\_list | isys\_cats\_ups\_list\_\_autonomy\_time |     |     |
-| Unit | int | autonomy\_time | isys\_cats\_ups\_list\_\_autonomy\_time\_\_isys\_unit\_of\_time\_\_id | isys\_unit\_of\_time | isys\_unit\_of\_time\_\_id |
+| Typ | int | isys\_cats\_ups\_list | isys\_cats\_ups\_list\_\_isys\_ups\_type\_\_id | isys\_ups\_type | isys\_ups\_type\_\_id |
+| Batterietyp | int | isys\_cats\_ups\_list | isys\_cats\_ups\_list\_\_isys\_ups\_battery\_type\_\_id | isys\_ups\_battery\_type | isys\_ups\_battery\_type\_\_id |
+| Anzahl Batterien | int | isys\_cats\_ups\_list | isys\_cats\_ups\_list\_\_battery\_amount |     |     |
+| Ladedauer | int | isys\_cats\_ups\_list | isys\_cats\_ups\_list\_\_charge\_time |     |     |
+| Einheit | int | charge\_time | isys\_cats\_ups\_list\_\_charge\_time\_\_isys\_unit\_of\_time\_\_id | isys\_unit\_of\_time | isys\_unit\_of\_time\_\_id |
+| Autonomiezeit unter Volllast | int | isys\_cats\_ups\_list | isys\_cats\_ups\_list\_\_autonomy\_time |     |     |
+| Einheit | int | autonomy\_time | isys\_cats\_ups\_list\_\_autonomy\_time\_\_isys\_unit\_of\_time\_\_id | isys\_unit\_of\_time | isys\_unit\_of\_time\_\_id |
 | Description | text\_area | isys\_cats\_ups\_list | isys\_cats\_ups\_list\_\_description |     |     |
 
-### Emergency power supply
+### Netzersatzanlage
 
-#### Tabelle: isys\_cats\_eps\_list
+#### table: isys\_cats\_eps\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Type | int | isys\_cats\_eps\_list | isys\_cats\_eps\_list\_\_isys\_cats\_eps\_type\_\_id | isys\_cats\_eps\_type | isys\_cats\_eps\_type\_\_id |
-| Warm-up time | int | isys\_cats\_eps\_list | isys\_cats\_eps\_list\_\_warmup\_time |     |     |
-| Unit | int | isys\_cats\_eps\_list | isys\_cats\_eps\_list\_\_warmup\_time\_\_isys\_unit\_of\_time\_\_id | isys\_unit\_of\_time | isys\_unit\_of\_time\_\_id |
-| Fuel tank | int | isys\_cats\_eps\_list | isys\_cats\_eps\_list\_\_fuel\_tank |     |     |
-| Unit | int | isys\_cats\_eps\_list | isys\_cats\_eps\_list\_\_isys\_volume\_unit\_\_id | isys\_volume\_unit | isys\_volume\_unit\_\_id |
-| Autonomy time | int | isys\_cats\_eps\_list | isys\_cats\_eps\_list\_\_autonomy\_time |     |     |
-| Unit | int | isys\_cats\_eps\_list | isys\_cats\_eps\_list\_\_autonomy\_time\_\_isys\_unit\_of\_time\_\_id | isys\_unit\_of\_time | isys\_unit\_of\_time\_\_id |
+| Art | int | isys\_cats\_eps\_list | isys\_cats\_eps\_list\_\_isys\_cats\_eps\_type\_\_id | isys\_cats\_eps\_type | isys\_cats\_eps\_type\_\_id |
+| Anlaufzeit | int | isys\_cats\_eps\_list | isys\_cats\_eps\_list\_\_warmup\_time |     |     |
+| Einheit | int | isys\_cats\_eps\_list | isys\_cats\_eps\_list\_\_warmup\_time\_\_isys\_unit\_of\_time\_\_id | isys\_unit\_of\_time | isys\_unit\_of\_time\_\_id |
+| Kraftstofftank | int | isys\_cats\_eps\_list | isys\_cats\_eps\_list\_\_fuel\_tank |     |     |
+| Einheit | int | isys\_cats\_eps\_list | isys\_cats\_eps\_list\_\_isys\_volume\_unit\_\_id | isys\_volume\_unit | isys\_volume\_unit\_\_id |
+| Autonomiezeit | int | isys\_cats\_eps\_list | isys\_cats\_eps\_list\_\_autonomy\_time |     |     |
+| Einheit | int | isys\_cats\_eps\_list | isys\_cats\_eps\_list\_\_autonomy\_time\_\_isys\_unit\_of\_time\_\_id | isys\_unit\_of\_time | isys\_unit\_of\_time\_\_id |
 | Description | text\_area | isys\_cats\_eps\_list | isys\_cats\_eps\_list\_\_description |     |     |
 
 ### SAN Zoning
 
-#### Tabelle: isys\_cats\_san\_zoning\_list
+#### table: isys\_cats\_san\_zoning\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_cats\_san\_zoning\_list | isys\_cats\_san\_zoning\_list\_\_title |     |     |
-| Members | int | isys\_cats\_san\_zoning\_list | isys\_cats\_san\_zoning\_list\_\_id |     |     |
+| designation | text | isys\_cats\_san\_zoning\_list | isys\_cats\_san\_zoning\_list\_\_title |     |     |
+| Mitglieder | int | isys\_cats\_san\_zoning\_list | isys\_cats\_san\_zoning\_list\_\_id |     |     |
 | Description | text\_area | isys\_cats\_san\_zoning\_list | isys\_cats\_san\_zoning\_list\_\_description |     |     |
 
-### Organization
+### Organisation
 
-#### Tabelle: isys\_cats\_organization\_list
+#### table: isys\_cats\_organization\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_cats\_organization\_list | isys\_cats\_organization\_list\_\_title |     |     |
-| Telephone | text | isys\_cats\_organization\_list | isys\_cats\_organization\_list\_\_telephone |     |     |
+| designation | text | isys\_cats\_organization\_list | isys\_cats\_organization\_list\_\_title |     |     |
+| Telefon | text | isys\_cats\_organization\_list | isys\_cats\_organization\_list\_\_telephone |     |     |
 | Fax | text | isys\_cats\_organization\_list | isys\_cats\_organization\_list\_\_fax |     |     |
-| Website | text | isys\_cats\_organization\_list | isys\_cats\_organization\_list\_\_website |     |     |
-| Headquarter | int | isys\_cats\_organization\_list | isys\_cats\_organization\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
+| Webseite | text | isys\_cats\_organization\_list | isys\_cats\_organization\_list\_\_website |     |     |
+| Zentrale | int | isys\_cats\_organization\_list | isys\_cats\_organization\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
 | Description | text\_area | isys\_cats\_organization\_list | isys\_cats\_organization\_list\_\_description |     |     |
 
-### Master data
+### Stammdaten
 
-#### Tabelle: isys\_cats\_organization\_list
+#### table: isys\_cats\_organization\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_cats\_organization\_list | isys\_cats\_organization\_list\_\_title |     |     |
-| Telephone | text | isys\_cats\_organization\_list | isys\_cats\_organization\_list\_\_telephone |     |     |
+| designation | text | isys\_cats\_organization\_list | isys\_cats\_organization\_list\_\_title |     |     |
+| Telefon | text | isys\_cats\_organization\_list | isys\_cats\_organization\_list\_\_telephone |     |     |
 | Fax | text | isys\_cats\_organization\_list | isys\_cats\_organization\_list\_\_fax |     |     |
-| Website | text | isys\_cats\_organization\_list | isys\_cats\_organization\_list\_\_website |     |     |
-| Headquarter | int | isys\_cats\_organization\_list | isys\_cats\_organization\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
+| Webseite | text | isys\_cats\_organization\_list | isys\_cats\_organization\_list\_\_website |     |     |
+| Zentrale | int | isys\_cats\_organization\_list | isys\_cats\_organization\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
 | Description | text\_area | isys\_cats\_organization\_list | isys\_cats\_organization\_list\_\_description |     |     |
 
-### Persons
+### Personen
 
-#### Tabelle: isys\_cats\_organization\_list
+#### table: isys\_cats\_organization\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | int | isys\_cats\_organization\_list | isys\_cats\_person\_list\_\_isys\_obj\_\_id |     |     |
-| Contact | int | isys\_cats\_organization\_list | isys\_cats\_person\_list\_\_isys\_obj\_\_id |     |     |
+| designation | int | isys\_cats\_organization\_list | isys\_cats\_person\_list\_\_isys\_obj\_\_id |     |     |
+| Kontakt | int | isys\_cats\_organization\_list | isys\_cats\_person\_list\_\_isys\_obj\_\_id |     |     |
 
-### Persons
+### Personen
 
-#### Tabelle: isys\_cats\_person\_list
+#### table: isys\_cats\_person\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_title |     |     |
-| Salutation | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_salutation |     |     |
-| First name | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_first\_name |     |     |
-| Last name | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_last\_name |     |     |
-| Academic degree | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_academic\_degree |     |     |
-| Function | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_function |     |     |
-| Service designation | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_service\_designation |     |     |
+| designation | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_title |     |     |
+| Anrede | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_salutation |     |     |
+| Vorname | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_first\_name |     |     |
+| Nachname | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_last\_name |     |     |
+| Titel (Akademischer Grad) | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_academic\_degree |     |     |
+| function | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_function |     |     |
+| Dienstbezeichnung | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_service\_designation |     |     |
 | Street | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_street |     |     |
-| City | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_city |     |     |
-| ZIP-Code | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_zip\_code |     |     |
-| E-mail address | text | isys\_cats\_person\_list | isys\_catg\_mail\_addresses\_list\_\_title |     |     |
-| Telephone company | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_phone\_company |     |     |
-| Telephone home | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_phone\_home |     |     |
-| Cellphone | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_phone\_mobile |     |     |
+| Ort | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_city |     |     |
+| PLZ | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_zip\_code |     |     |
+| E-Mail Adresse | text | isys\_cats\_person\_list | isys\_catg\_mail\_addresses\_list\_\_title |     |     |
+| Telefon Firma | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_phone\_company |     |     |
+| Telefon Privat | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_phone\_home |     |     |
+| Handy | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_phone\_mobile |     |     |
 | Fax | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_fax |     |     |
 | Pager | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_pager |     |     |
-| Personnel number | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_personnel\_number |     |     |
-| Department | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_department |     |     |
-| Organisation | int | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
+| Personalnummer | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_personnel\_number |     |     |
+| Abteilung | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_department |     |     |
+| Firma | int | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
 | ID  | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_isys\_ldap\_\_id |     |     |
 | DN  | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_ldap\_dn |     |     |
 | Description | text\_area | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_description |     |     |
@@ -2586,31 +2592,31 @@ Specific categories
 | Custom 7 | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_custom7 |     |     |
 | Custom 8 | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_custom8 |     |     |
 
-### Master Data
+### Stammdaten
 
-#### Tabelle: isys\_cats\_person\_list
+#### table: isys\_cats\_person\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_title |     |     |
-| Salutation | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_salutation |     |     |
-| First name | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_first\_name |     |     |
-| Last name | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_last\_name |     |     |
-| Academic degree | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_academic\_degree |     |     |
-| Function | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_function |     |     |
-| Service designation | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_service\_designation |     |     |
+| designation | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_title |     |     |
+| Anrede | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_salutation |     |     |
+| Vorname | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_first\_name |     |     |
+| Nachname | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_last\_name |     |     |
+| Titel (Akademischer Grad) | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_academic\_degree |     |     |
+| function | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_function |     |     |
+| Dienstbezeichnung | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_service\_designation |     |     |
 | Street | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_street |     |     |
-| City | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_city |     |     |
-| ZIP-Code | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_zip\_code |     |     |
-| E-mail address | text | isys\_cats\_person\_list | isys\_catg\_mail\_addresses\_list\_\_title |     |     |
-| Telephone company | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_phone\_company |     |     |
-| Telephone home | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_phone\_home |     |     |
-| Cellphone | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_phone\_mobile |     |     |
+| Ort | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_city |     |     |
+| PLZ | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_zip\_code |     |     |
+| E-Mail Adresse | text | isys\_cats\_person\_list | isys\_catg\_mail\_addresses\_list\_\_title |     |     |
+| Telefon Firma | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_phone\_company |     |     |
+| Telefon Privat | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_phone\_home |     |     |
+| Handy | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_phone\_mobile |     |     |
 | Fax | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_fax |     |     |
 | Pager | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_pager |     |     |
-| Personnel number | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_personnel\_number |     |     |
-| Department | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_department |     |     |
-| Organisation | int | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
+| Personalnummer | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_personnel\_number |     |     |
+| Abteilung | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_department |     |     |
+| Firma | int | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
 | ID  | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_isys\_ldap\_\_id |     |     |
 | DN  | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_ldap\_dn |     |     |
 | Description | text\_area | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_description |     |     |
@@ -2625,13 +2631,13 @@ Specific categories
 
 ### Login
 
-#### Tabelle: isys\_cats\_person\_list
+#### table: isys\_cats\_person\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| User name | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_title |     |     |
-| Password | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_user\_pass |     |     |
-| Password | text | isys\_cats\_person\_list |     |     |     |
+| Username | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_title |     |     |
+| password | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_user\_pass |     |     |
+| password | text | isys\_cats\_person\_list |     |     |     |
 | Description | text\_area | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_description |     |     |
 | Custom 1 | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_custom1 |     |     |
 | Custom 2 | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_custom2 |     |     |
@@ -2642,485 +2648,485 @@ Specific categories
 | Custom 7 | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_custom7 |     |     |
 | Custom 8 | text | isys\_cats\_person\_list | isys\_cats\_person\_list\_\_custom8 |     |     |
 
-### Person group memberships
+### Personengruppenmitgliedschaft
 
-#### Tabelle: isys\_person\_2\_group\_list
+#### table: isys\_person\_2\_group\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Person group memberships | int | isys\_person\_2\_group\_list | isys\_cats\_person\_group\_list\_\_isys\_obj\_\_id |     |     |
-| Contact | int | isys\_person\_2\_group\_list | isys\_person\_2\_group\_\_isys\_obj\_\_id\_\_group |     |     |
+| Personengruppenmitgliedschaft | int | isys\_person\_2\_group\_list | isys\_cats\_person\_group\_list\_\_isys\_obj\_\_id |     |     |
+| Kontakt | int | isys\_person\_2\_group\_list | isys\_person\_2\_group\_\_isys\_obj\_\_id\_\_group |     |     |
 
-### Person groups
+### Personengruppen
 
-#### Tabelle: isys\_cats\_person\_group\_list
+#### table: isys\_cats\_person\_group\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_cats\_person\_group\_list | isys\_cats\_person\_group\_list\_\_title |     |     |
-| E-Mail | text | isys\_cats\_person\_group\_list | isys\_catg\_mail\_addresses\_list\_\_title |     |     |
-| Phone | text | isys\_cats\_person\_group\_list | isys\_cats\_person\_group\_list\_\_phone |     |     |
-| LDAP-Group (Mapping) | text | isys\_cats\_person\_group\_list | isys\_cats\_person\_group\_list\_\_ldap\_group |     |     |
+| Name | text | isys\_cats\_person\_group\_list | isys\_cats\_person\_group\_list\_\_title |     |     |
+| Email | text | isys\_cats\_person\_group\_list | isys\_catg\_mail\_addresses\_list\_\_title |     |     |
+| Telefon | text | isys\_cats\_person\_group\_list | isys\_cats\_person\_group\_list\_\_phone |     |     |
+| LDAP-Gruppe (Mapping) | text | isys\_cats\_person\_group\_list | isys\_cats\_person\_group\_list\_\_ldap\_group |     |     |
 | Description | text\_area | isys\_cats\_person\_group\_list | isys\_cats\_person\_group\_list\_\_description |     |     |
 
-### Master Data
+### Stammdaten
 
-#### Tabelle: isys\_cats\_person\_group\_list
+#### table: isys\_cats\_person\_group\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_cats\_person\_group\_list | isys\_cats\_person\_group\_list\_\_title |     |     |
-| E-Mail | text | isys\_cats\_person\_group\_list | isys\_catg\_mail\_addresses\_list\_\_title |     |     |
-| Phone | text | isys\_cats\_person\_group\_list | isys\_cats\_person\_group\_list\_\_phone |     |     |
-| LDAP-Group (Mapping) | text | isys\_cats\_person\_group\_list | isys\_cats\_person\_group\_list\_\_ldap\_group |     |     |
+| Name | text | isys\_cats\_person\_group\_list | isys\_cats\_person\_group\_list\_\_title |     |     |
+| Email | text | isys\_cats\_person\_group\_list | isys\_catg\_mail\_addresses\_list\_\_title |     |     |
+| Telefon | text | isys\_cats\_person\_group\_list | isys\_cats\_person\_group\_list\_\_phone |     |     |
+| LDAP-Gruppe (Mapping) | text | isys\_cats\_person\_group\_list | isys\_cats\_person\_group\_list\_\_ldap\_group |     |     |
 | Description | text\_area | isys\_cats\_person\_group\_list | isys\_cats\_person\_group\_list\_\_description |     |     |
 
-### Members
+### Mitglieder
 
-#### Tabelle: isys\_person\_2\_group\_list
+#### table: isys\_person\_2\_group\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| First name | text | isys\_person\_2\_group\_list | isys\_cats\_person\_list\_\_first\_name |     |     |
-| Last name | text | isys\_person\_2\_group\_list | isys\_cats\_person\_list\_\_last\_name |     |     |
-| Department | text | isys\_person\_2\_group\_list | isys\_cats\_person\_list\_\_department |     |     |
-| Telephone company | text | isys\_person\_2\_group\_list | isys\_cats\_person\_list\_\_phone\_company |     |     |
-| E-Mail | text | isys\_person\_2\_group\_list | isys\_cats\_person\_list\_\_mail\_address |     |     |
-| Organisation | int | isys\_person\_2\_group\_list | isys\_cats\_person\_list\_\_isys\_connection\_\_id |     |     |
-| Title | text | isys\_person\_2\_group\_list | isys\_cats\_person\_list\_\_title |     |     |
-| Members | int | isys\_person\_2\_group\_list | isys\_cats\_person\_list\_\_isys\_obj\_\_id |     |     |
+| Vorname | text | isys\_person\_2\_group\_list | isys\_cats\_person\_list\_\_first\_name |     |     |
+| Nachname | text | isys\_person\_2\_group\_list | isys\_cats\_person\_list\_\_last\_name |     |     |
+| Abteilung | text | isys\_person\_2\_group\_list | isys\_cats\_person\_list\_\_department |     |     |
+| Telefon Firma | text | isys\_person\_2\_group\_list | isys\_cats\_person\_list\_\_phone\_company |     |     |
+| Email | text | isys\_person\_2\_group\_list | isys\_cats\_person\_list\_\_mail\_address |     |     |
+| Firma | int | isys\_person\_2\_group\_list | isys\_cats\_person\_list\_\_isys\_connection\_\_id |     |     |
+| designation | text | isys\_person\_2\_group\_list | isys\_cats\_person\_list\_\_title |     |     |
+| Mitglieder | int | isys\_person\_2\_group\_list | isys\_cats\_person\_list\_\_isys\_obj\_\_id |     |     |
 
-### Assigned Objects
+### Zugewiesene objects
 
-#### Tabelle: isys\_catg\_contact\_list
+#### table: isys\_catg\_contact\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Assigned Objects | int | isys\_catg\_contact\_list | isys\_catg\_contact\_list\_\_isys\_obj\_\_id |     |     |
-| Role | int | isys\_catg\_contact\_list | isys\_catg\_contact\_list\_\_isys\_contact\_tag\_\_id | isys\_contact\_tag | isys\_contact\_tag\_\_id |
+| Zugewiesene objects | int | isys\_catg\_contact\_list | isys\_catg\_contact\_list\_\_isys\_obj\_\_id |     |     |
+| Rolle | int | isys\_catg\_contact\_list | isys\_catg\_contact\_list\_\_isys\_contact\_tag\_\_id | isys\_contact\_tag | isys\_contact\_tag\_\_id |
 
-### Assigned Objects
+### Zugewiesene objects
 
-#### Tabelle: isys\_catg\_contact\_list
+#### table: isys\_catg\_contact\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Object | int | isys\_catg\_contact\_list | isys\_catg\_contact\_list\_\_isys\_obj\_\_id |     |     |
-| Object type | int | isys\_catg\_contact\_list | isys\_obj\_\_isys\_obj\_type\_\_id |     |     |
-| Role | int | isys\_catg\_contact\_list | isys\_catg\_contact\_list\_\_isys\_contact\_tag\_\_id | isys\_contact\_tag | isys\_contact\_tag\_\_id |
+| object | int | isys\_catg\_contact\_list | isys\_catg\_contact\_list\_\_isys\_obj\_\_id |     |     |
+| objecttyp | int | isys\_catg\_contact\_list | isys\_obj\_\_isys\_obj\_type\_\_id |     |     |
+| Rolle | int | isys\_catg\_contact\_list | isys\_catg\_contact\_list\_\_isys\_contact\_tag\_\_id | isys\_contact\_tag | isys\_contact\_tag\_\_id |
 | Description | text\_area | isys\_catg\_contact\_list | isys\_catg\_contact\_list\_\_description |     |     |
 
-### Assigned Objects
+### Zugewiesene objects
 
-#### Tabelle: isys\_catg\_contact\_list
+#### table: isys\_catg\_contact\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Object | int | isys\_catg\_contact\_list | isys\_catg\_contact\_list\_\_isys\_obj\_\_id |     |     |
-| Object type | int | isys\_catg\_contact\_list | isys\_obj\_\_isys\_obj\_type\_\_id |     |     |
-| Role | int | isys\_catg\_contact\_list | isys\_catg\_contact\_list\_\_isys\_contact\_tag\_\_id | isys\_contact\_tag | isys\_contact\_tag\_\_id |
+| object | int | isys\_catg\_contact\_list | isys\_catg\_contact\_list\_\_isys\_obj\_\_id |     |     |
+| objecttyp | int | isys\_catg\_contact\_list | isys\_obj\_\_isys\_obj\_type\_\_id |     |     |
+| Rolle | int | isys\_catg\_contact\_list | isys\_catg\_contact\_list\_\_isys\_contact\_tag\_\_id | isys\_contact\_tag | isys\_contact\_tag\_\_id |
 | Description | text\_area | isys\_catg\_contact\_list | isys\_cats\_person\_contact\_assign\_list\_\_description |     |     |
 
-### Assigned clusters
+### Zugeordnete Cluster
 
-#### Tabelle: isys\_catg\_cluster\_service\_list
+#### table: isys\_catg\_cluster\_service\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Assigned clusters | int | isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_isys\_obj\_\_id |     |     |
-| Type | int | isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_isys\_cluster\_type\_\_id | isys\_cluster\_type | isys\_cluster\_type\_\_id |
-| Runs on | int | isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_id |     |     |
-| Default server | int | isys\_catg\_cluster\_members\_list | isys\_catg\_cluster\_members\_list\_\_isys\_connection\_\_id |     |     |
-| Host addresses | int | isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_id | isys\_catg\_ip\_list\_2\_isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_id |
-| Volumes | int | isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_property |     |     |
-| Shares | int | isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_isys\_obj\_\_id |     |     |
-| Database schema | int | isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_isys\_catg\_relation\_list\_\_id | isys\_cats\_database\_access\_list | isys\_cats\_database\_access\_list\_\_id |
+| Zugeordnete Cluster | int | isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_isys\_obj\_\_id |     |     |
+| Typ | int | isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_isys\_cluster\_type\_\_id | isys\_cluster\_type | isys\_cluster\_type\_\_id |
+| Runs auf | int | isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_id |     |     |
+| default Server | int | isys\_catg\_cluster\_members\_list | isys\_catg\_cluster\_members\_list\_\_isys\_connection\_\_id |     |     |
+| Hostadressen | int | isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_id | isys\_catg\_ip\_list\_2\_isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_id |
+| Laufwerke | int | isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_property |     |     |
+| Freigaben | int | isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_isys\_obj\_\_id |     |     |
+| database schema | int | isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_isys\_catg\_relation\_list\_\_id | isys\_cats\_database\_access\_list | isys\_cats\_database\_access\_list\_\_id |
 | LC\_\_CMDB\_\_CATG\_\_CLUSTER\_\_SERVICE\_STATUS | int | isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_service\_status |     |     |
 | Description | text\_area | isys\_catg\_cluster\_service\_list | isys\_catg\_cluster\_service\_list\_\_description |     |     |
 
-### Relation details
+### Beziehungsdetails
 
-#### Tabelle: isys\_catg\_relation\_list
+#### table: isys\_catg\_relation\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
 | Object1 | int | isys\_catg\_relation\_list | isys\_catg\_relation\_list\_\_isys\_obj\_\_id\_\_master |     |     |
 | Object2 | int | isys\_catg\_relation\_list | isys\_catg\_relation\_list\_\_isys\_obj\_\_id\_\_slave |     |     |
 | Service | int | isys\_catg\_relation\_list | isys\_catg\_relation\_list\_\_isys\_obj\_\_id\_\_itservice |     |     |
-| Relation type | int | isys\_catg\_relation\_list | isys\_catg\_relation\_list\_\_isys\_relation\_type\_\_id | isys\_relation\_type | isys\_relation\_type\_\_id |
-| Weighting | int | isys\_catg\_relation\_list | isys\_catg\_relation\_list\_\_isys\_weighting\_\_id | isys\_weighting | isys\_weighting\_\_id |
+| Beziehungsart | int | isys\_catg\_relation\_list | isys\_catg\_relation\_list\_\_isys\_relation\_type\_\_id | isys\_relation\_type | isys\_relation\_type\_\_id |
+| Gewichtung | int | isys\_catg\_relation\_list | isys\_catg\_relation\_list\_\_isys\_weighting\_\_id | isys\_weighting | isys\_weighting\_\_id |
 | Description | text\_area | isys\_catg\_relation\_list | isys\_catg\_relation\_list\_\_description |     |     |
 
-### Database schema
+### database schema
 
-#### Tabelle: isys\_cats\_database\_schema\_list
+#### table: isys\_cats\_database\_schema\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Runs on | int | isys\_cats\_database\_schema\_list | isys\_cats\_database\_schema\_list\_\_isys\_connection\_\_id |     |     |
-| Database instance | int | isys\_cats\_database\_schema\_list | isys\_cats\_database\_schema\_list\_\_isys\_cats\_db\_instance\_list\_\_id | isys\_cats\_database\_instance\_list | isys\_cats\_database\_instance\_list\_\_id |
-| Title | text | isys\_cats\_database\_schema\_list | isys\_cats\_database\_schema\_list\_\_title |     |     |
+| Runs auf | int | isys\_cats\_database\_schema\_list | isys\_cats\_database\_schema\_list\_\_isys\_connection\_\_id |     |     |
+| Datenbankinstanz | int | isys\_cats\_database\_schema\_list | isys\_cats\_database\_schema\_list\_\_isys\_cats\_db\_instance\_list\_\_id | isys\_cats\_database\_instance\_list | isys\_cats\_database\_instance\_list\_\_id |
+| designation | text | isys\_cats\_database\_schema\_list | isys\_cats\_database\_schema\_list\_\_title |     |     |
 | Storage-Engine | text | isys\_cats\_database\_schema\_list | isys\_cats\_database\_schema\_list\_\_storage\_engine |     |     |
 | Description | text\_area | isys\_cats\_database\_schema\_list | isys\_cats\_database\_schema\_list\_\_description |     |     |
 
-### Database links
+### Datenbanklinks
 
-#### Tabelle: isys\_cats\_database\_links\_list
+#### table: isys\_cats\_database\_links\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_cats\_database\_links\_list | isys\_cats\_database\_links\_list\_\_title |     |     |
-| Connected database schema | int | isys\_cats\_database\_links\_list | isys\_cats\_database\_links\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
-| Target user | text | isys\_cats\_database\_links\_list | isys\_cats\_database\_links\_list\_\_target\_user |     |     |
-| Owner | text | isys\_cats\_database\_links\_list | isys\_cats\_database\_links\_list\_\_owner |     |     |
+| designation | text | isys\_cats\_database\_links\_list | isys\_cats\_database\_links\_list\_\_title |     |     |
+| Linked Databaseschema | int | isys\_cats\_database\_links\_list | isys\_cats\_database\_links\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
+| Ziel-user | text | isys\_cats\_database\_links\_list | isys\_cats\_database\_links\_list\_\_target\_user |     |     |
+| Besitzer | text | isys\_cats\_database\_links\_list | isys\_cats\_database\_links\_list\_\_owner |     |     |
 | Public | int | isys\_cats\_database\_links\_list | isys\_cats\_database\_links\_list\_\_public |     |     |
 | Description | text\_area | isys\_cats\_database\_links\_list | isys\_cats\_database\_links\_list\_\_description |     |     |
 
 ### DBMS
 
-#### Tabelle: isys\_cats\_dbms\_list
+#### table: isys\_cats\_dbms\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
 | DBMS | int | isys\_cats\_dbms\_list | isys\_cats\_dbms\_list\_\_isys\_dbms\_\_id | isys\_dbms | isys\_dbms\_\_id |
 | Description | text\_area | isys\_cats\_dbms\_list | isys\_cats\_dbms\_list\_\_description |     |     |
 
-### Instance / Oracle database
+### Instanz / Oracle Datenbank
 
-#### Tabelle: isys\_cats\_database\_instance\_list
+#### table: isys\_cats\_database\_instance\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
 | DBMS | int | isys\_cats\_database\_instance\_list | isys\_cats\_database\_instance\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
-| Title | text | isys\_cats\_database\_instance\_list | isys\_cats\_database\_instance\_list\_\_title |     |     |
+| designation | text | isys\_cats\_database\_instance\_list | isys\_cats\_database\_instance\_list\_\_title |     |     |
 | Listener | text | isys\_cats\_database\_instance\_list | isys\_cats\_database\_instance\_list\_\_listener |     |     |
-| Database schema | int | isys\_cats\_database\_instance\_list | isys\_cats\_database\_instance\_list\_\_isys\_obj\_\_id |     |     |
+| database schema | int | isys\_cats\_database\_instance\_list | isys\_cats\_database\_instance\_list\_\_isys\_obj\_\_id |     |     |
 | Description | text\_area | isys\_cats\_database\_instance\_list | isys\_cats\_database\_instance\_list\_\_description |     |     |
 
 ### PDU
 
-#### Tabelle: isys\_cats\_pdu\_list
+#### table: isys\_cats\_pdu\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
 | PDU | text | isys\_cats\_pdu\_list | isys\_cats\_pdu\_list\_\_pdu\_id |     |     |
 | Description | text\_area | isys\_cats\_pdu\_list | isys\_cats\_pdu\_list\_\_description |     |     |
 
 ### Branch
 
-#### Tabelle: isys\_cats\_pdu\_branch\_list
+#### table: isys\_cats\_pdu\_branch\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
 | PDU | int | isys\_cats\_pdu\_branch\_list | isys\_cats\_pdu\_branch\_list\_\_pdu\_id |     |     |
 | Branch-ID | int | isys\_cats\_pdu\_branch\_list | isys\_cats\_pdu\_branch\_list\_\_branch\_id |     |     |
-| Receptacles | int | isys\_cats\_pdu\_branch\_list | isys\_cats\_pdu\_branch\_list\_\_receptables |     |     |
+| Aufnahmecapable | int | isys\_cats\_pdu\_branch\_list | isys\_cats\_pdu\_branch\_list\_\_receptables |     |     |
 | Description | text\_area | isys\_cats\_pdu\_branch\_list | isys\_cats\_pdu\_branch\_list\_\_description |     |     |
 
-### Parallel relations
+### Gleichgerichtete Beziehungen
 
-#### Tabelle: isys\_cats\_relpool\_list
+#### table: isys\_cats\_relpool\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_cats\_relpool\_list | isys\_cats\_relpool\_list\_\_title |     |     |
-| Minimum amount of active items | text | isys\_cats\_relpool\_list | isys\_cats\_relpool\_list\_\_threshold |     |     |
-| Parallel relations | text | isys\_cats\_relpool\_list | isys\_cats\_relpool\_list\_\_isys\_obj\_\_id |     |     |
+| designation | text | isys\_cats\_relpool\_list | isys\_cats\_relpool\_list\_\_title |     |     |
+| Mindestmenge an aktiven Komponenten | text | isys\_cats\_relpool\_list | isys\_cats\_relpool\_list\_\_threshold |     |     |
+| Gleichgerichtete Beziehungen | text | isys\_cats\_relpool\_list | isys\_cats\_relpool\_list\_\_isys\_obj\_\_id |     |     |
 | Description | text\_area | isys\_cats\_relpool\_list | isys\_cats\_relpool\_list\_\_description |     |     |
 
-### Database objects
+### Datenbankobjekte
 
-#### Tabelle: isys\_cats\_database\_objects\_list
+#### table: isys\_cats\_database\_objects\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_cats\_database\_objects\_list | isys\_cats\_database\_objects\_list\_\_title |     |     |
-| Type | int | isys\_cats\_database\_objects\_list | isys\_cats\_database\_objects\_list\_\_isys\_database\_objects\_\_id | isys\_database\_objects | isys\_database\_objects\_\_id |
+| designation | text | isys\_cats\_database\_objects\_list | isys\_cats\_database\_objects\_list\_\_title |     |     |
+| Typ | int | isys\_cats\_database\_objects\_list | isys\_cats\_database\_objects\_list\_\_isys\_database\_objects\_\_id | isys\_database\_objects | isys\_database\_objects\_\_id |
 | Description | text\_area | isys\_cats\_database\_objects\_list | isys\_cats\_database\_objects\_list\_\_description |     |     |
 
-### Database access
+### Datenbankzugriff
 
-#### Tabelle: isys\_cats\_database\_access\_list
+#### table: isys\_cats\_database\_access\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Assigned objects | int | isys\_cats\_database\_access\_list | isys\_cats\_database\_access\_list\_\_isys\_connection\_\_id |     |     |
+| Zugeordnete objects | int | isys\_cats\_database\_access\_list | isys\_cats\_database\_access\_list\_\_isys\_connection\_\_id |     |     |
 
-### Database gateway
+### Datenbank Gateway
 
-#### Tabelle: isys\_cats\_database\_gateway\_list
+#### table: isys\_cats\_database\_gateway\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Gateway type | text | isys\_cats\_database\_gateway\_list | isys\_cats\_database\_gateway\_list\_\_type |     |     |
+| Gateway Typ | text | isys\_cats\_database\_gateway\_list | isys\_cats\_database\_gateway\_list\_\_type |     |     |
 | Host | text | isys\_cats\_database\_gateway\_list | isys\_cats\_database\_gateway\_list\_\_host |     |     |
 | Port | text | isys\_cats\_database\_gateway\_list | isys\_cats\_database\_gateway\_list\_\_port |     |     |
 | User | text | isys\_cats\_database\_gateway\_list | isys\_cats\_database\_gateway\_list\_\_user |     |     |
-| Target schema | int | isys\_cats\_database\_gateway\_list | isys\_cats\_database\_gateway\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
+| usedes database schema | int | isys\_cats\_database\_gateway\_list | isys\_cats\_database\_gateway\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
 | Description | text\_area | isys\_cats\_database\_gateway\_list | isys\_cats\_database\_gateway\_list\_\_description |     |     |
 
-### Replication
+### Replikation
 
-#### Tabelle: isys\_cats\_replication\_list
+#### table: isys\_cats\_replication\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Replication mechanism | int | isys\_cats\_replication\_list | isys\_cats\_replication\_list\_\_isys\_replication\_mechanism\_\_id | isys\_replication\_mechanism | isys\_replication\_mechanism\_\_id |
+| Replikationsmechanismus | int | isys\_cats\_replication\_list | isys\_cats\_replication\_list\_\_isys\_replication\_mechanism\_\_id | isys\_replication\_mechanism | isys\_replication\_mechanism\_\_id |
 | Description | text\_area | isys\_cats\_replication\_list | isys\_cats\_replication\_list\_\_description |     |     |
 
-### Replication partner
+### Replikationspartner
 
-#### Tabelle: isys\_cats\_replication\_partner\_list
+#### table: isys\_cats\_replication\_partner\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Replication type | int | isys\_cats\_replication\_partner\_list | isys\_cats\_replication\_partner\_list\_\_isys\_replication\_type\_\_id | isys\_replication\_type | isys\_replication\_type\_\_id |
-| Replication partner | int | isys\_cats\_replication\_partner\_list | isys\_cats\_replication\_partner\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
+| Replikationstyp | int | isys\_cats\_replication\_partner\_list | isys\_cats\_replication\_partner\_list\_\_isys\_replication\_type\_\_id | isys\_replication\_type | isys\_replication\_type\_\_id |
+| Replikationspartner | int | isys\_cats\_replication\_partner\_list | isys\_cats\_replication\_partner\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
 | Description | text\_area | isys\_cats\_replication\_partner\_list | isys\_cats\_replication\_partner\_list\_\_description |     |     |
 
-### Installation
+### installation
 
-#### Tabelle: isys\_catg\_application\_list
+#### table: isys\_catg\_application\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Installed on | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_obj\_\_id |     |     |
-| Type | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_catg\_application\_type\_\_id | isys\_catg\_application\_type | isys\_catg\_application\_type\_\_id |
-| Priority | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_catg\_application\_priority\_\_id | isys\_catg\_application\_priority | isys\_catg\_application\_priority\_\_id |
-| Assigned license | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_cats\_lic\_list\_\_id | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_id |
-| Assigned license key | text | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_cats\_lic\_list\_\_id | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_id |
-| Database schema | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_catg\_relation\_list\_\_id | isys\_cats\_database\_access\_list | isys\_cats\_database\_access\_list\_\_id |
+| Installiert auf | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_obj\_\_id |     |     |
+| Typ | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_catg\_application\_type\_\_id | isys\_catg\_application\_type | isys\_catg\_application\_type\_\_id |
+| priority | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_catg\_application\_priority\_\_id | isys\_catg\_application\_priority | isys\_catg\_application\_priority\_\_id |
+| Zugewiesene Lizenz | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_cats\_lic\_list\_\_id | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_id |
+| Zugewiesener license key | text | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_cats\_lic\_list\_\_id | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_id |
+| database schema | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_catg\_relation\_list\_\_id | isys\_cats\_database\_access\_list | isys\_cats\_database\_access\_list\_\_id |
 | Service | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_catg\_relation\_list\_\_id | isys\_catg\_its\_components\_list | isys\_catg\_its\_components\_list\_\_id |
-| Variant | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_cats\_app\_variant\_list\_\_id | isys\_cats\_app\_variant\_list | isys\_cats\_app\_variant\_list\_\_id |
-| Inherit nagios services | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_bequest\_nagios\_services |     |     |
+| Variante | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_cats\_app\_variant\_list\_\_id | isys\_cats\_app\_variant\_list | isys\_cats\_app\_variant\_list\_\_id |
+| Nagios services vererben | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_bequest\_nagios\_services |     |     |
 | Description | text\_area | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_description |     |     |
 
 ### Middleware
 
-#### Tabelle: isys\_cats\_application\_list
+#### table: isys\_cats\_application\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Specification | text | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_specification |     |     |
-| Manufacturer | int | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_isys\_application\_manufacturer\_\_id | isys\_application\_manufacturer | isys\_application\_manufacturer\_\_id |
-| Installation | int | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_isys\_installation\_type\_\_id | isys\_installation\_type | isys\_installation\_type\_\_id |
-| Registration key | text | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_registration\_key |     |     |
-| Install path | text | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_install\_path |     |     |
-| Amount of installations | int | isys\_cats\_application\_list |     |     |     |
+| Spezifikation | text | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_specification |     |     |
+| Hersteller | int | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_isys\_application\_manufacturer\_\_id | isys\_application\_manufacturer | isys\_application\_manufacturer\_\_id |
+| installationsart | int | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_isys\_installation\_type\_\_id | isys\_installation\_type | isys\_installation\_type\_\_id |
+| Registrierungs-Key | text | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_registration\_key |     |     |
+| installationspfad | text | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_install\_path |     |     |
+| Anzahl installationen | int | isys\_cats\_application\_list |     |     |     |
 | Description | text\_area | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_description |     |     |
 
-### Crypto card
+### Kryptokarte
 
-#### Tabelle: isys\_cats\_krypto\_card\_list
+#### table: isys\_cats\_krypto\_card\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Certificate number | text | isys\_cats\_krypto\_card\_list | isys\_cats\_krypto\_card\_list\_\_certificate\_number |     |     |
-| Certgate card number | text | isys\_cats\_krypto\_card\_list | isys\_cats\_krypto\_card\_list\_\_certgate\_card\_number |     |     |
-| Certificate title | text | isys\_cats\_krypto\_card\_list | isys\_cats\_krypto\_card\_list\_\_certificate\_title |     |     |
-| Certificate revocation password | text | isys\_cats\_krypto\_card\_list | isys\_cats\_krypto\_card\_list\_\_certificate\_password |     |     |
-| Certificate procedure | date | isys\_cats\_krypto\_card\_list | isys\_cats\_krypto\_card\_list\_\_certificate\_procedure |     |     |
-| Date of issue | date | isys\_cats\_krypto\_card\_list | isys\_cats\_krypto\_card\_list\_\_date\_of\_issue |     |     |
-| IMEI number | text | isys\_cats\_krypto\_card\_list | isys\_cats\_krypto\_card\_list\_\_imei\_number |     |     |
-| Assigned cellular phone | int | isys\_cats\_krypto\_card\_list | isys\_catg\_assigned\_cards\_list\_\_isys\_obj\_\_id |     |     |
+| Zertifikatsnummer | text | isys\_cats\_krypto\_card\_list | isys\_cats\_krypto\_card\_list\_\_certificate\_number |     |     |
+| Certgate Karten-Nummer | text | isys\_cats\_krypto\_card\_list | isys\_cats\_krypto\_card\_list\_\_certgate\_card\_number |     |     |
+| Zertifikatsname | text | isys\_cats\_krypto\_card\_list | isys\_cats\_krypto\_card\_list\_\_certificate\_title |     |     |
+| Zertifikatsperrkennwort | text | isys\_cats\_krypto\_card\_list | isys\_cats\_krypto\_card\_list\_\_certificate\_password |     |     |
+| Zertifikatsablauf | date | isys\_cats\_krypto\_card\_list | isys\_cats\_krypto\_card\_list\_\_certificate\_procedure |     |     |
+| Ausgabedatum | date | isys\_cats\_krypto\_card\_list | isys\_cats\_krypto\_card\_list\_\_date\_of\_issue |     |     |
+| IMEI-Nummer | text | isys\_cats\_krypto\_card\_list | isys\_cats\_krypto\_card\_list\_\_imei\_number |     |     |
+| linkedes Mobiltelefon | int | isys\_cats\_krypto\_card\_list | isys\_catg\_assigned\_cards\_list\_\_isys\_obj\_\_id |     |     |
 | Description | text\_area | isys\_cats\_krypto\_card\_list | isys\_cats\_krypto\_card\_list\_\_description |     |     |
 
-### IP list
+### IP-Liste
 
-#### Tabelle: isys\_cats\_net\_ip\_addresses\_list
+#### table: isys\_cats\_net\_ip\_addresses\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Type | int | isys\_cats\_net\_ip\_addresses\_list | isys\_catg\_ip\_list\_\_isys\_net\_type\_\_id | isys\_net\_type | isys\_net\_type\_\_id |
-| Host address | text | isys\_cats\_net\_ip\_addresses\_list | isys\_cats\_net\_ip\_addresses\_list\_\_title |     |     |
-| Object | int | isys\_cats\_net\_ip\_addresses\_list | isys\_cats\_net\_ip\_addresses\_list\_\_id |     |     |
-| Address allocation IPv4 | int | isys\_cats\_net\_ip\_addresses\_list | isys\_catg\_ip\_list\_\_isys\_ip\_assignment\_\_id | isys\_ip\_assignment | isys\_ip\_assignment\_\_id |
-| Address allocation IPv6 | int | isys\_cats\_net\_ip\_addresses\_list | isys\_catg\_ip\_list\_\_isys\_ipv6\_assignment\_\_id | isys\_ipv6\_assignment | isys\_ipv6\_assignment\_\_id |
-| Object | int | isys\_cats\_net\_ip\_addresses\_list | isys\_catg\_ip\_list\_\_isys\_obj\_\_id |     |     |
-| Open IP list | text | isys\_cats\_net\_ip\_addresses\_list | isys\_cats\_net\_ip\_addresses\_link\_\_isys\_obj\_\_id |     |     |
+| Typ | int | isys\_cats\_net\_ip\_addresses\_list | isys\_catg\_ip\_list\_\_isys\_net\_type\_\_id | isys\_net\_type | isys\_net\_type\_\_id |
+| Hostadresse | text | isys\_cats\_net\_ip\_addresses\_list | isys\_cats\_net\_ip\_addresses\_list\_\_title |     |     |
+| object | int | isys\_cats\_net\_ip\_addresses\_list | isys\_cats\_net\_ip\_addresses\_list\_\_id |     |     |
+| Adressvergabe IPv4 | int | isys\_cats\_net\_ip\_addresses\_list | isys\_catg\_ip\_list\_\_isys\_ip\_assignment\_\_id | isys\_ip\_assignment | isys\_ip\_assignment\_\_id |
+| Adressvergabe IPv6 | int | isys\_cats\_net\_ip\_addresses\_list | isys\_catg\_ip\_list\_\_isys\_ipv6\_assignment\_\_id | isys\_ipv6\_assignment | isys\_ipv6\_assignment\_\_id |
+| object | int | isys\_cats\_net\_ip\_addresses\_list | isys\_catg\_ip\_list\_\_isys\_obj\_\_id |     |     |
+| IP-Liste open | text | isys\_cats\_net\_ip\_addresses\_list | isys\_cats\_net\_ip\_addresses\_link\_\_isys\_obj\_\_id |     |     |
 
 ### DHCP
 
-#### Tabelle: isys\_cats\_net\_dhcp\_list
+#### table: isys\_cats\_net\_dhcp\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Type v4 | int | isys\_cats\_net\_dhcp\_list | isys\_cats\_net\_dhcp\_list\_\_isys\_net\_dhcp\_type\_\_id | isys\_net\_dhcp\_type | isys\_net\_dhcp\_type\_\_id |
-| Type v6 | int | isys\_cats\_net\_dhcp\_list | isys\_cats\_net\_dhcp\_list\_\_isys\_net\_dhcpv6\_type\_\_id | isys\_net\_dhcpv6\_type | isys\_net\_dhcpv6\_type\_\_id |
-| DHCP from | text | isys\_cats\_net\_dhcp\_list | isys\_cats\_net\_dhcp\_list\_\_range\_from |     |     |
-| DHCP to | text | isys\_cats\_net\_dhcp\_list | isys\_cats\_net\_dhcp\_list\_\_range\_to |     |     |
+| Typ v4 | int | isys\_cats\_net\_dhcp\_list | isys\_cats\_net\_dhcp\_list\_\_isys\_net\_dhcp\_type\_\_id | isys\_net\_dhcp\_type | isys\_net\_dhcp\_type\_\_id |
+| Typ v6 | int | isys\_cats\_net\_dhcp\_list | isys\_cats\_net\_dhcp\_list\_\_isys\_net\_dhcpv6\_type\_\_id | isys\_net\_dhcpv6\_type | isys\_net\_dhcpv6\_type\_\_id |
+| DHCP von | text | isys\_cats\_net\_dhcp\_list | isys\_cats\_net\_dhcp\_list\_\_range\_from |     |     |
+| DHCP bis | text | isys\_cats\_net\_dhcp\_list | isys\_cats\_net\_dhcp\_list\_\_range\_to |     |     |
 | Description | text\_area | isys\_cats\_net\_dhcp\_list | isys\_cats\_net\_dhcp\_list\_\_description |     |     |
 
-### Layer 2 Net
+### Layer-2-Netz
 
-#### Tabelle: isys\_cats\_layer2\_net\_list
+#### table: isys\_cats\_layer2\_net\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
 | ID (VLAN) | text | isys\_cats\_layer2\_net\_list | isys\_cats\_layer2\_net\_list\_\_ident |     |     |
-| Default VLAN | int | isys\_cats\_layer2\_net\_list | isys\_cats\_layer2\_net\_list\_\_standard |     |     |
-| Type | int | isys\_cats\_layer2\_net\_list | isys\_cats\_layer2\_net\_list\_\_isys\_layer2\_net\_type\_\_id | isys\_layer2\_net\_type | isys\_layer2\_net\_type\_\_id |
-| Subtype | int | isys\_cats\_layer2\_net\_list | isys\_cats\_layer2\_net\_list\_\_isys\_layer2\_net\_subtype\_\_id | isys\_layer2\_net\_subtype | isys\_layer2\_net\_subtype\_\_id |
-| IP helper addresses | int | isys\_cats\_layer2\_net\_list | isys\_cats\_layer2\_net\_list\_\_id |     |     |
-| Layer-3-net assignment | int | isys\_cats\_layer2\_net\_list | isys\_cats\_layer2\_net\_list\_\_id | isys\_cats\_layer2\_net\_2\_layer3 | isys\_obj\_\_id |
+| default VLAN | int | isys\_cats\_layer2\_net\_list | isys\_cats\_layer2\_net\_list\_\_standard |     |     |
+| Typ | int | isys\_cats\_layer2\_net\_list | isys\_cats\_layer2\_net\_list\_\_isys\_layer2\_net\_type\_\_id | isys\_layer2\_net\_type | isys\_layer2\_net\_type\_\_id |
+| Unterart | int | isys\_cats\_layer2\_net\_list | isys\_cats\_layer2\_net\_list\_\_isys\_layer2\_net\_subtype\_\_id | isys\_layer2\_net\_subtype | isys\_layer2\_net\_subtype\_\_id |
+| IP-Helper-Adressen | int | isys\_cats\_layer2\_net\_list | isys\_cats\_layer2\_net\_list\_\_id |     |     |
+| Layer-3-Netz Zuordnung | int | isys\_cats\_layer2\_net\_list | isys\_cats\_layer2\_net\_list\_\_id | isys\_cats\_layer2\_net\_2\_layer3 | isys\_obj\_\_id |
 | VRF | text | isys\_cats\_layer2\_net\_list | isys\_cats\_layer2\_net\_list\_\_vrf |     |     |
-| VRF Capacity | int | isys\_cats\_layer2\_net\_list | isys\_cats\_layer2\_net\_list\_\_vrf\_capacity |     |     |
-| VRF Capacity (Unit) | int | isys\_cats\_layer2\_net\_list | isys\_cats\_layer2\_net\_list\_\_isys\_wan\_capacity\_unit |     |     |
+| VRF capacity | int | isys\_cats\_layer2\_net\_list | isys\_cats\_layer2\_net\_list\_\_vrf\_capacity |     |     |
+| VRF capacity (Einheit) | int | isys\_cats\_layer2\_net\_list | isys\_cats\_layer2\_net\_list\_\_isys\_wan\_capacity\_unit |     |     |
 | Description | text\_area | isys\_cats\_layer2\_net\_list | isys\_cats\_layer2\_net\_list\_\_description |     |     |
 
-### Assigned ports
+### Zugewiesene Ports
 
-#### Tabelle: isys\_cats\_layer2\_net\_assigned\_ports\_list
+#### table: isys\_cats\_layer2\_net\_assigned\_ports\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Object title | int | isys\_cats\_layer2\_net\_assigned\_ports\_list | isys\_cats\_layer2\_net\_assigned\_ports\_list\_\_isys\_obj\_\_id |     |     |
-| Assigned ports | int | isys\_cats\_layer2\_net\_assigned\_ports\_list | isys\_catg\_port\_list\_\_id |     |     |
-| MAC-address | int | isys\_cats\_layer2\_net\_assigned\_ports\_list | isys\_catg\_port\_list\_\_id |     |     |
+| object-Titel | int | isys\_cats\_layer2\_net\_assigned\_ports\_list | isys\_cats\_layer2\_net\_assigned\_ports\_list\_\_isys\_obj\_\_id |     |     |
+| Zugewiesene Ports | int | isys\_cats\_layer2\_net\_assigned\_ports\_list | isys\_catg\_port\_list\_\_id |     |     |
+| MAC-Adresse | int | isys\_cats\_layer2\_net\_assigned\_ports\_list | isys\_catg\_port\_list\_\_id |     |     |
 
-### Contract
+### Vertrag
 
-#### Tabelle: isys\_cats\_contract\_list
+#### table: isys\_cats\_contract\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Contract type | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_isys\_contract\_type\_\_id | isys\_contract\_type | isys\_contract\_type\_\_id |
-| Contract id | text | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_contract\_no |     |     |
-| Customer id | text | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_customer\_no |     |     |
-| Internal id | text | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_internal\_no |     |     |
-| Costs | double | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_costs |     |     |
-| Cost calculation | text | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_cost\_calculation |     |     |
-| Product | text | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_product |     |     |
-| Reaction rate | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_isys\_contract\_reaction\_rate\_\_id | isys\_contract\_reaction\_rate | isys\_contract\_reaction\_rate\_\_id |
-| Contract status | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_isys\_contract\_status\_\_id | isys\_contract\_status | isys\_contract\_status\_\_id |
-| Start of contract | date | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_start\_date |     |     |
-| End of contract | date | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_end\_date |     |     |
-| Runtime | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_runtime |     |     |
-| Runtime unit | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_runtime\_unit | isys\_guarantee\_period\_unit | isys\_guarantee\_period\_unit\_\_id |
-| Possible next contract expires | text | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_id |     |     |
-| End of contract by | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_isys\_contract\_end\_type\_\_id | isys\_contract\_end\_type | isys\_contract\_end\_type\_\_id |
-| Possible next termination date | text | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_id |     |     |
-| Cancellation date | date | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_notice\_date |     |     |
-| Cancellation period | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_notice\_period |     |     |
-| Notice period unit | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_notice\_period\_unit\_\_id | isys\_guarantee\_period\_unit | isys\_guarantee\_period\_unit\_\_id |
-| Notice type | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_isys\_contract\_notice\_period\_type\_\_id | isys\_contract\_notice\_period\_type | isys\_contract\_notice\_period\_type\_\_id |
-| Maintenance-/guarantee period | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_maintenance\_period |     |     |
-| Deadline unit | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_maintenance\_period\_unit\_\_id | isys\_guarantee\_period\_unit | isys\_guarantee\_period\_unit\_\_id |
-| Payment period | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_isys\_contract\_payment\_period\_\_id | isys\_contract\_payment\_period | isys\_contract\_payment\_period\_\_id |
+| Vertragsart | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_isys\_contract\_type\_\_id | isys\_contract\_type | isys\_contract\_type\_\_id |
+| Vertragsnummer | text | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_contract\_no |     |     |
+| Kundennummer | text | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_customer\_no |     |     |
+| Interne Nummer | text | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_internal\_no |     |     |
+| Kosten | double | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_costs |     |     |
+| Kostenberechnung | text | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_cost\_calculation |     |     |
+| Produkt | text | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_product |     |     |
+| Reaktionszeiten | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_isys\_contract\_reaction\_rate\_\_id | isys\_contract\_reaction\_rate | isys\_contract\_reaction\_rate\_\_id |
+| Vertragsstatus | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_isys\_contract\_status\_\_id | isys\_contract\_status | isys\_contract\_status\_\_id |
+| Vertragsbeginn | date | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_start\_date |     |     |
+| Vertragsende | date | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_end\_date |     |     |
+| Laufzeit | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_runtime |     |     |
+| Laufzeit Einheit | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_runtime\_unit | isys\_guarantee\_period\_unit | isys\_guarantee\_period\_unit\_\_id |
+| Next possible contractsende | text | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_id |     |     |
+| Vertragsende durch | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_isys\_contract\_end\_type\_\_id | isys\_contract\_end\_type | isys\_contract\_end\_type\_\_id |
+| Next possible cancellation date | text | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_id |     |     |
+| cancellation date | date | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_notice\_date |     |     |
+| cancellation period | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_notice\_period |     |     |
+| cancellation period Einheit | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_notice\_period\_unit\_\_id | isys\_guarantee\_period\_unit | isys\_guarantee\_period\_unit\_\_id |
+| cancellation type | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_isys\_contract\_notice\_period\_type\_\_id | isys\_contract\_notice\_period\_type | isys\_contract\_notice\_period\_type\_\_id |
+| Wartungs-/Garantiefrist | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_maintenance\_period |     |     |
+| Frist Einheit | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_maintenance\_period\_unit\_\_id | isys\_guarantee\_period\_unit | isys\_guarantee\_period\_unit\_\_id |
+| Zahlart | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_isys\_contract\_payment\_period\_\_id | isys\_contract\_payment\_period | isys\_contract\_payment\_period\_\_id |
 | Description | text\_area | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_description |     |     |
 
-### Contract information
+### Vertragsinformationen
 
-#### Tabelle: isys\_cats\_contract\_list
+#### table: isys\_cats\_contract\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Contract type | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_isys\_contract\_type\_\_id | isys\_contract\_type | isys\_contract\_type\_\_id |
-| Contract id | text | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_contract\_no |     |     |
-| Customer id | text | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_customer\_no |     |     |
-| Internal id | text | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_internal\_no |     |     |
-| Costs | double | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_costs |     |     |
-| Cost calculation | text | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_cost\_calculation |     |     |
-| Product | text | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_product |     |     |
-| Reaction rate | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_isys\_contract\_reaction\_rate\_\_id | isys\_contract\_reaction\_rate | isys\_contract\_reaction\_rate\_\_id |
-| Contract status | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_isys\_contract\_status\_\_id | isys\_contract\_status | isys\_contract\_status\_\_id |
-| Start of contract | date | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_start\_date |     |     |
-| End of contract | date | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_end\_date |     |     |
-| Runtime | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_runtime |     |     |
-| Runtime unit | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_runtime\_unit | isys\_guarantee\_period\_unit | isys\_guarantee\_period\_unit\_\_id |
-| Possible next contract expires | text | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_id |     |     |
-| End of contract by | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_isys\_contract\_end\_type\_\_id | isys\_contract\_end\_type | isys\_contract\_end\_type\_\_id |
-| Possible next termination date | text | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_id |     |     |
-| Cancellation date | date | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_notice\_date |     |     |
-| Cancellation period | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_notice\_period |     |     |
-| Notice period unit | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_notice\_period\_unit\_\_id | isys\_guarantee\_period\_unit | isys\_guarantee\_period\_unit\_\_id |
-| Notice type | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_isys\_contract\_notice\_period\_type\_\_id | isys\_contract\_notice\_period\_type | isys\_contract\_notice\_period\_type\_\_id |
-| Maintenance-/guarantee period | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_maintenance\_period |     |     |
-| Deadline unit | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_maintenance\_period\_unit\_\_id | isys\_guarantee\_period\_unit | isys\_guarantee\_period\_unit\_\_id |
-| Payment period | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_isys\_contract\_payment\_period\_\_id | isys\_contract\_payment\_period | isys\_contract\_payment\_period\_\_id |
+| Vertragsart | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_isys\_contract\_type\_\_id | isys\_contract\_type | isys\_contract\_type\_\_id |
+| Vertragsnummer | text | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_contract\_no |     |     |
+| Kundennummer | text | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_customer\_no |     |     |
+| Interne Nummer | text | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_internal\_no |     |     |
+| Kosten | double | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_costs |     |     |
+| Kostenberechnung | text | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_cost\_calculation |     |     |
+| Produkt | text | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_product |     |     |
+| Reaktionszeiten | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_isys\_contract\_reaction\_rate\_\_id | isys\_contract\_reaction\_rate | isys\_contract\_reaction\_rate\_\_id |
+| Vertragsstatus | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_isys\_contract\_status\_\_id | isys\_contract\_status | isys\_contract\_status\_\_id |
+| Vertragsbeginn | date | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_start\_date |     |     |
+| Vertragsende | date | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_end\_date |     |     |
+| Laufzeit | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_runtime |     |     |
+| Laufzeit Einheit | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_runtime\_unit | isys\_guarantee\_period\_unit | isys\_guarantee\_period\_unit\_\_id |
+| Next possible contractsende | text | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_id |     |     |
+| Vertragsende durch | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_isys\_contract\_end\_type\_\_id | isys\_contract\_end\_type | isys\_contract\_end\_type\_\_id |
+| Next possible cancellation date | text | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_id |     |     |
+| cancellation date | date | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_notice\_date |     |     |
+| cancellation period | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_notice\_period |     |     |
+| cancellation period Einheit | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_notice\_period\_unit\_\_id | isys\_guarantee\_period\_unit | isys\_guarantee\_period\_unit\_\_id |
+| cancellation type | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_isys\_contract\_notice\_period\_type\_\_id | isys\_contract\_notice\_period\_type | isys\_contract\_notice\_period\_type\_\_id |
+| Wartungs-/Garantiefrist | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_maintenance\_period |     |     |
+| Frist Einheit | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_maintenance\_period\_unit\_\_id | isys\_guarantee\_period\_unit | isys\_guarantee\_period\_unit\_\_id |
+| Zahlart | int | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_isys\_contract\_payment\_period\_\_id | isys\_contract\_payment\_period | isys\_contract\_payment\_period\_\_id |
 | Description | text\_area | isys\_cats\_contract\_list | isys\_cats\_contract\_list\_\_description |     |     |
 
-### Assigned Objects
+### Zugeordnete objects
 
-#### Tabelle: isys\_catg\_contract\_assignment\_list
+#### table: isys\_catg\_contract\_assignment\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Assigned objects | int | isys\_catg\_contract\_assignment\_list | isys\_catg\_contract\_assignment\_list\_\_isys\_obj\_\_id |     |     |
+| Zugeordnete objects | int | isys\_catg\_contract\_assignment\_list | isys\_catg\_contract\_assignment\_list\_\_isys\_obj\_\_id |     |     |
 
 ### Chassis
 
-#### Tabelle: isys\_cats\_chassis\_view\_list
+#### table: isys\_cats\_chassis\_view\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Front horizontal units | int | isys\_cats\_chassis\_view\_list | isys\_cats\_chassis\_view\_list\_\_front\_width |     |     |
-| Front vertical units | int | isys\_cats\_chassis\_view\_list | isys\_cats\_chassis\_view\_list\_\_front\_height |     |     |
-| Front grid size | int | isys\_cats\_chassis\_view\_list | isys\_cats\_chassis\_view\_list\_\_front\_size |     |     |
-| Rear horizontal units | int | isys\_cats\_chassis\_view\_list | isys\_cats\_chassis\_view\_list\_\_rear\_width |     |     |
-| Rear vertical units | int | isys\_cats\_chassis\_view\_list | isys\_cats\_chassis\_view\_list\_\_rear\_height |     |     |
-| Rear grid size | int | isys\_cats\_chassis\_view\_list | isys\_cats\_chassis\_view\_list\_\_rear\_size |     |     |
+| Vorderseite horizontale Einheiten | int | isys\_cats\_chassis\_view\_list | isys\_cats\_chassis\_view\_list\_\_front\_width |     |     |
+| Vorderseite vertikale Einheiten | int | isys\_cats\_chassis\_view\_list | isys\_cats\_chassis\_view\_list\_\_front\_height |     |     |
+| Vorderseite grid size | int | isys\_cats\_chassis\_view\_list | isys\_cats\_chassis\_view\_list\_\_front\_size |     |     |
+| rear side horizontale Einheiten | int | isys\_cats\_chassis\_view\_list | isys\_cats\_chassis\_view\_list\_\_rear\_width |     |     |
+| rear side vertikale Einheiten | int | isys\_cats\_chassis\_view\_list | isys\_cats\_chassis\_view\_list\_\_rear\_height |     |     |
+| rear side grid size | int | isys\_cats\_chassis\_view\_list | isys\_cats\_chassis\_view\_list\_\_rear\_size |     |     |
 | Description | text\_area | isys\_cats\_chassis\_view\_list | isys\_cats\_chassis\_view\_list\_\_description |     |     |
 
 ### Slots
 
-#### Tabelle: isys\_cats\_chassis\_slot\_list
+#### table: isys\_cats\_chassis\_slot\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Connector type | int | isys\_cats\_chassis\_slot\_list | isys\_cats\_chassis\_slot\_list\_\_isys\_chassis\_connector\_type\_\_id | isys\_chassis\_connector\_type | isys\_chassis\_connector\_type\_\_id |
-| Insertion | int | isys\_cats\_chassis\_slot\_list | isys\_cats\_chassis\_slot\_list\_\_insertion |     |     |
-| Slot title | text | isys\_cats\_chassis\_slot\_list | isys\_cats\_chassis\_slot\_list\_\_title |     |     |
-| Horizontal position | int | isys\_cats\_chassis\_slot\_list | isys\_cats\_chassis\_slot\_list\_\_x\_from |     |     |
-| To horizontal position | int | isys\_cats\_chassis\_slot\_list | isys\_cats\_chassis\_slot\_list\_\_x\_to |     |     |
-| Vertical position | int | isys\_cats\_chassis\_slot\_list | isys\_cats\_chassis\_slot\_list\_\_y\_from |     |     |
-| To vertical position | int | isys\_cats\_chassis\_slot\_list | isys\_cats\_chassis\_slot\_list\_\_y\_to |     |     |
-| Device assignment | int | isys\_cats\_chassis\_slot\_list | isys\_cats\_chassis\_slot\_list\_\_id |     |     |
+| Anschlusstyp | int | isys\_cats\_chassis\_slot\_list | isys\_cats\_chassis\_slot\_list\_\_isys\_chassis\_connector\_type\_\_id | isys\_chassis\_connector\_type | isys\_chassis\_connector\_type\_\_id |
+| Einschub | int | isys\_cats\_chassis\_slot\_list | isys\_cats\_chassis\_slot\_list\_\_insertion |     |     |
+| Slotbezeichnung | text | isys\_cats\_chassis\_slot\_list | isys\_cats\_chassis\_slot\_list\_\_title |     |     |
+| Horizontale Position | int | isys\_cats\_chassis\_slot\_list | isys\_cats\_chassis\_slot\_list\_\_x\_from |     |     |
+| Bis Horizontale Position | int | isys\_cats\_chassis\_slot\_list | isys\_cats\_chassis\_slot\_list\_\_x\_to |     |     |
+| Vertikale Position | int | isys\_cats\_chassis\_slot\_list | isys\_cats\_chassis\_slot\_list\_\_y\_from |     |     |
+| Bis Vertikale Position | int | isys\_cats\_chassis\_slot\_list | isys\_cats\_chassis\_slot\_list\_\_y\_to |     |     |
+| deviceezuordnung | int | isys\_cats\_chassis\_slot\_list | isys\_cats\_chassis\_slot\_list\_\_id |     |     |
 | Description | text\_area | isys\_cats\_chassis\_slot\_list | isys\_cats\_chassis\_slot\_list\_\_description |     |     |
 
-### Assigned devices
+### Zugewiesene devicee
 
-#### Tabelle: isys\_cats\_chassis\_list
+#### table: isys\_cats\_chassis\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Role | int | isys\_cats\_chassis\_list | isys\_cats\_chassis\_list\_\_isys\_chassis\_role\_\_id | isys\_chassis\_role | isys\_chassis\_role\_\_id |
-| Device assignment | int | isys\_cats\_chassis\_list | isys\_cats\_chassis\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
-| Device assignment (Hostadapter) | int | isys\_cats\_chassis\_list | isys\_cats\_chassis\_list\_\_isys\_catg\_hba\_list\_\_id | isys\_catg\_hba\_list | isys\_catg\_hba\_list\_\_id |
-| Device assignment (Interface) | int | isys\_cats\_chassis\_list | isys\_cats\_chassis\_list\_\_isys\_catg\_netp\_list\_\_id | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_id |
-| Device assignment (Power consumer) | int | isys\_cats\_chassis\_list | isys\_cats\_chassis\_list\_\_isys\_catg\_pc\_list\_\_id | isys\_catg\_pc\_list | isys\_catg\_pc\_list\_\_id |
-| Assigned to | int | isys\_cats\_chassis\_list | isys\_cats\_chassis\_list\_\_id |     |     |
+| Rolle | int | isys\_cats\_chassis\_list | isys\_cats\_chassis\_list\_\_isys\_chassis\_role\_\_id | isys\_chassis\_role | isys\_chassis\_role\_\_id |
+| deviceezuordnung | int | isys\_cats\_chassis\_list | isys\_cats\_chassis\_list\_\_isys\_connection\_\_id | isys\_connection | isys\_connection\_\_id |
+| deviceezuordnung (Hostadapter) | int | isys\_cats\_chassis\_list | isys\_cats\_chassis\_list\_\_isys\_catg\_hba\_list\_\_id | isys\_catg\_hba\_list | isys\_catg\_hba\_list\_\_id |
+| deviceezuordnung (Interface) | int | isys\_cats\_chassis\_list | isys\_cats\_chassis\_list\_\_isys\_catg\_netp\_list\_\_id | isys\_catg\_netp\_list | isys\_catg\_netp\_list\_\_id |
+| deviceezuordnung (Stromverbraucher) | int | isys\_cats\_chassis\_list | isys\_cats\_chassis\_list\_\_isys\_catg\_pc\_list\_\_id | isys\_catg\_pc\_list | isys\_catg\_pc\_list\_\_id |
+| Eingeschoben bei | int | isys\_cats\_chassis\_list | isys\_cats\_chassis\_list\_\_id |     |     |
 | Description | text\_area | isys\_cats\_chassis\_list | isys\_cats\_chassis\_list\_\_description |     |     |
 
-### Chassis view
+### Chassis Ansicht
 
-#### Tabelle: isys\_cats\_chassis\_view\_list
+#### table: isys\_cats\_chassis\_view\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Front horizontal units | int | isys\_cats\_chassis\_view\_list | isys\_cats\_chassis\_view\_list\_\_front\_width |     |     |
-| Front vertical units | int | isys\_cats\_chassis\_view\_list | isys\_cats\_chassis\_view\_list\_\_front\_height |     |     |
-| Front grid size | int | isys\_cats\_chassis\_view\_list | isys\_cats\_chassis\_view\_list\_\_front\_size |     |     |
-| Rear horizontal units | int | isys\_cats\_chassis\_view\_list | isys\_cats\_chassis\_view\_list\_\_rear\_width |     |     |
-| Rear vertical units | int | isys\_cats\_chassis\_view\_list | isys\_cats\_chassis\_view\_list\_\_rear\_height |     |     |
-| Rear grid size | int | isys\_cats\_chassis\_view\_list | isys\_cats\_chassis\_view\_list\_\_rear\_size |     |     |
+| Vorderseite horizontale Einheiten | int | isys\_cats\_chassis\_view\_list | isys\_cats\_chassis\_view\_list\_\_front\_width |     |     |
+| Vorderseite vertikale Einheiten | int | isys\_cats\_chassis\_view\_list | isys\_cats\_chassis\_view\_list\_\_front\_height |     |     |
+| Vorderseite grid size | int | isys\_cats\_chassis\_view\_list | isys\_cats\_chassis\_view\_list\_\_front\_size |     |     |
+| rear side horizontale Einheiten | int | isys\_cats\_chassis\_view\_list | isys\_cats\_chassis\_view\_list\_\_rear\_width |     |     |
+| rear side vertikale Einheiten | int | isys\_cats\_chassis\_view\_list | isys\_cats\_chassis\_view\_list\_\_rear\_height |     |     |
+| rear side grid size | int | isys\_cats\_chassis\_view\_list | isys\_cats\_chassis\_view\_list\_\_rear\_size |     |     |
 | Description | text\_area | isys\_cats\_chassis\_view\_list | isys\_cats\_chassis\_view\_list\_\_description |     |     |
 
-### Variants
+### Varianten
 
-#### Tabelle: isys\_cats\_app\_variant\_list
+#### table: isys\_cats\_app\_variant\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Title | text | isys\_cats\_app\_variant\_list | isys\_cats\_app\_variant\_list\_\_title |     |     |
-| Variant | text | isys\_cats\_app\_variant\_list | isys\_cats\_app\_variant\_list\_\_variant |     |     |
+| designation | text | isys\_cats\_app\_variant\_list | isys\_cats\_app\_variant\_list\_\_title |     |     |
+| Variante | text | isys\_cats\_app\_variant\_list | isys\_cats\_app\_variant\_list\_\_variant |     |     |
 | Description | text\_area | isys\_cats\_app\_variant\_list | isys\_cats\_app\_variant\_list\_\_description |     |     |
 
 ### Nagios
 
-#### Tabelle: isys\_cats\_person\_nagios\_list
+#### table: isys\_cats\_person\_nagios\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
 | Alias | text | isys\_cats\_person\_nagios\_list | isys\_cats\_person\_nagios\_list\_\_alias |     |     |
 | contact\_name | text | isys\_cats\_person\_nagios\_list | isys\_cats\_person\_nagios\_list\_\_contact\_name |     |     |
@@ -3137,97 +3143,97 @@ Specific categories
 | service\_notification\_commands | text | isys\_cats\_person\_nagios\_list | isys\_cats\_person\_nagios\_list\_\_service\_notification\_commands |     |     |
 | can\_submit\_commands | int | isys\_cats\_person\_nagios\_list | isys\_cats\_person\_nagios\_list\_\_can\_submit\_commands |     |     |
 | retain\_status\_information | int | isys\_cats\_person\_nagios\_list | isys\_cats\_person\_nagios\_list\_\_retain\_status\_information |     |     |
-| Export this configuration | int | isys\_cats\_person\_nagios\_list | isys\_cats\_person\_nagios\_list\_\_is\_exportable |     |     |
+| Diese Configuration exportieren | int | isys\_cats\_person\_nagios\_list | isys\_cats\_person\_nagios\_list\_\_is\_exportable |     |     |
 | retain\_nonstatus\_information | int | isys\_cats\_person\_nagios\_list | isys\_cats\_person\_nagios\_list\_\_retain\_nonstatus\_information |     |     |
 | custom\_object\_vars | text\_area | isys\_cats\_person\_nagios\_list | isys\_cats\_person\_nagios\_list\_\_custom\_obj\_vars |     |     |
 | Description | text\_area | isys\_cats\_person\_nagios\_list | isys\_cats\_person\_nagios\_list\_\_description |     |     |
 
 ### Nagios
 
-#### Tabelle: isys\_cats\_person\_group\_nagios\_list
+#### table: isys\_cats\_person\_group\_nagios\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Export this configuration | int | isys\_cats\_person\_group\_nagios\_list | isys\_cats\_person\_group\_nagios\_list\_\_is\_exportable |     |     |
+| Diese Configuration exportieren | int | isys\_cats\_person\_group\_nagios\_list | isys\_cats\_person\_group\_nagios\_list\_\_is\_exportable |     |     |
 | alias | text | isys\_cats\_person\_group\_nagios\_list | isys\_cats\_person\_group\_nagios\_list\_\_alias |     |     |
 | Description | text\_area | isys\_cats\_person\_group\_nagios\_list | isys\_cats\_person\_group\_nagios\_list\_\_description |     |     |
 
-### Type
+### Typ
 
-#### Tabelle: isys\_cats\_group\_type\_list
+#### table: isys\_cats\_group\_type\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
 | Typ | int | isys\_cats\_group\_type\_list | isys\_cats\_group\_type\_list\_\_type |     |     |
 | Report | int | isys\_cats\_group\_type\_list | isys\_cats\_group\_type\_list\_\_isys\_report\_\_id |     |     |
 | Description | text\_area | isys\_cats\_group\_type\_list | isys\_cats\_group\_type\_list\_\_description |     |     |
 
-### Assigned logical ports
+### Zugewiesene logische Ports
 
-#### Tabelle: isys\_catg\_log\_port\_list\_2\_isys\_obj
+#### table: isys\_catg\_log\_port\_list\_2\_isys\_obj
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Object title | int | main | isys\_obj\_\_id |     |     |
-| Assigned logical ports | int | isys\_catg\_log\_port\_list | isys\_catg\_log\_port\_list\_\_id |     |     |
+| object-Titel | int | main | isys\_obj\_\_id |     |     |
+| Zugewiesene logische Ports | int | isys\_catg\_log\_port\_list | isys\_catg\_log\_port\_list\_\_id |     |     |
 
-### Installation
+### installation
 
-#### Tabelle: isys\_catg\_application\_list
+#### table: isys\_catg\_application\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Installed on | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_obj\_\_id |     |     |
-| Type | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_catg\_application\_type\_\_id | isys\_catg\_application\_type | isys\_catg\_application\_type\_\_id |
-| Priority | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_catg\_application\_priority\_\_id | isys\_catg\_application\_priority | isys\_catg\_application\_priority\_\_id |
-| Assigned license | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_cats\_lic\_list\_\_id | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_id |
-| Assigned license key | text | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_cats\_lic\_list\_\_id | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_id |
-| Database schema | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_catg\_relation\_list\_\_id | isys\_cats\_database\_access\_list | isys\_cats\_database\_access\_list\_\_id |
+| Installiert auf | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_obj\_\_id |     |     |
+| Typ | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_catg\_application\_type\_\_id | isys\_catg\_application\_type | isys\_catg\_application\_type\_\_id |
+| priority | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_catg\_application\_priority\_\_id | isys\_catg\_application\_priority | isys\_catg\_application\_priority\_\_id |
+| Zugewiesene Lizenz | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_cats\_lic\_list\_\_id | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_id |
+| Zugewiesener license key | text | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_cats\_lic\_list\_\_id | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_id |
+| database schema | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_catg\_relation\_list\_\_id | isys\_cats\_database\_access\_list | isys\_cats\_database\_access\_list\_\_id |
 | Service | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_catg\_relation\_list\_\_id | isys\_catg\_its\_components\_list | isys\_catg\_its\_components\_list\_\_id |
-| Variant | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_cats\_app\_variant\_list\_\_id | isys\_cats\_app\_variant\_list | isys\_cats\_app\_variant\_list\_\_id |
-| Inherit nagios services | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_bequest\_nagios\_services |     |     |
+| Variante | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_cats\_app\_variant\_list\_\_id | isys\_cats\_app\_variant\_list | isys\_cats\_app\_variant\_list\_\_id |
+| Nagios services vererben | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_bequest\_nagios\_services |     |     |
 | Description | text\_area | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_description |     |     |
 
-### Installation
+### installation
 
-#### Tabelle: isys\_catg\_application\_list
+#### table: isys\_catg\_application\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Installed on | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_obj\_\_id |     |     |
-| Type | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_catg\_application\_type\_\_id | isys\_catg\_application\_type | isys\_catg\_application\_type\_\_id |
-| Priority | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_catg\_application\_priority\_\_id | isys\_catg\_application\_priority | isys\_catg\_application\_priority\_\_id |
-| Assigned license | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_cats\_lic\_list\_\_id | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_id |
-| Assigned license key | text | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_cats\_lic\_list\_\_id | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_id |
-| Database schema | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_catg\_relation\_list\_\_id | isys\_cats\_database\_access\_list | isys\_cats\_database\_access\_list\_\_id |
+| Installiert auf | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_obj\_\_id |     |     |
+| Typ | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_catg\_application\_type\_\_id | isys\_catg\_application\_type | isys\_catg\_application\_type\_\_id |
+| priority | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_catg\_application\_priority\_\_id | isys\_catg\_application\_priority | isys\_catg\_application\_priority\_\_id |
+| Zugewiesene Lizenz | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_cats\_lic\_list\_\_id | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_id |
+| Zugewiesener license key | text | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_cats\_lic\_list\_\_id | isys\_cats\_lic\_list | isys\_cats\_lic\_list\_\_id |
+| database schema | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_catg\_relation\_list\_\_id | isys\_cats\_database\_access\_list | isys\_cats\_database\_access\_list\_\_id |
 | Service | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_catg\_relation\_list\_\_id | isys\_catg\_its\_components\_list | isys\_catg\_its\_components\_list\_\_id |
-| Variant | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_cats\_app\_variant\_list\_\_id | isys\_cats\_app\_variant\_list | isys\_cats\_app\_variant\_list\_\_id |
-| Inherit nagios services | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_bequest\_nagios\_services |     |     |
+| Variante | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_isys\_cats\_app\_variant\_list\_\_id | isys\_cats\_app\_variant\_list | isys\_cats\_app\_variant\_list\_\_id |
+| Nagios services vererben | int | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_bequest\_nagios\_services |     |     |
 | Description | text\_area | isys\_catg\_application\_list | isys\_catg\_application\_list\_\_description |     |     |
 
-### Net zone
+### Netzbereiche
 
-#### Tabelle: isys\_cats\_net\_zone\_list
+#### table: isys\_cats\_net\_zone\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Net zone objekt | int | isys\_cats\_net\_zone\_list | isys\_cats\_net\_zone\_list\_\_isys\_obj\_\_id\_\_zone | isys\_obj | isys\_obj\_\_id |
-| Zone from | text | isys\_cats\_net\_zone\_list | isys\_cats\_net\_zone\_list\_\_range\_from |     |     |
-| Zone from | text | isys\_cats\_net\_zone\_list | isys\_cats\_net\_zone\_list\_\_range\_from\_long |     |     |
-| Zone to | text | isys\_cats\_net\_zone\_list | isys\_cats\_net\_zone\_list\_\_range\_to |     |     |
-| Zone to | text | isys\_cats\_net\_zone\_list | isys\_cats\_net\_zone\_list\_\_range\_to\_long |     |     |
+| Netzbereich object | int | isys\_cats\_net\_zone\_list | isys\_cats\_net\_zone\_list\_\_isys\_obj\_\_id\_\_zone | isys\_obj | isys\_obj\_\_id |
+| Bereich von | text | isys\_cats\_net\_zone\_list | isys\_cats\_net\_zone\_list\_\_range\_from |     |     |
+| Bereich von | text | isys\_cats\_net\_zone\_list | isys\_cats\_net\_zone\_list\_\_range\_from\_long |     |     |
+| Bereich bis | text | isys\_cats\_net\_zone\_list | isys\_cats\_net\_zone\_list\_\_range\_to |     |     |
+| Bereich bis | text | isys\_cats\_net\_zone\_list | isys\_cats\_net\_zone\_list\_\_range\_to\_long |     |     |
 | Description | text\_area | isys\_cats\_net\_zone\_list | isys\_cats\_net\_zone\_list\_\_description |     |     |
 
-### Operating Systems
+### Betriebssysteme
 
-#### Tabelle: isys\_cats\_application\_list
+#### table: isys\_cats\_application\_list
 
-| Field | Type | Tabelle | Database-Field | Reference-Table | Reference |
+| field | Typ | table | Datenbank-field | Referenz-table | Referenz |
 | --- | --- | --- | --- | --- | --- |
-| Specification | text | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_specification |     |     |
-| Manufacturer | int | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_isys\_application\_manufacturer\_\_id | isys\_application\_manufacturer | isys\_application\_manufacturer\_\_id |
-| Installation | int | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_isys\_installation\_type\_\_id | isys\_installation\_type | isys\_installation\_type\_\_id |
-| Registration key | text | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_registration\_key |     |     |
-| Install path | text | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_install\_path |     |     |
-| Amount of installations | int | isys\_cats\_application\_list |     |     |     |
+| Spezifikation | text | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_specification |     |     |
+| Hersteller | int | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_isys\_application\_manufacturer\_\_id | isys\_application\_manufacturer | isys\_application\_manufacturer\_\_id |
+| installationsart | int | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_isys\_installation\_type\_\_id | isys\_installation\_type | isys\_installation\_type\_\_id |
+| Registrierungs-Key | text | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_registration\_key |     |     |
+| installationspfad | text | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_install\_path |     |     |
+| Anzahl installationen | int | isys\_cats\_application\_list |     |     |     |
 | Description | text\_area | isys\_cats\_application\_list | isys\_cats\_application\_list\_\_description |     |     |

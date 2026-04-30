@@ -1,18 +1,16 @@
 ---
-title: API v2 endpoints
-description: API v2 endpoints
+title: API v2 Endpunkte
+description: "The new structure is much stricter and allows better validation of passed parameters, and it is now possible to create much more structured and..."
 #icon: material/api
 status: updated
 lang: en
 ---
 
-!!! warning "Please create a complete backup before making any changes to an interface/import. If the result is not satisfying, it can then be restored"
+The new structure is much stricter and allows better validation of passed parameters, and it is now possible to create much more structured and simpler endpoints. The new structure will use a new service, i.e., the v2 API will use an internal (i-doit core) v2 API.
 
-The new structure is much more rigorous and allows for better validation of passed parameters and it is now possible to create much more structured and simple endpoints. The new structure will use a new service, i.e. the v2 API will use an internal (i-doit core) v2 API.
+This ensures that the v2 API no longer implements any special "own" logic. The v2 API serves merely as an interface.
 
-This is to ensure that the v2 API no longer implements any special "own" logic. The v2 API only serves as an interface.
-
-!!! example "A documentation is provided by the API itself via request or in i-doit"
+!!! example "Documentation is provided by the API itself or is visible in i-doit"
 
     === "Request system.endpoints.read.v2"
 
@@ -1475,3 +1473,9 @@ This is to ensure that the v2 API no longer implements any special "own" logic. 
             }
         }
         ```
+
+## See also
+
+- [API Add-on](../../index.md) — Getting started with the API Add-on
+- [API v1 Methods](../v1/index.md) — API v1 method reference
+- [i-doit Add-ons](../../../index.md) — All available add-ons

@@ -1,31 +1,33 @@
 ---
-title: SMTP configuration (e-mail)
-description: SMTP configuration  (e-mail)
+title: SMTP Configuration (Email)
+description: "i-doit automatically sends emails on certain events or status queries -- for example, for notifications or workflows."
 icon: mail-back
 status:
 lang: en
 ---
 
-# SMTP configuration (E-Mail)
+# SMTP Configuration (Email)
 
-_i-doit_ is capable of sending e-mails automatically in the case of specific events or states.
+_i-doit_ automatically sends emails on certain events or status queries -- for example, for notifications or workflows.
 
-!!! attention "Console"
-    The configuration is essential when the i-doit controller [CLI](./cli/index.md) is used with the [notifications](../evaluation/notifications.md) or workflows. Otherwise no e-mails can be sent!
+!!! warning "Console"
+    This configuration is mandatory if you use automated email notifications via the [CLI](../automation-and-integration/cli/index.md) with the [Notifications](../evaluation/notifications.md) or workflows. Without it, no emails will be sent!
 
-The integration of a mail server is possible in the **Administration** at **Import and interfaces → SMTP configuration (e-mail)**. A configuration mask with the following fields is available there:
+The SMTP configuration can be found under **Administration → Import and Interfaces → SMTP Configuration (Email)**.
 
-[![smtp-konfiguration](../assets/images/en/automation-and-integration/smtp-1.png)](../assets/images/en/automation-and-integration/smtp-1.png)
+[![smtp-configuration](../assets/images/de/automatisierung-und-integration/1-smtp.png)](../assets/images/de/automatisierung-und-integration/1-smtp.png)
 
-| Field                                          | Description                                                                                                                                                                                                                   |
-| ---------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| SMTP Host                                      | Name of the host or the IP address of the mail server.                                                                                                                                                                        |
-| SMTP Port                                      | 25 is the standard port. The port has to be changed accordingly for an encrypted connection or deviating configuration.                                                                                                       |
-| SMTP Username                                  | Enter the username                                                                                                                                                                                                            |
-| SMTP Password                                  | Enter the password                                                                                                                                                                                                            |
-| Sender                                         | Sending e-mail address for e-mail dispatch                                                                                                                                                                                    |
-| Name                                           | Sender name for e-mail dispatch                                                                                                                                                                                               |
-| Timeout                                        | Timeout for e-mail dispatch                                                                                                                                                                                                   |
-| SMTP Debug                                     | It is often helpful to activate the debugging function for the initial setup. The log is deposited in the `log/` folder of the _i-doit_ main folder.<br><br>(default: **No**)                                                 |
-| Subject Präfix                                 | Optional entry for a better support of automation based on e-mail client rules.                                                                                                                                               |
-| Notification template for maintenance contract | This template was used in a previous version and is not needed anymore in the current _i-doit_ versions.<br><br>In current versions, this template can be configured at **Notifications** function in the **Extras** section. |
+A configuration form with the following fields is available:
+
+| Field                                          | Description                                                                                                                                                                                                                                              |
+| ---------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| SMTP Host                                      | Specify the hostname or IP address of the mail server.                                                                                                                                                                                                   |
+| SMTP Port                                      | Default port is 25. For encrypted connections or different configurations, the port must be changed accordingly.                                                                                                                                          |
+| SMTP Username                                  | Specify the username                                                                                                                                                                                                                                     |
+| SMTP Password                                  | Specify the password                                                                                                                                                                                                                                     |
+| Sender                                         | Sender email address for mail delivery                                                                                                                                                                                                                   |
+| Name                                           | Sender name for mail delivery.                                                                                                                                                                                                                           |
+| Timeout                                        | Timeout for delivery                                                                                                                                                                                                                                     |
+| SMTP Debug                                     | For initial configuration, it is often helpful to enable debugging. The log is stored in the `log/` directory in the _i-doit_ main directory.<br><br>(Default: **No**)                                                                                   |
+| Subject Prefix                                 | Optionally entry to better support rule-based automation in email clients.                                                                                                                                                                                 |
+| Notification template for maintenance contract | This template was used in a previous version and is no longer needed in current _i-doit_ versions.<br><br>In current versions, the template can be configured in the **Notification system** under **Extras**.                                           |

@@ -1,3 +1,10 @@
+---
+title: Release Notes 30
+description: "We're happy to announce i-doit 30."
+icon:
+status:
+lang: en
+---
 # Release Notes 30
 
 We're happy to announce i-doit 30. This version will bring a bunch of new features and improvements to enhance your i-doit experience. First of all we happily announce that **MariaDB 10.11** is officially supported with i-doit 30. Paired with **PHP 8.2** you are now able to update your operating system without having to worry about i-doit's compatibility.

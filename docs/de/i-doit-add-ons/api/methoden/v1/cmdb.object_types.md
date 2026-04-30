@@ -1,6 +1,6 @@
 ---
 title: cmdb.object_types
-description: cmdb.object_types
+description: "Read objects type configurations."
 icon: material/api
 #status: updated
 lang: en
@@ -134,3 +134,9 @@ You can use any combination of filters.
       ]
     }
     ```
+
+## Siehe auch
+
+- [API v1 Methoden](index.md) — Übersicht aller API v1 Methoden
+- [API Add-on](../../index.md) — Einstieg in das API Add-on
+- [i-doit Add-ons](../../../index.md) — Alle verfügbaren Add-ons

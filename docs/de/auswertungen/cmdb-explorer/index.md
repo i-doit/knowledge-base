@@ -1,6 +1,6 @@
 ---
 title: CMDB-Explorer
-description: Der CMDB-Explorer stellt [Beziehungen zwischen Objekten](../../auswertungen/../grundlagen/objekt-beziehungen.md) grafisch dar. Verschiedene Ansichten zu Abhängigkeiten können generiert werden. Dadurch gewinnt man einen schnellen Überblick. Anschließend können diese Ansichten in verschiedene Formate exportiert werden, um sie weiter zu bearbeiten.
+description: Der CMDB-Explorer stellt [Beziehungen zwischen Objekten](../../grundlagen/objekt-beziehungen.md) grafisch dar. Verschiedene Ansichten zu Abhängigkeiten können generiert werden. Dadurch gewinnt man einen schnellen Überblick. Anschließend können diese Ansichten in verschiedene Formate exportiert werden, um sie weiter zu bearbeiten.
 icon:
 status:
 lang: de
@@ -8,7 +8,7 @@ lang: de
 
 # CMDB-Explorer
 
-Der CMDB-Explorer stellt [Beziehungen zwischen Objekten](../../auswertungen/../grundlagen/objekt-beziehungen.md) grafisch dar. Verschiedene Ansichten zu Abhängigkeiten können generiert werden. Dadurch gewinnt man einen schnellen Überblick. Anschließend können diese Ansichten in verschiedene Formate exportiert werden, um sie weiter zu bearbeiten.
+Der CMDB-Explorer stellt [Beziehungen zwischen Objekten](../../grundlagen/objekt-beziehungen.md) grafisch dar. Verschiedene Ansichten zu Abhängigkeiten können generiert werden. Dadurch gewinnt man einen schnellen Überblick. Anschließend können diese Ansichten in verschiedene Formate exportiert werden, um sie weiter zu bearbeiten.
 
 ## Aufruf des CMDB-Explorers
 
@@ -62,7 +62,7 @@ Neben dem Typ der Beziehung, deren Gewichtung und den angezeigten Objekttypen k�
 
 Über die Schaltfläche **Ausrichtung ändern** wird die Darstellungsrichtung angepasst. Hier ist es möglich, die Darstellung entweder von oben nach unten oder von links nach rechts erfolgen zu lassen. Bei umfangreichen Visualisierungen ist die Darstellung von links nach rechts zu empfehlen. Weiterhin ist es möglich, die Darstellungsart zu wählen.
 
-Über die Schaltfläche **Darstellungsart wechseln** kann von der **Baum-Ansicht** zu einer **Netz-Ansicht** gewechselt werden. In der Baum-Ansicht kann es vorkommen, dass Objekte mehrfach angezeigt werden, wenn Sie an unterschiedlichen Stellen über Beziehungen zu anderen Objekten verfügen.
+Über die Schaltfläche **Darstellungsart wechseln** kann von der **Baum-Ansicht** zu einer **Netz-Ansicht** gewechselt werden. In der Baum-Ansicht kann es vorkommen, dass Objekte mehrfach angezeigt werden, wenn sie an unterschiedlichen Stellen über Beziehungen zu anderen Objekten verfügen.
 
 In der Netz-Ansicht wird ein Objekt genau einmal dargestellt und alle Beziehungen werden von dessen Kachel erzeugt. Bei komplexeren Beziehungsdarstellungen ist die Baum-Ansicht zu empfehlen.
 

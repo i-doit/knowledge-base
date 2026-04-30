@@ -1,47 +1,51 @@
 ---
-title: Initial Login
-description: Initial Login
+title: Initial login
+description: "The initial login is your first step after installing i-doit."
 icon:
 status:
 lang: en
 ---
 
-# Initial Login
+# Initial login
 
-i-doit is [installed](../installation/index.md) and you want to log in for the first time? No problem at all! However, there are a few things to keep in mind and that is why it's worth reading this article.
+The initial login is your first step after [installing](../installation/manual-installation/index.md) i-doit. Here you will learn which default users exist, how to log in, and what you should pay attention to right after logging in.
 
-## Default Users and Default Groups
+## Default users and groups
 
-!!! danger "Please change the passwords after installation!"
+!!! danger "Please change the passwords of the default users after installation!"
 
-There are some default users for login which are assigned to default groups and therefore have predefined [permissions](./../efficient-documentation/rights-management/index.md).
+i-doit comes with several default users, each assigned to a group with predefined [permissions](../efficient-documentation/permission-management/index.md):
 
-| User          | Password     | Group        | Permissions (short description)     |
-| ------------- | ------------ | ------------ | ----------------------------------- |
-| **admin**     | **admin**    | **Admin**    | All rights, also for administration |
-| **archivar**  | **archivar** | **Archivar** | Read and edit                       |
-| **author**    | **author**   | **Author**   | Create, edit, archive and execute   |
-| **editor**    | **editor**   | **Editor**   | Read and edit                       |
-| **reader**    | **reader**   | **Reader**   | Read                                |
-| **systemapi** | -            | -            | Used for internal functions         |
+| User          | Password     | Group        | Permissions (summary)                        |
+| ------------- | ------------ | ------------ | -------------------------------------------- |
+| **admin**     | **admin**    | **Admin**    | All permissions, including administration     |
+| **archivar**  | **archivar** | **Archivar** | Read and edit                                |
+| **author**    | **author**   | **Author**   | Create, edit, archive and execute            |
+| **editor**    | **editor**   | **Editor**   | Read and edit                                |
+| **reader**    | **reader**   | **Reader**   | Read                                         |
+| **systemapi** | -            | -            | Used for internal functions                  |
 
-The listed users receive their permissions through the groups of the same name.
+All listed users -- with the exception of **systemapi** -- receive their permissions through the groups of the same name.
 
-## Login
+## Logging in
 
-Preferably select the **admin** user from the above mentioned default users as this user's functionality is not restricted.
+For the first login, it is best to use the **admin** user, as this user has no functional restrictions.
 
-[![Login](../assets/images/en/basics/initial-login/1-il.png)](../assets/images/en/basics/initial-login/1-il.png)
+[![login](../assets/images/de/grundlagen/erstanmeldung/1-erstanmeldung.png)](../assets/images/de/grundlagen/erstanmeldung/1-erstanmeldung.png)
 
-## Add Further Users and Groups
+## Adding additional users and groups
 
-Each user in i-doit is an [object](structure-of-the-it-documentation.md) of the type **Persons**. After the initial login, we _strongly recommend_ to set up a [LDAP connection](../user-authentication-and-management/ldap-directory/index.md) or other local users _and_ to change the credentials of the above mentioned users. For this purpose, you can select the particular user in the [object group](structure-of-the-it-documentation.md) **Contacts** under the [object type](structure-of-the-it-documentation.md) **Persons** and change the credentials, or disable login, in the category **Persons → Login**. Alternatively, you can [archive](life-and-documentation-cycle.md) the **Persons** objects. In doing this, the login of these users is denied.
+Every user in i-doit is an [object](it-documentation-structure.md) of the type **Persons**. After the first login, you should urgently perform the following steps:
+
+1. Set up an [LDAP connection](../user-authentication-and-management/ldap-directory/index.md) or create additional local users.
+2. Change the credentials of the default users: Navigate to the [object type group](it-documentation-structure.md) **Contacts**, then to the [object type](it-documentation-structure.md) **Persons**, select the respective user and modify the category **Persons → Login**.
+3. Alternatively, you can [archive](life-and-documentation-cycle.md) the default **Persons** objects -- this will disable their login.
 
 !!! success "Local administrator"
-    Even when you use a [LDAP directory server or an Active Directory (AD)](../user-authentication-and-management/ldap-directory/index.md), it is recommendable to set up a local user with all permissions. So you could always login with the local administrator should the external service be unavailable.
+    Even if an [LDAP directory server or an Active Directory (AD)](../user-authentication-and-management/ldap-directory/index.md) is being used, it is advisable to still create a local user with full permissions. If the external service becomes unavailable, you can still log in with the local user.
 
-## Welcome Text
+## Welcome text
 
-When you want to welcome users with a text during the login process, it is possible to enter a corresponding text in the [Admin-Center](../system-administration/admin-center.md) under **System settings → Login → Welcome text for Login**.
+You can display a custom text to users directly on the login page. Configure this in the [Admin-Center](../administration/admin-center.md) under **System settings → Login → Welcome text for Login**.
 
-[![Login mit Begrüßungstext](../assets/images/en/basics/initial-login/2-il.png)](../assets/images/en/basics/initial-login/2-il.png)
+[![login-welcome-text](../assets/images/de/grundlagen/erstanmeldung/2-erstanmeldung.png)](../assets/images/de/grundlagen/erstanmeldung/2-erstanmeldung.png)

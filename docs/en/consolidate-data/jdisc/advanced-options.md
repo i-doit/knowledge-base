@@ -1,109 +1,122 @@
 ---
-title: Advanced Options for JDisc Import Profiles
+title: Advanced options for JDisc import profiles
 description: Configuration and usage of JDisc Discovery with i-doit
 icon:
 status:
 lang: en
 ---
 
-# Advanced Options for JDisc Import Profiles
+# Advanced options for JDisc import profiles
 
-This article supplements the main page on [JDisc Discovery Integration](index.md) and describes the advanced configuration options for import profiles within i-doit.
+This article supplements the main page on [JDisc Discovery Integration](index.md) and describes the advanced configuration options of import profiles within i-doit.
 
-## Matching Profiles
+[![Advanced Options](../../assets/images/de/daten-konsolidieren/jdisc/advanced-options.png)](../../assets/images/de/daten-konsolidieren/jdisc/advanced-options.png)
 
-Matching profiles determine **how i-doit identifies a device** imported from JDisc. The goal is to prevent the same device from being imported multiple times.
+## Matching profiles
 
-### Relevant Criteria:
+Matching profiles determine **how i-doit identifies a device** that was imported from JDisc. The goal is to prevent the same device from being imported multiple times.
 
-* **Serial Number** (recommended, if available)
-* **MAC Address**
+### Relevant criteria:
+
+* **Serial number** (recommended when available)
+* **MAC address**
 * **Hostname** / **FQDN**
-* **Device Type (from JDisc)**
+* **Device type (from JDisc)**
 
 :material-information-outline: i-doit links JDisc devices with existing objects or creates a new one.
 
-Further details on the matching strategy can be found here: [Object Identification during Imports](../object-identification-during-imports.md)
+Further details on the matching strategy can be found at: [Object identification during imports](../identify-objects-during-imports.md)
 
 ---
 
-## Categories and Filters :page_facing_up:
+## Categories and filters :page_facing_up:
 
-!!! warning "Note on Visibility"
-    Some options only appear if certain categories or higher-level options are enabled.
+!!! warning "Note on visibility"
+    Some options only appear when certain categories or parent options are enabled.
 
-Through mapping, you define **which data from JDisc is written into which categories in i-doit**.
+Through the mapping you define **which data from JDisc is written to which categories in i-doit**.
 
-| Option                           | Description                                                                                                                                                                                                                      |
-| -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Select categories**            | Determines **which categories** are populated during import. Only those categories that the import can process (e.g., Ports, Software, VLANs etc.) are listed.                                                                   |
-| **MAC filter** (hidden)          | Only visible if you have selected the category **Port** or **FC-Port**. Here you can create a **Whitelist** or **Blacklist** for MAC addresses (one address per line). This allows you to exclude specific devices, for example. |
-| **Import network interfaces as** | Determines in which category the JDisc-collected network interfaces are created (e.g., as normal Ports or as special connections). This allows distinguishing between physical and virtual network interfaces.                   |
+| Option                                  | Description                                                                                                                                                                                                                                                          |
+| --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Select categories**                | Defines **which categories** are populated during import. Only those categories are listed that the import process can handle (e.g. Ports, Software, VLANs, etc.). If no category is selected, only the General category is populated.                   |
+| **MAC filter** (hidden)              | Only visible if you have selected the **Port** or **FC Port** category. Here you can create a **whitelist** or **blacklist** for MAC addresses (one address per line). This allows you to exclude certain devices, for example. |
+| **Import network interfaces as** | Determines in which category the JDisc-discovered network interfaces are created (e.g. as normal ports or as special connectors). This allows you to map differences between physical and virtual network interfaces.                |
 
-## :material-apps: Software Import
+## :material-apps: Software import
 
-| Option                         | Description                                                                                                                                                                                 |
-| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Include software**           | Should inventoried **Software** from JDisc be imported as objects of type **Anwendungen** into i-doit? Enable this option to import software data.                                          |
-| **Software location** (hidden) | Visible only if **Include software** is active. Here you define to which **Location** all imported applications are assigned. This is useful when user rights are controlled via locations. |
-| **Include software licenses**  | Should inventoried **software licenses** be imported as objects of type **Licenses**? These will then be stored in the **Licenses** category.                                               |
-| **Import system services**     | Determines whether inventoried **System services** from JDisc should be imported as objects of type **System services**.                                                                    |
+| Option                                           | Description                                                                                                                                                                                                           |
+| ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Consider software during import**         | Should inventoried **software** from JDisc be imported as objects of the type **Applications** in i-doit? Enable this option to adopt software data.                                              |
+| **Software location** (hidden)                 | Only visible when *Software import* is active. Here you specify which **location** all imported applications are assigned to. This is useful when user permissions are controlled via locations. |
+| **Consider software licenses during import** | Should inventoried **software licenses** be imported as objects of the type **Licenses**? These are then stored in the **Licenses** category.                                                               |
+| **Import system services**                    | Defines whether inventoried **system services** from JDisc should be imported as objects of the type **System service**.                                                                                                |
 
-## :material-cloud: Cloud Services and Connections
+## :material-cloud: Cloud services and connections
 
-| Option                          | Description                                                                                                                                                                                                                                        |
-| ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Import cloud subscriptions**  | Should data from the JDisc category **Cloud** be imported? If activated, JDisc cloud subscriptions are recorded in the i-doit category **Assigned Subscriptions**. The reverse category **Assigned Users** links the entries with License objects. |
-| **Import unknown cloud users**  | Visible only if **Import cloud subscriptions** is active. Here you can determine whether **Users** who are assigned to cloud subscriptions in JDisc but do not yet exist in the CMDB system should also be imported.                               |
-| **Import Connection endpoints** | Activate this option if you want a clear distinction between manual and automatic cabling. JDisc connections will then **not** be imported into the standard Cabling category, but into the special category **Connection endpoints**.             |
+| Option                                    | Description                                                                                                                                                                                                                                                                          |
+| ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Import cloud subscriptions**      | Should data from the JDisc **Cloud** category be imported? When activated, JDisc cloud subscriptions are recorded in the i-doit category *Assigned subscribers*. The reverse category **Assigned users** links the entries with license objects.                 |
+| **Import unknown cloud users** | Only visible when *Import cloud subscriptions* is active. Here you can determine whether **users** should also be adopted who are assigned to cloud subscriptions in JDisc but do not yet exist in the CMDB system.                                                     |
+| **Import connection endpoints**     | Enable this option if you want a clear distinction between manual and automatic cabling. JDisc connections are then **not** imported into the default cabling category but into the special category **"Connection endpoints"**. |
 
-## :material-network: Network and Address Options
+## :material-network: Network and address options
 
-| Option                                | Description                                                                                                                                                                                                |
-| ------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Use simple database modelling?**    | Here you choose whether the **new** or the **old** [database logic](../../use-cases/documentation-of-databases.md) should be used during import. The new logic is standard in current i-doit versions.     |
-| **Include layer 3 nets**              | Should inventoried **IP Networks** from JDisc be created as objects of type **Layer 3-Net**? If activated, two further settings appear: **Layer 3 filter** and **Network location**.                       |
-| **Layer 3 filter** (hidden)           | Visible only if **Include layer 3 nets** is activated. Here you specify IP ranges, e.g., `192.168.0.0/24` or `10.0.0.1-10.0.0.255`, one rule per line. Only networks within these ranges will be imported. |
-| **Network location** (hidden)         | Visible only if **Include layer 3 nets** is activated. Sets a fixed **Location** under which all newly imported Layer 3-Net will be created. Useful for role-based permissions.                            |
-| **Keep IP address types**             | Specifies which address types should be imported (IPv4, IPv6, Loopback, virtual IPs etc.). You can activate or deactivate certain types here.                                                              |
-| **Import type for DHCP IP addresses** | Determines whether IP addresses assigned via DHCP should be overwritten. For example, you can choose not to import dynamically assigned addresses (if only static IPs should be in the CMDB).              |
-| **Include VLANs**                     | Should inventoried **VLANs** from JDisc be imported as objects of type **Layer-2-Netze**? Activate this to map VLAN data in the CMDB.                                                                      |
+| Option                                        | Description                                                                                                                                                                                                                      |
+| --------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Use simple database modeling?** | Here you select whether the **new** or the **old** database logic should be used during import. The new logic is the default in current i-doit versions.                                                               |
+| **Consider Layer-3 networks during import** | Should inventoried **IP networks** from JDisc be created as objects of the type **Layer-3 networks**? When activated, two additional settings appear: *Layer-3 filter* and *Network location*.                               |
+| **Layer-3 filter** (hidden)                | Only visible when *Consider Layer-3 networks* is enabled. Here you specify IP ranges, e.g. `192.168.0.0/24` or `10.0.0.1-10.0.0.255`, one rule per line. Only networks within these ranges are imported. |
+| **Layer-3 location** (hidden)              | Only visible when *Consider Layer-3 networks* is enabled. Sets a fixed **location** under which all newly imported Layer-3 networks are created. Useful for role-based permissions.                 |
+| **Keep IP address types**                | Specifies which address types should be adopted (IPv4, IPv6, loopback, virtual IPs, etc.). You can enable or disable certain types here.                                                                    |
+| **Import type for DHCP IP addresses**            | Defines whether IP addresses assigned via DHCP should be overwritten. For example, you can choose that dynamically assigned addresses are not imported (if only static IPs should go into the CMDB). |
+| **Consider VLANs during import**         | Should inventoried **VLANs** from JDisc be imported as objects of the type **Layer-2 networks**? Enable this to map VLAN data in the CMDB.                                                                     |
 
 ## :material-layers: Virtualization and Blade/Chassis
 
-| Option                                                              | Description                                                                                                                                                                                          |
-| ------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Include clusters**                                                | Should JDisc cluster/virtualization environments be created as objects of type **Cluster**? Activate this if virtualization data (e.g., VMware/Hyper-V) should be imported.                          |
-| **Include Blade/Chassis connections during import**                 | If JDisc has identified blade servers and chassis, you can specify here that the **connections** between blade and chassis should also be imported. This links blade modules with their chassis.     |
-| **Object type of the assigned modules within a blade/chassis unit** | Visible after inventorying a Blade/Chassis device. Here you define which object type the deployed **Modules** should be assigned to. E.g., you can import modules as **Blade server** or **Switch**. |
-| **Update the object type of the assigned modules**                  | Determines whether the object types of already assigned modules should be changed when updating a Blade/Chassis device. Deactivate this if existing module types should be retained.                 |
+| Option                                     | Description                                                                                                                                                                                                                         |
+| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Consider clusters during import**    | Should JDisc cluster/virtualization environments be created as objects of the type **Cluster**? Enable this when virtualization data (e.g. VMware/Hyper-V) should be adopted.                                      |
+| **Import Blade/Chassis connections** | If JDisc has inventoried blade servers and chassis, you can specify here that the **connections** between blade and chassis are also imported. This links blade modules with their chassis.                   |
+| **Object type of modules**                   | Visible after inventorying a blade/chassis device. Here you specify which object type the used **modules** should be assigned to. For example, you can import modules as *Blade server* or *Switch*. |
+| **Update object type of modules**     | Defines whether the object types of already assigned modules should be changed when updating a blade/chassis device. Disable this if existing module types should be preserved.                      |
 
-## :material-tune: Further Settings
+## :material-tune: Additional settings
 
-| Option                                                                            | Description                                                                                                                                                                                                                                                |
-| --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Import custom attributes**                                                      | If custom attributes have been maintained in JDisc, they can be enabled here. After import, they will appear in the i-doit category **"JDisc Custom Attributes"**.                                                                                         |
-| **Consider default templates from object types (only for newly created objects)** | When creating a new object, an i-doit template can be automatically applied. Select a template here that will be considered (settings in the object type configuration).                                                                                   |
-| **Change CMDB-Status of objects to**                                              | Existing objects can be given a specific **CMDB-Status** during import. Choose, for example, "In Betrieb" or "Außer Betrieb" if you want to perform status changes during the update. If **Keep CMDB-Status** is selected, no change will occur.           |
-| **CMDB status for newly imported objects**                                        | Analogous: Here you define which CMDB status newly created devices should receive. By default, this remains unchanged ("-" select).                                                                                                                        |
-| **Software filter** (hidden)                                                      | Visible only if **Include software** is active. Here you can precisely define, via **Whitelist** or **Blacklist**, which software applications should be imported (Whitelist) or excluded (Blacklist). Enter a comma-separated list of names or wildcards. |
-| **Use filter as regular expression**                                              | Activate **Filter as regexp** if you want to use regular expressions for the above list. Since the pattern is passed directly to the JDisc database, you should use compatible PostgreSQL RegEx.                                                           |
-| **Use OS family (if available) instead of OS version as object title**            | *Note:* When importing software, it may be useful to use the operating system family instead of the full version name as the object title (e.g., "Windows" instead of "Windows Server 2012 Standard") to achieve better grouping.                          |
-| **Update object type**                                                            | If a device already exists in i-doit, you can specify here whether its object type should be changed based on the assignment table (above). Deactivate this to retain the existing type.                                                                   |
-| **Update object title**                                                           | Determines whether the **Objektname** is updated during import. Deactivate this if the original object title in i-doit should be retained.                                                                                                                 |
-| **Use hostname as object title instead of FQDN?**                                 | If this option is active, only the hostname (without domain) will be used as the object title during import, provided an FQDN address exists. This can lead to shorter titles.                                                                             |
-| **Inherit location of parent Object**                                             | For devices physically attached to another device: If this option is activated, the imported device automatically inherits the **Location** of its parent device.                                                                                          |
+| Option                                       | Description                                                                                                                                                                                                                                                                                          |
+| -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Import custom attributes**            | If custom attributes have been maintained in JDisc, they can be enabled here. After import, they appear in the i-doit category **"JDisc Custom Attributes"**.                                                                                                                 |
+| **Consider default templates**       | When creating a new object, an i-doit template can be automatically applied. Select a template here that should be considered (settings in the object type configuration).                                                                                                             |
+| **CMDB status (on update)**         | Existing objects can receive a specific **CMDB status** during import. Select e.g. "In operation" or "Out of operation" if you want to perform status changes during update. If *Keep CMDB status* is selected, no change is made.                                     |
+| **CMDB status (on creation)**              | Analogous: Here you specify which CMDB status newly created devices should receive. By default this remains unchanged (select "-").                                                                                                                                                       |
+| **Software filter** (hidden)              | Only visible when *Import software* is active. Here you can specify via a **whitelist** or **blacklist** exactly which software applications should be imported (whitelist) or skipped (blacklist). Enter a comma-separated list of names or wildcards. |
+| **Use filter as regexp?**             | Enable *Filter as regexp* if you want to use regular expressions for the list above. Since the pattern is passed directly to the JDisc database, you should use compatible PostgreSQL regex.                                                                                |
+| **Use OS family instead of OS version**    | *Note:* During software import, it may make sense to use the operating system family instead of the full version name as the object title (e.g. "Windows" instead of "Windows Server 2012 Standard") to achieve better groupings.                                              |
+| **Update object type**                  | If a device already exists in i-doit, you can set here whether its object type should be changed based on the assignment table (above). Disable this to keep the existing type.                                                                                       |
+| **Update object title**                | Defines whether the **object name** should be updated during import. Disable this if the original object title in i-doit should be preserved.                                                                                                                                            |
+| **Use hostname instead of FQDN as title** | If this option is active, only the hostname (without domain) is used as the object title during import, provided an FQDN address is available. This can lead to shorter titles.                                                                                                                             |
+| **Inherit location**                        | For devices that physically depend on another device: if this option is enabled, the imported device automatically inherits the **location** of its parent device.                                                                                                                         |
 
 !!! tip "Note"
-    If no entries are defined in a Whitelist (e.g., Software-Filter), it will not be considered, and all elements will be imported. For example, if you enter Office*, i-doit imports all software titles starting with "Office".
+    If no entries are defined in a whitelist (e.g. software filter), it is not considered and all elements are imported. For example, entering Office* causes i-doit to import all software titles starting with "Office".
 
-!!! note "Regex-Filter"
-    If you want to use regular expressions for filters, refer to the PostgreSQL syntax. Example: To import only software with names ending in "_Pro", the Whitelist could be Office_* (without activating RegExp).
+!!! note "Regex filter"
+    If you want to use regular expressions for filtering, note the PostgreSQL syntax. Example: to import only software with names ending in "_Pro", the whitelist could be Office_* (without enabling RegExp).
 
 ---
 
-## See also
+## Advanced options
 
-* [JDisc Discovery - Main Article](index.md)
-* [Console import with profiles](../../automation-and-integration/cli/index.md#import-jdisc)
-* [Usage of INI files](../../automation-and-integration/cli/configuration-files.md)
+In addition to categories and matching, i-doit offers numerous import filters and modifications, including:
+
+| Option                                                | Description                                                                     |
+| ----------------------------------------------------- | ----------------------------------------------------------------------------- |
+| **Set CMDB status**                                | Automatically set objects to e.g. "In operation" during import                  |
+| **Update title**                               | Replace existing object titles with JDisc data                             |
+| **MAC filter**                                        | Only allow certain MAC addresses (whitelist) or exclude them (blacklist) |
+| **IP filter / Layer-3 filter**                        | Only import defined networks (CIDR or IP range)                       |
+| **Import of software, licenses, services, clusters** | Optionally activatable                                                          |
+| **Inherit locations**                          | Automatically adopt parent locations (e.g. for blade-chassis)       |
+
+A complete list of filters can be found in the "Additional Options" dialog when editing a JDisc profile.
+
+---

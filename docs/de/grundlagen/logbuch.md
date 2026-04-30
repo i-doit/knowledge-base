@@ -1,3 +1,10 @@
+---
+title: Logbuch
+description: "Jede Änderung an der IT-Dokumentation wird von i-doit in einem Logbuch hinterlegt."
+icon:
+status:
+lang: de
+---
 # Logbuch
 
 Jede Änderung an der [IT-Dokumentation](../glossar.md) wird von i-doit in einem Logbuch hinterlegt. Auf diese Weise lässt sich der [Lebenszyklus der IT-Dokumentation](lebens-und-dokumentationszyklus.md) problemlos nachvollziehen.
@@ -14,7 +21,7 @@ Die letzte Änderung ist auf jeder Seite im unteren Bereich nachvollziehbar.
 
 ## Logbuch pro Objekt
 
-Das Logbuch lässt sich nicht nur global, sondern auf ein einzelnes [Objekt](../glossar.md) beschränkt anzeigen. Jedem [Objekttyp](../glossar.md) ist die [Kategorie](../glossar.md) **Logbuch** fest zugeordnet. In der **Objektsicht** ist das Logbuch über das Buch-Icon oberhalb des Kategorie-Baums zu erreichen.
+Du kannst das Logbuch auch auf ein einzelnes [Objekt](../glossar.md) beschränkt anzeigen. Jedem [Objekttyp](../glossar.md) ist die [Kategorie](../glossar.md) **Logbuch** fest zugeordnet. In der **Objektsicht** erreichst du das Logbuch über das Buch-Icon oberhalb des Kategorie-Baums.
 
 [![objekt-logbuch](../assets/images/de/grundlagen/logbuch/3-lb.png)](../assets/images/de/grundlagen/logbuch/3-lb.png)
 
@@ -24,19 +31,19 @@ Die Filter-Funktionen und die Detail-Tiefe entsprechen denen des globalen Logbuc
 
 ## Logbuch pro Service
 
-Zu jedem Service, der in i-doit modelliert ist, existiert ein Logbuch, dass die Änderungen an allen Service-Komponenten (oder Sub-Services) enthält. Die Kategorie heißt **Service Logbuch** und kann durch die Kategorie **Service** denjenigen Objekttypen hinzugefügt werden, die Services repräsentieren.
+Zu jedem Service, der in i-doit modelliert ist, existiert ein Logbuch, das die Änderungen an allen Service-Komponenten (oder Sub-Services) enthält. Die Kategorie heißt **Service Logbuch** und kann durch die Kategorie **Service** denjenigen Objekttypen hinzugefügt werden, die Services repräsentieren.
 
 [![logbuch-service](../assets/images/de/grundlagen/logbuch/5-lb.png)](../assets/images/de/grundlagen/logbuch/5-lb.png)
 
 ## Logbuch konfigurieren
 
-Die Konfiguration des Logbuchs befindet sich unter **Extras → CMDB → Logbuch → Logbuch** Konfiguration.
+Du findest die Konfiguration des Logbuchs unter **Extras → CMDB → Logbuch → Logbuch Konfiguration**.
 
 [![logbuch-konfigurieren](../assets/images/de/grundlagen/logbuch/6-lb.png)](../assets/images/de/grundlagen/logbuch/6-lb.png)
 
 Änderungen wirken sich **nicht** auf bereits existierende Einträge aus.
 
-In der Konfiguration lässt sich die **Benutzerkennung** ändern, die zu jedem Eintrag hinterlegt wird. Als Standard gilt der [Objekttitel](../glossar.md) des Personen-Objekts, meist bestehend aus Vor- und Nachnamen.
+In der Konfiguration kannst du die **Benutzerkennung** ändern, die zu jedem Eintrag hinterlegt wird. Standardmäßig verwendet i-doit den [Objekttitel](../glossar.md) des Personen-Objekts, meist bestehend aus Vor- und Nachnamen.
 
 !!! success "Anonymisierung"
     Wird die **Benutzerkennung** auf einen festen Wert, beispielsweise auf "Anonymous", geändert, wird das Logbuch anonymisiert. Es lässt sich somit nicht mehr nachvollziehen, wer welche Änderungen getätigt hat.
@@ -45,19 +52,24 @@ Die Einstellung für die **Maximalzahl kombinierter Änderungen** bewirkt, dass 
 
 ### Logbucheinträge zu bereinigten Objekten vollständig löschen
 
-Diese Konfiguration des Logbuch ist unter **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name] → Logbuch → Logbucheinträge zu bereinigten Objekten vollständig löschen** zu finden.
+Du findest diese Einstellung unter **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name] → Logbuch → Logbucheinträge zu bereinigten Objekten vollständig löschen**.
 
 [![logbucheinträge-bereinigen](../assets/images/de/grundlagen/logbuch/12-lb.png)](../assets/images/de/grundlagen/logbuch/12-lb.png)
 
-Diese Einstellung ist Standardmäßig auf **Nein** gestellt. Stellt man diese Einstellung auf **Ja** wird nach bereinigen eines Objekts der Logbucheintrag des Objekts ebenfalls vollständig gelöscht.
+Standardmäßig steht diese Option auf **Nein**. Setzt du sie auf **Ja**, löscht i-doit nach dem Bereinigen eines Objekts auch dessen Logbucheinträge vollständig.
 
 ### Detaillierte CMDB Änderungen protokollieren
 
-Unter **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name] → Logbuch → Detaillierte CMDB Änderungen protokollieren** können details für Einträge im Logbuch deaktiviert werden. Es wird dann nicht mehr erfasst, welche Änderung an welchem Attribut vorgenommen wurde.
+Unter **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name] → Logbuch → Detaillierte CMDB Änderungen protokollieren** können Details für Einträge im Logbuch deaktiviert werden. Es wird dann nicht mehr erfasst, welche Änderung an welchem Attribut vorgenommen wurde.
 
 ## Eigene Einträge
 
-Zu jedem Objekt kann ein neuer Eintrag im Logbuch generiert werden. Dazu wird innerhalb des Objekts die Kategorie **Logbuch** aufgerufen (siehe oben). Anschließend wird über den Button **Neu** das Formular für einen neuen Eintrag angezeigt. Hierbei können **Alert Level**, **Nachricht** und **Beschreibung** angegeben werden. Nachdem man auf den Button **Speichern** geklickt hat, erscheint der Eintrag im Logbuch.
+Du kannst zu jedem Objekt manuell einen neuen Logbuch-Eintrag erstellen:
+
+1. Öffne innerhalb des Objekts die Kategorie **Logbuch** (siehe oben).
+2. Klicke auf den Button **Neu**.
+3. Fülle die Felder **Alert Level**, **Nachricht** und **Beschreibung** aus.
+4. Klicke auf **Speichern**.
 
 [![eigene-einträge](../assets/images/de/grundlagen/logbuch/7-lb.png)](../assets/images/de/grundlagen/logbuch/7-lb.png)
 
@@ -67,11 +79,11 @@ Das Logbuch nimmt neue Einträge aus Dritt-Systemen entgegen, beispielsweise dur
 
 ## Ältere Einträge archivieren und wiederherstellen
 
-Über **Extras → CMDB → Logbuch → Archivieren** lässt sich konfigurieren, ob ältere Einträge archiviert werden sollen. Dabei ist anzugeben, ob welchem Alter (in Tagen) ein Eintrag archiviert wird. Hilfreich ist diese Funktion, wenn das Logbuch sehr groß ist und die Auswertung durch lange Wartezeiten behindert wird. Archivierte Einträge werden in eine separate Datenbank-Tabelle ausgelagert. Diese Tabelle wird entweder in der jeweiligen Mandanten-Datenbank oder auf einer dritten Datenbank-Instanz angelegt.
+Unter **Extras → CMDB → Logbuch → Archivieren** konfigurierst du, ob und ab welchem Alter (in Tagen) Einträge archiviert werden. Diese Funktion hilft dir, wenn das Logbuch sehr groß geworden ist und die Auswertung durch lange Wartezeiten behindert wird. Archivierte Einträge lagert i-doit in eine separate Datenbank-Tabelle aus -- entweder in der jeweiligen Mandanten-Datenbank oder auf einer dritten Datenbank-Instanz.
 
 [![einträge-wiederherstellen](../assets/images/de/grundlagen/logbuch/8-lb.png)](../assets/images/de/grundlagen/logbuch/8-lb.png)
 
-Über das [i-doit console utility](../automatisierung-und-integration/cli/index.md) wird die Archivierung ausgeführt. Dieser Schritt kann daher auch automatisieren werden. Weitere Optionen können über den `--help` Befehl ausgegeben werden.
+Die Archivierung führst du über das [i-doit console utility](../automatisierung-und-integration/cli/index.md) aus. Diesen Schritt kannst du auch automatisieren. Weitere Optionen zeigt dir der `--help` Befehl.
 
 Beispiel:
 
@@ -95,4 +107,4 @@ Auf dem [Dashboard](dashboard-und-widgets.md) kann das Widget **Meine zuletzt ge
 
 ## Rechte setzen
 
-Das Rechtesystem von i-doit erlaubt die Konfiguration, welche Personen(-gruppen) lesend auf das Logbuch zugreifen können. So kann beispielsweise festgelegt werden, dass nur i-doit-Administratoren Änderungen nachvollziehen dürfen.
+Über das Rechtesystem von i-doit legst du fest, welche Personen oder Personengruppen lesend auf das Logbuch zugreifen dürfen. So kannst du beispielsweise sicherstellen, dass nur i-doit-Administratoren Änderungen nachvollziehen können.

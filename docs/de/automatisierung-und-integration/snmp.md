@@ -1,23 +1,30 @@
+---
+title: SNMP
+description: "Mit der SNMP-Kategorie liest du in Echtzeit SNMP-Werte aus Objekten aus und stellst sie in i-doit dar."
+icon:
+status:
+lang: de
+---
 # SNMP
 
-Die SNMP-Kategorie erlaubt es, in Echtzeit SNMP Werte aus Objekten auszulesen und darzustellen. Anhand der beispielhaften Abfrage eines Switches gehen wir in diesem Artikel die Voraussetzungen und die Umsetzung durch.
+Mit der SNMP-Kategorie liest du in Echtzeit SNMP-Werte aus Objekten aus und stellst sie in i-doit dar. Dieser Artikel zeigt die Einrichtung am Beispiel eines Switches.
 
 !!! info ""
     Dieser Artikel wurde zuletzt für i-doit Version 1.18.2 geprüft
 
 ## Voraussetzungen
 
-Um diese Kategorie nutzen zu können benötigt _i-doit_ das SNMP Modul von PHP. Unter Debian lässt sich dies installieren mit dem Befehl:
+1. Installiere das SNMP-Modul für PHP. Unter Debian:
 
-    sudo apt-get install php-snmp
+        sudo apt-get install php-snmp
 
-Die SNMP Kategorie muss anschließend über [Datenstruktur bearbeiten](../administration/verwaltung/datenstruktur/datenstruktur-bearbeiten.md) dem gewünschten Objekttyp zugewiesen werden. In unserem Beispiel haben wir uns auf den Objekttyp Router reduziert.
+2. Weise die SNMP-Kategorie über [Datenstruktur bearbeiten](../administration/verwaltung/datenstruktur/datenstruktur-bearbeiten.md) dem gewünschten Objekttyp zu (in diesem Beispiel: Router).
 
-Wir benötigen weiterhin eine gültige Hostadresse, die selbstverständlich in der entsprechenden Kategorie dokumentiert sein muss.
+3. Stelle sicher, dass eine gueltige Hostadresse in der entsprechenden Kategorie dokumentiert ist.
 
 [![snmp-hostadresse](../assets/images/de/automatisierung-und-integration/service-desk/snmp/1-snmp.png)](../assets/images/de/automatisierung-und-integration/service-desk/snmp/1-snmp.png)
 
-Um unnötige Fehlersuche zu vermeiden begeben wir uns erst einmal per SSH auf die Konsole des Servers und testen die SNMP Verbindung "per Hand". Dazu installieren wir das Paket "snmp" um den Befehl "snmpwalk" zur Verfügung zu bekommen. Anschließend rufen wir einen standard Aufruf an den Switch auf, der uns die Liste aller Interfaces geben soll.
+Teste zuerst die SNMP-Verbindung per SSH auf dem Server. Installiere dazu das Paket `snmp` für den Befehl `snmpwalk` und prüfe die Erreichbarkeit:
 
 ```shell
 snmpwalk -v 2c -c public 192.168.10.1 1.3.6.1.2.1.2.2.1.1
@@ -26,7 +33,7 @@ snmpwalk -v 2c -c public 192.168.10.1 1.3.6.1.2.1.2.2.1.1
 !!! info
     Die Details zum Thema SNMP und diesem Aufruf lassen wir an dieser Stelle weg. Informationen über die OID .1.3.6.1.2.1.2.2.1.1 gibt es beispielsweise hier: [http://www.oid-info.com/get/1.3.6.1.2.1.2.2.1](http://www.oid-info.com/get/1.3.6.1.2.1.2.2.1)
 
-Das Ergebnis in unserem Falle sieht folgendermaßen aus:
+Ein erfolgreiches Ergebnis sieht beispielsweise so aus:
 
     iso.3.6.1.2.1.2.2.1.1.1 = INTEGER: 1
     iso.3.6.1.2.1.2.2.1.1.2 = INTEGER: 2
@@ -40,20 +47,22 @@ Das Ergebnis in unserem Falle sieht folgendermaßen aus:
     iso.3.6.1.2.1.2.2.1.1.10 = INTEGER: 10
     iso.3.6.1.2.1.2.2.1.1.11 = INTEGER: 11
 
-Die Abfrage war also erfolgreich, wir habe es mit einem 11 Port Router zu tun. Sollten an dieser Stelle Timeouts o.Ä. Fehler auftreten, sollte die Netzwerk Konnektivität geprüft werden, ob SNMP in den Firewall Regeln erlaubt ist, ob der SNMP Server läuft und ob der i-doit Server Zugriffsberechtigung auf den SNMP Server hat. Selbstverständlich muss auch die gewählte SNMP Community (in unserem Beispiel public) verfügbar sein.
+Die Abfrage zeigt 11 Ports. Falls Timeouts oder andere Fehler auftreten, prüfe:
 
-Nun wechseln wir wieder in _i-doit_ in die SNMP Kategorie. Dort bekommen wir automatisch die primäre IP-Adresse des Switches angezeigt und die Standard-SNMP-Community public angeboten.
+*   Netzwerk-Konnektivitaet zum Gerät
+*   SNMP in den Firewall-Regeln
+*   Ob der SNMP-Server läuft und der i-doit-Server Zugriff hat
+*   Ob die gewählte SNMP-Community (hier: `public`) korrekt ist
 
-Da uns allerdings die Interface Indizes nicht interessieren, beschäftigen wir uns mit einer anderen OID und zwar der für die Liste der fehlerhaften Pakete je Interface. Diese hat die OID 1.3.6.1.2.1.2.2.1.1.14.x, wobei x für den Index des jeweiligen Interfaces steht.
+Wechsle nun in i-doit zur SNMP-Kategorie. Dort zeigt i-doit automatisch die primaere IP-Adresse und die Standard-Community `public` an.
 
-Mit dieser OID und weiteren bauen wir uns eine Liste:
+Für ein praxisnahes Beispiel verwende die OID `1.3.6.1.2.1.2.2.1.1.14.x` (fehlerhafte Pakete je Interface, wobei `x` der Interface-Index ist). Baue damit eine Liste:
 
 [![snmp-liste](../assets/images/de/automatisierung-und-integration/service-desk/snmp/2-snmp.png)](../assets/images/de/automatisierung-und-integration/service-desk/snmp/2-snmp.png)
 
-und speichern die Kategorie ab.
+Speichere die Kategorie. Beim nächsten Aufruf liest i-doit die SNMP-Werte in Echtzeit aus und zeigt sie an.
 
-Wenn wir nun erneut auf die Kategorie klicken werden in Echtzeit die SNMP Werte ausgelesen und angezeigt. Glücklicherweise haben wir bei diesem Test festgestellt, dass wir keine Fehler bei den Paketen haben.
-Damit beschließen wir das praktische Beispiel und suchen nun nach der Ursache für die Paket Fehler.
+Die folgende Tabelle listet nuetzliche OIDs für den Einstieg:
 
 | OID URL                                                                                      | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

@@ -1,3 +1,10 @@
+---
+title: "Kategorie-Tabellen 1.10"
+description: "Über den URL-Parameter load=property_infos werden die Kategorie-Tabellen für die derzeit installierte Version von i-doit erstellt."
+icon:
+status:
+lang: de
+---
 # Kategorie-Tabellen 1.10
 
 !!! info "Diesen Inhalt automatisch erstellen"

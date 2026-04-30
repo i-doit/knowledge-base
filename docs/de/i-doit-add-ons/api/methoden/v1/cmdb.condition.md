@@ -1,6 +1,6 @@
 ---
 title: cmdb.condition
-description: cmdb.condition
+description: "Give me all objects that have attribute Y = Z in category X. Like a report."
 icon: material/api
 #status: updated
 lang: de
@@ -119,3 +119,9 @@ Give me all objects that have attribute Y = Z in category X. Like a report.
       ]
     }
     ```
+
+## Siehe auch
+
+- [API v1 Methoden](index.md) — Übersicht aller API v1 Methoden
+- [API Add-on](../../index.md) — Einstieg in das API Add-on
+- [i-doit Add-ons](../../../index.md) — Alle verfügbaren Add-ons

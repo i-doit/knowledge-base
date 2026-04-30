@@ -1,31 +1,38 @@
+---
+title: Rechtevergabe über Rollen
+description: Seit Version 1.18.2 kannst du Benutzern oder Gruppen Rechte auf Objekte über die Kontaktzuweisung vergeben.
+icon:
+status:
+lang: de
+---
 # Rechtevergabe über Rollen
 
-Mit der Version 1.18.2 haben wir eine neue Möglichkeit der Rechtevergabe in i-doit hinzugefügt. Es ist nun möglich Benutzern oder Gruppen Rechte auf Objekte zu geben indem man über die Kontaktzuweisung diese verknüpft. Weiterhin können die Rechte auch mit der Zuweisung von bestimmten Rollen verknüpft werden.
+Seit Version 1.18.2 kannst du Benutzern oder Gruppen Rechte auf Objekte über die Kontaktzuweisung vergeben. Die Rechte lassen sich dabei an bestimmte Rollen knüpfen.
 
-## Gruppe erstellen und User mit Gruppe verknüpfen
+## Gruppe erstellen und Benutzer zuweisen
 
-Für unser Beispiel erstelle ich eine Test Gruppe in i-doit "User Rights to Objects" und packe einen "Test User" in die Mitgliederzuweisung der Gruppe:
+Erstelle zunächst eine Personengruppe (im Beispiel "User Rights to Objects") und fuege den gewünschten Benutzer als Mitglied hinzu:
 
-[![rechteueberrollen-testuser](../../assets/images/de/effizientes-dokumentieren/rechteverwaltung/rechtevergabe-ueber-rollen/1-rur.png)](../../assets/images/de/effizientes-dokumentieren/rechteverwaltung/rechtevergabe-ueber-rollen/1-rur.png)
+[![rechteüberrollen-testuser](../../assets/images/de/effizientes-dokumentieren/rechteverwaltung/rechtevergabe-ueber-rollen/1-rur.png)](../../assets/images/de/effizientes-dokumentieren/rechteverwaltung/rechtevergabe-ueber-rollen/1-rur.png)
 
 ## Rechtevergabe
 
-Danach wechseln wir in die Rechtevergabe in der Verwaltung, wählen dort CMDB aus, wählen bei den Personengruppen die soeben erstellte Gruppe aus und gehen auf ![rechteueberrollen-icon](../../assets/images/de/effizientes-dokumentieren/rechteverwaltung/rechtevergabe-ueber-rollen/2-rur.png) :
+Wechsle in die Rechtevergabe unter **Verwaltung > Rechtesystem > Rechtevergabe > CMDB**. Wähle die soeben erstellte Gruppe aus und klicke auf ![rechteüberrollen-icon](../../assets/images/de/effizientes-dokumentieren/rechteverwaltung/rechtevergabe-ueber-rollen/2-rur.png):
 
-[![rechteueberrollen-vergabe](../../assets/images/de/effizientes-dokumentieren/rechteverwaltung/rechtevergabe-ueber-rollen/3-rur.png)](../../assets/images/de/effizientes-dokumentieren/rechteverwaltung/rechtevergabe-ueber-rollen/3-rur.png)
+[![rechteüberrollen-vergabe](../../assets/images/de/effizientes-dokumentieren/rechteverwaltung/rechtevergabe-ueber-rollen/3-rur.png)](../../assets/images/de/effizientes-dokumentieren/rechteverwaltung/rechtevergabe-ueber-rollen/3-rur.png)
 
-Da dies eine neu erstellte Gruppe ist sollten noch keine Rechte vorhanden sein. die folgenden Rechte müssen nun gesetzt werden:
+Da es sich um eine neu erstellte Gruppe handelt, sind noch keine Rechte vorhanden. Setze die folgenden Rechte:
 
 ### Objekte mit zugewiesener Rolle in der Kontaktzuweisung
 
-Hier können sie zum einen die entsprechenden Rechte setzen (Ansehen, Bearbeiten, Archivieren, Löschen, Ausführen, Administrator) und dann unter den Parametern entweder alle verfügbaren Rollen oder nur eine oder mehrere Rollen auswählen die für die Rechtevergabe herangezogen werden sollen.
+Hier setzt du die gewünschten Rechte (Ansehen, Bearbeiten, Archivieren, Löschen, Ausführen, Administrator) und wählst unter den Parametern entweder alle verfügbaren Rollen oder gezielt einzelne Rollen aus.
 
 ### Kategorien in Objekten mit zugewiesener Rolle in der Kontaktzuweisung
 
-Hier können sie zum einen die entsprechenden Rechte setzen (Erstellen, Ansehen, Bearbeiten, Archivieren, Löschen, Ausführen, Administrator) und dann unter den Parametern entweder alle verfügbaren Rollen oder nur eine oder mehrere Rollen auswählen und definieren ob alle oder nur bestimmte Kategorien für die Rechtevergabe herangezogen werden sollen.
+Hier setzt du die gewünschten Rechte (Erstellen, Ansehen, Bearbeiten, Archivieren, Löschen, Ausführen, Administrator) und definierst über die Parameter, welche Rollen und welche Kategorien für die Rechtevergabe herangezogen werden.
 
 ### Beispielkonfiguration
 
-In diesem Beispiel bekommen dann alle Benutzer die Mitglied in der Gruppe "User Rights to Objects" bei Objekten wo Sie in der Kontaktzuweisung mit der Rolle Mitarbeiter verknüpft sind Rechte auf diese Objekte:
+In diesem Beispiel erhalten alle Mitglieder der Gruppe "User Rights to Objects" Rechte auf Objekte, bei denen sie in der Kontaktzuweisung mit der Rolle **Mitarbeiter** verknüpft sind:
 
-[![rechteueberrollen-konfigurieren](../../assets/images/de/effizientes-dokumentieren/rechteverwaltung/rechtevergabe-ueber-rollen/4-rur.png)](../../assets/images/de/effizientes-dokumentieren/rechteverwaltung/rechtevergabe-ueber-rollen/4-rur.png)
+[![rechteüberrollen-konfigurieren](../../assets/images/de/effizientes-dokumentieren/rechteverwaltung/rechtevergabe-ueber-rollen/4-rur.png)](../../assets/images/de/effizientes-dokumentieren/rechteverwaltung/rechtevergabe-ueber-rollen/4-rur.png)

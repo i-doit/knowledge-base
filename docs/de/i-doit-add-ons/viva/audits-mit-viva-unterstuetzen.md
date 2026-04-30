@@ -1,3 +1,10 @@
+---
+title: Audits mit VIVA unterstützen
+description: "Audits sind die Berichte, die für eine mögliche Zertifizierung nach ISO 27001 auf Basis von IT-Grundschutz benötigt werden."
+icon:
+status:
+lang: de
+---
 # Audits mit VIVA unterstützen
 
 Audits sind die Berichte, die für eine mögliche Zertifizierung nach ISO 27001 auf Basis von IT-Grundschutz benötigt werden. Mit dem [Add-on](../index.md) **VIVA** können Audits erstellt und verwaltet werden. Neben den Audits verfügt VIVA über weitere [Berichte](berichte-mit-viva.md), die der kontinuierlichen Qualitätssicherung dienen.
@@ -40,7 +47,7 @@ Das Referenzdokument enthält unter anderem einen bereinigten Netzplan (Siehe BS
 
 [![Bereinigter Netzplan](../../assets/images/de/i-doit-add-ons/viva/audits/5-va.jpg)](../../assets/images/de/i-doit-add-ons/viva/audits/5-va.jpg)
 
-!!! attention "Bitte beachten Sie die [optionalen Systemvoraussetzungen](./vorbereitung-der-viva-installation.md)."
+!!! attention "Bitte beachte die [optionalen Systemvoraussetzungen](./vorbereitung-der-viva-installation.md)."
 
 ### Referenzdokument A.2 _Schutzbedarfsfeststellung_
 

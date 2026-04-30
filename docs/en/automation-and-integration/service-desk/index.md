@@ -1,53 +1,52 @@
 ---
-title:  Service Desk
-description: The service desk is a key interface to the customer in many organizations
+title: Service Desk
+description: The service desk is a central customer interface in many organizations
 icon:
 status:
 lang: en
 ---
 
-
 # Service Desk
 
-The service desk is a key interface to the customer in many organizations. If the customer has a question about a product, he submits a request to the support team. In connection with ITIL you also speak of "incidents", with reference to software development questions you rather say "issues". Usually requests are made per e-mail or by phone call and are organized in tickets. There is a multitude of different (web) applications to support a service desk. These applications often access additional resources (customer databases etc.) to examine and process inquiries comprehensively and efficiently. An important resource is the [IT documentation](../../glossary.md): If a colleague from a specialized division reports a defective printer to the IT department, the IT documentation supplies helpful information about the model, location, IP address, remote access and many other things.
+Via the service desk integration, you link tickets from your ticket system directly with objects in i-doit. This way, you immediately access the relevant [IT documentation](../../glossary.md) during support requests -- model, location, IP address, and more are available directly in the ticket.
 
-Supported Applications
+## Supported Applications
 
-The i-doit default installation provides interfaces to several applications from the service desk field:
+i-doit provides interfaces to the following service desk applications in the standard installation:
 
-*   [((OTRS)) Community Edition Help Desk](./otrscommunity-help-desk.md)
-*   [Request Tracker (RT)](./request-tracker.md)
+*   [((OTRS)) Community Edition](../service-desk/otrscommunity-help-desk.md)
+*   [Request Tracker (RT)](../service-desk/request-tracker.md)
+*   [Zammad](../service-desk/zammad.md)
 
-… and iTop.
+... and iTop.
 
-The specific installation and use of extensions (RT) and modules (((OTRS)) Community Edition) is described in the corresponding articles or the relevant links are included. In the following text we concentrate on the configuration and functions of i-doit.
+Details on installing the respective extensions and modules can be found in the linked articles. The following section covers the configuration and features on the i-doit side.
 
 ## Configuration
 
-You carry out the configuration regarding the above mentioned applications under **Administration → Interfaces/ external data → Trouble Ticket System (TTS) → Configuration**.
+Configure the connection under **Administration → Import and Interfaces → Trouble Ticket System (TTS)**.
 
-[![Configuration](../../assets/images/en/automation-and-integration/service-desk/0-sd.png)](../../assets/images/en/automation-and-integration/service-desk/0-sd.png)
+[![service-desk-configure](../../assets/images/de/automatisierung-und-integration/service-desk/1-sd.png)](../../assets/images/de/automatisierung-und-integration/service-desk/1-sd.png)
 
-|                        |                                                                                                                                  |
-| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| **Option**             | **Description**                                                                                                                  |
-| **TTS-Type**           | Which type of application do you want to select?                                                                                 |
-| **Active**             | Do you want the interface to be active?                                                                                          |
-| **Username**           | i-doit has to log on to the application with a user to retrieve data. For reasons of safety, you should choose a dedicated user. |
-| **Password**           | Password of the respective user                                                                                                  |
-| **URL incl. protocol** | Link to the web GUI of the application, for example [https://rt.example.org/rt](https://rt.example.org/rt)                       |
-| **TLS-Certificate**    | If the application uses a self-signed TLS certificate, you can upload it here.                                                   |
+| Option                    | Description                                                                                                                                                           |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **TTS Type**              | Which application is it?                                                                                                                                              |
+| **Active**                | Should the interface be active?                                                                                                                                       |
+| **Username**              | i-doit must log in with a user to the application to retrieve data. For security reasons, a dedicated user should be used.                                            |
+| **Password**              | The password matching the user                                                                                                                                        |
+| **URL incl. protocol**    | The link to the web GUI of the application, for example https://rt.example.org/rt                                                                                     |
+| **TLS certificate**       | If the application uses a self-signed TLS certificate, it can be uploaded here.                                                                                       |
 
-## Reading Out Tickets
+## Reading Tickets
 
-When a ticket is referenced to an object in i-doit via the application, you can display this reference in i-doit. For this purpose, you have to set the **Active** option to **Yes** in the configuration. For each object you can reach the **All tickets** category with the speech bubble [![icon](../../assets/images/en/automation-and-integration/service-desk/1-sd.png)](../../assets/images/en/automation-and-integration/service-desk/1-sd.png) icon.
+When you link a ticket in the service desk application with an i-doit object, this link becomes visible in i-doit. Prerequisite: The **Active** option is set to **Yes**. You can access the **All Tickets** category via the speech bubble icon ![service-desk-icon](../../assets/images/de/automatisierung-und-integration/service-desk/2-sd.png).
 
-[![Reading Out Tickets](../../assets/images/en/automation-and-integration/service-desk/2-sd.png)](../../assets/images/en/automation-and-integration/service-desk/2-sd.png)
+[![service-desk-display](../../assets/images/de/automatisierung-und-integration/service-desk/3-sd.png)](../../assets/images/de/automatisierung-und-integration/service-desk/3-sd.png)
 
-This category lists all referenced tickets and shows further details about each ticket. With a click on the ticket, you can open it in the web GUI of the service desk application.
+The category lists all linked tickets with detailed information. Clicking on a ticket opens it in the web GUI of the service desk application.
 
-## Create a New Ticket
+## Creating a New Ticket
 
-You can also create a new ticket with the **All tickets** category. When you click the button **Create ticket** in the upper part of the window, the web form of the service desk application opens and references the object for which you want to create a ticket.
+In the upper area of the **All Tickets** category, you create a new ticket. Click on **Create Ticket** -- the web form of the application opens and automatically links the current object.
 
-If you use the [Request Tracker (RT)](./request-tracker.md) application, you also have to choose the queue to which the ticket is assigned. The configuration of the preset queues is carried out with **Administration → System settings → System parameters → Request Tracker queues**. Here you enter the queues in a comma-separated way.
+For [Request Tracker (RT)](../service-desk/request-tracker.md), you additionally select the queue. You configure the default queues under **Administration → Import and Interfaces → Trouble Ticket System (TTS) → Request Tracker queues** (comma-separated).

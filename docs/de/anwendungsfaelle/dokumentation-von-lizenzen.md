@@ -1,14 +1,14 @@
 ---
 title: Dokumentation von Lizenzen
-description: Dokumentation von Lizenzen
+description: "Als IT-Administrator behältst du mit i-doit den Überblick über alle Software-Lizenzen deiner Client- und Server-Systeme."
 icon:
 status: updated
 lang: de
 ---
 
-Die Dokumentation von Software-Lizenzen ist für alle Client- und Server-Systeme bedeutsam. Für IT-Administratoren ist der Überblick über vorhandene Lizenzen essentiell, um die rechtssichere Lizenzierung aller eingesetzten Systeme zu gewährleisten. Mehrfach genutzte Lizenzen sollten schnell erkannt und mögliche Neuzuweisungen einfach vorgenommen werden.
+Als IT-Administrator behältst du mit i-doit den Überblick über alle Software-Lizenzen deiner Client- und Server-Systeme. So stellst du die rechtssichere Lizenzierung sicher, erkennst mehrfach genutzte Lizenzen schnell und nimmst Neuzuweisungen einfach vor.
 
-Durch die Dokumentation der Lizenzen werden nicht nur Handlungskompetenzen aufgebaut, sondern Kosten gespart. Durch das rasante Wachstum der Infrastruktur wächst der Lizenzpool gleichermaßen. Kaum jemand behält die Übersicht, welche Lizenzen noch verwendet werden. i-doit unterstützt hier, indem nicht genutzte Lizenzen per Knopfdruck ermittelt und aus dem Lizenzpool entfernt werden können. i-doit sorgt als zentrales effektives Tool dafür, dass Ihr Unternehmen stets über die Lizenzen verfügt, die tatsächlich benötigt werden.
+Mit wachsender Infrastruktur wächst auch der Lizenzpool. i-doit hilft dir, nicht genutzte Lizenzen per Knopfdruck zu ermitteln und zu entfernen -- so verfügt dein Unternehmen stets nur über die Lizenzen, die tatsächlich benötigt werden.
 
 [![Objekt-Liste](../assets/images/de/anwendungsfaelle/dokumentation-von-lizenzen/1.png)](../assets/images/de/anwendungsfaelle/dokumentation-von-lizenzen/1.png)
 
@@ -20,7 +20,7 @@ Alle wichtigen Informationen zur Zahlung und Lieferung werden in der Kategorie �
 
 [![Lizenz anlegen](../assets/images/de/anwendungsfaelle/dokumentation-von-lizenzen/2.png)](../assets/images/de/anwendungsfaelle/dokumentation-von-lizenzen/2.png)
 
-Bei Lizenzen kann es zu Rückfragen kommen. Oft beginnt dann die Suche nach Informationen auf alten Rechnungen und Lieferscheinen. In i-doit hinterlegen Sie wichtige Ansprechpartner in der Kategorie “Kontaktzuweisungen”. Diese Ansprechpartner statten Sie darüber hinaus mit verschiedenen Rollen aus.
+Bei Lizenzen kann es zu Rückfragen kommen. Oft beginnt dann die Suche nach Informationen auf alten Rechnungen und Lieferscheinen. In i-doit hinterlegst du wichtige Ansprechpartner in der Kategorie “Kontaktzuweisungen”. Diese Ansprechpartner stattest du darüber hinaus mit verschiedenen Rollen aus.
 
 [![Kontaktzuweisung](../assets/images/de/anwendungsfaelle/dokumentation-von-lizenzen/3.png)](../assets/images/de/anwendungsfaelle/dokumentation-von-lizenzen/3.png)
 
@@ -36,7 +36,7 @@ Die Lizenzzuweisung erfolgt direkt im Asset (z.B. Server oder Client) und wird i
 
 ## Reporting und Benachrichtigungen
 
-Alle Informationen zu Software, Lizenzen und Systemen unterstützen Fach- und Führungskräfte bei der Planung und Umsetzung von Tasks. Für die regelmäßige Auswertung der Informationen stellt i-doit die Tools Benachrichtigungen und Report Manager zur Verfügung. Mit diesen erstellen Sie automatisch Benachrichtigungen und werten vorhandene Informationen granular aus.
+Alle Informationen zu Software, Lizenzen und Systemen unterstützen Fach- und Führungskräfte bei der Planung und Umsetzung von Tasks. Für die regelmäßige Auswertung der Informationen stellt i-doit die Tools Benachrichtigungen und Report Manager zur Verfügung. Mit diesen erstellst du automatisch Benachrichtigungen und werten vorhandene Informationen granular aus.
 
 **Use-Case: Auswertung der genutzten Lizenzen nach Abteilung oder Standort**
 
@@ -70,4 +70,4 @@ i-doit verfügt über ein integriertes Werkzeug für Benachrichtigungen. Dieses 
 
 Die Infrastruktur unterliegt einem ständigen Wandel. Neue Clients und Server werden in Betrieb genommen und alte Systeme abgeschaltet. Und inzwischen benötigt ein Nutzer kurzfristig eine bestimmte Software zur Erledigung einer Aufgabe. Die Dokumentation all dieser Änderung kann im hektischen Arbeitsalltag leicht vergessen werden. Dies kann leicht zu einer doppelten Vergabe von Lizenzen und zu einer Unterlizenzierung führen, die im schlimmsten Fall kostspielig wird. Es ist vor allem im Bereich Software und Lizenzen oft sinnvoll, diese Informationen regelmäßig automatisiert direkt auf den Systemen zu prüfen.
 
-Ob zur Kontrolle der Lizenznutzung oder zur Entlastung Ihrer Mitarbeiter und Kollegen: Mit einem Discovery-Tool reduzieren Sie den Dokumentationsaufwand. Professionelle Tools für die Discovery von Netzwerken sind z.B. [JDisc](https://www.i-doit.com/i-doit-discovery/), Lansweeper und [Monitos Inventory](https://www.i-doit.com/produkte/add-ons/monitos-inventory).
+Ob zur Kontrolle der Lizenznutzung oder zur Entlastung deiner Mitarbeiter und Kollegen: Mit einem Discovery-Tool reduzierst du den Dokumentationsaufwand. Professionelle Tools für die Discovery von Netzwerken sind z.B. [JDisc](https://www.i-doit.com/i-doit-discovery/), Lansweeper und [Monitos Inventory](https://www.i-doit.com/produkte/add-ons/monitos-inventory).

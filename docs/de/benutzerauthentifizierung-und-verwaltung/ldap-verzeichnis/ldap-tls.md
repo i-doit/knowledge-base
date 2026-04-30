@@ -5,50 +5,52 @@ icon: material/debian
 lang: de
 ---
 
-!!! warning "Bitte erstellen Sie vor jeder Änderung an einer Schnittstelle/Import einen vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist kann dieses dann wiederhergestellt werden"
+!!! warning "Bitte erstelle vor jeder Änderung an einer Schnittstelle/Import ein vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist, kann dieses dann wiederhergestellt werden"
 
-Um eine Verbindung zum Active Directory via LDAPS oder STARTTLS herzustellen wird das Zertifikat vom LDAP Server benötigt.
-Dieses exportieren wir und fügen es dem Zertifikatsspeicher vom i-doit Server hinzu, damit eine Verschlüsselte Kommunikation hergestellt werden kann.
+Diese Anleitung zeigt dir, wie du eine verschlüsselte LDAPS- oder STARTTLS-Verbindung zwischen deinem i-doit-Server (Debian) und dem Active Directory einrichtest. Dazu exportierst du das Zertifikat vom LDAP-Server und fügst es dem Zertifikatsspeicher deines i-doit-Servers hinzu.
 
-Zuerst loggen wir uns auf dem LDAP Server ein, der in der Regel auch die Zertifizierungsstelle beinhaltet.
-Dann das entsprechende MMC Snap-In öffnen oder via Server Manager -> Certificate Authority auswählen.
+## Schritt 1: Zertifikat auf dem LDAP-Server exportieren
+
+Melde dich auf dem LDAP-Server an, der in der Regel auch die Zertifizierungsstelle beinhaltet. Öffne das entsprechende MMC Snap-In oder wähle im Server Manager die Option **Certificate Authority**.
 
 [![Server Manager](../../assets/images/de/automatisierung-und-integration/ldap/ldap-tls/ldap-tls-1.png)](../../assets/images/de/automatisierung-und-integration/ldap/ldap-tls/ldap-tls-1.png)
 
-Eigenschaften der Zertifizierungsstelle anwählen
+Wähle die Eigenschaften der Zertifizierungsstelle an.
 
 [![Eigenschaften der auswählen](../../assets/images/de/automatisierung-und-integration/ldap/ldap-tls/ldap-tls-2.png)](../../assets/images/de/automatisierung-und-integration/ldap/ldap-tls/ldap-tls-2.png)
 
-Zertifikat anzeigen lassen (1), Details auswählen (2) und anschließend in eine Datei kopieren (3)
+Lass dir das Zertifikat anzeigen (1), wähle **Details** (2) und kopiere es anschließend in eine Datei (3).
 
 [![Zertifikat anzeigen und kopieren](../../assets/images/de/automatisierung-und-integration/ldap/ldap-tls/ldap-tls-3.png)](../../assets/images/de/automatisierung-und-integration/ldap/ldap-tls/ldap-tls-3.png)
 
-DER Format ausgewählt lassen
+Lass das DER-Format ausgewählt.
 
-[![DER Format ausgewählt lassen](../../assets/images/de/automatisierung-und-integration/ldap/ldap-tls/ldap-tls-4.png)](../../assets/images/de/automatisierung-und-integration/ldap/ldap-tls/ldap-tls-4.png)
+[![Lass das DER-Format ausgewählt.](../../assets/images/de/automatisierung-und-integration/ldap/ldap-tls/ldap-tls-4.png)](../../assets/images/de/automatisierung-und-integration/ldap/ldap-tls/ldap-tls-4.png)
 
-Dateiname und Verzeichnis wählen
+Wähle einen Dateinamen und ein Verzeichnis.
 
 [![Name und Verzeichnis wählen](../../assets/images/de/automatisierung-und-integration/ldap/ldap-tls/ldap-tls-5.png)](../../assets/images/de/automatisierung-und-integration/ldap/ldap-tls/ldap-tls-5.png)
 
-Datei Exportieren
+Schließe den Export-Assistenten ab.
 
-[![Fertigstellen es export Assistenten](../../assets/images/de/automatisierung-und-integration/ldap/ldap-tls/ldap-tls-6.png)](../../assets/images/de/automatisierung-und-integration/ldap/ldap-tls/ldap-tls-6.png)
+[![Fertigstellen des Export-Assistenten](../../assets/images/de/automatisierung-und-integration/ldap/ldap-tls/ldap-tls-6.png)](../../assets/images/de/automatisierung-und-integration/ldap/ldap-tls/ldap-tls-6.png)
 
-Das Zertifikat auf das i-doit System kopieren (Im Beispiel unter /tmp/). Anschließend openssl installieren
+## Schritt 2: Zertifikat auf dem i-doit-Server einrichten
+
+Kopiere das exportierte Zertifikat auf dein i-doit-System (im Beispiel nach `/tmp/`). Installiere anschließend openssl, falls noch nicht vorhanden:
 
 ```shell
 apt install openssl
 ```
 
-und das Zertifikat in das PEM Format umwandeln:
+Wandle das Zertifikat in das PEM-Format um:
 
 ```shell
 openssl x509 -inform der -outform pem -in /tmp/synetics.test.cer \
 -out /usr/local/share/ca-certificates/synetics.test.crt
 ```
 
-Nun noch den Zertifikatsspeicher aktualisieren und den Apache neu starten:
+Aktualisiere abschließend den Zertifikatsspeicher und starte Apache neu:
 
 ```shell
 update-ca-certificates

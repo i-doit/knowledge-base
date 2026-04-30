@@ -1,12 +1,21 @@
-# ADFS (Active Directory) (SAML and Mellon)
+---
+title: ADFS (Active Directory) (SAML)
+description: "This guide describes the setup of Single Sign-On (SSO) for i-doit with SAML."
+icon:
+status:
+lang: en
+---
+# ADFS (Active Directory) (SAML)
 
-In this tutorial, we describe how to set up single sign-on (SSO) for i-doit using SAML. In this example, we use Mellon as an authenticator against LDAP-AD-FS.
+!!! warning "Please create a complete backup before making any changes to an interface/import. If the result is not satisfactory, the backup can then be restored"
+
+This guide describes the setup of Single Sign-On (SSO) for i-doit with SAML. Mellon is used as the authenticator against AD FS (Active Directory Federation Services).
 
 ## Preparations
 
-We use two servers for the sample configuration, a Windows server with domain/AD and FS and a Debian 11 server with Apache and Mellon:
+The example configuration uses two servers -- a Windows Server with domain/AD and FS, and a Debian 11 server with Apache and Mellon:
 
-| FQDN                      | IP           | Rolle         | OS       |
+| FQDN                      | IP           | Role          | OS       |
 | ------------------------- | ------------ | ------------- | -------- |
 | tu2-dc2.tu-synetics.test  | 10.10.60.22  | AD, FS        | Windows  |
 | tu2-samlsso.synetics.test | 10.10.60.108 | Apache+Mellon | Debian11 |
@@ -14,7 +23,7 @@ We use two servers for the sample configuration, a Windows server with domain/AD
 ### Basic configuration
 
 ✔ The Windows server must have a configured AD that includes the AD-FS role.<br>
-✔ I-doit is already pre-installed and usable.
+✔ i-doit is already pre-installed and usable.
 
 ### Install packages
 
@@ -22,42 +31,42 @@ We use two servers for the sample configuration, a Windows server with domain/AD
 sudo apt -y install openssl libapache2-mod-auth-mellon ntpdate
 ```
 
-The system architecture should be x86 in 64bit.
+An x86 64-bit system architecture should be used
 
 ## Mellon Configuration
 
-We are creating a directory for this under `/etc/apache2` and store our configuration data here.
+Create a directory under `/etc/apache2` for the configuration data.
 
 ```shell
 sudo mkdir -p /etc/apache2/mellon
 cd /etc/apache2/mellon
 ```
 
-With the following command we create our Mellon metadata "Please adjust URLs"
+Create the Mellon metadata with the following command (adjust the URLs to your environment):
 
 ```shell
 /usr/sbin/mellon_create_metadata https://tu2-samlsso.synetics.test/ "https://tu2-samlsso.synetics.test/mellon"
 ```
 
-This now creates the following files
+This command creates the following files:
 
-`https\_tu2\_samlsso.synetics.test\_.cert`<br>
-`https\_tu2\_samlsso.synetics.test\_.key`<br>
+`https\_tu2\_samlsso.synetics.test\_.cert` <br>
+`https\_tu2\_samlsso.synetics.test\_.key` <br>
 `https\_tu2\_samlsso.synetics.test\_.xml`
 
-Now we need to fetch the AD-FS metadata from our AD "Please adjust URLs"
+Retrieve the AD FS metadata from your AD (adjust the URL):
 
 ```shell
 wget https://tu2-dc2.tu-synetics.test/FederationMetadata/2007-06/FederationMetadata.xml%20-O%20/etc/apache2/mellon/FederationMetadata.xml -O /etc/apache2/mellon/FederationMetadata.xml --no-check-certificate
 ```
 
-Now we need to create our Mellon configuration.
+Now create the Mellon configuration:
 
 ```shell
 sudo nano /etc/apache2/conf-available/mellon.conf
 ```
 
-Insert the following configuration directives based on the example:
+Insert the following directives:
 
 ```shell
 <Location / >
@@ -72,7 +81,7 @@ Insert the following configuration directives based on the example:
 
 ## Apache2 Configuration
 
-First we create a self signed certificate "name can be individual".
+First create a self-signed certificate (the name can be chosen freely):
 
 ```shell
 openssl req -newkey rsa:3072 -new -x509 -days 3652 -nodes -out /etc/ssl/certs/mywebserver.pem -keyout /etc/ssl/private/mywebserver.key
@@ -90,13 +99,13 @@ Common Name (e.g. server FQDN or YOUR name) []:mywebserver.example.com
 Email Address []:your_email_address
 ```
 
-Create VHost:
+Create a VHost:
 
 ```shell
-sudo nano /etc/apache2/sites-available/mywebserver.con
+sudo nano /etc/apache2/sites-available/mywebserver.conf
 ```
 
-Example:
+Example configuration:
 
 ```shell
 <IfModule mod_ssl.c>
@@ -121,15 +130,15 @@ Example:
 </IfModule>
 ```
 
-In this example only the directory protected via Mellon is protected under `/var/www/html`. So we can create another VHost config later to install e.g. i-doit.
+In this example, only the subdirectory `/protected` under `/var/www/html` is protected via Mellon. You can later create an additional VHost configuration to include e.g. i-doit.
 
-Creating the directory:
+Create the directory:
 
 ```shell
 sudo mkdir -p /var/www/html/protected
 ```
 
-Create an example html to test the call later on:
+Create an example HTML file to test the access later:
 
 ```shell
 sudo nano /var/www/html/protected/index.html
@@ -148,13 +157,13 @@ Example:
 </html>
 ```
 
-Test configuration:
+Test the configuration:
 
 ```shell
 sudo apache2ctl configtest
 ```
 
-Activate Mods and Configs:
+Enable the required modules and configs:
 
 ```shell
 sudo a2enmod ssl
@@ -163,115 +172,114 @@ sudo a2ensite mywebserver.conf
 sudo systemctl restart apache2
 ```
 
-Synchronize time:
+Synchronize the system time:
 
 ```shell
 sudo ntpdate -u tu2-dc2.tu-synetics.test
 ```
 
-At this point, we are done with the configuration of the Linux server for the time being and can now turn our attention to our AD.
+The configuration of the Linux server is now complete for the time being. In the next step you will set up AD FS.
 
-## Configuration AD-FS
+## AD FS Configuration
 
-First download the file `mellon_metadata.xml` from the Linux server e.g. via WinSCP and save it.
+First download the `mellon_metadata.xml` from the Linux server (e.g. via WinSCP). Then open the AD FS Management and create a new Relying Party Trust:
 
-[![Add Relying Party Trust]( ../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-1.png)]( ../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-1.png)
+[![Add Relying Party Trust](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-1.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-1.png)
 
-Claims aware remains active and then on Start
+Leave **Claims aware** active and click **Start**.
 
-[![Welcome]( ../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-2.png)]( ../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-2.png)
+[![Welcome](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-2.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-2.png)
 
-In the next step we select "import data ...." and navigate to our previously saved XML
+In the next step, select **Import data from a file** and navigate to the previously saved XML file.
 
-[![Select data source]( ../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-3.png)]( ../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-3.png)
+[![Select data source](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-3.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-3.png)
 
-The following note can be ignored if it appears.
+The following notice can be ignored if it appears.
 
-[![AD FS Management]( ../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-4.png)]( ../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-4.png)
+[![AD FS Management](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-4.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-4.png)
 
-Now we enter the FQDN from our Linux server.
+Enter the FQDN of your Linux server.
 
-[![Specify display name]( ../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-5.png)]( ../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-5.png)
+[![Specify display name](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-5.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-5.png)
 
-In the next step we can control accesses, for the sake of simplicity we leave it at Permit everyone for now.
+In the next step you can configure access control. To start, leave the setting at **Permit everyone**.
 
-[![Choose access control policy]( ../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-6.png)]( ../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-6.png)
+[![Choose access control policy](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-6.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-6.png)
 
-We can also disregard the next window and just click next.
+You can skip the next window -- click **Next**.
 
-[![Ready to add trust]( ../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-7.png)]( ../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-7.png)
+[![Ready to add trust](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-7.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-7.png)
 
-Finally only Close and the Party Trust is created
+Click **Close** -- the Relying Party Trust is now created.
 
-[![Finish]( ../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-8.png)]( ../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-8.png)
+[![Finish](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-8.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-8.png)
 
-Now we need to define Claim Issuance Policies so that our user can also log in via mail.
+Now define the **Claim Issuance Policies** so that users can log in via email.
 
-[![AD FS edit claim]( ../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-9.png)]( ../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-9.png)
+[![AD FS edit claim](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-9.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-9.png)
 
-Now a window opens and we click on Add Rule.
+A window opens -- click **Add Rule**.
 
-[![Add rule]( ../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-10.png)]( ../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-10.png)
+[![Add rule](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-10.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-10.png)
 
-Now we select Send LDAP Attributes as Claim and click Next
+Select **Send LDAP Attributes as Claim** and click **Next**.
 
-[![Choose rule type]( ../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-11.png)]( ../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-11.png)
+[![Choose rule type](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-11.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-11.png)
 
-We give the rule a unique name and add the mapping as shown.
+Give the rule a unique name and add the mapping as shown.
 
-[![Configure claim rule]( ../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-12.png)]( ../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-12.png)
+[![Configure claim rule](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-12.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-12.png)
 
-Then we create another rule and select Transform an Incoming Claim
+Create an additional rule and select **Transform an Incoming Claim**.
 
-[![Select rule template]( ../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-13.png)]( ../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-13.png)
+[![Select rule template](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-13.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-13.png)
 
-Please configure as follows:
+Apply the configuration as follows:
 
-[![Configure rule]( ../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-14.png)]( ../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-14.png)
+[![Configure rule](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-14.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-14.png)
 
-Now we have a fully configured Relying Party Trust and can test the authentication once.
+The Relying Party Trust is now fully configured. Test the authentication:
 
-[![Login page]( ../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-15.png)]( ../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-15.png)
+[![Login page](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-15.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-15.png)
 
 ## Test SAML-SSO
 
-Open the URL from the server once in the browser
-Example:
+Open the URL of the server in your browser:
 [https://mywebserver.example.com/protected](https://mywebserver.example.com/protected)
 
-After successful registration, we should receive the following output.
+After successful login you should see the following output:
 
-[![Auth users only]( ../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-16.png)]( ../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-16.png)
+[![Auth users only](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-16.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-16.png)
 
-## Installation i-doit
+## Install i-doit
 
-The installation can be installed as described in the KB article for [Debian](../../../installation/manual-installation/debian/index.md).
+The installation can be performed as described in the KB article for [Debian](../../../installation/manual-installation/debian/index.md).
 
-## SSO login for i-doit
+## Enable SSO login for i-doit
 
-For this we have to go to **System settings** tab of the [Admin-Center](../../../system-administration/admin-center.md) and adjust the configuration as follows.
+Open the **System settings** tab in the [Admin Center](../../../administration/admin-center.md) and adjust the configuration as follows:
 
 !!! attention "Important information about contacts"
 
-    It is mandatory that the e-mail address of the respective user is stored as login in i-doit!
+    The email address of the respective user must be stored as the login in i-doit!
 
-[![i-doit SSO setting]( ../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-17.png)]( ../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-17.png)
+[![i-doit SSO setting](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-17.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-17.png)
 
-Since we currently followed our instructions or KB, we need to adjust the VHost configuration so that we can now log in via SSO
+Adjust the VHost configuration so that SSO login works.
 
-Disable i-doit Vhost
+Disable the i-doit VHost configuration:
 
 ```shell
 sudo a2dissite i-doit
 ```
 
-Customize Mellon Vhost created at the beginning
+Adjust the Mellon VHost configuration created at the beginning:
 
 ```shell
 nano /etc/apache2/sites-enabled/tu2-samlsso.conf
 ```
 
-Example:
+Example
 
 ```shell
 <IfModule mod_ssl.c>
@@ -302,15 +310,14 @@ Example:
 </IfModule>
 ```
 
-Finally restart Apache once
+Restart Apache:
 
 ```shell
 sudo systemctl restart apache2.service
 ```
 
-**Finished!**
+The setup is complete. If you now open the URL in your browser and log in, you will be taken directly to i-doit.
 
-If we now open the URL again in our browser and log in, we will be taken directly to the i-doit
+!!! info "Fallback to login form"
 
-!!! info "Fallback to Logon Screen"
-    If a user logs in who does not yet exist in i-doit, then this user is automatically redirected to the i-doit login screen and can log in with a local user.
+    If a user logs in who does not yet exist in i-doit, they will automatically be redirected to the i-doit login form and can log in with a local user.

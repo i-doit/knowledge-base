@@ -1,14 +1,14 @@
 ---
 title: API (JSON-RPC)
-description: API (JSON-RPC)
+description: "Über die Programmierschnittstelle (API) greifst du extern auf deine IT-Dokumentation zu."
 icon: addons/api
 status:
 lang: de
 ---
 
-!!! warning "Bitte erstellen Sie vor jeder Änderung an einer Schnittstelle/Import einen vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist kann dieses dann wiederhergestellt werden"
+!!! warning "Bitte erstellst du vor jeder Änderung an einer Schnittstelle/Import einen vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist kann dieses dann wiederhergestellt werden"
 
-i-doit ermöglicht den externen Zugriff auf die [IT-Dokumentation](../../glossar.md) über eine [Programmierschnittstelle](https://de.wikipedia.org/wiki/Programmierschnittstelle), auch API genannt. Es können Daten gelesen, erstellt, aktualisiert und auch gelöscht werden. Somit stellt die API ähnliche Funktionen wie die Web GUI bereit - nur lassen sich diese problemlos automatisieren.
+Über die [Programmierschnittstelle (API)](https://de.wikipedia.org/wiki/Programmierschnittstelle) greifst du extern auf deine [IT-Dokumentation](../../glossar.md) zu. Du kannst Daten lesen, erstellen, aktualisieren und löschen -- die gleichen Funktionen wie in der Web GUI, aber vollständig automatisierbar.
 
 ## Technischer Hintergrund
 
@@ -19,7 +19,7 @@ Die API von i-doit bringt typische [CRUD](https://de.wikipedia.org/wiki/CRUD)-Fu
 *   aktualisiert (**U**pdate) und
 *   gelöscht (**D**elete) werden.
 <!-- cSpell:enable -->
-Ein Client (beispielsweise in Form eines Scripts) sendet dazu einen Request an den Server (i-doit), um eine Methode auf dem Server ausführen zu lasen. Diese Vorgehensweise nennt man [Remote Procedure Call (RPC)](https://de.wikipedia.org/wiki/Remote_Procedure_Call). Das Ergebnis der Methode wird an den Client als Antwort (Response) zurückgegeben. Die API von i-doit stützt sich bei dieser Kommunikation auf das Protokoll [JSON-RPC](http://www.jsonrpc.org/) in Version 2.0. Es verwendet als höheres Protokoll HTTP und als Austauschformat [JavaScript Objekt Notation (JSON)](https://de.wikipedia.org/wiki/JavaScript_Object_Notation). Per **HTTP POST** wird ein Request im JSON-Format an den Server geschickt. Die Response erfolgt ebenfalls im JSON-Format.
+Ein Client (z. B. ein Script) sendet einen Request an den Server (i-doit), um eine Methode ausführen zu lassen ([Remote Procedure Call](https://de.wikipedia.org/wiki/Remote_Procedure_Call)). Das Ergebnis wird als Response zurückgegeben. Die API nutzt das Protokoll [JSON-RPC](http://www.jsonrpc.org/) in Version 2.0 über HTTP mit [JSON](https://de.wikipedia.org/wiki/JavaScript_Object_Notation) als Austauschformat. Requests werden per **HTTP POST** im JSON-Format gesendet, Responses kommen ebenfalls als JSON zurück.
 
 API-Aufrufe können asynchron erfolgen, ohne den Zusammenhang zwischen Requests und Responses zu verlieren. Die verwendete Programmiersprache kann frei gewählt werden.
 
@@ -120,7 +120,7 @@ i-doit kann neben den Standard-JSON-RPC-Fehlern auch spezifische Fehlermeldungen
 
 ## Nutzung der i-doit Attributdokumentation
 
-Eine hilfreiche Auflistung aller in i-doit verwendeten Kategorien und Attribute finden Sie in der Verwaltung:
+Eine hilfreiche Auflistung aller in i-doit verwendeten Kategorien und Attribute findest du in der Verwaltung:
 
 [![Kategorien in der IT-Dokumentation](../../assets/images/de/i-doit-add-ons/api/2-api.png)](../../assets/images/de/i-doit-add-ons/api/2-api.png)
 
@@ -141,7 +141,7 @@ Diese Tabelle dient als Orientierungshilfe wo die benötigten Identifikatoren un
 
 ## Endpunkt Dokumentation v2
 
-Hier finden Sie v2 API-Anfragen mit ihren Anfragetypen, Antworttypen, Argumenten und der Form des Anfrage.
+Hier findest du v2 API-Anfragen mit ihren Anfragetypen, Antworttypen, Argumenten und der Form des Anfrage.
 
 [![Endpunkt Dokumentation](../../assets/images/de/i-doit-add-ons/api/endpunkt-doku.png)](../../assets/images/de/i-doit-add-ons/api/endpunkt-doku.png)
 

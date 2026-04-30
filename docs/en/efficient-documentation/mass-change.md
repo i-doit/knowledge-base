@@ -1,53 +1,61 @@
+---
+title: Mass Change
+description: "Mass change is a function in i-doit that allows multiple objects to be changed in one step based on change templates."
+icon:
+status:
+lang: en
+---
 # Mass Change
 
-The mass change is a feature in i-doit which allows for changing multiple [objects](../glossary.md) in one step on the basis of change templates. With these changes the selected objects assume the [attributes](../glossary.md) of the change template.
+Mass change is a function in i-doit that allows multiple [objects](../basics/it-documentation-structure.md) to be changed in one step based on change templates. During this change, the selected objects adopt the [attributes](../basics/it-documentation-structure.md) of the change template.
 
-Access
+Accessing
 ------
 
-You can find the mass change function at **Extras → CMDB → Mass change**. Here it is possible to view existing change templates, edit them, create new change templates and adjust objects in accordance to the templates.
+You can find mass change under **Extras → CMDB → Mass Change**. Here you can view and edit existing change templates, create new change templates, and adjust objects according to the templates.
 
-[![Access](../assets/images/en/efficient-documentation/mass-change/1-mc.png)](../assets/images/en/efficient-documentation/mass-change/1-mc.png)
+[![mass-change-find](../assets/images/de/effizientes-dokumentieren/massenaenderung/1-mae.png)](../assets/images/de/effizientes-dokumentieren/massenaenderung/1-mae.png)
 
 Creating a Change Template
---------------------------
+--------------------------------
 
-You can create a change template by clicking **Create new template** on the left side of the tree menu as soon as you access the mass change. In the first step, you are prompted to set the [object type](../basics/structure-of-the-it-documentation.md) the template will be associated with. Choose the type in the drop-down menu and confirm with the button **Create new template**. The following configuration for a template is identical to the creation of a regular object. Leave all content you want to transfer to the objects later on and save your inputs.
+Once you have accessed mass change, you can create a change template under **Create new template** in the tree menu on the left side. In the first step, you will be asked to specify which [object type](../basics/it-documentation-structure.md) the template should belong to. Select it from the drop-down menu and confirm with the **Create new template** button. The subsequent configuration of a template is identical to creating a regular object. Enter all content that you want to transfer to the objects later and save your entries.
 
-[![Creating a Change Template](../assets/images/en/efficient-documentation/mass-change/2-mc.png)](../assets/images/en/efficient-documentation/mass-change/2-mc.png)
+[![mass-change-create](../assets/images/de/effizientes-dokumentieren/massenaenderung/2-mae.png)](../assets/images/de/effizientes-dokumentieren/massenaenderung/2-mae.png)
 
-!!! info "Generic templates"
-    You can also use the **Generic template** as the object type for your change templates. In this way you can apply the template to any object type. But if this template contains content in categories which are not assigned to the objects, then you will only be able to view these contents if those respective [categories](../basics/structure-of-the-it-documentation.md) are assigned.
+!!! info "Note"
 
-View, Edit and Delete Existing Change Templates
------------------------------------------------
+    You can also specify the **Generic Template** as the object type for your change templates. This allows you to apply the template to any object type. However, if this template contains content in categories that are not assigned to the objects being changed, you will only be able to view this content in the objects if you assign the corresponding [categories](../basics/it-documentation-structure.md).
 
-By clicking on **Existing templates** located in the tree menu (on the left side of the mass change) you can view all created change templates. Click a change template in order to edit it. Marking the checkbox of one or more change templates allows you to remove them via the **Purge** button. Please be sure that you want to purge the selected change templates, since purged change templates cannot be restored.
+Viewing, Editing, and Deleting Existing Change Templates
+-------------------------------------------------------------
 
-[![View, Edit and Delete Existing Change Templates](../assets/images/en/efficient-documentation/mass-change/3-mc.png)](../assets/images/en/efficient-documentation/mass-change/3-mc.png)
+In mass change, you can view all previously created change templates under **Existing templates** in the tree menu on the left side. To edit a change template, click on it. If you check the checkbox of one or more change templates, you can remove the selected change templates from the system using the **Purge** button. Please make sure you want to delete the selected change templates, as deleted change templates cannot be restored.
 
-Change of Object Information with a Change Template
----------------------------------------------------
+[![mass-change-delete](../assets/images/de/effizientes-dokumentieren/massenaenderung/3-mae.png)](../assets/images/de/effizientes-dokumentieren/massenaenderung/3-mae.png)
 
-In order to edit objects in accordance to your change templates, use the **Mass change** option which is located on the left side of the mass change in the tree menu.
+Changing Object Information with a Change Template
+---------------------------------------------------------
 
-As the first step, choose the objects you want to adjust. You can select as many objects as you like. In the next step you can select the appropriate change template from the drop-down menu. On basis of the selected change template the objects will be adjusted.
+In mass change, use the **Mass change** item in the tree menu on the left side to edit objects based on your change templates.
 
-The options in the third step determine how empty fields of the template and multi-value categories are to be handled. There are two possibilities to choose from:
+Here, in the first step, select the objects you want to adjust. You can select any number of objects. In the next step, you can select the corresponding change template from the drop-down menu on the basis of which the objects should be adjusted.
 
--   **Ignore empty fields in the template and leave these fields untouched in the target objects**
--   **Clear fields explicitly when the template has no content for them**
+The options in the third step determine how empty fields in the template and [multi-value categories](../basics/it-documentation-structure.md) should be handled. For empty fields in the template, two options are available:
 
-This way you can configure whether your objects will be exactly aligned to the change template or whether only documented values in the change template will be transferred to your existing objects.
+*   **Ignore empty fields in the template and leave these fields in the target objects untouched**
+*   **Explicitly clear fields if the template has no content for these fields**
+
+This allows you to configure whether your objects should be exactly aligned to the change template or whether only values documented in the change template should be transferred to your existing objects.
 
 Multi-value categories can be handled in three ways:
 
--   **Leave categories untouched**
--   **Add category entries from the template to existing entries and leave existing entries untouched**
--   **Delete existing category entries and take the entries from the templates**
+*   **Leave category untouched**
+*   **Add category entries from the template to existing entries and leave existing entries untouched**
+*   **Delete existing category entries and adopt entries from the template**
 
-When leaving the categories untouched, the contents will not be transferred to multi-value categories under any circumstances – independent of the fact whether these already have any content or not. The option for adding category entries does not delete your already documented content and complements all the entries of your template. When deleting existing entries, all existing multi-value contents will be deleted and replaced by the contents of the change template.
+If you leave the categories untouched, no content will be transferred to multi-value categories under any circumstances -- regardless of whether they already contain content or not. The option to add category entries leaves your already documented content intact and adds all entries from your template. When deleting existing entries, all previously existing multi-value entries are deleted and replaced with the content of the change template.
 
-As soon as all settings match your needs you can apply the changes to the objects via the **Apply mass changes** button.
+Once all settings meet your requirements, you can transfer the changes to the objects using the **Perform mass change** button.
 
-[![Apply mass changes](../assets/images/en/efficient-documentation/mass-change/4-mc.png)](../assets/images/en/efficient-documentation/mass-change/4-mc.png)
+[![mass-change-perform](../assets/images/de/effizientes-dokumentieren/massenaenderung/4-mae.png)](../assets/images/de/effizientes-dokumentieren/massenaenderung/4-mae.png)

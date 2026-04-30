@@ -35,10 +35,12 @@ theme:
   features:
     - content.action.edit
     - content.code.copy
+    - navigation.instant
+    - navigation.tracking
+    - navigation.indexes
     - navigation.footer
     - navigation.top
     - search.suggest
-    - navigation.indexes
   icon:
     admonition:
       note: octicons/tag-16
@@ -64,13 +66,15 @@ plugins:
   - redirects:
       redirect_maps:
         'i-doit-add-ons/isms.md': 'i-doit-add-ons/isms/index.md'
-        'maintenance-and-operation/activate-license.md': 'maintenance-and-operation/licensing.md'
-        'automation-and-integration/cli/console/options-and-parameters-cli.md': 'automation-and-integration/cli/index.md'
-        'automation-and-integration/cli/console/commands-and-options.md': 'automation-and-integration/cli/index.md'
-        'automation-and-integration/cli/console/using-configuration-files-for-console-cli.md': 'automation-and-integration/cli/configuration-files.md'
-        'consolidate-data/jdisc-discovery.md': 'consolidate-data/jdisc/index.md'
-        'upgrades-and-migrations/update-guide-from-1.7.4-to-31.md': 'upgrades-and-migrations/update-guide.md'
-        'evaluation/variable-reports.md': 'use-cases/variable-reports.md'
+        'i-doit-add-ons/viva2.md': 'i-doit-add-ons/viva2/index.md'
+        'wartung-und-betrieb/lizenz-aktivieren.md': 'maintenance-and-operation/licensing.md'
+        'automatisierung-und-integration/cli/console/index.md': 'automation-and-integration/cli/index.md'
+        'automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md': 'automation-and-integration/cli/index.md'
+        'automatisierung-und-integration/cli/console/verwendung-von-konfigurationsdateien-fuer-console-commands.md': 'automation-and-integration/cli/configuration-files.md'
+        'daten-konsolidieren/jdisc-discovery.md': 'consolidate-data/jdisc/index.md'
+        'upgrades-und-umzuege/update-anleitung-1.7.4-bis-31.md': 'upgrades-and-migrations/update-guide.md'
+        'auswertungen/variable-reports.md': 'use-cases/variable-reports.md'
+        'administration/verwaltung/import-und-schnittstellen/jdisc/index.md': 'i-doit-add-ons/jdisc-connector/index.md'
 markdown_extensions:
   - abbr
   - admonition
@@ -90,7 +94,7 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
       options:
         custom_icons:
-          - overrides/.icons
+          - ../../overrides/.icons
   - pymdownx.highlight:
       linenums: true
       linenums_style: table
@@ -102,7 +106,7 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
 extra:
-  manifest: overrides/manifest.webmanifest
+  manifest: ../../overrides/manifest.webmanifest
   social:
     - name: i-doit on Twitter
       link: https://twitter.com/i_doit
@@ -127,8 +131,8 @@ extra:
       link: /de/
       lang: de
   status:
-    new: Recently added
-    updated: Recently updated
+    new: New
+    updated: Updated
 extra_css:
   - assets/custom.css
 use_directory_urls: false
@@ -138,14 +142,16 @@ nav:
   - Overview: index.md
   - Introduction:
       - introduction/index.md
-      - How do I start documenting?: introduction/how-do-i-start-documenting.md
-      - Checklist for your IT documentation: introduction/check-list-for-your-it-documentation.md
+      - What is i-doit?: introduction/what-is-i-doit.md
+      - Concepts and Terminology: introduction/concepts-and-terminology.md
+      - How Do I Start Documenting?: introduction/how-to-start-documenting.md
+      - IT Documentation Checklist: introduction/it-documentation-checklist.md
   - Version History:
       - version-history/index.md
-      - Release notes:
+      - Release Notes:
           - version-history/release-notes/index.md
-          - Release notes 38: version-history/release-notes/release-notes-38.md
-          - Release notes 37: version-history/release-notes/release-notes-37.md
+          - Release Notes 38: version-history/release-notes/release-notes-38.md
+          - Release Notes 37: version-history/release-notes/release-notes-37.md
           - Release Notes 36: version-history/release-notes/release-notes-36.md
           - Release Notes 35: version-history/release-notes/release-notes-35.md
           - Release Notes 34: version-history/release-notes/release-notes-34.md
@@ -157,24 +163,24 @@ nav:
           - Release Notes 28: version-history/release-notes/release-notes-28.md
           - Release Notes 27: version-history/release-notes/release-notes-27.md
           - Release Notes 26: version-history/release-notes/release-notes-26.md
-          - Release notes 25: version-history/release-notes/release-notes-25.md
-          - Release notes 24: version-history/release-notes/release-notes-24.md
-          - Release notes 23: version-history/release-notes/release-notes-23.md
-          - Release notes 22: version-history/release-notes/release-notes-22.md
-          - Release notes 1.19: version-history/release-notes/release-notes-1.19.md
-          - Release notes 1.18:
+          - Release Notes 25: version-history/release-notes/release-notes-25.md
+          - Release Notes 24: version-history/release-notes/release-notes-24.md
+          - Release Notes 23: version-history/release-notes/release-notes-23.md
+          - Release Notes 22: version-history/release-notes/release-notes-22.md
+          - Release Notes 1.19: version-history/release-notes/release-notes-1.19.md
+          - Release Notes 1.18:
               - version-history/release-notes/release-notes-1.18/index.md
               - version-history/release-notes/release-notes-1.18/release-notes-1.18.2.md
-          - Release notes 1.17: version-history/release-notes/release-notes-1.17.md
-          - Release notes 1.16: version-history/release-notes/release-notes-1.16.md
-          - Release notes 1.14: version-history/release-notes/release-notes-1.14.md
-          - Release notes 1.13: version-history/release-notes/release-notes-1.13.md
-          - Release notes 1.12: version-history/release-notes/release-notes-1.12.md
-          - Release notes 1.11: version-history/release-notes/release-notes-1.11.md
-          - Release notes 1.10: version-history/release-notes/release-notes-1.10.md
-          - Release notes 1.9: version-history/release-notes/release-notes-1.9.md
-          - Release notes 1.8: version-history/release-notes/release-notes-1.8.md
-          - Release notes 1.7: version-history/release-notes/release-notes-1.7.md
+          - Release Notes 1.17: version-history/release-notes/release-notes-1.17.md
+          - Release Notes 1.16: version-history/release-notes/release-notes-1.16.md
+          - Release Notes 1.14: version-history/release-notes/release-notes-1.14.md
+          - Release Notes 1.13: version-history/release-notes/release-notes-1.13.md
+          - Release Notes 1.12: version-history/release-notes/release-notes-1.12.md
+          - Release Notes 1.11: version-history/release-notes/release-notes-1.11.md
+          - Release Notes 1.10: version-history/release-notes/release-notes-1.10.md
+          - Release Notes 1.9: version-history/release-notes/release-notes-1.9.md
+          - Release Notes 1.8: version-history/release-notes/release-notes-1.8.md
+          - Release Notes 1.7: version-history/release-notes/release-notes-1.7.md
       - Changelogs:
           - version-history/changelogs/index.md
           - Changelog 38: version-history/changelogs/changelog-38.md
@@ -247,7 +253,7 @@ nav:
               - Changelog 1.10.3: version-history/changelogs/changelog-1.10.x/changelog-1.10.3.md
               - Changelog 1.10.2: version-history/changelogs/changelog-1.10.x/changelog-1.10.2.md
               - Changelog 1.10.1: version-history/changelogs/changelog-1.10.x/changelog-1.10.1.md
-              - Changelog 1.10: version-history/changelogs/changelog-1.10.x/changelog-1.10.md
+              - Changelog 1.13: version-history/changelogs/changelog-1.10.x/changelog-1.10.md
           - Changelogs 1.9.x:
               - version-history/changelogs/changelog-1.9.x/index.md
               - Changelog 1.9.4: version-history/changelogs/changelog-1.9.x/changelog-1.9.4.md
@@ -262,6 +268,40 @@ nav:
               - Changelog 1.8.2: version-history/changelogs/changelog-1.8.x/changelog-1.8.2.md
               - Changelog 1.8.1: version-history/changelogs/changelog-1.8.x/changelog-1.8.1.md
               - Changelog 1.8: version-history/changelogs/changelog-1.8.x/changelog-1.8.md
+          - Changelogs 1.7.x:
+              - version-history/changelogs/changelog-1.7.x/index.md
+              - Changelog 1.7.5: version-history/changelogs/changelog-1.7.x/changelog-1.7.5.md
+              - Changelog 1.7.4: version-history/changelogs/changelog-1.7.x/changelog-1.7.4.md
+              - Changelog 1.7.3: version-history/changelogs/changelog-1.7.x/changelog-1.7.3.md
+              - Changelog 1.7.2: version-history/changelogs/changelog-1.7.x/changelog-1.7.2.md
+              - Changelog 1.7.1: version-history/changelogs/changelog-1.7.x/changelog-1.7.1.md
+              - Changelog 1.7: version-history/changelogs/changelog-1.7.x/changelog-1.7.md
+          - Changelogs 1.6.x:
+              - version-history/changelogs/changelog-1.6.x/index.md
+              - Changelog 1.6.5: version-history/changelogs/changelog-1.6.x/changelog-1.6.5.md
+              - Changelog 1.6.4: version-history/changelogs/changelog-1.6.x/changelog-1.6.4.md
+              - Changelog 1.6.3: version-history/changelogs/changelog-1.6.x/changelog-1.6.3.md
+              - Changelog 1.6.2: version-history/changelogs/changelog-1.6.x/changelog-1.6.2.md
+              - Changelog 1.6.1: version-history/changelogs/changelog-1.6.x/changelog-1.6.1.md
+              - Changelog 1.6: version-history/changelogs/changelog-1.6.x/changelog-1.6.md
+          - Changelogs 1.5.x:
+              - version-history/changelogs/changelog-1.5.x/index.md
+              - Changelog 1.5.6: version-history/changelogs/changelog-1.5.x/changelog-1.5.6.md
+              - Changelog 1.5.5: version-history/changelogs/changelog-1.5.x/changelog-1.5.5.md
+              - Changelog 1.5.4: version-history/changelogs/changelog-1.5.x/changelog-1.5.4.md
+              - Changelog 1.5.3: version-history/changelogs/changelog-1.5.x/changelog-1.5.3.md
+              - Changelog 1.5.2: version-history/changelogs/changelog-1.5.x/changelog-1.5.2.md
+              - Changelog 1.5.1: version-history/changelogs/changelog-1.5.x/changelog-1.5.1.md
+              - Changelog 1.5: version-history/changelogs/changelog-1.5.x/changelog-1.5.md
+          - Older Changelogs:
+              - version-history/changelogs/changelog-older-versions/index.md
+              - Changelog 1.4: version-history/changelogs/changelog-older-versions/changelog-1.4.md
+              - Changelog 1.3: version-history/changelogs/changelog-older-versions/changelog-1.3.md
+              - Changelog 1.2: version-history/changelogs/changelog-older-versions/changelog-1.2.md
+              - Changelog 1.1: version-history/changelogs/changelog-older-versions/changelog-1.1.md
+              - Changelog 1.0.x: version-history/changelogs/changelog-older-versions/changelog-1.0.x.md
+              - Changelog 0.9.x: version-history/changelogs/changelog-older-versions/changelog-0.9.x.md
+              - Changelog 0.8.x: version-history/changelogs/changelog-older-versions/changelog-0.8.x.md
   - Installation:
       - installation/index.md
       - System Requirements: installation/system-requirements.md
@@ -269,75 +309,286 @@ nav:
       - Manual Installation:
           - installation/manual-installation/index.md
           - Debian GNU/Linux: installation/manual-installation/debian/index.md
-          - Red Hat Enterprise Linux (RHEL) and compatible:
+          - Red Hat Enterprise Linux (RHEL) and Compatible:
               - installation/manual-installation/red-hat-enterprise-linux/index.md
               - Red Hat Enterprise Linux 9: installation/manual-installation/red-hat-enterprise-linux/rhel9.md
+              - Red Hat Enterprise Linux 10: installation/manual-installation/red-hat-enterprise-linux/rhel10.md
           - SUSE Linux Enterprise Server (SLES): installation/manual-installation/suse/index.md
           - Ubuntu GNU/Linux: installation/manual-installation/ubuntu/index.md
           - Microsoft Windows Server:
               - installation/manual-installation/microsoft-windows-server/index.md
-              - i-doit via XAMPP: installation/manual-installation/microsoft-windows-server/i-doit-via-xampp.md
+              - i-doit via XAMPP: installation/manual-installation/microsoft-windows-server/idoit-via-XAMPP.md
+              - i-doit on IIS: installation/manual-installation/microsoft-windows-server/iis.md
           - System Settings: installation/manual-installation/system-settings.md
           - Setup: installation/manual-installation/setup.md
+      - Docker Installation:
+          - installation/docker-installation/index.md
+          - Debian GNU/Linux: installation/docker-installation/debian.md
+          - Ubuntu GNU/Linux: installation/docker-installation/ubuntu.md
       - i-doit Virtual Eval Appliance:
           - installation/i-doit-virtual-eval-appliance/index.md
-          - i-doit Appliance in eine Hyper-V Umgebung importieren: installation/i-doit-virtual-eval-appliance/hyper-v-import.md
-  - Maintenance and operation:
+          - Import i-doit Appliance in VirtualBox: installation/i-doit-virtual-eval-appliance/virtual-box.md
+          - Import i-doit Appliance in Hyper-V: installation/i-doit-virtual-eval-appliance/hyper-v-import.md
+  - Maintenance and Operation:
       - maintenance-and-operation/index.md
       - Licensing: maintenance-and-operation/licensing.md
-      - Cronjobs setup: maintenance-and-operation/cronjob-setup.md
-      - Backup and recovery:
-          - maintenance-and-operation/backup-and-recovery/index.md
-          - Backup script for data and files: maintenance-and-operation/backup-and-recovery/backup-script-for-data-and-files.md
-      - i-doit update: maintenance-and-operation/update.md
-      - Security and protection: maintenance-and-operation/security-and-protection.md
+      - Set Up Cron Jobs: maintenance-and-operation/set-up-cron-jobs.md
+      - Back Up and Restore Data:
+          - maintenance-and-operation/backup-and-restore/index.md
+          - Backup Script for Data and Files: maintenance-and-operation/backup-and-restore/backup-script.md
+      - i-doit Update: maintenance-and-operation/i-doit-update.md
+      - Security and Protection: maintenance-and-operation/security-and-protection.md
       - PHP update: maintenance-and-operation/php-update.md
-  - Upgrades and migrations:
+  - Upgrades and Migrations:
       - upgrades-and-migrations/index.md
-      - Migration from Windows to Linux: upgrades-and-migrations/migration-from-windows-to-linux.md
-      - Migration from Linux to Windows: upgrades-and-migrations/migration-from-linux-to-windows.md
-      - Migration of an Installation under GNU/Linux: upgrades-and-migrations/migration-of-an-installation-under-linux.md
-      - i-doit Update guide: upgrades-and-migrations/update-guide.md
-      - Update of i-doit open 1.4.8 to 1.8: upgrades-and-migrations/update-of-i-doit-open-1.4.8-to-1.8.md
+      - i-doit Update Guide: upgrades-and-migrations/update-guide.md
       - Upgrade from i-doit open to i-doit: upgrades-and-migrations/upgrade-from-open-to-i-doit.md
-      - Upgrade to MySQL 5.6 or MariaDB 10.0: upgrades-and-migrations/upgrade-to-mysql-5.6-or-mariadb-10.0.md
-      - Upgrade PHP and MariaDB for Windows: upgrades-and-migrations/update-php-and-mariadb-idoit-windows.md
+      - Update from i-doit open 1.4.8 to 1.8: upgrades-and-migrations/update-from-open-1.4.8-to-1.8.md
+      - Upgrade to MySQL 5.6 or MariaDB 10.0: upgrades-and-migrations/upgrade-zu-mysql-5.6-oder-mariadb-10.0.md
+      - Migration of an Installation on GNU/Linux: upgrades-and-migrations/migration-on-linux.md
+      - Migration from Windows to Linux: upgrades-and-migrations/migration-windows-to-linux.md
+      - Migration from Linux to Windows: upgrades-and-migrations/migration-linux-to-windows.md
+      - Update PHP and MariaDB for Windows: upgrades-and-migrations/update-php-and-mariadb-for-windows.md
   - Basics:
       - basics/index.md
-      - Initial login: basics/initial-login.md
-      - Structure of the IT documentation: basics/structure-of-the-it-documentation.md
-      - Dashboard and widgets: basics/dashboard-and-widgets.md
-      - Object list:
+      - Getting Started:
+          - Initial Login: basics/initial-login.md
+          - The i-doit Interface: basics/web-gui.md
+          - Dashboard and Widgets: basics/dashboard-and-widgets.md
+          - IT Documentation Structure: basics/it-documentation-structure.md
+      - Object List:
           - basics/object-list/index.md
-          - Actions in Object lists: basics/object-list/actions-in-object-lists.md
-          - Navigation and filtering: basics/object-list/navigation-and-filtering.md
-          - Configuration of the Object list view: basics/object-list/configuration-of-the-list-view.md
-          - Advanced settings: basics/object-list/advanced-settings.md
-      - Attribute fields: basics/attribute-fields.md
-      - Dialog-Admin: basics/dialog-admin.md
-      - Object types: basics/object-types.md
-      - Assignment of categories to object types: basics/assignment-of-categories-to-object-types.md
-      - Categories and attributes: basics/categories-and-attributes.md
-      - Custom object types: basics/custom-object-types.md
-      - Custom categories: basics/custom-categories.md
+          - Action Bar: basics/object-list/action-bar.md
+          - Navigate and Filter: basics/object-list/navigate-and-filter.md
+          - Configure List View: basics/object-list/configure-list-view.md
+          - Advanced Settings: basics/object-list/advanced-settings.md
+      - Attribute Fields: basics/attribute-fields.md
+      - Dialog Admin: basics/dialog-admin.md
+      - Object Types:
+          - basics/object-types/index.md
+          - Access Point Controller: basics/object-types/access-point-controller.md
+          - Application: basics/object-types/application.md
+          - Device/Appliance: basics/object-types/appliance.md
+          - Workstation: basics/object-types/workstation.md
+          - Operating System: basics/object-types/operating-system.md
+          - Blade Chassis: basics/object-types/blade-chassis.md
+          - Blade Server: basics/object-types/blade-server.md
+          - Cluster: basics/object-types/cluster.md
+          - Cluster Service: basics/object-types/cluster-service.md
+          - Client: basics/object-types/client.md
+          - Files: basics/object-types/dateien.md
+          - Database Instance: basics/object-types/datenbankinstanz.md
+          - Database Schema: basics/object-types/datenbankschema.md
+          - DBMS: basics/object-types/dbms.md
+          - Printer: basics/object-types/drucker.md
+          - Energy Supply Company: basics/object-types/energy-supply-company.md
+          - Vehicle: basics/object-types/fahrzeug.md
+          - FC-Switch: basics/object-types/fc-switch.md
+          - Aircraft: basics/object-types/flugzeug.md
+          - Building: basics/object-types/building.md
+          - Host: basics/object-types/host.md
+          - Cable: basics/object-types/cable.md
+          - Cable Tray: basics/object-types/cable-tray.md
+          - Air Conditioning: basics/object-types/air-conditioning.md
+          - Converter: basics/object-types/converter.md
+          - Crypto Card: basics/object-types/kryptokarte.md
+          - KVM-Switch: basics/object-types/kvm-switch.md
+          - Country: basics/object-types/land.md
+          - Layer 2 Net: basics/object-types/layer-2-netz.md
+          - Layer 3 Net: basics/object-types/layer-3-netz.md
+          - Conduit: basics/object-types/leerrohr.md
+          - Wiring System: basics/object-types/leitungsnetz.md
+          - Licenses: basics/object-types/licenses.md
+          - Middleware: basics/object-types/middleware.md
+          - Mobile Phone: basics/object-types/mobiltelefon.md
+          - Monitor: basics/object-types/monitor.md
+          - Net Zone: basics/object-types/net-zone.md
+          - Emergency Power Supply: basics/object-types/emergency-power-supply.md
+          - Emergency Plan: basics/object-types/notfallplan.md
+          - Object Group: basics/object-types/objektgruppe.md
+          - Organization: basics/object-types/organisation.md
+          - Patch Panel: basics/object-types/patchfeld.md
+          - Persons: basics/object-types/personen.md
+          - Person Groups: basics/object-types/personengruppen.md
+          - Printbox: basics/object-types/printbox.md
+          - Rack Segment: basics/object-types/rack-segment.md
+          - Room: basics/object-types/raum.md
+          - Remote Management Controller: basics/object-types/remote-management-controller.md
+          - Replication Object: basics/object-types/replikationsobjekt.md
+          - Router: basics/object-types/router.md
+          - SAN Zoning: basics/object-types/san-zoning.md
+          - Cabinet: basics/object-types/schrank.md
+          - Server: basics/object-types/server.md
+          - Service: basics/object-types/service.md
+          - SIM Card: basics/object-types/sim-karte.md
+          - Storage System: basics/object-types/speichersystem.md
+          - Stacking: basics/object-types/stacking.md
+          - City: basics/object-types/stadt.md
+          - Power Distribution Unit: basics/object-types/steckdosenleiste.md
+          - Supernet: basics/object-types/supernet.md
+          - Switch: basics/object-types/switch.md
+          - Switch Chassis: basics/object-types/switch-chassis.md
+          - System Service: basics/object-types/systemdienst.md
+          - Telephone: basics/object-types/telefon.md
+          - Telephone System: basics/object-types/telephone-system.md
+          - Uninterruptible Power Supply: basics/object-types/usv.md
+          - Amplifier: basics/object-types/amplifier.md
+          - Distribution Box: basics/object-types/distribution-box.md
+          - Contract: basics/object-types/contract.md
+          - Virtual Client: basics/object-types/virtual-client.md
+          - Virtual Host: basics/object-types/virtual-host.md
+          - Virtual Server: basics/object-types/virtual-server.md
+          - VoIP Phone: basics/object-types/voip-telefon.md
+          - VRRP: basics/object-types/vrrp.md
+          - VRRP/HSRP Cluster: basics/object-types/vrrp-hsrp-cluster.md
+          - WAN Connection: basics/object-types/wan-connection.md
+          - Wireless Access Point: basics/object-types/wireless-access-point.md
+      - Object Type Configuration: basics/object-type-configuration.md
+      - Assigning Categories to Object Types: basics/assigning-categories-to-object-types.md
+      - Categories and Attributes: basics/categories-and-attributes.md
+      - Category Reference:
+          - basics/categories/index.md
+          - General: basics/categories/global.md
+          - Connectors: basics/categories/connector.md
+          - Address: basics/categories/address.md
+          - Applications: basics/categories/s-application.md
+          - Workstation System: basics/categories/s-client.md
+          - Operating System: basics/categories/operating-system.md
+          - Operating Systems: basics/categories/s-operating-system.md
+          - Relation: basics/categories/relation.md
+          - Branch: basics/categories/s-pdu-branch.md
+          - Accounting: basics/categories/accounting.md
+          - Chassis: basics/categories/s-chassis.md
+          - Chassis View: basics/categories/s-chassis-view.md
+          - Cluster: basics/categories/cluster.md
+          - Cluster (Root): basics/categories/cluster-root.md
+          - Cluster Service Assignment: basics/categories/cluster-service.md
+          - Cluster Members: basics/categories/cluster-members.md
+          - Cluster Memberships: basics/categories/cluster-memberships.md
+          - Controller: basics/categories/controller.md
+          - CPU: basics/categories/cpu.md
+          - File Assignment: basics/categories/file.md
+          - Database Gateway: basics/categories/s-database-gateway.md
+          - Databases: basics/categories/database-sa.md
+          - Database Links: basics/categories/s-database-links.md
+          - Database Objects: basics/categories/s-database-objects.md
+          - Database Schema: basics/categories/s-database-schema.md
+          - Database Table: basics/categories/database-table.md
+          - Database Access: basics/categories/s-database-access.md
+          - Database Assignment: basics/categories/database-assignment.md
+          - Backup: basics/categories/backup.md
+          - Backup (Assigned Objects): basics/categories/backup--assigned-objects.md
+          - DBMS Information: basics/categories/database.md
+          - DHCP: basics/categories/s-net-dhcp.md
+          - Services: basics/categories/s-service.md
+          - Printer: basics/categories/s-prt.md
+          - E-Mail Addresses: basics/categories/mail-addresses.md
+          - Fiber/Lead: basics/categories/fiber-lead.md
+          - FC-Port: basics/categories/controller-fc-port.md
+          - Form Factor: basics/categories/formfactor.md
+          - Share: basics/categories/shares.md
+          - Share Access: basics/categories/share-access.md
+          - Guest Systems: basics/categories/guest-systems.md
+          - Device: basics/categories/storage-device.md
+          - Graphics Card: basics/categories/graphic.md
+          - Group Membership: basics/categories/group-memberships.md
+          - Manual Assignment: basics/categories/manual.md
+          - Host Adapter (HBA): basics/categories/hba.md
+          - Host Address: basics/categories/ip.md
+          - Installation: basics/categories/s-application-assigned-obj.md
+          - IP List: basics/categories/s-net-ip-addresses.md
+          - Cable: basics/categories/cable.md
+          - Cards: basics/categories/cards.md
+          - Contact Assignment: basics/categories/contact.md
+          - Drive: basics/categories/drive.md
+          - Listener: basics/categories/net-listener.md
+          - License Keys: basics/categories/s-licence-list.md
+          - Logbook: basics/categories/logbook.md
+          - Login: basics/categories/s-person-login.md
+          - Logical Devices (Client): basics/categories/ldev-client.md
+          - Logical Devices (LDEV Server): basics/categories/ldev-server.md
+          - Logical Network Ports: basics/categories/network-log-port.md
+          - Mobile Radio: basics/categories/s-cell-phone-contract.md
+          - Model: basics/categories/model.md
+          - Monitor: basics/categories/s-monitor.md
+          - Net: basics/categories/s-net.md
+          - Net Zones: basics/categories/s-net-zone.md
+          - Network: basics/categories/network.md
+          - Network Interface: basics/categories/network-interface.md
+          - Network Listener: basics/categories/net-connections-folder.md
+          - Network Port: basics/categories/network-port.md
+          - Network Connections: basics/categories/net-connector.md
+          - Emergency Plan Assignment: basics/categories/emergency-plan.md
+          - Object Image: basics/categories/image.md
+          - Organization: basics/categories/s-organization.md
+          - PDU: basics/categories/s-pdu.md
+          - Persons: basics/categories/s-person.md
+          - Person Groups: basics/categories/s-person-group.md
+          - Person Group Members: basics/categories/s-person-group-members.md
+          - Person Group Membership: basics/categories/s-person-assigned-groups.md
+          - RAID Array: basics/categories/raid.md
+          - Room: basics/categories/s-room.md
+          - Computing Resources: basics/categories/computing-resources.md
+          - Invoice: basics/categories/invoice.md
+          - Remote Management Controller: basics/categories/rm-controller.md
+          - Routing: basics/categories/s-router.md
+          - Locally Assigned Objects: basics/categories/object.md
+          - Interface: basics/categories/universal-interface.md
+          - Cabinet: basics/categories/s-enclosure.md
+          - Service Assignment: basics/categories/it-service.md
+          - SIM: basics/categories/sim.md
+          - Slots: basics/categories/s-chassis-slot.md
+          - Software Assignment: basics/categories/application.md
+          - Sound Card: basics/categories/sound.md
+          - Memory: basics/categories/memory.md
+          - Master Data (Organization): basics/categories/s-organization-master-data.md
+          - Master Data (Person): basics/categories/s-person-master.md
+          - Master Data (Person Group): basics/categories/s-person-group-master.md
+          - Location: basics/categories/location.md
+          - Status Planning: basics/categories/planning.md
+          - Power Consumer: basics/categories/power-consumer.md
+          - Switch: basics/categories/s-switch-net.md
+          - Variants: basics/categories/s-application-variant.md
+          - Version: basics/categories/version.md
+          - Contract Assignment: basics/categories/contract-assignment.md
+          - Management Instance: basics/categories/cluster-adm-service.md
+          - Virtual Devices: basics/categories/virtual-device.md
+          - Virtual Machine: basics/categories/virtual-machine.md
+          - Virtual Machine (Root): basics/categories/virtual-machine--root.md
+          - Virtual Switches: basics/categories/virtual-switch.md
+          - Virtual Host: basics/categories/virtual-host.md
+          - Virtual Host (Root): basics/categories/virtual-host-root.md
+          - WAN Connection: basics/categories/wan.md
+          - Certificate: basics/categories/certificate.md
+          - Assigned Workstations: basics/categories/person-assigned-workstation.md
+          - Assigned Devices: basics/categories/s-chassis-devices.md
+          - Assigned Objects (Organization): basics/categories/s-organization-contact-assignment.md
+          - Assigned Objects (Person): basics/categories/s-person-contact-assignment.md
+          - Assigned Objects (Person Group): basics/categories/s-person-group-contact-assignment.md
+          - Assigned Persons (Organization): basics/categories/s-organization-persons.md
+          - Assigned SIM Cards: basics/categories/assigned-sim-cards.md
+          - Assigned Workstation: basics/categories/assigned-workstation.md
+          - Access: basics/categories/access.md
+      - Custom Object Types: basics/custom-object-types.md
+      - Custom Categories: basics/custom-categories.md
       - Logbook: basics/logbook.md
-      - Object relations: basics/object-relations.md
-      - Life and documentation cycle: basics/life-and-documentation-cycle.md
-      - Unique references: basics/unique-references.md
+      - Object Relationships: basics/object-relationships.md
+      - Life and Documentation Cycle: basics/life-and-documentation-cycle.md
+      - Unique References: basics/unique-references.md
       - Web GUI: basics/web-gui.md
-      - Custom counter: basics/custom-counter.md
-  - User authentication and management:
+      - Custom Counters: basics/custom-counters.md
+  - User Authentication and Management:
       - user-authentication-and-management/index.md
-      - Builtin authentication:
-          - user-authentication-and-management/builtin-authentication/index.md
-          - Creating a local user: user-authentication-and-management/builtin-authentication/creating-a-local-user.md
+      - Integrated Authentication:
+          - user-authentication-and-management/built-in-authentication/index.md
+          - Create Local User: user-authentication-and-management/built-in-authentication/create-local-user.md
       - Authentication with LDAP:
           - user-authentication-and-management/ldap-directory/index.md
-          - LDAPS Debian configuration: user-authentication-and-management/ldap-directory/ldap-tls.md
+          - LDAPS Debian Configuration: user-authentication-and-management/ldap-directory/ldap-tls.md
           - LDAPS i-doit for Windows: user-authentication-and-management/ldap-directory/i-doit-win-ldaps.md
-          - User/Group synchronization: user-authentication-and-management/ldap-directory/import-users-and-groups.md
-      - Two-factor Authentication (2FA): user-authentication-and-management/2fa/index.md
-      - SSO authentication comparison:
+          - User/Group Synchronization: user-authentication-and-management/ldap-directory/user-group-synchronization.md
+      - Two-Factor Authentication (2FA): user-authentication-and-management/2fa/index.md
+      - SSO Authentication Comparison:
           - user-authentication-and-management/sso-comparison/index.md
       - SSO with SAML:
           - user-authentication-and-management/sso-comparison/saml/index.md
@@ -349,196 +600,198 @@ nav:
       - SSO with Kerberos: user-authentication-and-management/sso-comparison/kerberos/index.md
       - SSO with OpenID Connect OAuth2:
           - user-authentication-and-management/sso-comparison/openid/index.md
-          - Google authentication: user-authentication-and-management/sso-comparison/openid/google-openid.md
+          - Google Authentication: user-authentication-and-management/sso-comparison/openid/google-openid.md
       - SSO Fallback to Builtin: user-authentication-and-management/sso-comparison/sso-fallback/index.md
-  - Efficient documentation:
+  - Efficient Documentation:
       - efficient-documentation/index.md
-      - List editing: efficient-documentation/list-editing.md
-      - Mass change: efficient-documentation/mass-change.md
-      - Duplicate objects: efficient-documentation/duplicate-objects.md
+      - List Editing: efficient-documentation/list-editing.md
+      - Mass Change: efficient-documentation/mass-change.md
+      - Duplicate Objects: efficient-documentation/duplicate-objects.md
       - Templates: efficient-documentation/templates.md
-      - Attribute validation and mandatory fields: efficient-documentation/attribute-validation-and-mandatory-fields.md
-      - Rights management:
-          - efficient-documentation/rights-management/index.md
-          - CMDB (User Rights Management): efficient-documentation/rights-management/cmdb-right-management.md
-          - Rights management via roles: efficient-documentation/rights-management/user-right-management-via-roles.md
+      - Attribute Validation and Required Fields: efficient-documentation/attribute-validation-and-required-fields.md
+      - Permission Management:
+          - efficient-documentation/permission-management/index.md
+          - CMDB (Permission Management): efficient-documentation/permission-management/cmdb.md
+          - Permission Assignment via Roles: efficient-documentation/permission-management/permission-assignment-via-roles.md
       - Search: efficient-documentation/search.md
-      - Object lock: efficient-documentation/object-lock.md
-  - Evaluation:
+      - Object Lock: efficient-documentation/objektsperre.md
+  - Reporting:
       - evaluation/index.md
-      - Report manager: evaluation/report-manager.md
+      - Report-Manager: evaluation/report-manager.md
       - Notifications: evaluation/notifications.md
       - CMDB-Explorer:
           - evaluation/cmdb-explorer/index.md
-          - Profiles in the CMDB Explorer: evaluation/cmdb-explorer/profiles-in-the-cmdb-explorer.md
-      - Rack view: evaluation/rack-view.md
-      - IP list: evaluation/ip-list.md
-  - Consolidate data:
+          - Profiles in CMDB Explorer: evaluation/cmdb-explorer/profile-im-cmdb-explorer.md
+      - Rack View: evaluation/rack-ansicht.md
+      - IP Lists: evaluation/ip-listen.md
+  - Consolidate Data:
       - consolidate-data/index.md
-      - CSV data import:
+      - CSV Data Import:
           - consolidate-data/csv-data-import/index.md
-          - Example CSV import - Applications: consolidate-data/csv-data-import/example-csv-import-applications.md
-          - Example CSV import - Workplaces: consolidate-data/csv-data-import/example-csv-import-workplaces.md
-          - Example CSV import - Licenses: consolidate-data/csv-data-import/example-csv-import-licenses.md
-          - Example CSV import - Locations: consolidate-data/csv-data-import/example-csv-import-creating-locations.md
-      - CSV data export: consolidate-data/csv-data-export.md
+          - CSV Import Example - Applications: consolidate-data/csv-data-import/csv-import-example-applications.md
+          - CSV Import Example - Workstations: consolidate-data/csv-data-import/csv-import-example-workstations.md
+          - CSV Import Example - Licenses: consolidate-data/csv-data-import/csv-import-example-licenses.md
+          - CSV Import Example - Create Locations: consolidate-data/csv-data-import/csv-import-example-locations.md
+      - CSV Data Export: consolidate-data/csv-datenexport.md
       - h-inventory: consolidate-data/h-inventory.md
       - JDisc Discovery:
           - consolidate-data/jdisc/index.md
-          - Erweiterte Optionen für JDisc-Importprofile: consolidate-data/jdisc/advanced-options.md
-      - LOGINventory: consolidate-data/loginventory.md
-      - Object identification during imports: consolidate-data/object-identification-during-imports.md
-  - Automation and integration:
+          - Advanced Options for JDisc Import Profiles: consolidate-data/jdisc/advanced-options.md
+      - Identify Objects During Imports: consolidate-data/identify-objects-during-imports.md
+  - Automation and Integration:
       - automation-and-integration/index.md
       - E-Mail (SMTP): automation-and-integration/e-mail.md
       - i-doit console utility:
           - automation-and-integration/cli/index.md
-          - Configuration files: automation-and-integration/cli/configuration-files.md
-          - Commands and options: automation-and-integration/cli/commands-and-options.md
+          - Configuration Files: automation-and-integration/cli/configuration-files.md
+          - Commands and Options: automation-and-integration/cli/commands-and-options.md
       - Network Monitoring:
           - automation-and-integration/network-monitoring/index.md
-          - Fetch Data with Livestatus/ NDOUtils: automation-and-integration/network-monitoring/fetch-data-with-livestatus-ndo.md
+          - Query Data with Livestatus/NDOUtils: automation-and-integration/network-monitoring/query-data-with-livestatus.md
       - Trouble Ticket System (TTS):
           - automation-and-integration/service-desk/index.md
           - Request Tracker (RT): automation-and-integration/service-desk/request-tracker.md
           - ((OTRS)) Community Edition Help Desk: automation-and-integration/service-desk/otrscommunity-help-desk.md
           - Zammad: automation-and-integration/service-desk/zammad.md
       - SNMP: automation-and-integration/snmp.md
-      - Task scheduling & Cronjobs: automation-and-integration/task-scheduling-and-cronjobs.md
-  - System Administration:
-      - system-administration/index.md
-      - Administration:
-          - system-administration/administration/index.md
-          - User settings:
-              - system-administration/administration/user-settings/index.md
-              - Change password: system-administration/administration/user-settings/change-password.md
-              - Data format: system-administration/administration/user-settings/data-format.md
-              - User language: system-administration/administration/user-settings/user-language.md
-              - User interface:
-                  - system-administration/administration/user-settings/user-interface/index.md
-                  - Category lists: system-administration/administration/user-settings/user-interface/category-lists.md
-                  - Object lists: system-administration/administration/user-settings/user-interface/object-lists.md
-              - Editing lock: system-administration/administration/user-settings/editing-lock.md
-          - '[Tenant name] management':
-              - system-administration/administration/tenant-management/index.md
-              - 'Settings for [Tenant name]': system-administration/administration/tenant-management/settings-for-tenant.md
-              - Repair and clean up: system-administration/administration/tenant-management/repair-and-clean-up.md
-              - Expert settings: system-administration/administration/tenant-management/expert-settings.md
-          - Data structure:
-              - system-administration/administration/data-structure/index.md
-              - Edit data structure: system-administration/administration/data-structure/edit-data-structure.md
-              - Objects types: system-administration/administration/data-structure/object-types.md
-              - Custom categories: system-administration/administration/data-structure/custom-categories.md
-          - Data view:
-              - system-administration/administration/data-view/index.md
-              - Configure object browser: system-administration/administration/data-view/configure-object-browser.md
-              - Attribute settings: system-administration/administration/data-view/attribute-settings.md
-              - Language profiles: system-administration/administration/data-view/language-profiles.md
-              - Category folders: system-administration/administration/data-view/category-folders.md
-          - Predefined content:
-              - system-administration/administration/predefined-content/index.md
-              - CMDB Status: system-administration/administration/predefined-content/cmdb-status.md
-              - Contact assignment roles: system-administration/administration/predefined-content/contact-assignment-roles.md
-              - Custom counter: system-administration/administration/predefined-content/custom-counter.md
-              - Dialog admin: system-administration/administration/predefined-content/dialog-admin.md
-              - Object relation types: system-administration/administration/predefined-content/object-relation-types.md
-              - QR Code: system-administration/administration/predefined-content/qr-code.md
-          - User permissions: system-administration/administration/user-permissions.md
-          - Logbook: system-administration/administration/logbook.md
-          - Import and interfaces:
-              - system-administration/administration/import-and-interfaces/index.md
-              - Import matching profiles: system-administration/administration/import-and-interfaces/import-matching-profiles.md
-              - h-inventory: system-administration/administration/import-and-interfaces/h-inventory.md
-              - SMTP configuration (E-Mail): system-administration/administration/import-and-interfaces/smtp.md
+      - Task Scheduling & Cron Jobs: automation-and-integration/task-scheduling-and-cron-jobs.md
+  - Administration:
+      - administration/index.md
+      - Management:
+          - administration/management/index.md
+          - User Settings:
+              - administration/management/user-settings/index.md
+              - Change Password: administration/management/user-settings/change-password.md
+              - Data Formats: administration/management/user-settings/datenformate.md
+              - User Language: administration/management/user-settings/user-language.md
+              - User Interface:
+                  - administration/management/user-settings/user-interface/index.md
+                  - Category Lists: administration/management/user-settings/user-interface/kategorie-listen.md
+                  - Object Lists: administration/management/user-settings/user-interface/object-lists.md
+              - Edit Lock: administration/management/user-settings/edit-lock.md
+          - '[Tenant-Name] Management':
+              - administration/management/tenant-management/index.md
+              - 'Settings for [Tenant-Name]': administration/management/tenant-management/tenant-settings.md
+              - System Repair and Cleanup: administration/management/tenant-management/system-repair-and-cleanup.md
+              - Expert Settings: administration/management/tenant-management/expert-settings.md
+          - Data Structure:
+              - administration/management/data-structure/index.md
+              - Edit Data Structure: administration/management/data-structure/edit-data-structure.md
+              - Object Types: administration/management/data-structure/object-types.md
+              - Custom Categories: administration/management/data-structure/custom-categories.md
+          - Data View:
+              - administration/management/data-view/index.md
+              - Configure Object Browser: administration/management/data-view/configure-object-browser.md
+              - Attribute Settings: administration/management/data-view/attribute-settings.md
+              - Language Profiles: administration/management/data-view/language-profiles.md
+              - Category Folders: administration/management/data-view/kategorieordner.md
+          - Predefined Content:
+              - administration/management/predefined-content/index.md
+              - CMDB Status: administration/management/predefined-content/cmdb-status.md
+              - Contact Assignment Roles: administration/management/predefined-content/kontaktzuweisungsrollen.md
+              - Custom Counters: administration/management/predefined-content/custom-counters.md
+              - Dialog admin: administration/management/predefined-content/dialog-admin.md
+              - Object Relationship Types: administration/management/predefined-content/object-relationship-types.md
+              - QR Code: administration/management/predefined-content/qr-code.md
+          - Permissions: administration/management/permissions.md
+          - Logbook: administration/management/logbook/index.md
+          - Import and Interfaces:
+              - administration/management/import-and-interfaces/index.md
+              - Import Matching Profile: administration/management/import-and-interfaces/import-matching-profile.md
+              - h-inventory: administration/management/import-and-interfaces/h-inventory.md
+              - SMTP Configuration (E-Mail): administration/management/import-and-interfaces/smtp-konfiguration-email.md
               - JDisc:
-                  - system-administration/administration/import-and-interfaces/jdisc/index.md
-                  - JDisc Configuration: system-administration/administration/import-and-interfaces/jdisc/jdisc-configuration.md
-                  - JDisc profiles: system-administration/administration/import-and-interfaces/jdisc/jdisc-profiles.md
+                  - administration/management/import-and-interfaces/jdisc/index.md
+                  - JDisc Configuration: administration/management/import-and-interfaces/jdisc/jdisc-konfiguration.md
+                  - JDisc Profiles: administration/management/import-and-interfaces/jdisc/jdisc-profile.md
               - LDAP:
-                  - system-administration/administration/import-and-interfaces/ldap/index.md
-                  - Server: system-administration/administration/import-and-interfaces/ldap/server.md
-                  - Directories: system-administration/administration/import-and-interfaces/ldap/directories.md
-                  - Attribute extension: system-administration/administration/import-and-interfaces/ldap/attribute-extension.md
-              - Trouble Ticket System (TTS): system-administration/administration/import-and-interfaces/tts.md
+                  - administration/management/import-and-interfaces/ldap/index.md
+                  - Server: administration/management/import-and-interfaces/ldap/server.md
+                  - Directories: administration/management/import-and-interfaces/ldap/directories.md
+                  - Attribute Extension: administration/management/import-and-interfaces/ldap/attribute-extension.md
+              - Trouble Ticket System (TTS): administration/management/import-and-interfaces/troubleticket-system.md
               - Monitoring:
-                  - system-administration/administration/import-and-interfaces/monitoring/index.md
-                  - Livestatus / NDO: system-administration/administration/import-and-interfaces/monitoring/livestatus-ndo.md
-                  - Export Configuration: system-administration/administration/import-and-interfaces/monitoring/export-configuration.md
+                  - administration/management/import-and-interfaces/monitoring/index.md
+                  - Livestatus / NDO: administration/management/import-and-interfaces/monitoring/livestatus-ndo.md
+                  - Export Configuration: administration/management/import-and-interfaces/monitoring/exportkonfiguration.md
           - Add-ons:
-              - system-administration/administration/add-ons/index.md
+              - administration/management/add-ons/index.md
               - JSON-RPC API:
-                  - system-administration/administration/add-ons/json-rpc-api/index.md
-                  - Categories and attributes: system-administration/administration/add-ons/json-rpc-api/categories-and-attributes.md
-              - Events: system-administration/administration/add-ons/events.md
-              - Replacement:
-                  - system-administration/administration/add-ons/replacement/index.md
-                  - Configuration: system-administration/administration/add-ons/replacement/configuration/index.md
-          - Two-factor Authentication: system-administration/administration/two-factor-authentication.md
-      - Add-on & Subscription Center: system-administration/add-on-and-subscription-center.md
-      - Admin-Center: system-administration/admin-center.md
-      - Customer portal: system-administration/customer-portal.md
-      - Localization: system-administration/localization.md
-      - Multi-Tenants: system-administration/multi-tenant.md
-      - Password reset: system-administration/password-reset.md
-      - Find or reset your license token: system-administration/reset-token.md
-      - Rights management:
-          - efficient-documentation/rights-management/index.md
-          - CMDB (User Rights Management): efficient-documentation/rights-management/cmdb-right-management.md
-          - Rights management via roles: efficient-documentation/rights-management/user-right-management-via-roles.md
+                  - administration/management/add-ons/json-rpc-api/index.md
+                  - Categories and Attributes: administration/management/add-ons/json-rpc-api/categories-and-attributes.md
+              - Events: administration/management/add-ons/events.md
+              - Device Swap:
+                  - administration/management/add-ons/device-swap/index.md
+                  - Configuration: administration/management/add-ons/device-swap/konfiguration.md
+          - Two-Factor Authentication: administration/management/two-factor-authentication.md
+      - Add-on & Subscription Center: administration/add-on-and-subscription-center.md
+      - Admin Center: administration/admin-center.md
+      - Customer Portal: administration/customer-portal.md
+      - Multi-Tenancy: administration/multi-tenancy.md
+      - Multilingual Support and Translations: administration/multilingual-support.md
+      - Reset Password: administration/reset-password.md
+      - Find or Reset License Token: administration/reset-token.md
+      - Permission Management:
+          - efficient-documentation/permission-management/index.md
+          - CMDB (Permission Management): efficient-documentation/permission-management/cmdb.md
+          - Permission Assignment via Roles: efficient-documentation/permission-management/permission-assignment-via-roles.md
       - Troubleshooting:
-          - system-administration/troubleshooting/index.md
-          - Known update problems: system-administration/troubleshooting/known-update-problems.md
-          - Lost link to database: system-administration/troubleshooting/lost-link-to-database.md
-          - MySQL-Server has gone away: system-administration/troubleshooting/mysql-server-has-gone-away.md
-          - Can not create table idoit_data.table_name: system-administration/troubleshooting/cant-create-table.md
-          - No login after changing the session timeout: system-administration/troubleshooting/no-login-after-changing-the-session-timeout.md
-          - LDAP via TLS: system-administration/troubleshooting/ldap-via-tls.md
-          - MySQL/MariaDB does not start after changing innodb_log_file_size: system-administration/troubleshooting/mysql-mariadb-does-not-start.md
-          - Row size too large: system-administration/troubleshooting/row-size-too-large.md
-          - Location cannot be saved: system-administration/troubleshooting/location-cannot-be-saved.md
-          - Database corrupt errors: system-administration/troubleshooting/mariadb-database-corruption.md
+          - administration/troubleshooting/index.md
+          - Known Update Issues: administration/troubleshooting/known-update-issues.md
+          - Lost link to database: administration/troubleshooting/lost-link-to-database.md
+          - MySQL-Server has gone away: administration/troubleshooting/mysql-server-has-gone-away.md
+          - Can not create table idoit_data.table_name: administration/troubleshooting/cant-create-table.md
+          - No Login After Session Timeout Change: administration/troubleshooting/no-login-after-session-timeout.md
+          - LDAP via TLS: administration/troubleshooting/ldap-via-tls.md
+          - MySQL/MariaDB Does Not Start After Changing innodb_log_file_size: administration/troubleshooting/mysql-mariadb-startet-nicht.md
+          - Row size too large: administration/troubleshooting/row-size-too-large.md
+          - Location Cannot Be Saved: administration/troubleshooting/location-cannot-be-saved.md
+          - Database Corrupt Error: administration/troubleshooting/mariadb-database-corruption.md
       - Hotfixes:
-          - system-administration/hotfixes/index.md
-          - i-doit 1.12.2 Update-Button funktionslos: system-administration/hotfixes/i-doit-1.12.2-update-button-does-not-work.md
-          - i-doit 1.13.2 & 1.14 Login im Admin-Center nicht möglich: system-administration/hotfixes/i-doit-1.13.2-1.14-login-admincenter.md
-          - Hotfix archive:
-              - system-administration/hotfixes/hotfix-archive/index.md
-              - Version 37: system-administration/hotfixes/hotfix-archive/v37.md
-              - Version 36: system-administration/hotfixes/hotfix-archive/v36.md
-              - Version 35: system-administration/hotfixes/hotfix-archive/v35.md
-              - Version 34: system-administration/hotfixes/hotfix-archive/v34.md
-              - Version 33: system-administration/hotfixes/hotfix-archive/v33.md
-              - Version 32: system-administration/hotfixes/hotfix-archive/v32.md
-              - Version 31: system-administration/hotfixes/hotfix-archive/v31.md
-              - Version 30: system-administration/hotfixes/hotfix-archive/v30.md
-              - Version 29: system-administration/hotfixes/hotfix-archive/v29.md
-              - Version 28: system-administration/hotfixes/hotfix-archive/v28.md
-              - Version 27: system-administration/hotfixes/hotfix-archive/v27.md
-              - Version 26: system-administration/hotfixes/hotfix-archive/v26.md
-              - Version 25: system-administration/hotfixes/hotfix-archive/v25.md
-              - Version 24: system-administration/hotfixes/hotfix-archive/v24.md
-              - Version 23: system-administration/hotfixes/hotfix-archive/v23.md
-              - Version 22: system-administration/hotfixes/hotfix-archive/v22.md
-  - Use cases:
+          - administration/hotfixes/index.md
+          - i-doit 1.12.2 Update Button Not Working: administration/hotfixes/i-doit-1.12.2-update-button-funktionslos.md
+          - i-doit 1.13.2 & 1.14 Login in Admin Center Not Possible: administration/hotfixes/i-doit-1.13.2-1.14-login-issue.md
+          - Hotfix Archive:
+              - administration/hotfixes/hotfix-archive/index.md
+              - Version 37: administration/hotfixes/hotfix-archive/v37.md
+              - Version 36: administration/hotfixes/hotfix-archive/v36.md
+              - Version 35: administration/hotfixes/hotfix-archive/v35.md
+              - Version 34: administration/hotfixes/hotfix-archive/v34.md
+              - Version 33: administration/hotfixes/hotfix-archive/v33.md
+              - Version 32: administration/hotfixes/hotfix-archive/v32.md
+              - Version 31: administration/hotfixes/hotfix-archive/v31.md
+              - Version 30: administration/hotfixes/hotfix-archive/v30.md
+              - Version 29: administration/hotfixes/hotfix-archive/v29.md
+              - Version 28: administration/hotfixes/hotfix-archive/v28.md
+              - Version 27: administration/hotfixes/hotfix-archive/v27.md
+              - Version 26: administration/hotfixes/hotfix-archive/v26.md
+              - Version 25: administration/hotfixes/hotfix-archive/v25.md
+              - Version 24: administration/hotfixes/hotfix-archive/v24.md
+              - Version 23: administration/hotfixes/hotfix-archive/v23.md
+              - Version 22: administration/hotfixes/hotfix-archive/v22.md
+  - Use Cases:
       - use-cases/index.md
-      - Automated contract term extension: use-cases/automated-contract-term-extension.md
-      - Cable patches and paths: use-cases/cable-patches-and-path.md
-      - Complex reports: use-cases/complex-reports.md
-      - Custom translations: use-cases/custom-translation.md
-      - Documentation of databases: use-cases/documentation-of-databases.md
-      - Documentation of licenses: use-cases/documentation-of-licenses.md
-      - Geo coordinates: use-cases/geo-coordinates.md
+      - Mapping Customer Locations: use-cases/mapping-customer-locations.md
+      - Workstations: use-cases/workstations.md
+      - Custom Translations: use-cases/custom-translations.md
+      - Automated Contract Term Renewal: use-cases/automated-contract-renewal.md
+      - Upload and Link Files: use-cases/upload-and-link-files.md
+      - Documenting Databases: use-cases/documenting-databases.md
+      - Documenting Licenses: use-cases/documenting-licenses.md
+      - Populate Excel with i-doit Data: use-cases/populate-excel-with-i-doit-data.md
+      - Geo Coordinates: use-cases/geo-koordinaten.md
       - i-doit - Patch Manager bridge: use-cases/i-doit-patch-manager-bridge.md
-      - IP address management (IPAM): use-cases/ip-adress-management.md
-      - Location-based authorization: use-cases/location-bases-authorization.md
+      - IP Address Management (IPAM): use-cases/ip-adress-management.md
+      - ISO 27000 with i-doit: use-cases/iso27000-with-i-doit.md
+      - Cable Patches and Pathways: use-cases/cable-patches-and-pathways.md
+      - Complex Reports: use-cases/komplexe-reports.md
+      - Manage Passwords: use-cases/manage-passwords.md
+      - Prod-Test Database Synchronization: use-cases/prod-test-datenbank-synchronisation.md
+      - Location-Based User Permissions: use-cases/location-based-user-permissions.md
       - Locations: use-cases/locations.md
-      - Manage passwords: use-cases/manage-password.md
-      - Mapping of customer sites: use-cases/mapping-of-customer-sites.md
       - Switch Stacking: use-cases/switch-stacking.md
-      - Upload and link of files: use-cases/upload-and-link-files.md
-      - Variable reports: use-cases/variable-reports.md
-      - VM Provisioning: use-cases/vm-provisioning.md
-      - Workplaces: use-cases/wokplaces.md
+      - Variable Reports: use-cases/variable-reports.md
+      - VM Provisioning (deprecated): use-cases/vm-provisioning.md
   - i-doit Add-ons:
       - i-doit-add-ons/index.md
       - Active Directory Documentation: i-doit-add-ons/active-directory-documentation.md
@@ -548,93 +801,85 @@ nav:
           - i-doit-add-ons/api/index.md
           - Methods:
               - v1:
-                  - i-doit-add-ons/api/methods/index.md
-                  - cmdb.cabling: i-doit-add-ons/api/methods/cmdb.cabling.md
-                  - cmdb.categories: i-doit-add-ons/api/methods/cmdb.categories.md
-                  - cmdb.category_info: i-doit-add-ons/api/methods/cmdb.category_info.md
-                  - cmdb.category: i-doit-add-ons/api/methods/cmdb.category.md
-                  - cmdb.condition: i-doit-add-ons/api/methods/cmdb.condition.md
-                  - cmdb.contact: i-doit-add-ons/api/methods/cmdb.contact.md
-                  - cmdb.dialog: i-doit-add-ons/api/methods/cmdb.dialog.md
-                  - cmdb.filter: i-doit-add-ons/api/methods/cmdb.filter.md
-                  - cmdb.impact: i-doit-add-ons/api/methods/cmdb.impact.md
-                  - cmdb.location_tree: i-doit-add-ons/api/methods/cmdb.location_tree.md
-                  - cmdb.logbook: i-doit-add-ons/api/methods/cmdb.logbook.md
-                  - cmdb.object_type_categories: i-doit-add-ons/api/methods/cmdb.object_type_categories.md
-                  - cmdb.object_type_groups: i-doit-add-ons/api/methods/cmdb.object_type_groups.md
-                  - cmdb.object_types: i-doit-add-ons/api/methods/cmdb.object_types.md
-                  - cmdb.object: i-doit-add-ons/api/methods/cmdb.object.md
-                  - cmdb.objects_by_relation: i-doit-add-ons/api/methods/cmdb.objects_by_relation.md
-                  - cmdb.objects: i-doit-add-ons/api/methods/cmdb.objects.md
-                  - cmdb.reports: i-doit-add-ons/api/methods/cmdb.reports.md
-                  - cmdb.status: i-doit-add-ons/api/methods/cmdb.status.md
-                  - cmdb.workstation_components: i-doit-add-ons/api/methods/cmdb.workstation_components.md
-                  - console: i-doit-add-ons/api/methods/console.md
-                  - idoit: i-doit-add-ons/api/methods/idoit.md
-                  - Add-ons: i-doit-add-ons/api/methods/addons.md
+                  - i-doit-add-ons/api/methods/v1/index.md
+                  - cmdb.cabling: i-doit-add-ons/api/methods/v1/cmdb.cabling.md
+                  - cmdb.categories: i-doit-add-ons/api/methods/v1/cmdb.categories.md
+                  - cmdb.category_info: i-doit-add-ons/api/methods/v1/cmdb.category_info.md
+                  - cmdb.category: i-doit-add-ons/api/methods/v1/cmdb.category.md
+                  - cmdb.condition: i-doit-add-ons/api/methods/v1/cmdb.condition.md
+                  - cmdb.contact: i-doit-add-ons/api/methods/v1/cmdb.contact.md
+                  - cmdb.dialog: i-doit-add-ons/api/methods/v1/cmdb.dialog.md
+                  - cmdb.filter: i-doit-add-ons/api/methods/v1/cmdb.filter.md
+                  - cmdb.impact: i-doit-add-ons/api/methods/v1/cmdb.impact.md
+                  - cmdb.location_tree: i-doit-add-ons/api/methods/v1/cmdb.location_tree.md
+                  - cmdb.logbook: i-doit-add-ons/api/methods/v1/cmdb.logbook.md
+                  - cmdb.object_type_categories: i-doit-add-ons/api/methods/v1/cmdb.object_type_categories.md
+                  - cmdb.object_type_groups: i-doit-add-ons/api/methods/v1/cmdb.object_type_groups.md
+                  - cmdb.object_types: i-doit-add-ons/api/methods/v1/cmdb.object_types.md
+                  - cmdb.object: i-doit-add-ons/api/methods/v1/cmdb.object.md
+                  - cmdb.objects_by_relation: i-doit-add-ons/api/methods/v1/cmdb.objects_by_relation.md
+                  - cmdb.objects: i-doit-add-ons/api/methods/v1/cmdb.objects.md
+                  - cmdb.reports: i-doit-add-ons/api/methods/v1/cmdb.reports.md
+                  - cmdb.status: i-doit-add-ons/api/methods/v1/cmdb.status.md
+                  - cmdb.workstation_components: i-doit-add-ons/api/methods/v1/cmdb.workstation_components.md
+                  - console: i-doit-add-ons/api/methods/v1/console.md
+                  - idoit: i-doit-add-ons/api/methods/v1/idoit.md
+                  - addons: i-doit-add-ons/api/methods/v1/addons.md
               - v2:
                   - i-doit-add-ons/api/methods/v2/index.md
                   - cmdb.external: i-doit-add-ons/api/methods/v2/cmdb.external.md
-          - Examples for handling the API: i-doit-add-ons/api/examples-for-handling-the-api.md
-          - Tips and tricks for working with the API: i-doit-add-ons/api/tips-and-tricks-for-api.md
+          - API Usage Examples: i-doit-add-ons/api/api-usage-examples.md
+          - API Tips and Tricks: i-doit-add-ons/api/api-tips-and-tricks.md
       - Cabling: i-doit-add-ons/cabling.md
       - Checkmk: i-doit-add-ons/checkmk.md
       - Checkmk 2:
           - i-doit-add-ons/checkmk2/index.md
-          - First steps: i-doit-add-ons/checkmk2/first-steps.md
+          - Getting Started: i-doit-add-ons/checkmk2/erste-schritte.md
           - Requirements: i-doit-add-ons/checkmk2/requirements.md
           - Installation: i-doit-add-ons/checkmk2/installation.md
-          - Configuration: i-doit-add-ons/checkmk2/configuration.md
+          - Configuration: i-doit-add-ons/checkmk2/konfiguration.md
           - Usage: i-doit-add-ons/checkmk2/usage.md
-          - Import agents types from checkmk to i-doit: i-doit-add-ons/checkmk2/sync-checkmk-agents.md
-          - Sync contact groups between checkmk and i-doit: i-doit-add-ons/checkmk2/sync-contact-groups.md
-          - Sync WATO folders between checkmk and i-doit: i-doit-add-ons/checkmk2/sync-wato-folder.md
-          - Import monitoring sites from checkmk to i-doit: i-doit-add-ons/checkmk2/sync-checkmk-sites.md
-          - Sync host tags between checkmk and i-doit: i-doit-add-ons/checkmk2/sync-host-tags.md
-          - Generate WATO configuration based on CMDB data: i-doit-add-ons/checkmk2/generate-wato-configuration-base-on-cmdb-data.md
-          - Import inventory data into CMDB: i-doit-add-ons/checkmk2/import-inventory-data-into-cmdb.md
-          - i-doit web GUI: i-doit-add-ons/checkmk2/i-doit-web-gui.md
-          - Read information from i-doit and checkmk: i-doit-add-ons/checkmk2/read-information-from-i-doit-and-checkmk.md
-          - Match objects from i-doit with hosts from checkmk: i-doit-add-ons/checkmk2/match-objects-from-i-doit-with-hosts-from-checkmk.md
-          - Frequently asked questions (FAQ): i-doit-add-ons/checkmk2/faq.md
+          - Synchronize checkmk Agents: i-doit-add-ons/checkmk2/synchronize-checkmk-agents.md
+          - Synchronize Contact Groups: i-doit-add-ons/checkmk2/kontaktgruppen-synchronisieren.md
+          - Synchronize WATO Folders: i-doit-add-ons/checkmk2/wato-ordner-synchronisieren.md
+          - Synchronize checkmk Sites: i-doit-add-ons/checkmk2/checkmk-sites-synchronisieren.md
+          - Synchronize Host Tags: i-doit-add-ons/checkmk2/host-tags-synchronisieren.md
+          - Generate WATO Configuration Based on CMDB Data: i-doit-add-ons/checkmk2/generate-wato-configuration.md
+          - Import Inventory Data into CMDB: i-doit-add-ons/checkmk2/import-inventory-data.md
+          - i-doit Web GUI: i-doit-add-ons/checkmk2/i-doit-web-gui.md
+          - Read Information from i-doit and checkmk: i-doit-add-ons/checkmk2/read-information-from-i-doit-and-checkmk.md
+          - Match Objects from i-doit with Hosts from checkmk: i-doit-add-ons/checkmk2/match-objects-with-checkmk-hosts.md
+          - Frequently Asked Questions (FAQ): i-doit-add-ons/checkmk2/faq.md
       - DNS Documentation: i-doit-add-ons/dns-documentation.md
       - Documents:
           - i-doit-add-ons/documents/index.md
           - Preparation: i-doit-add-ons/documents/preparation.md
-          - Document templates: i-doit-add-ons/documents/document-templates.md
-          - Placeholder in documents: i-doit-add-ons/documents/placeholder-in-the-documents.md
-          - Document creation: i-doit-add-ons/documents/document-creation.md
+          - Document Templates: i-doit-add-ons/documents/document-templates.md
+          - Placeholders: i-doit-add-ons/documents/platzhalter-im-add-on-dokumente.md
+          - Document Creation: i-doit-add-ons/documents/dokumenterstellung.md
       - Events: i-doit-add-ons/events.md
       - Floorplan: i-doit-add-ons/floorplan.md
       - Flows:
           - i-doit-add-ons/flows/index.md
-          - Twig templates: i-doit-add-ons/flows/twig-reference.md
+          - Twig Templates: i-doit-add-ons/flows/twig-reference.md
           - Actions:
-              - Call command: i-doit-add-ons/flows/actions/call-command.md
-          - i-doit 33 update and Flows installation: i-doit-add-ons/flows/flows-guide.md
+              - Execute Command: i-doit-add-ons/flows/actions/call-command.md
+          - i-doit 33 Update and Flows Installation: i-doit-add-ons/flows/flows-guide.md
       - Forms:
           - i-doit-add-ons/forms/index.md
-          - Installing the Forms add-on: i-doit-add-ons/forms/install-forms-addon.md
-          - Create forms: i-doit-add-ons/forms/use-forms.md
-          - Publish forms: i-doit-add-ons/forms/publish-form.md
-          - Fill out form: i-doit-add-ons/forms/fill-out-forms.md
-          - Using Forms Add-on API: i-doit-add-ons/forms/using-forms-api.md
-      - i-diary:
-          - i-doit-add-ons/i-diary/index.md
-          - i-diary Requirements: i-doit-add-ons/i-diary/requirements.md
-          - i-diary Install: i-doit-add-ons/i-diary/install.md
-          - i-diary Update: i-doit-add-ons/i-diary/update.md
-          - i-diary Configuration: i-doit-add-ons/i-diary/configuration.md
-          - i-diary Basic Usage: i-doit-add-ons/i-diary/basic-usage.md
-          - i-diary Determine the author: i-doit-add-ons/i-diary/determine-the-author.md
-          - i-diary Determine the host: i-doit-add-ons/i-diary/determine-the-host.md
+          - Installation of Forms Add-on: i-doit-add-ons/forms/forms-installation.md
+          - Create Forms: i-doit-add-ons/forms/create-forms.md
+          - Publish Forms: i-doit-add-ons/forms/formulare-publishen.md
+          - Fill Out Form: i-doit-add-ons/forms/fill-out-forms.md
+          - Using the Forms API: i-doit-add-ons/forms/using-the-forms-api.md
+      - i-diary: i-doit-add-ons/i-diary.md
       - i-doit QR-Code Printer: i-doit-add-ons/i-doit-qr-code-printer.md
       - ISMS:
           - i-doit-add-ons/isms/index.md
-          - Configuration: i-doit-add-ons/isms/configuration.md
-          - Risk Management: i-doit-add-ons/isms/risk-assessment.md
-          - Reports: i-doit-add-ons/isms/reports.md
-          - Object types and categories: i-doit-add-ons/isms/object-types-and-categories.md
+          - Setup: i-doit-add-ons/isms/configuration.md
+          - Risk Assessment: i-doit-add-ons/isms/risk-assessment.md
+          - Reporting: i-doit-add-ons/isms/reports.md
+          - Object Types and Categories: i-doit-add-ons/isms/object-types-and-categories.md
           - Releases: i-doit-add-ons/isms/releases.md
       - JDisc Connector: i-doit-add-ons/jdisc-connector/index.md
       - Maintenance: i-doit-add-ons/maintenance.md
@@ -642,6 +887,7 @@ nav:
       - OCS Inventory NG: i-doit-add-ons/ocs-inventory-ng.md
       - Relocate-CI: i-doit-add-ons/relocate-ci.md
       - Replacement: i-doit-add-ons/replacement.md
+      - Rights Documentation: i-doit-add-ons/rights-documentation.md
       - SHD Connect:
           - i-doit-add-ons/shd-connect/index.md
           - Telekom-Adapter: i-doit-add-ons/shd-connect/telekom-adapter.md
@@ -650,29 +896,28 @@ nav:
       - VIVA:
           - i-doit-add-ons/viva/index.md
           - Introduction to VIVA: i-doit-add-ons/viva/introduction-to-viva.md
-          - Preparation of the VIVA installation: i-doit-add-ons/viva/preparation-of-the-viva-installation.md
+          - Preparation of VIVA Installation: i-doit-add-ons/viva/preparation-viva-installation.md
           - Procedure with VIVA: i-doit-add-ons/viva/procedure-with-viva.md
-          - Risk analysis according to IT-Grundschutz: i-doit-add-ons/viva/risk-analysis-according-to-it-grundschutz.md
+          - Risk Analysis according to IT-Grundschutz: i-doit-add-ons/viva/risk-analysis-it-grundschutz.md
           - Reports with VIVA: i-doit-add-ons/viva/reports-with-viva.md
-          - Support audits with VIVA: i-doit-add-ons/viva/support-audits-with-viva.md
-          - VIVA assistants: i-doit-add-ons/viva/viva-assistants.md
-          - Object category VIVA: i-doit-add-ons/viva/object-category-viva.md
+          - Support Audits with VIVA: i-doit-add-ons/viva/support-audits-with-viva.md
+          - VIVA Assistants: i-doit-add-ons/viva/viva-assistenten.md
+          - Object Category VIVA: i-doit-add-ons/viva/objekt-kategorie-viva.md
           - VIVA-Widget: i-doit-add-ons/viva/viva-widget.md
           - Workflow with VIVA: i-doit-add-ons/viva/workflow-with-viva.md
       - VIVA2 (IT-Grundschutz):
           - i-doit-add-ons/viva2/index.md
           - Installation and Setup: i-doit-add-ons/viva2/setup.md
-          - IT-Grundschutz-Profile: i-doit-add-ons/viva2/it-grundschutz-profiles.md
-          - Object types and categories: i-doit-add-ons/viva2/objecttypes-categories.md
-          - Structural analysis: i-doit-add-ons/viva2/structural-analysis.md
-          - Protection needs assessment: i-doit-add-ons/viva2/assessment-of-protection.md
-          - Modeling the information scope: i-doit-add-ons/viva2/modeling.md
-          - IT-Grundschutz check: i-doit-add-ons/viva2/it-grundschutz-check.md
+          - IT-Grundschutz Profiles: i-doit-add-ons/viva2/it-grundschutz-profiles.md
+          - Object Types and Categories: i-doit-add-ons/viva2/objecttypes-categories.md
+          - Structural Analysis: i-doit-add-ons/viva2/structural-analysis.md
+          - Assessment of Protection: i-doit-add-ons/viva2/assessment-of-protection.md
+          - Modeling of Information Network: i-doit-add-ons/viva2/modeling.md
+          - IT-Grundschutz-Check: i-doit-add-ons/viva2/it-grundschutz-check.md
           - Reports: i-doit-add-ons/viva2/reports.md
           - Migration from VIVA to VIVA 2: i-doit-add-ons/viva2/migration.md
           - Changelog: i-doit-add-ons/viva2/changelog.md
       - Workflow: i-doit-add-ons/workflow.md
-      - Rights Documentation: i-doit-add-ons/rights-documentation.md
   - i-doit cloud:
       - idoit-cloud/index.md
   - Download Links: download-links.md
@@ -682,28 +927,28 @@ nav:
           - software-development/database-model/index.md
           - Category Tables 1.10: software-development/database-model/category-tables-1.10.md
           - Category Tables 1.9: software-development/database-model/category-tables-1.9.md
-      - Develop add-ons:
-          - software-development/software-development/index.md
-          - Install, update and activate add-ons: software-development/software-development/install-update-and-activate-add-ons.md
-          - File and folder structure of an add-on: software-development/software-development/file-and-folder-structure-of-an-add-on.md
-          - Bootstrapping an add-on (init.php): software-development/software-development/bootstrapping-an-add-on.md
-          - Metadata of an add-on (package.json): software-development/software-development/metadata-of-an-add-on.md
-          - Localization: software-development/software-development/localization.md
-          - Routing and MVC: software-development/software-development/routing-and-mvc.md
-          - Using user rights in the add-on: software-development/software-development/using-user-rights-in-the-add-on.md
-          - Using commands in the add-on: software-development/software-development/using-commands-in-the-add-on.md
-          - Extend system settings: software-development/software-development/extend-system-settings.md
-          - Extend API: software-development/software-development/extend-api.md
-          - Attribute-Definition: software-development/software-development/attribute-definition.md
-          - Program categories: software-development/software-development/program-categories.md
-          - Report views: software-development/software-development/report-views.md
-          - Signal-Slot System: software-development/software-development/signal-slot-system.md
-          - DIY data import: software-development/software-development/diy-data-import.md
-          - Program Dashboard Widget: software-development/software-development/program-dashboard-widgets.md
+      - Developing Add-ons:
+          - software-development/add-on-development/index.md
+          - Install, Update, and Activate Add-ons: software-development/add-on-development/install-update-activate-add-ons.md
+          - File and Folder Structure of an Add-on: software-development/add-on-development/file-and-folder-structure.md
+          - Bootstrapping an Add-on (init.php): software-development/add-on-development/bootstrapping-an-add-on.md
+          - CMDB Processors: software-development/add-on-development/cmdb-prozessoren.md
+          - Metadata of an Add-on (package.json): software-development/add-on-development/add-on-metadata.md
+          - Localization: software-development/add-on-development/localization.md
+          - Routing and MVC: software-development/add-on-development/routing-and-mvc.md
+          - Using Permissions in Add-ons: software-development/add-on-development/using-permissions-in-add-ons.md
+          - Using Commands in Add-ons: software-development/add-on-development/commands-im-add-on-nutzen.md
+          - Extend System Settings: software-development/add-on-development/extend-system-settings.md
+          - Extend API: software-development/add-on-development/api-erweitern.md
+          - Attribute Definition: software-development/add-on-development/attribut-definition.md
+          - Programming Categories: software-development/add-on-development/programming-categories.md
+          - Report Views: software-development/add-on-development/report-views.md
+          - Signal-Slot System: software-development/add-on-development/signal-slot-system.md
+          - DIY Data Import: software-development/add-on-development/diy-data-import.md
+          - Programming Dashboard Widgets: software-development/add-on-development/programming-dashboard-widgets.md
   - Glossary: glossary.md
   - FAQ: faq.md
 not_in_nav: |
-  _archive/*
-  i-doit-add-ons/api/methods/cmdb.ip_search.md
+  _archiv/*
+  i-doit-add-ons/api/methods/v1/cmdb.ip_search.md
   i-doit-add-ons/flows.md
-  download-links.md

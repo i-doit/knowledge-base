@@ -1,49 +1,60 @@
+---
+title: "Dialog-Admin"
+description: "The Dialog-Admin is the central management point for all Dialog+ fields in _i-doit_ -- i.e. dropdown fields whose selection values you can edit yourself..."
+icon:
+status:
+lang: en
+---
 # Dialog-Admin
 
-The [attribute field](./attribute-fields.md) **Dialog+**, which is a dropdown field where you can edit values, is used quite often in i-doit. These attribute fields can be found in many [categories](../glossary.md) of the [IT documentation](../glossary.md) or in other features provided by i-doit. The central administration of the values is carried out via the **Dialog-Admin** in the **Administration**.
+The Dialog-Admin is the central management point for all **Dialog+** fields in _i-doit_ -- i.e. dropdown fields whose selection values you can edit yourself.
+
+These fields are used in many [categories](../glossary.md) of the [IT documentation](../glossary.md). Via the Dialog-Admin you manage all values in one central location.
 
 ## Overview
 
-You can find an overview of all [attributes](../glossary.md) of the field type **Dialog+** under **Administration → Predefined content → Dialog-Admin**. They are sorted alphabetically according to the associated categories in the left navigation tree. When you created a [custom category](./custom-categories.md) with an attribute of the field type **Dialog+**, this attribute and its related category is also displayed in the navigation tree under **Custom Dialog+**.
+You can find the Dialog-Admin under **Administration → Predefined content → Dialog-Admin**. In the left navigation tree, all [attributes](../glossary.md) of the **Dialog+** field type are sorted alphabetically by their associated categories.
 
-[![Overview](../assets/images/en/basics/dialog-admin/1-da.png)](../assets/images/en/basics/dialog-admin/1-da.png)
+If you have created a [custom category](custom-categories.md) with a **Dialog+** attribute, this attribute also appears in the navigation tree -- under the **Custom Dialog+** section.
 
-## Show Values
+[![custom-dialog+](../assets/images/de/grundlagen/dialog-admin/1-da.png)](../assets/images/de/grundlagen/dialog-admin/1-da.png)
 
-An overview of the values which were documented so far (if existing) will be loaded in the main area when you click on an attribute in the left navigation tree within the **Dialog-Admin** area.
+## Viewing values
 
-[![Show Values](../assets/images/en/basics/dialog-admin/2-da.png)](../assets/images/en/basics/dialog-admin/2-da.png)
+Click on an attribute in the left navigation tree to see the previously documented values in the main area.
 
-## Create Values
+[![view-values](../assets/images/de/grundlagen/dialog-admin/2-da.png)](../assets/images/de/grundlagen/dialog-admin/2-da.png)
 
-Click the **New** button above the overview when you want to create a new value. A form field opens and you can fill in the following details:
+## Creating values
 
-- **ID**:<br>
-    Each value in a **Dialog+** attribute receives a unique identifier by i-doit. This is very helpful, for example, when working with the [API](../i-doit-add-ons/api/index.md).
-- **Title**:<br>
-    Here you can enter the value you want to display in the i-doit Web GUI when you view or edit the **Dialog+** attribute.
-- **Constant**:<br>
-    Beside a unique identifier, a value can receive a unique constant. In contrast to the identifier it usually consists of a descriptive string which can be helpful when applying the API.
-- **Status**:<br>
-    Each value can have a status. You should select the status Normal (2)to apply it in the documentation.
+To create a new value:
 
-You can save the value with the **Save** button.
+1. Click the **New** button above the overview.
+2. Fill in the form:
+    - **ID**: _i-doit_ automatically assigns a unique identifier. This is helpful, for example, when working with the [API](../i-doit-add-ons/api/index.md).
+    - **Name**: The value displayed in the Web GUI when you view or edit the **Dialog+** attribute.
+    - **Constant**: A unique, descriptive string -- particularly helpful when using the API.
+    - **Status**: Each value has a condition. Select **Normal (2)** so that the value can be used in the documentation.
+3. Click **Save**.
 
-[![Create Values](../assets/images/en/basics/dialog-admin/3-da.png)](../assets/images/en/basics/dialog-admin/3-da.png)
+[![create-values](../assets/images/de/grundlagen/dialog-admin/3-da.png)](../assets/images/de/grundlagen/dialog-admin/3-da.png)
 
-## Edit Values
+## Editing values
 
-Click on the respective value in the overview when you want to edit the attribute. The form which opens corresponds to the form field which was described above regarding the creation of a new value.
+To edit an existing value, click on the desired value in the overview. The form is the same as when creating.
 
-### Impact
+!!! info "Effects"
+    Changes and deletions immediately affect the entire IT documentation: If you change a value in the Dialog-Admin, it changes everywhere automatically. If you delete a value, it is removed everywhere it was used. Therefore, check via a [report](../evaluation/report-manager.md) which objects use this value before deleting. Via the [list editing](../efficient-documentation/list-editing.md) you can then set an alternative value for all affected objects.
 
-The changing and deleting of values has an immediate effect on the IT documentation: When you change a value in the **Dialog-Admin**, it changes automatically everywhere else. When you delete a value, it will be deleted everywhere else where it was used. We recommend searching for the objects which use the respective value via a [report](../evaluation/report-manager.md) before you delete it. With help of this report you can choose an alternative value for all the listed objects, for example via [list editing](../efficient-documentation/list-editing.md).
+## Deleting values
 
-!!! warning "Delete Values"
+To delete a value:
 
-    When you want to delete a value, mark the checkbox of this value within the overview. Then click the **Purge** button and the value will be deleted irrevocably.<br>
-    For each  value, the tabular overview shows whether the value can be deleted or not. The reason for this is that some values are required by necessity by i-doit to guarantee certain functionalities.
+1. Check the checkbox of the value in the overview.
+2. Click the **Purge** button.
 
-## Set Permissions
+The value is irrevocably deleted. In the tabular overview you can see for each value whether it can be deleted. Some values are assumed by _i-doit_ as given to ensure certain functionalities -- these cannot be removed.
 
-For each **Dialog+** attribute you can assign rights for each person or person group. For example, it is possible and often also advisable that only certain person groups may create, edit or delete values while other person groups are only allowed to use them.
+## Setting permissions
+
+You can assign permissions for each **Dialog+** attribute per user or user group. This way you ensure that only certain groups may create, change or delete values, while other groups can only use the values.

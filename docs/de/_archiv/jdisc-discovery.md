@@ -1,5 +1,5 @@
 ---
-title: JDisc Discovery
+title: (Archiv) JDisc Discovery
 description: JDisc Discovery Konfiguration
 icon: addons/jdisc
 status:
@@ -28,7 +28,7 @@ Dieser Artikel widmet sich im Folgenden der Schnittstelle zwischen i-doit und JD
     > Der WebService ist ein SOAP basierter Service, mit dem man einzelne Aktivitäten in JDisc fernsteuern kann. Der SOAP Service läuft normalerweise auf Port 9000. Wir haben allerdings für unser neues WEB UI eine moderne GraphQL Schnittstelle implementiert, die den SOAP Service komplett ersetzt! I-Doit kann unser neues GraphQL API ab Version i-doit Release 22 verwenden!
     > Ändere einfach den Port auf **443** und das Protokoll auf **HTTPS** um auf das GraphQL Interface umzustellen. Das WebService Add-On wird dann nicht mehr benötigt.
     > Das GraphQL API hat nur Vorteile gegenüber dem SOAP Service:
-    > Es verwendet ausschliesslich verschlüsselte Kommunikation via HTTPS. Der WEB Service hat by default HTTP verwendet.
+    > Es verwendet ausschließlich verschlüsselte Kommunikation via HTTPS. Der WEB Service hat by default HTTP verwendet.
     > Das neue API ist ein modernes API, mit dem sich alle Aktionen in JDisc automatisieren lassen!
 
 ## Konfiguration

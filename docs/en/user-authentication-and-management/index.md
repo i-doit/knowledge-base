@@ -1,8 +1,17 @@
+---
+title: User Authentication and Management
+description: "In this chapter, we will provide information about user authentication for i-doit."
+icon:
+status:
+lang: en
+---
 # User Authentication and Management
 
-In this chapter we will provide information about the user authentication for i-doit.
+!!! warning "Please create a complete backup before making any changes to an interface/import. If the result is not satisfactory, the backup can then be restored"
 
--   [Builtin Authentication](./builtin-authentication/index.md)
--   [Authentication with LDAP](./ldap-directory/index.md)
--   [Two-factor Authentication (2FA)](./2fa/index.md)
--   [SSO authentication comparison](./sso-comparison/index.md)
+In this chapter, we will provide information about user authentication for i-doit.
+
+-   [Integrated Authentication](./built-in-authentication/index.md) — An overview of user authentication methods in i-doit, from local users via LDAP/AD to SSO and 2FA.
+-   [Authentication with LDAP](./ldap-directory/index.md) — With the LDAP/AD interface, you connect i-doit to your central directory.
+-   [Two-Factor Authentication (2FA)](./2fa/index.md) — Two-factor authentication options for i-doit
+-   [SSO Authentication Comparison](./sso-comparison/index.md)

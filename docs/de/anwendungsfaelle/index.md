@@ -1,8 +1,15 @@
+---
+title: Anwendungsfälle
+description: "In diesem Bereich findest du Hinweise auf die fortgeschrittene Anwendung von _i-doit_, zum Einen um die IT-Dokumentation noch weiter zu verfeinern, zum..."
+icon:
+status:
+lang: de
+---
 # Anwendungsfälle
 
 In diesem Bereich findest du Hinweise auf die fortgeschrittene Anwendung von _i-doit_, zum Einen um die [IT-Dokumentation](../glossar.md#it-dokumentation) noch weiter zu verfeinern, zum Anderen um die Prozesse im IT Service Management besser zu unterstützen.
 
-!!! info "Weitere Praxisbeispiele finden Sie auf unserem [Blog](https://www.i-doit.com/)"
+!!! info "Weitere Praxisbeispiele findest du auf unserem [Blog](https://www.i-doit.com/)"
 
 Folgende Anwendungsfälle sind beschrieben:
 
@@ -30,6 +37,10 @@ Zu einer vollumfänglichen IT-Dokumentation gehören oftmals auch Dokumente in F
 
 Mit der Version 1.xx von i-doit haben wir eine zusätzliche Variante mit aufgenommen die genutzt werden kann um Datenbanken innerhalb von i-doit zu dokumentieren.
 
+## [Dokumentation von End of Life Daten](./end-of-life.md)
+
+Die Überwachung von End of Life (EOL) und End of Support (EOS) Daten ist essenziell für ein proaktives Lifecycle-Management. In i-doit gibt es verschiedene Strategien, um diese Daten zu pflegen, Lizenzen zu sparen und die Informationen für deine Kollegen intuitiv nutzbar zu machen.
+
 ## [Excel-Tabelle mit Daten aus i-doit befüllen (veraltet)](./excel-tabelle-mit-daten-aus-i-doit-befuellen.md)
 
 Mit wenigen Zeilen Visual Basic lassen sich beliebige Inhalte aus i-doit auslesen und in Microsoft Excel darstellen. In diesem Artikel erklären wir die Vorgehensweise anhand von [Reports](../auswertungen/report-manager.md).
@@ -54,6 +65,10 @@ Zu einer umfangreichen [IT-Dokumentation](../glossar.md) kommt man über kurz od
 
 Im Report Manager lassen sich über den Abfrage-Editor bereits viele, nützliche Reports generieren. Für komplexere Fälle kann das dahinter liegende SQL bearbeitet werden. Hierbei lassen sich MySQL-/MariaDB-eigene Funktionen nutzen, um beispielsweise Zeitintervalle abzufragen.
 
+## [Prod→Test Datenbank-Synchronisation](./prod-test-datenbank-synchronisation.md)
+
+Produktive i-doit Datenbank regelmäßig auf ein Testsystem synchronisieren — per Shell-Script (`mysqldump`) oder über die console.php (`system:tenant-export` / `system:tenant-import`). Mit Cronjob-Einrichtung, Checkliste und Fehlerbehebung.
+
 ## [Passwörter verwalten](./passwoerter-verwalten.md)
 
 Im täglichen Gebrauch hantiert ein Systemadministrator mit dutzenden Passwörtern. Die alle im Gedächtnis zu behalten, erscheint unrealistisch. i-doit bringt eine einfache Passwort-Verwaltung mit, die einem den Kopf frei hält und schnell benötigte Zugangsdaten schneller finden lässt.
@@ -68,7 +83,7 @@ Die Verortung von Hardware & Co. ist ein essentieller Bestandteil von i-doit. In
 
 ## [Switch Stacking](./switch-stacking.md)
 
-Mit dem [Objekttypen](../grundlagen/objekttypen.md) **Stacking** ist es möglich, einen Stack-Verbund mit mehreren Mitgliedern zu definieren, die Informationen untereinander austauschen. Auch wenn Stacking für unterschiedliche Objekttypen genutzt werden kann, ist der ursprüngliche Gedanke für diesen Objekttypen und die dazugehörige [Kategorie](../grundlagen/kategorien-und-attribute.md) **Stack Mitglieder** auf Switch Stacking zurückzuführen. Der Objekttyp ist ab Version 1.7 unter der [Objekttyp-gruppe](../grundlagen/struktur-it-dokumentation.md#objekttypgruppe) **Andere** zu finden.
+Mit dem [Objekttypen](../grundlagen/objekttyp-konfiguration.md) **Stacking** ist es möglich, einen Stack-Verbund mit mehreren Mitgliedern zu definieren, die Informationen untereinander austauschen. Auch wenn Stacking für unterschiedliche Objekttypen genutzt werden kann, ist der ursprüngliche Gedanke für diesen Objekttypen und die dazugehörige [Kategorie](../grundlagen/kategorien-und-attribute.md) **Stack Mitglieder** auf Switch Stacking zurückzuführen. Der Objekttyp ist ab Version 1.7 unter der [Objekttyp-gruppe](../grundlagen/struktur-it-dokumentation.md#objekttypgruppe) **Andere** zu finden.
 
 ## [Variable Reports](./variable-reports.md)
 

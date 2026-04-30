@@ -1,49 +1,47 @@
-# Automatic Installation
+---
+title: Automatic installation
+description: "The fastest way to a running i-doit: A script installs and configures everything needed on a fresh Linux system — Apache, PHP,..."
+icon:
+status:
+lang: en
+---
+# Automatic installation
 
-This article describes the automatic [IT documentation](../glossary.md) of i-doit. All the required configuration steps are executed on a newly installed GNU/Linux operating system and i-doit is installed. Additionally, Cronjobs, backups and other useful CLI tools are included. Only the execution of a script is required for this purpose.
+The fastest way to a running i-doit: A script installs and configures everything needed on a fresh Linux system — Apache, PHP, MariaDB, i-doit itself, as well as cron jobs and backups.
 
-## Scope
+## Prerequisites
 
-:material-check: Installation of software packages <br>
-:material-check: Configuration of software packages<br>
-:material-check: Installation of i-doit<br>
-:material-check: Set-up of Cronjobs<br>
-:material-check: Set-up of backups<br>
-:material-check: Set-up of Restore
+-   The [system requirements](system-requirements.md) **must** be met. The LAMP stack (Apache Web Server, MariaDB/MySQL, PHP) mentioned there is excluded from this.
+-   One of the [supported](system-requirements.md) GNU/Linux operating systems is freshly installed.
+-   The system can access package repositories and i-doit web services via an internet connection.
 
-## Requirements
+## Usage
 
--   The [system requirements](system-requirements.md) **have to be fulfilled**. An exception is the LAMP stack (Apache Web Server, MariaDB/MySQL, PHP).
--   One of the [supported](system-requirements.md) GNU/Linux operating systems is installed freshly.
--   The system can access i-doit packet repositories and web services via an internet connection.
-
-## Use
-
-The installation is carried out by a [script](https://github.com/bheisig/i-doit-scripts#install-i-doit-on-a-gnulinux-operating-system) which is executed on the operating system.<br>
-The following steps are carried out via the command line. For this purpose, you can connect, for example, via **SSH**. Afterwards, you download the script and enable its execution:
+The installation is handled by a [script](https://github.com/i-doit/scripts#install-i-doit-on-a-gnulinux-operating-system) that is executed on the operating system. <br>
+The following steps take place on the command line. You can connect via **SSH**, for example. Then download the script and make it executable:
 
 ```shell
 wget https://raw.githubusercontent.com/i-doit/scripts/main/idoit-install
 chmod 755 idoit-install
 ```
 
-The scipt has to be executed with **root** rights. If **sudo**  is available:
+The script must be executed with **root** privileges. If **sudo** is available:
 
 ```shell
 sudo ./idoit-install
 ```
 
-Alternatively, you log in as **root**:
+Alternatively, log in as **root**:
 
 ```shell
 su
 ./idoit-install
 ```
 
-The script asks several questions regarding the configuration. For all questions there are predefined answers which you can accept by pressing **ENTER**.
+The script asks several configuration questions. All questions have predefined answers that can be accepted by pressing **ENTER**.
 
 ## Next Steps
 
--   [Installation of a valid license (only i-doit)](../maintenance-and-operation/licensing.md)
--   [Follow the tips regarding security and protection](../maintenance-and-operation/security-and-protection.md)
+-   [Apply a valid license (i-doit only)](../maintenance-and-operation/licensing.md)
+-   [Follow security and protection tips](../maintenance-and-operation/security-and-protection.md)
 -   [First steps with i-doit](../basics/index.md)

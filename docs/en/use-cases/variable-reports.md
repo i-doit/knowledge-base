@@ -1,6 +1,6 @@
 ---
-title: Variable report
-description: Variable report
+title: Variable Reports
+description: Variable reports and how to use them
 icon:
 status:
 lang: en
@@ -8,50 +8,51 @@ lang: en
 
 ## Introduction
 
-Variable reports can be used to display object-specific information, unlike normal reports, which always output static results.
-The object information can be viewed **backwards** using variable reports. For example, you can go from object A to object B and then back again from object B to object A.
+Variable reports can be used to display object-specific information, unlike regular reports which always produce static results.
+Object information is viewable **in reverse** through variable reports, e.g., you can navigate from Object A to Object B and then back from Object B to Object A.
 
-## Use-Case
+## Use Case
 
-Let's assume that department printers are defined in the organization. Rooms **1.01** to **1.07** use **HQ Staff Printer 01**, rooms **1.08** to **1.11** use **HQ Staff Printer 02**.
-A variable report is used to track which printer is assigned to which room, both from the rooms and from the printer objects.
+Let us assume that area printers are defined in the organization. Rooms **1.01** through **1.07** use **HQ Staff Printer 01**, rooms **1.08** through **1.11** use **HQ Staff Printer 02**.
+To trace which printer is assigned to which room from both the room and the printer objects, a variable report is used.
 
-## Custom category Department printer
+## Custom Category Area Printer
 
-In order to assign the printers to the respective rooms, we create a custom category called **Department Printer**.
+To assign printers to the respective rooms, we create a custom category called **Area Printer**.
+This is assigned to the [object type](../basics/it-documentation-structure.md#objekttyp) **Printer** and defined as a [single-value category](../basics/it-documentation-structure.md#single-value-kategorie). The [attribute](../basics/it-documentation-structure.md#attribut) **Area printer for** is added as an **Object relationship (Multiple objects)** with the addition **Share access**.
 
-This category needs to be assigned to the [object type](../basics/structure-of-the-it-documentation.md#object-type) **Printer** and as a [single-value category](../basics/structure-of-the-it-documentation.md#single-value-category). The [attribute](../basics/structure-of-the-it-documentation.md#attribute) **Department printer for** is added as **Object-Relation (Several Objects)** with the addition **Share access**.
+[![Custom categories](../assets/images/de/anwendungsfaelle/variable-reports/1-vr.png)](../assets/images/de/anwendungsfaelle/variable-reports/1-vr.png)
 
-[![Object-Relation](../assets/images/en/use-cases/variable-reports/1-vr.png)](../assets/images/en/use-cases/variable-reports/1-vr.png)
+Then switch to the object **HQ Staff Printer 01**. In the **Area Printer** category, select the assigned rooms.
 
-Then open the object **HQ Staff Printer 01**. Now you can select the assigned rooms in the **Department printer** category.
+[![Object browser](../assets/images/de/anwendungsfaelle/variable-reports/2-vr.png)](../assets/images/de/anwendungsfaelle/variable-reports/2-vr.png)
 
-[![Printer](../assets/images/en/use-cases/variable-reports/2-vr.png)](../assets/images/en/use-cases/variable-reports/2-vr.png)
+The result in the category looks like the following image.
 
-The result in the category is shown in the following picture.
+[![Area printer](../assets/images/de/anwendungsfaelle/variable-reports/3-vr.png)](../assets/images/de/anwendungsfaelle/variable-reports/3-vr.png)
 
-[![category](../assets/images/en/use-cases/variable-reports/3-vr.png)](../assets/images/en/use-cases/variable-reports/3-vr.png)
+This can also be visualized with the [CMDB Explorer](../evaluation/cmdb-explorer/index.md).
 
-You can also visualize the result with the [CMDB explorer](../evaluation/cmdb-explorer/index.md).
+[![CMDB Explorer](../assets/images/de/anwendungsfaelle/variable-reports/4-vr.png)](../assets/images/de/anwendungsfaelle/variable-reports/4-vr.png)
 
-[![CMDB explorer](../assets/images/en/use-cases/variable-reports/4-vr.png)](../assets/images/en/use-cases/variable-reports/4-vr.png)
+So far so good. But how do you find out, when looking at room **1.05**, which area printer is defined for this room? A reverse view is needed to determine which printer is related to this room. Variable reports provide a solution for such context-dependent queries.
 
-But when you have a look at room **1.05** now, how can you find out which printer is assigned to this room? For this purpose, you need a "mirrored view" with which you can see which printer is related to this room. The variable report provide a good solution for such context-related queries.
+For this, a [report](../evaluation/report-manager.md) and another custom category are created. First, the report **Assigned Area Printers**. Under **Output**, some interesting printer attributes are selected.
 
-To achieve this, you set up a [report](../evaluation/report-manager.md) and another custom category. First, you create the report **Assigned department printer**. Select some significant **attributes** regarding the printers for the **Output**. The query builder provides the possibility to set a **Placeholder** for all links which generate relations under **Conditions**.
+In the query editor, there is the option to set a **field placeholder** under **Conditions** for relationships that generate links.
 
-In our case this means: The report "searches" for those objects in which the [object ID](../basics/unique-references.md) of the currently selected object is listed in the custom category **Department printer** in the attribute **Department printer for**. But what is the selected object? There is no selected object in the context of the report manager.  This turns the report into a variable report.
+For this use case, this means: The report "searches" for those objects where, in the custom category **Area Printer** in the attribute **Area printer for**, the [object ID](../basics/unique-references.md) of the currently selected object is entered. But what is the selected object? In the context of the Report Manager, there is no selected object. This turns the report into a variable report.
 
-[![Report](../assets/images/en/use-cases/variable-reports/5-vr.png)](../assets/images/en/use-cases/variable-reports/5-vr.png)
+[![Query editor](../assets/images/de/anwendungsfaelle/variable-reports/5-vr.png)](../assets/images/de/anwendungsfaelle/variable-reports/5-vr.png)
 
-Therefore, an object must always be selected in order to populate the report. In this case you can achieve this by creating a category for the report which executes the report within an object. This is called **Department**, assigned to the object **Room** and defined as single-value category. There also is an unnamed attribute with the **Field type Report**. Under **Addition** you can select the created report
+Therefore, an object must always be selected to fill the report. In this case, this is done by creating a category for the report that executes the report within an object. This is called **Area Printer Reverse** and is assigned to the **Room** object type as a single-value category. It receives a nameless attribute with the **field type Report**. Under **Addition**, you can then select the name of the report created above.
 
-[![Field type Report](../assets/images/en/use-cases/variable-reports/6-vr.png)](../assets/images/en/use-cases/variable-reports/6-vr.png)
+[![Report 1](../assets/images/de/anwendungsfaelle/variable-reports/6-vr.png)](../assets/images/de/anwendungsfaelle/variable-reports/6-vr.png)
 
-The report ID is contained in the overview of the already defined reports.
+The report ID is included in the overview of already defined reports.
 
-[![Field type Report](../assets/images/en/use-cases/variable-reports/7-vr.png)](../assets/images/en/use-cases/variable-reports/7-vr.png)
+[![Report 2](../assets/images/de/anwendungsfaelle/variable-reports/7-vr.png)](../assets/images/de/anwendungsfaelle/variable-reports/7-vr.png)
 
-Now the new category is available in room objects. It always generates the report for the object in which the user currently is. By this means, you get a mirrored view of the relation to the department.
+In room objects, the new category is now available, which always executes the report for the object the user is currently in. This provides a reverse view of the relationship to the area printer.
 
-[![Field type Report](../assets/images/en/use-cases/variable-reports/8-vr.png)](../assets/images/en/use-cases/variable-reports/8-vr.png)
+[![Report 3](../assets/images/de/anwendungsfaelle/variable-reports/8-vr.png)](../assets/images/de/anwendungsfaelle/variable-reports/8-vr.png)

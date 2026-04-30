@@ -8,9 +8,9 @@ lang: de
 
 # Schutzbedarfsfeststellung
 
-Über Add-ons → IT-Grundschutz → Schutzbedarfsfeststellung kommt man zur grafischen Darstellung der Schutzbedarfsfeststellung und -vererbung eines Informationsverbundes.
+Über **Add-ons > IT-Grundschutz > Schutzbedarfsfeststellung** gelangst du zur grafischen Darstellung der Schutzbedarfsfeststellung und -vererbung eines Informationsverbundes.
 
-Um die Schutzbedarfsfeststellung zu laden, muss oben im Objektbrowser zuerst ein Informationsverbund ausgewählt werden. Bei großen Informationsverbünden kann dies durchaus mehrere Sekunden dauern.
+Um die Schutzbedarfsfeststellung zu laden, wählst du oben im Objektbrowser zuerst einen Informationsverbund aus. Bei großen Informationsverbünden kann dies mehrere Sekunden dauern.
 
 Sobald der Informationsverbund geladen ist, werden im linken Bereich alle Zielobjekte/Zielobjektgruppen angezeigt, die über die Kategorie "Informationsverbünde" (bzw. zugehörigen der rückwärtigen Kategorie "Infrastrukturanalyse" im Informationsverbund) dem ausgewählten Informationsverbund zugeordnet sind.
 
@@ -42,23 +42,23 @@ Wenn der Schutzbedarf direkt am Objekt eingetragen ist, dann wird der Wert in gr
 
 ## Filtern der Ansicht
 
-Da die grafische Darstellung von großen Informationsverbünden schnell unübersichtlich wird, besteht die Möglichkeit, die Ansicht auf bestimmte "Teilbäume" zu beschränken. Standardmäßig sind im linken Bereich alle Zielobjekte/Zielobjektgruppen aktiviert und es wird der komplette Informationsverbund geladen. Wenn man die Ansicht einschränken möchte, kann man im linken Bereich nur die Zielobjekte/Zielobjektgruppen auswählen, die man betrachten möchte. Ein Klick auf den Knopf "Filter anwenden" rendert die Ansicht dann neu und zeigt nur die Vererbungsbäume der ausgewählten Zielobjekte/Zielobjektgruppen an.
+Da die grafische Darstellung bei großen Informationsverbünden schnell unübersichtlich wird, beschränkst du die Ansicht auf bestimmte "Teilbäume". Standardmäßig sind im linken Bereich alle Zielobjekte/Zielobjektgruppen aktiviert und der komplette Informationsverbund wird geladen. Um die Ansicht einzuschränken, wählst du im linken Bereich nur die gewünschten Zielobjekte/Zielobjektgruppen aus. Ein Klick auf "Filter anwenden" rendert die Ansicht neu und zeigt nur die Vererbungsbäume der ausgewählten Zielobjekte/Zielobjektgruppen.
 
 ## Schutzbedarf eintragen/ändern
 
-Der Schutzbedarf eines Objektes kann direkt in der grafischen Darstellung bearbeitet werden. Wenn man ein Objekt in der Baumdarstellung anklickt, wird das Objekt in den linken Bereich geladen.
+Den Schutzbedarf eines Objektes bearbeitest du direkt in der grafischen Darstellung. Klicke ein Objekt in der Baumdarstellung an -- es wird in den linken Bereich geladen.
 
 [![Schutzbedarf](../../assets/images/de/i-doit-add-ons/viva2/assessment-of-protection/schutzbedarf-anzeigen.png)](../../assets/images/de/i-doit-add-ons/viva2/assessment-of-protection/schutzbedarf-anzeigen.png){:target="_blank"}
 
-Wenn man den Schutzbedarf eintragen oder ändern möchte, kann man jetzt mit einem Klick auf "Schutzbedarf bearbeiten" in die Bearbeitungsmaske gelangen, in der man den Schutzbedarf in den Grundwerten eintragen und eine Begründung für die Einstufung eintragen kann.
+Um den Schutzbedarf einzutragen oder zu ändern, klickst du auf "Schutzbedarf bearbeiten". In der Bearbeitungsmaske trägst du den Schutzbedarf in den Grundwerten ein und hinterlegst eine Begründung für die Einstufung.
 
 [![Schutzbedarf bearbeiten](../../assets/images/de/i-doit-add-ons/viva2/assessment-of-protection/schutzbedarf-editieren.png)](../../assets/images/de/i-doit-add-ons/viva2/assessment-of-protection/schutzbedarf-editieren.png){:target="_blank"}
 
-Wenn man dann auf Speichern drückt, wird das Objekt mit den entsprechenden Werten gespeichert. Nach dem Speichern muss der Informationsverbund komplett neu geladen werden, weil die Schutzbedarfsvererbung neu berechnet werden muss.
+Nach dem Klick auf Speichern wird das Objekt mit den entsprechenden Werten gespeichert. Danach lädst du den Informationsverbund komplett neu, damit die Schutzbedarfsvererbung neu berechnet wird.
 
 ## Schutzbedarf exportieren
 
-Über den Knopf "Export" rechts oben kann die Schutzbedarfsfeststellung und -vererbung exportiert werden:
+Über den Button "Export" rechts oben exportierst du die Schutzbedarfsfeststellung und -vererbung:
 
 -   SVG: Der komplette gerenderte Bereich wird im SVG-Format gespeichert.
 -   PNG: Es wird nur der gerade sichtbare Bereich als PNG-Datei gespeichert.

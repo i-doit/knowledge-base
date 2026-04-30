@@ -1,18 +1,25 @@
-System requirements
--------------------
+---
+title: Release Notes 1.10
+description: System requirements
+icon:
+status:
+lang: en
+---
+# Release Notes 1.10
+
+System Requirements
+---------------------
 
 *   i-doit now supports PHP from 5.6 to 7.0
-    
-*   MySQL parameter **innodb_stats_on_metadata = 0** should be set to increase performance
-    
 
-Additional information
-----------------------
+*   The MySQL parameter **innodb_stats_on_metadata = 0** should be set to increase performance when saving categories
 
-*   The Cabling Category now uses the Cabling Add-on. If you use it, you have to install the Cabling Add-on
-    
+Additional Information
+---------------------
+
+*   The cabling category now uses the Cabling add-on. If you document cabling, please install the free Cabling add-on.
 
 Migrations
-----------
+-----------
 
-*   The controller is now using the symfony console as a framework. It is still backward compatible, but deprecated. Please check our Knowledgebase on how to change your cronjobs to using the new Controller console.
+*   The controller now uses the Symfony Framework as backend. The controller command is currently still backwards compatible. Please refer to our Knowledge Base for instructions on how to switch your cron jobs to the new Controller Console.

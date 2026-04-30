@@ -1,3 +1,10 @@
+---
+title: Release Notes 1.16
+description: "Release date: 2021-01-18"
+icon:
+status:
+lang: de
+---
 # Release Notes 1.16
 
 Release date: 2021-01-18

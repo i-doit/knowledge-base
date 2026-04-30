@@ -1,3 +1,10 @@
+---
+title: Changelogs
+description: "What changes were published per release of _i-doit_?"
+icon:
+status:
+lang: en
+---
 # Changelogs
 
 What changes were published per release of _i-doit_?
@@ -72,3 +79,36 @@ What changes were published per release of _i-doit_?
 -   [Changelogs 1.8.x](changelog-1.8.x/index.md)
     -   [Changelog 1.8.3.1](changelog-1.8.x/changelog-1.8.3.1.md)
     -   [Changelog 1.8.3](changelog-1.8.x/changelog-1.8.3.md)
+    -   [Changelog 1.8.2](changelog-1.8.x/changelog-1.8.2.md)
+    -   [Changelog 1.8.1](changelog-1.8.x/changelog-1.8.1.md)
+    -   [Changelog 1.8](changelog-1.8.x/changelog-1.8.md)
+-   [Changelogs 1.7.x](changelog-1.7.x/index.md)
+    -   [Changelog 1.7.5](changelog-1.7.x/changelog-1.7.5.md)
+    -   [Changelog 1.7.4](changelog-1.7.x/changelog-1.7.4.md)
+    -   [Changelog 1.7.3](changelog-1.7.x/changelog-1.7.3.md)
+    -   [Changelog 1.7.2](changelog-1.7.x/changelog-1.7.2.md)
+    -   [Changelog 1.7.1](changelog-1.7.x/changelog-1.7.1.md)
+    -   [Changelog 1.7](changelog-1.7.x/changelog-1.7.md)
+-   [Changelogs 1.6.x](changelog-1.6.x/index.md)
+    -   [Changelog 1.6.5](changelog-1.6.x/changelog-1.6.5.md)
+    -   [Changelog 1.6.4](changelog-1.6.x/changelog-1.6.4.md)
+    -   [Changelog 1.6.3](changelog-1.6.x/changelog-1.6.3.md)
+    -   [Changelog 1.6.2](changelog-1.6.x/changelog-1.6.2.md)
+    -   [Changelog 1.6.1](changelog-1.6.x/changelog-1.6.1.md)
+    -   [Changelog 1.6](changelog-1.6.x/changelog-1.6.md)
+-   [Changelogs 1.5.x](changelog-1.5.x/index.md)
+    -   [Changelog 1.5.6](changelog-1.5.x/changelog-1.5.6.md)
+    -   [Changelog 1.5.5](changelog-1.5.x/changelog-1.5.5.md)
+    -   [Changelog 1.5.4](changelog-1.5.x/changelog-1.5.4.md)
+    -   [Changelog 1.5.3](changelog-1.5.x/changelog-1.5.3.md)
+    -   [Changelog 1.5.2](changelog-1.5.x/changelog-1.5.2.md)
+    -   [Changelog 1.5.1](changelog-1.5.x/changelog-1.5.1.md)
+    -   [Changelog 1.5](changelog-1.5.x/changelog-1.5.md)
+-   [Changelogs of Older Versions](./changelog-older-versions/index.md)
+    -   [Changelog 1.4](./changelog-older-versions/changelog-1.4.md)
+    -   [Changelog 1.3](./changelog-older-versions/changelog-1.3.md)
+    -   [Changelog 1.2](./changelog-older-versions/changelog-1.2.md)
+    -   [Changelog 1.1](./changelog-older-versions/changelog-1.1.md)
+    -   [Changelogs 1.0.x](./changelog-older-versions/changelog-1.0.x.md)
+    -   [Changelogs 0.9.x](./changelog-older-versions/changelog-0.9.x.md)
+    -   [Changelogs 0.8.x](./changelog-older-versions/changelog-0.8.x.md)

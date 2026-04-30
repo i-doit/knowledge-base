@@ -6,7 +6,7 @@ status:
 lang: de
 ---
 
-!!! note "Getestet mit i-doit **36** und RHEL 9.6"
+!!! note "Getestet mit i-doit **38** und RHEL 9.6"
 
 Welche Pakete zu installieren und zu konfigurieren sind, erklären wir in wenigen Schritten in diesem Artikel.
 
@@ -91,7 +91,7 @@ Zunächst wird eine neue Datei erstellt und mit den nötigen Einstellungen befü
 sudo nano /etc/php.d/i-doit.ini
 ```
 <!-- cSpell:enable -->
-!!! example "Diese Datei erhält folgende von uns vorgegebenen Inhalt. Für mehr Informationen zu den Parametern, schauen Sie auf [PHP.net](https://www.php.net/manual/en/install.fpm.configuration.php) vorbei"
+!!! example "Diese Datei erhält folgende von uns vorgegebenen Inhalt. Für mehr Informationen zu den Parametern, schaue dir auf [PHP.net](https://www.php.net/manual/en/install.fpm.configuration.php) vorbei"
 <!-- cSpell:disable -->
 ```ini
 allow_url_fopen = Yes
@@ -119,9 +119,9 @@ session.cookie_lifetime = 0
 mysqli.default_socket = /var/lib/mysql/mysql.sock
 ```
 <!-- cSpell:enable -->
-Das `memory_limit` muss bei bedarf z.B. bei sehr großen Reports oder umfangreichen Dokumenten erhöht werden.
+Das `memory_limit` muss bei Bedarf z.B. bei sehr großen Reports oder umfangreichen Dokumenten erhöht werden.
 Der Wert (in Sekunden) von **session.gc_maxlifetime** sollte größer oder gleich dem **Session Timeout** in den [Systemeinstellungen](../systemeinstellungen.md) von i-doit sein.
-Der Parameter **date.timezone** sollte auf die lokale Zeitzone anpasst werden (siehe [Liste unterstützter Zeitzonen](http://php.net/manual/de/timezones.php)).
+Der Parameter **date.timezone** sollte auf die lokale Zeitzone angepasst werden (siehe [Liste unterstützter Zeitzonen](http://php.net/manual/de/timezones.php)).
 
 ### Apache HTTP Server Konfiguration
 

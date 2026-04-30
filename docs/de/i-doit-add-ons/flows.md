@@ -1,16 +1,16 @@
 ---
-title: Flows Add-on
-description: Flows Add-on
+title: Flows Add-on (Einführung)
+description: "Mit dem Flows Add-on automatisierst du Prozesse in i-doit."
 icon: addons/flows
 status:
 lang: de
 ---
 
-Das Flows Add-on für i-doit ist ein leistungsstarkes Werkzeug zur Automatisierung von Prozessen innerhalb des CMDB-Systems. Es ermöglicht die Erstellung von automatisierten Flows basierend auf Triggern und definierten Bedingungen. Mit Flows können Benutzer repetitive Aufgaben und manuelle Schritte automatisieren, indem sie Regeln festlegen, die durch bestimmte Ereignisse oder Zustände (z. B. eine Änderung in der CMDB) ausgelöst werden. Das Add-on hilft, Arbeitsabläufe effizienter zu gestalten, Fehler zu reduzieren und die Verwaltung komplexer IT-Umgebungen zu vereinfachen, indem es Routineprozesse ohne Benutzerinteraktion abwickelt.
+Mit dem Flows Add-on automatisierst du Prozesse in i-doit. Du legst Regeln fest, die durch bestimmte Ereignisse oder Zustände ausgelöst werden -- etwa eine Änderung in der CMDB. So automatisierst du repetitive Aufgaben, reduzierst Fehler und vereinfachst die Verwaltung komplexer IT-Umgebungen.
 
 ## Download und Installation
 
-Dieses Add-on kann nachträglich installiert werden. Detaillierte Beschreibungen bezüglich Download, Installation, Updates usw. liefert der Artikel [i-doit Add-ons](../index.md).
+Dieses Add-on kann nachträglich installiert werden. Details zu Download, Installation und Updates findest du im Artikel [i-doit Add-ons](../index.md).
 
 * * *
 
@@ -18,19 +18,22 @@ Dieses Add-on kann nachträglich installiert werden. Detaillierte Beschreibungen
 
 !!! success "Sofern der Befehl für einen anderen als den ersten Mandanten ausgeführt werden soll, ist die entsprechende [Mandanten ID](../automatisierung-und-integration/cli/index.md) zu übergeben."
 
-Das Flows Add-on wird mit zwei [CLI-Befehlen](../automatisierung-und-integration/cli/index.md) geliefert. Beide Befehle werden benötigt, damit das Flows-Add-on vollständig funktioniert. Es gibt zwei Möglichkeiten, die CLI-Befehle einzurichten. Die Befehle können z.B. über einen **Crontab** ausgeführt werden. Wir haben auch ein Service-Installationsskript mit dem Namen **create-daemon.sh** erstellt, das sich im Flows Add-on Ordner unter `i-doit/src/classes/modules/synetics_flows/` befindet.
+Das Flows Add-on benötigt zwei [CLI-Befehle](../automatisierung-und-integration/cli/index.md), damit es vollständig funktioniert. Du hast zwei Möglichkeiten, diese einzurichten:
+
+- **Crontab** -- Führe die Befehle regelmäßig per Cron aus.
+- **Systemdienst** -- Nutze das mitgelieferte Script `create-daemon.sh` unter `i-doit/src/classes/modules/synetics_flows/`.
 
 ## Automatisierung der CLI Commands
 
 ### Systemdienst erstellen via Skript
 
-Mit dem Linux Skript lässt sich ein Dienst erstellen, dieser Dienst führt alle paar Sekunden die CLI-Befehle des Flows Add-on aus. Zuerst müssen wir die Ausführungsrechte für die Datei festlegen. Verwenden Sie den Befehl im Ordner i-doit:
+Das Script erstellt einen Systemdienst, der die CLI-Befehle alle paar Sekunden ausführt. Setze zuerst die Ausführungsrechte:
 
 ```shell
 sudo chmod +x src/classes/modules/synetics_flows/create-daemon.sh
 ```
 
-Nun kann die Datei ausgeführt werden, um einen Systemdienst zu erstellen. **Dies muss für jeden Mandanten durchgeführt werden**
+Führe das Script dann für jeden Mandanten einzeln aus:
 
 -   `-u` i-doit Person mit Administrator rechten
 -   `-p` das Passwort für die Person
@@ -42,13 +45,13 @@ src/classes/modules/synetics_flows/./create-daemon.sh -u admin-user -p admin-use
 
 ### Erstellen eines Crontab
 
-Die Crontab führt die CLI-Befehle jede Minute aus. Erstellen Sie eine Crontab für den Apache-Benutzer. Beispiel für Debian:
+Alternativ richtest du einen Crontab ein, der die CLI-Befehle jede Minute ausführt. Beispiel für Debian:
 
 ```shell
 sudo crontab -u www-data -e
 ```
 
-Fügen Sie die folgenden Zeilen am Ende der Datei ein, nachdem Sie die i-doit Anmeldeinformationen ersetzt haben. Möglicherweise müssen Sie auch die Mandanten-ID ersetzen.
+Fuege die folgenden Zeilen am Ende der Datei ein und ersetze die Anmeldeinformationen sowie ggf. die Mandanten-ID:
 
 ```shell
 * * * * * /usr/bin/php /var/www/html/console.php flows:perform ---user admin-user --password admin-user-password --tenantId 1
@@ -69,11 +72,16 @@ Unter **Verwaltung → Berechtigungen → Flows** können [Rechte für Personen 
 
 ## Übersicht
 
-Über die [**Aktionsleiste**](../grundlagen/struktur-it-dokumentation.md#kategorie) können Flows **erstellt**, **gelöscht** oder **exportiert** werden. Sofern ein Flow erstellt wurde kann dieser in der Flows Übersicht, über die **Aktionen** Spalte **geöffnet**, **aktiviert** oder **deaktiviert** werden. Außerdem sind über den "3 Punkte" (More) Button weitere Aktionen möglich wie zum Beispiel: **Bearbeiten**, **Duplizieren** oder **Zum Test Modus wechseln**.
+Über die [**Aktionsleiste**](../grundlagen/struktur-it-dokumentation.md#kategorie) erstellst, löschst oder exportierst du Flows. In der Übersicht öffnest, aktivierst oder deaktivierst du Flows über die Spalte **Aktionen**. Der **Mehr**-Button (drei Punkte) bietet zusätzlich: **Bearbeiten**, **Duplizieren** und **Zum Test-Modus wechseln**.
 
 ## Flow erstellen
 
-Um einen Flow zu erstellen wird das Flows Add-on aufgerufen, dies erfolgt über **Add-ons → Flows**. Anschließend wird über den **Add** Button ein neuer Flow erstellt. Ein Flow muss einen Namen, einen Trigger und eine oder mehrere Actions definiert haben um vollständig zu sein. Zu guter Letzt muss der Flow über den Button noch aktiviert werden.
+So erstellst du einen Flow:
+
+1. Öffne **Add-ons → Flows**.
+2. Klicke auf **Add**, um einen neuen Flow anzulegen.
+3. Definiere einen **Namen**, einen **Trigger** und mindestens eine **Aktion**.
+4. **Aktiviere** den Flow über den entsprechenden Button.
 
 ### Auslöser Typ
 
@@ -81,7 +89,7 @@ Trigger bestimmen wann ein Flow ausgeführt wird. Es ist nur ein Trigger pro Flo
 
 !!! success ""
     === "Zeitbasiert"
-        Die Aktion wird ausgeführt, sobald Datum und Uhrzeit erreicht sind. Sie kann regelmäßig wiederholt werden.
+        Die Aktion wird ausgeführt, sobald Datum und Uhrzeit erreicht sind. du kann regelmäßig wiederholt werden.
     === "Button"
         Die Aktion wird ausgeführt, sobald der Button angeklickt wird. Der Button wird in der Aktionsleiste des Objektes angezeigt, wenn die Bedingungen erfüllt sind.
     === "Objekt Ereignis"
@@ -91,7 +99,7 @@ Trigger bestimmen wann ein Flow ausgeführt wird. Es ist nur ein Trigger pro Flo
 
 ### Konditionstypen
 
-Es muss keine Konditionen gewählt werden. Außerdem können conditions mit **UND** sowie **ODER** verknüpft und verschachtelt werden.
+Konditionen sind optional. Du kannst sie mit **UND** sowie **ODER** verknüpfen und verschachteln.
 
 !!! warning ""
     === "Logische Konditionen"
@@ -119,7 +127,7 @@ Es muss mindestens eine Aktion definiert werden.
 
 ## Logs
 
-Die Logs sind für alle Flows ersichtlich oder für den jeweils geöffneten Flow. In den Logs werden wichtige Informationen zu den Ausführungen gespeichert.
+Die Logs zeigen Ausführungsinformationen -- entweder für alle Flows oder für den aktuell geöffneten Flow.
 
 ## i-doit console utility commands and options
 
@@ -182,7 +190,7 @@ sudo -u www-data php console.php flows:time-trigger --user admin-user --password
 
 ## Anwendungsfälle
 
-Anwendungsfälle sind in unserer [Demo](https://demo.i-doit.com) zu finden und können von dort Exportiert werden.
+Fertige Anwendungsfälle findest du in unserer [Demo](https://demo.i-doit.com) -- du kannst sie von dort exportieren.
 
 ## Releases
 <!-- cSpell:disable -->

@@ -1,6 +1,6 @@
 ---
 title: Preparation
-description: prepare documents
+description: installation, rights assignment, and configuration of the Documents add-on
 icon:
 status:
 lang: en
@@ -8,50 +8,37 @@ lang: en
 
 # Preparation
 
-## Installation/Update
+## installation/Update
 
-The current installation package for the add-on is available in the i-doit customer portal at [https://center.i-doit.com/](https://center.i-doit.com/) after purchasing a valid license and can be downloaded there. The installation itself takes place in the i-doit [Admin Center](../../system-administration/admin-center.md) in the "Add-ons" tab.Here, the package is selected from the local system via the "Browse" button. After specifying for which [Tenant(s)](../../system-administration/multi-tenant.md) the add-on should be made available, the installation can be completed via the "Upload and install" button.<br
-After a new version has been released, the updated package, which will also be available in the i-doit customer portal, can be uploaded and installed in the Admin Center using the same path.
+You download the current installation package for the add-on from the i-doit [Customer Portal](../../administration/customer-portal.md) after purchasing a valid license. installation is performed in the i-doit [Admin Center](../../administration/admin-center.md) under the "Add-ons" tab. There you select the package via "Browse," specify for which [tenant(s)](../../administration/multi-tenancy.md) the add-on should be available, and complete the installation via "Upload and install."
 
-## Assignment of rights
+After a new version is released, you upload the updated package from the [Customer Portal](../../administration/customer-portal.md) in the Admin Center in the same way.
 
-In order for a user to be able to create templates and generate documents, it is necessary to assign appropriate rights. This is possible in the i-doit administration under Rights system > Assignment of rights > Documents, if the add-on is installed.
+## Assigning rights
 
-[![Assignment of rights](../../assets/images/en/i-doit-add-ons/documents/preperation/1-dp.png)](../../assets/images/en/i-doit-add-ons/documents/preperation/1-dp.png)
+For a user to be able to create templates and generate documents, you need to assign the corresponding [rights](../../efficient-documentation/permission-management/index.md). This is possible in the i-doit Administration under **Authorization System > Rights Assignment > Documents** when the add-on is installed.
 
-The following permissions are available here:
+[![Rights assignment](../../assets/images/de/i-doit-add-ons/documents/vorbereitung/1-vor.png)](../../assets/images/de/i-doit-add-ons/documents/vorbereitung/1-vor.png)
 
--   **Document**
+The following permissions are available:
 
-The "Document" condition can be used to allow access to single or multiple documents. Users with this permission can edit the selected documents.
+- **Document** -- Grants access to individual or multiple documents. Users with this permission can edit the selected documents.
+- **Documents in Categories** -- Grants access to documents based on document categories.
+- **Templates** -- Allows editing of document templates.
+- **Templates in Categories** -- Restricts access to templates from defined categories.
+- **Online Repository** -- Required to download templates from the Online Repository.
 
--   **Documents in categories**
+## Additional Configuration
 
-Documents in categories" can be used to grant access to documents based on the document categories.
+The add-on makes the [category](../../basics/it-documentation-structure.md) "Documents" available for all [object types](../../basics/it-documentation-structure.md). You link the category to the desired object types via the [object type configuration](../../basics/custom-object-types.md) or via [Edit data structure](../../administration/management/data-structure/edit-data-structure.md). This way, only the object types you have specified appear during document creation.
 
--   **Templates**
+!!! note "Documents Category"
+    For a document to be created for an object, the "Documents" category must be linked to the object type. If the object type does not have this category, no documents can be created for the objects it contains, as they will not appear in the selection.
 
-The "Template" permission grants the permission to edit document templates.
+## Accessing the Add-on
 
--   **Templates in categories**
+After all preparations are complete, you can access the add-on via **Extras > Documents**.
 
-Access to templates can be granted to templates from defined categories using "Templates in categories".
+[![Accessing the add-on](../../assets/images/de/i-doit-add-ons/documents/vorbereitung/2-vor.png)](../../assets/images/de/i-doit-add-ons/documents/vorbereitung/2-vor.png)
 
--   **Online Repository**
-
-To download templates from the online repository the permission "Online Repository" is required.
-
-## Additional configuration
-
-The add-on additionally makes the "Documents" [category](../../basics/categories-and-attributes.md) available for all object types. The category can be linked to the desired object types via the [object type configuration](../../basics/custom-object-types.md) and [Edit data structure](../../basics/assignment-of-categories-to-object-types.md). In this way, only those object types appear during object creation that are specified by the user in order to keep the selection list clear.
-
-!!! note "Documents category"
-    In order to create a document for an object, it is necessary that the "Documents" category is linked to the object type. If the object type does not have this category, no documents can be created for the objects it contains, because they do not appear in the selection.
-
-## Calling the add-on
-
-After all preparations are completed, the add-on can be accessed via **Extras > Documents**.
-
-[![Calling the add-on](../../assets/images/en/i-doit-add-ons/documents/preperation/2-dp.png)](../../assets/images/en/i-doit-add-ons/documents/preperation/2-dp.png)
-
-The view of the "Extras" menu may differ due to different rights and/or additional installed add-ons.
+The appearance of the "Extras" menu may vary due to different rights and/or additional installed add-ons.

@@ -1,3 +1,10 @@
+---
+title: Release Notes 27
+description: "We're happy to announce i-doit 27."
+icon:
+status:
+lang: en
+---
 # Release Notes 27
 
 We're happy to announce i-doit 27. This release of 2023's autumn will add features to i-doit that have been highly awaited and help you to efficiently use your documentation.
@@ -5,7 +12,7 @@ We're happy to announce i-doit 27. This release of 2023's autumn will add featur
 We first planned to make folders available for custom categories. Over the course of the development we decided to make this configuration available for all categories - even the folders that already exist by default.
 Alongside this feature, we also added a simple way to clear user passwords if needed and some improvements for our JDisc interface. Furthermore, you can now decide whether logbook entries related to purged content are kept or removed when you perform the purge process. Lastly, we prepared our Add-ons for future compatibility and made sure uploads of your custom content now get their own designated folder.
 
-We encourage you to [update](../../maintenance-and-operation/update.md) to this release as soon as possible to benefit from all of these improvements.
+We encourage you to [update](../../maintenance-and-operation/i-doit-update.md) to this release as soon as possible to benefit from all of these improvements.
 
 ## Highlights in this release
 

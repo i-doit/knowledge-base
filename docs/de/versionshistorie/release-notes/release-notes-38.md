@@ -1,3 +1,10 @@
+---
+title: Release Notes 38
+description: "Wir freuen uns, i-doit 38 vorstellen zu können, mit dem wir unseren Fokus auf Qualität und Kompatibilität fortsetzen."
+icon:
+status:
+lang: de
+---
 # Release Notes 38
 <!-- cSpell:disable -->
 Wir freuen uns, i-doit 38 vorstellen zu können, mit dem wir unseren Fokus auf **Qualität und Kompatibilität** fortsetzen.

@@ -6,11 +6,11 @@ status:
 lang: de
 ---
 
-Das "DNS Dokumentation" Add-on wurde als erstes [Add-on](./index.md) mit dem [Add-on Packager](./add-on-packager.md) entworfen und erstellt. Der Gedanke hinter der DNS Dokumentation ist, DNS-Einträge einfach in i-doit zu dokumentieren. Dabei werden über das Add-on die nötigen Objekttypen und Kategorien erstellt.
+Mit dem "DNS Dokumentation" Add-on dokumentierst du DNS-Einträge direkt in i-doit. Das Add-on wurde mit dem [Add-on Packager](./add-on-packager.md) erstellt und liefert alle nötigen Objekttypen und Kategorien automatisch mit.
 
-Installation und Lizenz
+## Installation und Lizenz
 
-Das "DNS Dokumentation" Add-on wird wie jedes Add-on über das [Admin-Center](../administration/admin-center.md) installiert. Das Add-on ist nicht lizenzpflichtig. Es kann allerdings nur mit der pro-Variante genutzt werden.
+Installiere das Add-on wie gewohnt über das [Admin-Center](../administration/admin-center.md). Es ist nicht lizenzpflichtig, setzt aber die pro-Variante von i-doit voraus.
 
 ## Inhalt des Add-ons
 
@@ -39,49 +39,47 @@ Das "DNS-Dokumentation" Add-on bringt die folgenden Objekttypen, Kategorien und 
 
 ## DNS Server
 
-Der ausgelieferte Objekttyp "DNS Server" orientiert sich an einem normalen Server Objekt, wobei noch die zusätzliche Kategorie "DNS Zones" zugewiesen ist.
-In dem Add-on wird ein expliziter Objekttyp genutzt, damit eine problemlose Integration gewährleistet werden kann. Die automatisch zugewiesene Kategorie "DNS Zones" beinhaltet eine Übersicht aller zugewiesener DNS Zonen. (Hierbei handelt es sich um eine rückwärtige Kategorie, weswegen die Informationen hier nicht bearbeitet werden können!)
+Der Objekttyp "DNS Server" basiert auf einem normalen Server-Objekt, ergänzt um die Kategorie "DNS Zones". Diese Kategorie zeigt eine Übersicht aller zugewiesenen DNS-Zonen.
+
+!!! info "Bei 'DNS Zones' handelt es sich um eine rückwärtige Kategorie -- die Informationen kannst du hier nur lesen, nicht bearbeiten."
 
 [![DNS Server](../assets/images/de/i-doit-add-ons/dns-documentation/1-dns.png)](../assets/images/de/i-doit-add-ons/dns-documentation/1-dns.png)
 
 ## DNS Zone
 
-Im neuen Objekttypen "DNS Zone" werden alle Informationen zu den Zonen Einträgen dokumentiert.
-Hier stehen drei zusätzliche Kategorien zur Verfügung:
+Im Objekttyp "DNS Zone" dokumentierst du alle Zonen-Informationen. Drei Kategorien stehen dir zur Verfügung:
 
-*   Autorisierende Namesserver → hier werden die zugehörigen Namesserver eingetragen und können zwischen "Primary" und "Secondary" unterschieden werden
-*   DNS Records → hier können die "einzelnen Zeilen" einer Zonendatei eingetragen werden. Diese können über die mitgelieferten "Types" passend erstellt werden
-*   SOA Record → hier kann der SOA-Record explizit dokumentiert werden.
+*   **Autorisierende Nameserver** -- Trage die zugehörigen Nameserver ein und unterscheide zwischen "Primary" und "Secondary".
+*   **DNS Records** -- Dokumentiere die einzelnen Zeilen einer Zonendatei. Die mitgelieferten "Types" helfen dir bei der korrekten Erstellung.
+*   **SOA Record** -- Dokumentiere den SOA-Record separat und detailliert.
 
 ### Autorisierende Namesserver
 
-Bei der Kategorie "Autorisierende Namesserver" handelt es sich um eine Multi-Value Kategorie.
+Die Kategorie "Autorisierende Nameserver" ist eine Multi-Value-Kategorie -- du kannst beliebig viele Einträge anlegen.
+
 [![Autorisierende Namsserver](../assets/images/de/i-doit-add-ons/dns-documentation/2-dns.png)](../assets/images/de/i-doit-add-ons/dns-documentation/2-dns.png)
 
-In einem Eintrag werden zwei Informationen dokumentiert:
+Jeder Eintrag enthält zwei Informationen:
 
-1. DNS Server Objekt
-2. Rolle
+1. **DNS Server Objekt** -- Wähle den Server über den Objektbrowser aus.
+2. **Rolle** -- Weise dem Server die Rolle "Primary" oder "Secondary" zu.
 
 [![DNS Server Objekt](../assets/images/de/i-doit-add-ons/dns-documentation/3-dns.png)](../assets/images/de/i-doit-add-ons/dns-documentation/3-dns.png)
 
-Für das Attribut "DNS Server Objekt" steht ein Objektbrowser zur Verfügung. Hier kann dann der entsprechende DNS Server ausgewählt werden. Zusätzlich kann dann pro Sever auch die entsprechende "Rolle" angegeben werden. Zu Verfügung stehen hier → Primary und Secondary
-
 ### DNS Records
 
-Auch bei der Kategorie "DNS Records" handelt es sich um eine Multi-Value Kategorie.
-[![DNS Records](../assets/images/de/i-doit-add-ons/dns-documentation/4-dns.png)](../assets/images/de/i-doit-add-ons/dns-documentation/4-dns.png)
+Auch "DNS Records" ist eine Multi-Value-Kategorie. So dokumentierst du eine DNS-Datei Zeile für Zeile und behältst die Übersicht.
 
-Die Kategorie wurde als Multi-Value Kategorie entworfen, damit eine DNS Datei "Zeile für Zeile" dokumentiert werden kann. Dies ermöglicht eine Übersicht aller Einträge.
+[![DNS Records](../assets/images/de/i-doit-add-ons/dns-documentation/4-dns.png)](../assets/images/de/i-doit-add-ons/dns-documentation/4-dns.png)
 
 [![DNS Records](../assets/images/de/i-doit-add-ons/dns-documentation/5-dns.png)](../assets/images/de/i-doit-add-ons/dns-documentation/5-dns.png)
 
-Ein Eintrag setzt sich den Textfeldern "Name", "Time to live", "Data" und den Dialog+ Feldern "Class" und Type" zusammen. Für die Dialog+ Felder "Class" und "Type" werden vordefinierte Einträge mitgeliefert.
+Jeder Eintrag besteht aus den Textfeldern **Name**, **Time to live** und **Data** sowie den Dialog+-Feldern **Class** und **Type**. Für "Class" und "Type" werden vordefinierte Einträge mitgeliefert.
 
 ### SOA Records
 
-Zusätzlich zu den einfachen DNS Records gibt es die Kategorie "SOA Records". Diese Kategorie ermöglicht es den sogenannten "Start of Authority" detaillierter zu dokumentieren. Da der SOA-Record einzigartig ist, steht die Kategorie auch nicht als Multi-Value Kategorie zur Verfügung.
+In der Kategorie "SOA Records" dokumentierst du den "Start of Authority" detailliert. Da der SOA-Record pro Zone einzigartig ist, handelt es sich hier um eine Single-Value-Kategorie.
 
 [![SOA Records](../assets/images/de/i-doit-add-ons/dns-documentation/6-dns.png)](../assets/images/de/i-doit-add-ons/dns-documentation/6-dns.png)
 
-Abgesehen vom Dialog+ Feld "Class" stehen alle Felder als Textfelder zur Verfügung. Hier können alle notwendigen Informationen des SOA-Records dokumentiert werden.
+Bis auf das Dialog+-Feld "Class" stehen alle Felder als Textfelder zur Verfügung.

@@ -1,14 +1,24 @@
+---
+title: "Kabel-Patches und -wege"
+description: "In diesem Artikel erfaehrst du, wie du Hardware-Objekte in i-doit miteinander verkabelst -- von Ethernet über Glasfaser bis zur Stromversorgung."
+icon:
+status:
+lang: de
+---
 # Kabel-Patches und -wege
 
-Zu einer umfangreichen [IT-Dokumentation](../glossar.md) kommt man über kurz oder lang zur Abbildung der Verkabelung. Mit diesem Artikel geben wir einen Einstieg, wie man Hardware-[Objekte](../grundlagen/struktur-it-dokumentation.md) miteinander verkabelt.
+In diesem Artikel erfährst du, wie du Hardware-[Objekte](../grundlagen/struktur-it-dokumentation.md) in i-doit miteinander verkabelst -- von Ethernet über Glasfaser bis zur Stromversorgung.
 
 ## Konzept
 
-Die Abbildung von Verkabelungen ist in i-doit vielfältig wie die Realität: Ethernet, Glasfaser, Stromversorgung, Anschluss von Peripherie - alles, was einen Anschluss hat und mit einem Kabel verbunden werden kann, findet seinen Platz in der IT-Dokumentation.
+i-doit trennt strikt zwischen der **Dokumentation von Verbindungen** und der **physikalischen Verkabelung**:
 
-i-doit sieht dabei eine **strikte Trennung zwischen der Dokumentation von Verbindungen und der physikalischen Verkabelung** vor. Ein gutes Beispiel ist die Netzwerkverkabelung über Ethernet. Zum Einen können die Verbindungen zwischen aktiven Netzwerkkomponenten (Switches, Router, Firewalls) in der [Kategorie](../grundlagen/struktur-it-dokumentation.md) **Netzwerk → Port** festgehalten werden. Somit ist zu erkennen, an welchem Switch welcher Server hängt. Verbindungswege über mehrere Komponenten hinweg werden sichtbar. Zum Anderen spielen oftmals passive Komponenten eine wichtige Rolle: Patchpanels und Patchdosen sorgen für Ordnung im regelrechten "Kabelwirrwarr". Doch wem die Verbindung zwischen aktiven Komponenten genügt, kann die passiven Komponenten und damit auch die Kabel selbst außen vor lassen. i-doit ist in der Lage, im Hintergrund die Dokumentation der Verkabelung vorzunehmen, ohne dass der Benutzer zusätzliche Schritte ergreifen muss. Wird zu einem späteren Zeitpunkt ein Detailwissen zur Verkabelung erforderlich, kann die bisherige Dokumentation ergänzt werden, ohne dass der Benutzer von vorne beginnen muss.
+- **Verbindungen zwischen aktiven Komponenten**: In der [Kategorie](../grundlagen/struktur-it-dokumentation.md) **Netzwerk → Port** hältst du fest, an welchem Switch welcher Server haengt. Verbindungswege über mehrere Komponenten werden sichtbar.
+- **Passive Komponenten**: Patchpanels und Patchdosen kannst du optional dokumentieren. Wem die Verbindung zwischen aktiven Komponenten genügt, lässt passive Komponenten und Kabel aussen vor.
 
-Wie in i-doit üblich findet die Dokumentation der Verkabelung mittels Objekten und [Attributen](../grundlagen/struktur-it-dokumentation.md) statt. Neben zahlreichen Formularen stehen Funktionen zum Visualisieren, Auswertung und Importieren bereit. Darum geht es im Folgenden.
+i-doit dokumentiert die Verkabelung im Hintergrund, ohne dass du zusätzliche Schritte ausführen musst. Benötigst du später mehr Detailwissen, ergänzt du die bestehende Dokumentation -- du musst nicht von vorne beginnen.
+
+Neben Formularen stehen dir Funktionen zum Visualisieren, Auswerten und Importieren zur Verfügung.
 
 ## Kategorie-Ordner **Verkabelung**
 

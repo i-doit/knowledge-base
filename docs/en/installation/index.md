@@ -1,10 +1,33 @@
-# Installation
+---
+title: installation
+description: "Before you get started with IT documentation, i-doit needs to be installed."
+icon:
+status:
+lang: en
+---
+# installation
 
-The [IT-documentation](../glossary.md) should be based on a solid foundation - the same applies to the technical side. Three types of installation are available for i-doit.
+Before you get started with IT documentation, i-doit needs to be installed. Choose the installation method that best suits your environment:
 
-|     | [Automatic Installation](automatic-installation.md) | [Manual Installation](manual-installation/index.md) | [i-doit Virtual Eval Appliance](i-doit-virtual-eval-appliance/index.md) |
-| --- | --- | --- | --- |
-| Topic | All the required configuration steps are executed on a newly installed GNU/Linux operating system and i-doit is installed. Additionally, Cronjobs, backups and other useful CLI tools are included. Only the execution of a script is required for this purpose. | The required software packages are installed and configured independently. Afterwards, i-doit is downloaded and installed. The necessary steps for Cronjobs and backups also have to be carried out by the user. | A VM with a pre-installed current version of i-doit is available for users of i-doit during the evaluation phase. The operating system is Debian GNU/Linux. |
-| Scope | :material-check: Installation of software packages<br><br>:material-check: Configuration of software packages<br><br>:material-check: Installation of i-doit<br><br>:material-check: Set-up of Cronjobs<br><br>:material-check: Set-up of backups<br><br>:material-check: Set-up of Restore | :material-check: Installation of software packages<br><br>:material-check: Configuration of software packages<br><br>:material-check: Installation of i-doit<br><br>:material-check: Set-up of Cronjobs<br><br>:material-check: Set-up of backups<br><br>:material-check: Set-up of Restore | :material-check: Installation of software packages<br><br>:material-check: Configuration of software packages<br><br>:material-check: Installation of i-doit<br><br>:material-check: Set-up of Cronjobs<br><br>:material-check: Set-up of backups<br><br>:material-check: Set-up of Restore |
-| Suitable for | - Basic knowledge in handling GNU/Linux | - Good knowledge in the administration of GNU/Linux<br>- Option: when Microsoft Windows Server is applied | - No knowledge in handling GNU/Linux<br>- Appliance is only covered by support during the evaluation phase |
-| Instructions | Here you are forwarded to instructions for [Automatic Installation](automatic-installation.md). | Here you are forwarded to instructions for [Manual Installation](manual-installation/index.md). | Here you are forwarded to instructions for [i-doit Virtual Eval Appliance](i-doit-virtual-eval-appliance/index.md). |
+## Which installation Method Suits You?
+
+| | [Automatische installation](automatic-installation.md) | [Manuelle installation](manual-installation/index.md) | [Eval Appliance](i-doit-virtual-eval-appliance/index.md) |
+|---|---|---|---|
+| **Description** | A script installs and configures everything on a fresh Linux system — including cron jobs, backups, and CLI tools. | You install and configure all components yourself. Full control over every step. | Ready-made VM with pre-installed i-doit for testing and evaluation. |
+| **Suitable for** | Production use, standard setup | Production use, custom requirements, Windows Server | Evaluation and testing |
+| **Prerequisites** | Basic Linux knowledge | Good Linux or Windows Server knowledge | None — simply import the VM |
+| **Scope** | Complete: installation, configuration, cron jobs, backup | Everything manually configurable | Fully pre-installed |
+
+!!! tip "Recommendation"
+    For most users, the **automatic installation** is the fastest and easiest way. You only need a fresh [Debian or Ubuntu](system-requirements.md) and the installation script takes care of the rest.
+
+## Prerequisites
+
+Regardless of the installation method, you should check the [system requirements](system-requirements.md) beforehand. There you will find the supported operating systems, PHP and database versions, as well as hardware recommendations.
+
+## Next Steps After installation
+
+1.  Apply license in the [Admin Center](../administration/admin-center.md)
+2.  Perform [first login](../basics/initial-login.md)
+3.  [Set up cron jobs](../automation-and-integration/cli/index.md) (if not done automatically)
+4.  [Configure backup](../maintenance-and-operation/backup-and-restore/index.md)

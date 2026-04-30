@@ -1,95 +1,99 @@
 ---
 title: Replacement Add-on
-description: Replacement Add-on
+description: "Are you commissioning a new switch and want to take over all existing connections?"
 icon: addons/replacement
 status:
 lang: en
 ---
 
-A new switch is put into operation but you want to maintain all the connections? Use the **Replacement** [add-on](./index.md) so that you don't have to document all the connections anew. This add-on allows swapping of [objects](../basics/structure-of-the-it-documentation.md) with configurable adoption of existing connections.
+Are you putting a new switch into operation and want to take over all existing connections? With the [Add-on](./index.md) **Replacement** you swap [objects](../basics/it-documentation-structure.md) and configure which connections and category data are transferred.
 
-!!! note "The add-on was previously called **SwapCI** up to version 1.3.1."
+!!! note "The add-on was previously called **SwapCI** until version 1.3.1."
 
-## Download and Installation
+## Download and installation
 
-This add-on can also be installed at a later time. You can find detailed descriptions about download, installation, updates etc. in the "[i-doit Add-ons](./index.md)" article.
+This add-on can be installed afterward. Detailed descriptions regarding download, installation, updates, etc. can be found in the article [i-doit Add-ons](./index.md).
 
 ## Configuration
 
-You can find the configuration at **Administration** **→ CMDB settings → Replacement → Configuration**. For the most part, you can use the configuration to define default values in order to standardize and speed up frequent swapping.
+Under **Administration → Add-ons → Device Swap → Configuration** you define default values to standardize and speed up frequent swap processes.
 
-| Option                                   | Description                                                                                                                                                                                                                                                                                                                                                                                |
-| ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Selectable object-types**              | Here you specify which objects of which type can be swapped. Additionally, you define per [object type](../basics/structure-of-the-it-documentation.md) which [categories](../basics/structure-of-the-it-documentation.md) (and thus which [attributes](../basics/structure-of-the-it-documentation.md)) are to be swapped. The categories which aren't selected aren't affected by swaps. |
-| **CMDB status for storing objects**      | You can restrict the selection of objects offered for swapping via their [**CMDB status**](../basics/life-and-documentation-cycle.md).                                                                                                                                                                                                                                                     |
-| **Consider the "swap" status?**          | When the swap status is considered, the swapped object receives the **CMDB status** **stored** and the object of swapping the **CMDB status in operation**.                                                                                                                                                                                                                                |
-| **Archive swapped objects?**             | Do you want the object which is swapped to receive the [status](./../basics/life-and-documentation-cycle.md) **Archived**?                                                                                                                                                                                                                                                                 |
-| **Also swap the SYS-ID?**                | Do you want to swap the **SYS-ID** attribute in the **General** category? This is [an attribute for unique referencing](../basics/unique-references.md).                                                                                                                                                                                                                                   |
-| **Keep swapped object categories data?** | Should the category data of both objects be swapped? A -> B and B -> A. If "No" is selected, the exchanged object will not adopt any category data.                                                                                                                                                                                                                                        |
+| Option                                              | Description                                                                                                                                                                                                                                                                                                                                                                                                              |
+| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Selectable object types**                        | Which objects of which type can be swapped is defined here. Additionally, per [object type](../basics/it-documentation-structure.md) it is defined which [categories](../basics/it-documentation-structure.md) (and thus which [attributes](../basics/it-documentation-structure.md)) should be swapped. Categories that are not selected remain unaffected by a swap. |
+| **CMDB status for replacement devices**                    | The selection of which objects are offered for swapping can be restricted via their [**CMDB status**](../basics/life-and-documentation-cycle.md)                                                                                                                                                                                                                                                       |
+| **Consider "swap" status?**                | If the swap status is considered, the swapped device receives the **CMDB status** **Swapped** and the replacement device receives the **CMDB status In operation**.                                                                                                                                                                                                                                                             |
+| **Archive swapped devices?**                  | Should the object being swapped receive the [state](../basics/life-and-documentation-cycle.md) **Archived**?                                                                                                                                                                                                                                                                                              |
+| **Swap SYS-ID as well?**                      | Should the **SYS-ID** attribute of the **General** category be swapped? This is [an attribute for unique referencing](../basics/unique-references.md).                                                                                                                                                                                                                        |
+| **Retain category data of swapped objects?** | Should the category data of both objects be swapped? A -> B and B -> A. If "No" is selected, the swapped object will not take over any category data.                                                                                                                                                                                                                                            |
 
-## Rights Assignment
+## Assigning rights
 
-Under **Administration → Authorization system → Rights → Replacement** you can specify [rights for persons and person groups](../efficient-documentation/rights-management/index.md).
+Under **Administration → Permissions → Device Swap** can [permissions for persons and person groups](../efficient-documentation/permission-management/index.md) be adjusted.
 
-| Condition                         | Description                                                                                                                                                             |
-| --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Swap objects**                  | Does the user have permission to swap objects?                                                                                                                          |
-| **Swap by workplace**             | Does the user have permission to swap workplace components?                                                                                                             |
-| **Swap CI module configuration**  | Does the user have permission to adjust the configuration (see above)?                                                                                                  |
-| **Swap CI-button in object list** | The user can swap objects via the [action bar of the object list](../basics/object-list/index.md). For this purpose, the **Swap** button will appear in the action bar. |
-| **Swap CI-button in objects**     | Via the action bar within an object, the user can swap the object with another one. For this purpose, the **Swap** button will appear in the action bar.                |
+| Condition                                        | Description                                                                                                                                                                                      |
+| ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Swap objects**                             | May the user swap objects?                                                                                                                                                               |
+| **Swap by workstation systems**           | May the user swap workstation components?                                                                                                                                               |
+| **Device swap configuration**                   | May the user modify the configuration (see above)?                                                                                                                                        |
+| **Device swap button in the object list** | The user has via the [action bar of the object list](../basics/object-list/action-bar.md) the ability to swap objects with each other. The **Swap** button appears there. |
+| **Device swap button in objects**        | The user has via the action bar within an object the ability to swap the object with another. The **Swap** button appears there.                                |
 
-## Requirements
+## Prerequisites
 
-Before two objects can be swapped, the following conditions have to be met:
+Before two objects can be swapped with each other, the following prerequisites must be met:
 
 -   Both objects have the same object type.
--   You can't swap an object with itself.
+-   An object cannot be swapped with itself.
 
-## Replacement
+## Swapping objects
 
-There are three ways to swap an object for another one:
+There are three ways to swap one object for another:
 
-1. Select both objects within an [object list](../basics/object-list/index.md) and click the **Swap** button in the action bar.
-2. Click the **Swap** button in the action bar within an object and then select the object of swapping  under **Stored object.**
-3. Select both objects under **Object to swap** and **Stored object** at **Add-ons → Replacement.**
+1. Within an [object list](../basics/object-list/index.md) select both objects and in the [action bar](../basics/object-list/action-bar.md) click the **Swap** button.
+2. Within an object, click the **Swap** button in the action bar and then select the replacement device under **Stored object**
+3. Under **Add-ons → Device Swap** select the two objects under **Object to be swapped** and **Stored object**
 
-!!! note "Only possible if the #Configuration has been carried out beforehand and the object type has been selected."
+!!! note "Only possible if the #Configuration has been made beforehand and the object type has been selected."
 
-Now you can swap the selected objects by clicking the **Change** button.
+The selected objects can be swapped using the **Swap** button.
 
-[![Selection via object list](../assets/images/en/i-doit-add-ons/replacement/1-rp.png)](../assets/images/en/i-doit-add-ons/replacement/1-rp.png)
+[![Selection via object list](../assets/images/de/i-doit-add-ons/replacement/1-rp.png)](../assets/images/de/i-doit-add-ons/replacement/1-rp.png)
 
-[![Selection via object](../assets/images/en/i-doit-add-ons/replacement/2-rp.png)](../assets/images/en/i-doit-add-ons/replacement/2-rp.png)
+[![Selection via object](../assets/images/de/i-doit-add-ons/replacement/2-rp.png)](../assets/images/de/i-doit-add-ons/replacement/2-rp.png)
 
-After selecting both objects, you can adjust further options. The pre-selection is from the above mentioned configuration. By clicking the **Start swapping** button both objects will be swapped.
+After selecting both objects, the options can be adjusted. Clicking the **Start device swap** button performs the swap of both objects.
 
-[![Start swapping](../assets/images/en/i-doit-add-ons/replacement/3-rp.png)](../assets/images/en/i-doit-add-ons/replacement/3-rp.png)
+[![Swap objects](../assets/images/de/i-doit-add-ons/replacement/3-rp.png)](../assets/images/de/i-doit-add-ons/replacement/3-rp.png)
 
-## Swap by Workplace
+## Swap by workstation systems
 
-You can carry out a pre selection for swapping via assigned workplaces. First select an object type under **Add-ons → Replacement → Swap by workplace**. Then all objects of the type **Workplace,** in whose **Workplace components** category objects of this type are assigned, will be listed. You select an object for swapping from the respective workplace. With the button  **Swap selected objects** you can reach **Add-ons → Replacement → Swap objects**.
+Under **Add-ons → Device Swap → Swap by workstation systems** you make a preselection via assigned workstations:
 
-[![Swap by Workplace](../assets/images/en/i-doit-add-ons/replacement/4-rp.png)](../assets/images/en/i-doit-add-ons/replacement/4-rp.png)
+1. Select an object type.
+2. All **Workstation** objects whose **Workstation components** contain objects of this type appear.
+3. Select one object per workstation to swap and click **Swap selected objects**.
 
-## Swap Report
+[![Swap by workstation systems](../assets/images/de/i-doit-add-ons/replacement/4-rp.png)](../assets/images/de/i-doit-add-ons/replacement/4-rp.png)
 
-A report about swapping actions which have been carried out so far is generated under **Add-ons → Replacement → Swap-report**. You can also reach the reports item via **Extras → Report Manager → Views → Swap-report**.
+## Swap report
 
-[![Swap Report](../assets/images/en/i-doit-add-ons/replacement/5-rp.png)](../assets/images/en/i-doit-add-ons/replacement/5-rp.png)
+A report on previous swap actions can be found under **Add-ons → Device Swap → Swap Report** (alternatively via **Extras → Report Manager → Views → Swap Report**).
+
+[![Swap report](../assets/images/de/i-doit-add-ons/replacement/5-rp.png)](../assets/images/de/i-doit-add-ons/replacement/5-rp.png)
 
 ## Releases
 
-| Version | Date       | Changelog                                                                                                                                                                                                                                                                                                                         |
-| ------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1.6     | 2024-10-10 | [Bug] Fix auto load issue during add-on installation                                                                                                                                                                                                                                                                              |
-| 1.5     | 2023-11-07 | [Bug] No changes are recorded in the logbook<br>[Bug] Signal error when downloading a document from the document repository                                                                                                                                                                                                       |
-| 1.4     | 2022-09-05 | [Task] PHP 8.0 Compatibility  <br>[Task] Design Compatibility  <br>[Improvement] English add-on renaming to Replacement                                                                                                                                                                                                           |
-| 1.3.2   | 2022-02-21 | [Bug] Use Of German Language in English Version Of Object Swap                                                                                                                                                                                                                                                                    |
-| 1.3.1   | 2020-08-10 | [Bug] The location is lost during swap  <br>[Bug] Information is deleted when objects are exchanged                                                                                                                                                                                                                               |
-| 1.3     | 2019-05-20 | [Improvement] Properties series number and model title in swap ci report available<br>[Bug] Search index will not be renewed after a device replacement<br>[Bug] Device exchange uses workflow tables<br>[Bug] Swap-status has a uppercase first letter in its CMDB-Status<br>[Bug] Opening the swap-report displays an error<br> |
-| 1.2.5   | 2017-05-02 | [Bug] Error Message Appears Trying To uninstall SWAP_CI in AdminCenter<br>                                                                                                                                                                                                                                                        |
-| 1.2.4   | 2017-03-08 | [Bug] Button "Swap" of "SwapCI" does not Work in object lists<br>[Bug] Improved PHP and i-doit compatibility<br>                                                                                                                                                                                                                  |
-| 1.2.3   | 2015-10-08 | [Improvement] Properties series number and model title in swap ci report available<br>[Bug] SwapCi shows error message when you log in to this context<br>[Bug] SQL error prevents from choosing a category for swap<br>                                                                                                          |
-| 1.2.2   | 2015-03-09 | [Bug] SwapCi is showing error if tenant did not install the add-on<br>                                                                                                                                                                                                                                                            |
-| 1.2.1   | 2014-04-14 | Initial release                                                                                                                                                                                                                                                                                                                   |
+| Version | Date      | Changelog                                                                                                                                                                                                                                                                                                                                                            |
+| ------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1.6     | 10.10.2024 | [Bug] Fix auto load issue during add-on installation                                                                                                                                                                                                                                                                                                                 |
+| 1.5     | 07.11.2023 | [Bug] No changes are recorded in the logbook<br>[Bug] Signal error when downloading a document from the document repository                                                                                                                                                                                                                                          |
+| 1.4     | 05.09.2022 | [Task] HP 8.0 Compatibility<br>[Task] Design Compatibility                                                                                                                                                                                                                                                                                                           |
+| 1.3.2   | 21.02.2022 | [Bug] Use Of German Language in English Version Of Object Swap                                                                                                                                                                                                                                                                                                       |
+| 1.3.1   | 10.08.2020 | [Bug] The location is lost during swap<br>[Bug] Information is deleted when objects are exchanged                                                                                                                                                                                                                                                                    |
+| 1.3     | 20.05.2019 | [Improvement] Attributes "Serial number" and "Model designation" in device swap report<br>[Bug] Search index is not renewed after a device swap<br>[Bug] Device swap uses workflow tables<br>[Bug] Swap status in English as only CMDB status with capital letter<br>[Bug] Error when calling the swap report (device swap)<br> |
+| 1.2.5   | 02.05.2017 | [Bug] Error message in AdminCenter when uninstalling SWAP_CI<br>                                                                                                                                                                                                                                                                                           |
+| 1.2.4   | 08.03.2017 | [Bug] "Swap" button from "Device Swap" extension in object lists has no effect<br>[Bug] PHP and i-doit compatibility improved<br>                                                                                                                                                                                                              |
+| 1.2.3   | 08.10.2015 | [Improvement] Attributes "Serial number" and "Model designation" in device swap report<br>[Bug] Device swap displays error message when logging in to its context<br>[Bug] SQL error prevents selecting categories for swap<br>                                                                                                            |
+| 1.2.2   | 09.03.2015 | [Bug] SwapCI module causes error if tenant does not have the module installed<br>                                                                                                                                                                                                                                                                               |
+| 1.2.1   | 14.04.2014 | Initial release                                                                                                                                                                                                                                                                                                                                                    |

@@ -1,121 +1,158 @@
+---
+title: Procedure with VIVA
+description: "Managing IT-Grundschutz catalogs"
+icon:
+status:
+lang: en
+---
 # Procedure with VIVA
 
-Manage IT-Grundschutz catalogs
+Managing IT-Grundschutz Catalogs
+---------------------------------
 
-Import catalogs
----------------
+### Importing catalogs
 
-The first step towards documentation is to import the current IT-Grundschutz catalogs. You will be prompted to do this the first time you start VIVA under Extras → VIVA. Various catalogs are available for selection:
+The first step toward documentation is importing the current IT-Grundschutz catalogs. You are prompted to do this when you first open VIVA under **Extras → VIVA**. Several catalogs are available for selection:
 
-*   Supplementary delivery (EL) 15 from 2016 in German.
+*   Supplement (EL) 15 from 2016 in German
 *   EL 14 from 2014 in German
 *   EL 13 from 2013 in German
 *   EL 13 from 2013 in English
-*   EL 12 from 2011 in German and
-*   EL 11 of 2009 in German.
+*   EL 12 from 2011 in German, and
+*   EL 11 from 2009 in German.
 
-The catalogs are available for download on the BSI website. Depending on the EL, minor intermediate steps may be required to convert the catalogs to the correct file format.
+The catalogs are available for download on the BSI website. Depending on the supplement edition, some minor intermediate steps may be required to convert the catalogs into the correct file format.
 
-Intermediate steps are necessary for the import because the format offered by the BSI cannot be processed directly by VIVA. The catalogs are available for download on the BSI website. The further steps:
+Intermediate steps are necessary for the import because the format offered by the BSI cannot be processed directly by VIVA. The catalogs are available for download on the BSI website. The additional steps are:
 
-1.  After download: Unzip ZIP file
-2.  Unpack self-extracting archive (.exe)
-3.  Change to folder GSHB; there is a subfolder DE available
-4.  Rename folder DE to el15de
-5.  Pack folder el15de in ZIP format  
-      
-    
+1.  After downloading: extract the ZIP file
+2.  Extract the self-extracting archive (.exe)
+3.  Navigate to the GSHB folder; the subfolder DE is located there
+4.  Rename the DE folder to el15de
+5.  Compress the el15de folder in ZIP format
 
-The ZIP file can now be processed by VIVA. In the menu item Catalogs the button Import has to be clicked. A dialog box appears in which the desired EL and the corresponding ZIP file are to be selected. The selection is confirmed by clicking on Start import. The import can take several minutes and should not be interrupted.
+[![Import catalogs](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/1-vv.png)](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/1-vv.png)
 
-After the successful import the EL appears on the loaded page and can be used. If further ELs are to be used, the last steps must be repeated.
+The ZIP file can now be processed by VIVA. In the _Catalogs_ menu item, click the _Import_ button. A dialog box appears where you can select the desired supplement edition and the corresponding ZIP file. Confirm your selection by clicking _Start Import_. The import may take several minutes and should not be interrupted.
 
-Customize catalogs
-------------------
+After a successful import, the supplement edition appears on the loaded page and can be used. If additional editions are needed, repeat the previous steps.
 
-IT-Grundschutz catalogs can be customized individually. This means that new modules, hazards and measures can be created, existing ones adapted or deleted.
+[![Imported catalogs in the menu tree](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/2-vv.png)](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/2-vv.png)
 
-It is also possible to assign hazards and measures to modules. The specification of a qualification level for an assigned measure is taken into account. Furthermore, you can view, add to, and edit the test questions that match the respective measures.
+### Customizing catalogs
 
-Model Information domains
--------------------------
+IT-Grundschutz catalogs can be individually customized. New modules, threats, and measures can be created, and existing ones can be modified or deleted.
 
-One or more information networks can be created under the menu item Information networks. They represent the starting point for more in-depth documentation. When creating an information network, it is important to specify which IT-Grundschutz catalogs are to be applied to the information network.
+The assignment of threats and measures to modules is also possible. The specification of a qualification level for an assigned measure is automatically applied. Furthermore, you can view, supplement and edit the audit questions associated with the respective measures.
 
-When a new information network is created, a target group with the same name and a suitable target object is automatically created. The building blocks of layer 1 Cross-cutting aspects are applied to this target group. Likewise, the protection requirement categories are filled in with the examples from BSI Standard 100-2.
+!!! attention "Please observe the notes in BSI standard 100-2 if you deviate from the supplied catalogs."
 
-Create target groups
---------------------
+Modeling information domains
+--------------------------------
 
-In target groups, similar target objects are combined into groups. This process is part of the structure analysis (see BSI standard 100-2, chapter 4.2.). Target groups appear in the menu tree below the five layers of an information network. Each target group is initially assigned to one of the following layers when it is created:
+Under the _Information Domains_ menu item, one or more information domains can be created. They represent the starting point for more in-depth documentation. When creating an information domain, you must ensure that the correct IT-Grundschutz catalogs are applied to it.
+
+[![Create information domain](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/3-vv.png)](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/3-vv.png)
+
+When a new information domain is created, a target group with the same name and a matching target object is automatically created. The layer 1 modules _Overarching Aspects_ are applied to this target group. Likewise, the [protection needs categories]() are populated with the examples from BSI standard 100-2.
+
+Creating target groups
+-------------------
+
+In target groups, similar target objects are grouped together. This process is part of the structural analysis (see BSI standard 100-2, chapter 4.2). Target groups appear in the menu tree below the five layers of an information domain. When creating a target group, it is first assigned to one of the following layers:
 
 1.  Overarching aspects,
 2.  Infrastructure,
 3.  IT systems,
-4.  Networks and
+4.  Networks, and
 5.  Applications.
-6.  Create target group
 
-The layer affiliation can be extended by assigning building blocks from other layers. The information group itself is assigned to the 1st layer, which happens automatically when a new information group is created. An exception is the change from the old module (migration): Here, the layer assignment is made on the basis of the assigned modules.
+[![Create target group](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/4-vv.png)](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/4-vv.png)
 
-Target groups of layers 4 Networks and 5 Applications behave differently from those of the other layers: Target groups of layer 4 do not contain any target objects, but consist of the linkage from two target groups, which is documented in the item Communication link. Instead of linking two target groups, a group can alternatively be linked to something outside the information network. Example: The target group is linked to the Internet.
+The layer membership can be extended by assigning modules from other layers. The information domain itself is assigned to layer 1, which happens automatically when a new information domain is created. An exception is the [migration from the old module (migration)](): there, the layer assignment is determined based on the assigned modules.
 
-Layer 5 target groups are extended by the type of information they process. VIVA already brings some types that can (and should) be post-processed. It is important to specify here whether personal data is processed, because this information will be used again and again in the further process. This type is therefore also not removable.
+[![Target group R 2 appears in 2 layers.](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/5-vv.png)](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/5-vv.png)
 
-Assign target objects
----------------------
+Target groups in layers 4 _Networks_ and 5 _Applications_ behave differently from those in the other layers: target groups in layer 4 do not contain [target objects](), but instead consist of a link between two target groups, which is documented under the _Communication Link_ section. Instead of linking two target groups, you can alternatively link a group with something outside the information domain. Example: the target group is linked to the internet.
 
-Target objects are determined within target groups. The target groups of layer 4 networks are an exception. This is part of the structural analysis. VIVA is closely interlocked with the CMDB data from i-doit at this point. New target objects are selected using the object browser familiar from i-doit.
+[![Edit target group in layer 4](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/6-vv.png)](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/6-vv.png)
 
-The interlocking with the CMDB data is reflected in other places. For example, contacts (persons, groups of persons, organizations) can be linked wherever it makes sense.
+Target groups in layer 5 are extended with the type of information they process. VIVA already comes with several types that can (and should) be edited. It is important here to specify whether personal data is being processed, because this information is used repeatedly throughout the further process. This type therefore cannot be removed.
+
+[![Edit target group in layer 5](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/7-vv.png)](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/7-vv.png)
+
+Assigning target objects
+--------------------
+
+Within target groups, target objects are determined. An exception is the [target groups]() in layer 4 _Networks_. This is part of the structural analysis. VIVA is tightly integrated with the CMDB data from i-doit at this point. New target objects are selected using the object browser familiar from i-doit.
+
+[![List target objects](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/8-vv.png)](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/8-vv.png)
+
+The integration with CMDB data is reflected in additional places. Wherever it makes sense, contacts (persons, person groups, organizations) can be linked, for example.
 
 Target group inheritance
-------------------------
+--------------------
 
-Target objects automatically inherit the properties of their target group, so no further customization is necessary. So much for the theory. However, practice has shown that some properties do not always synchronously fit all target objects at the same time.
+Target objects automatically inherit the properties of their target group, so that no additional adjustments are needed. So much for the theory. In practice, however, it has been shown that some properties do not always apply simultaneously to all target objects.
 
-This is especially true for the implementation of measures. Therefore, a few properties that differ from the target group can be recorded within a target object, for example, to document the date of implementation, which may differ if necessary.
+This primarily concerns the [implementation of measures](). Therefore, within a target object, a few properties that deviate from the target group can be recorded in order to document, for example, the implementation date, which may differ.
 
-!!! attention "The reference documents do not respect inheritance, but draw the information from the target groups and not from the target objects."
+!!! attention "The reference documents do not take inheritance into account; they draw information from the target groups, not from the target objects."
 
-Define protection requirement categories
-----------------------------------------
+Defining protection needs categories
+----------------------------------
 
-The item Protection requirement categories appears below an information network in the menu tree. According to BSI Standard 100-2, Chapter 4.3.1, the damage scenarios are defined here with the help of the protection requirement categories. When creating an information network, the examples given in the standard are adopted and should be adapted to your own organization.
+Below an information domain, the _Protection Needs Categories_ item appears in the menu tree. According to BSI standard 100-2, chapter 4.3.1, this is where damage scenarios are defined using protection needs categories. When an information domain is created, the examples mentioned in the standard are adopted and should be adapted to your own organization.
 
-Determine protection needs
---------------------------
+[![Edit protection needs category](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/9-vv.png)](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/9-vv.png)
 
-As part of the protection requirement determination, the protection requirement of the individual target groups is determined. (See BSI Standard 100-2, chapters 4.3.2 to 4.3.5.) Therefore, the corresponding form fields can be found within a target group.
-
-A special feature applies in layer 4 networks: The protection requirement of the communication links is based on the assigned criticality.
-
-Assigning modules
------------------
-
-Modules from the IT-Grundschutz catalogs are assigned to the target groups. (See BSI Standard 100-2, Chapter 4.4.) Modules contain hazards and measures including their qualification levels, which VIVA automatically takes into account when assigning a module.
-
-If modules from a layer other than the layer assigned to the target group are selected, this results in this target group also being assigned to this other layer. In the menu tree, this group thus appears in several layers at the same time.
-
-When creating a new information network, all modules of layer 1 General aspects are assigned to the automatically created target group.
-
-Implementing measures
----------------------
-
-Measures are by definition designed to be implemented to counteract identified hazards. Prioritization is possible based on the qualification level assigned to each linked measure. (See BSI Standard 100-2, Chapters 4.4 and 4.5.).
-
-By clicking on a linked measure below a module assigned to a target group, the status of its implementation can be documented in detail.
-
-Answer check questions
+Determining protection needs
 ----------------------
 
-As a rule, measures are accompanied by a series of check questions that can be understood as a checklist to be ticked off. All questions can be answered either with "yes" or with "no".
+As part of the protection needs assessment, the protection needs of the individual [target groups]() are determined. (See BSI standard 100-2, chapters 4.3.2 to 4.3.5.) The corresponding form fields are located within each target group.
 
-The check questions provided in the catalogs are already taken into account during import and are displayed within the measures. In addition, these can be edited, deleted or supplemented with new ones.
+[![Edit protection needs](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/10-vv.png)](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/10-vv.png)
 
-The checklists, which are composed of the check questions, are available within measures assigned to target groups.
+A special rule applies in layer 4 _Networks_: the protection needs of communication links are based on the assigned criticality.
 
-Perform supplementary security analysis
----------------------------------------
+[![Edit protection needs of a communication link](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/11-vv.png)](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/11-vv.png)
 
-The supplementary security analysis (see BSI Standard 100-2, Chapter 4.6.) is performed for each target group. VIVA automatically detects whether this step is necessary at all based on the data from the protection requirements assessment (of the communication connections) and whether a supplementary security analysis is necessary in addition to this information.
+Assigning modules
+------------------
+
+Modules from the IT-Grundschutz catalogs are assigned to the [target groups](). (See BSI standard 100-2, chapter 4.4.) Modules contain threats and measures including their qualification levels, which VIVA automatically stores when a module is assigned.
+
+[![Assign modules to a target group](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/12-vv.png)](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/12-vv.png)
+
+If modules from a layer other than the one assigned to the target group are selected, this causes the target group to also be assigned to that other layer. In the menu tree, this group then appears simultaneously under multiple layers.
+
+When a new [information domain]() is created, all modules from layer 1 _Overarching Aspects_ are automatically assigned to the target group that is created along with it.
+
+Implementing measures
+------------------
+
+Measures are by definition designed to be implemented in order to counter identified threats. The qualification level that each linked measure receives allows for prioritization. (See BSI standard 100-2, chapters 4.4 and 4.5.)
+
+[![List assigned measures](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/13-vv.png)](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/13-vv.png)
+
+Clicking on a linked measure beneath a module [assigned to a target group]() allows you to document the implementation status in detail.
+
+[![Document implementation of a measure](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/14-vv.png)](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/14-vv.png)
+
+Answering audit questions
+----------------------
+
+Measures typically come with a series of audit questions that serve as a checklist to be checked off. All questions can be answered with either "yes" or "no".
+
+The audit questions included in the catalogs are already taken into account during the [import]() and are [displayed within the measures](). In addition, these can be edited, deleted, or supplemented with new ones.
+
+[![Answer audit questions for a measure](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/15-vv.png)](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/15-vv.png)
+
+The checklists composed of audit questions are available within [measures assigned to target groups]().
+
+Performing supplementary security analysis
+-----------------------------------------
+
+The supplementary security analysis (see BSI standard 100-2, chapter 4.6) is performed for each [target group](). Whether this step is even necessary is determined automatically by VIVA based on the data from the protection needs assessment (of the communication links) and the specification of whether a supplementary security analysis is required beyond those specifications.
+
+[![Edit supplementary security analysis](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/16-vv.png)](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/16-vv.png)

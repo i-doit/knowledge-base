@@ -1,105 +1,105 @@
-# Unique References
+---
+title: Unique references
+description: "Unique references allow you to unambiguously identify every object in the IT documentation -- whether within i-doit or for connecting to third-party systems."
+icon:
+status:
+lang: en
+---
+# Unique references
 
-References are important to prevent a lack of clarity and unambiguousness within the [IT documentation](../glossary.md). If you want to reference [objects](structure-of-the-it-documentation.md) for third-party systems, for example, various [attributes](../glossary.md) can be used for this task.
+Unique references allow you to unambiguously identify every [object](it-documentation-structure.md) in the [IT documentation](../glossary.md) -- whether within i-doit or for connecting to third-party systems. Various [attributes](it-documentation-structure.md) are available for this purpose.
 
 !!! info "Data imports"
-
-    In order to detect already existing data, there are relevant strategies for [data imports](../consolidate-data/index.md). For the most part, they refer to the attributes mentioned below. Details can be found in the corresponding articles.
+    To recognize already existing data, corresponding strategies exist for [data imports](../consolidate-data/index.md). These mostly relate to the attributes mentioned below. Details can be found in the respective articles.
 
 ## Object ID
 
-Each object in i-doit receives an identifier (ID). This identifier is always unique for each i-doit tenant. The ID is a positive number greater than 0 and can have a length of up to 11 digits. It is automatically assigned by MySQL/MariaDB by incrementing the number by 1. A retroactive change of the ID by the user is not possible in order to prevent inconsistencies. When you [delete objects (**Purge**)](./life-and-documentation-cycle.md), the IDs are free again but they are not reusable.
+Every object in i-doit receives an identifier (ID). This is always unique per i-doit tenant. The ID is a positive number greater than 0 and can have up to 11 digits. It is automatically assigned by MySQL/MariaDB by incrementing the number by 1. A subsequent change of the ID by the user is not possible to avoid inconsistencies. [Deleting objects (**Purge**)](life-and-documentation-cycle.md) frees up IDs, but they cannot be reused.
 
-The object ID is represented as the **Object ID** attribute in the **General** [category](../glossary.md).
+The object ID is displayed in the [category](it-documentation-structure.md) **General** as the attribute **Object ID**.
 
-[![Object ID](../assets/images/en/basics/unique-references/1-ur.png)](../assets/images/en/basics/unique-references/1-ur.png)
+[![object-id](../assets/images/de/grundlagen/eindeutige-referenzierungen/1-er.png)](../assets/images/de/grundlagen/eindeutige-referenzierungen/1-er.png)
 
-The number from which the counter for the object IDs starts is determined during the [setup of i-doit](../installation/manual-installation/setup.md). The default starting number is 1.
+During [i-doit setup](../installation/manual-installation/setup.md), you can determine from which point object IDs are assigned. By default, counting starts at 1.
 
-The object ID is very important for the generation of the URIs. By means of the ID you can access objects in an unambiguous way via a link. The name of the variable is objID. The naming structure is:
+The object ID is highly significant in the generation of URIs. Objects can be uniquely accessed via a link using the ID. The variable name is objID. The naming schema:
 
-    http://i-doit.example.net/i-doit/?objID=1000
+<https://demo.i-doit.com/?objID=9>
 
-Object IDs are especially used for internal purposes, but they can also be helpful for the user or for third-party systems. The IDs are essential for [API access,](../i-doit-add-ons/api/index.md) for example.
+Object IDs are primarily used for internal purposes, but can also be very useful for users or third-party systems. The IDs are essential, for example, for [API access](../i-doit-add-ons/api/index.md).
 
 ## SYS-ID
 
-The **SYS-ID** attribute does not provide unique referencing when automated imports are used. When a new object is created, a positive number with at least 10 digits is generated for the **SYS-ID**, which is derived from the [UNIX timestamp](https://de.wikipedia.org/wiki/Unixzeit). It is displayed in the **General** category. Synonymously, **SYSID** is also used without a hyphen.
+The **SYS-ID** (also **SYSID** without hyphen) is another identification feature, but is not reliably suitable for unique referencing in automated imports. When creating a new object, i-doit generates a positive number with at least 10 digits, derived from the [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time). You can find it in the **General** category.
 
-[![SYS-ID](../assets/images/en/basics/unique-references/2-ur.png)](../assets/images/en/basics/unique-references/2-ur.png)
+[![sysid](../assets/images/de/grundlagen/eindeutige-referenzierungen/2-er.png)](../assets/images/de/grundlagen/eindeutige-referenzierungen/2-er.png)
 
-You can specify a prefix for each [object type](structure-of-the-it-documentation.md), which precedes the automatically generated number. You can set the prefix at **Administration → Data structure → Object types → [Object type group] → [Object type] → SYSID prefix**. If you do not specify your own prefix, the SYSID will begin with the SYSID_ prefix. When you set an alternative prefix, the generation of the number changes: The object ID is used instead of the UNIX timestamp.
+Per [object type](it-documentation-structure.md), you can specify a prefix that is prepended to the automatically generated number. You configure the prefix under **Administration → Data structure → Object types → [Object type group] → [Object type] → SYSID prefix**. Without specification, a SYS-ID begins with the prefix SYSID_. If you specify an alternative prefix, the generation changes: instead of the UNIX timestamp, i-doit uses the object ID.
 
-[![SYSID prefix](../assets/images/en/basics/unique-references/3-ur.png)](../assets/images/en/basics/unique-references/3-ur.png)
+[![sysid-prefix](../assets/images/de/grundlagen/eindeutige-referenzierungen/3-er.png)](../assets/images/de/grundlagen/eindeutige-referenzierungen/3-er.png)
 
-By default, the SYSID cannot be changed retroactively by the user. However, you can enable changes by activating the corresponding function at **Administration → Tenant management → Settings for tenant → CMDB → SYS-ID readonly**.
+By default, you cannot change the SYS-ID after creation. If you want to enable changes, activate this under **Administration → [Tenant name] Administration → Settings for [Tenant name] → CMDB → SYS-ID readonly**.
 
-## Object Title
+## Object title
 
-It is absolutely essential that each object receives a title. This title is documented as an attribute in the **General** category. Synonymously this attribute is also called **Name** or **Object link**.
+Every object must have a title. This is documented as an attribute in the **General** category. This attribute is also synonymously called **designation**, **name**, **object link**.
 
-[![Object Title](../assets/images/en/basics/unique-references/4-ur.png)](../assets/images/en/basics/unique-references/4-ur.png)
+[![object-title](../assets/images/de/grundlagen/eindeutige-referenzierungen/4-er.png)](../assets/images/de/grundlagen/eindeutige-referenzierungen/4-er.png)
 
-!!! success "Allocate object titles automatically"
+!!! success "Automatically assign object titles"
+    Object titles can be assigned automatically. This is particularly helpful with [templates](../efficient-documentation/templates.md):
+    1.  Create a template
+    2.  Use the available placeholders as the object title and save
+    3.  Assign the template as default template to the object type
+    4.  Create a new object; the object title is already filled in.
 
-    Object titles can also be assigned automatically. This is especially helpful for [templates](../efficient-documentation/templates.md):
+## IP address
 
-    1.  Create template
-    2.  Use the available placeholders as object title and save
-    3.  Assign the template as default template for the object type
-    4.  Create new object, the object title is already set
+Any number of IP addresses can be assigned per object. This is done in the **Host address** category. A category entry is created for each IP address.
 
-## IP Address
-
-You can assign as many IP addresses to each object as you wish. This is done in the **Hostaddress** category by creating a category entry for each IP address.
-
-IP addresses are not unique per se. For example, in private networks the same addresses (192.168.1.1 etc.) recur again and again. When **[Layer-3 networks](../use-cases/ip-adress-management.md)** with overlapping network areas are documented in i-doit, there often will be objects with ambiguous IP addresses. Due to technologies like DHCP it becomes even harder to identify objects by using dynamically assigned IP addresses. Hence, this attribute is **not suited** for unambiguous referencing in most cases.
+IP addresses are not inherently unique. For example, the same addresses recur again and again in private network ranges (192.168.1.1 etc.). If [**Layer-3 networks**](../use-cases/ip-adress-management.md) with overlapping network ranges are documented in i-doit, objects with non-unique IP addresses frequently occur. Technologies like DHCP make it even harder to identify objects by dynamically assigned IP addresses. Therefore, this attribute is often **not suitable** for unique referencing.
 
 ## Hostname and FQDN
 
-The **Hostname** is assigned in the **Hostaddress** category. For each object any number of host names can be documented, even if it is in many cases assigned unambiguously for each device (for example servers). As with the IP address (see above), a category entry is generated for each host name.
+The **hostname** is assigned in the **Host address** category. Even though it is often uniquely assigned per device (e.g. server), any number of hostnames can be documented per object. Per hostname -- as with the IP address (see above) -- a category entry is created.
 
-When you also specify the **DNS domain** attribute per category entry, this automatically results in the Fully Qualified Domain Name (**FQDN**).
+If the **DNS Domain** attribute is also specified per category entry, the Fully Qualified Domain Name (**FQDN**) is automatically derived from it. This should, similar to IP addresses, be unique, but can recur for various reasons. The FQDN is often equated with the object title. The use of hostname or FQDN for referencing should be carefully considered.
 
-Just like IP addresses, the name should be unambiguous but due to various reasons it can also be a recurring name. Oftentimes the FQDN is equated to the object title. The usage of host name or FQDN for referencing should be considered carefully.
+[![hostname-fqdn](../assets/images/de/grundlagen/eindeutige-referenzierungen/5-er.png)](../assets/images/de/grundlagen/eindeutige-referenzierungen/5-er.png)
 
-[![Hostname and FQDN](../assets/images/en/basics/unique-references/5-ur.png)](../assets/images/en/basics/unique-references/5-ur.png)
+## MAC address
 
-## MAC Address
+MAC addresses are generally unique worldwide because they are assigned by the manufacturers of network components. However, the risk of recurring MAC addresses is only theoretically very low. Due to the ever-growing virtualization and the associated self-modifiable MAC addresses, this attribute is also not always the best choice for unique referencing. In the **Port (Network)** category, any number of MAC addresses can be specified by entering a **MAC address** per port. For techniques such as bonding/trunking, the MAC address is documented in the **Logical port (Network)** category.
 
-As a rule, MAC addresses are unique worldwide since they are set by the manufacturers of the network components. The low risk of recurring MAC addresses is however only right in theory. Due to the increasing virtualization and the resulting change of MAC addresses by users, this attribute is not always the first choice for unambiguous referencing. As many MAC addresses as desired can be set by entering a MAC address for each port in the **Port (Network)** category. When using technologies like bonding or trunking, the MAC address is documented in the **Logical port (Network)** category.
+[![mac-address](../assets/images/de/grundlagen/eindeutige-referenzierungen/6-er.png)](../assets/images/de/grundlagen/eindeutige-referenzierungen/6-er.png)
 
-[![MAC Address](../assets/images/en/basics/unique-references/6-ur.png)](../assets/images/en/basics/unique-references/6-ur.png)
+## Inventory number
 
-## Inventory Number
+The inventory number serves for cross-organizational inventorying (asset management). Each material asset receives a unique number. In i-doit, you document this in the **Accounting** category in the **Inventory number** attribute.
 
-In most cases the inventory of property is carried out across the entire organization and is therefore not only an IT-related topic (Asset Management). Each material property which is to be inventoried receives a unique number. In i-doit this number can be documented for each object in the **Inventory number** attribute within the **Accounting** category.
+If you want to generate inventory numbers automatically, configure this under **Administration → Data structure → Object types → [Object type group] → [Object type]**. Various placeholders are available to create a naming schema per object type.
 
-At **Administration → Data structure → Object types → [Object type group] → [Object type]** the automated generation of inventory numbers can be configured, if desired. Here various placeholders are available for creating a naming structure per object type.
-
-[![Inventory Number](../assets/images/en/basics/unique-references/7-ur.png)](../assets/images/en/basics/unique-references/7-ur.png)
+[![Inventory-number](../assets/images/de/grundlagen/eindeutige-referenzierungen/7-er.png)](../assets/images/de/grundlagen/eindeutige-referenzierungen/7-er.png)
 
 !!! success "Labels"
+    Inventory numbers can be ideally combined with QR codes to create a label. QR codes are generated per i-doit object. Such labels can be printed, for example, with the [i-doit QR Code Printer](../i-doit-add-ons/i-doit-qr-code-printer.md).
 
-    Inventory numbers and QR codes offer an ideal combination and can be joined to labels. QR codes are generated for each object by i-doit. Such labels can be printed using the i-doit [QR-code printer](../i-doit-add-ons/i-doit-qr-code-printer.md), for example.
+## Identifiers from third-party systems
 
-## Identifier of Third-Party Systems
+Data from third-party systems, for example from the areas of inventory/discovery, can be [imported](../consolidate-data/index.md) into i-doit. Such systems usually also have unique identifiers or similar. If these identifiers are imported, the **Data Source** category can be used. In this way, multiple systems in use can be coordinated so that objects can be uniquely referenced across all systems.
 
-Data from third-party system, for example from the inventory/ discovery area, can be [imported](../consolidate-data/index.md) to i-doit. In most cases, these systems also possess unambiguous identifiers or something similar. When these identifiers are imported, the category **Data Source** can be used. This way, multiple used systems can be synchronized in order to reference objects on all systems unambiguously.
-
-[![Identifier of Third-Party Systems](../assets/images/en/basics/unique-references/8-ur.png)](../assets/images/en/basics/unique-references/8-ur.png)
+[![identifier](../assets/images/de/grundlagen/eindeutige-referenzierungen/8-er.png)](../assets/images/de/grundlagen/eindeutige-referenzierungen/8-er.png)
 
 ## Constants
 
-Internally, i-doit uses constants that unambiguously reference all kinds of data. A constant consists of capital letters (A-Z) and underscores (\_). Such constants are used for some objects that already exist in the default installation of i-doit. The **Person** object "admin", for example, has the constant C_OBJ_PERSON_ADMIN.
+i-doit works internally with constants to uniquely reference records. A constant consists of uppercase letters (A-Z) and underscores (_). Some objects from the standard installation already have constants assigned -- for example, the **Persons** object "admin" has the constant C__OBJ__PERSON_ADMIN.
 
-These constants cannot be viewed or even edited in the web GUI. For this reason, this is done in SQL in the database. Each tenant has a separate database in which the isys_obj table exists. All objects are saved there. The column for the constant is called isys_obj_const.
+In the Web GUI, you can neither view nor edit these constants. Access is via SQL on the database. Each tenant has a separate database with the table isys_obj, where all objects are stored. The column for the constant is called `isys_obj__const`.
 
 !!! attention "Database manipulation"
+    Manipulations of the database endanger the functionality of i-doit. Therefore, we cannot provide warranty for errors attributable to independent manipulations. Every activity should therefore be carefully considered and, if necessary, coordinated with us.
 
-    Manipulations of the database endanger the functionality of _i-doit_. For this reason, we cannot provide any warranties for problems resulting from manipulations. Thus any activity should be well considered and agreed with us beforehand, if necessary.
+## Additional uniqueness
 
-## Further Unique Attributes
-
--   Attributes can be [defined as unique](../efficient-documentation/attribute-validation-and-mandatory-fields.md) globally, per object type or (for list categories) per object. In case of multiple occurrences a notification window by i-doit is displayed when you try to save your entries.
--   If the attributes mentioned above do not suffice, additional ones can be [created](./custom-categories.md).
+-   Attributes can be [defined as unique](unique-references.md) globally, per object type or (for list categories) per object. Multiple occurrences are flagged by i-doit when saving.
+-   If the above-mentioned attributes are not sufficient, additional ones can be [created](custom-categories.md).

@@ -1,3 +1,10 @@
+---
+title: Release Notes 32
+description: "We’re happy to announce i-doit 32, a version which will continue our efforts of improving quality which also includes some preemptive security fixes."
+icon:
+status:
+lang: de
+---
 # Release Notes 32
 
 We’re happy to announce i-doit 32, a version which will continue our efforts of improving quality which also includes some preemptive security fixes. This is why we highly recommend updating to the latest version. A detailed list of over 75 fixes and changes can be found in our [changelog](../changelogs/changelog-32.md).

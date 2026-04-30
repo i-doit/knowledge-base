@@ -1,3 +1,10 @@
+---
+title: Release Notes 37
+description: "Wir freuen uns, die Veröffentlichung von i-doit 37 bekannt zu geben, der letzten Version des Jahres 2025, die sich auf Qualität und Kompatibilität..."
+icon:
+status:
+lang: de
+---
 # Release Notes 37
 <!-- cSpell:disable -->
 

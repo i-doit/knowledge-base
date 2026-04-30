@@ -1,36 +1,55 @@
+---
+title: Benutzerdefinierte Kategorien
+description: "Benutzerdefinierte Kategorien ermöglichen dir, eigene Kategorien mit individuellen Attributen zu erstellen -- für alle Informationen, die in den..."
+icon:
+status:
+lang: de
+---
 # Benutzerdefinierte Kategorien
 
-Neben den Standard-Kategorien in i-doit können eigene (benutzerdefinierte) [Kategorien](struktur-it-dokumentation.md) erstellt werden, um zusätzliche [Attribute](struktur-it-dokumentation.md) zu dokumentieren, die in den Standard-Kategorien nicht enthalten sind.
+Benutzerdefinierte Kategorien ermöglichen dir, eigene [Kategorien](struktur-it-dokumentation.md) mit individuellen [Attributen](struktur-it-dokumentation.md) zu erstellen -- für alle Informationen, die in den Standard-Kategorien von i-doit nicht abgedeckt sind.
 
 ## Konfiguration der Kategorie
 
-Die Konfiguration der benutzerdefinierten Kategorien ist unter **Verwaltung → Datenstruktur → Benutzerdefinierte Kategorien** zu finden.Über den Button **Neu** wird eine benutzerdefinierte Kategorie erzeugt. Existieren bereits benutzerdefinierte Kategorien, können diese nachträglich bearbeitet werden.
+Du findest die Konfiguration unter **Verwaltung → Datenstruktur → Benutzerdefinierte Kategorien**. Über den Button **Neu** erstellst du eine neue Kategorie. Bestehende benutzerdefinierte Kategorien kannst du dort jederzeit nachträglich bearbeiten.
 
 [![benutzerdefinierte-kategorien](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/1-bk.png)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/1-bk.png)
 
-Im ersten Schritt ist es notwendig, die Kategorie mit einem eindeutigen Namen zu bezeichnen, damit sie in der Kategorie-Liste identifiziert werden kann.
+So konfigurierst du eine neue Kategorie Schritt für Schritt:
+
+**1. Eindeutigen Namen vergeben**
+
+Gib der Kategorie einen eindeutigen Namen, damit du sie in der Kategorie-Liste leicht identifizieren kannst.
 
 [![benutzerdefinierte-kategorien-2](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/2-bk.png)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/2-bk.png)
 
-Weiterhin muss die Kategorie mit einem oder mehreren [Objekttypen](struktur-it-dokumentation.md) verknüpft werden, damit diese genutzt werden kann.
+**2. Objekttypen zuweisen**
+
+Verknüpfe die Kategorie mit einem oder mehreren [Objekttypen](struktur-it-dokumentation.md), damit sie dort zur Verfügung steht.
 
 [![benutzerdefinierte-kategorien-3](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/3-bk.png)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/3-bk.png)
 
-Danach muss festgelegt werden, ob es sich um eine [Single-](struktur-it-dokumentation.md) oder [Multi-Value-Kategorie](struktur-it-dokumentation.md) (Listen-Kategorie) handeln soll. Wenn Attribute gepflegt werden soll, die in ihrer Kombination eindeutig sind, ist die Konfiguration als Single-Value-Kategorie ausreichend. Sollen jedoch die Werte mehrfach gepflegt werden, so ist eine Multi-Value-Kategorie die richtige Wahl. Auf diese Weise ist es möglich, mehrfache Einträge in einer Kategorie zu speichern.
+**3. Kategorie-Typ festlegen**
+
+Wähle zwischen [Single-Value-](struktur-it-dokumentation.md) und [Multi-Value-Kategorie](struktur-it-dokumentation.md) (Listen-Kategorie). Wenn die Attribute pro Objekt nur einmal gepflegt werden müssen, reicht eine Single-Value-Kategorie. Benötigst du mehrere Einträge pro Objekt (z. B. mehrere Verträge), wähle eine Multi-Value-Kategorie.
 
 [![benutzerdefinierte-kategorien-4](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/4-bk.png)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/4-bk.png)
 
-Um auf die Kategorie bei Abfragen (zum Beispiel in selbst geschriebenen [Reports](../auswertungen/report-manager.md)) zugreifen zu können, sollte außerdem eine Konstante hinterlegt werden. Diese Konstante wird beim Erstellen der Kategorie automatisch vorgeschlagen und darf geändert werden.
+**4. Konstante hinterlegen**
+
+Hinterlege eine Konstante, um die Kategorie in Abfragen (z. B. in selbst geschriebenen [Reports](../auswertungen/report-manager.md)) referenzieren zu können. i-doit schlägt beim Erstellen automatisch eine Konstante vor -- du kannst sie bei Bedarf anpassen.
 
 [![benutzerdefinierte-kategorien-5](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/5-bk.png)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/5-bk.png)
 
-Ab Version 37 ist es nun möglich ein eigenes Icon für die benutzerdefinierte Kategorie auszuwählen. Hierfür steht eine Vielzahl an Icons zur Verfügung, die über den Button **Icon ändern** ausgewählt werden können. Zusätzlich lassen sich eigene Icons hochladen. Maximale Dateigröße beträgt **1024 KB** Erlaubte Dateiendungen sind **apng**, **avif**, **gif**, **jpg**, **jpeg**, **jfif**, **pjpeg**, **pjp**, **png**, **svg** und **webp**.
+**5. Icon auswählen (ab Version 37)**
+
+Du kannst ein eigenes Icon für die Kategorie auswählen. Klicke dazu auf **Icon ändern** und wähle aus der Sammlung oder lade ein eigenes Icon hoch. Maximale Dateigröße: **1024 KB**. Erlaubte Formate: **apng**, **avif**, **gif**, **jpg**, **jpeg**, **jfif**, **pjpeg**, **pjp**, **png**, **svg** und **webp**.
 
 [![benutzerdefinierte-kategorien-5](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/icon-bk.png)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/icon-bk.png)
 
 ## Ausprägung der Kategorie
 
-Um eine Kategorie auszuprägen, können beliebig viele Attribute über den Button **Mehrere Felder hinzufügen** hinzugefügt werden. Hier stehen folgende [Feldtypen](attributfelder.md) zur Auswahl:
+Um deine Kategorie mit Attributen auszuprägen, fügst du über den Button **Mehrere Felder hinzufügen** beliebig viele Felder hinzu. Folgende [Feldtypen](attributfelder.md) stehen zur Auswahl:
 
 | Feld                                   | Beschreibung                                                                                                                                                                                                                                                                                                                                                                            |
 | -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -62,17 +81,18 @@ Zusätzlich sind folgende Elemente verfügbar:
 | **HTML**              | Die Möglichkeit in der Konfiguration der Kategorie HTML-Code zu hinterlegen, der in der Kategorie interpretiert wird. Der Quellcode wird in der Konfiguration der Kategorie eingetragen und kann nicht beim Aufruf der Kategorie in der Dokumentation durch die Anwender eingetragen werden.       |
 | **Javascript**        | Die Möglichkeit in der Konfiguration der Kategorie Javascript-Code zu hinterlegen, der in der Kategorie interpretiert wird. Der Quellcode wird in der Konfiguration der Kategorie eingetragen und kann nicht beim Aufruf der Kategorie in der Dokumentation durch die Anwender eingetragen werden. |
 
-Wie bei fast jeder anderen Kategorie wird bei einer benutzerdefinierten automatisch ein **Beschreibungsfeld** am Ende hinzugefügt.
-Die Reihenfolge der erstellten Attribute kann über die schraffierten Flächen am Anfang jeder Zeile per Drag'n'Drop verändert werden.
+Wie bei fast jeder anderen Kategorie fügt i-doit automatisch ein **Beschreibungsfeld** am Ende hinzu.
+
+Die Reihenfolge der erstellten Attribute änderst du über die schraffierten Flächen am Anfang jeder Zeile per Drag'n'Drop.
 
 [![benutzerdefinierte-kategorien-6](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/6-bk.gif)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/6-bk.gif)
 
-Über den Button **Entfernen** können Attribute gelöscht werden.
+Über den Button **Entfernen** löschst du Attribute.
 
 [![benutzerdefinierte-kategorien-7](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/7-bk.gif)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/7-bk.gif)
 
 !!! attention "Achtung!"
-    Sobald die Kategorie in Verwendung ist, ist das Ändern von bestehenden Feldtypen nicht mehr möglich, um Datenverlust zu vermeiden. Sollten Felder in der Konfiguration entfernt werden, kann man auf deren Inhalte nicht mehr zugreifen. Anschließend müssen die Attribute über die [Systemreparatur und Bereinigung](../administration/verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md) neu indiziert werden.
+    Sobald die Kategorie in Verwendung ist, kannst du bestehende Feldtypen nicht mehr ändern -- um Datenverlust zu vermeiden. Entfernst du Felder aus der Konfiguration, verlierst du den Zugriff auf deren Inhalte. Danach musst du die Attribute über die [Systemreparatur und Bereinigung](../administration/verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md) neu indizieren.
 
 Unterhalb der Konfiguration erfolgt eine Auswertung:
 
@@ -87,23 +107,23 @@ Sobald deine Kategorie konfiguriert und ausgeprägt wurde, kannst du die Schaltf
 
 ## Technische Konfiguration
 
-Um die benutzerdefinierte Kategorie über die [API](../i-doit-add-ons/api/index.md) nutzen zu können, hilft die technische Konfiguration. Diese ist über den Button **Technische Konfiguration anzeigen** erreichbar.
+Wenn du die benutzerdefinierte Kategorie über die [API](../i-doit-add-ons/api/index.md) nutzen möchtest, benötigst du die technische Konfiguration. Du erreichst sie über den Button **Technische Konfiguration anzeigen**.
 
-Es ist möglich, die technischen Schlüssel für jedes Feld zu ändern, indem Sie auf **Technischen Schlüssel ändern** klicken.
+Dort kannst du die technischen Schlüssel für jedes Feld ändern, indem du auf **Technischen Schlüssel ändern** klickst.
 
 [![Technischen Schlüssel ändern](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/9-bk.png)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/9-bk.png)
 
-Jetzt können Sie den Schlüssel ändern. Der Schlüssel wird automatisch überprüft, bevor Sie den neuen Wert speichern können.
+Jetzt kannst du den Schlüssel ändern. i-doit prüft den neuen Wert automatisch, bevor du speichern kannst.
 
 !!! warning "Achtung!"
-    Das ändern eines Schlüssels führt zu einer Migration der hinterlegten Daten zum neuen Schlüssel<br>
-    Der Schlüssel muss aus den Zeichen **a-z**, **0-9** und **_** bestehen.<br>
-    Der Schlüssel muss mindestens **einen Buchstaben beinhalten**.<br>
-    Der Schlüssel **darf nicht leer** oder **länger als 64 Zeichen sein**.<br>
-    Der Schlüssel **muss einzigartig sein**.
+    Das Ändern eines Schlüssels löst eine Migration der hinterlegten Daten zum neuen Schlüssel aus. Beachte folgende Regeln:<br>
+    - Der Schlüssel darf nur die Zeichen **a-z**, **0-9** und **_** enthalten.<br>
+    - Er muss mindestens **einen Buchstaben** enthalten.<br>
+    - Er **darf nicht leer** und **nicht länger als 64 Zeichen** sein.<br>
+    - Er **muss einzigartig** sein.
 
 [![Technischen Schlüssel ändern](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/10-bk.png)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/10-bk.png)
 
-Nachdem Sie die benutzerdefinierte Kategorie gespeichert haben, können Sie die neue technische Konfiguration anzeigen und verwenden.
+Nachdem du die benutzerdefinierte Kategorie gespeichert hast, kannst du die neue technische Konfiguration anzeigen und verwenden.
 
 [![Technische Konfiguration](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/11-bk.png)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/11-bk.png)

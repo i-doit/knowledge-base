@@ -1,15 +1,22 @@
+---
+title: "CSV-Datenimport"
+description: "Mit dem CSV-Datenimport überfuehrst du tabellarische Daten aus Microsoft Excel, OpenOffice oder LibreOffice Calc direkt nach i-doit."
+icon:
+status:
+lang: de
+---
 # CSV-Datenimport
 
-!!! warning "Bitte erstellen Sie vor jeder Änderung an einer Schnittstelle/Import einen vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist kann dieses dann wiederhergestellt werden"
+!!! warning "Bitte erstelle vor jeder Änderung an einer Schnittstelle/Import ein vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist, kann dieses dann wiederhergestellt werden"
 
 !!! example ""
-    Ein Praxisbeispiel für den automatisierten Datenimport finden Sie auf unserem [Blog](https://www.i-doit.com/blog/automatisierter-csv-import-mit-i-doit/)
+    Ein Praxisbeispiel für den automatisierten Datenimport findest du auf unserem [Blog](https://www.i-doit.com/blog/automatisierter-csv-import-mit-i-doit/)
 
-Viele Organisationen verwenden für ihre IT-Dokumentation eine Tabellenkalkulation, sodass die Informationen in tabellarischer Form vorliegen. Dieser Umstand ist nicht nur unübersichtlich, sondern bringt auch einen großen Aufwand für die Pflege mit sich. Mit dem CSV-Datenimport ist es möglich, diese Daten ganz bequem aus Microsoft Excel, OpenOffice oder LibreOffice Calc nach i-doit zu überführen.
+Mit dem CSV-Datenimport überführst du tabellarische Daten aus Microsoft Excel, OpenOffice oder LibreOffice Calc direkt nach i-doit. So ersetzt du unübersichtliche Tabellenkalkulationen durch eine strukturierte IT-Dokumentation.
 
 ## Voraussetzungen
 
-Damit eine Datei für den CSV-Datenimport verwenden kann, muss diese im .csv-Format mit **UTF-8**-Kodierung gespeichert werden. Einige Tabellenkalkulationen sind nicht in der Lage, die Kodierung beim Speichern festzulegen. In diesem Fall kann nach dem Export ins .csv\-Format auf einen Texteditor mit Konvertierungsfunktion zurückgegriffen werden. Im Screenshot zu sehen ist die Funktion **Konvertiere zu UTF-8** in [Notepad++](https://notepad-plus-plus.org/):
+Die CSV-Datei muss im `.csv`-Format mit **UTF-8**-Kodierung vorliegen. Falls deine Tabellenkalkulation die Kodierung beim Speichern nicht festlegen kann, konvertiere die Datei nachträglich mit einem Texteditor. Im Screenshot siehst du die Funktion **Konvertiere zu UTF-8** in [Notepad++](https://notepad-plus-plus.org/):
 
 [![Kodierung im Notepad++](../../assets/images/de/daten-konsolidieren/csv-import/1-csvi.png)](../../assets/images/de/daten-konsolidieren/csv-import/1-csvi.png)
 
@@ -17,110 +24,123 @@ Der Aufbau einer verwendbaren .csv\-Datei sieht in etwa so aus wie in folgendem 
 
 [![Aufbau einer CSV](../../assets/images/de/daten-konsolidieren/csv-import/2-csvi.png)](../../assets/images/de/daten-konsolidieren/csv-import/2-csvi.png)
 
-Die erste Zeile wird als Überschrift verwendet und dient der Identifikation, um welches [Attribut](../../grundlagen/struktur-it-dokumentation.md) es sich handelt. Jede weitere Zeile entspricht hier einem einzelnen [Objekt](../../glossar.md) in der IT-Dokumentation.
+Die erste Zeile dient als Überschrift und identifiziert das jeweilige [Attribut](../../grundlagen/struktur-it-dokumentation.md). Jede weitere Zeile entspricht einem [Objekt](../../glossar.md) in der IT-Dokumentation.
 
-Sie können auch Ihren bevorzugten Texteditor zum erstellen von csv-Dateien verwenden.
+Alternativ kannst du CSV-Dateien auch mit einem Texteditor erstellen.
 
 [![CSV im Texteditor](../../assets/images/de/daten-konsolidieren/csv-import/3-csvi.png)](../../assets/images/de/daten-konsolidieren/csv-import/3-csvi.png)
 
-Wenn die .csv\-Datei soweit vorbereitet ist, kann der Datenimport beginnen.
+Sobald die `.csv`-Datei vorbereitet ist, kannst du mit dem Import beginnen.
 
 ## Datei hochladen
 
-Der CSV-Datenimport befindet sich unter **Extras → Import** → **CSV Import**. Eine Konfiguration vorab ist nicht notwendig.
+Den CSV-Datenimport findest du unter **Extras → Import → CSV Import**. Eine Vorab-Konfiguration ist nicht nötig.
 
-Im ersten Schritt wird eine .csv\-Datei über den Button **Datei auswählen** ausgewählt und hochgeladen. Anschließend wird die Datei in der Liste angezeigt und sobald man mit der Maus über die Zeile der Datei fährt, kann man zwischen den Aktionen **Für Import verwenden**, **Datei herunterladen** und **Datei löschen** wählen.
+1. Klicke auf **Datei auswählen** und lade deine `.csv`-Datei hoch.
+2. Die Datei erscheint in der Liste. Fahre mit der Maus über die Zeile -- es werden die Aktionen **Für Import verwenden**, **Datei herunterladen** und **Datei löschen** angezeigt.
+3. Klicke auf **Für Import verwenden**, um zum nächsten Schritt zu gelangen.
 
 [![CSV für den Import verwenden](../../assets/images/de/daten-konsolidieren/csv-import/4-csvi.png)](../../assets/images/de/daten-konsolidieren/csv-import/4-csvi.png)
 
-Um zum nächsten Schritt des Datenimports zu gelangen, klickt man auf den Button **Für Import verwenden**. Der Button erscheint nur wenn der Mauszeiger auf die Zeile bewegt wird.
-
 ## Optionen festlegen
 
-Bevor das Mapping zwischen Tabellenspalten und Attributen in i-doit stattfinden kann, sind einige Optionen festzulegen.
+Bevor du das Mapping konfigurierst, legst du einige Optionen fest.
 
 [![CSV Import Optionen](../../assets/images/de/daten-konsolidieren/csv-import/5-csvi.png)](../../assets/images/de/daten-konsolidieren/csv-import/5-csvi.png)
 
 ### Objekttyp
 
-Wenn man im Drown-Down-Menü unter **Globaler Objekttyp** einen [Objekttypen](../../grundlagen/struktur-it-dokumentation.md) auswählt, werden alle Objekte der .csv\-Datei als dieser Objekttyp importiert. Wird kein globaler Objekttyp definiert, wird ein zusätzliches Feld in der .csv\-Datei zur Angabe der [Datenbank-Konstante](../../grundlagen/struktur-it-dokumentation.md) benötigt. Pro Zeile wird dadurch der jeweilige Objekttyp festgelegt, dem das Objekt zugehörig sein soll. Auf diesem Weg ist es möglich, Objekte aus verschiedenen Objekttypen (Client, Drucker, Monitore, ...) über eine Datei zu importieren. Diese Angabe muss für alle Objekte gepflegt werden, wenn kein globaler Objekttyp verwendet wird. Eine Mischform ist nicht möglich.
+Wählst du unter **Globaler Objekttyp** einen [Objekttypen](../../grundlagen/struktur-it-dokumentation.md) aus, importiert i-doit alle Objekte der `.csv`-Datei als diesen Typ.
 
-### Trennzeichen, Überschriften und Default-Template berücksichtigen
+Ohne globalen Objekttyp benötigst du in der CSV-Datei eine zusätzliche Spalte mit der [Datenbank-Konstante](../../grundlagen/struktur-it-dokumentation.md) des Objekttyps. So kannst du verschiedene Objekttypen (Client, Drucker, Monitor usw.) in einer Datei importieren. Diese Angabe muss für alle Objekte vorhanden sein -- eine Mischform ist nicht möglich.
 
-Solltest du ein anderes **Trennzeichen** anstelle des Semikolons (;) verwenden, ist es möglich, das genutzte Trennzeichen anzugeben. Falls du keine Überschriften-Zeile nutzt, kannst du die Überschriften-Zeile deaktivieren, sodass die erste Zeile der .csv\-Datei als das erste Objekt interpretiert wird. Die Objekte werden mit den Daten aus dem [default Template](../../effizientes-dokumentieren/templates.md) angelegt.
+### Trennzeichen, Überschriften und Default-Template
+
+Verwendest du ein anderes **Trennzeichen** als das Semikolon (`;`), gibst du es hier an. Ohne Überschriften-Zeile deaktivierst du diese Option -- dann behandelt i-doit die erste Zeile als Objekt. Optional werden Objekte mit den Daten aus dem [Default Template](../../effizientes-dokumentieren/templates.md) angelegt.
 
 ### Leerwerte
 
-Sollen durch den CSV-Datenimport bestehende Objekte aktualisiert werden, kann mit der Option **Leerwerte übernehmen** gewählt werden, wie leere Zellen in der .csv\-Datei behandelt werden sollen:
+Beim Aktualisieren bestehender Objekte bestimmst du mit **Leerwerte übernehmen**, wie leere Zellen behandelt werden:
 
-*   **Ja**: Leere Zellen führen dazu, dass bestehende Attribute (falls vorhanden) überschrieben werden.
-*   **Nein**: Leere Zellen werden ignoriert, damit bestehende Attribute (falls vorhanden) erhalten bleiben.
+*   **Ja**: Leere Zellen überschreiben bestehende Attribute.
+*   **Nein**: Leere Zellen werden ignoriert, bestehende Attribute bleiben erhalten.
 
-### Umgang mit Einträgen in Listen-Kategorien (Multi-Value)
+### Umgang mit Listen-Kategorien (Multi-Value)
 
-Weiterhin ist anzugeben, in welcher Form [Listen-Kategorien](../../grundlagen/struktur-it-dokumentation.md) (Multi-Value) in der .csv\-Datei vorzufinden sind. Falls keine Kategorien dieser Art vom Datenimport berührt werden, können die folgenden Optionen ignoriert werden.
+Lege fest, wie [Listen-Kategorien](../../grundlagen/struktur-it-dokumentation.md) (Multi-Value) in der `.csv`-Datei abgebildet sind. Beruehrt dein Import keine solchen Kategorien, überspringe diesen Abschnitt.
 
-Bei dem Beispiel (siehe oben) fällt auf, dass "Client 02" mehrfach auftaucht. Da dieser Client über zwei CPUs verfügt, sollen in der Listen-Kategorie **CPU** zwei Einträge (einer pro CPU) erzeugt werden. Durch die Verwendung einer weiteren **Zeile** erhält das Objekt daher die beiden Einträge in der Kategorie **CPU**. Es ist nicht notwendig, gleichbleibende [Attribute](../../glossar.md) in den weiteren Zeilen des Objekts erneut anzugeben. Somit musst du also nicht die Inventarnummer "ABCD-2000" erneut angeben.
+Im Beispiel oben taucht "Client 02" mehrfach auf: Dieser Client hat zwei CPUs, daher soll die Listen-Kategorie **CPU** zwei Einträge erhalten. Du erreichst das durch eine zusätzliche **Zeile** -- gleichbleibende [Attribute](../../glossar.md) musst du dort nicht wiederholen.
 
-Alternativ ist es dir auch möglich, die einzelnen Einträge aus Listen-Kategorien entweder in einer **Spalte** zu hinterlegen oder in einer Zelle, als **Komma-separierte** Liste.
+Alternativ kannst du Multi-Value-Einträge in einer **Spalte** oder als **kommaseparierte** Liste in einer Zelle hinterlegen.
 
-Sind bereits Kategorie-Einträge vorhanden, stehen weitere Optionen zur Verfügung:
+Bei bereits vorhandenen Kategorie-Einträgen stehen zusätzliche Optionen zur Verfügung:
 
 *   **Erzeuge neue Kategorieeinträge nur, wenn die Kategorie bisher keine Einträge enthält (neu anlegen, wenn leer)**
 *   **Erzeuge neue Kategorieeinträge, bestehende bleiben erhalten (anhängen)**
 *   **Erzeuge neue Kategorieeinträge, bestehende Einträge werden komplett entfernt (ersetzen)**
 
-Über den Button **Mapping vorbereiten** gelangt man zum nächsten Schritt.
+Klicke auf **Mapping vorbereiten**, um zum nächsten Schritt zu gelangen.
 
 ## Identifizierungsmerkmale festlegen
 
-Sobald die Optionen festgelegt sind, kann das Mapping beginnen. Zunächst kann ein [**Objekt-Matching Profil**](../objekt-identifizieren-bei-importen.md) ausgewählt werden, falls bestehende Objekte aktualisiert werden sollen. Dieses Profil kann nachträglich bearbeitet werden.
+Wähle ein [**Objekt-Matching Profil**](../objekt-identifizieren-bei-importen.md) aus, wenn du bestehende Objekte aktualisieren möchtest. Das Profil kannst du jederzeit nachträglich bearbeiten.
 
 [![Objekte identifizieren](../../assets/images/de/daten-konsolidieren/csv-import/6-csvi.png)](../../assets/images/de/daten-konsolidieren/csv-import/6-csvi.png)
 
 ## Zuweisung von Spalten zu Attributen
 
-Jede Spalte erhält im Mapping eine eigene Zeile. So kann jede Zeile der .csv\-Datei mit einem Attribut in i-doit verknüpft werden. Nach Klick auf das Stift-Icon kann im Drop-Down-Menü das passende Attribut ausgewählt werden oder dessen Bezeichnung direkt in das Feld eingegeben werden, um passende Attribute vorgeschlagen zu bekommen. Die Eingabe wird mit dem Button **Übernehmen** bestätigt. Auf diesem Weg wird jede Spalte zugewiesen, bis alle Zuweisungen vollständig sind. Zuweisungen können nachträglich gelöst werden. Spalten ohne Zuweisung werden beim Datenimport ignoriert.
+Jede Spalte deiner CSV-Datei erhält im Mapping eine eigene Zeile. So verknüpfst du sie Schritt für Schritt mit i-doit-Attributen:
+
+1. Klicke auf das Stift-Icon neben einer Spalte.
+2. Wähle im Drop-Down das passende Attribut aus oder tippe die Bezeichnung ein, um Vorschläge zu erhalten.
+3. Bestätige mit **Übernehmen**.
+
+Wiederhole den Vorgang für alle relevanten Spalten. Zuweisungen kannst du nachträglich loesen. Spalten ohne Zuweisung ignoriert der Import.
 
 [![Zuweisungen von Attributen](../../assets/images/de/daten-konsolidieren/csv-import/7-csvi.png)](../../assets/images/de/daten-konsolidieren/csv-import/7-csvi.png)
 
 ## Pflichtangaben
 
-Bei der Angabe von Objekt-Titel _und_ Objekttyp handelt es sich um Pflichtangaben. Wenn in den Optionen des Datenimports ein globaler Objekttyp definiert ist, muss im Mapping lediglich der [Objekt-Titel](../objekt-identifizieren-bei-importen.md) mit einer Spalte verknüpft werden. Sollte kein globaler Objekttyp festgelegt sind, muss ebenfalls der Objekttyp in einer Spalte repräsentiert sein. Andernfalls ist es nicht möglich, den Import durchzuführen. Die Angabe des Objekttyps erfolgt über dessen Datenbank-Konstante (zum Beispiel **C\_\_OBJTYPE\_\_SERVER**). Die Angabe der Bezeichnung des Objekttyps (z. B. **Server**) ist **nicht** ausreichend.
+**Objekt-Titel** und **Objekttyp** sind Pflichtangaben:
+
+*   Mit globalem Objekttyp musst du nur den [Objekt-Titel](../objekt-identifizieren-bei-importen.md) zuweisen.
+*   Ohne globalen Objekttyp muss eine Spalte den Objekttyp als **Datenbank-Konstante** enthalten (z. B. `C__OBJTYPE__SERVER`). Die Bezeichnung (z. B. "Server") reicht **nicht** aus.
 
 ## Profil anlegen
 
-Wenn weitere .csv\-Dateien mit identischem Aufbau in Bezug auf die Spaltenbelegung importiert werden sollen oder die aktuell verwendete Datei später aktualisiert und neu importiert werden soll, kann die Konfiguration des aktuellen Mappings Profil gespeichert werden. So vermeidet man wiederkehrende Arbeitsschritte. Ein gespeichertes Profil kann in den Optionen im oberen Bereich ausgewählt und geladen oder gelöscht werden.
+Möchtest du kuenftig CSV-Dateien mit identischem Spaltenaufbau importieren, speichere die aktuelle Mapping-Konfiguration als Profil. So sparst du dir wiederkehrende Zuweisungen.
 
-Existiert bereits ein passendes Profil, kann es ohne Angabe eines Namens überschrieben werden.
+Gespeicherte Profile lädt oder löscht du über die Optionen im oberen Bereich. Ein bestehendes Profil kannst du ohne Namensangabe überschreiben.
 
 ## Datenimport starten
 
-Den Detailgrad des Loggings des CSV-Datenimports kann unterhalb des Mappings festlegt werden. Je umfangreicher das Logging, desto höher die Dauer und der Ressourcenbedarf des Datenimports. Für mögliches [Troubleshooting](../../administration/troubleshooting/index.md) ist das Loggen von Debug-Meldungen sehr hilfreich.
+Unterhalb des Mappings legst du den **Detailgrad des Loggings** fest. Detailliertes Logging hilft beim [Troubleshooting](../../administration/troubleshooting/index.md), erhoet aber Dauer und Ressourcenbedarf.
 
-Über den Button **Importieren** unterhalb des Mappings wird der Datenimport gestartet. Die Dauer des Datenimports ist abhängig von Umfang der zu importierenden Informationen sowie dem ausgewählten Level des Loggings.
-
-Nachdem der Import abgeschlossen wurde, werden die Informationen zum Import sowie eine Bestätigung über die Fertigstellung angezeigt. Die importierten oder aktualisierten Objekte sind direkt verlinkt. Die Inhalte dieser Objekte lassen sich bei Bedarf jederzeit manuell ändern.
+Klicke auf **Importieren**, um den Import zu starten. Nach Abschluss zeigt i-doit eine Zusammenfassung mit direkten Links zu den importierten oder aktualisierten Objekten. Diese kannst du jederzeit manuell anpassen.
 
 [![Liste der importierten Objekte](../../assets/images/de/daten-konsolidieren/csv-import/8-csvi.png)](../../assets/images/de/daten-konsolidieren/csv-import/8-csvi.png)
 
-## Überschreiben von Objekttypen beim CSV Import
+## Objekttypen beim CSV Import überschreiben
 
-Mit der Option **Der CSV Import kann den Objekttyp überschreiben?** können auch bei einem CSV Import die Objekttypen geändert bzw. Überschrieben werden.
+Mit der Option **Der CSV Import kann den Objekttyp überschreiben?** änderst du Objekttypen direkt während des Imports.
 
 [![Überschreiben Option](../../assets/images/de/daten-konsolidieren/csv-import/11-csvi.png)](../../assets/images/de/daten-konsolidieren/csv-import/11-csvi.png)
 
 !!! note "Diese Option ist in den Experteneinstellungen als `import.csv.overwrite-objecttype` zu finden."
 
-!!! warning "Diese Option wird durch eine weitere Option blockiert, wenn Sie das überschreiben der Objekttypen aktivieren, müssen Sie die Option **SYS-ID nur lesbar** auf **Nein** stellen. In den Experteneinstellungen ist diese Option als `cmdb.registry.sysid_readonly`"
+!!! warning "Diese Option wird durch eine weitere Option blockiert. Wenn du das Überschreiben der Objekttypen aktivierst, musst du die Option **SYS-ID nur lesbar** auf **Nein** stellen. In den Experteneinstellungen ist diese Option als `cmdb.registry.sysid_readonly` zu finden."
 
-## Import von Beziehungen (Verknüpfen von Objekten)
+## Import von Beziehungen (Objekte verknüpfen)
 
-Der CSV-Datenimport ist in der Lage, Verknüpfungen von Objekten ([Beziehungen](../../grundlagen/objekt-beziehungen.md)) zu erzeugen, wenn diese über eine Kategorie gepflegt werden. Das zu verknüpfende Objekt kann ebenfalls in einer Spalte der .csv\-Datei hinterlegt und das Feld zur Verknüpfung als zuzuweisendes Attribut angeben werden. Ein Beispiel zur Angabe des physikalischen Standorts in Spalte H:
+Du kannst über den CSV-Import auch [Beziehungen](../../grundlagen/objekt-beziehungen.md) zwischen Objekten erzeugen. Hinterlege das zu verknüpfende Objekt in einer eigenen Spalte und weise das entsprechende Attribut beim Mapping zu. Ein Beispiel für den physikalischen Standort in Spalte H:
 
 [![Verknüpfen von Beziehungen](../../assets/images/de/daten-konsolidieren/csv-import/9-csvi.png)](../../assets/images/de/daten-konsolidieren/csv-import/9-csvi.png)
 
-Während des Mappings kann man, nachdem das Feld ausgewählt wurde, angeben, ob die Auswahl des zu verknüpfenden Objekts uneingeschränkt erfolgen soll oder eine Eingrenzung auf einen festgelegten Objekttyp stattfindet. Weiterhin können Objekte, die nicht gefunden wurden, automatisch erstellt werden. In diesem Fall ist die Angabe des Objekttyps der verknüpften Objekte notwendig, damit ein Objekt dieses Typs erstellt wird. Bei einigen Verknüpfungen kann in der Sonderzuweisung festlegt werden, über welches Attribut die Identifikation des zu verknüpfenden Objekts erfolgen soll. Im Standard wird hier der Objekt-Titel verwendet.
+Beim Mapping legst du fest:
+
+*   Ob die Objektauswahl uneingeschraenkt oder auf einen bestimmten Objekttyp eingegrenzt sein soll.
+*   Ob nicht gefundene Objekte automatisch erstellt werden. Dafür gibst du den Objekttyp an.
+*   Über welches Attribut das verknüpfte Objekt identifiziert wird (Sonderzuweisung). Standard ist der Objekt-Titel.
 
 !!! note "Hinweis"
     Die Sonderzuweisung ist nicht bei allen Feldern verfügbar. In diesem Fall wird ausschließlich der Objekt-Titel zur Identifikation des zu aktualisierenden Objekts verwendet.
@@ -129,7 +149,7 @@ Während des Mappings kann man, nachdem das Feld ausgewählt wurde, angeben, ob 
 
 ## Import von Werten mit Einheiten
 
-Einige Attribute beinhalten aus Werten und Einheiten. In den jeweiligen Formularen der Web GUI sind diese jeweils voneinander getrennt anzugeben. Beispielsweise besteht in der Kategorie **Monitor** das Attribut **Display** aus dem Feld für den Wert und aus dem Feld für die Einheit (Zoll, cm, usw.). Um dieses Attribut sinngemäß über den CSV-Datenimport zu importieren, müssen Wert und Einheit zusammen in einer Zelle stehen. Beispiele:
+Manche Attribute bestehen aus Wert und Einheit (z. B. **Display** in der Kategorie **Monitor**). In der Web GUI gibst du beides getrennt ein, im CSV-Import müssen Wert und Einheit in einer Zelle stehen. Beispiele:
 
 | Kategorie                          | Attribut         | Zuweisung beim CSV-Datenimport | Zelle in CSV-Datei |
 | ---------------------------------- | ---------------- | ------------------------------ | ------------------ |
@@ -143,6 +163,6 @@ Einige Attribute beinhalten aus Werten und Einheiten. In den jeweiligen Formular
 | ------------------ | ------------------------------ | --------------------------------------- | ------------------ |
 | **Betriebssystem** | **<Variante> (<Bezeichnung>)** | **Betriebssystem > Variante (Variant)** | DE (Sprache)       |
 
-## CSV-Dateien über die i-doit Console importieren
+## CSV-Dateien über die Console importieren
 
-Der Import von CSV-Dateien ist nicht nur manuell über die Benutzeroberfläche möglich, sondern kann auch mit dem [i-doit console utility](../../automatisierung-und-integration/cli/index.md) umgesetzt werden. Dies erlaubt die Automatisierung des Imports, mit dem regelmäßig Informationen aktualisiert werden können. Diese IDs lassen sich mit dem Befehl `import-csvprofiles` auslesen.
+Neben dem manuellen Import über die Weboberfläche kannst du CSV-Dateien auch mit dem [i-doit console utility](../../automatisierung-und-integration/cli/index.md) importieren. So automatisierst du regelmäßige Aktualisierungen. Die benötigten Profil-IDs liest du mit dem Befehl `import-csvprofiles` aus.

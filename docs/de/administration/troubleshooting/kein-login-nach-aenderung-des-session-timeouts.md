@@ -1,25 +1,39 @@
+---
+title: Kein Login nach Änderung des Session Timeouts
+description: "Im Admin-Center unter System settings → Session → Session timeout legst du fest, nach wie vielen Sekunden ein inaktiver Benutzer automatisch abgemeldet..."
+icon:
+status:
+lang: de
+---
 # Kein Login nach Änderung des Session Timeouts
 
 ## Problem
 
-Im Admin-Center unter **System settings → Session → Session timeout** wird angegeben, nach wie vielen Sekunden ein inaktiver Benutzer automatisch von i-doit abgemeldet wird. Als Standard sind 600 Sekunden (10 Minuten) eingestellt. Wird ein sehr niedriger Wert, ein Wert von 0 oder gar eine negative Zahl eingestellt, kann sich kein Benutzer mehr im System anmelden, ohne kurz darauf wieder abgemeldet zu werden. Ein Arbeiten mit i-doit erscheint dadurch unmöglich.
+
+[![kein-login-session-timeout.png](../../assets/images/de/administration/troubleshooting/kein-login-session-timeout.png)](../../assets/images/de/administration/troubleshooting/kein-login-session-timeout.png)
+
+Im Admin-Center unter **System settings → Session → Session timeout** legst du fest, nach wie vielen Sekunden ein inaktiver Benutzer automatisch abgemeldet wird. Der Standardwert beträgt 600 Sekunden (10 Minuten).
+
+Wird ein sehr niedriger Wert (0 oder negativ) eingestellt, kann sich kein Benutzer mehr anmelden, ohne sofort wieder abgemeldet zu werden.
 
 ## Lösung
 
-Falls der Wert so niedrig angesetzt ist, dass man in der Web GUI den Wert nicht schnell genug ändern kann, müssen wir einen anderen Weg gehen. Abhilfe schafft ein SQL-Statement, um einen sinnvollen Wert für den Session-Timeout einzustellen:
+Wenn der Wert so niedrig ist, dass du ihn über die Web GUI nicht schnell genug ändern kannst, korrigiere ihn direkt per SQL:
 
-```sql
-UPDATE idoit_system.isys_settings SET isys_settings__value = '86400' WHERE isys_settings__key = 'session.time';
-```
+1. Führe folgendes SQL-Statement aus:
 
-Hierbei ist idoit_system der Name der System-Datenbank und 86400 entspricht einer Woche. Von Werten jenseits des 32bit-Zahlenraums, z. B. 99999999999999999999, raten wir dringend ab.
+    ```sql
+    UPDATE idoit_system.isys_settings SET isys_settings__value = '86400' WHERE isys_settings__key = 'session.time';
+    ```
 
-Diese und viele weitere Einstellungen werden aus Performance-Gründen in einem Cache gespeichert. Damit die Änderungen aktiv werden, muss das temp/\-Verzeichnis im Installationsverzeichnis von i-doit geleert werden:
+    Dabei ist `idoit_system` der Name der System-Datenbank und `86400` entspricht 24 Stunden. Vermeide Werte jenseits des 32-Bit-Zahlenraums.
 
-```shell
-sudo rm -r /var/www/html/temp/*
-```
+2. Leere den Cache, damit die Änderung aktiv wird:
 
-Hierbei entspricht /var/www/html/ dem Pfad zur Installation von i-doit.
+    ```shell
+    sudo rm -r /var/www/html/temp/*
+    ```
 
-Beim Aufruf von i-doit über die Web GUI wird der Cache automatisch neu angelegt, sodass die manuelle Änderung aktiv wird. Der Login und die weitere Arbeit an der [IT-Dokumentation](../../glossar.md) sollten nun wieder funktionieren.
+    Passe `/var/www/html/` an deinen Installationspfad an.
+
+3. Rufe i-doit über die Web GUI auf. Der Cache wird automatisch neu angelegt und der Login funktioniert wieder.

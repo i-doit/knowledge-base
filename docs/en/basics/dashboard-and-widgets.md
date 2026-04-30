@@ -1,193 +1,202 @@
-# Dashboard and Widgets
+---
+title: Dashboard and widgets
+description: "The dashboard is your personal start page in _i-doit_, where you compile the most important information using widgets."
+icon:
+status:
+lang: en
+---
+# Dashboard and widgets
 
-To be provided with the most important information upon signing in to i-doit you can customize your dashboard with useful widgets. Each user in i-doit has his own dashboard and can personalize his own view of data. Should you have set up the "ultimate" dashboard, you can even define it as default dashboard or transfer it to specific users.
+The dashboard is your personal start page in _i-doit_, where you compile the most important information using widgets.
 
-Access
-------
+Each user has their own dashboard and can set up their individual view of the data. If you have put together a particularly good dashboard, you can define it as the default for everyone or assign it to individual users.
 
-You can reach the dashboard automatically after signing in to i-doit. Alternatively, you can click on the [![icon](../assets/images/en/basics/dashboard-and-widgets/1-daw.png)](../assets/images/en/basics/dashboard-and-widgets/1-daw.png) symbol in the breadcrumb navigation or on the i-doit logo in the top left corner.
+## Access
 
-Available Widgets
------------------
+The dashboard appears automatically after logging in to _i-doit_. Alternatively, click on the ![Home](../assets/images/de/grundlagen/desktop-und-widgets/home_breadcrump.png) icon in the breadcrumb navigation or the _i-doit_ logo in the upper left corner.
 
-!!! success "Multi-selection"
+## Available widgets
 
-    You can put individual widgets repeatedly on your dashboard, for example, to display multiple reports.
+!!! success "Multiple selection"
 
-### CMDB Status Lifecycle
+    You can also place individual widgets on the dashboard multiple times, for example to display several reports.
 
-You can select one or more objects with help of the pencil and have their status history visualized in a graph.
+### CMDB status life cycle
 
-[![CMDB Status Lifecycle](../assets/images/en/basics/dashboard-and-widgets/2-daw.png)](../assets/images/en/basics/dashboard-and-widgets/2-daw.png)
+You can select one or more objects via the pencil icon and display the status history in a graph.
 
-### CMDB-Explorer
+[![CMDB-status-life-cycle](../assets/images/de/grundlagen/desktop-und-widgets/1-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/1-duw.png)
 
-A smaller variant of the regular [CMDB-explorer](../evaluation/cmdb-explorer/index.md) without extended features can be displayed here. For this purpose, select an object with the pencil which is loaded automatically when the dashboard is started.
+### CMDB Explorer
 
-[![CMDB-Explorer](../assets/images/en/basics/dashboard-and-widgets/3-daw.png)](../assets/images/en/basics/dashboard-and-widgets/3-daw.png)
+Here the regular [CMDB Explorer](../evaluation/cmdb-explorer/index.md) can be displayed in a smaller variant without advanced features. To do this, an object must first be selected via the pencil icon, which is automatically loaded when the dashboard is opened.
 
-### Signed-in Users
+[![cmdb-explorer](../assets/images/de/grundlagen/desktop-und-widgets/2-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/2-duw.png)
 
-A list of all users who are signed in is displayed.
+### Logged-in users
 
-[![Signed-in Users](../assets/images/en/basics/dashboard-and-widgets/4-daw.png)](../assets/images/en/basics/dashboard-and-widgets/4-daw.png)
+A list of all logged-in users is displayed.
+
+[![logged-in-users](../assets/images/de/grundlagen/desktop-und-widgets/3-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/3-duw.png)
 
 ### Calendar
 
-The calendar widget marks fixed dates or events in bold letters. For this purpose, a check has to be set via the pencil so that object dates, such as the status planning, are considered. It is mandatory to have the role of "administrator" for that particular object with a planned status, so that the calendar entry will be shown.
+The calendar widget marks appointments in bold. To use this feature, the checkbox for considering object appointments such as status planning must be enabled via the pencil icon. It is mandatory to have the "Administrator" role for the respective object with a status plan in order for the calendar entry to be displayed.
 
-[![Calendar](../assets/images/en/basics/dashboard-and-widgets/5-daw.png)](../assets/images/en/basics/dashboard-and-widgets/5-daw.png)
+[![calendar](../assets/images/de/grundlagen/desktop-und-widgets/4-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/4-duw.png)
 
-[![Calendar](../assets/images/en/basics/dashboard-and-widgets/6-daw.png)](../assets/images/en/basics/dashboard-and-widgets/6-daw.png)
+[![calendar-2](../assets/images/de/grundlagen/desktop-und-widgets/5-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/5-duw.png)
 
-As an alternative, you can define your own dates or events which are then displayed in the calendar via the widget settings.
+Alternatively, custom appointments can be defined via the widget settings, which will then appear in the calendar.
 
-[![Calendar](../assets/images/en/basics/dashboard-and-widgets/7-daw.png)](../assets/images/en/basics/dashboard-and-widgets/7-daw.png)
+[![calendar-3](../assets/images/de/grundlagen/desktop-und-widgets/6-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/6-duw.png)
 
 ### Bookmarks
 
-The bookmark widget allows you to set custom bookmarks for all kinds of addresses.
+The bookmarks widget allows you to specify your own bookmarks for any addresses.
 
-[![Bookmarks](../assets/images/en/basics/dashboard-and-widgets/8-daw.png)](../assets/images/en/basics/dashboard-and-widgets/8-daw.png)
+[![bookmarks](../assets/images/de/grundlagen/desktop-und-widgets/7-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/7-duw.png)
 
-You can add new links using the pencil.
+New links can be added using the pencil icon.
 
-[![Bookmarks](../assets/images/en/basics/dashboard-and-widgets/9-daw.png)](../assets/images/en/basics/dashboard-and-widgets/9-daw.png)
+[![bookmarks-2](../assets/images/de/grundlagen/desktop-und-widgets/8-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/8-duw.png)
 
 ### License
 
-You can examine the current status of your i-doit license in the license widget. The description texts are displayed horizontally by default.
+In the license widget you can view the current status of your _i-doit_ license. By default, the horizontal variant with descriptive text is displayed.
 
-[![License](../assets/images/en/basics/dashboard-and-widgets/10-daw.png)](../assets/images/en/basics/dashboard-and-widgets/10-daw.png)
+[![license](../assets/images/de/grundlagen/desktop-und-widgets/9-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/9-duw.png)
 
-A vertical display and a short version are selectable in the configuration which can be accessed via the pencil.
+In the configuration, accessible via the pencil icon, you can set up a vertical display with a compact form.
 
-[![License](../assets/images/en/basics/dashboard-and-widgets/11-daw.png)](../assets/images/en/basics/dashboard-and-widgets/11-daw.png)
+[![license-1](../assets/images/de/grundlagen/desktop-und-widgets/10-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/10-duw.png)
 
-The short version looks like this:
+This compact form looks as follows:
 
-[![License](../assets/images/en/basics/dashboard-and-widgets/12-daw.png)](../assets/images/en/basics/dashboard-and-widgets/12-daw.png)
+[![license-2](../assets/images/de/grundlagen/desktop-und-widgets/11-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/11-duw.png)
 
-### My Last Changed Objects
+### My recently modified objects
 
-The objects last changed by the user who is signed in are displayed in this widget. The amount of shown objects can be configured using the pencil. The default value is 25.
+This widget displays the objects most recently modified by the logged-in user. The number of objects to display can be configured via the pencil icon. The default value is 25.
 
-[![My Last Changed Objects](../assets/images/en/basics/dashboard-and-widgets/13-daw.png)](../assets/images/en/basics/dashboard-and-widgets/13-daw.png)
+[![modified-objects](../assets/images/de/grundlagen/desktop-und-widgets/12-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/12-duw.png)
 
-### Monitoring: Vulnerable Hosts
+### Monitoring: Endangered hosts
 
-This widget requires a connection to [Nagios](../i-doit-add-ons/nagios.md) or [Checkmk](../i-doit-add-ons/checkmk.md) and displays a view of vulnerable hosts. Via the pencil you can select the host which is to be displayed.
+This widget requires a connection to [Nagios or Check\_MK](../automation-and-integration/network-monitoring/index.md) and displays a view of endangered hosts. A host can be selected for display via the pencil icon.
 
 ### Notes
 
-You can put all your text notes on your dashboard by using the notes widget.
+With the notes widget you can place any text notes on the dashboard.
 
-[![Notes](../assets/images/en/basics/dashboard-and-widgets/14-daw.png)](../assets/images/en/basics/dashboard-and-widgets/14-daw.png)
+[![notes](../assets/images/de/grundlagen/desktop-und-widgets/13-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/13-duw.png)
 
-You can add or edit notes simply by **double-clicking**.
+Notes are simply added or edited with a **double-click**.
 
-[![Notes](../assets/images/en/basics/dashboard-and-widgets/15-daw.png)](../assets/images/en/basics/dashboard-and-widgets/15-daw.png)
+[![notes-2](../assets/images/de/grundlagen/desktop-und-widgets/14-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/14-duw.png)
 
-By using the pencil symbol you can set up the title, background and font color as well as edit the text.
+Via the pencil icon you can set up the title, background and font color, and edit the text.
 
-[![Notes](../assets/images/en/basics/dashboard-and-widgets/16-daw.png)](../assets/images/en/basics/dashboard-and-widgets/16-daw.png)
+[![notes-3](../assets/images/de/grundlagen/desktop-und-widgets/15-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/15-duw.png)
 
-### Object Info
+### Object information
 
-The widget displays a standard set of information for up to three objects which are configured via the pencil.
+The widget displays a standard set of information for up to three objects configured via the pencil icon.
 
-[![Object Info](../assets/images/en/basics/dashboard-and-widgets/17-daw.png)](../assets/images/en/basics/dashboard-and-widgets/17-daw.png)
+[![object-information](../assets/images/de/grundlagen/desktop-und-widgets/16-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/16-duw.png)
 
-[![Object Info](../assets/images/en/basics/dashboard-and-widgets/18-daw.png)](../assets/images/en/basics/dashboard-and-widgets/18-daw.png)
+[![object-information-1](../assets/images/de/grundlagen/desktop-und-widgets/17-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/17-duw.png)
 
-### Object Information List
+### Object list
 
-You can select one or more objects via the object list using the pencil symbol and decide which [attributes](../glossary.md) are going to be displayed from the various [categories](../glossary.md).
+Via the object list you can select one or more objects using the pencil icon and decide which [attributes](../glossary.md) from the different [categories](../glossary.md) should be displayed.
 
-[![Object Information List](../assets/images/en/basics/dashboard-and-widgets/19-daw.png)](../assets/images/en/basics/dashboard-and-widgets/19-daw.png)
+[![object-list](../assets/images/de/grundlagen/desktop-und-widgets/18-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/18-duw.png)
 
-[![Object Information List](../assets/images/en/basics/dashboard-and-widgets/20-daw.png)](../assets/images/en/basics/dashboard-and-widgets/20-daw.png)
+[![object-list-1](../assets/images/de/grundlagen/desktop-und-widgets/19-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/19-duw.png)
 
 ### Quicklaunch
 
-This widget is a compilation of frequently needed features.
+This widget is a collection of frequently needed functions.
 
-[![Quicklaunch](../assets/images/en/basics/dashboard-and-widgets/21-daw.png)](../assets/images/en/basics/dashboard-and-widgets/21-daw.png)
+[![quicklaunch](../assets/images/de/grundlagen/desktop-und-widgets/20-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/20-duw.png)
 
 ### Calculator
 
-If you wish to calculate the performance, the bandwidth, a RAID or storage capacity, then the calculator widget will be a fitting tool for your dashboard.
+If you want to calculate performance, bandwidth, a RAID or storage capacity, the calculator widget is a suitable tool for your dashboard.
 
-[![Calculator](../assets/images/en/basics/dashboard-and-widgets/22-daw.png)](../assets/images/en/basics/dashboard-and-widgets/22-daw.png)
+[![calculator](../assets/images/de/grundlagen/desktop-und-widgets/21-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/21-duw.png)
 
 ### Report
 
-Reports of any kind can be viewed in the report widget.
+Any reports can be displayed in the report widget.
 
-[![Report](../assets/images/en/basics/dashboard-and-widgets/23-daw.png)](../assets/images/en/basics/dashboard-and-widgets/23-daw.png)
+[![report](../assets/images/de/grundlagen/desktop-und-widgets/22-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/22-duw.png)
 
-Using the pencil, you can select a report and set limits. A restriction can benefit the performance of the dashboard.
+Via the pencil icon you can select a report and set limits. A limitation can benefit the dashboard's performance.
 
-[![Report](../assets/images/en/basics/dashboard-and-widgets/24-daw.png)](../assets/images/en/basics/dashboard-and-widgets/24-daw.png)
+[![report-2](../assets/images/de/grundlagen/desktop-und-widgets/23-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/23-duw.png)
 
-### RSS-Feed
+### RSS feed
 
-With the help of the RSS-feed widget you can integrate a feed into your dashboard.
+The RSS feed widget allows you to integrate a feed into the dashboard.
 
-[![RSS-Feed](../assets/images/en/basics/dashboard-and-widgets/25-daw.png)](../assets/images/en/basics/dashboard-and-widgets/25-daw.png)
+[![rss-feed](../assets/images/de/grundlagen/desktop-und-widgets/24-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/24-duw.png)
 
-Via the pencil you can configure the address and the amount of displayed entries.
+The address and the number of entries to display can be configured via the pencil icon.
 
-### Service Consistency Check
+[![rss-feed-2](../assets/images/de/grundlagen/desktop-und-widgets/25-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/25-duw.png)
 
-The consistency check examines the status of objects which are part of a service. Its purpose is to find a status among those objects which might threaten the status of the service. In our example, the objects are all in the CMDB status "stored", which is why the superordinated service might be threatened.
+### Service consistency check
 
-!!! attention "Performance"
+The consistency check examines whether objects that are part of a service have a status that could jeopardize the state of the service. In our example, all objects have the CMDB status "Stored", which is why the service above them may be at risk.
 
-    Please note that the performance of the dashboard may be negatively affected in case of many services and documented relationships.
+!!! attention "Note"
 
-[![Performance](../assets/images/en/basics/dashboard-and-widgets/26-daw.png)](../assets/images/en/basics/dashboard-and-widgets/26-daw.png)
+    Please note that with many services and many documented relationships, the performance of the dashboard may be affected.
 
-The consistent services can be shown in the configuration.
+[![note](../assets/images/de/grundlagen/desktop-und-widgets/26-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/26-duw.png)
 
-[![Performance](../assets/images/en/basics/dashboard-and-widgets/27-daw.png)](../assets/images/en/basics/dashboard-and-widgets/27-daw.png)
+In the configuration, consistent services can be shown.
 
-### Statistic: Chart
+[![note-2](../assets/images/de/grundlagen/desktop-und-widgets/27-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/27-duw.png)
 
-The statistic chart examines the object types configured via the pencil and displays them in one of many different ways. In our example you can see a pie chart.
+### Statistics: Chart
 
-[![Statistic Chart](../assets/images/en/basics/dashboard-and-widgets/28-daw.png)](../assets/images/en/basics/dashboard-and-widgets/28-daw.png)
+The statistics chart examines the object types configured via the pencil icon and displays them in one of many different presentation styles. In our example, it is a pie chart.
 
-[![Statistic Chart](../assets/images/en/basics/dashboard-and-widgets/29-daw.png)](../assets/images/en/basics/dashboard-and-widgets/29-daw.png)
+[![chart](../assets/images/de/grundlagen/desktop-und-widgets/28-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/28-duw.png)
 
-### Statistic: Tabular
+[![chart-2](../assets/images/de/grundlagen/desktop-und-widgets/29-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/29-duw.png)
 
-[![Statistic Tabular](../assets/images/en/basics/dashboard-and-widgets/30-daw.png)](../assets/images/en/basics/dashboard-and-widgets/30-daw.png)
+### Statistics: Tabular
 
-### Hints
+[![statistics](../assets/images/de/grundlagen/desktop-und-widgets/30-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/30-duw.png)
 
-[![Hints](../assets/images/en/basics/dashboard-and-widgets/31-daw.png)](../assets/images/en/basics/dashboard-and-widgets/31-daw.png)
+### Tips
+
+[![tips](../assets/images/de/grundlagen/desktop-und-widgets/31-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/31-duw.png)
 
 ### VIVA Reports
 
-For these reports you have to install the VIVA module and need to document information groupings. An information grouping can be chosen via the pencil in the widget.
+These reports require the [VIVA module](../i-doit-add-ons/viva/index.md) to be installed and information domains to be documented. An information domain can be selected in the widget via the pencil icon.
 
-[![VIVA Reports](../assets/images/en/basics/dashboard-and-widgets/32-daw.png)](../assets/images/en/basics/dashboard-and-widgets/32-daw.png)
+[![viva-reports](../assets/images/de/grundlagen/desktop-und-widgets/32-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/32-duw.png)
 
-### Web-Browser
+### Web browser
 
 This widget is a browser within the browser.
 
-[![Web-Browser](../assets/images/en/basics/dashboard-and-widgets/33-daw.png)](../assets/images/en/basics/dashboard-and-widgets/33-daw.png)
+[![web-browser](../assets/images/de/grundlagen/desktop-und-widgets/33-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/33-duw.png)
 
-Using the pencil you can add a headline to the widget and add an URL which will be opened upon loading the dashboard. You can also configure the height of the widget in order to display longer websites properly.
+Via the pencil icon you can give the widget a title, specify a URL that is loaded when the dashboard is opened, and configure the height of the widget to properly display longer pages.
 
-[![Web-Browser](../assets/images/en/basics/dashboard-and-widgets/34-daw.png)](../assets/images/en/basics/dashboard-and-widgets/34-daw.png)
+[![web-browser-2](../assets/images/de/grundlagen/desktop-und-widgets/34-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/34-duw.png)
 
-### Welcome Widget
+### Welcome widget
 
-This widget welcomes you depending on how it was configured via the pencil. It provides useful information regarding the design of the dashboard. Here it is easy to see how the widgets will be arranged on the dashboard after adding them.
+The widget greets you, depending on how it was configured via the pencil icon, and provides some helpful information about designing the dashboard. Here you can easily see how the widgets are arranged on the dashboard after selection.
 
-[![Welcome Widget](../assets/images/en/basics/dashboard-and-widgets/35-daw.png)](../assets/images/en/basics/dashboard-and-widgets/35-daw.png)
+[![welcome-widget](../assets/images/de/grundlagen/desktop-und-widgets/35-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/35-duw.png)
 
-[![Welcome Widget](../assets/images/en/basics/dashboard-and-widgets/36-daw.png)](../assets/images/en/basics/dashboard-and-widgets/36-daw.png)
+[![welcome-widget-2](../assets/images/de/grundlagen/desktop-und-widgets/36-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/36-duw.png)

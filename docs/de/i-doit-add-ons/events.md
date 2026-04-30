@@ -1,8 +1,15 @@
+---
+title: Events
+description: "Mit dem Event-Add-on automatisierst du Aktionen bei Änderungen an deiner IT-Dokumentation."
+icon:
+status:
+lang: de
+---
 # Events
 
-Das Event [Add-on](./index.md) erlaubt einen hohen Automatisierungsgrad bei der Arbeit mit der [IT-Dokumentation](../glossar.md). Wird etwas an der IT-Dokumentation geändert, können Dritt-Systeme über ebendiese Änderungen informiert werden. Wird beispielsweise eine neue VM in i-doit dokumentiert, kann diese automatisch auf einem Virtualisierungs-Host erstellt und provisioniert werden.
+Mit dem Event-[Add-on](./index.md) automatisierst du Aktionen bei Änderungen an deiner [IT-Dokumentation](../glossar.md). Wird etwas in i-doit geändert, kannst du Dritt-Systeme automatisch informieren. Dokumentierst du beispielsweise eine neue VM, kann diese automatisch auf einem Virtualisierungs-Host erstellt und provisioniert werden.
 
-!!! info "Ein Praxisbeispiel finden Sie auf unserem [Blog](https://www.i-doit.com/blog/event-add-on/)"
+!!! info "Ein Praxisbeispiel findest du auf unserem [Blog](https://www.i-doit.com/blog/event-add-on/)"
 
 ## Rechtevergabe
 
@@ -19,7 +26,7 @@ Die Konfiguration wird über **Verwaltung → Add-ons → Events → Hooks** err
 !!! attention "404 Not Found"
     Erscheint beim Aufruf der Event-Konfiguration lediglich eine Fehlermeldung, die Seite könne nicht gefunden werden, liegt das mit aller Wahrscheinlichkeit an einer fehlerhaften [Konfiguration des Webservers](../administration/verwaltung/mandanten-name-verwaltung/index.md). Sowohl das Apache-Modul rewrite muss aktiviert sein, als auch das Einlesen der .htaccess\-Datei im Installationsverzeichnis von i-doit muss erlaubt sein (AllowOverride All).
 
-Es werden Events mit Befehlsaufrufen kombiniert. Ein Event wird durch einen Hook ausgelöst, also bei einer internen Routine in i-doit. Folgende Events stehen zur Verfügung:
+Du kombinierst Events mit Befehlsaufrufen. Ein Event wird durch einen Hook ausgelöst -- also bei einer internen Routine in i-doit. Folgende Events stehen zur Verfügung:
 
 -   [Kategorie](../glossar.md)
     -   Neuanlage (nur über die Web GUI)
@@ -32,13 +39,17 @@ Es werden Events mit Befehlsaufrufen kombiniert. Ein Event wird durch einen Hook
     -   Neuanlage/Speichern
     -   Purge
 
-Es existieren demnach für alle [Zustände in der IT-Dokumentation](../grundlagen/lebens-und-dokumentationszyklus.md) passende Events. Es sind beliebig viele Event-zu-Befehlsaufruf-Kombinationen möglich.
+Für alle [Zustände in der IT-Dokumentation](../grundlagen/lebens-und-dokumentationszyklus.md) gibt es passende Events. Du kannst beliebig viele Event-zu-Befehlsaufruf-Kombinationen anlegen.
 
-Der Befehlsaufruf erfolgt unmittelbar beim Eintreten des konfigurierten Events. Dazu wird ein Shellscript ausgeführt. Dieses muss vom User oder Gruppe, mit dessen Rechten der Webserver läuft, ausgeführt werden dürfen. Unter einem Debian-basierten Betriebssystem ist dies der User www-data mit der gleichnamigen Gruppe. Das Script benötigt daher unter GNU/Linux das Rechtebit zum Ausführen (x). Die Programmiersprache ist beliebig, sollte allerdings vom Betriebssystem unterstützt sein (Bash, PHP, Python, Perl etc.).
+Beim Eintreten eines konfigurierten Events führt i-doit sofort ein Shellscript aus. Beachte dabei:
+
+- Das Script muss vom Benutzer bzw. der Gruppe ausführbar sein, unter der der Webserver läuft (unter Debian: `www-data`).
+- Setze unter GNU/Linux das Rechtebit zum Ausführen (`chmod +x`).
+- Die Programmiersprache ist beliebig, solange das Betriebssystem sie unterstützt (Bash, PHP, Python, Perl etc.).
 
 [![Befehlsaufruf](../assets/images/de/i-doit-add-ons/events/3-eve.png)](../assets/images/de/i-doit-add-ons/events/3-eve.png)
 
-Dem Shellscript werden Informationen zum Event übergeben. Diese werden als JSON mit BASE64 kodiert. Beispiel eines JSON-Strings beim Speichern eines Kategorie-Eintrags (die BASE64-Dekodierung fand bereits statt):
+Das Shellscript erhält Informationen zum Event als BASE64-kodiertes JSON. Hier ein Beispiel nach der Dekodierung -- es zeigt das Speichern eines Kategorie-Eintrags:
 
 ```shell
 {
@@ -143,19 +154,21 @@ Dem Shellscript werden Informationen zum Event übergeben. Diese werden als JSON
 }
 ```
 
-Zu sehen ist, dass die Kategorie **Allgemein** für das Objekt "Headquarter Network" erfolgreich gespeichert wurde.
+In diesem Beispiel wurde die Kategorie **Allgemein** für das Objekt "Headquarter Network" erfolgreich gespeichert.
 
-Zusätzliche Parameter können ebenfalls konfiguriert werden, die dem Shellscript übergeben werden. Diese sind statisch sprich ohne Platzhalter.
+Du kannst zusätzliche, statische Parameter konfigurieren, die dem Shellscript übergeben werden. Platzhalter werden dabei nicht unterstützt.
 
 !!! success "i-doit Controller"
     Die beschriebenen Shellscripte sind nicht nur dafür geeignet, Dritt-Systeme zu steuern, sondern auch i-doit selbst. Es spricht nichts dagegen, über ein solches Shellscript das Kommandozeilen-Tool von i-doit, den [Controller](../automatisierung-und-integration/cli/index.md), oder die [API](./api/index.md) aufzurufen. Dadurch können automatisierte Arbeiten innerhalb der IT-Dokumentation erledigt werden.
 
 !!! success "Performance"
-    Die Befehlsaufrufe werden synchron ausgeführt, d. h., sie werden beispielsweise beim Drücken auf **Speichern** unmittelbar ausgeführt und es wird solange gewartet, bis das Shellscript beendet wird. Bei vielen und/oder umfangreichen Shellscripten bremst das die Web GUI von i-doit aus, was sich negativ auf die Benutzerfreundlichkeit auswirkt. Daher bietet es sich an, eine Queue zu bauen: i-doit ruft dazu ein Shellscript auf, das die Parameter entgegen nimmt und erst einmal in einer Queue zwischenspeichert (beispielsweise in einer temporären Datei). Per Cronjob o. ä. wird ein weiteres Script ausgeführt, das diese Queue abarbeitet. Auf diese Weise entsteht eine Asynchronität, die ein Benutzer von i-doit nicht negativ spüren wird.
+    Die Befehlsaufrufe werden **synchron** ausgeführt -- beim Klick auf **Speichern** wartet i-doit, bis das Shellscript beendet ist. Bei vielen oder umfangreichen Scripts kann das die Web GUI ausbremsen.
+
+    **Empfehlung:** Baue eine Queue. Dein Shellscript nimmt die Parameter entgegen und speichert sie in einer temporären Datei. Ein separater Cronjob arbeitet diese Queue dann asynchron ab. So spürt der Benutzer keine Verzögerung.
 
 ## Logging
 
-Wenn ein Event ausgelöst wird und dieses mit einem Befehlsaufruf verbunden ist, wird die Ausführung protokolliert. Unter **Verwaltung → Add-ons → Events → Historie (Log)** werden die letzten 500 Einträge aufgelistet.
+Jede Ausführung eines Event-Befehlsaufrufs wird protokolliert. Die letzten 500 Einträge findest du unter **Verwaltung → Add-ons → Events → Historie (Log)**.
 
 [![Logging](../assets/images/de/i-doit-add-ons/events/4-eve.png)](../assets/images/de/i-doit-add-ons/events/4-eve.png)
 

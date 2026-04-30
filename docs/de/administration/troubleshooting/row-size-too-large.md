@@ -1,8 +1,15 @@
+---
+title: Row size too large
+description: "Während eines i-doit-Updates erscheint eine Fehlermeldung wie \"Row size too large\":"
+icon:
+status:
+lang: de
+---
 # Row size too large
 
 ## Problem
 
-Ich möchte i-doit Updaten. Während des Update erscheint eine Fehlermeldung, wie z.B.:
+Während eines i-doit-Updates erscheint eine Fehlermeldung wie "Row size too large":
 
 [![Problem](../../assets/images/de/administration/troubleshooting/row-size-too-large/1-rstl.png)](../../assets/images/de/administration/troubleshooting/row-size-too-large/1-rstl.png)
 
@@ -10,28 +17,24 @@ Ich möchte i-doit Updaten. Während des Update erscheint eine Fehlermeldung, wi
 
 ## Lösung
 
-Ein Backup sollte wegen dem Update schon vorhanden sein.
+Stelle sicher, dass du bereits ein Backup hast (sollte vor jedem Update vorhanden sein). Dann ändere das `ROW_FORMAT` der betroffenen Tabelle und führe das Update erneut aus:
 
-Wir setzen das row size und führen das Update erneut aus:
+1. Melde dich bei MySQL an:
 
-Zuerst loggen wir uns bei mysql ein:
+    ```sql
+        mysql -uroot -p
+    ```
 
-```sql
-    mysql -uroot -p
-```
+2. Wähle die betroffene Datenbank:
 
-Nun wird die betroffene Datenbank gewählt.
+    ```sql
+        USE idoit_data;
+    ```
 
-```sql
-    USE idoit_data;
-```
+    !!! note "Bei mehreren Mandanten musst du diesen Schritt für jede betroffene Datenbank wiederholen."
 
-Falls der Fehler für mehrere Datenbanken auftritt, muss dieser Schritt für alle betroffenen Datenbanken ausgeführt werden.
+3. Setze das `ROW_FORMAT` der betroffenen Tabelle von `FIXED` auf `DYNAMIC`:
 
-Dies kann der Fall sein, wenn es mehrere Mandanten gibt.
-
-Nun setzen wir das ROW\_FORMAT der Tabelle von Fixed auf Dynamic:
-
-```sql
-    ALTER TABLE isys_cats_person_list ROW_FORMAT=DYNAMIC;
-```
+    ```sql
+        ALTER TABLE isys_cats_person_list ROW_FORMAT=DYNAMIC;
+    ```

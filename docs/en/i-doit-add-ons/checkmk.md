@@ -1,102 +1,109 @@
-# CheckMK
+---
+title: Checkmk
+description: "Check\\_MK is a network monitoring software that you can configure from within i-doit."
+icon:
+status:
+lang: en
+---
+# Checkmk
 
-[![Logo von Check_MK](../assets/images/en/i-doit-add-ons/checkmk/1-cmk.gif)](../assets/images/en/i-doit-add-ons/checkmk/1-cmk.gif)
+[![Check_MK Logo](../assets/images/de/i-doit-add-ons/checkmk/1-cmk.gif)](../assets/images/de/i-doit-add-ons/checkmk/1-cmk.gif)
 
-Check_MK is a software for [Network Monitoring](../automation-and-integration/network-monitoring/index.md) which can be configured from i-doit.
+Check\_MK is a [network monitoring](../automation-and-integration/network-monitoring/index.md) software that you can configure from within i-doit.
 
-The export supplies Check_MK with WATO configuration files. WATO is the configuration interface of Check_MK managing changes of the monitoring configuration and checking their validity. The configurations contain IP addresses or the DNS name of hosts and/or clusters and their members that are to be exported as well as associated host properties (tags) and linked contacts. Further monitoring specific configurations remain in Check_MK.
+The add-on exports WATO configuration files to Check\_MK. WATO manages changes to the monitoring configuration and validates them. The exported configurations contain IP addresses or DNS names of hosts and clusters, assigned host tags, and linked contacts. Additional monitoring-specific configurations remain in Check\_MK.
 
-The advantage of filling it with i-doit is that you don't have to take care of data maintenance twice and that the host properties, which determine the monitoring in Check_MK based on rules, can be generated automatically through CMD information, as for example the location of an object.
+The advantage: You avoid duplicate data maintenance. Host tags that control monitoring in Check\_MK on a rule basis are automatically generated from CMDB information such as the location of an object.
 
-!!! attention "Attention"
-    The Interface officially only supports Check_MK up to version 1.4, all newer versions will be supported by the [Check_MK 2 add-on](./checkmk2/index.md).
-    It is therefore unclear which functions/areas of the interface will work correctly with Check_MK versions > 1.4.
+!!! attention "Attention!"
 
-## Basic Configuration
+    The interface officially supports only Check\_MK up to version 1.4. For all newer versions, the [Check\_MK 2 add-on](./checkmk2/index.md) is intended.
+    It is therefore unclear which functions/areas of the interface work correctly with Check\_MK versions > 1.4.
 
-For Check_MK a configuration has to be saved at **Administration → Monitoring and interfaces → Monitoring → Export configuration** in i-doit. The local path defines an absolute or a relative path (for the installation of i-doit, for example) in the file system in which the configuration generated in i-doit is to be deposited. The link to the monitoring tool gives a basic link to generate links from i-doit to the monitoring instance.
+## Basic configuration
 
-Further configuration parameters are opened after selecting Check_MK as the type.
+Set up the configuration under **Administration → Interfaces → Monitoring → Export configuration**:
 
-**Export assigned contacts** allows the storing of contacts which were assigned to the corresponding [objects](../basics/structure-of-the-it-documentation.md) in this role in the exported configuration of the object. In this connection the [object title](../basics/unique-references.md) of the contacts is also exported
+1. Define the **local path** -- an absolute or relative path in the file system where the generated configuration is stored.
+2. Specify the **link to the monitoring tool** so that i-doit can generate links to the monitoring instance.
+3. Select **Check\_MK** as the type -- additional parameters appear.
 
-In the plain text field **Site** you can define a site to which the exported configuration is forwarded to. For this **Multisite (Distributed Monitoring)** has to be set to "**Yes**".
+The most important parameters:
 
-When locking hosts or folders, the exported configuration cannot be edited anymore in Check_MK. This is useful to prevent Check_MK of making changes that would be overwritten again with the next export.
+- **Export assigned contacts**: Stores the contacts assigned to the [objects](../basics/it-documentation-structure.md) including [object title](../basics/unique-references.md) in the configuration.
+- **Site**: Defines the site to which the configuration is forwarded. Set **Multisite (Distributed Monitoring)** to "Yes" for this.
+- **Lock hosts/folders**: Prevents the exported configuration from being edited in Check\_MK -- so your settings are not overwritten during the next export.
+- **Master Site**: Select the site here that has been added across multiple export configurations. With only one configuration, leave this field empty.
 
-The sites that are selectable as **Master Site** are the ones that were added through multiple export configurations. This entry can be left empty if there is only one configuration.
-
-[![Basic Configuration](../assets/images/en/i-doit-add-ons/checkmk/2-cmk.png)](../assets/images/en/i-doit-add-ons/checkmk/2-cmk.png)
+[![Master Site](../assets/images/de/i-doit-add-ons/checkmk/2-cmk.png)](../assets/images/de/i-doit-add-ons/checkmk/2-cmk.png)
 
 ## Categories
 
-Generally, the [category folder](../basics/structure-of-the-it-documentation.md) **Check_MK (Host)** needs to be assigned to the [object types](../basics/structure-of-the-it-documentation.md) that are going to be used via **[Edit data structure](../basics/assignment-of-categories-to-object-types.md)**.
+Assign the [category folder](../basics/it-documentation-structure.md) **Check_MK (Host)** to the desired [object types](../basics/it-documentation-structure.md) via [Edit data structure](../administration/management/data-structure/edit-data-structure.md).
 
-An export configuration has to be chosen and a host name / host address have to be defined in the category **Check_MK (HOST)**. Additionally, the export of the IP address can be prevented, for example, if it was supplied by the DHCP and changes.
+In the **Check_MK (Host)** category, you select an export configuration and define the hostname or host address. Optionally, you can prevent the export of the IP address -- e.g., when it is assigned via DHCP and changes.
 
-[![Categories](../assets/images/en/i-doit-add-ons/checkmk/3-cmk.png)](../assets/images/en/i-doit-add-ons/checkmk/3-cmk.png)
+[![Check_MK (Host)](../assets/images/de/i-doit-add-ons/checkmk/3-cmk.png)](../assets/images/de/i-doit-add-ons/checkmk/3-cmk.png)
 
-## Host Tags
+## Host tags
 
-The **Host tags** are assigned and shown via the category of the same name. They are distinguished as follows:
+Via the **Host tags** category, these are assigned or displayed. A distinction is made between:
 
--   **Host tags** - simple and manual assignment of tags (and thus statically)
--   **CMDB tags** - tags that are defined by an [attribute](../basics/structure-of-the-it-documentation.md) from the CMDB
--   **Dynamic tags** - host tags which are generated through rules
+*   **Host tags**: simple manual assignment of tags (therefore static)
 
-All kinds of host properties are configured via the **Extras** menu of **Check_MK**.
+*   **CMDB tags**: tags that are derived from a CMDB [attribute](../basics/it-documentation-structure.md)
 
-[![Extras Check_MK](../assets/images/en/i-doit-add-ons/checkmk/4-cmk.png)](../assets/images/en/i-doit-add-ons/checkmk/4-cmk.png)
+*   **Dynamic tags**: host tags that are generated by rules
 
-The static host properties are managed manually. The default properties of Check_MK are already delivered in a predefined way.
+All types of host tags are configured under **Extras → Check_MK**.
 
-The CMDB properties make use of the contents from the CMDB. Only object types that are assigned to the category folder Check_MK are shown in the configuration. Single attributes can be selected here. You can set up a global definition which applies to all listed object types, which are not associated to any special configuration that ignores the global definition. The object title of the location of an object can be added as a tag to the host properties via the **Export generic location property** item.
+The static host tags are maintained manually. The default tags from Check\_MK are delivered preconfigured.
 
-In the following example the **Operating system** attribute from the CDMB is converted to a host property.
+The CMDB tags access content from the CMDB. In the configuration, you only see object types that have the **Check_MK** category folder assigned. You can select individual attributes and set up a global definition that applies to all object types without specific configuration. Via **Export generic location tag**, you add the object title of the location as a tag to the host tags.
 
-[![Operating system](../assets/images/en/i-doit-add-ons/checkmk/5-cmk.png)](../assets/images/en/i-doit-add-ons/checkmk/5-cmk.png)
+In the following example, the **Operating system** attribute from the CMDB is converted into a host tag.
 
-The example server is assigned to the operating system Debian GNU/Linux. This value is transferred to the corresponding host property when exporting the configuration.
+[![Operating system](../assets/images/de/i-doit-add-ons/checkmk/4-cmk.png)](../assets/images/de/i-doit-add-ons/checkmk/4-cmk.png)
 
-[![example server ](../assets/images/en/i-doit-add-ons/checkmk/6-cmk.png)](../assets/images/en/i-doit-add-ons/checkmk/6-cmk.png)
+The server in the example has Debian 7.1 assigned as its operating system. This value is adopted as the corresponding host tag when the configuration is exported.
 
-The dynamic properties function in a similar way with the exception of being based on rules. In the following example the type of an object is evaluated and passed on when exporting the configuration. If the object is a server, then it receives the host tags Local network and DMZ in this specific example.
+The dynamic tags work on a rule basis. In the following example, the location of an object is evaluated: If a server is located below the location "Muenchen", it automatically receives the host tag "WAN" during export.
 
-[![specific example](../assets/images/en/i-doit-add-ons/checkmk/7-cmk.png)](../assets/images/en/i-doit-add-ons/checkmk/7-cmk.png)
+### Host tags category
 
-## Host Properties Category
+In the **Host tags** category of an object, the dynamic host tags are displayed and the manual, static host tags are assigned.
 
-The dynamic host properties are displayed and the manual, static host properties are assigned in the **Host properties** category of an object.
+### Service assignment category
 
-## Service Assignment Category
+!!! info "This category is only usable when the Analysis module is installed."
 
-!!! info "Analysis Module"
-    This category can only be used when the Analysis module is installed.
+Via the **Service assignment**, you link installed software with service checks that are read via [Livestatus](../automation-and-integration/network-monitoring/query-data-with-livestatus.md). This allows the Analysis module to determine which IT services are directly or indirectly affected based on monitoring outages.
 
-The **Service assignment** is used to assign installed software to service checks which are read out per [Livestatus](../automation-and-integration/network-monitoring/fetch-data-with-livestatus-ndo.md). This is applied to calculate the affected IT services using the Analysis module and the failures reported by the monitoring. In this category, a monitoring check is "married" to a software installed on the system, so to speak. This way, the IT services which are affected directly or indirectly by the technical failure can be detected in the Analysis module.
+## Configuration export
 
-## Export of the Configuration
+You start the export manually under **Extras → Check_MK → Check_MK Export**.
 
-With **Extras → Check_MK→ Check_MK Export** you can manually initiate the export of the WATO configuration.
+This generates `.mk` files that are stored in the configured directory. For easy transfer to the OMD site, the data is additionally packed as `.zip` and as a tarball.
 
-Files are generated in the .mk format which can be transferred to the Check_MK instance. First, they are saved in the folder which was entered in the export configuration. For an easy transfer to the OMD site the data are also _compressed_ to .zip and as tarball files.
+The export structure determines how the objects are organized in Check\_MK: You can choose whether locations or object types are used as the folder structure.
 
-The definition of the export structure allows for transferring the exported objects in a folder structure to the Check_MK. Here you can choose whether the locations or the object types are to be saved as folders.
+## Transfer script
 
-## Transfer Script
+In the i-doit installation directory, you will find the shell script `checkmk_transfer.sh`. This script automates the entire transfer:
 
-A shellscript named **checkmk_transfer.sh** is located in the root path of the i-doit installation. This is configured with the corresponding accesses to the OMD site and then transfers the i-doit configuration to the WATO in an automated way.
+1. It controls the [i-doit Console](../automation-and-integration/cli/index.md).
+2. It establishes an SSH connection to the Check\_MK instance.
+3. It transfers the data to the OMD site and extracts it.
+4. It signals WATO that changes are available.
 
-For this purpose it uses the [i-doit Controller](../automation-and-integration/cli/index.md) and builds up a SSH connection to the Check_MK instance. It transfers the files to the OMD site and extracts them automatically. Afterwards, it notifies WATO that changes have been made.
-
-A public key authentication between the i-doit instance and the Check_MK OMD site is required for the transfer via SSH. A detailled guide for this is available in the i-doit installation directory under ** docs/checkmk/README.**
+**Prerequisite:** Public key authentication between the i-doit instance and the Check\_MK OMD site. Detailed instructions can be found in the installation directory under `docs/checkmk/README` or `README.german`.
 
 ## Releases
 
 | Version | Date       | Changelog                                                                                                                                                                                                                                                            |
 | ------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1.1.1   | 2025-09-09 | [Task] PHP 8.4 compatibility                                                                                                                                                                                                                                         |
-| 1.1     | 2022-09-05 | [Task] PHP 8.0 Compatibility  <br>[Task] Design Compatibility                                                                                                                                                                                                        |
+| 1.1.1   | 09.09.2025 | [Task] PHP 8.4 compatibility                                                                                                                                                                                                                                         |
+| 1.1     | 05.09.2022 | [Task] PHP 8.0 Compatibility<br> [Task] Design Compatibility                                                                                                                                                                                                         |
 | 1.0.2   |            | [Improvement] Compatibility with i-doit 1.16                                                                                                                                                                                                                         |
-| 1.0.1   | 2019-10-14 | [Bug] List editing of Check_MK categories<br>[Bug] Create new category entries in the list editing category "Export Parameter (subcategory of Check_MK (Host))"<br>[Bug] Add more dynamic CMDB-tags<br>[Bug] Export of dynamic host tags with special characters<br> |
-| 1.0     | 2018-12-17 | [Improvement] Add-on is installable<br>[Improvement] Add-on is uninstallable<br>[Improvement] Add-on is activatable<br>[Improvement] Add-on is deactivatable<br>[Change] Add-onize Check_MK<br>                                                                      |
+| 1.0.1   | 14.10.2019 | [Bug] List editing of Check_MK categories<br> [Bug] Create new category entries in the list editing category "Export parameter (subcategory of Check_MK (Host))" <br>[Bug] Add more dynamic CMDB-tags <br> [Bug] Export of dynamic host tags with special characters |
+| 1.0     | 17.12.2018 | [Improvement] Add-on is installable[Improvement] Add-on is uninstallable <br> [Improvement] Add-on is activatable <br> [Improvement] Add-on is deactivatable <br> [Change] Add-onize Check_MK                                                                        |

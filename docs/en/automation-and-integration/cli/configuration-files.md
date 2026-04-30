@@ -1,55 +1,55 @@
 ---
-title: Using configuration files for the i-doit console utility
-description: How to use .ini configuration files to run i-doit console utility.
+title: Using Configuration Files for the i-doit Console Utility
+description: Guide for using .ini configuration files with the i-doit console utility.
 icon:
 status:
 lang: en
 ---
 
-# Using configuration files for i-doit console utility
+# Using Configuration Files for the i-doit Console Utility
 
-Using a configuration file (`.ini`) is a powerful way to run console commands, especially complex ones. It allows you to pre-define all your options in a reusable file.
+Using a configuration file (`.ini`) is a powerful method for executing console commands, especially complex ones. It allows you to predefine all options in a reusable file.
 
-**Key Benefits:**
-* **Security**: Avoids typing passwords directly into the command line where they can be logged in your shell history.
+**Key advantages:**
+* **Security**: Avoids directly entering passwords on the command line, where they can be logged in the shell history.
 * **Simplicity**: Manages many options for complex commands like `ldap-sync` in a structured way.
-* **Reusability**: Saves different configurations for different tasks without having to re-type them every time.
+* **Reusability**: Stores various configurations for different tasks without having to re-enter them each time.
 
-!!! warning "Backup First"
-    Please create a complete backup before making any changes with an interface or import. If the result is not satisfying, it can then be restored.
+!!! warning "Create a backup first"
+    Please create a complete backup before making changes via an interface or import. If the result is not satisfactory, it can be restored.
 
 -----
 
 ## The Structure of an `.ini` File
 
-You can save your configuration files everywhere you want for better organization. To use one, specify the path with the `--config` or `-c` option.
+You can store your configuration files in any location for better organization. To specify a file, provide the path with the `--config` or `-c` option.
 
 Every configuration file follows the same basic structure with three sections:
 
 ```ini
 [commandArguments]
-# For positional arguments. Currently not used by i-doit commands.
+# For positional arguments. Not currently used by i-doit commands.
 
 [commandOptions]
-# For standard command options like --user or --tenantId.
-# Use the long-form name of the option without the preceding "--".
-# Options without a value (flags) are simply listed by name.
+# For default command options like --user or --tenantId.
+# Use the long name of the option without the preceding "--".
+# Options without a value (flags) are simply listed by their name.
 user=username
 password=password
 quiet
 
 [additional]
-# For special parameters required by specific commands,
-# like LDAP attribute mapping or syslog file paths.
+# For special parameters required by certain commands,
+# such as LDAP attribute mappings or syslog file paths.
 ```
 
 -----
 
 ## Examples
 
-### Example for the command `search-index`
+### Example for the `search-index` Command
 
-This example rebuilds the search index. The `update` option forces a rebuild of an existing index, and `quiet` minimizes the console output.
+This example rebuilds the search index. The `update` option forces the recreation of an existing index, and `quiet` minimizes console output.
 
 ```ini title="search-index.ini"
 [commandOptions]
@@ -72,9 +72,9 @@ sudo -u www-data php console.php search-index -c /path/to/config/search-index.in
 
 -----
 
-### Example for the command `notifications-send`
+### Example for the `notifications-send` Command
 
-This command sends out pending notifications and requires only basic authentication options.
+This command sends pending notifications and only requires basic authentication options.
 
 ```ini title="notifications-send.ini"
 [commandOptions]
@@ -95,9 +95,9 @@ sudo -u www-data php console.php notifications-send -c /path/to/config/notificat
 
 -----
 
-### Example for the command `ldap-sync`
+### Example for the `ldap-sync` Command
 
-This is a complex command where a configuration file is highly recommended. The `[additional]` section contains all the LDAP-specific settings and attribute mappings.
+This is a complex command where a configuration file is strongly recommended. The `[additional]` section contains all LDAP-specific settings and attribute mappings.
 
 ```ini title="ldap-sync.ini"
 [commandOptions]
@@ -110,7 +110,7 @@ import_rooms=false
 defaultCompany=""
 deletedUsersBehaviour=disable_login
 disabledUsersBehaviour=disable_login
-; LDAP Attributes are individual. This default configuration is prepared for Active Directory:
+; LDAP attributes are individual. This default configuration is prepared for Active Directory:
 attributes[department]=department
 attributes[phone_company]=telephoneNumber
 attributes[phone_home]=homephone
@@ -143,18 +143,18 @@ ignoreFunction=empty
 syncEmptyAttributes=true
 ```
 
-**Explanation of `[additional]` Parameters:**
+**Explanation of the `[additional]` parameters:**
 
-| Key                           | Value                                   | Description                                                                                                                                                                                                                                    |
-| ----------------------------- | --------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `import_rooms`                | `true` or `false`                       | If `true`, imports the `physicalDeliveryOfficeName` attribute and creates a corresponding room object if it doesn't exist.                                                                                                                     |
-| `defaultCompany`              | `"Name of Organization"`                | Sets a default organization for imported users. Leave empty to make no changes.                                                                                                                                                                |
-| `deletedUsersBehaviour`       | `archive`, `delete` or `disable_login`  | Defines what happens to i-doit users when they are deleted from LDAP.                                                                                                                                                                          |
-| `disabledUsersBehaviour`      | `archive`, `delete` or `disable_login`  | Defines what happens to i-doit users when they are disabled in LDAP.                                                                                                                                                                           |
-| `attributes[]`                | `attributes[i-doit field]=AD Attribute` | Maps an i-doit object attribute (key) to an LDAP attribute (value). If you want to save custom information, you can enable [Category extension](../../system-administration/administration/import-and-interfaces/ldap/attribute-extension.md). |
-| `autoReactivateUsers`         | `true` or `false`                       | If `true`, all users are set to "normal" status before sync. Only needed for OpenLDAP/NDS.                                                                                                                                                     |
-| `ignoreUsersWithAttributes[]` | `ignoreUsersWithAttributes[]="sn"`      | Prevents synchronization of users if a specified LDAP attribute is empty (e.g., `sn` for last name). You can list multiple attributes.                                                                                                         |
-| `ignoreFunction`              | `empty`, `!empty`, `isset`, `!isset`    | The check used for `ignoreUsersWithAttributes`. For example, `empty` checks if the attribute value is empty or not set.                                                                                                                        |
+| Key                         | Value                                    | Description                                                                                                                                                                                                                                                                       |
+| --------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `import_rooms`              | `true` or `false`                        | When `true`, the attribute `physicalDeliveryOfficeName` is imported and a corresponding room object is created if it does not exist.                                                                                                                                              |
+| `defaultCompany`            | `"name of the organization"`             | Sets a default organization for imported users. Leave empty to make no changes.                                                                                                                                                                                                   |
+| `deletedUsersBehaviour`     | `archive`, `delete`, or `disable_login`  | Defines what happens to i-doit users when they are deleted from LDAP.                                                                                                                                                                                                             |
+| `disabledUsersBehaviour`    | `archive`, `delete`, or `disable_login`  | Defines what happens to i-doit users when they are disabled in LDAP.                                                                                                                                                                                                              |
+| `attributes[]`              | `attributes[i-doit-field]=AD-Attribute`  | Maps an i-doit object attribute (key) to an LDAP attribute (value). If custom information should be stored, the [attribute extension](../../administration/management/import-and-interfaces/ldap/attribute-extension.md) can be enabled.                                       |
+| `autoReactivateUsers`       | `true` or `false`                        | When `true`, all users are set to "normal" status before synchronization. Only required for OpenLDAP/NDS.                                                                                                                                                                         |
+| `ignoreUsersWithAttributes[]` | `ignoreUsersWithAttributes[]="sn"`     | Prevents synchronization of users when a specified LDAP attribute is empty (e.g., `sn` for surname). Multiple attributes can be listed.                                                                                                                                           |
+| `ignoreFunction`            | `empty`, `!empty`, `isset`, `!isset`     | The check function for `ignoreUsersWithAttributes`. `empty`, for example, checks whether the attribute value is empty or not set.                                                                                                                                                 |
 
 **Execution:**
 
@@ -166,9 +166,9 @@ sudo -u www-data php console.php ldap-sync -c /path/to/config/ldap-sync.ini
 
 -----
 
-### Example for the command `import-syslog`
+### Example for the `import-syslog` Command
 
-This command imports syslog messages into the i-doit logbook. The configuration file defines which log files to read and how to parse them.
+This command imports syslog messages into the i-doit logbook. The configuration file defines which log files are read and how they should be parsed.
 
 ```ini title="import-syslog.ini"
 [commandOptions]
@@ -177,7 +177,7 @@ password=password
 tenantId=1
 
 [additional]
-; Regex to split a syslog line into parts like date, hostname, process, and message.
+; Regex for splitting a syslog line into parts such as date, hostname, process, and message.
 regexSplitSyslogLine="/(^[a-zA-Z]{3}[ ]+[\d]+ [\d\:\d]+) (([.\-0-9a-zA-Z]+)*(\b(?:\d{1,3}\.){3}\d{1,3}\b)*)+ ([a-zA-Z0-9-_\/\[\]:]+) (.*)/"
 ; The names for the priority levels
 priorities[]=Emergency
@@ -190,7 +190,7 @@ priorities[]=Info
 priorities[]=Debug
 ; The log files to monitor
 logfiles[]="/var/log/system.log"
-; The i-doit alert level to assign for each priority
+; The i-doit alarm level assigned to each priority
 alertlevels[] = 4
 alertlevels[] = 4
 alertlevels[] = 3

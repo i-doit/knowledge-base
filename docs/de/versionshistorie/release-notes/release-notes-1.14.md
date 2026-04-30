@@ -1,3 +1,10 @@
+---
+title: Release Notes 1.14
+description: "This release brings many bug fixes, some minor changes and a few new features."
+icon:
+status:
+lang: de
+---
 # Release Notes 1.14
 
 Changelog

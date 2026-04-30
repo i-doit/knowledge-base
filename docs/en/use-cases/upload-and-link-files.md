@@ -1,65 +1,74 @@
-# Upload and Link Files
+---
+title: Uploading and Linking Files
+description: "A comprehensive IT documentation often includes documents in the form of files."
+icon:
+status:
+lang: en
+---
+# Uploading and Linking Files
 
-A complete IT documentation often includes documents in form of files. Whether you have operating manuals, emergency plans, contracts, installation protocols or drivers - important files should be linked to [objects](../basics/structure-of-the-it-documentation.md) in i-doit.
+A comprehensive IT documentation often includes documents in the form of files. Whether operating manuals, emergency plans, contracts, installation protocols, or drivers: important files should be linked to [objects](../basics/it-documentation-structure.md) in i-doit.
 
-Files are Objects
------------------
+Files Are Objects
+--------------------
 
-Each uploaded file in i-doit is automatically an object. The advantage of this is that you can assign any [categories and attributes](../basics/structure-of-the-it-documentation.md) to these files and you can [link](../basics/object-relations.md) them to any other object. The standard setup of i-doit already supplies the matching [object types](../basics/structure-of-the-it-documentation.md):
+Every uploaded file in i-doit is automatically an object. This has the advantage that you can assign any [categories and attributes](../basics/it-documentation-structure.md) to these files and [link](../basics/object-relationships.md) them to any other objects. i-doit already comes with suitable [object types](../basics/it-documentation-structure.md) in the standard installation:
 
 *   **Files** and
-*   **Emergency plan**.
+*   **Emergency Plan**.
 
-These can be extended by other [custom object types](../basics/custom-object-types.md), for example for operating manuals.
+These can be extended with additional [custom object types](../basics/custom-object-types.md), for example for operating manuals.
 
-You can find the actual function (upload, link etc.) in the **Files** [category folder](../basics/structure-of-the-it-documentation.md). The folder has the following sub-categories:
+The actual functionality (uploading, linking, etc.) can be found in the [category folder](../basics/it-documentation-structure.md) **Files**. This consists of the following subcategories:
 
-*   **Current file**: Information about the uploaded file, download option and categorization of the file
-*   **File versions**: Each file can have any number of versions. Each new upload of the file generates a new version.
-*   **Assigned objects**: Which objects are assigned to this file? (only view, no function)
+*   **Current File**: Information about the uploaded file, download option, and file categorization
+*   **File Versions**: Any number of versions can exist for each file. Re-uploading the file creates a new version.
+*   **Assigned Objects**: Which objects is this file linked to? (view only, no functionality)
 
-The  **Files** category folder belongs to the [specific categories](../basics/structure-of-the-it-documentation.md), which can be assigned to any desired object types with help of the [object type configuration](../basics/custom-object-types.md).
+The **Files** category folder belongs to the [specific categories](../basics/it-documentation-structure.md) and can be assigned to any object type via the [object type configuration](../basics/custom-object-types.md).
 
-[![upload-and-link-files](../assets/images/en/use-cases/upload-and-link-of-files/1-ualof.png)](../assets/images/en/use-cases/upload-and-link-of-files/1-ualof.png)
+[![Current file](../assets/images/de/anwendungsfaelle/dateien-hochladen-und-verknuepfen/1-dhuv.png)](../assets/images/de/anwendungsfaelle/dateien-hochladen-und-verknuepfen/1-dhuv.png)
 
-[![upload-and-link-files](../assets/images/en/use-cases/upload-and-link-of-files/2-ualof.png)](../assets/images/en/use-cases/upload-and-link-of-files/2-ualof.png)
+[![File versions](../assets/images/de/anwendungsfaelle/dateien-hochladen-und-verknuepfen/2-dhuv.png)](../assets/images/de/anwendungsfaelle/dateien-hochladen-und-verknuepfen/2-dhuv.png)
 
-[![upload-and-link-files](../assets/images/en/use-cases/upload-and-link-of-files/3-ualof.png)](../assets/images/en/use-cases/upload-and-link-of-files/3-ualof.png)
+[![File versions](../assets/images/de/anwendungsfaelle/dateien-hochladen-und-verknuepfen/3-dhuv.png)](../assets/images/de/anwendungsfaelle/dateien-hochladen-und-verknuepfen/3-dhuv.png)
 
-In various [mirrored categories](../basics/structure-of-the-it-documentation.md) you can link file objects and other objects:
+[![Assigned objects](../assets/images/de/anwendungsfaelle/dateien-hochladen-und-verknuepfen/4-dhuv.png)](../assets/images/de/anwendungsfaelle/dateien-hochladen-und-verknuepfen/4-dhuv.png)
+
+Several [reverse categories](../basics/it-documentation-structure.md) handle the linking between file objects and other objects:
 
 *   File assignment
-*   User manual assignment
+*   Manual assignment
 *   Emergency plan assignment
 
-You can assign these [global categories](../basics/structure-of-the-it-documentation.md) to [any object types](../glossary.md) and they have similar functions, namely the assignment of files.
+These [global categories](../basics/it-documentation-structure.md) can be [assigned to any object type](../basics/custom-object-types.md) and serve similar functions, namely assigning files.
 
-[![upload-and-link-files](../assets/images/en/use-cases/upload-and-link-of-files/4-ualof.png)](../assets/images/en/use-cases/upload-and-link-of-files/4-ualof.png)
+[![Global categories](../assets/images/de/anwendungsfaelle/dateien-hochladen-und-verknuepfen/5-dhuv.png)](../assets/images/de/anwendungsfaelle/dateien-hochladen-und-verknuepfen/5-dhuv.png)
 
-Upload of files and link with objects
--------------------------------------
+Uploading Files and Linking Them to Objects
+---------------------------------------------
 
-There are two ways to upload a file: Either you create a new object of the type **Files** and then upload the file in the **File versions** category or you use the **File assignment** category and take the object which is to be linked to the file.
+A new file can be uploaded in two ways: Either you create a new object of type **Files** and then upload the file in the **File Versions** category. Or you go through the object that should be linked to the file: Here you use the **File assignment** category.
 
-For fiiles which are uploaded with the file assignment category, i-doit automatically creates an object. So you can save a few clicks.
+For files uploaded via the File assignment category, i-doit automatically creates an object for each one. This saves a few clicks.
 
-The attribute for **File assignment (object)** is rather flexible:
+The **File assignment (Object)** attribute is quite flexible:
 
-*   With drag and drop you can move a file from the desktop etc. into the attribute field.
-*   Per auto-complete you can assign already uploaded files.
-*   With a click on the magnifier icon the **File browser** opens with which you can select and upload the file.
+*   A file can be dragged and dropped from the desktop etc. into the attribute field.
+*   Already uploaded files can be assigned via auto-completion.
+*   Via the magnifying glass icon, the **File Browser** opens, through which the file is uploaded and selected.
 
-[![upload-and-link-files](../assets/images/en/use-cases/upload-and-link-of-files/5-ualof.png)](../assets/images/en/use-cases/upload-and-link-of-files/5-ualof.png)
+[![File assignment](../assets/images/de/anwendungsfaelle/dateien-hochladen-und-verknuepfen/6-dhuv.png)](../assets/images/de/anwendungsfaelle/dateien-hochladen-und-verknuepfen/6-dhuv.png)
 
-The **File browser** lists all available files. You can sort the files with the **Category** attribute so that you have a clearer overview.
+The **File Browser** lists all available files. These can be classified via the **Category** attribute to provide a better overview.
 
-[![upload-and-link-files](../assets/images/en/use-cases/upload-and-link-of-files/6-ualof.png)](../assets/images/en/use-cases/upload-and-link-of-files/6-ualof.png)
+[![File browser](../assets/images/de/anwendungsfaelle/dateien-hochladen-und-verknuepfen/7-dhuv.png)](../assets/images/de/anwendungsfaelle/dateien-hochladen-und-verknuepfen/7-dhuv.png)
 
-Link files in custom categories
--------------------------------
+Linking Files in Custom Categories
+----------------------------------------------------
 
-To link a file with an object you aren't dependent on the i-doit default categories. You can add attributes of the field type **File browser** to [custom categories](#).
+To link a file to an object, you are not limited to the standard categories of i-doit. In a [custom category](../basics/custom-categories.md), you can add attributes with the **File Browser** field type.
 
-!!! check "Document Module"
+!!! success "Documents Module"
 
-    If you want to generate user manuals, emergency plans etc. directly from your IT documentation, you should consider the use of the [Documents add-on](../i-doit-add-ons/documents/index.md) for i-doit. With this module you can add [attributes](../basics/structure-of-the-it-documentation.md), images and [reports](../evaluation/report-manager.md) from i-doit to comprehensive text documents.
+    If you want to generate operating manuals, emergency plans, and more directly from the IT documentation, you should consider using the [Documents module](../i-doit-add-ons/documents/index.md) for i-doit. This allows you to enrich extensive text documents with [attributes](../basics/it-documentation-structure.md), images, and [reports](../evaluation/report-manager.md) from i-doit.

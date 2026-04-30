@@ -1,112 +1,123 @@
+---
+title: "Web GUI"
+description: "The Web GUI is the browser-based user interface of i-doit, through which you manage the entire IT documentation."
+icon:
+status:
+lang: en
+---
 # Web GUI
 
-The i-doit GUI is a WEB application that can be used with the respective [supported browser](../installation/system-requirements.md). This Knowledge Base article describes the various features and functions of the Web GUI.
+The Web GUI is the browser-based user interface of i-doit, through which you manage the entire IT documentation. You can access it with any [supported browser](../installation/system-requirements.md).
 
-## Logon Screen
+This article gives you an overview of the individual areas and their functions.
 
-When you activate i-doit after successful installation, the logon screen is displayed first. Here you can logon to i-doit directly or you can go to the [Admin-Center](../system-administration/admin-center.md) by clicking the "Admin-Center" button in the lower area of the window.
+## Login screen
 
-[![Logon Screen](../assets/images/en/basics/web-gui/1-gui.png)](../assets/images/en/basics/web-gui/1-gui.png)
+When you access the URL of your i-doit instance after installation, the login screen appears first. Here you can log in directly to i-doit or switch to the [Admin-Center](../administration/admin-center.md) via the "Admin-Center" link at the bottom of the window.
 
-For log-in to i-doit our default users apply, such as Admin, Archivist, Author, Editor or Reader, provided that i-doit was installed only just. All these users have their name as password, for example, you can log-in with the user name "Admin" and the corresponding password "Admin".
+[![login-screen](../assets/images/de/grundlagen/web-gui/1-web-gui.png)](../assets/images/de/grundlagen/web-gui/1-web-gui.png)
 
-## Start Screen, Dashboard and Widgets
+With a fresh installation, the default users are available: Admin, Archivar, Author, Editor and Reader. Each of these users has their own name as the password (e.g. username **admin**, password **admin**).
 
-After successful log-in, the start screen with the [dashboard](./dashboard-and-widgets.md) and its [widgets](./dashboard-and-widgets.md) is opened.
+For a multi-tenant installation, you select the desired tenant after logging in:
 
-[![Start Screen, Dashboard and Widgets](../assets/images/en/basics/web-gui/2-gui.png)](../assets/images/en/basics/web-gui/2-gui.png)
+[![login-screen-tenant](../assets/images/de/grundlagen/web-gui/2-web-gui.png)](../assets/images/de/grundlagen/web-gui/2-web-gui.png)
 
-The switch panel in the horizontal area at the top is divided into the following sections:
+## Start screen, dashboard and widgets
 
-## i-doit Button
+After a successful login, you see the start screen of i-doit with the [dashboard](dashboard-and-widgets.md) and its [widgets](dashboard-and-widgets.md).
 
-In the upper left corner you can find the i-doit button. A click on this button will always bring you back to the homepage.
+[![start-screen](../assets/images/de/grundlagen/web-gui/3-web-gui.png)](../assets/images/de/grundlagen/web-gui/3-web-gui.png)
 
-[![i-doit Button](../assets/images/en/basics/web-gui/3-gui.png)](../assets/images/en/basics/web-gui/3-gui.png)
+The bar at the top is divided into the following areas:
+
+## i-doit button
+
+In the upper left corner you will find the i-doit button. Clicking on it takes you back to the start page at any time.
+
+[![i-doit-button](../assets/images/de/grundlagen/web-gui/4-web-gui.png)](../assets/images/de/grundlagen/web-gui/4-web-gui.png)
 
 ## my-doit
 
-On the right of the i-doit button is your personal i-doit area called "my-doit". Here you can set various CMDB status filters, bookmarks for i-doit objects or areas and you get an overview of your tasks from the workflow system. You can activate this in **Administration → User settings → User interface → Main menu**.
+Next to the i-doit button you will find your personal area "my-doit". Here you can:
 
-[![my-doit](../assets/images/en/basics/web-gui/4-gui.png)](../assets/images/en/basics/web-gui/4-gui.png)
+- Set CMDB status filters
+- Create bookmarks to objects or areas
+- View your tasks from the workflow system
 
-## Objekt Type Group Selection
+[![my-doit](../assets/images/de/grundlagen/web-gui/5-web-gui.png)](../assets/images/de/grundlagen/web-gui/5-web-gui.png)
 
-In the central part of the upper task bar you can see the single [object type](./object-types.md) groups. You can adapt this area completely to your requirements and depending on your configuration it can look completely different. By selecting a single menu item, the respective object type groups are displayed within the tree view on the right-hand side of the i-doit user interface.
+If you do not need my-doit, deactivate the area under **Administration → User settings → Display**:
 
-[![Objekt Type Group Selection](../assets/images/en/basics/web-gui/5-gui.png)](../assets/images/en/basics/web-gui/5-gui.png)
+[![my-doit-2](../assets/images/de/grundlagen/web-gui/6-web-gui.png)](../assets/images/de/grundlagen/web-gui/6-web-gui.png)
+
+## Object type group selection
+
+In the middle area of the top bar you will find the [object type groups](assigning-categories-to-object-types.md). This area is fully customizable. When you select a menu item, the associated object types appear in the tree view on the left side.
+
+[![object-type-group-selection](../assets/images/de/grundlagen/web-gui/7-web-gui.png)](../assets/images/de/grundlagen/web-gui/7-web-gui.png)
 
 ## Extras
 
-A lot of special functions can be found under Extras. For example, there are CMDB features which help you to work more efficiently with i-doit and you have access to the respective installed i-doit [add-ons](../i-doit-add-ons/index.md).
+Under **Extras** you will find special functions of i-doit. These include CMDB features for more efficient work as well as access to installed [i-doit add-ons](../i-doit-add-ons/i-diary.md).
 
-[![Extras](../assets/images/en/basics/web-gui/6-gui.png)](../assets/images/en/basics/web-gui/6-gui.png)
+[![extras](../assets/images/de/grundlagen/web-gui/8-web-gui.png)](../assets/images/de/grundlagen/web-gui/8-web-gui.png)
 
-## Global Search
+## The global search
 
-You have direct acces to the i-doit full-text search with the [search field](../efficient-documentation/search.md) at the right upper margin. Here you can jump quickly to the found search results or display a list of results.
+Via the [search field](../efficient-documentation/search.md) in the upper right corner, you access the full-text search of i-doit directly. You can jump directly to a result or display a complete result list.
 
-[![Global Search](../assets/images/en/basics/web-gui/7-gui.png)](../assets/images/en/basics/web-gui/7-gui.png)
+[![search](../assets/images/de/grundlagen/web-gui/9-web-gui.png)](../assets/images/de/grundlagen/web-gui/9-web-gui.png)
 
-## User Info/Language and Administration
+## User info/language and administration
 
-Below the search field the currently logged-in user is shown. As soon as you hover the mouse over this section you can see additional information within a window. Here you can switch to other available languages, log-out or change to the i-doit administration.
+In the upper right corner you see the currently logged-in user. Click on it to log out or to switch to the [administration](../administration/management/index.md) of i-doit.
 
-[![User Info/Language and Administration](../assets/images/en/basics/web-gui/8-gui.png)](../assets/images/en/basics/web-gui/8-gui.png)
+[![user-info](../assets/images/de/grundlagen/web-gui/10-web-gui.png)](../assets/images/de/grundlagen/web-gui/10-web-gui.png)
 
-## Bread Crumb Navigation
+## Breadcrumb navigation
 
-The bread crumb navigation is below the black task bar. Here you can always see where exactly you are in i-doit and from here you can also jump to the features which are below the hierarchy.
+Below the black bar is the breadcrumb navigation. It shows you at any time where you are in i-doit, and you can use it to jump directly to parent areas.
 
-[![Bread Crumb Navigation](../assets/images/en/basics/web-gui/9-gui.png)](../assets/images/en/basics/web-gui/9-gui.png)
+[![breadcrumb-navigation](../assets/images/de/grundlagen/web-gui/11-web-gui.png)](../assets/images/de/grundlagen/web-gui/11-web-gui.png)
 
-## Object View
+## Object view
 
-When you are in the object view mode, the corresponding tree view is shown. With this view you can, for example, display all object types of the selected object type groups or when you are within an object, you can see the categories assigned to this object.
+In object view mode, the left area displays the tree view. Depending on the context, you see either all object types of the selected object type group or -- when you have opened an object -- the assigned categories of that object.
 
-[![Object View](../assets/images/en/basics/web-gui/10-gui.png)](../assets/images/en/basics/web-gui/10-gui.png)
+[![object-view](../assets/images/de/grundlagen/web-gui/12-web-gui.png)](../assets/images/de/grundlagen/web-gui/12-web-gui.png)
 
-## Location View
+## Location view
 
-From the objects in i-doit which present a location, the location view creates a hierarchical view based on their relations to each other. Here you can navigate to the respective locations and jump to the assigned objects.
+The location view displays all objects that represent a location in a hierarchical tree view. You can navigate through the location hierarchy and jump directly to the assigned objects.
 
-| Option            | Description                                                   |
-| ----------------- | ------------------------------------------------------------- |
-| Physical location | Displays objects with a physical location                     |
-| Logical location  | Displays objects with a logical location                      |
-| Combined view     | Displays objects with a physical location or logical location |
+[![location-view](../assets/images/de/grundlagen/web-gui/13-web-gui.png)](../assets/images/de/grundlagen/web-gui/13-web-gui.png)
 
-[![Location View](../assets/images/en/basics/web-gui/11-gui.png)](../assets/images/en/basics/web-gui/11-gui.png)
+## Row spacing
 
-## Category line spacing
+You can adjust the row spacing of categories in the user settings. With the "Small" setting, the rows move closer together.
 
-The line spacing of categories can be adjusted in the User settings.
+[![row-spacing-small](../assets/images/de/grundlagen/web-gui/14-gui.png)](../assets/images/de/grundlagen/web-gui/14-gui.png)
 
-E.g. is the line spacing set to small, the lines are closer to each other.
+Here is an example of large row spacing.
 
-[![Line spacing small](../assets/images/en/basics/web-gui/12-gui.png)](../assets/images/en/basics/web-gui/12-gui.png)
-
-and here a example with a large configured line spacing.
-
-[![Line spacing large](../assets/images/en/basics/web-gui/13-gui.png)](../assets/images/en/basics/web-gui/13-gui.png)
+[![row-spacing-large](../assets/images/de/grundlagen/web-gui/15-gui.png)](../assets/images/de/grundlagen/web-gui/15-gui.png)
 
 ## Spacing in menu trees
 
-The menu tree spacing lets you adjust the spacing between the menu items.<br>
-E.g. is the menu tree spacing set to small, the menu items are closer to each other.
+With the "Spacing in menu trees" option, you adjust the spacing between menu items. With the "Small" setting, the menu items are closer together.
 
-[![menu tree spacing small](../assets/images/en/basics/web-gui/14-gui.png)](../assets/images/en/basics/web-gui/14-gui.png)
+[![menu-tree-spacing-small](../assets/images/de/grundlagen/web-gui/16-gui.png)](../assets/images/de/grundlagen/web-gui/16-gui.png)
 
-and here a example with a large configured menu tree spacing.
+Here is an example of large menu item spacing.
 
-[![menu tree spacing large](../assets/images/en/basics/web-gui/15-gui.png)](../assets/images/en/basics/web-gui/15-gui.png)
+[![menu-tree-spacing-large](../assets/images/de/grundlagen/web-gui/17-gui.png)](../assets/images/de/grundlagen/web-gui/17-gui.png)
 
 ## Display spacers
 
-Here, you are able to configure if line spacers are displayed in categories. For example, if 'display spacers' is set to yes, the spacers will be displayed.
+The "Display spacers" option controls whether spacers are visible in the categories. With the "Yes" setting, they are displayed.
+[![spacers-enabled](../assets/images/en/basics/web-gui/16-gui.png)](../assets/images/en/basics/web-gui/16-gui.png)
 
-[![display spacers](../assets/images/en/basics/web-gui/16-gui.png)](../assets/images/en/basics/web-gui/16-gui.png)
+Here is an example when spacers are disabled.
 
-and here a example with disabled spacers.
-
-[![do not display spacers](../assets/images/en/basics/web-gui/17-gui.png)](../assets/images/en/basics/web-gui/17-gui.png)
+[![spacers-disabled](../assets/images/en/basics/web-gui/17-gui.png)](../assets/images/en/basics/web-gui/17-gui.png)

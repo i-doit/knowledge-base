@@ -1,3 +1,10 @@
+---
+title: Berichte mit VIVA
+description: "Um eine kontinuierliche Qualitätssicherung zu gewährleisten, unterstützt das Add-on VIVA den Anwender mit einer Reihe von Berichten (auch \"Reports\"..."
+icon:
+status:
+lang: de
+---
 # Berichte mit VIVA
 
 Um eine kontinuierliche Qualitätssicherung zu gewährleisten, unterstützt das [Add-on](../index.md) **VIVA** den Anwender mit einer Reihe von Berichten (auch "Reports" genannt). Diese eignen sich in erster Linie zur Sichtbarmachung von fehlenden oder unzureichenden Informationen während der eigentlichen Dokumentation. Die Berichte begleiten den Anwender durch den gesamten Dokumentationsprozess.
@@ -17,7 +24,7 @@ Die Übersichtsseite bietet eine Zusammenfassung aller verfügbaren Berichte in 
 
 [![Übersichtsseite der Berichte](../../assets/images/de/i-doit-add-ons/viva/berichte/2-vb.png)](../../assets/images/de/i-doit-add-ons/viva/berichte/2-vb.png)
 
-Ein Klick auf einen Report in der Übersichtsseite oder im Menübaum führt zu detailierten Ergebnissen. Die Berichte sind dabei alle ähnlich aufgebaut: Eine kleine Beschreibung, welche Aufgabe der Report hat, wird oberhalb der Seite angezeigt. Optional gesellt sich dazu ein Graph, der das Ergebnis visuell aufbereitet. Darunter folgt eine tabellarische Auflistung des Ergebnisses. Sie enthält pro Zeile die wichtigsten Informationen zu einer Stelle, die als unzureichend oder fehlerhaft identifiziert wurde. Ein Klick auf eine Zeile führt zur entsprechenden Stelle innerhalb des VIVA-Add-ons. Auf diese Weise kann der Anwender die Dokumentation schnell und unkompliziert nachbessern.
+Ein Klick auf einen Report in der Übersichtsseite oder im Menübaum führt zu detailierten Ergebnissen. Die Berichte sind dabei alle ähnlich aufgebaut: Eine kleine Beschreibung, welche Aufgabe der Report hat, wird oberhalb der Seite angezeigt. Optional gesellt sich dazu ein Graph, der das Ergebnis visuell aufbereitet. Darunter folgt eine tabellarische Auflistung des Ergebnisses. du enthält pro Zeile die wichtigsten Informationen zu einer Stelle, die als unzureichend oder fehlerhaft identifiziert wurde. Ein Klick auf eine Zeile führt zur entsprechenden Stelle innerhalb des VIVA-Add-ons. Auf diese Weise kann der Anwender die Dokumentation schnell und unkompliziert nachbessern.
 
 [![Ergebnis eines Berichts](../../assets/images/de/i-doit-add-ons/viva/berichte/3-vb.png)](../../assets/images/de/i-doit-add-ons/viva/berichte/3-vb.png)
 

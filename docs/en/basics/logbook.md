@@ -1,98 +1,110 @@
+---
+title: Logbook
+description: "Every change to the IT documentation is recorded by i-doit in a logbook."
+icon:
+status:
+lang: en
+---
 # Logbook
 
-Each change to the [IT documentation](../glossary.md) is noted in the logbook by i-doit. This way it is easy to keep track of the [lifecycle of the IT documentation](./life-and-documentation-cycle.md).
+Every change to the [IT documentation](../glossary.md) is recorded by i-doit in a logbook. This way, the [life cycle of the IT documentation](life-and-documentation-cycle.md) can be easily traced.
 
-## Global Logbook
+## Global logbook
 
-The logbook in which all changes are incorporated is located at **Extras → CMDB → Logbook**. There you can filter the entries by various parameters. If possible, an entry also contains the specific changes (Which value was changed and in what respects?).
+The logbook, which captures all changes, is located under **Extras → CMDB → Logbook → Logbook list view**. Entries can be filtered there by various parameters. Where possible, an entry also contains the exact changes (Which value was changed from what to what?).
 
-[![Global Logbook](../assets/images/en/basics/logbook/1-lb.png)](../assets/images/en/basics/logbook/1-lb.png)
+[![global-logbook](../assets/images/de/grundlagen/logbuch/1-lb.png)](../assets/images/de/grundlagen/logbuch/1-lb.png)
 
-The latest change can be tracked in the bottom area of each page.
+The last change can be traced at the bottom of every page.
 
-[![latest change](../assets/images/en/basics/logbook/2-lb.png)](../assets/images/en/basics/logbook/2-lb.png)
+[![last-change](../assets/images/de/grundlagen/logbuch/2-lb.png)](../assets/images/de/grundlagen/logbuch/2-lb.png)
 
-## Logbook per Object
+## Logbook per object
 
-The logbook can not only be displayed as global but you can also limit the view to a single [object](../glossary.md). The [category](../glossary.md) **Logbook** is assigned to each [object type](../glossary.md) in a fixed way. The logbook can be accessed in the **Object view** via the book-icon above the category tree.
+You can also display the logbook restricted to a single [object](../glossary.md). The [category](../glossary.md) **Logbook** is permanently assigned to every [object type](../glossary.md). In the **Object view** you can access the logbook via the book icon above the category tree.
 
-[![Logbook per Object](../assets/images/en/basics/logbook/3-lb.png)](../assets/images/en/basics/logbook/3-lb.png)
+[![object-logbook](../assets/images/de/grundlagen/logbuch/3-lb.png)](../assets/images/de/grundlagen/logbuch/3-lb.png)
 
-The filter functions and level of detail correspond to those of the global logbook.
+The filter functions and the level of detail correspond to those of the global logbook.
 
-[![filter functions](../assets/images/en/basics/logbook/4-lb.png)](../assets/images/en/basics/logbook/4-lb.png)
+[![logbook-filter](../assets/images/de/grundlagen/logbuch/4-lb.png)](../assets/images/de/grundlagen/logbuch/4-lb.png)
 
-## Logbook per Service
+## Logbook per service
 
-For each service that has been modelled in i-doit there is a logbook, which contains the changes to all service components (or sub-services). The category is called **Service Logbook** and can be added to those object types which represent these services via the **Service** category.
+For every service modeled in i-doit, a logbook exists that contains the changes to all service components (or sub-services). The category is called **Service Logbook** and can be added to those object types that represent services via the **Service** category.
 
-[![Logbook per Service](../assets/images/en/basics/logbook/5-lb.png)](../assets/images/en/basics/logbook/5-lb.png)
+[![logbook-service](../assets/images/de/grundlagen/logbuch/5-lb.png)](../assets/images/de/grundlagen/logbuch/5-lb.png)
 
-## Configuration of the Logbook
+## Configuring the logbook
 
-You can find the configuration of the logbook at **Extras → CMDB → Logbook → Logbook configuration**.
+You can find the logbook configuration under **Extras → CMDB → Logbook → Logbook configuration**.
 
-[![Configuration of the Logbook](../assets/images/en/basics/logbook/6-lb.png)](../assets/images/en/basics/logbook/6-lb.png)
+[![logbook-configure](../assets/images/de/grundlagen/logbuch/6-lb.png)](../assets/images/de/grundlagen/logbuch/6-lb.png)
 
-Changes do **not** affect existing entries.
+Changes do **not** affect already existing entries.
 
-The **Username** that is shown in each entry can be changed in the configuration. The [object title](../glossary.md) of the person object is considered as default; in most cases it consists of first name and surname.
+In the configuration, you can change the **User identification** that is stored with each entry. By default, i-doit uses the [object title](../glossary.md) of the person object, usually consisting of first and last name.
 
 !!! success "Anonymization"
-    Is the **Username** changed to a fixed value, for example to "Anonymous", the logbook is anonymized. The result is that you can't retrace who made which changes anymore.
+    If the **User identification** is changed to a fixed value, for example "Anonymous", the logbook is anonymized. It is then no longer possible to trace who made which changes.
 
-The option for the **Maximum amount of combined detailed changes** causes simultaneous changes to be summarized. As a result the level of detail is decreased but on the other hand this effects an increase of performance for imports.
+The **Maximum number of combined changes** setting causes simultaneous changes to be consolidated. The level of detail decreases as a result, but performance during imports is increased.
 
-### Delete Logbook entries from purged objects completely
+### Completely delete logbook entries for purged objects
 
-This configuration option for the logbook can be found under **Administration → [Tenant-name] management → Settings for [Tenant-name] → Logbook → Delete Logbook entries from purged objects completely**.
+You can find this setting under **Administration → [Tenant name] Administration → Settings for [Tenant name] → Logbook → Completely delete logbook entries for purged objects**.
 
-[![logbook-entries-purge](../assets/images/en/basics/logbook/12-lb.png)](../assets/images/en/basics/logbook/12-lb.png)
+[![logbook-entries-cleanup](../assets/images/de/grundlagen/logbuch/12-lb.png)](../assets/images/de/grundlagen/logbuch/12-lb.png)
 
-This setting is set to **No** by default. If you set this setting to **Yes**, the logbook entry of the object will also be deleted after purging the object itself.
+By default, this option is set to **No**. If you set it to **Yes**, i-doit also completely deletes the logbook entries after purging an object.
 
 ### Log detailed CMDB changes
 
-At **Administration → [Tenant-name] management management → Settings for [Tenant-name] → Logbook → Log detailed CMDB changes** you can disable details for entries in the logbook. It will no longer be recorded which change was made to which attribute.
+Under **Administration → [Tenant name] Administration → Settings for [Tenant name] → Logbook → Log detailed CMDB changes**, details for logbook entries can be disabled. It is then no longer recorded which change was made to which attribute.
 
-## Custom Entries
+## Custom entries
 
-You can generate a new entry in the logbook for each object. Activate the **Logbook** category within the object (see above). Then you can display the form for a new entry via the **New** button. You can set  **Alert level**, **Message** and **Description** according to your requirements. The entry appears in the logbook after clicking the **Save** button.
+You can manually create a new logbook entry for any object:
 
-[![Custom Entries](../assets/images/en/basics/logbook/7-lb.png)](../assets/images/en/basics/logbook/7-lb.png)
+1. Open the **Logbook** category within the object (see above).
+2. Click the **New** button.
+3. Fill in the fields **Alert Level**, **Message** and **Description**.
+4. Click **Save**.
 
-## Entries from Third-Party Systems
+[![custom-entries](../assets/images/de/grundlagen/logbuch/7-lb.png)](../assets/images/de/grundlagen/logbuch/7-lb.png)
 
-The logbook accepts new entries from third-party systems, for example through [imports](../consolidate-data/index.md), [service desks](../evaluation/cmdb-explorer/index.md), [network monitoring](../automation-and-integration/network-monitoring/index.md) and the [API](../i-doit-add-ons/api/index.md).
+### Entries from third-party systems
 
-## Archiving and Restoring Older Entries
+The logbook accepts new entries from third-party systems, for example through [imports](../consolidate-data/index.md), [service desks](../automation-and-integration/service-desk/index.md), [network monitoring](../automation-and-integration/network-monitoring/index.md) and the [API](../i-doit-add-ons/api/index.md).
 
-Whether older entries are to be archived or not can be configured via **Extras → CMDB → Logbook → Archive**. Here you need to state how old (in days) these entries have to be in order to be archived. This feature is helpful if the logbook is very big and the evaluation is impaired by long loading times. Archived entries are stored in a separate database table. This table is either created on a respective tenant database or on a third database instance.
+## Archiving and restoring older entries
 
-[![Archiving and Restoring Older Entries](../assets/images/en/basics/logbook/8-lb.png)](../assets/images/en/basics/logbook/8-lb.png)
+Under **Extras → CMDB → Logbook → Archive**, you configure whether and from what age (in days) entries are archived. This function helps you when the logbook has become very large and evaluation is hindered by long wait times. i-doit moves archived entries to a separate database table -- either in the respective tenant database or on a third database instance.
 
-Archiving is performed via the [i-doit Console](../i-doit-add-ons/api/index.md). This step can therefore also be automated. A corresponding example of a call and a [list of parameters](../automation-and-integration/cli/index.md) can be found in the corresponding article for the [logbook:archive](../automation-and-integration/cli/index.md) option.
+[![restore-entries](../assets/images/de/grundlagen/logbuch/8-lb.png)](../assets/images/de/grundlagen/logbuch/8-lb.png)
+
+The archiving is performed via the [i-doit console utility](../automation-and-integration/cli/index.md). You can also automate this step. Additional options are shown by the `--help` command.
 
 Example:
 
 ```shell
-sudo -u www-data php console.php logbook:archive --user admin --password admin --tenantId 1
+    sudo -u www-data php console.php logbook:archive --user admin --password admin --tenantId 1
 ```
 
-Archived entries can be restored for further evaluation. This item can be found under **Extras → CMDB → Logbook → Restore**.
+Archived entries can be restored for further evaluation. This function is located under **Extras → CMDB → Logbook → Restore**.
 
-[![Archived entries](../assets/images/en/basics/logbook/9-lb.png)](../assets/images/en/basics/logbook/9-lb.png)
+[![archived-entries](../assets/images/de/grundlagen/logbuch/9-lb.png)](../assets/images/de/grundlagen/logbuch/9-lb.png)
 
-## Creation Date / Date of Change
+## Creation and modification date
 
-Any changes to objects ([create, change, archive, delete, restore](./life-and-documentation-cycle.md)) not only cause an entry in the logbook but also causes changes to the [attributes](../glossary.md) **Creation date** and **Date of change** in the **General** category which is assigned to all object types.
+Any change to objects [creating, editing, archiving, deleting, restoring](life-and-documentation-cycle.md) not only creates an entry in the logbook, but also updates the [attributes](../glossary.md) **Creation date** and **Modification date** in the **General** category, which is permanently assigned to every object type.
 
-[![Creation Date](../assets/images/en/basics/logbook/10-lb.png)](../assets/images/en/basics/logbook/10-lb.png)
+[![modification-date](../assets/images/de/grundlagen/logbuch/10-lb.png)](../assets/images/de/grundlagen/logbuch/10-lb.png)
 
-The widget My last changed objects listing the latest changes to objects can be added to the [dashboard](./dashboard-and-widgets.md).
+On the [dashboard](dashboard-and-widgets.md), the **My recently modified objects** widget can be added, which displays the user's own recent changes to objects.
 
-[![Date of Change](../assets/images/en/basics/logbook/11-lb.png)](../assets/images/en/basics/logbook/11-lb.png)
+[![dashboard](../assets/images/de/grundlagen/logbuch/11-lb.png)](../assets/images/de/grundlagen/logbuch/11-lb.png)
 
-## Set Permissions
+## Setting permissions
 
-The authorization system of i-doit allows the configuration of persons (or person groups) that are allowed to have reading access to the logbook. For example, you can specify that only i-doit-administrators have the authorization to track changes.
+Via the permission system of i-doit, you determine which persons or person groups have read access to the logbook. This way you can ensure, for example, that only i-doit administrators can trace changes.

@@ -1,6 +1,6 @@
 ---
 title: SUSE Linux Enterprise Server 15 SP6
-description: SUSE Linux Enterprise Server 15 SP6
+description: "We explain which packages need to be installed and configured in a few steps in this article."
 icon: simple/suse
 status:
 lang: en
@@ -8,42 +8,44 @@ lang: en
 
 !!! note "Tested with i-doit **32**"
 
-We explain in a few steps which packages to install and configure in this article.
+We explain which packages need to be installed and configured in a few steps in this article.
 
 ## System Requirements
 
-The general [system requirements](../../system-requirements.md) apply.
+The general [system requirements](../../system-requirements.md).
 
-This article refers to [**SUSE Linux Enterprise Server 15 SP6**](https://www.suse.com/solutions/enterprise-linux/). In order to find out which version is used you can carry out the following command:
+This article refers to [**SUSE Linux Enterprise Server 15 SP6**](https://www.suse.com/). To determine which version is in use, you can run the following command in the console:
 
-```shell
+```sh
 cat /etc/os-release
 ```
 
-As system architecture you should use a x86 in 64bit:
+The system architecture should be x86 in 64-bit:
 
-```shell
+```sh
 uname -m
 ```
 
-**x86_64** means 64bit, **i386** or **i686** only 32bit.
+**x86_64** means 64-bit, **i386** or **i686** means only 32-bit.
 
-## Installation of the Packages
+## Package installation
 
-The default package repositories of SUSE Linux Enterprise Server (SLES) already supply the most packages to install:
+The standard repositories of SUSE Linux Enterprise Server (SLES) already include almost all necessary packages to install
 
--   The **Apache** HTTP server 2.4
--   the script language **PHP** 8.2
--   the database management system **MariaDB** 10.11 and
+-   the **Apache** HTTP Server 2.4,
+-   the scripting language **PHP** 8.2,
+-   the database management system **MariaDB** 10.11, and
 -   the caching server **memcached**
 
-First of all, you have to activate additional add-ons in **Yast**:
+to install.
+
+First, the activation of additional add-ons is required:
 
 -   **Web and Scripting Module**
 
-To check whether the **Web and Scripting Add-on Module** is activated, call the following command:
+To check whether the **Web and Scripting Add-on Module** is activated, run the following command:
 
-```shell
+```sh
 sudo zypper repos -E
 ```
 
@@ -53,45 +55,45 @@ If it is not activated, it can be activated with the following command:
 sudo suseconnect -p sle-module-web-scripting/15.6/x86_64
 ```
 
-The packages are then updated with zypper:
+The packages are then updated using zypper:
 
 ```sh
 sudo zypper refresh && sudo zypper update
 ```
 
-Afterwards the required packages are installed with zypper:
+Now the packages required by i-doit are installed:
 
-```shell
+```sh
 sudo zypper install vim apache2 apache2-mod-php8 mariadb-server mariadb-client memcached php8 php8-{bz2,ctype,bcmath,curl,gd,gettext,fileinfo,fpm,ldap,mbstring,memcached,mysql,odbc,opcache,openssl,phar,posix,pgsql,pdo,snmp,soap,sockets,sqlite,zip,zlib}
 ```
 
-In order to start Apache Webserver and MariaDB during the boot process, the following commands are necessary:
+The following command is required to ensure the necessary services are started at boot:
 
-```shell
+```sh
 sudo systemctl enable apache2 mysql memcached
 ```
 
-Then both services are started:
+Then the services are started:
 
-```shell
+```sh
 sudo systemctl start apache2 mysql memcached
 ```
 
-!!! info "For **HTTPS** further steps must be carried out which are not covered here, see [Security and protection](../../../maintenance-and-operation/security-and-protection.md)."
+!!! info "For **HTTPS**, additional steps must be performed that are not covered here, see [Security and Protection](../../../maintenance-and-operation/security-and-protection.md)"
 
 ## Configuration
 
-The installed packages for Apache HTTP Server, PHP and MariaDB already include configuration files. It is recommended to save deviating settings in separate files instead of adapting the existing configuration files. With every package upgrade, the deviating settings would be rejected or overwritten. The settings of the standard configuration are supplemented or overwritten by the user-defined settings.
+The installed packages for Apache HTTP Server, PHP, and MariaDB already come with configuration files. It is recommended to store custom settings in separate files rather than modifying the existing configuration files. With each package upgrade, any divergent settings would be flagged or overwritten. The default configuration settings are supplemented or overridden by the custom ones.
 
-### PHP-FPM configuration
+### PHP-FPM Configuration
 
-First, the old configuration is deactivated by renaming it:
+First, the old configuration is deactivated by renaming:
 
 ```sh
 sudo mv /etc/php8/fpm/php-fpm.d/www.conf /etc/php8/fpm/php-fpm.d/www.conf.bak
 ```
 
-and then create a new file and fill it with the settings:
+and then a new file is created and populated with the settings:
 
 ```sh
 sudo vi /etc/php8/fpm/php-fpm.d/i-doit.conf
@@ -112,19 +114,19 @@ pm.max_spare_servers = 35
 security.limit_extensions = .php
 ```
 
-### PHP configuration
+### PHP Configuration
 
-First, a new file is created and filled with the necessary settings:
+First, a new file is created and populated with the required settings:
 
 ```sh
 sudo vi /etc/php8/conf.d/i-doit.ini
 ```
 
-!!! example "This file contains the following content specified by us. For more information about the parameters, have a look at [PHP.net](https://www.php.net/manual/en/install.fpm.configuration.php)"
+!!! example "This file receives the following content as specified by us. For more information about the parameters, visit [PHP.net](https://www.php.net/manual/en/install.fpm.configuration.php)"
 
-This file contains the following content:
+This file receives the following content:
 
-```shell
+```sh
 allow_url_fopen = Yes
 file_uploads = On
 magic_quotes_gpc = Off
@@ -150,11 +152,11 @@ session.cookie_lifetime = 0
 mysqli.default_socket = /var/run/mysql/mysql.sock
 ```
 
-The `memory_limit` must be increased if necessary, e.g. for very large reports or extensive documents.
-The value (in seconds) of `session.gc_maxlifetime` should be greater than or equal to the **session timeout** in the [system settings](../system-settings.md) of i-doit.
-The `date.timezone` parameter should be adjusted to the local time zone (see [List of supported time zones](http://php.net/manual/de/timezones.php)).
+The `memory_limit` must be increased if needed, e.g., for very large reports or extensive documents.
+The value (in seconds) of `session.gc_maxlifetime` should be greater than or equal to the **Session Timeout** in the [system settings](../system-settings.md) of i-doit.
+The `date.timezone` parameter should be adjusted to the local time zone (see [list of supported time zones](http://php.net/manual/en/timezones.php)).
 
-### Apache HTTP server
+### Apache HTTP Server
 
 A new VHost configuration is created:
 
@@ -162,7 +164,7 @@ A new VHost configuration is created:
 sudo vi /etc/apache2/vhosts.d/i-doit.conf
 ```
 
-The VHost configuration is adapted and saved in this file:
+In this file, the VHost configuration is adjusted and saved:
 
 ```conf
 ServerName i-doit
@@ -318,11 +320,11 @@ ServerName i-doit
 </VirtualHost>
 ```
 
-!!! note "i-doit provides different Apache settings in files with the name **.htaccess**. These must be checked after each update and updated in the VirtualHost configuration."
+!!! note "i-doit ships custom Apache settings in files named .htaccess. These must be reviewed after each update and updated in the VirtualHost configuration."
 
-With the next step you activate the necessary Apache modules **php8**, **rewrite** and **mod_access_compat**:
+In the next step, the necessary Apache2 HTTP Server modules **php8**, **rewrite**, and **mod_access_compat** are activated:
 
-```shell
+```sh
 sudo a2enmod proxy && sudo a2enmod proxy_fcgi && sudo a2enmod php8 && sudo a2enmod rewrite && sudo a2enmod mod_access_compat
 ```
 
@@ -336,13 +338,13 @@ sudo systemctl restart apache2 php-fpm
 
 ### MariaDB
 
-To ensure that MariaDB delivers good performance and can be operated securely, a few steps are necessary that should be carried out meticulously. This starts with a secure installation. **The recommendations should be followed**. The user **root** should be given a secure password:
+To ensure MariaDB delivers good performance and can be operated securely, a few steps are needed that should be carried out meticulously. This starts with a secure installation. **The recommendations should be followed**. The **root** user should receive a secure password:
 
 ```sh
 sudo mysql_secure_installation
 ```
 
-To allow i-doit to use the **root** user during setup, call the MariaDB shell:
+To allow i-doit to use the **root** user during setup, open the MariaDB shell:
 
 ```sh
 sudo mysql -uroot
@@ -350,13 +352,13 @@ sudo mysql -uroot
 
 The following SQL statements are now executed in the MariaDB shell:
 
-!!! note "Please replace ('password')"
+!!! note "Please replace ('passwort') with your own password"
 
 ```sql
 ALTER USER 'root'@'localhost' IDENTIFIED VIA mysql_native_password USING PASSWORD('passwort');
 ```
 
-The mode for shutting down InnoDB still needs to be changed. The value 0 results in a complete cleanup and merging of the change buffers before MariaDB is shut down:
+The InnoDB shutdown mode still needs to be changed. The value 0 causes a full purge and change buffer merge to be performed before MariaDB shuts down:
 
 ```sql
 FLUSH PRIVILEGES;
@@ -364,13 +366,13 @@ SET GLOBAL innodb_fast_shutdown = 0;
 EXIT;
 ```
 
-A new file is created for the different configuration settings:
+A new file is created for the custom configuration settings:
 
 ```sh
 sudo vi /etc/my.cnf.d/99-i-doit.cnf
 ```
 
-This file contains the new configuration settings. **For optimum performance, these settings should be adapted to the (virtual) hardware**:
+This file contains the new configuration settings. **For optimal performance, these settings should be adjusted to the (virtual) hardware**:
 
 ```ini
 [mysqld]
@@ -417,14 +419,14 @@ Finally, MariaDB is restarted:
 sudo systemctl restart mysql
 ```
 
-and connections via **HTTP** are permitted via the firewall:
+and HTTP connections are allowed through the firewall:
 
 ```sh
 sudo firewall-cmd --permanent --add-service=http && sudo firewall-cmd --reload
 ```
 
-Before i-doit can now be accessed, [Apparmor](https://apparmor.net/), for PHP-FPM, must either be **configured**, **disabled** or set to the so-called **complain** mode.
-In this guide we use the complain mode, which should be configured correctly afterwards:
+Before i-doit is accessible, [AppArmor](https://apparmor.net/) for PHP-FPM must either be **configured**, **deactivated**, or set to **complain** mode.
+In this guide, we use complain mode; it should be properly configured afterwards:
 
 ```sh
 sudo aa-complain '/etc/apparmor.d/php-fpm'
@@ -432,6 +434,6 @@ sudo aa-complain '/etc/apparmor.d/php-fpm'
 
 ## Next Step
 
-Now the operating system is prepared and i-doit can be installed.
+The operating system is now prepared so that i-doit can be installed:
 
-[Proceed with **Setup**](../setup.md)
+[Continue to **Setup**](../setup.md)

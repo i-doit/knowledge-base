@@ -1,3 +1,10 @@
+---
+title: Release Notes 1.17
+description: "We're happy to announce the general availability of i-doit v1.17."
+icon:
+status:
+lang: de
+---
 # Release Notes 1.17
 
 We're happy to announce the general availability of i-doit v1.17. This is a major update with new and changed features and a lot of bug fixes since the last major release. See the [changelog](../changelogs/changelog-1.17.x/changelog-1.17.md) for a complete list of changes. We encourage you to update to this release as soon as possible.

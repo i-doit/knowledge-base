@@ -1,18 +1,28 @@
-# Duplicate Objects
+---
+title: Duplicating Objects
+description: "With the duplicate function, you quickly create a copy of an existing object in i-doit -- including the desired category contents."
+icon:
+status:
+lang: en
+---
+# Duplicating Objects
 
-An object can be copied easily and fast in i-doit_._
+With the duplicate function, you quickly create a copy of an existing [object](../basics/it-documentation-structure.md) in i-doit -- including the desired category contents.
 
-You can duplicate objects by activating the checkbox of the respective object in the object list and using the **Duplicate** button. By this means a dialogue window opens where you can set the parameters for the duplication.
+## How to Duplicate an Object
 
-Give the object a new name in the first step. Via the **Update** selection you can determine whether you want to use the creation date and change date of the original object or whether you prefer to use the current date for the new object.
+1. Check the checkbox of the desired object in the object list.
+2. Click the **Duplicate** button. A dialog window opens.
+3. Assign a new name for the object.
+4. Select via **Update** whether the creation and modification date should be taken from the original or the current date should be used.
+5. Define which contents should be transferred: the [specific category](../glossary.md) (if available) as well as the [categories](../glossary.md) linked to the object type.
+6. Optionally, you can (de)virtualize the duplicate and check the **Open newly created object** checkbox.
+7. Click **Duplicate** to execute the operation.
 
-In order to determine which content is going to be transferred to the new object, you can specify whether or not the content of the [specific category](../glossary.md) (if existing) will also be duplicated. You can also decide whether the content of the several [categories](../glossary.md) which are linked to the object type, is also to be duplicated.
+After completion, a duplicate of the selected object including the desired contents is available.
 
-Via the options it is possible to (de-) virtualize the duplicate. To open and display the object immediately after duplicating, activate the checkbox **Open newly created object**.
+!!! info "Note"
 
-The process is performed via the **Duplicate** button within the dialogue window. Upon its completion, the duplicate of the selected object is available, including the desired content.
+    It is only possible to duplicate one object at a time. If you want to duplicate multiple objects, repeat the process for each object individually.
 
-!!! info "Multiple objects"
-    It is only possible to duplicate one object at a time. If you wish to duplicate multiple objects, you need to repeat this process for each single object.
-
-[![Duplicate Objects](../assets/images/en/efficient-documentation/duplicates-objects/dupe.gif)](../assets/images/en/efficient-documentation/duplicates-objects/dupe.gif)
+[![duplicate-objects-multiple](../assets/images/de/effizientes-dokumentieren/objekte-duplizieren/1-od.gif)](../assets/images/de/effizientes-dokumentieren/objekte-duplizieren/1-od.gif)

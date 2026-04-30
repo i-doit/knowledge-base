@@ -1,6 +1,6 @@
 ---
 title: cmdb.cabling
-description: cmdb.cabling
+description: "Dieser Endpunkt ruft Informationen darüber ab, welcher Konnektor mit einem Kabelobjekt verbunden ist."
 icon: material/api
 #status: updated
 lang: de
@@ -87,3 +87,9 @@ Dieser Endpunkt ruft Informationen darüber ab, welcher Konnektor mit einem Kabe
         }
     }
     ```
+
+## Siehe auch
+
+- [API v1 Methoden](index.md) — Übersicht aller API v1 Methoden
+- [API Add-on](../../index.md) — Einstieg in das API Add-on
+- [i-doit Add-ons](../../../index.md) — Alle verfügbaren Add-ons

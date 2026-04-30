@@ -1,3 +1,12 @@
+---
+title: Release Notes 1.12
+description: System requirements
+icon:
+status:
+lang: en
+---
+# Release Notes 1.12
+
 System requirements
 -------------------
 
@@ -14,9 +23,10 @@ Notes
 
 *   When updating i-doit, you do not need to do anything. They will show up as add-ons in the Admin-Center automatically.
 
-*   Category-constants containing the string “SUBCAT” will be renamed (Beware if you are using the i-doit API)  
+*   Category-constants containing the string "SUBCAT" will be renamed (Beware if you are using the i-doit API)
 
 |     |     |
+| --- | --- |
 | C\_\_CMDB\_\_SUBCAT\_\_NETWORK\_PORT | C\_\_CATG\_\_NETWORK\_PORT |
 | C\_\_CMDB\_\_SUBCAT\_\_NETWORK\_INTERFACE\_P | C\_\_CATG\_\_NETWORK\_INTERFACE |
 | C\_\_CMDB\_\_SUBCAT\_\_NETWORK\_INTERFACE\_L | C\_\_CATG\_\_NETWORK\_LOG\_PORT |

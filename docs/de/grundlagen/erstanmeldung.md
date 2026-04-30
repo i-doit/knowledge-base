@@ -1,6 +1,6 @@
 ---
 title: Erstanmeldung
-description: Erstanmeldung
+description: "Die Erstanmeldung ist dein erster Schritt nach der Installation von i-doit."
 icon:
 status:
 lang: de
@@ -8,13 +8,13 @@ lang: de
 
 # Erstanmeldung
 
-i-doit ist [installiert](../installation/manuelle-installation/index.md) und der erste Login steht an? Nichts leichter als das. Dennoch gibt es einige Dinge zu bedenken, weswegen sich das Lesen dieses Artikels lohnt.
+Die Erstanmeldung ist dein erster Schritt nach der [Installation](../installation/manuelle-installation/index.md) von i-doit. Hier erfährst du, welche Standard-Benutzer existieren, wie du dich anmeldest und was du direkt nach dem Login beachten solltest.
 
 ## Standard-Benutzer und -Gruppen
 
-!!! danger "Bitte ändern Sie die Passwörter der Standard-Benutzer nach der Installation!"
+!!! danger "Bitte ändere die Passwörter der Standard-Benutzer nach der Installation!"
 
-Für die Anmeldung gibt es einige Standard-Benutzer, die Standard-Gruppen zugewiesen sind und somit vordefinierte [Rechte](../effizientes-dokumentieren/rechteverwaltung/index.md) besitzen:
+i-doit liefert mehrere Standard-Benutzer mit, die jeweils einer Gruppe zugewiesen sind und damit vordefinierte [Rechte](../effizientes-dokumentieren/rechteverwaltung/index.md) besitzen:
 
 | Benutzer      | Passwort     | Gruppe       | Rechte (oberflächlich)                     |
 | ------------- | ------------ | ------------ | ------------------------------------------ |
@@ -25,23 +25,27 @@ Für die Anmeldung gibt es einige Standard-Benutzer, die Standard-Gruppen zugewi
 | **reader**    | **reader**   | **Reader**   | Lesen                                      |
 | **systemapi** | -            | -            | Wird für interne Funktionen verwendet      |
 
-Die aufgelisteten Benutzer, außer der **systemapi**, erhalten ihre Rechte durch die gleichnamigen Gruppen.
+Alle aufgelisteten Benutzer -- mit Ausnahme von **systemapi** -- erhalten ihre Rechte durch die gleichnamigen Gruppen.
 
 ## Anmelden
 
-Aus den oben genannten Standard-Benutzern wählt man bestenfalls den Benutzer **admin** aus, der in der Funktionsweise nicht eingeschränkt ist.
+Für die erste Anmeldung verwendest du am besten den Benutzer **admin**, da dieser keine funktionalen Einschränkungen hat.
 
 [![login](../assets/images/de/grundlagen/erstanmeldung/1-erstanmeldung.png)](../assets/images/de/grundlagen/erstanmeldung/1-erstanmeldung.png)
 
 ## Weitere Benutzer und Gruppen hinzufügen
 
-Jeder Benutzer in i-doit ist ein [Objekt](struktur-it-dokumentation.md) vom Typ **Personen**. Es ist _dringend zu empfehlen_ nach dem ersten Login eine [LDAP-Kopplung](../benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md) oder weitere lokale Benutzer einzurichten _und_ den Login der oben genannten Benutzer zu ändern. Hierfür werden in der [Objekttyp-Gruppe](struktur-it-dokumentation.md) **Kontakte** unter dem [Objekttyp](struktur-it-dokumentation.md) **Personen** der jeweilige Benutzer ausgewählt und in der Kategorie **Personen → Login** die Zugangsdaten geändert. Alternativ können die **Personen**-Objekte [archiviert](lebens-und-dokumentationszyklus.md) werden. Dadurch wird der Login dieser Benutzer verweigert.
+Jeder Benutzer in i-doit ist ein [Objekt](struktur-it-dokumentation.md) vom Typ **Personen**. Nach dem ersten Login solltest du dringend folgende Schritte durchführen:
+
+1. Richte eine [LDAP-Kopplung](../benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md) ein oder lege weitere lokale Benutzer an.
+2. Ändere die Zugangsdaten der Standard-Benutzer: Navigiere dazu in der [Objekttyp-Gruppe](struktur-it-dokumentation.md) **Kontakte** zum [Objekttyp](struktur-it-dokumentation.md) **Personen**, wähle den jeweiligen Benutzer aus und passe die Kategorie **Personen → Login** an.
+3. Alternativ kannst du die Standard-**Personen**-Objekte [archivieren](lebens-und-dokumentationszyklus.md) -- dadurch wird deren Login gesperrt.
 
 !!! success "Lokaler Administrator"
     Auch wenn ein [LDAP-Verzeichnisserver oder ein Active Directory (AD)](../benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md) zum Einsatz kommt, bietet es sich an, trotzdem einen lokalen Benutzer mit allen Rechten anzulegen. Falls nämlich der externe Dienst nicht erreichbar sein sollte, kann man sich immer noch mit dem lokalen Benutzer anmelden.
 
 ## Begrüßungstext
 
-Wer Benutzer direkt beim Login mit einem Text begrüßen möchte, kann dies tun. Der Text wird im [Admin-Center](../administration/admin-center.md) unter **System settings → Login → Welcome text for Login** hinterlegt.
+Du kannst Benutzern direkt auf der Login-Seite einen individuellen Text anzeigen lassen. Hinterlege diesen im [Admin-Center](../administration/admin-center.md) unter **System settings → Login → Welcome text for Login**.
 
 [![login-begruessungstext](../assets/images/de/grundlagen/erstanmeldung/2-erstanmeldung.png)](../assets/images/de/grundlagen/erstanmeldung/2-erstanmeldung.png)

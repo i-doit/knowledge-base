@@ -1,3 +1,10 @@
+---
+title: Lokalisierung
+description: "i-doit unterstützt Mehrsprachigkeit - diese beschränkt sich aktuell auf Deutsch und Englisch und wird mit Hilfe von \"Übersetzungsdateien\" abgebildet."
+icon:
+status:
+lang: de
+---
 # Lokalisierung
 
 i-doit unterstützt Mehrsprachigkeit - diese beschränkt sich aktuell auf Deutsch und Englisch und wird mit Hilfe von "Übersetzungsdateien" abgebildet. Diese Dateien befinden sich im Add-on-Verzeichnis unterhalb des "lang"-Ordners und folgen dem Namensschema "<sprachkürzel>.inc.php" (also z.B. "de.inc.php").

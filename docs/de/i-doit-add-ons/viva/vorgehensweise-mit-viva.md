@@ -1,3 +1,10 @@
+---
+title: Vorgehensweise mit VIVA
+description: "IT-Grundschutz-Kataloge verwalten"
+icon:
+status:
+lang: de
+---
 # Vorgehensweise mit VIVA
 
 IT-Grundschutz-Kataloge verwalten
@@ -36,14 +43,14 @@ Nach dem erfolgreichen Import erscheint die EL auf der geladenen Seite und kann 
 
 IT-Grundschutz-Kataloge können individuell angepasst werden. So können neue Bausteine, Gefährdungen und Maßnahmen angelegt, bestehende angepasst oder gelöscht werden.
 
-Ebenso ist die Zuordnung von Gefährdungen und Maßnahmen zu Bausteinen möglich. Die Angabe einer Qualifizierungsstufe bei einer zugeordneten Maßnahme wird berücksichtigt. Weiterhin können Sie die zu den jeweiligen Maßnahmen passenden Prüffragen einsehen, ergänzen und bearbeiten.
+Ebenso ist die Zuordnung von Gefährdungen und Maßnahmen zu Bausteinen möglich. Die Angabe einer Qualifizierungsstufe bei einer zugeordneten Maßnahme wird berücksichtigt. Weiterhin kannst du die zu den jeweiligen Maßnahmen passenden Prüffragen einsehen, ergänzen und bearbeiten.
 
 !!! attention "Es sind die Hinweise im BSI-Standard 100-2 zu beachten, falls von den mitgelieferten Katalogen abgewichen wird."
 
 Informationsverbünde modellieren
 --------------------------------
 
-Unter dem Menüpunkt _Informationsverbünde_ können einer oder mehrere Informationsverbünde angelegt werden. Sie stellen den Ausgangspunkt für die tiefer greifende Dokumentation dar. Beim Anlegen ist darauf zu achten, welche IT-Grundschutz-Kataloge auf den Informationsverbund angewendet werden sollen.
+Unter dem Menüpunkt _Informationsverbünde_ können einer oder mehrere Informationsverbünde angelegt werden. du stellen den Ausgangspunkt für die tiefer greifende Dokumentation dar. Beim Anlegen ist darauf zu achten, welche IT-Grundschutz-Kataloge auf den Informationsverbund angewendet werden sollen.
 
 [![Informationsverbund erstellen](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/3-vv.png)](../../assets/images/de/i-doit-add-ons/viva/vorgehensweise/3-vv.png)
 

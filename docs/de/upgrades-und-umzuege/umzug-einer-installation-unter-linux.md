@@ -1,6 +1,6 @@
 ---
 title: Umzug einer Installation unter GNU/Linux
-description: Umzug einer Installation unter GNU/Linux
+description: "In diesem Artikel beschreiben wir die generelle Vorgehensweise, um eine Installation von i-doit von einem GNU/Linux zu einem anderen umzuziehen."
 icon: fontawesome/brands/linux
 status:
 lang: de
@@ -18,7 +18,7 @@ Es sind ein paar Dinge zu beachten, um einen möglichst reibungslosen Umzug zu g
 
 1. i-doit ist auf beiden Servern, in der gleichen Version installiert.
 2. Beide Systeme wurden mit dem idoit-install Skript erstellt.
-3. Beide Systeme verwenden die selben Passwörter für MariaDB, diese können im Anschluss geändert werden. Wenn nicht nutzen Sie auch die **optionalen Schritte**.
+3. Beide Systeme verwenden die selben Passwörter für MariaDB, diese können im Anschluss geändert werden. Wenn nicht nutzt du auch die **optionalen Schritte**.
 4. Wir verändern das alte System nicht, um im Fall der Fälle schnell wieder in den Ursprungszustand zurückkehren zu können.
 5. Die gezeigten Befehle passen zu einem aktuellen Debian GNU/Linux und sollten an die entsprechende Umgebung angepasst werden. **Blindes Ausführen der Befehle sollte vermieden werden**.
 

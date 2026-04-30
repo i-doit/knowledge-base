@@ -1,3 +1,10 @@
+---
+title: Release Notes 1.19
+description: "We're happy to announce our latest major version 1.19 of i-doit."
+icon:
+status:
+lang: de
+---
 # Release Notes 1.19
 
 We're happy to announce our latest major version 1.19 of i-doit. This release is a very important step in the development of i-doit. See the changelog for a complete list of changes. We encourage you to [update](../../wartung-und-betrieb/update-einspielen.md) to this release as soon as possible.

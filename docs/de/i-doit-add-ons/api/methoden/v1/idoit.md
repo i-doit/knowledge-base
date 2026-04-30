@@ -1,6 +1,6 @@
 ---
 title: idoit
-description: idoit
+description: "Displays a list of installed add-ons"
 icon: material/api
 #status: updated
 lang: de

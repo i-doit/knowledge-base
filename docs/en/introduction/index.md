@@ -1,6 +1,38 @@
+---
+title: Introduction
+description: Are you getting started with i-doit and want to build your IT documentation the right way from the beginning? Here you will find the ideal starting point.
+icon:
+status:
+lang: en
+---
+
 # Introduction
 
-The first thought that comes to mind is that the first step is always the hardest. To approach the challenges of a modern and comprehensive [IT documentation](../glossary.md), we address this very topic at the beginning. In this knowledge base we will concentrate extensively on the possibilities i-doit offers with respect to IT documentation and CMDB. This also includes addressing general subjects which aren't linked with the tool directly. From planning to introduction to active use in daily operations, there are many organizational steps which you have to think through carefully. While the objective of IT documentation often seems to be clear, the steps up to a productive application often remain in the dark. It is time to bring light into the darkness - and for logical reasons right at the beginning.
+Are you getting started with i-doit and want to build your IT documentation the right way from the beginning? Here you will find the ideal starting point — from "What is i-doit?" to productive operation.
 
-*   [How do I Start Documenting?](./how-do-i-start-documenting.md)
-*   [Check List for Your IT Documentation](./check-list-for-your-it-documentation.md)
+## For Beginners
+
+Read these articles in order — they build on each other:
+
+1. **[What is i-doit?](what-is-i-doit.md)** — What can i-doit do, what is it used for, and how is it structured? An overview for everyone just getting to know i-doit.
+
+2. **[Concepts and terminology](concepts-and-terminology.md)** — Objects, object types, categories, attributes, and relationships — the building blocks of i-doit explained simply. Once you understand these concepts, everything else falls into place.
+
+3. **[How do I start documenting?](how-to-start-documenting.md)** — Practical guide: Clarify goals, choose an entry strategy, adopt existing data, and plan ongoing maintenance.
+
+4. **[IT documentation checklist](it-documentation-checklist.md)** — Step by step from planning through installation to productive use. All important points to check off.
+
+## What's Next?
+
+After the introduction, you are ready for the next steps:
+
+- **[installation](../installation/index.md)** — Install and set up i-doit (or book a [cloud instance](../idoit-cloud/index.md))
+- **[First login](../basics/initial-login.md)** — Your first login and the most important settings
+- **[Basics](../basics/index.md)** — Objects, lists, categories, and attributes in detail
+- **[FAQ](../faq.md)** — Answers to the most common questions
+
+## Need Support?
+
+- [i-doit Community Forum](https://community.i-doit.com/) — Exchange with other users
+- [i-doit Partners](https://www.i-doit.com/partner/) — Workshops and consulting for the onboarding phase
+- [help@i-doit.com](mailto:help@i-doit.com) — Our support team is happy to help

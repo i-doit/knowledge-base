@@ -1,6 +1,6 @@
 ---
 title: Systemeinstellungen erweitern
-description: Systemeinstellungen erweitern
+description: "i-doits Systemeinstellungen sind ein hierarchisches System kaskadierender Einstellungsparameter."
 icon:
 status:
 lang: de
@@ -8,24 +8,24 @@ lang: de
 
 # Systemeinstellungen erweitern
 
-i-doits Systemeinstellungen sind ein hierarchisches System kaskadierender Einstellungsparameter.  
-Diese Hierarchie wird aus insgesamt drei verschiedenen Ebenen zusammengesetzt.  
+i-doits Systemeinstellungen sind ein hierarchisches System kaskadierender Einstellungsparameter.
+Diese Hierarchie wird aus insgesamt drei verschiedenen Ebenen zusammengesetzt.
 Alle verfügbaren Einstellungsparameter können innerhalb dieser Ebenen existieren und werden je nach Bedarf gelesen.
 
-Die erste Instanz stellt die benutzerspezifische Ebene dar.  
-In dieser Ebene werden unmittelbar vom Benutzer vorgenommene Parameter hinterlegt.  
-Wird ein Parameter abgerufen, der vom Benutzer nicht gepflegt wurde, stellt die *mandantenweite* Ebene einen Standardwert bereit.  
-Je nach Parameter kann es sein, dass die Bereitstellung einer mandantenspezifischen Einstellung keinen Sinn macht.  
+Die erste Instanz stellt die benutzerspezifische Ebene dar.
+In dieser Ebene werden unmittelbar vom Benutzer vorgenommene Parameter hinterlegt.
+Wird ein Parameter abgerufen, der vom Benutzer nicht gepflegt wurde, stellt die *mandantenweite* Ebene einen Standardwert bereit.
+Je nach Parameter kann es sein, dass die Bereitstellung einer mandantenspezifischen Einstellung keinen Sinn macht.
 Daher wird in letzter Instanz der systemweite Einstellungspool abgerufen.
 
-Dieses hierarchische System stellt sicher,  
+Dieses hierarchische System stellt sicher,
 dass i-doit hochgradig personalisierbar bleibt und weiterhin einen leichten Einstieg mit bestmöglichen Standardeinstellungen bietet.
 
-Die i-doit-Systemeinstellungen können von Add-ons um eigene Konfigurationen erweitert werden.  
-Dadurch wird auch automatisch das Formular in der GUI unter  
-**Verwaltung → {mandant} Verwaltung → Einstellungen für {mandant}** erweitert.  
-Falls einzelne Einstellungen nicht in der GUI dargestellt werden sollen, müssen sie nicht registriert,  
-sondern lediglich im Code *benutzt* werden.  
+Die i-doit-Systemeinstellungen können von Add-ons um eigene Konfigurationen erweitert werden.
+Dadurch wird auch automatisch das Formular in der GUI unter
+**Verwaltung → {mandant} Verwaltung → Einstellungen für {mandant}** erweitert.
+Falls einzelne Einstellungen nicht in der GUI dargestellt werden sollen, müssen sie nicht registriert,
+sondern lediglich im Code *benutzt* werden.
 Solche impliziten Einstellungen können nur über die Experteneinstellungen konfiguriert werden.
 
 Systemeinstellungen können für drei Schichten definiert werden: System, Mandant oder Benutzer.
@@ -84,10 +84,10 @@ use idoit\Event\System\Settings\ExtendTenantSettings;
 
 if (isys_module_manager::instance()->is_active('example_addon')) {
     // ...
-    
+
     isys_application::instance()->container->get('event_dispatcher')
         ->addListener(ExtendTenantSettings::NAME, ['isys_module_example', 'extendTenantSettings']);
-        
+
     // ...
 }
 ```
@@ -101,7 +101,7 @@ use idoit\Component\Settings\SettingsCollection;
 use idoit\Component\Settings\Types\SelectSetting;
 use idoit\Event\System\Settings\ExtendTenantSettings;
 
-class isys_module_example 
+class isys_module_example
 {
     // ...
 
@@ -148,3 +148,9 @@ Innerhalb des Callbacks können beliebig viele *Settings-Collections* hinzugefü
 
 **Wichtig!** Die Event-Callbacks werden nur dann aufgerufen, wenn die entsprechende GUI aufbereitet wird.
 Dadurch wird im laufenden Betrieb die Performance von i-doit nicht negativ beeinflusst.
+
+## Siehe auch
+
+- [Add-ons entwickeln](index.md) — Leitfaden zur Add-on-Entwicklung
+- [Software-Entwicklung](../index.md) — Übersicht der Entwickler-Dokumentation
+- [API Add-on](../../i-doit-add-ons/api/index.md) — Schnittstelle für externe Zugriffe

@@ -1,3 +1,10 @@
+---
+title: Release Notes 1.7
+description: "> Mit i-doit 1.7 gibt es einige Neuerungen, die vor dem Update zu beachten sind."
+icon:
+status:
+lang: de
+---
 # Release Notes 1.7
 
 > Mit i-doit 1.7 gibt es einige Neuerungen, die vor dem Update zu beachten sind.

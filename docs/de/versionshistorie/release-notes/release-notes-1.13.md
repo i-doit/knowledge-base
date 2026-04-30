@@ -1,3 +1,10 @@
+---
+title: Release Notes 1.13
+description: System requirements
+icon:
+status:
+lang: de
+---
 # Release Notes 1.13
 
 System requirements

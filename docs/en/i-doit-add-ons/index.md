@@ -1,58 +1,63 @@
 ---
 title: i-doit Add-ons
-description: i-doit Add-ons
+description: "With i-doit, the focus is on IT documentation and the CMDB."
 icon: add-ons
 status:
 lang: en
 ---
 
-The [IT documentation](../basics/structure-of-the-it-documentation.md) and the [CMDB](../basics/structure-of-the-it-documentation.md) are in the foreground of i-doit. Moreover, there are extra add-ons to expand the scope of available functions of i-doit in line with your demands. In this way, the user is provided with a completely new perspective on IT documentation.
+With i-doit, the focus is on [IT documentation](../basics/it-documentation-structure.md) and the [CMDB](../basics/it-documentation-structure.md). In addition, there are supplementary add-ons to extend the functionality of i-doit as needed. This gives users an entirely new perspective on IT documentation.
 
-!!! info "All available add-ons are listed at [https://www.i-doit.com/en/products/add-ons](https://www.i-doit.com/en/products/add-ons){:target="_blank"}"
+!!! info "All available add-ons can be found at [https://www.i-doit.com/produkte/add-ons](https://www.i-doit.com/produkte/add-ons){:target="_blank"}"
 
-Beside these add-ons there are many others which are provided by our partners or external developers. You can find a detailed list at the i-doit website [i-doit.com under **Product → Add-ons**](https://www.i-doit.com/en/i-doit/add-ons/).
+In addition to these add-ons, many more are available from our partners and external developers. A comprehensive list can be found [on the i-doit.com website under **Product → Add-ons**](https://www.i-doit.com/i-doit/add-ons/).
 
 ## Download
 
-Add-ons are available as ZIP-files. These are installed via the [Admin Center](../system-administration/admin-center.md#add-ons). Customers can download add-ons in the [customer portal](../system-administration/customer-portal.md). Add-ons which are subject to licensing (see above) will be unlocked for download in your customer account in the buying process. If you miss any add-ons that you bought, please contact [help@i-doit.com](mailto:help@i-doit.com) for assistance. Evaluation users can download all free- und commercial add-ons in the evaluation process. There are download buttons for all add-ons on your personal evaluation page (e.g. [https://center.i-doit.com](https://center.i-doit.com)). All add-ons that are subject to licensing are licensed in the evaluation license.
+Add-ons are available as installable ZIP files. These are installed via the [Admin Center](../administration/admin-center.md#add-ons).
+In the [customer portal](../administration/customer-portal.md), customers can download add-ons. Licensed add-ons (see above) are made available for download in your customer account during the purchase process.
+If you are missing any add-ons that you have purchased, please contact [help@i-doit.com](mailto:help@i-doit.com) for assistance.
 
-## Installation
+Evaluation users can download all free and commercial add-ons during the evaluation process. Download buttons for all add-ons are available on your personal evaluation page at [https://center.i-doit.com](https://center.i-doit.com). All licensed add-ons are included in the evaluation license.
 
-Installation is possible with the implemented [Add-on & Subscription center](../system-administration/add-on-and-subscription-center.md).
+## installation
 
-Also add-ons are installable via the [Admin-Center](../system-administration/admin-center.md). After successfully logging in to the Admin-Center, just change to the **Add-ons** tab and use the **Install/update module** button.
+All modules and extensions are installed via the [Admin Center](../administration/admin-center.md) under **Modules → Install/update module**.
 
-[![Installation](../assets/images/en/i-doit-add-ons/1-iao.png)](../assets/images/en/i-doit-add-ons/1-iao.png)
+[![installation](../assets/images/de/i-doit-add-ons/1-i-doit-add-ons.png)](../assets/images/de/i-doit-add-ons/1-i-doit-add-ons.png)
 
-As soon as you click the button a new dialogue appears. First you have to determine whether the add-on is to be installed for all [tenants](../system-administration/multi-tenant.md) (**All tenants**) or just for a single one. Click the **Browse...** button under **ZIP File** to select the add-on. To confirm the download and installation of the ZIP file to the host click **Upload and install**.
+The button opens a new dialog. Under **Tenant**, you specify whether the add-on should be installed in all [tenants](../administration/multi-tenancy.md) (**All tenants**) or only in a single one. Using the **Browse...** button under **ZIP File**, you select the add-on. After clicking the **Upload and install** button, the ZIP file is uploaded to the i-doit host and installed.
 
-[![Modules](../assets/images/en/i-doit-add-ons/2-iao.png)](../assets/images/en/i-doit-add-ons/2-iao.png)
+[![Upload and install](../assets/images/de/i-doit-add-ons/2-i-doit-add-ons.png)](../assets/images/de/i-doit-add-ons/2-i-doit-add-ons.png)
 
-!!! info "System settings"
-    The [settings](../installation/manual-installation/system-settings.md) for the file upload need to allow the upload to make the installation possible. The limit for the maximum file size also needs to be above the file size of the archive for the installation.
+System settings
 
-After the add-on has been installed successfully, you will receive a confirmation message. The add-on will now also appear in the list of installed add-ons of the corresponding tenant. Each tenant uses a separate list.
+For installation to be possible, the maximum file size liwith must exceed the file size of the ZIP file. Anyone who has fully met the [system requirements](../installation/manual-installation/system-settings.md) should not encounter any difficulties.
 
-[![Overview](../assets/images/en/i-doit-add-ons/3-iao.png)](../assets/images/en/i-doit-add-ons/3-iao.png)
+After successful installation, a corresponding success message is displayed. The add-on is now listed in the list of installed add-ons. Each tenant has its own list here.
 
-If an add-on is available but not yet installed, it will be marked with **not installed** in the list of the respective tenant. With the **Install** button you can carry out the installation later without having to upload the ZIP file again.
+[![System settings](../assets/images/de/i-doit-add-ons/3-i-doit-add-ons.png)](../assets/images/de/i-doit-add-ons/3-i-doit-add-ons.png)
 
-## Rights Assignment
+If an add-on is available but not yet installed, it is marked as **not installed** in the respective tenant's list. The installation can be completed using the **Install** button without having to re-upload the ZIP file.
 
-Each add-on has its own rights which are assigned per person or person group. After installation of a new add-on, the users have no permissions yet to use it. You have to carry out further steps in the [Rights Management](../efficient-documentation/rights-management/index.md).
+## Assigning rights
 
-## Update
+Each add-on has its own permissions that can be assigned per person or person group. After installing a new add-on, users do not yet have any permissions to use it. Further steps in the [authorization management](../efficient-documentation/permission-management/index.md) are required.
 
-The required steps are similar to the installation process: Upload and install the new ZIP file via the **Install/update module** button.
+## Updating
 
-## Uninstall
+When a new version of an add-on becomes available, it can be updated without a complete reinstallation. All previously maintained data is preserved in this process.
 
-You can uninstall an add-on with the above mentioned list by activating the checkbox and then using the **Uninstall selected module** button. A dialogue will ask you to confirm this action. All files and user data associated with the add-on will be **deleted irreversibly**. The Uninstallation will be **system-wide**. By clicking various checkboxes you can uninstall several add-ons simultaneously.
+The steps are similar to the installation: Under **Install/update module**, the new ZIP file is uploaded and installed. If i-doit has an internet connection, the add-on can alternatively be updated using the **Update / Re-Install** button in the respective list. The ZIP file is automatically downloaded and installed. This feature is not available for all add-ons.
 
-## (De)activation
+## Uninstalling
 
-If you wish to pause the usage of an add-on without deleting the associated data, you can deactivate the add-on. To do so activate the checkbox of the corresponding entry in the list and use the **Deactivate selected module** button for the respective tenant. Now the functions and user data of the add-on are no longer available.
+An installed add-on can be uninstalled via the list mentioned above. To do this, select it using the checkbox. After clicking the **Uninstall selected module** button and confirming, all files and user data are **irrevocably deleted**. The uninstallation is performed across all tenants. Check the boxes to uninstall multiple add-ons at the same time.
 
-A renewed activation follows a similar process: Select the respective add-on in the list and click the **Activate selected module** button. Now the functions and user data will be available again.
+## (De-)Activating
 
-All other tenants remain unaffected by these actions. By clicking various checkboxes you can activate/ deactivate several add-ons respectively one add-on for several tenants simultaneously.
+To stop using an add-on without losing user data, the add-on can be deactivated. To do this, select it using the checkbox and deactivate it for the respective tenant using the **Deactivate selected module** button. The functions and user data are then no longer available.
+
+Reactivation works similarly: Select the add-on in the list and click the **Activate selected module** button. This makes the functions and user data visible again.
+
+All other tenants remain unaffected by these actions. Check the boxes to deactivate multiple add-ons or an add-on in multiple tenants at the same time.

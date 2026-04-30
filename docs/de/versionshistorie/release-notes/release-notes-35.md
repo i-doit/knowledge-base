@@ -1,3 +1,10 @@
+---
+title: Release Notes 35
+description: "We are happy to announce the release of i-doit 35."
+icon:
+status:
+lang: de
+---
 # Release Notes 35
 <!-- cSpell:disable -->
 We are happy to announce the release of i-doit 35. The main focus for this version are quality improvements. A detailed list of over 115 improvements can be found in our [changelog](../changelogs/changelog-35.md).

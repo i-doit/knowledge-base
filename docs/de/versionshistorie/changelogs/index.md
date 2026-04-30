@@ -1,3 +1,10 @@
+---
+title: Changelogs
+description: "Welche Änderungen wurden pro Release von _i-doit_ veröffentlicht?"
+icon:
+status:
+lang: de
+---
 # Changelogs
 
 Welche Änderungen wurden pro Release von _i-doit_ veröffentlicht?

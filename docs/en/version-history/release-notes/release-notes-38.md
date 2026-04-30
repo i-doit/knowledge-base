@@ -1,14 +1,20 @@
+---
+title: Release Notes 38
+description: "We are happy to introduce i-doit 38, continuing our focus on quality and compatibility."
+icon:
+status:
+lang: en
+---
 # Release Notes 38
 <!-- cSpell:disable -->
+We are happy to introduce i-doit 38, continuing our focus on **quality and compatibility**.
 
-We’re happy to announce i-doit 38 which continues our focus around **quality and compatibility**.
+With this version, we have officially implemented compatibility with MariaDB 11.8, taking the next step toward adapting to modern systems with MariaDB. Additionally, this version contains 50 fixes for known issues.
 
-With this release we officially implemented the compatibility with MariaDB 11.8 to take the next step to match modern systems using MariaDB. Additionally, this release contains 50 fixes of known issues.
+A detailed list of all changes and improvements can be found in the [Changelog](../changelogs/index.md).
 
-A detailed list of all changes and improvements is available in the changelog.
+## Highlights in This Release
 
-## Highlights in this release
-
-- **50 quality improvements**
-- New feature to also search for MAC addresses in Cisco format
-- **Compatibility** for** MariaDB 11.8**
+- 50 **quality improvements**
+- New feature for searching MAC addresses in Cisco format
+- **Compatibility** with **MariaDB 11.8**

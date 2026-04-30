@@ -1,3 +1,10 @@
+---
+title: "Objekt-Kategorie VIVA"
+description: "Das Add-on VIVA bringt die global für alle Objekttypen verfügbare Kategorie VIVA mit."
+icon:
+status:
+lang: de
+---
 # Objekt-Kategorie VIVA
 
 Das [Add-on](../index.md) **VIVA** bringt die global für alle Objekttypen verfügbare Kategorie **VIVA** mit. Durch sie gewinnt der Benutzer einen schnellen Überblick. Die Kategorie listet die passenden VIVA-spezifischen Eigenschaften auf. Dazu gehören …
@@ -13,6 +20,6 @@ Sollte ein Objekt mehreren Informationsverbünden zugeordnet sein, wird dies in 
 
 [![VIVA-Kategorie im CMDB-Modul von i-doit](../../assets/images/de/i-doit-add-ons/viva/objekt-kategorien/1-vok.png)](../../assets/images/de/i-doit-add-ons/viva/objekt-kategorien/1-vok.png)
 
-Eine Zuordnung der Kategorie zu Objekttypen ist nicht nötig. Sie steht automatisch allen Objekttypen zur Verfügung. Zu finden ist die Kategorie oberhalb des Kategoriebaums eines jeden Objekts neben anderen Kategorien wie dem CMDB-Explorer oder dem Logbuch.
+Eine Zuordnung der Kategorie zu Objekttypen ist nicht nötig. du steht automatisch allen Objekttypen zur Verfügung. Zu finden ist die Kategorie oberhalb des Kategoriebaums eines jeden Objekts neben anderen Kategorien wie dem CMDB-Explorer oder dem Logbuch.
 
 [![Icon zur VIVA-Kategorie in der Objektsicht](../../assets/images/de/i-doit-add-ons/viva/objekt-kategorien/2-vok.png)](../../assets/images/de/i-doit-add-ons/viva/objekt-kategorien/2-vok.png)

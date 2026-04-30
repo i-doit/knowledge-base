@@ -1,3 +1,10 @@
+---
+title: Tipps und Tricks zur Nutzung der API
+description: "An dieser Stelle tragen wir viele Tipps und Tricks zum effizienten Umgang mit der Programmierschnittstelle (API) von i-doit zusammen."
+icon:
+status:
+lang: de
+---
 # Tipps und Tricks zur Nutzung der API
 
 An dieser Stelle tragen wir viele Tipps und Tricks zum effizienten Umgang mit der [Programmierschnittstelle (API)](./index.md) von i-doit zusammen.

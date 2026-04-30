@@ -1,12 +1,21 @@
+---
+title: Release Notes 1.14
+description: "This release brings many bug fixes, some minor changes and a few new features."
+icon:
+status:
+lang: en
+---
+# Release Notes 1.14
+
 Changelog
 =========
 
-This release brings many bug fixes, some minor changes and a few new features. Please see the [changelog](../changelogs/changelog-1.14.x/index.md) for a full list of changes since i-doit 1.13.2.
+This release brings many bug fixes, some minor changes and a few new features. Please see the [changelog](../changelogs/changelog-1.14.x/changelog-1.14.md) for a full list of changes since i-doit 1.13.2.
 
 Backup
 ======
 
-As always, please [backup your data](../../maintenance-and-operation/backup-and-recovery/index.md) before you update to the latest version of i-doit.
+As always, please [backup your data](../../maintenance-and-operation/backup-and-restore/index.md) before you update to the latest version of i-doit.
 
 System requirements
 ===================

@@ -1,14 +1,14 @@
 ---
 title: i-doit twig Template Editor Referenz
-description: i-doit twig Template Editor Referenz
+description: "Diese Referenz bietet dir eine Übersicht über die verfügbaren Template-Funktionen und -Variablen in i-doit."
 icon:
 status:
 lang: de
 ---
 
-# i-doit twig Template Editor Referenz
+# i-doit Twig Template Editor Referenz
 
-Diese Referenz bietet eine Übersicht über die verfügbaren Template-Funktionen und -Variablen in i-doit. Die Beispiele lassen sich im Flow hauptsächlich bei der Aktion "API-Aufruf" und "E-Mail schicken" verwenden.
+Diese Referenz bietet dir eine Übersicht über die verfügbaren Template-Funktionen und -Variablen in i-doit. Die Beispiele lassen sich im Flow hauptsächlich bei der Aktion "API-Aufruf" und "E-Mail schicken" verwenden.
 
 ## Schnelleinstieg
 

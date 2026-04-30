@@ -1,24 +1,30 @@
+---
+title: "Aufgabenplanung & Cron Jobs"
+description: "Über die Windows-Aufgabenplanung automatisierst du wiederkehrende i-doit-Aufgaben wie Logbuch-Archivierung, Suchindex-Aktualisierung oder..."
+icon:
+status:
+lang: de
+---
 # Aufgabenplanung & Cron Jobs
 
 ## Aufgabenplanung unter Windows
 
-In diesem Abschnitt zeigen wir Ihnen, wie Sie über die Aufgabenplanung unter Windows i-doit automatisieren können.
+Über die Windows-Aufgabenplanung automatisierst du wiederkehrende i-doit-Aufgaben wie Logbuch-Archivierung, Suchindex-Aktualisierung oder Benachrichtigungsversand.
 
 ### Voraussetzung
 
-In unserem Beispiel zur Aufgabenplanung für i-doit unter Windows benutzen wir eine i-doit Instanz, welche mit dem [i-doit Windows Installer](../installation/manuelle-installation/microsoft-windows-server/index.md) aufgesetzt wurde.
+Dieses Beispiel setzt eine i-doit-Instanz voraus, die mit dem [i-doit Windows Installer](../installation/manuelle-installation/microsoft-windows-server/index.md) eingerichtet wurde.
 
-!!! warning "Falls Sie i-doit über XAMPP installiert haben, müssen Sie die Pfade in der Batch Datei für die console.php und php.exe anpassen."
+!!! warning "Falls du i-doit über XAMPP installiert hast, passe die Pfade für `console.php` und `php.exe` in der Batch-Datei an."
 
-### Erstellen einer Batch Datei
+### Batch-Datei erstellen
 
-Um eine Batch Datei zu erstellen müssen Sie ein Editor Programm öffnen und eine neue Datei anlegen. Diese Speichern Sie anschließend als **"i-doit-jobs.bat"** ab.
+1. Öffne einen Texteditor und lege eine neue Datei an.
+2. Speichere sie als **"i-doit-jobs.bat"** ab.
 
 [![batch-erstellen](../assets/images/de/automatisierung-und-integration/aufgabenplanung-und-cronjobs/1-auc.png)](../assets/images/de/automatisierung-und-integration/aufgabenplanung-und-cronjobs/1-auc.png)
 
-Ist die Datei erstellt, können die Dateien mit Befehlen über das [i-doit console utility](../automatisierung-und-integration/cli/index.md) befüllen.
-
-Die Batch Datei kann bspw. mit folgendem Inhalt befüllt werden:
+Befuelle die Datei mit Befehlen des [i-doit console utility](../automatisierung-und-integration/cli/index.md). Beispielinhalt:
 
 ```batch
 @echo off
@@ -40,35 +46,31 @@ C:\ProgramData\i-doit\php\php.exe C:\ProgramData\i-doit\apache-2.4\htdocs\consol
 
 !!! info "Der Benutzername, das Passwort und die TenantID müssen eventuell angepasst werden"
 
-### JDisc import und LDAP sync automatisieren
+### JDisc-Import und LDAP-Sync automatisieren
 
-Wenn Sie den JDisc import oder den LDAP sync ebenfalls automatisieren möchten, können Sie die Befehle für den [JDisc import](../automatisierung-und-integration/cli/index.md) oder den [LDAP sync](../automatisierung-und-integration/cli/index.md) in der gleichen schreibweise wie die anderen Befehle aus dem obigen Beispiel, einfach in die Batch Datei einfügen.
+Möchtest du den [JDisc-Import](../automatisierung-und-integration/cli/index.md) oder [LDAP-Sync](../automatisierung-und-integration/cli/index.md) ebenfalls automatisieren, fuege die entsprechenden Befehle in derselben Schreibweise in die Batch-Datei ein.
 
-### Einrichten der Aufgabenplanung
+### Aufgabenplanung einrichten
 
-Damit die Batch Datei auch automatisch ausgeführt wird, muss ein **Aufgabenplan** erstellt werden.
-Über die Windows Suche ist diese Funktion unter **Aufgabenplanung** zu finden.
+Damit die Batch-Datei automatisch läuft, erstellst du einen **Aufgabenplan**:
 
-Als erstes muss eine neue Aufgabe erstellt werden. Unter dem Tab "Aktionen" kann eine "Einfache Aufgabe" erstellt:
+1. Öffne die **Aufgabenplanung** über die Windows-Suche.
+2. Erstelle unter dem Tab "Aktionen" eine "Einfache Aufgabe":
 
 [![Einfache Aufgabe erstellen](../assets/images/de/automatisierung-und-integration/aufgabenplanung-und-cronjobs/2-auc.png)](../assets/images/de/automatisierung-und-integration/aufgabenplanung-und-cronjobs/2-auc.png)
 
-Nachdem ein Name und falls nötig auch eine Beschreibung vergeben wurden, kann nun ein Trigger eingestellt werden.
-Der Trigger gibt an, wann oder wodurch die Aufgabe ausgeführt werden soll.
-Für dieses Beispiel setzen wir den Trigger auf **Täglich um 4:00 Uhr**.
+3. Vergib einen Namen und optional eine Beschreibung.
+4. Stelle den Trigger ein -- er bestimmt, wann die Aufgabe läuft. In diesem Beispiel: **Täglich um 4:00 Uhr**.
 
 [![Trigger einstellen](../assets/images/de/automatisierung-und-integration/aufgabenplanung-und-cronjobs/3-auc.png)](../assets/images/de/automatisierung-und-integration/aufgabenplanung-und-cronjobs/3-auc.png)
 
-Als nächstes muss die Aktion, welche ausgeführt werden soll, ausgewählt werden. Da die Batch Datei ausgeführt werden soll, muss an dieser Stelle "Programm starten" ausgewählt werden.
-Daraufhin kann die man die Batch Datei hinterlegen und mit der Konfiguration fortfahren.
+5. Wähle als Aktion **"Programm starten"** und hinterlege die Batch-Datei.
 
 [![Programm ausführen](../assets/images/de/automatisierung-und-integration/aufgabenplanung-und-cronjobs/4-auc.png)](../assets/images/de/automatisierung-und-integration/aufgabenplanung-und-cronjobs/4-auc.png)
 
-Anschließend können noch einmal alle Angaben überprüft werden und dann kann die Konfiguration abgeschlossen werden.
-
-Damit die Aufgabe auch korrekt ausgeführt wird, öffnen wir die Eigenschaften der eben erstellten Aufgabe und wählen auf der "Allgemein" Seite die Option "Unabhängig von der Benutzeranmeldung ausführen" aus.
+6. Überprüfe deine Angaben und schließe die Konfiguration ab.
+7. Öffne die Eigenschaften der erstellten Aufgabe und wähle auf der Seite "Allgemein" die Option **"Unabhängig von der Benutzeranmeldung ausführen"**.
 
 [![Eigenschaften anpassen](../assets/images/de/automatisierung-und-integration/aufgabenplanung-und-cronjobs/5-auc.png)](../assets/images/de/automatisierung-und-integration/aufgabenplanung-und-cronjobs/5-auc.png)
 
-Damit ist die Aufgabenplanung abgeschlossen.
-Die erstellte Aufgabe wird jeden Tag um 4:00 Uhr die ausgewählte Batch Datei ausführen und die dort hinterlegten Befehle werden dann ebenfalls ausgeführt.
+Die Aufgabenplanung ist damit abgeschlossen. Die Aufgabe führt täglich um 4:00 Uhr die Batch-Datei mit allen hinterlegten Befehlen aus.

@@ -1,15 +1,19 @@
+---
+title: Passwörter verwalten
+description: Als Systemadministrator hantierst du taeglich mit dutzenden Passwoertern.
+icon:
+status:
+lang: de
+---
 # Passwörter verwalten
 
-Im täglichen Gebrauch hantiert ein Systemadministrator mit dutzenden Passwörtern. Die alle im Gedächtnis zu behalten, erscheint unrealistisch. i-doit bringt eine einfache Passwort-Verwaltung mit, die einem den Kopf frei hält und schnell benötigte Zugangsdaten schneller finden lässt.
+Als Systemadministrator hantierst du täglich mit dutzenden Passwörtern. i-doit bringt eine einfache Passwort-Verwaltung mit, die dir den Kopf frei hält und benötigte Zugangsdaten schnell auffindbar macht.
 
-Abgrenzung zu Passwort-Managern
--------------------------------
+## Abgrenzung zu Passwort-Managern
 
-i-doit ist kein ausgewachsener Passwort-Manager wie [KeePass](https://de.wikipedia.org/wiki/KeePass). Solche Applikationen bringen noch viele weitere Funktionen mit, zum Beispiel die Generierung von Passwörtern.
+i-doit ist kein vollwertiger Passwort-Manager wie [KeePass](https://de.wikipedia.org/wiki/KeePass). Die Motivation: Zugangsdaten möglichst nah an die [IT-Dokumentation](../glossar.md) heranzuführen, damit du sie im Notfall schnell und einfach findest.
 
-Die Motivation hinter den hier gezeigten Funktionen ist, Zugangsdaten möglichst nah an eine [IT-Dokumentation](../glossar.md) heranzuführen. In einem Notfall müssen diese Daten schnell und einfach recherchiert werden können.
-
-Wer nicht auf einen Passwort-Manager verzichten kann oder will, kann stattdessen über die Kategorie **Zugriff** passende Links auf Einträge im Passwort-Manager setzen. Auf diese Art bleiben die Zugangsdaten mit wenigen Klicks im schnellen Zugriff.
+Möchtest du weiterhin einen dedizierten Passwort-Manager nutzen, setze über die Kategorie **Zugriff** Links auf die entsprechenden Einträge. So bleiben die Zugangsdaten mit wenigen Klicks erreichbar.
 
 Kategorie **Passwörter**
 --------------------------

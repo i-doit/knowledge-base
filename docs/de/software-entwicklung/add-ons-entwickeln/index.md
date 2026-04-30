@@ -1,19 +1,25 @@
+---
+title: "Add-ons entwickeln"
+description: "Add-ons sind eigenstaendige Applikationsteile, die den Funktionsumfang von i-doit erweitern."
+icon:
+status:
+lang: de
+---
 # Add-ons entwickeln
 
-Add-ons sind in sich geschlossene Applikationsteile, die sich in das i-doit-Ökosystem eingliedern. Sie können zwar als unabhängige logische Einheiten angesehen werden, sind jedoch nur in i-doit lauffähig. Neben dem Applikations-Kern, welcher elementare Operationen bietet, verfolgt i-doit eben dieses Paradigma und stellt alle verfügbaren Funktionalitäten als teilweise autarke Add-ons bereit, welche zur Eingliederung in i-doit eine ganz bestimmte Architektur aufweisen müssen.
+Add-ons sind eigenständige Applikationsteile, die den Funktionsumfang von i-doit erweitern. Sie sind nur innerhalb von i-doit lauffähig und müssen eine bestimmte Architektur aufweisen, um sich in das System einzugliedern.
 
-Add-ons können den Funktionsumfang von i-doit nahezu beliebig erweitern. In diesem Artikel wird beschrieben, welche i-doit-Komponenten via Add-on erweitert werden können und was dafür nötig ist.
+In diesem Artikel erfährst du, welche i-doit-Komponenten du via Add-on erweitern kannst und was dafür nötig ist.
 
-Folgende Dinge sind in erster Linie notwendig, um ein Add-on zu entwickeln:
+Um ein Add-on zu entwickeln, benötigst du:
 
 1. Add-on-Identifier (in diesem Artikel verwenden wir "synetics_example")
 2. Minimales Set an PHP-Dateien
 3. package.json
 
-Der Add-on-Identifier
-=====================
+## Der Add-on-Identifier
 
-Ein Add-on wird mit Hilfe eines Strings identifiziert. Dieser String sollte kurz (max. 32 Zeichen), prägnant und kleingeschrieben sein - außerdem darf er keine Sonderzeichen enthalten. Da ein Add-on mit Hilfe dieses Strings identifiziert wird, muss es sich um ein Unikat handeln. Um dies sicherzustellen werden Add-ons von synetics geprüft, bevor sie veröffentlicht werden. Zusammengefasst gelten also folgende Regeln für einen Add-on-Identifier:
+Ein Add-on wird über einen eindeutigen String identifiziert. Dieser muss kurz, praegnant und kleingeschrieben sein. Die i-doit GmbH prüft die Eindeutigkeit vor der Veröffentlichung. Folgende Regeln gelten:
 
 *   Prefix mit Firmenname oder Namen (idealerweise bis zu 8 Zeichen)
 *   Unikat
@@ -35,8 +41,7 @@ Der Identifier findet sich an vielen Stellen des Add-on-Quellcodes wieder:
 *   Der Namespace muss den Identifier beinhalten, damit der PSR-4-Autoloader funktioniert: \idoit\Module\SyneticsExample
 *   Der Autoloader für Klassen (Code und Dateiname) der Legacy-Struktur muss den Identifier beinhalten: isys_module_synetics_example_autoload
 
-Minimales Set an PHP-Dateien
-============================
+## Minimales Set an PHP-Dateien
 
 Um ein lauffähiges Add-on zu entwickeln, sind einige PHP-Dateien notwendig:
 
@@ -82,7 +87,6 @@ Die package.json\-Datei
 
 Wie auch andere Tools, definieren wir bestimmte Attribute oder Metadaten eines Add-ons in einer speziellen Datei - der package.json. Der Aufbau und Inhalt dieser Datei ist im Artikel [Metadaten eines Add-ons (package.json)](./metadaten-eines-add-ons.md) ausführlich beschrieben.
 
-Eigene Systemeinstellungen
-==========================
+## Eigene Systemeinstellungen
 
 Ein Add-on kann die Einstellungen für [Mandanten-Name] unter **Verwaltung → Einstellungen für [Mandanten-Name]** nutzen und auch selbst erweitern. Weitere Informationen zu Datentypen, Art der Einstellung usw. sind im Artikel [Systemeinstellungen erweitern](./systemeinstellungen-erweitern.md) dokumentiert.

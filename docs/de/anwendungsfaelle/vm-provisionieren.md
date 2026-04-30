@@ -1,3 +1,10 @@
+---
+title: VM provisionieren (veraltet)
+description: "In diesem Artikel beleuchten wir den Anwendungsfall, virtuelle Maschinen (VM) über i-doit zu provisionieren."
+icon:
+status:
+lang: de
+---
 # VM provisionieren (veraltet)
 
 !!! warning "Veraltet"
@@ -18,7 +25,7 @@ Im Alltag sieht der Prozess daher so aus, dass über ein dediziertes Tool eine n
 Ein Datenaustausch zwischen dem genutzten Tool und i-doit findet nicht statt, sodass die VM-Konfiguration zweimal erledigt werden muss. Fehler beim Übertragen der Konfiguration sind hierbei nicht ausgeschlossen. Die redundante Pflege von Konfigurationsdaten ist also eine denkbar undankbare Aufgabe für den Admin.
 
 !!! attention "Dieser Artikel ist veraltet und nicht mehr aktuell"
-    Bitte beachten Sie, dass das hier dargestellte vorgehen bereits veraltet sein kann.
+    Bitte beachte, dass das hier dargestellte vorgehen bereits veraltet sein kann.
 
 ## Lösung
 

@@ -1,8 +1,15 @@
+---
+title: Standort kann nicht gespeichert werden
+description: "Beim Speichern in der Kategorie Standort erscheint eine Fehlermeldung:"
+icon:
+status:
+lang: de
+---
 # Standort kann nicht gespeichert werden
 
 ## Problem
 
-In der Kategorie **Standort** erscheint beim Speichern eine Fehlermeldung:
+Beim Speichern in der Kategorie **Standort** erscheint eine Fehlermeldung:
 
 ```
     Error!
@@ -16,6 +23,13 @@ Der genaue Wortlaut der Fehlermeldung kann abweichen. Das Resultat ist allerding
 
 ## Lösung
 
-Das Problem kann dadurch verursacht werden, wenn sehr viele Standortzuweisungen durch einen Automatismus (beispielsweise durch einen [Datenimport](../../daten-konsolidieren/index.md)) erstellt werden. Die Lösung besteht darin unter **Verwaltung → Systemtools → Cache / Datenbank → Datenbank** den Button **Standortkorrektur** zu klicken. Danach ist das Erstellen und Ändern von Standortzuweisungen wieder problemlos möglich.
+Dieses Problem tritt häufig auf, wenn sehr viele Standortzuweisungen durch einen Automatismus (z. B. einen [Datenimport](../../daten-konsolidieren/index.md)) erstellt wurden.
+
+So behebst du das Problem:
+
+1. Navigiere zu **Verwaltung → Systemtools → Cache / Datenbank → Datenbank**
+2. Klicke auf **Standortkorrektur**
+
+Danach kannst du Standortzuweisungen wieder problemlos erstellen und ändern.
 
 [![Lösung](../../assets/images/de/administration/troubleshooting/standort-kann-nicht-gespeichert-werden/2-skngw.png)](../../assets/images/de/administration/troubleshooting/standort-kann-nicht-gespeichert-werden/2-skngw.png)

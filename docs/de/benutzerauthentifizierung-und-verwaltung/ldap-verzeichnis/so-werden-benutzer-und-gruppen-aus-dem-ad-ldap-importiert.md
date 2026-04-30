@@ -5,18 +5,16 @@ icon: octicons/person-add-24
 lang: de
 ---
 
-!!! warning "Bitte erstellen Sie vor jeder Änderung an einer Schnittstelle/Import einen vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist kann dieses dann wiederhergestellt werden"
+!!! warning "Bitte erstelle vor jeder Änderung an einer Schnittstelle/Import ein vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist, kann dieses dann wiederhergestellt werden"
 
-Der Import von Benutzern und Gruppen aus dem Active Directory in i-doit findet immer über den [console.php](../../automatisierung-und-integration/cli/index.md) Befehl statt. Dazu benutzen wir das Kommando `ldap-sync`. Am Ende des Artikels ist ein komplettes Beispiel der erstellten erweiterten Konfiguration zu finden.
+Dieser Artikel zeigt dir, wie du Benutzer und Gruppen aus dem Active Directory gezielt in i-doit importierst. Der Import erfolgt immer über den [console.php](../../automatisierung-und-integration/cli/index.md)-Befehl `ldap-sync`. Am Ende des Artikels findest du ein komplettes Beispiel einer erweiterten Konfiguration.
 
-Der Artikel zur Konfiguration vom [LDAP-Verzeichnis/Active Directory](../ldap-verzeichnis/index.md) sollte vorher jedem bekannt sein.<br>
-Wir werden hier verschiedene LDAP Filter und eine komplette [ldap.ini Konfiguration](../../automatisierung-und-integration/cli/configuration-files.md) durchgehen.<br>
-Ziel ist es alle Benutzer und Gruppen aus dem AD/LDAP mit i-doit zu synchronisieren, sowie deren Mitgliedschaften.
+**Voraussetzungen:**
 
-Ich setzte Grundkenntnisse im Bezug auf AD/LDAP voraus.<br>
-In diesen Beispielen wird für Personen die `objectClass = user` verwendet.<br>
-Für Gruppen wird die `objectClass = group` verwendet.<br>
-Wenn man nicht alle Benutzer oder Gruppen der Domäne synchronisieren will muss unter `Nach Benutzern suchen in (OU)\*` der DN/CN einer OU bzw. eines Containers eingetragen werden.
+- Du hast die grundlegende [LDAP-/AD-Konfiguration](../ldap-verzeichnis/index.md) bereits eingerichtet.
+- Du verfügst über Grundkenntnisse im Bereich AD/LDAP.
+
+In den folgenden Beispielen wird für Personen die `objectClass = user` und für Gruppen die `objectClass = group` verwendet. Wenn du nicht alle Benutzer oder Gruppen der Domaene synchronisieren möchtest, trage unter **Nach Benutzern suchen in (OU)** den DN/CN einer OU bzw. eines Containers ein.
 
 [![ldap_personen-suchen](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/1-ldap-bg.png)](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/1-ldap-bg.png)
 
@@ -26,7 +24,7 @@ Wenn man nicht alle Benutzer oder Gruppen der Domäne synchronisieren will muss 
 
 ### Import von allen Benutzern
 
-Hier werden nur Benutzer synchronisiert, das bedeutet auch, dass keine Gruppen erstellt werden. Damit nur Benutzer synchronisiert werden muss der Filter so aussehen:
+Mit diesem Filter synchronisierst du ausschließlich Benutzer -- Gruppen werden dabei nicht erstellt:
 
 [![ldap_personen-importb](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/2-ldap-bg.png)](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/2-ldap-bg.png)
 
@@ -38,8 +36,7 @@ Hier werden nur Benutzer synchronisiert, das bedeutet auch, dass keine Gruppen e
 
 ### Import von Benutzern mit bestimmten Attributen
 
-Wir möchten hier auf ein Attribut filtern und nur diesen Benutzer synchronisieren.<br>
-Nur der Benutzer der im Attribut `sAMAccountName` den Wert `MichaelO` hat soll synchronisiert werden.
+Du kannst gezielt auf ein Attribut filtern. Im folgenden Beispiel wird nur der Benutzer synchronisiert, dessen `sAMAccountName` den Wert `MichaelO` hat:
 
 [![ldap_personen-importba](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/3-ldap-bg.png)](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/3-ldap-bg.png)
 
@@ -51,8 +48,7 @@ Nur der Benutzer der im Attribut `sAMAccountName` den Wert `MichaelO` hat soll s
 
 ### Import von allen Benutzern und allen Gruppen
 
-Hier werden Benutzer und Gruppen erstellt außerdem werden die Benutzer den jeweiligen Gruppen zugewiesen.<br>
-Damit Benutzer und Gruppen synchronisiert werden muss der Filter so aussehen:
+Dieser Filter erstellt sowohl Benutzer als auch Gruppen und weist die Benutzer den jeweiligen Gruppen zu:
 
 [![ldap_personen-importbg](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/4-ldap-bg.png)](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/4-ldap-bg.png)
 
@@ -64,7 +60,7 @@ Damit Benutzer und Gruppen synchronisiert werden muss der Filter so aussehen:
 
 ### Import von Benutzern die Mitglied der Gruppe idoit-read sind
 
-Damit nur Benutzer die Mitglied der Gruppe `idoit-read` sind synchronisiert werden muss der Filter so aussehen:
+Mit diesem Filter synchronisierst du nur Benutzer, die Mitglied der Gruppe `idoit-read` sind:
 
 [![ldap_personen-importbmg](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/5-ldap-bg.png)](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/5-ldap-bg.png)
 
@@ -76,7 +72,7 @@ Damit nur Benutzer die Mitglied der Gruppe `idoit-read` sind synchronisiert werd
 
 ### Import von Benutzern die Mitglied der Gruppe idoit-read und idoit-write sind
 
-Damit nur Benutzer die Mitglied der Gruppe `idoit-read` sind synchronisiert werden muss der Filter so aussehen:
+Dieser Filter synchronisiert nur Benutzer, die gleichzeitig Mitglied der Gruppen `idoit-read` und `idoit-write` sind:
 
 [![ldap_personen-importbmgrw](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/6-ldap-bg.png)](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/6-ldap-bg.png)
 
@@ -88,8 +84,9 @@ Damit nur Benutzer die Mitglied der Gruppe `idoit-read` sind synchronisiert werd
 
 ### Import von Benutzern und Gruppen die unterhalb einer Nested Group sind
 
-Ich habe eine Gruppe idoit in der die i-doit Gruppen `idoit-read` und `idoit-write` Mitglied sind. Diese beiden Gruppen sollen synchronisiert werden. Mit diesem Filter kann ich direkt die Gruppen und die Benutzer anlegen lassen.<br>
-Die Gruppe idoit wird dadurch nicht erstellt, es werden nur die Gruppen unterhalb der Gruppe erstellt. Außerdem werden die Gruppen nicht miteinander verknüpft, da Gruppen keinen Gruppen als Mitglied haben können.
+Angenommen, du hast eine Gruppe `idoit`, in der die Gruppen `idoit-read` und `idoit-write` Mitglied sind. Mit diesem Filter legst du die untergeordneten Gruppen und deren Benutzer automatisch an.
+
+Die übergeordnete Gruppe `idoit` selbst wird dabei nicht erstellt. Beachte, dass Gruppen in i-doit keine anderen Gruppen als Mitglied haben können.
 
 [![ldap_personen-importbgng](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/7-ldap-bg.png)](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/7-ldap-bg.png)
 
@@ -101,7 +98,7 @@ Die Gruppe idoit wird dadurch nicht erstellt, es werden nur die Gruppen unterhal
 
 ### So filtere ich Benutzer mit mehr als einer objectClass
 
-Wenn sich die Benutzer beispielsweise dadurch unterscheiden, dass sie zwei `objectClass`-Attribute haben (z.B. Person und Benutzer), würde ich so den Filter aufbauen:
+Wenn sich die Benutzer dadurch unterscheiden, dass sie zwei `objectClass`-Attribute besitzen (z.B. `person` und `user`), baust du den Filter folgendermassen auf:
 
 [![ldap_personen-filter](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/8-ldap-bg.png)](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/8-ldap-bg.png)
 
@@ -113,16 +110,13 @@ Wenn sich die Benutzer beispielsweise dadurch unterscheiden, dass sie zwei `obje
 
 ## Welche weiteren Attribute über die ldap.ini importiert werden können
 
-*   Der Beitrag [ldap.ini Konfiguration](../../automatisierung-und-integration/cli/configuration-files.md) sollte bekannt sein.
-*   Es kann eine .ini Datei für den Import erstellt werden, mit dieser können weitere Attribute importiert werden.
-*   Die [Attributerweiterungen](../../administration/verwaltung/import-und-schnittstellen/ldap/attributerweiterung.md) sollte bereits Konfiguriert sein.
-*   Wir verwenden den .ini Abschnitt "additional"
+Stelle sicher, dass du mit der [ldap.ini-Konfiguration](../../automatisierung-und-integration/cli/configuration-files.md) vertraut bist und die [Attributerweiterungen](../../administration/verwaltung/import-und-schnittstellen/ldap/attributerweiterung.md) bereits konfiguriert hast. Die folgenden Einstellungen nutzen den Abschnitt `[additional]` der .ini-Datei.
 
 ### Die Konfiguration der Attributerweiterungen
 
 [![ldap_personen-config](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/9-ldap-bg.png)](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/9-ldap-bg.png)
 
-Hier noch mal als Tabelle
+Die Konfiguration als Tabelle:
 
 | Feldname   | Attribut   | Mapping mit   |
 | ---------- | ---------- | ------------- |
@@ -139,9 +133,7 @@ Hier noch mal als Tabelle
 
 ### Benutzer statisch Räumen zuordnen
 
-In der `ldap.ini` können feste Zuweisungen von Benutzern zu Räumen eingetragen werden.<br>
-Die Benutzer werden dann dem zugewiesenem Raum als Kontakt zugewiesen.<br>
-(Die Räume müssen vorher in i-doit existieren!)
+In der `ldap.ini` kannst du feste Zuweisungen von Benutzern zu Räumen eintragen. Die Benutzer werden dann dem jeweiligen Raum als Kontakt zugewiesen. Die Räume müssen vorher in i-doit existieren.
 
 ```ini
 ;Attach users to Rooms statically
@@ -166,7 +158,7 @@ attributes[office]=physicalDeliveryOfficeName
 
 ### Die Anrede setzen lassen
 
-Um die Anrede beim Import setzen zu lassen, muss die Option `attributes[salutation]=` in der .INI Datei gesetzt werden. In diesem Beispiel ist es das Attribut `displayNamePrintable` aus dem Active Directory verwendet um die Anrede zu setzen. Die Anrede wird dann automatisch gesetzt, wenn die Synchronisierung durchgeführt wird. Es können natürlich auch andere Attribute verwendet werden, solange diese im AD vorhanden sind.
+Um die Anrede beim Import automatisch zu setzen, konfiguriere die Option `attributes[salutation]=` in der .ini-Datei. Im folgenden Beispiel wird das AD-Attribut `displayNamePrintable` verwendet. Du kannst auch andere Attribute nutzen, solange diese im AD vorhanden sind.
 
 Der Wert des Attributs `displayNamePrintable` könnte z.B. "Herr","Mr", "Mr." oder "Frau", "Mrs.", "Mrs", "Ms.", "Ms", "Miss" sein. Diese Werte können in der [Verwaltung](../../administration/verwaltung/mandanten-name-verwaltung/einstellungen-mandanten-name.md#ldap) unter [Mandanten-Name] Verwaltung > Einstellungen für [Mandanten-Name] > LDAP Konfiguratiert werden.
 
@@ -180,14 +172,11 @@ Diese Einstellung wurde im Beispiel der kompletten .ini Datei am Ende des Artike
 
 ### So importiere ich Attribute aus dem LDAP
 
-Ich möchte weitere LDAP Attribute zu Benutzern importieren und habe schon die [Attributerweiterungen](../../administration/verwaltung/import-und-schnittstellen/ldap/attributerweiterung.md) Konfiguriert.<br>
-Nun muss ich noch die Konfigurationsdatei des LDAP-Sync konfigurieren (ldap.ini).
+Wenn du die [Attributerweiterungen](../../administration/verwaltung/import-und-schnittstellen/ldap/attributerweiterung.md) bereits konfiguriert hast, musst du als Nächstes die Konfigurationsdatei des LDAP-Sync (`ldap.ini`) anpassen.
 
-Die verfügbaren Attribute finden Sie in Ihrer AD-Konfiguration.
-Hieraus kann ich mir die Attribute suchen die ich zusätzlich Synchronisieren möchte.<br>
-Welche Attribute zu welchem Feld gehören kann man über Google finden oder z.B. hier [SelfADSI externer Link](http://www.selfadsi.de/user-attributes.htm).
+Die verfügbaren Attribute findest du in deiner AD-Konfiguration. Eine Übersicht, welche Attribute zu welchem Feld gehören, findest du z.B. bei [SelfADSI](http://www.selfadsi.de/user-attributes.htm).
 
-Ich nehme mir als Beispiel folgende Attribute heraus und füge Sie in die ldap.ini ein:
+Das folgende Beispiel zeigt ein typisches Attribut-Mapping:
 
 ```ini
 ;Standardfelder die bereits in den Stammdaten von Personen vorhanden sind
@@ -217,17 +206,15 @@ attributes[custom_2]=objectGUID
 ;attributes[custom_8]=
 ```
 
-Wie man hier sieht habe ich z.B. das Stammdaten Attribut department mit dem LDAP Attribute department gemapped.<br>
-Zusätzlich habe ich die Attributerweiterung verwendet. Der Aufbau für z.B.<br>
+In diesem Beispiel ist das Stammdaten-Attribut `department` mit dem gleichnamigen LDAP-Attribut gemappt. Zusätzlich wird die Attributerweiterung verwendet. Der Aufbau für z.B.
 
 ```ini
 attributes[custom_1]=objectSid
 ```
 
-wäre wie folgt:
+funktioniert so:
 
-`attributes` sagt dem handler er soll das i-doit Attribut [custom_1] mit dem LDAP Attribut `objectSid` synchronisieren.<br>
-Nachdem die Benutzer synchronisiert wurden finde ich folgende Stammdaten vor:
+`attributes` weist den Handler an, das i-doit-Attribut `[custom_1]` mit dem LDAP-Attribut `objectSid` zu synchronisieren. Nach der Synchronisation findest du folgende Stammdaten vor:
 
 [![ldap_personen-sync](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/10-ldap-bg.png)](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/10-ldap-bg.png)
 
@@ -237,9 +224,7 @@ Nachdem die Benutzer synchronisiert wurden finde ich folgende Stammdaten vor:
 
 #### autoReactivateUsers
 
-Um einen sauberen Start zu haben, setzt diese Einstellung automatisch alle Benutzer vor der Synchronisierung auf den Status normal.
-
-Dies ist hilfreich, falls Benutzer versehentlich vorher archiviert oder gelöscht wurden.<br>
+Diese Einstellung setzt vor der Synchronisierung automatisch alle Benutzer auf den Status "normal". Das ist hilfreich, falls Benutzer versehentlich archiviert oder gelöscht wurden.
 
 !!! info
     Wir sollten uns bewusst sein, dass es mit NDS oder OpenLDAP derzeit nicht möglich ist, gelöschte Benutzer zu identifizieren, um sie später zu archivieren. Benutzer sind dann immer aktiviert!
@@ -252,15 +237,11 @@ autoReactivateUsers=false
 
 #### ignoreUsersWithAttributes
 
-Deaktiviere die Synchronisierung für Benutzer mit Attributen, die gegen ignoreFunction geprüft wurden.
+Mit dieser Option verhinderst du die Synchronisation unerwünschter Verzeichnisobjekte. Ein Benutzer wird nicht synchronisiert, wenn `ignoreFunction` für ALLE ausgewählten Attribute fehlschlaegt.
 
-Diese Funktion hilft, eine Synchronisation unerwünschter Verzeichnisobjekte zu verhindern.<br>
-Der Benutzer wird nicht synchronisiert, wenn ignoreFunction für ALLE ausgewählten Attribute fehlschlägt.
+Standardmäßig steht `ignoreUsersWithAttributes=[]`, sodass nichts ignoriert wird.
 
-Standardmäßig steht hier `ignoreUsersWithAttributes=[]` somit wird nichts ignoriert.
-
-Wir möchten nur Benutzer importieren bei denen die Attribute `samaccountname`, `sn`, `givenname` und `mail` nicht leer sind.<br>
-Somit müsste die Konfiguration für `ignoreUsersWithAttributes` so aussehen:
+Im folgenden Beispiel werden nur Benutzer importiert, bei denen die Attribute `samaccountname`, `sn`, `givenname` und `mail` nicht leer sind:
 
 ```ini
 ignoreUsersWithAttributes[] = "samaccountname"
@@ -273,10 +254,7 @@ ignoreUsersWithAttributes[] = "mail"
 
 #### ignoreFunction
 
-Ist die Prüffunktion zum Ignorieren von Benutzern (siehe `ignoreUsersWithAttributes`)<br>
-Dies kann ein beliebiger Funktionsname sein, der über `call_user_func` oder die definierten Funktionen aufrufbar ist.
-
-definierte functions:
+Die Prüffunktion zum Ignorieren von Benutzern (siehe `ignoreUsersWithAttributes`). Dies kann ein beliebiger Funktionsname sein, der über `call_user_func` oder die folgenden definierten Funktionen aufrufbar ist:
 
 ```ini
 empty
@@ -287,7 +265,7 @@ isset
 
 Beispiel: `empty` würde als empty($value) ausgeführt werden
 
-Wir prüfen auf leere Attribute mit
+So prüfst du auf leere Attribute:
 
 ```ini
 ignoreFunction=empty
@@ -305,8 +283,7 @@ syncEmptyAttributes=true
 
 ### Die komplette ldap.ini
 
-Hier eine fertige ini. Datei diese kann natürlich bearbeitet werden.<br>
-Der erste Teil der ldap.ini wird von [Verwendung von Konfigurationsdateien für Console Commands](../../automatisierung-und-integration/cli/configuration-files.md) bezogen.
+Hier findest du eine vollständige, anpassbare .ini-Datei. Der erste Teil basiert auf der [Konfigurationsdatei für Console Commands](../../automatisierung-und-integration/cli/configuration-files.md).
 
 ```ini
 [commandArguments]

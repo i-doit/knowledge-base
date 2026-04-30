@@ -8,7 +8,7 @@ lang: de
 
 !!! info "Seit Version 36 gibt es das [JDisc Connector Add-on](../../i-doit-add-ons/jdisc-connector/index.md)"
 
-[JDisc Discovery](http://www.jdisc.com/de/) ist ein Discovery-Tool zur automatischen Netzwerk-Inventarisierung. Es erkennt Hardware, Betriebssysteme, Software, Netzwerke, Virtualisierungs- und Cluster-Umgebungen. Ein Praxisbeispiel finden Sie auf unserem [Blog](https://www.i-doit.com/blog/it-service-management-mit-dem-discovery-tool-jdisc-und-i-doit/).
+[JDisc Discovery](http://www.jdisc.com/de/) ist ein Discovery-Tool zur automatischen Netzwerk-Inventarisierung. Es erkennt Hardware, Betriebssysteme, Software, Netzwerke, Virtualisierungs- und Cluster-Umgebungen. Ein Praxisbeispiel findest du auf unserem [Blog](https://www.i-doit.com/blog/it-service-management-mit-dem-discovery-tool-jdisc-und-i-doit/).
 
 ## Ziel der JDisc-Integration in i-doit
 

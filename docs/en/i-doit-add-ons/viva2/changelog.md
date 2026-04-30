@@ -1,3 +1,10 @@
+---
+title: Changelog
+description: "[Improvement]   Compatibility to i-doit 34"
+icon:
+status:
+lang: en
+---
 # Changelog
 
 3.2.6
@@ -158,4 +165,4 @@ TODO
 Initial release
 
 
-[Zur Startseite ->](index.md){ .md-button } · [Zu den Arbeiten ->](structural-analysis.md){ .md-button .md-button--primary }
+[Back to overview ->](index.md){ .md-button } · [Structural Analysis ->](structural-analysis.md){ .md-button .md-button--primary }

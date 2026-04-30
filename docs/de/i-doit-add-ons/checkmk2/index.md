@@ -1,6 +1,16 @@
+---
+title: Checkmk 2
+description: "Diese Version bringt wichtige Verbesserungen und neue Funktionen, um die Nutzung von Checkmk 2 effizienter und zukunftssicher zu gestalten."
+icon:
+status:
+lang: de
+---
 # Checkmk 2
 
 ## Release Notes Checkmk 2 Version 1.8.6
+
+
+[![checkmk2/checkmk-übersicht.png](../../assets/images/de/i-doit-add-ons/checkmk2/checkmk-uebersicht.png)](../../assets/images/de/i-doit-add-ons/checkmk2/checkmk-uebersicht.png)
 
 Diese Version bringt wichtige Verbesserungen und neue Funktionen, um die Nutzung von Checkmk 2 effizienter und zukunftssicher zu gestalten.
 
@@ -16,7 +26,7 @@ Diese Version bringt wichtige Verbesserungen und neue Funktionen, um die Nutzung
 
 -   Um das Checkmk 2 Add-on mit Checkmk 2.3 zu verwenden, muss der Konfigurationsparameter `check_mk.version` auf `"2.3"` gesetzt werden.
 -   Das Add-on unterstützt damit alle Versionen ab Checkmk 1.5.
--   Neue Feature werden zukünftig nur noch für Checkmk >= Version 2.2 implementiert.
+-   Neue Features werden zukuenftig nur noch für Checkmk >= Version 2.2 implementiert.
 
 ### Erweitertes Logging
 
@@ -24,59 +34,51 @@ Diese Version bringt wichtige Verbesserungen und neue Funktionen, um die Nutzung
 -   Neue Parameter für das Logging:
     -   `check_mk.logging.enableLogging: true|false`: Aktiviert das Logging von Checkmk Responses/Requests (standardmäßig deaktiviert).
     -   `check_mk.logging.logFilePath: "/log/path"`: Verzeichnis, in dem die Logdateien gespeichert werden. Es wird pro Aufruf eine Logdatei erstellt. Das Verzeichnis muss für den Benutzer, der Checkmk 2 ausführt (z.B. www-data), les- und schreibbar sein.
-    -   Eine beispielhafte Konfiguration kann man mit `idoitcmk print-example-config` anschauen.
+    -   Eine beispielhafte Konfiguration kannst du mit `idoitcmk print-example-config` anschauen.
 
 ### Bugfixes/weitere Anpassungen
 
 -   Das Merging von Hostadressen (`pull.updateObjects: true`) überschreibt jetzt nicht mehr bereits zugewiesene Netzwerke.
--   Das Aktivieren von Änderungen beachtet jetzt korrekt anhand des Konfigurationsparameters `push.activateForeignChanges` ob es gleichzeitig Änderungen seitens anderer Checkmk Nutzer gibt.
+-   Das Aktivieren von Änderungen beachtet jetzt korrekt anhand des Konfigurationsparameters `push.activateForeignChanges`, ob es gleichzeitig Änderungen seitens anderer Checkmk-Nutzer gibt.
 -   Das Pushen von Objekten wurde weiter optimiert.
--   Auswertung des Konfigurationsparameters `webAPI|rest.effectiveAttributes` korrigiert
+-   Auswertung des Konfigurationsparameters `webAPI|rest.effectiveAttributes` korrigiert.
 -   Viele weitere kleinere Anpassungen im "Maschinenraum".
 
 ## Was ist neu (v1.8.5)
 
-### Dynamische Filterung durch Whitelist und Blacklist
+### Dynamische Filterung durch Whitelist und Blacklist (v1.8.5)
 
-Mit der neuesten Aktualisierung der Software haben Nutzer nun die Möglichkeit, den Import- und Synchronisationsprozess von Softwareanwendungen präziser zu steuern. Durch den Einsatz von regulären Ausdrücken lässt sich genau definieren, welche Anwendungen während des Prozesses berücksichtigt oder ausgeschlossen werden. Eine Whitelist ermöglicht es den Nutzern, bestimmte Softwareanwendungen gezielt zur Verarbeitung auszuwählen. Beispielsweise sorgt der reguläre Ausdruck `^Windows Update.*$` dafür, dass alle Updates von Windows in den Prozess einbezogen werden, während `^python[0-9.]+$` alle Python-Versionen erfasst.
-Parallel dazu bietet die Blacklist eine komplementäre Funktion, mit der Anwendungen explizit vom Import- und Synchronisationsprozess ausgeschlossen werden können.
+Mit der neuesten Aktualisierung der Software hast du nun die Möglichkeit, den Import- und Synchronisationsprozess von Softwareanwendungen praeziser zu steuern. Durch den Einsatz von regulären Ausdrücken lässt sich genau definieren, welche Anwendungen während des Prozesses berücksichtigt oder ausgeschlossen werden. Eine Whitelist ermöglicht es dir, bestimmte Softwareanwendungen gezielt zur Verarbeitung auszuwählen. Beispielsweise sorgt der reguläre Ausdruck `^Windows Update.*$` dafür, dass alle Updates von Windows in den Prozess einbezogen werden, während `^python[0-9.]+$` alle Python-Versionen erfasst.
+Parallel dazu bietet die Blacklist eine komplementaere Funktion, mit der Anwendungen explizit vom Import- und Synchronisationsprozess ausgeschlossen werden können.
 
-In dieser Version wurde zudem eine wichtige Änderung in der Konfigurationsstruktur vorgenommen: Der Parameter `createUnknownSoftwareApplications`, der zuvor im Hauptabschnitt `pull` zu finden war, wurde in den neu geschaffenen Unterabschnitt `softwareApplications` verschoben. Diese Umstrukturierung verbessert die Übersichtlichkeit und Modularität der Konfigurationseinstellungen.
-Für Nutzer, die sich mit der neuen Konfigurationsstruktur vertraut machen möchten, bietet das Kommando `./idoitcmk print-example-config` eine praktische Möglichkeit, ein Beispiel der neuen Parameteranordnung zu sehen.
+In dieser Version wurde zudem eine wichtige Änderung in der Konfigurationsstruktur vorgenommen: Der Parameter `createUnknownSoftwareApplications`, der zuvor im Hauptabschnitt `pull` zu finden war, wurde in den neu geschaffenen Unterabschnitt `softwareApplications` verschoben. Diese Umstrukturierung verbessert die Übersichtlichkeit und Modularitaet der Konfigurationseinstellungen.
+Wenn du dich mit der neuen Konfigurationsstruktur vertraut machen möchtest, bietet das Kommando `./idoitcmk print-example-config` eine praktische Möglichkeit, ein Beispiel der neuen Parameteranordnung zu sehen.
 
 ## Was ist neu (v1.8.2)
 
 -   Mit Version 1.8.2 unterstützt CMK2 jetzt auch die Version Checkmk 2.2<br>
 -   Wenn der Config-Parameter check_mk.version auf "2.2" gesetzt ist, wird automatisch anstatt der Web-API die REST-API angesprochen.<br>
--   Wenn der Config-Parameter check_mk.version auf "2.1" gesetzt ist, wird die WebAPI genutzt, es sein denn, es gibt einen Konfigurationsabschnitt. "check_mk.rest" der parallel zum WebAPI-Konfiguration genutzt werden kann. Dann wird auch für 2.1 die REST-API genutzt.
--   Die betrifft nicht die Aufrufe der Inventory-API!
+-   Wenn der Config-Parameter check_mk.version auf "2.1" gesetzt ist, wird die WebAPI genutzt, es sei denn, es gibt einen Konfigurationsabschnitt "check_mk.rest", der parallel zur WebAPI-Konfiguration genutzt werden kann. Dann wird auch für 2.1 die REST-API genutzt.
+-   Dies betrifft nicht die Aufrufe der Inventory-API!
 
 !!! info ""
-    Als Gold-Partner von Tribe29 gilt das SHD - System-Haus-Dresden GmbH als ausgewiesener Spezialist für das Monitoring mit Checkmk. Mit der Übernahme und Weiterentwicklung des i-doit Add-Ons Checkmk 2 stellt SHD diese Expertise nun auch den i-doit Anwendern zur Verfügung.
+    Als Gold-Partner von Tribe29 gilt die SHD System-Haus-Dresden GmbH als ausgewiesener Spezialist für das Monitoring mit Checkmk. Mit der Übernahme und Weiterentwicklung des i-doit Add-ons Checkmk 2 stellt SHD diese Expertise nun auch den i-doit-Anwendern zur Verfügung.
 
 !!! attention ""
-    Mit der [Checkmk Version 2.1.0b1](https://checkmk.com/werk/12389) wurde die Struktur der Inventory Daten verändert. Es ist aktuell mit der Checkmk 2 Add-on Version <=1.8 nicht möglich Inventory in i-doit zu übertragen.<br>
+    Mit der [Checkmk Version 2.1.0b1](https://checkmk.com/werk/12389) wurde die Struktur der Inventory-Daten verändert. Es ist aktuell mit der Checkmk 2 Add-on Version <=1.8 nicht möglich, Inventory in i-doit zu übertragen.<br>
     Mit Version 1.8.1 muss die [Konfiguration](./konfiguration.md) angepasst werden.
 
-Austausch von Informationen zwischen i-doit und checkmk
+## Über das Add-on
 
-## Über
+Das Checkmk 2 Add-on verbindet [i-doit](https://i-doit.com) (CMDB und IT-Dokumentation) mit [Checkmk](https://checkmk.com/de) (Netzwerküberwachung). Zusammen erreichst du folgende Ziele:
 
-[i-doit](https://i-doit.com) ist eine Webanwendung für die IT-Dokumentation und eine CMDB (Konfigurationsmanagement-Datenbank). Diese Anwendung ist sehr nützlich, um um Ihr gesamtes Wissen über die IT-Infrastruktur, mit der Sie arbeiten, zu sammeln.
+-   **Einmal dokumentieren, vielfach nutzen** -- Dokumentation und Konfiguration an einem Ort pflegen.
+-   **Soll-Ist-Vergleich** -- Aktuellen Zustand mit dem Zielzustand deiner Hosts und Services abgleichen.
+-   **Monitoring konfigurieren** -- Netzwerküberwachung auf Basis deiner Dokumentation aufbauen.
+-   **Inventardaten zurückführen** -- Von checkmk gesammelte Informationen in der CMDB wiederverwenden.
+-   **Automatisieren** -- Wiederkehrende Aufgaben ohne manuellen Aufwand erledigen.
 
-[checkmk](https://checkmk.com/de) ist eine Softwareanwendung für die Netzwerküberwachung.
-
-Beide Anwendungen zusammen erfüllen eine Aufgabe sehr gut: Sie sammeln und teilen Wissen darüber zu sammeln und weiterzugeben, was _der_ aktuelle Zustand aller Ihrer Hosts und Dienste in Echtzeit _und_ in welchem Zustand sich jeder Host und Service befinden _sollte_. Dies ist oft für ein professionelles und effizientes IT-Service-Management (ITSM) unerlässlich.
-
-Die Anwendung idoitcmk stellt eine enge Verbindung zwischen i-doit und checkmk her. Eine Menge Informationen werden zwischen ihnen ausgetauscht, um die folgenden Ziele zu erreichen:
-
--   Einmaliges Schreiben, viele Lesezugriffe: Bewahren Sie Ihre Dokumentation und Konfiguration an einem Ort auf.
--   Vergleichen Sie den aktuellen Zustand mit dem Zielzustand all Ihrer Hosts und Services innerhalb Ihrer Dokumentation.
--   Konfigurieren Sie Ihre Netzwerküberwachung auf der Grundlage Ihrer Dokumentation
--   Lassen Sie Ihre Netzwerküberwachung wichtige Informationen über Hosts sammeln und diese in Ihrer Dokumentation wiederverwenden.
--   Automatisieren Sie alle langweiligen Aufgaben, die ein Systemadministrator nicht mag.
-
-Wir wissen, dass jede (IT-)Organisation unterschiedliche Anforderungen und verschiedene Prozesse hat. Aus diesem Grund ist es wichtig, eine [highly customizable](konfiguration.md) Anwendung zu haben.
+Die Anwendung `idoitcmk` ist dabei [umfassend konfigurierbar](konfiguration.md), um unterschiedliche Anforderungen und Prozesse abzubilden.
 
 ## Dokumentation
 
@@ -85,15 +87,15 @@ Wir wissen, dass jede (IT-)Organisation unterschiedliche Anforderungen und versc
 -   [Installation](./installation.md)
 -   [Konfiguration](./konfiguration.md)
 -   [Verwendung](./verwendung.md)
--   [Erstelle WATO Konfiguration basierend auf CMDB Daten](./wato-konfiguration-auf-basis-von-cmdb-daten-generieren.md)
--   [Importieren von Bestandsdaten in die CMDB](./bestandsdaten-in-die-cmdb-importieren.md)
--   [Abgleich von Objekten aus i-doit mit Hosts aus checkmk](./abgleich-von-objekten-aus-i-doit-mit-hosts-aus-checkmk.md)
--   [Informationen von i-doit und checkmk lesen](./informationen-aus-i-doit-und-checkmk-lesen.md)
--   [Agentenarten von checkmk nach i-doit importieren](./synchronisierung-der-checkmk-agenten.md)
--   [Kontaktgruppen zwischen checkmk und i-doit synchronisieren](./kontaktgruppen-synchronisieren.md)
--   [WATO-Ordner zwischen checkmk und i-doit synchronisieren](./wato-ordner-synchronisieren.md)
--   [Importieren von Sites aus checkmk in i-doit](./checkmk-sites-synchronisieren.md)
--   [Synchronisierung von Host-Tags zwischen checkmk und i-doit](./host-tags-synchronisieren.md)
+-   [WATO Konfiguration basierend auf CMDB-Daten erstellen](./wato-konfiguration-auf-basis-von-cmdb-daten-generieren.md)
+-   [Bestandsdaten in die CMDB importieren](./bestandsdaten-in-die-cmdb-importieren.md)
+-   [Abgleich von Objekten aus i-doit mit Hosts aus Checkmk](./abgleich-von-objekten-aus-i-doit-mit-hosts-aus-checkmk.md)
+-   [Informationen aus i-doit und Checkmk lesen](./informationen-aus-i-doit-und-checkmk-lesen.md)
+-   [Agentenarten von Checkmk nach i-doit importieren](./synchronisierung-der-checkmk-agenten.md)
+-   [Kontaktgruppen zwischen Checkmk und i-doit synchronisieren](./kontaktgruppen-synchronisieren.md)
+-   [WATO-Ordner zwischen Checkmk und i-doit synchronisieren](./wato-ordner-synchronisieren.md)
+-   [Sites aus Checkmk in i-doit importieren](./checkmk-sites-synchronisieren.md)
+-   [Host-Tags zwischen Checkmk und i-doit synchronisieren](./host-tags-synchronisieren.md)
 -   [i-doit Web GUI](./i-doit-web-gui.md)
 -   [Häufig gestellte Fragen (FAQ)](./faq.md)
 

@@ -1,6 +1,6 @@
 ---
 title: cmdb.object_type_categories
-description: cmdb.object_type_categories
+description: "Read categories assigned to a object type."
 icon: material/api
 #status: updated
 lang: de
@@ -161,3 +161,9 @@ Read categories assigned to a object type.
       }
     }
     ```
+
+## Siehe auch
+
+- [API v1 Methoden](index.md) — Übersicht aller API v1 Methoden
+- [API Add-on](../../index.md) — Einstieg in das API Add-on
+- [i-doit Add-ons](../../../index.md) — Alle verfügbaren Add-ons

@@ -1,3 +1,10 @@
+---
+title: "Rack-Ansicht"
+description: "i-doit bringt eine Visualisierung von 19\"-Racks mit."
+icon:
+status:
+lang: de
+---
 # Rack-Ansicht
 
 i-doit bringt eine Visualisierung von 19"-Racks mit. Alle verbauten Komponenten werden übersichtlich angezeigt. Statistiken zu freien Höheneinheiten, maximaler Energiebedarf und freie Netzwerkports in Switches und Patchpanels unterstützen bei der Kapazitätsplanung.
@@ -20,7 +27,7 @@ Die Höheneinheiten des Racks werden in der Kategorie **Formfaktor** definiert. 
 
 Im Beispiel nimmt das Rack 19"-fähige Komponenten in maximal 42 Höheneinheiten auf.
 
-Die auf- oder absteigende **Sortierung der Höheneinheiten** findet wiederum in der Kategorie **Schrank** statt. Dazu wechseln man durch den Button **Editieren** in den Modus zum Bearbeiten. Im Kästchen auf der rechten Seite befindet sich das entsprechende Drop-Down-Menü.
+Die auf- oder absteigende **Sortierung der Höheneinheiten** konfigurierst du ebenfalls in der Kategorie **Schrank**. Wechsle dazu über den Button **Editieren** in den Bearbeitungsmodus. Im Kästchen auf der rechten Seite findest du das entsprechende Drop-Down-Menü.
 
 In diesem Kästchen kann zudem angegeben werden, wie viele **vertikale Einschübe** für **vorne** und **hinten** zur Verfügung stehen. Beispielsweise werden darüber seitlich angebrachte PDUs dokumentiert. Im Screenshot sind für **vorne** und **hinten** je 2 **vertikale Einschübe** zu sehen, die abwechselnd links und rechts platziert werden.
 
@@ -49,24 +56,24 @@ Bereits zugeordnete Objekte werden in der **Standortsicht** und in der Kategorie
 
 ## Zugeordnete Objekte bearbeiten
 
-In der Kategorie **Schrank** gibt es Möglichkeiten, die zugeordneten Objekte zu bearbeiten. Zu jedem Objekt gibt es einen kleinen Button mit Pfeil nach unten. Klickt man auf ihn, erhält man folgende Optionen:
+In der Kategorie **Schrank** kannst du die zugeordneten Objekte bearbeiten. Zu jedem Objekt gibt es einen kleinen Button mit Pfeil nach unten. Klicke darauf, um folgende Optionen zu sehen:
 
 *   **Objektlink**:<br>
     Die Übersichtsseite des Objekts wird geöffnet.
 
 *   **Objekt neu zuweisen**:<br>
-    Ein Dialog öffnet sich auf der rechten Seite, um dem man ein Objekt neu positionieren kann (siehe unten).
+    Ein Dialog öffnet sich auf der rechten Seite, über den du ein Objekt neu positionieren kannst (siehe unten).
 
 *   **Objekt lösen**:<br>
     Die Angabe, an welcher Position im Rack das Objekt montiert ist, wird gelöscht. Das Objekt bleibt weiterhin über die Standortzuweisung dem Rack zugeordnet.
 
 [![Zugeordnete Objekte bearbeiten](../assets/images/de/auswertungen/rack-ansicht/6-ra.png)](../assets/images/de/auswertungen/rack-ansicht/6-ra.png)
 
-Objekt, die zwar räumlich dem Rack zugeordnet, aber noch nicht positioniert sind, werden auf der rechten Seite im Kästchen **Unpositionierte Objekte** aufgelistet. Über den Button mit dem Zahnrad können die benötigten HEs des Objekts geändert werden. Über den Button mit dem X wird die Standortzuweisung unwiderruflich gelöscht (**purge**).
+Objekte, die zwar räumlich dem Rack zugeordnet, aber noch nicht positioniert sind, findest du auf der rechten Seite im Kästchen **Unpositionierte Objekte**. Über den Button mit dem Zahnrad änderst du die benötigten HEs des Objekts. Über den Button mit dem X wird die Standortzuweisung unwiderruflich gelöscht (**purge**).
 
 [![Zugeordnete Objekte bearbeiten](../assets/images/de/auswertungen/rack-ansicht/7-ra.png)](../assets/images/de/auswertungen/rack-ansicht/7-ra.png)
 
-Klickt man auf das Objekt in der Liste, öffnet sich ein weiteres Kästchen darunter. Über die Dialoge kann das Objekt im Rack positioniert werden.
+Klicke auf das Objekt in der Liste, um ein weiteres Kästchen darunter zu öffnen. Über die Dialoge positionierst du das Objekt im Rack.
 
 [![Zugeordnete Objekte bearbeiten](../assets/images/de/auswertungen/rack-ansicht/8-ra.png)](../assets/images/de/auswertungen/rack-ansicht/8-ra.png)
 

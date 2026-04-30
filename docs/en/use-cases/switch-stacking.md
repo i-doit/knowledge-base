@@ -1,17 +1,30 @@
+---
+title: Switch Stacking
+description: "With the Stacking object type, it is possible to define a stack group with multiple members that exchange information with each other."
+icon:
+status:
+lang: en
+---
 # Switch Stacking
 
-With the **Stacking** [object type](../glossary.md) you can define a stack group of several members which exchange information. Although you can use stacking for different object types, the original idea for this object type and the associated **Stack member** [category](../glossary.md) is based on Switch Stacking. From version 1.7 the object type can be found under the [object type group](../glossary.md) **Other**.
+With the [object type](../glossary.md) **Stacking**, it is possible to define a stack group with multiple members that exchange information with each other. Although stacking can be used for different object types, the original concept for this object type and the associated [category](../glossary.md) **Stack Members** traces back to switch stacking. The object type can be found under the [object type group](../glossary.md) **Other** starting from version 1.7.
 
 Stack Members
--------------
+----------------
 
-You can add [objects](../glossary.md) as members of the stack and specify them as "Active" or "Passive" in the **Stack member** category, which was especially created for stacking. Beside the corresponding display, this specification has no other effect  on the documentation.
+In the **Stack Members** category created for stacking, [objects](../glossary.md) can be added as members of the stack and marked as "Active" or "Passive". In the documentation, this marking has no further effect other than the corresponding display.
 
-[![switch-stacking](../assets/images/en/use-cases/switch-stacking/1-sws.png)](../assets/images/en/use-cases/switch-stacking/1-sws.png)
+[![Stack members](../assets/images/de/anwendungsfaelle/switch-stacking/1-sws.png)](../assets/images/de/anwendungsfaelle/switch-stacking/1-sws.png)
+
+[![Stack members](../assets/images/de/anwendungsfaelle/switch-stacking/2-sws.png)](../assets/images/de/anwendungsfaelle/switch-stacking/2-sws.png)
 
 Logical Ports
--------------
+--------------
 
-When a logical port is created in one of the stack members, this port is also displayed with the other stack members under the logical ports section.
+When a logical port is created in one of the stack members, it now also appears in the other stack members under logical ports.
 
-Additionally, cou can assign the logical port of another stack member as parent port to the port.
+[![Logical ports](../assets/images/de/anwendungsfaelle/switch-stacking/3-sws.png)](../assets/images/de/anwendungsfaelle/switch-stacking/3-sws.png)
+
+Additionally, the logical port of another stack member can be assigned as the parent port of a port.
+
+[![Logical ports](../assets/images/de/anwendungsfaelle/switch-stacking/4-sws.png)](../assets/images/de/anwendungsfaelle/switch-stacking/4-sws.png)

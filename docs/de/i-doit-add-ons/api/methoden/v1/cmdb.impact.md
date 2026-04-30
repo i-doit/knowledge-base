@@ -1,6 +1,6 @@
 ---
 title: cmdb.impact
-description: cmdb.impact
+description: "This method is used for impact analysis and recursively returns all relationships of the specified object."
 icon: material/api
 #status: updated
 lang: de
@@ -110,3 +110,9 @@ JSON key **result** contains an array of JSON objects. Each object contains a se
       ]
     }
     ```
+
+## Siehe auch
+
+- [API v1 Methoden](index.md) — Übersicht aller API v1 Methoden
+- [API Add-on](../../index.md) — Einstieg in das API Add-on
+- [i-doit Add-ons](../../../index.md) — Alle verfügbaren Add-ons
