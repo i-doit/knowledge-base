@@ -311,8 +311,8 @@ nav:
           - Debian GNU/Linux: installation/manual-installation/debian/index.md
           - Red Hat Enterprise Linux (RHEL) and Compatible:
               - installation/manual-installation/red-hat-enterprise-linux/index.md
+              - Rocky Linux: installation/manual-installation/rocky-linux/index.md
               - Red Hat Enterprise Linux 9: installation/manual-installation/red-hat-enterprise-linux/rhel9.md
-          - Rocky Linux: installation/manual-installation/rocky-linux/index.md
           - SUSE Linux Enterprise Server (SLES): installation/manual-installation/suse/index.md
           - Ubuntu GNU/Linux: installation/manual-installation/ubuntu/index.md
           - Microsoft Windows Server:

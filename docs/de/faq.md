@@ -144,7 +144,7 @@ Beide Fehler hängen mit dem InnoDB-Speicherformat zusammen. Lösungen:
 
 ### Wie sichere ich i-doit?
 
-Drei Bereiche müssen gesichert werden: Datenbanken, Dateien und Systemkonfiguration. Ab Version 38 geht das am einfachsten mit `system:tenant-export`. Die vollständige Anleitung: [Daten sichern und wiederherstellen](wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md)
+Drei Bereiche müssen gesichert werden: Datenbanken, Dateien und Systemkonfiguration. Ab Version 35 geht das am einfachsten mit `system:tenant-export`. Die vollständige Anleitung: [Daten sichern und wiederherstellen](wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md)
 
 ### Wie stelle ich ein Backup wieder her?
 

@@ -149,7 +149,7 @@ Idealerweise hast du die Anpassungen bereits bei der [Installation](../../instal
 Für eine einfache, automatisierte Sicherung kannst du ein Bash-Script verwenden. Ein Beispiel findest du unter [Backup-Script für Daten und Dateien](backup-script-fuer-daten-und-dateien.md).
 
 !!! tip "Empfehlung"
-    Für neue Installationen (ab v38) ist `system:tenant-export` als Cronjob die einfachere und zuverlässigere Lösung, weil Datenbank und Dateien in einem konsistenten Paket gesichert werden.
+    Für neue Installationen (ab v35) ist `system:tenant-export` als Cronjob die einfachere und zuverlässigere Lösung, weil Datenbank und Dateien in einem konsistenten Paket gesichert werden.
 
 ---
 

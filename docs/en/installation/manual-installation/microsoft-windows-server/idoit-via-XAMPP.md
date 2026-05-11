@@ -16,8 +16,6 @@ This article describes how to install i-doit on the Windows operating system.
 
 ## Step 1: installation
 
-![type:video](../../../assets/images/de/installation/microsoft-windows/xampp/xampp-installation-unter-windows.mp4)
-
 First, download the XAMPP package from [https://www.apachefriends.org/de/index.html](https://www.apachefriends.org/de/index.html) .<br>
 Other packages also work. For example, the compressed package (.zip) can also simply be extracted to C:\\.<br>
 It is important when installing XAMPP that the installation path is "C:\\xampp", because the directory "C:\\Program Files (x86)" does not have sufficient permissions and therefore the installation will most likely not work correctly.
