@@ -1,4 +1,4 @@
-FROM ubuntu:24.04
+FROM ubuntu:26.04
 
 LABEL org.opencontainers.image.vendor="i-doit GmbH"
 LABEL org.opencontainers.image.title="i-doit knowledge base"
