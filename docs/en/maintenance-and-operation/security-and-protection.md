@@ -359,10 +359,10 @@ The [JSON-RPC API](../i-doit-add-ons/api/index.md) is a powerful tool -- and an 
 
 Every closed port reduces the attack surface. For i-doit, the following ports are typically sufficient:
 
-| Port | Service | Note |
-|------|---------|------|
-| **443** | HTTPS | i-doit web interface |
-| **22** | SSH | Administration (ideally only from the admin network) |
+| Port    | Service | Note                                                 |
+| ------- | ------- | ---------------------------------------------------- |
+| **443** | HTTPS   | i-doit web interface                                 |
+| **22**  | SSH     | Administration (ideally only from the admin network) |
 
 MariaDB (3306) should **never** be accessible from the outside.
 
@@ -386,27 +386,26 @@ For Apache, there is also the web application firewall [mod_security](https://ww
 
 For i-doit to download updates, verify licenses, and use online repositories, the following destinations must be reachable:
 
-| Host | Protocol | Port | Purpose |
-|------|----------|------|---------|
-| [login.i-doit.com](https://login.i-doit.com) | HTTPS | 443 | Updates for i-doit and add-ons |
-| [center.i-doit.com](https://center.i-doit.com) | HTTPS | 443 | Add-on & Subscription Center<br>IPs: `159.69.103.121`, `78.46.236.49`, `35.158.127.51`, `35.158.127.52`, `35.158.127.53`<br>IPv6: `2a01:4f8:c01f:289a::`, `2a01:4f8:1c17:a07c::` |
-| [crm-gateway.i-doit.com](https://crm-gateway.i-doit.com) | HTTPS | 443 | Downloads via license token |
-| [lizenzen.i-doit.com](https://lizenzen.i-doit.com) | HTTPS | 443 | Retrieve licenses via token |
-| [reports-ng.i-doit.org](https://reports-ng.i-doit.org) | HTTPS | 443 | Online repository for [reports](../evaluation/report-manager.md) |
-| [r.i-doit.com](https://r.i-doit.com) | HTTPS | 443 | Online repository for [templates](../i-doit-add-ons/documents/index.md) |
-| [i-doit.com](https://www.i-doit.com) | HTTPS | 443 | Update check |
+| Host                                                   | Protocol | Port | Purpose                                                                                                                                                                          |
+| ------------------------------------------------------ | -------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [login.i-doit.com](https://login.i-doit.com)           | HTTPS    | 443  | Updates for i-doit and add-ons                                                                                                                                                   |
+| [center.i-doit.com](https://center.i-doit.com)         | HTTPS    | 443  | Add-on & Subscription Center<br>IPs: `159.69.103.121`, `78.46.236.49`, `35.158.127.51`, `35.158.127.52`, `35.158.127.53`<br>IPv6: `2a01:4f8:c01f:289a::`, `2a01:4f8:1c17:a07c::` |
+| [lizenzen.i-doit.com](https://lizenzen.i-doit.com)     | HTTPS    | 443  | Retrieve licenses via token                                                                                                                                                      |
+| [reports-ng.i-doit.org](https://reports-ng.i-doit.org) | HTTPS    | 443  | Online repository for [reports](../evaluation/report-manager.md)                                                                                                                 |
+| [r.i-doit.com](https://r.i-doit.com)                   | HTTPS    | 443  | Online repository for [templates](../i-doit-add-ons/documents/index.md)                                                                                                          |
+| [i-doit.com](https://www.i-doit.com)                   | HTTPS    | 443  | Update check                                                                                                                                                                     |
 
 ### Interfaces to Third-Party Applications
 
-| Interface | Protocol | Default Port |
-|-----------|----------|--------------|
-| [Send emails](../evaluation/notifications.md) | SMTP | 25 / 465 / 587 |
-| [LDAP/AD](../user-authentication-and-management/ldap-directory/index.md) | LDAP / LDAPS | 389 / 636 |
-| [JDisc Discovery](../consolidate-data/jdisc/index.md) | PostgreSQL | 25321 |
-| [JDisc Discovery](../consolidate-data/jdisc/index.md) | HTTP | 9000 |
-| [JDisc Discovery GraphQL](../consolidate-data/jdisc/index.md) | HTTPS | 443 |
-| [Livestatus](../automation-and-integration/network-monitoring/query-data-with-livestatus.md) | Livestatus | 6557 |
-| [Znuny Help Desk](../automation-and-integration/service-desk/otrscommunity-help-desk.md), [Request Tracker](../automation-and-integration/service-desk/request-tracker.md) | HTTP/HTTPS | 80 / 443 |
+| Interface                                                                                                                                                                  | Protocol     | Default Port   |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | -------------- |
+| [Send emails](../evaluation/notifications.md)                                                                                                                              | SMTP         | 25 / 465 / 587 |
+| [LDAP/AD](../user-authentication-and-management/ldap-directory/index.md)                                                                                                   | LDAP / LDAPS | 389 / 636      |
+| [JDisc Discovery](../consolidate-data/jdisc/index.md)                                                                                                                      | PostgreSQL   | 25321          |
+| [JDisc Discovery](../consolidate-data/jdisc/index.md)                                                                                                                      | HTTP         | 9000           |
+| [JDisc Discovery GraphQL](../consolidate-data/jdisc/index.md)                                                                                                              | HTTPS        | 443            |
+| [Livestatus](../automation-and-integration/network-monitoring/query-data-with-livestatus.md)                                                                               | Livestatus   | 6557           |
+| [Znuny Help Desk](../automation-and-integration/service-desk/otrscommunity-help-desk.md), [Request Tracker](../automation-and-integration/service-desk/request-tracker.md) | HTTP/HTTPS   | 80 / 443       |
 
 ### Trusted Network
 
@@ -467,18 +466,18 @@ If the system needs to send emails, set up an SMTP relay -- e.g., with [msmtp](h
 
 Security is not a one-time project but an ongoing process. Conduct regular audits (e.g., quarterly):
 
-| Checkpoint | How |
-|------------|-----|
-| Operating system up to date? | `apt update && apt list --upgradable` |
+| Checkpoint                   | How                                                                 |
+| ---------------------------- | ------------------------------------------------------------------- |
+| Operating system up to date? | `apt update && apt list --upgradable`                               |
 | PHP version still supported? | Check [system requirements](../installation/system-requirements.md) |
-| i-doit up to date? | Check [release notes](../version-history/release-notes/index.md) |
-| Default passwords changed? | Test login with admin/admin |
-| Backup functional? | Perform restore on test system |
-| TLS configuration current? | [SSL Labs](https://www.ssllabs.com/ssltest/) |
-| Unused users present? | Check user list in i-doit |
-| Open ports minimal? | `sudo ss -tulpen` |
-| API access restricted? | Check Apache logs for unknown IPs |
-| File permissions correct? | `find /var/www/html -perm -o+w` |
+| i-doit up to date?           | Check [release notes](../version-history/release-notes/index.md)    |
+| Default passwords changed?   | Test login with admin/admin                                         |
+| Backup functional?           | Perform restore on test system                                      |
+| TLS configuration current?   | [SSL Labs](https://www.ssllabs.com/ssltest/)                        |
+| Unused users present?        | Check user list in i-doit                                           |
+| Open ports minimal?          | `sudo ss -tulpen`                                                   |
+| API access restricted?       | Check Apache logs for unknown IPs                                   |
+| File permissions correct?    | `find /var/www/html -perm -o+w`                                     |
 
 ---
 

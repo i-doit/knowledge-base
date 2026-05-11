@@ -11,8 +11,9 @@ lang: en
 
 For operating system configuration, we recommend a set of settings related to PHP, Apache Web Server, and MySQL/MariaDB. These are based on the [system requirements](../system-requirements.md) for i-doit. The settings differ depending on the operating system, which is why we refer to the respective articles:
 
-*   [Debian 12 GNU/Linux](debian/index.md)
+*   [Debian GNU/Linux](debian/index.md)
 *   [Red Hat Enterprise Linux (RHEL)](red-hat-enterprise-linux/index.md)
+*   [Rocky Linux](rocky-linux/index.md)
 *   [SUSE Linux Enterprise Server (SLES)](suse/index.md)
 *   [Ubuntu Linux](ubuntu/index.md)
 *   [Microsoft Windows Server](microsoft-windows-server/index.md)

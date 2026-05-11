@@ -25,6 +25,7 @@ Die genauen Schritte sind abhängig vom gewählten Betriebssystem:
 
 -   [Debian GNU/Linux](debian/index.md)
 -   [Red Hat Enterprise Linux (RHEL) und kompatible](red-hat-enterprise-linux/index.md)
+-   [Rocky Linux](rocky-linux/index.md)
 -   [SUSE Linux Enterprise Server (SLES)](suse/index.md)
 -   [Ubuntu GNU/Linux](ubuntu/index.md)
 -   [Microsoft Windows Server](microsoft-windows-server/index.md)

@@ -1,12 +1,15 @@
 ---
-title: Rocky Linux 10
-description: i-doit installation on Rocky Linux 10
+title: Red Hat Enterprise Linux 10
+description: i-doit installation on Red Hat Enterprise Linux 10
 icon: material/redhat
 status:
 lang: en
 ---
 
-!!! note "Tested with i-doit **38** and **Rocky Linux 10.1**"
+!!! note "Tested with i-doit **38** and **Red Hat Enterprise Linux 10 (Coughlan)**"
+
+!!! warning "Red Hat Subscription required"
+    Installing RHEL packages and activating the CRB repository requires an active **Red Hat Subscription**. A free Developer Subscription is available at [developers.redhat.com](https://developers.redhat.com).
 
 We explain which packages need to be installed and configured in a few steps in this article.
 
@@ -41,17 +44,16 @@ First, packages are updated from the standard repositories:
 sudo dnf update
 ```
 <!-- cSpell:enable -->
-For some packages, EPEL and the CRB repository (CodeReady Builder) are required:
+For some packages, **EPEL** is required. On RHEL, EPEL is not available as a package but is installed directly from fedoraproject.org:
 <!-- cSpell:disable -->
 ```sh
-sudo dnf install epel-release -y
-sudo dnf config-manager --set-enabled crb
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-10.noarch.rpm -y
 ```
 <!-- cSpell:enable -->
-Set the PHP and MariaDB modules to the recommended versions:
+The **CRB repository** (CodeReady Builder) is enabled via the Subscription Manager:
 <!-- cSpell:disable -->
 ```sh
-sudo dnf module enable php:8.3 mariadb:10.11 -y
+sudo subscription-manager repos --enable codeready-builder-for-rhel-10-x86_64-rpms
 ```
 <!-- cSpell:enable -->
 Installation of additional packages:
@@ -152,60 +154,28 @@ This file receives the following content:
     CustomLog /var/log/httpd/idoit_access.log combined
 
     <Directory /var/www/html/>
-        ## See https://httpd.apache.org/docs/2.2/mod/core.html#allowoverride
         AllowOverride None
-
-        ## Apache Web server configuration file for i-doit
-        ##
-        ## This file requires:
-        ##
-        ## - Apache HTTPD >= 2.4 with enabled modules:
-        ##   - rewrite
-        ##   - expires
-        ##   - headers
-        ##   - authz_core
-        ##
-        ## For performance and security reasons we put these settings
-        ## directly into the VirtualHost configuration and explicitly set
-        ## "AllowOverride none". After each i-doit update check if the .htaccess file, in the i-doit directory,
-        ## has changed and add the changes in the VirtualHost configuration.
-        ##
-        ## See the i-doit Knowledge Base for more details:
-        ## <https://kb.i-doit.com/>
-
-        ## Disable directory indexes:
         Options -Indexes +SymLinksIfOwnerMatch
 
         <IfModule mod_authz_core.c>
             RewriteCond %{REQUEST_METHOD}  =GET
             RewriteRule "^$" "/index.php"
 
-            ## Deny access to meta files:
             <Files "*.yml">
                 Require all denied
             </Files>
-
-            ## Deny access to hidden files:
             <FilesMatch "^\.">
                 Require all denied
             </FilesMatch>
-
-            ## Deny access to bash scripts:
             <FilesMatch "^(controller|.*\.sh)$">
                 Require all denied
             </FilesMatch>
-
-            ## Deny access to all PHP files…
             <Files "*.php">
                 Require all denied
             </Files>
-
-            ## Deny access to wrongly created config backup files like ...inc.php.0123123 instead of ...inc.012341.php
             <FilesMatch "\.php\.\d+$">
                 Require all denied
             </FilesMatch>
-
-            ## …except some PHP files in root directory:
             <FilesMatch "^(index\.php|controller\.php|proxy\.php)$">
                 <IfModule mod_auth_kerb.c>
                     Require valid-user
@@ -214,29 +184,20 @@ This file receives the following content:
                     Require all granted
                 </IfModule>
             </FilesMatch>
-
-            ## …except some PHP files in src/:
             <Files "jsonrpc.php">
                 Require all granted
             </Files>
-
-            ## …except some PHP files in src/tools/php/:
             <FilesMatch "^(rt\.php|barcode_window\.php|barcode\.php)$">
                 Require all granted
             </FilesMatch>
-
-            ## …except some PHP files in src/tools/php/qr/:
             <FilesMatch "^(qr\.php|qr_img\.php)$">
                 Require all granted
             </FilesMatch>
-
-            ## …except some PHP files in src/tools/js/:
             <FilesMatch "^js\.php$">
                 Require all granted
             </FilesMatch>
         </IfModule>
 
-        ## Deny access to some directories:
         <IfModule mod_alias.c>
             RedirectMatch 403 /imports/.*$
             RedirectMatch 403 /log/.*$
@@ -246,10 +207,8 @@ This file receives the following content:
             RedirectMatch 403 /vendor/.*$
         </IfModule>
 
-        ## Cache static files:
         <IfModule mod_expires.c>
             ExpiresActive On
-            # A2592000 = 30 days
             ExpiresByType image/svg+xml A2592000
             ExpiresByType image/gif A2592000
             ExpiresByType image/png A2592000
@@ -260,13 +219,11 @@ This file receives the following content:
             ExpiresByType text/javascript A2592000
             ExpiresByType image/x-icon "access 1 year"
             ExpiresDefault "access 2 week"
-
             <IfModule mod_headers.c>
                 Header append Cache-Control "public"
             </IfModule>
         </IfModule>
 
-        ## Pretty URLs:
         <IfModule mod_rewrite.c>
             RewriteEngine On
             RewriteRule favicon\.ico$ images/favicon.ico [L]
@@ -276,12 +233,10 @@ This file receives the following content:
             RewriteRule .* index.php [L,QSA]
         </IfModule>
 
-        ## Deny access to all ini files…
         <Files "*.ini">
             Require all denied
         </Files>
-
-        </Directory>
+    </Directory>
 
     TimeOut 600
     ProxyTimeout 600
@@ -337,28 +292,16 @@ This file contains the new configuration settings. **For optimal performance, th
 <!-- cSpell:disable -->
 ```conf
 [mysqld]
-# This is the number 1 setting to look at for any performance optimization
-# It is where the data and indexes are cached: having it as large as possible will
-# ensure MySQL uses memory and not disks for most read operations.
-#
-# Typical values are 1G (1-2GB RAM), 5-6G (8GB RAM), 20-25G (32GB RAM), 100-120G (128GB RAM).
 innodb_buffer_pool_size = 1G
-# Redo log file size, the higher the better.
-# MySQL/MariaDB writes two of these log files in a default installation.
 innodb_log_file_size = 512M
 innodb_sort_buffer_size = 64M
 sort_buffer_size = 262144 # default
 join_buffer_size = 262144 # default
 max_allowed_packet = 128M
 max_heap_table_size = 32M
-query_cache_min_res_unit = 4096
-query_cache_type = 1
-query_cache_limit = 5M
-query_cache_size = 80M
 tmp_table_size = 32M
 max_connections = 200
 innodb_file_per_table = 1
-# Disable this (= 0) if you have slow harddisks
 innodb_flush_log_at_trx_commit = 1
 innodb_flush_method = O_DIRECT
 innodb_lru_scan_depth = 2048

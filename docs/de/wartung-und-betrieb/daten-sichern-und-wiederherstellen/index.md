@@ -17,13 +17,13 @@ Drei Bereiche müssen gesichert werden:
 3. **Systemkonfiguration** — Apache, PHP, MariaDB
 
 !!! tip "Einfachster Weg: `system:tenant-export`"
-    Seit i-doit v38 gibt es den console-Befehl [`system:tenant-export`](#backup-uber-die-console-empfohlen), der Datenbank und Dateien in einem Schritt als ZIP exportiert. Für regelmäßige automatisierte Backups ist das die empfohlene Methode.
+    Seit i-doit v35 gibt es den console-Befehl [`system:tenant-export`](#backup-uber-die-console-empfohlen), der Datenbank und Dateien in einem Schritt als ZIP exportiert. Für regelmäßige automatisierte Backups ist das die empfohlene Methode.
 
 ---
 
 ## Backup über die Console (empfohlen)
 
-Seit Version 38 bietet die i-doit console die Befehle `system:tenant-export` und `system:tenant-import`. Sie exportieren bzw. importieren einen kompletten Mandanten — Datenbank und hochgeladene Dateien — in einem ZIP-Paket. Das ist der einfachste und sicherste Weg für ein vollständiges Backup.
+Seit Version 35 bietet die i-doit console die Befehle `system:tenant-export` und `system:tenant-import`. Sie exportieren bzw. importieren einen kompletten Mandanten — Datenbank und hochgeladene Dateien — in einem ZIP-Paket. Das ist der einfachste und sicherste Weg für ein vollständiges Backup.
 
 ### Export (Backup erstellen)
 
@@ -48,15 +48,15 @@ sudo -u www-data php /var/www/html/console.php system:tenant-import \
 
 **Optionen:**
 
-| Parameter | Beschreibung |
-|-----------|-------------|
-| `--file` | Pfad zur ZIP-Datei aus dem Export |
-| `--tenant-database-name` | Name der Mandanten-Datenbank |
-| `--tenant-title` | Anzeigename des Mandanten |
-| `--with-system-settings` | Systemweite Einstellungen mit importieren |
-| `--with-tenant-settings` | Mandantenspezifische Einstellungen importieren |
+| Parameter                           | Beschreibung                                                   |
+| ----------------------------------- | -------------------------------------------------------------- |
+| `--file`                            | Pfad zur ZIP-Datei aus dem Export                              |
+| `--tenant-database-name`            | Name der Mandanten-Datenbank                                   |
+| `--tenant-title`                    | Anzeigename des Mandanten                                      |
+| `--with-system-settings`            | Systemweite Einstellungen mit importieren                      |
+| `--with-tenant-settings`            | Mandantenspezifische Einstellungen importieren                 |
 | `--db-root-user` / `--db-root-pass` | Datenbank-Root-Zugangsdaten (nötig um die Datenbank anzulegen) |
-| `--db-host` / `--db-port` | Datenbank-Host und Port (Standard: `localhost:3306`) |
+| `--db-host` / `--db-port`           | Datenbank-Host und Port (Standard: `localhost:3306`)           |
 
 ### Als Cronjob einrichten
 
