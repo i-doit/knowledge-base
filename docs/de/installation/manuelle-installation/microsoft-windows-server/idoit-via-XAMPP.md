@@ -16,8 +16,6 @@ Wie i-doit unter dem Betriebssystem Windows installiert wird, beschreiben wir in
 
 ## Schritt 1: Die Installation
 
-![type:video](../../../assets/images/de/installation/microsoft-windows/xampp/xampp-installation-unter-windows.mp4)
-
 Zuerst wird das XAMPP-Paket unter [https://www.apachefriends.org/de/index.html](https://www.apachefriends.org/de/index.html) herunter.<br>
 Andere Pakete funktionieren jedoch auch. Beispielweise kann das gepackte Paket (.zip) auch einfach unter C:\\ entpackt werden.<br>
 Wichtig ist bei der Installation von XAMPP, dass der Installationspfad unbedingt "C:\\xampp" ist, weil auf das Verzeichnis "C:\\Program Files (x86)" nicht genug Rechte vorhanden sind und somit die Installation mit hoher Wahrscheinlichkeit nicht richtig funktionieren wird.

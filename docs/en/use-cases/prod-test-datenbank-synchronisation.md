@@ -10,7 +10,7 @@ lang: en
 
 In many organizations, a test system runs alongside the productive i-doit instance, where updates are tested, new configurations are tried out, or training sessions are conducted. To ensure the test system contains realistic data, the production database is regularly synchronized -- typically once a week.
 
-This article describes two approaches: a classic **shell script** with `mysqldump` and the method recommended since i-doit v38 using **console.php** with `system:tenant-export` / `system:tenant-import`.
+This article describes two approaches: a classic **shell script** with `mysqldump` and the method recommended since i-doit v35 using **console.php** with `system:tenant-export` / `system:tenant-import`.
 
 !!! warning "Backup before sync"
     The synchronization completely overwrites the database on the test system. Make sure no important test data is lost. Only read operations are performed on the production system -- nothing changes there.
@@ -161,9 +161,9 @@ Create the file `/etc/cron.d/idoit-sync`:
 
 ---
 
-## Option B: console.php (from v38, recommended)
+## Option B: console.php (from v35, recommended)
 
-Starting with i-doit version 38, the console commands `system:tenant-export` and `system:tenant-import` are available. These export a complete tenant -- database **and** uploaded files -- as a ZIP package. This is the cleaner method because the database and files are kept consistent together.
+Starting with i-doit version 35, the console commands `system:tenant-export` and `system:tenant-import` are available. These export a complete tenant -- database **and** uploaded files -- as a ZIP package. This is the cleaner method because the database and files are kept consistent together.
 
 ### Export on the Production Server
 

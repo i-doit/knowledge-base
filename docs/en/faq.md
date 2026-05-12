@@ -144,7 +144,7 @@ Both errors are related to the InnoDB storage format. Solutions:
 
 ### How do I back up i-doit?
 
-Three areas need to be backed up: databases, files, and system configuration. Starting with version 38, the easiest way is with `system:tenant-export`. The complete guide: [Backing up and restoring data](maintenance-and-operation/backup-and-restore/index.md)
+Three areas need to be backed up: databases, files, and system configuration. Starting with version 35, the easiest way is with `system:tenant-export`. The complete guide: [Backing up and restoring data](maintenance-and-operation/backup-and-restore/index.md)
 
 ### How do I restore a backup?
 

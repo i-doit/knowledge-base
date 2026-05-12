@@ -359,10 +359,10 @@ Die [JSON-RPC API](../i-doit-add-ons/api/index.md) ist ein mächtiges Werkzeug �
 
 Jeder geschlossene Port verkleinert die Angriffsfläche. Für i-doit reichen in der Regel:
 
-| Port | Dienst | Bemerkung |
-|------|--------|-----------|
-| **443** | HTTPS | i-doit Web-Oberfläche |
-| **22** | SSH | Administration (idealerweise nur aus dem Admin-Netz) |
+| Port    | Dienst | Bemerkung                                            |
+| ------- | ------ | ---------------------------------------------------- |
+| **443** | HTTPS  | i-doit Web-Oberfläche                                |
+| **22**  | SSH    | Administration (idealerweise nur aus dem Admin-Netz) |
 
 MariaDB (3306) sollte **niemals** von außen erreichbar sein.
 
@@ -386,27 +386,26 @@ Für Apache gibt es zusätzlich die Web Application Firewall [mod_security](http
 
 Damit i-doit Updates herunterladen, Lizenzen prüfen und Online-Repositories nutzen kann, müssen folgende Ziele erreichbar sein:
 
-| Host | Protokoll | Port | Zweck |
-|------|-----------|------|-------|
-| [login.i-doit.com](https://login.i-doit.com) | HTTPS | 443 | Updates für i-doit und Add-ons |
-| [center.i-doit.com](https://center.i-doit.com) | HTTPS | 443 | Add-on & Subscription Center<br>IPs: `159.69.103.121`, `78.46.236.49`, `35.158.127.51`, `35.158.127.52`, `35.158.127.53`<br>IPv6: `2a01:4f8:c01f:289a::`, `2a01:4f8:1c17:a07c::` |
-| [crm-gateway.i-doit.com](https://crm-gateway.i-doit.com) | HTTPS | 443 | Downloads über Lizenz-Token |
-| [lizenzen.i-doit.com](https://lizenzen.i-doit.com) | HTTPS | 443 | Lizenzen über Token abrufen |
-| [reports-ng.i-doit.org](https://reports-ng.i-doit.org) | HTTPS | 443 | Online-Repository für [Reports](../auswertungen/report-manager.md) |
-| [r.i-doit.com](https://r.i-doit.com) | HTTPS | 443 | Online-Repository für [Vorlagen](../i-doit-add-ons/documents/index.md) |
-| [i-doit.com](https://www.i-doit.com) | HTTPS | 443 | Update-Check |
+| Host                                                   | Protokoll | Port | Zweck                                                                                                                                                                            |
+| ------------------------------------------------------ | --------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [login.i-doit.com](https://login.i-doit.com)           | HTTPS     | 443  | Updates für i-doit und Add-ons                                                                                                                                                   |
+| [center.i-doit.com](https://center.i-doit.com)         | HTTPS     | 443  | Add-on & Subscription Center<br>IPs: `159.69.103.121`, `78.46.236.49`, `35.158.127.51`, `35.158.127.52`, `35.158.127.53`<br>IPv6: `2a01:4f8:c01f:289a::`, `2a01:4f8:1c17:a07c::` |
+| [lizenzen.i-doit.com](https://lizenzen.i-doit.com)     | HTTPS     | 443  | Lizenzen über Token abrufen                                                                                                                                                      |
+| [reports-ng.i-doit.org](https://reports-ng.i-doit.org) | HTTPS     | 443  | Online-Repository für [Reports](../auswertungen/report-manager.md)                                                                                                               |
+| [r.i-doit.com](https://r.i-doit.com)                   | HTTPS     | 443  | Online-Repository für [Vorlagen](../i-doit-add-ons/documents/index.md)                                                                                                           |
+| [i-doit.com](https://www.i-doit.com)                   | HTTPS     | 443  | Update-Check                                                                                                                                                                     |
 
 ### Schnittstellen zu Dritt-Applikationen
 
-| Schnittstelle | Protokoll | Standard-Port |
-|---------------|-----------|---------------|
-| [E-Mails senden](../auswertungen/benachrichtigungen.md) | SMTP | 25 / 465 / 587 |
-| [LDAP/AD](../benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md) | LDAP / LDAPS | 389 / 636 |
-| [JDisc Discovery](../daten-konsolidieren/jdisc/index.md) | PostgreSQL | 25321 |
-| [JDisc Discovery](../daten-konsolidieren/jdisc/index.md) | HTTP | 9000 |
-| [JDisc Discovery GraphQL](../daten-konsolidieren/jdisc/index.md) | HTTPS | 443 |
-| [Livestatus](../automatisierung-und-integration/network-monitoring/daten-abfragen-mit-livestatus.md) | Livestatus | 6557 |
-| [Znuny Help Desk](../automatisierung-und-integration/service-desk/otrscommunity-help-desk.md), [Request Tracker](../automatisierung-und-integration/service-desk/request-tracker.md) | HTTP/HTTPS | 80 / 443 |
+| Schnittstelle                                                                                                                                                                        | Protokoll    | Standard-Port  |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------ | -------------- |
+| [E-Mails senden](../auswertungen/benachrichtigungen.md)                                                                                                                              | SMTP         | 25 / 465 / 587 |
+| [LDAP/AD](../benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md)                                                                                                     | LDAP / LDAPS | 389 / 636      |
+| [JDisc Discovery](../daten-konsolidieren/jdisc/index.md)                                                                                                                             | PostgreSQL   | 25321          |
+| [JDisc Discovery](../daten-konsolidieren/jdisc/index.md)                                                                                                                             | HTTP         | 9000           |
+| [JDisc Discovery GraphQL](../daten-konsolidieren/jdisc/index.md)                                                                                                                     | HTTPS        | 443            |
+| [Livestatus](../automatisierung-und-integration/network-monitoring/daten-abfragen-mit-livestatus.md)                                                                                 | Livestatus   | 6557           |
+| [Znuny Help Desk](../automatisierung-und-integration/service-desk/otrscommunity-help-desk.md), [Request Tracker](../automatisierung-und-integration/service-desk/request-tracker.md) | HTTP/HTTPS   | 80 / 443       |
 
 ### Vertrauenswürdiges Netzwerk
 
@@ -467,18 +466,18 @@ Falls das System E-Mails versenden soll, richte einen SMTP-Relay ein — z.B. mi
 
 Sicherheit ist kein einmaliges Projekt, sondern ein fortlaufender Prozess. Führe regelmäßig (z.B. quartalsweise) eine Prüfung durch:
 
-| Prüfpunkt | Wie |
-|-----------|-----|
-| Betriebssystem aktuell? | `apt update && apt list --upgradable` |
-| PHP-Version noch unterstützt? | [Systemvoraussetzungen](../installation/systemvoraussetzungen.md) prüfen |
-| i-doit auf aktuellem Stand? | [Release Notes](../versionshistorie/release-notes/index.md) prüfen |
-| Standard-Passwörter geändert? | Login mit admin/admin testen |
-| Backup funktionsfähig? | Restore auf Testsystem durchführen |
-| TLS-Konfiguration aktuell? | [SSL Labs](https://www.ssllabs.com/ssltest/) |
-| Ungenutzte Benutzer vorhanden? | Benutzerliste in i-doit prüfen |
-| Offene Ports minimal? | `sudo ss -tulpen` |
-| API-Zugriff eingeschränkt? | Apache-Logs auf unbekannte IPs prüfen |
-| Dateiberechtigungen korrekt? | `find /var/www/html -perm -o+w` |
+| Prüfpunkt                      | Wie                                                                      |
+| ------------------------------ | ------------------------------------------------------------------------ |
+| Betriebssystem aktuell?        | `apt update && apt list --upgradable`                                    |
+| PHP-Version noch unterstützt?  | [Systemvoraussetzungen](../installation/systemvoraussetzungen.md) prüfen |
+| i-doit auf aktuellem Stand?    | [Release Notes](../versionshistorie/release-notes/index.md) prüfen       |
+| Standard-Passwörter geändert?  | Login mit admin/admin testen                                             |
+| Backup funktionsfähig?         | Restore auf Testsystem durchführen                                       |
+| TLS-Konfiguration aktuell?     | [SSL Labs](https://www.ssllabs.com/ssltest/)                             |
+| Ungenutzte Benutzer vorhanden? | Benutzerliste in i-doit prüfen                                           |
+| Offene Ports minimal?          | `sudo ss -tulpen`                                                        |
+| API-Zugriff eingeschränkt?     | Apache-Logs auf unbekannte IPs prüfen                                    |
+| Dateiberechtigungen korrekt?   | `find /var/www/html -perm -o+w`                                          |
 
 ---
 

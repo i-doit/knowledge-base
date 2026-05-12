@@ -17,13 +17,13 @@ Three areas need to be backed up:
 3. **System configuration** -- Apache, PHP, MariaDB
 
 !!! tip "Easiest way: `system:tenant-export`"
-    Since i-doit v38, the console command [`system:tenant-export`](#backup-via-the-console-recommended) is available, which exports the database and files in a single step as a ZIP. For regular automated backups, this is the recommended method.
+    Since i-doit v35, the console command [`system:tenant-export`](#backup-via-the-console-recommended) is available, which exports the database and files in a single step as a ZIP. For regular automated backups, this is the recommended method.
 
 ---
 
 ## Backup via the Console (Recommended)
 
-Since version 38, the i-doit console offers the commands `system:tenant-export` and `system:tenant-import`. They export or import a complete tenant -- database and uploaded files -- in a ZIP package. This is the simplest and safest way for a complete backup.
+Since version 35, the i-doit console offers the commands `system:tenant-export` and `system:tenant-import`. They export or import a complete tenant -- database and uploaded files -- in a ZIP package. This is the simplest and safest way for a complete backup.
 
 ### Export (Create Backup)
 
@@ -149,7 +149,7 @@ Ideally, you have already documented and securely stored the customizations duri
 For a simple, automated backup you can use a bash script. An example can be found at [Backup script for data and files](backup-script.md).
 
 !!! tip "Recommendation"
-    For new installations (from v38 onwards), `system:tenant-export` as a cronjob is the simpler and more reliable solution because the database and files are backed up in a consistent package.
+    For new installations (from v35 onwards), `system:tenant-export` as a cronjob is the simpler and more reliable solution because the database and files are backed up in a consistent package.
 
 ---
 
