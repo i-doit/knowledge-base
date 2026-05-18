@@ -323,6 +323,7 @@ nav:
           - Setup: installation/manual-installation/setup.md
       - Docker Installation:
           - installation/docker-installation/index.md
+          - With official images: installation/docker-installation/compose.md
           - Debian GNU/Linux: installation/docker-installation/debian.md
           - Ubuntu GNU/Linux: installation/docker-installation/ubuntu.md
       - i-doit Virtual Eval Appliance:
