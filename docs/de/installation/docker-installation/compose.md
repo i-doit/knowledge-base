@@ -1,6 +1,6 @@
 ---
 title: Docker-Installation mit i-doit-Images
-description: i-doit Pro als Container-Stack mit den offiziellen synetics-Images installieren
+description: i-doit Pro als Container-Stack mit den offiziellen Images der i-doit group installieren
 icon: material/docker
 status:
 lang: de
@@ -8,7 +8,7 @@ lang: de
 
 !!! note "Getestet mit i-doit **38** und **Debian 13 Trixie**"
 
-Diese Anleitung beschreibt die Installation von i-doit Pro mit den offiziellen synetics-Container-Images über Docker Compose. Der Stack besteht aus zwei Services — `app` (Apache + PHP + i-doit) und `db` (MariaDB) — und ist auf einem Linux-Server in wenigen Minuten einsatzbereit.
+Diese Anleitung beschreibt die Installation von i-doit Pro mit den offiziellen Container-Images der i-doit group über Docker Compose. Der Stack besteht aus zwei Services — `app` (Apache + PHP + i-doit) und `db` (MariaDB) — und ist auf einem Linux-Server in wenigen Minuten einsatzbereit.
 
 Für TLS-Termination wird optional ein dritter Service mit nginx ergänzt.
 
@@ -346,7 +346,7 @@ i-doit Pro benötigt zur Aktivierung einen gültigen Lizenz-Token oder eine Lize
 
 ### Variante A — Web-Lizenz-Token
 
-Token aus dem synetics Kundenportal kopieren, in die `.env` eintragen und den `app`-Container neu starten:
+Token aus dem Kundenportal der i-doit group kopieren, in die `.env` eintragen und den `app`-Container neu starten:
 <!-- cSpell:disable -->
 ```sh
 sudo sed -i 's/^IDOIT_LICENSE_TOKEN=.*/IDOIT_LICENSE_TOKEN=<token>/' /opt/idoit/.env
@@ -530,8 +530,3 @@ sudo docker compose logs --tail 100 app
 ```
 <!-- cSpell:enable -->
 
-## Nächster Schritt
-
-Die Installation ist abgeschlossen. Im nächsten Schritt eine Lizenz einspielen und die ersten Einstellungen vornehmen:
-
-[Weiter zu **Setup**](../manuelle-installation/setup.md)
