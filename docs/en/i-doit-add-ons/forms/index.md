@@ -16,7 +16,7 @@ More about this can be found in our [Blog](https://www.i-doit.com/blog/das-new-i
 
 !!! info "The Forms Add-on is currently provided in English. Translations originating from i-doit are also translated into German."
 
-[![Forms view](../../assets/images/de/i-doit-add-ons/forms/1-forms.png)](../../assets/images/de/i-doit-add-ons/forms/1-forms.png)
+[![Forms view](../../assets/images/en/i-doit-add-ons/forms/1-forms.png)](../../assets/images/en/i-doit-add-ons/forms/1-forms.png)
 
 ## Requirements
 
@@ -46,7 +46,7 @@ To install the add-on:
 
 For users to be able to create forms, assign the corresponding [permissions](../../efficient-documentation/permission-management/index.md) under **Administration → Authorization system → Rights → Forms**.
 
-[![Permission assignment](../../assets/images/de/i-doit-add-ons/forms/2-forms.png)](../../assets/images/de/i-doit-add-ons/forms/2-forms.png)
+[![Permission assignment](../../assets/images/en/i-doit-add-ons/forms/2-forms.png)](../../assets/images/en/i-doit-add-ons/forms/2-forms.png)
 
 !!! attention "Clear the authorization system cache"
     After you have assigned or changed the permissions, clear the [cache](../../administration/management/tenant-management/system-repair-and-cleanup.md) in the i-doit [administration](../../administration/management/index.md) under **Administration > [tenant-name] Administration > System repair and cleanup**, so that the changes are applied by the system.

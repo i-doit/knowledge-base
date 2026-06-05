@@ -7,7 +7,7 @@ lang: en
 ---
 # Checkmk
 
-[![Check_MK Logo](../assets/images/de/i-doit-add-ons/checkmk/1-cmk.gif)](../assets/images/de/i-doit-add-ons/checkmk/1-cmk.gif)
+[![Check_MK Logo](../assets/images/en/i-doit-add-ons/checkmk/1-cmk.gif)](../assets/images/en/i-doit-add-ons/checkmk/1-cmk.gif)
 
 Check\_MK is a [network monitoring](../automation-and-integration/network-monitoring/index.md) software that you can configure from within i-doit.
 
@@ -35,7 +35,7 @@ The most important parameters:
 - **Lock hosts/folders**: Prevents the exported configuration from being edited in Check\_MK -- so your settings are not overwritten during the next export.
 - **Master Site**: Select the site here that has been added across multiple export configurations. With only one configuration, leave this field empty.
 
-[![Master Site](../assets/images/de/i-doit-add-ons/checkmk/2-cmk.png)](../assets/images/de/i-doit-add-ons/checkmk/2-cmk.png)
+[![Master Site](../assets/images/en/i-doit-add-ons/checkmk/2-cmk.png)](../assets/images/en/i-doit-add-ons/checkmk/2-cmk.png)
 
 ## Categories
 
@@ -43,7 +43,7 @@ Assign the [category folder](../basics/it-documentation-structure.md) **Check_MK
 
 In the **Check_MK (Host)** category, you select an export configuration and define the hostname or host address. Optionally, you can prevent the export of the IP address -- e.g., when it is assigned via DHCP and changes.
 
-[![Check_MK (Host)](../assets/images/de/i-doit-add-ons/checkmk/3-cmk.png)](../assets/images/de/i-doit-add-ons/checkmk/3-cmk.png)
+[![Check_MK (Host)](../assets/images/en/i-doit-add-ons/checkmk/3-cmk.png)](../assets/images/en/i-doit-add-ons/checkmk/3-cmk.png)
 
 ## Host tags
 
@@ -63,7 +63,7 @@ The CMDB tags access content from the CMDB. In the configuration, you only see o
 
 In the following example, the **Operating system** attribute from the CMDB is converted into a host tag.
 
-[![Operating system](../assets/images/de/i-doit-add-ons/checkmk/4-cmk.png)](../assets/images/de/i-doit-add-ons/checkmk/4-cmk.png)
+[![Operating system](../assets/images/en/i-doit-add-ons/checkmk/4-cmk.png)](../assets/images/en/i-doit-add-ons/checkmk/4-cmk.png)
 
 The server in the example has Debian 7.1 assigned as its operating system. This value is adopted as the corresponding host tag when the configuration is exported.
 

@@ -97,21 +97,21 @@ The location view displays all objects that represent a location in a hierarchic
 
 You can adjust the row spacing of categories in the user settings. With the "Small" setting, the rows move closer together.
 
-[![row-spacing-small](../assets/images/de/grundlagen/web-gui/14-gui.png)](../assets/images/de/grundlagen/web-gui/14-gui.png)
+[![row-spacing-small](../assets/images/en/basics/web-gui/14-gui.png)](../assets/images/en/basics/web-gui/14-gui.png)
 
 Here is an example of large row spacing.
 
-[![row-spacing-large](../assets/images/de/grundlagen/web-gui/15-gui.png)](../assets/images/de/grundlagen/web-gui/15-gui.png)
+[![row-spacing-large](../assets/images/en/basics/web-gui/15-gui.png)](../assets/images/en/basics/web-gui/15-gui.png)
 
 ## Spacing in menu trees
 
 With the "Spacing in menu trees" option, you adjust the spacing between menu items. With the "Small" setting, the menu items are closer together.
 
-[![menu-tree-spacing-small](../assets/images/de/grundlagen/web-gui/16-gui.png)](../assets/images/de/grundlagen/web-gui/16-gui.png)
+[![menu-tree-spacing-small](../assets/images/en/basics/web-gui/16-gui.png)](../assets/images/en/basics/web-gui/16-gui.png)
 
 Here is an example of large menu item spacing.
 
-[![menu-tree-spacing-large](../assets/images/de/grundlagen/web-gui/17-gui.png)](../assets/images/de/grundlagen/web-gui/17-gui.png)
+[![menu-tree-spacing-large](../assets/images/en/basics/web-gui/17-gui.png)](../assets/images/en/basics/web-gui/17-gui.png)
 
 ## Display spacers
 

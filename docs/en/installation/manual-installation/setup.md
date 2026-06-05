@@ -93,19 +93,19 @@ The setup is automatically called when you access i-doit with the browser (examp
 
 In the first step, important system settings are checked. If something is not in order, the user is notified.
 
-[![system-check](../../assets/images/de/installation/setup/i-doit_setup_01_system_check.png)](../../assets/images/de/installation/setup/i-doit_setup_01_system_check.png)
+[![system-check](../../assets/images/en/installation/manual-installation/setup/i-doit_setup_01_system_check.png)](../../assets/images/en/installation/manual-installation/setup/i-doit_setup_01_system_check.png)
 
 #### Directory Configuration
 
 Here, the paths are requested where installation- and user-specific files should be stored. The suggestions can be accepted.
 
-[![directory-configuration](../../assets/images/de/installation/setup/i-doit_setup_02_directory_configuration.png)](../../assets/images/de/installation/setup/i-doit_setup_02_directory_configuration.png)
+[![directory-configuration](../../assets/images/en/installation/manual-installation/setup/i-doit_setup_02_directory_configuration.png)](../../assets/images/en/installation/manual-installation/setup/i-doit_setup_02_directory_configuration.png)
 
 #### Database Configuration
 
 Important credentials and settings need to be entered for the database connection. At least two databases and a special user are created for i-doit.
 
-[![database-configuration](../../assets/images/de/installation/setup/i-doit_setup_03_database_configuration.png)](../../assets/images/de/installation/setup/i-doit_setup_03_database_configuration.png)
+[![database-configuration](../../assets/images/en/installation/manual-installation/setup/i-doit_setup_03_database_configuration.png)](../../assets/images/en/installation/manual-installation/setup/i-doit_setup_03_database_configuration.png)
 
 -   **Connection settings**
     -   **Host:** typically the host itself, i.e., localhost or 127.0.0.1
@@ -131,7 +131,7 @@ Important credentials and settings need to be entered for the database connectio
 
 There are separate credentials for accessing the [Admin Center](../../administration/admin-center.md) in i-doit, which can be set here. It is recommended to do so.
 
-[![framework-configuration](../../assets/images/de/installation/setup/i-doit_setup_04_framework_configuration.png)](../../assets/images/de/installation/setup/i-doit_setup_04_framework_configuration.png)
+[![framework-configuration](../../assets/images/en/installation/manual-installation/setup/i-doit_setup_04_framework_configuration.png)](../../assets/images/en/installation/manual-installation/setup/i-doit_setup_04_framework_configuration.png)
 
 #### Config Check
 

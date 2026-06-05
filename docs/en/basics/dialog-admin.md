@@ -17,13 +17,13 @@ You can find the Dialog-Admin under **Administration → Predefined content → 
 
 If you have created a [custom category](custom-categories.md) with a **Dialog+** attribute, this attribute also appears in the navigation tree -- under the **Custom Dialog+** section.
 
-[![custom-dialog+](../assets/images/de/grundlagen/dialog-admin/1-da.png)](../assets/images/de/grundlagen/dialog-admin/1-da.png)
+[![custom-dialog+](../assets/images/en/basics/dialog-admin/1-da.png)](../assets/images/en/basics/dialog-admin/1-da.png)
 
 ## Viewing values
 
 Click on an attribute in the left navigation tree to see the previously documented values in the main area.
 
-[![view-values](../assets/images/de/grundlagen/dialog-admin/2-da.png)](../assets/images/de/grundlagen/dialog-admin/2-da.png)
+[![view-values](../assets/images/en/basics/dialog-admin/2-da.png)](../assets/images/en/basics/dialog-admin/2-da.png)
 
 ## Creating values
 
@@ -37,7 +37,7 @@ To create a new value:
     - **Status**: Each value has a condition. Select **Normal (2)** so that the value can be used in the documentation.
 3. Click **Save**.
 
-[![create-values](../assets/images/de/grundlagen/dialog-admin/3-da.png)](../assets/images/de/grundlagen/dialog-admin/3-da.png)
+[![create-values](../assets/images/en/basics/dialog-admin/3-da.png)](../assets/images/en/basics/dialog-admin/3-da.png)
 
 ## Editing values
 

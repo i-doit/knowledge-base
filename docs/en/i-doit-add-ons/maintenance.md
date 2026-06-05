@@ -35,7 +35,7 @@ Under **Administration → Permissions → Wartung** can [permissions for person
 
 Maintenance activities can be created and edited under **Add-ons → Maintenance → All maintenance**.
 
-[![Wartung](../assets/images/de/i-doit-add-ons/maintenance/1-main.png)](../assets/images/de/i-doit-add-ons/maintenance/1-main.png)
+[![Wartung](../assets/images/en/i-doit-add-ons/maintenance/1-main.png)](../assets/images/en/i-doit-add-ons/maintenance/1-main.png)
 
 The action bar provides the following functions:
 
@@ -47,7 +47,7 @@ The action bar provides the following functions:
 | **Complete**           | Mark selected maintenance as successfully completed       |
 | **E-Mails abschicken** | Inform affected persons about the maintenance via email |
 
-[![Wartung](../assets/images/de/i-doit-add-ons/maintenance/2-main.png)](../assets/images/de/i-doit-add-ons/maintenance/2-main.png)
+[![Wartung](../assets/images/en/i-doit-add-ons/maintenance/2-main.png)](../assets/images/en/i-doit-add-ons/maintenance/2-main.png)
 
 When creating a new maintenance activity, the following options are available:
 
@@ -64,25 +64,25 @@ When creating a new maintenance activity, the following options are available:
 | **Assigned roles**     | Alternatively or in parallel to the recipients, the assigned contacts can be notified based on their roles (category Contact assignment).                                                                                             |
 | **Email template**         | Which text should be sent via email (see below)?                                                                                                                                                                                    |
 
-[![Wartung](../assets/images/de/i-doit-add-ons/maintenance/3-main.png)](../assets/images/de/i-doit-add-ons/maintenance/3-main.png)
+[![Wartung](../assets/images/en/i-doit-add-ons/maintenance/3-main.png)](../assets/images/en/i-doit-add-ons/maintenance/3-main.png)
 
 ## Upcoming maintenance
 
 Here you can send emails for maintenance activities, complete maintenance, or create and edit them.
 
-[![Upcoming maintenance](../assets/images/de/i-doit-add-ons/maintenance/4-main.png)](../assets/images/de/i-doit-add-ons/maintenance/4-main.png)
+[![Upcoming maintenance](../assets/images/en/i-doit-add-ons/maintenance/4-main.png)](../assets/images/en/i-doit-add-ons/maintenance/4-main.png)
 
 ## Completed maintenance
 
 When a maintenance activity is marked as completed, it no longer appears under **Upcoming maintenance** (see above). Instead, you can find it under **Add-ons → Maintenance → Completed maintenance**.
 
-[![Completed maintenance](../assets/images/de/i-doit-add-ons/maintenance/5-main.png)](../assets/images/de/i-doit-add-ons/maintenance/5-main.png)
+[![Completed maintenance](../assets/images/en/i-doit-add-ons/maintenance/5-main.png)](../assets/images/en/i-doit-add-ons/maintenance/5-main.png)
 
 ## Planning view
 
 A detailed overview of all objects for which maintenance has been planned or already performed can be found under **Add-ons → Maintenance → Planning view**. For filtering, you define the time period via the **From** and **To** options.
 
-[![Planungsansicht](../assets/images/de/i-doit-add-ons/maintenance/6-main.png)](../assets/images/de/i-doit-add-ons/maintenance/6-main.png)
+[![Planungsansicht](../assets/images/en/i-doit-add-ons/maintenance/6-main.png)](../assets/images/en/i-doit-add-ons/maintenance/6-main.png)
 
 ## Creating a report
 
@@ -98,7 +98,7 @@ From the previously planned and performed maintenance activities, you can create
 
 The PDF file is generated via the **PDF Export & Download** button and offered for download.
 
-[![Wartungs-Bericht Create](../assets/images/de/i-doit-add-ons/maintenance/7-main.png)](../assets/images/de/i-doit-add-ons/maintenance/7-main.png)
+[![Wartungs-Bericht Create](../assets/images/en/i-doit-add-ons/maintenance/7-main.png)](../assets/images/en/i-doit-add-ons/maintenance/7-main.png)
 
 ## Maintenance overview in the object
 
@@ -106,19 +106,19 @@ If an object is under maintenance, this is indicated symbolically. On every page
 
 You can add the **Maintenance overview** category to the object type via the [object type configuration](../basics/assigning-categories-to-object-types.md) to also display maintenance activities directly in the object.
 
-[![Maintenance overview in object](../assets/images/de/i-doit-add-ons/maintenance/8-main.png)](../assets/images/de/i-doit-add-ons/maintenance/8-main.png)
+[![Maintenance overview in object](../assets/images/en/i-doit-add-ons/maintenance/8-main.png)](../assets/images/en/i-doit-add-ons/maintenance/8-main.png)
 
 ## Maintenance on the dashboard
 
 On the [Dashboard](../basics/dashboard-and-widgets.md) you display planned and completed maintenance activities in the calendar widget. These are highlighted.
 
-[![Kalender-Widget](../assets/images/de/i-doit-add-ons/maintenance/9-main.png)](../assets/images/de/i-doit-add-ons/maintenance/9-main.png)
+[![Kalender-Widget](../assets/images/en/i-doit-add-ons/maintenance/9-main.png)](../assets/images/en/i-doit-add-ons/maintenance/9-main.png)
 
 ## Creating email templates
 
 For each planned maintenance activity, you can generate an email to notify the affected persons. You specify them either as recipients or via their assigned role. You define the email text under **Add-ons → Maintenance → Email templates**. You can create any number of templates and assign them to individual planned maintenance activities (see above).
 
-[![E-Mail-Vorlage](../assets/images/de/i-doit-add-ons/maintenance/10-main.png)](../assets/images/de/i-doit-add-ons/maintenance/10-main.png)
+[![E-Mail-Vorlage](../assets/images/en/i-doit-add-ons/maintenance/10-main.png)](../assets/images/en/i-doit-add-ons/maintenance/10-main.png)
 
 Using the **New** button, you create a new template; using **Edit**, you modify an existing one. Using **Delete**, you irrevocably remove templates.
 

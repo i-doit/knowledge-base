@@ -14,7 +14,7 @@ Stack Members
 
 In the **Stack Members** category created for stacking, [objects](../glossary.md) can be added as members of the stack and marked as "Active" or "Passive". In the documentation, this marking has no further effect other than the corresponding display.
 
-[![Stack members](../assets/images/de/anwendungsfaelle/switch-stacking/1-sws.png)](../assets/images/de/anwendungsfaelle/switch-stacking/1-sws.png)
+[![Stack members](../assets/images/en/use-cases/switch-stacking/1-sws.png)](../assets/images/en/use-cases/switch-stacking/1-sws.png)
 
 [![Stack members](../assets/images/de/anwendungsfaelle/switch-stacking/2-sws.png)](../assets/images/de/anwendungsfaelle/switch-stacking/2-sws.png)
 

@@ -64,6 +64,6 @@ Using the "Export" button in the upper right corner, you can export the protecti
 -   CSV: The protection needs assessment of the entire information domain is offered as a CSV file for export. Any applied filter is ignored.
 -   JSON: The protection needs assessment of the entire information domain is offered in JSON format for export. Any applied filter is ignored.
 
-[![Export protection needs](../../assets/images/de/i-doit-add-ons/viva2/assessment-of-protection/export.png)](../../assets/images/de/i-doit-add-ons/viva2/assessment-of-protection/export.png){:target="_blank"}
+[![Export protection needs](../../assets/images/en/i-doit-add-ons/viva2/assessment-of-protection/export.png)](../../assets/images/en/i-doit-add-ons/viva2/assessment-of-protection/export.png){:target="_blank"}
 
 [<- Back](structural-analysis.md){ .md-button } · [Modeling the Information Domain ->](modeling.md){ .md-button .md-button--primary }

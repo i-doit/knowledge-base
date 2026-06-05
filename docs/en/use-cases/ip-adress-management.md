@@ -79,13 +79,13 @@ When assigning an IP to a network (category **Host address**), the choice of **a
 
 Apart from CIDR, a subnet can be logically divided into multiple segments. This is useful when assigning IP addresses for specific tasks or for specific departments.
 
-[![Net zones](../assets/images/de/anwendungsfaelle/ipam/1-ipam.png)](../assets/images/de/anwendungsfaelle/ipam/1-ipam.png)
+[![Net zones](../assets/images/en/use-cases/ipam/1-ipam.png)](../assets/images/en/use-cases/ipam/1-ipam.png)
 
 Each segment is created as an object of type **Net Zone**. The category folder of the same name is available there. In the subordinate category **Options**, a **zone color** can be selected. This color is used in the **Net > IP List** category. Furthermore, the sub-category **Zones** displays the address ranges of the assigned subnets of type **Layer 3 Net**.
 
 The assignment of a zone to a subnet takes place in the **Net > IP List** category of a subnet: First, you select an IP address or a range of IP addresses. Then you assign the segment to these IP addresses via the **New zone** button. The IP addresses are marked in the color of the zone.
 
-[![New zone](../assets/images/de/anwendungsfaelle/ipam/2-ipam.png)](../assets/images/de/anwendungsfaelle/ipam/2-ipam.png)
+[![New zone](../assets/images/en/use-cases/ipam/2-ipam.png)](../assets/images/en/use-cases/ipam/2-ipam.png)
 
 In the **Host address** category, the next free IP address is automatically suggested based on the selected net zone. The **Domain** attribute in the **Net Zone > Options** category additionally ensures that when new IP addresses are assigned in the **Host address** category, this domain is automatically preselected.
 
@@ -93,7 +93,7 @@ In the **Host address** category, the next free IP address is automatically sugg
 
 If you want to maintain information about the Domain Name System (DNS) and/or Fully Qualified Domain Names (FQDNs) used, you can do so with i-doit. For each **Layer 3 Net**, any number of **DNS servers** (object relationship) and domains can be stored in the **Net** category. Deviating settings for DNS servers and domains used can be stored per object in the **Host address** category. If an object receives one or more hostnames (category **Host address**) and information about the domains used, one or more FQDNs are derived, which are displayed automatically. Domains can be inherited through the assignment to a network. Additionally, **search domains** can be specified.
 
-[![Host address](../assets/images/de/anwendungsfaelle/ipam/3-ipam.png)](../assets/images/de/anwendungsfaelle/ipam/3-ipam.png)
+[![Host address](../assets/images/en/use-cases/ipam/3-ipam.png)](../assets/images/en/use-cases/ipam/3-ipam.png)
 
 !!! info "Configuration data for DNS and DHCP servers"
     In principle, the documented data is suitable for supplying DNS or DHCP servers with matching configuration data. i-doit includes an [export function for the ISC DHCP DNS server](../automation-and-integration/cli/index.md).

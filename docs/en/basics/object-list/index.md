@@ -10,7 +10,7 @@ lang: en
 
 The object lists in i-doit serve not only for the mere listing of [objects](../it-documentation-structure.md), but also provide a variety of functions and can be almost completely customized.
 
-[![object-list](../../assets/images/de/grundlagen/objekt-listen/1-ol.png)](../../assets/images/de/grundlagen/objekt-listen/1-ol.png)
+[![object-list](../../assets/images/en/basics/object-list/1-ol.png)](../../assets/images/en/basics/object-list/1-ol.png)
 
 Per [object type](../it-documentation-structure.md), all assigned objects are displayed in a tabular format in the object list. Each row features an object with its [attributes](../it-documentation-structure.md). Which attributes are displayed can be [configured](../object-list/configure-list-view.md).
 

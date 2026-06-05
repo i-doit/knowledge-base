@@ -134,7 +134,7 @@ Open the **System settings** tab in the [Admin Center](../../../administration/a
 
     The email address of the respective user must be stored as the login in i-doit!
 
-[![i-doit SSO setting](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-17.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-17.png)
+[![i-doit SSO setting](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-17.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-17.png)
 
 As long as the configurations on the Linux server have not been enabled yet, users can still log in with the i-doit login form and a local user.
 

@@ -49,7 +49,7 @@ You freely choose the name and key of a new workflow type. The **order** determi
 
 **Workflows** can also be displayed in the object via the **Workflows** category. This must first be added via the [object type configuration](../basics/assigning-categories-to-object-types.md)
 
-[![Workflows in the object](../assets/images/de/i-doit-add-ons/workflow/1-wf.png)](../assets/images/de/i-doit-add-ons/workflow/1-wf.png)
+[![Workflows in the object](../assets/images/en/i-doit-add-ons/workflow/1-wf.png)](../assets/images/en/i-doit-add-ons/workflow/1-wf.png)
 
 ## CLI console commands and options
 

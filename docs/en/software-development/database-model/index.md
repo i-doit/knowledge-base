@@ -91,7 +91,7 @@ Specific categories behave the same way. The query for network information of al
 
 **Diagram: Relationship between categories and objects**
 
-**[![datenbankmodell-beziehungen](../../assets/images/de/software-entwicklung/datenbank-modell/1-dm.png)](../../assets/images/de/software-entwicklung/datenbank-modell/1-dm.png)
+**[![datenbankmodell-beziehungen](../../assets/images/en/software-development/database-model/1-dm.png)](../../assets/images/en/software-development/database-model/1-dm.png)
 **
 
 The graphic shows how an object is linked to the global category CPU. This category in turn accesses Dialog+ entries such as the manufacturer and the type. The same happens with the global category Form Factor, which accesses the form factor type.

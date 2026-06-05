@@ -14,7 +14,7 @@ The ISMS add-on extends i-doit with several object types in the object type grou
 
 ## Audit
 
-[![Audit](../../assets/images/de/i-doit-add-ons/isms/object-types-and-categories/isms_audit.jpg)](../../assets/images/de/i-doit-add-ons/isms/object-types-and-categories/isms_audit.jpg)
+[![Audit](../../assets/images/en/i-doit-add-ons/isms/object-types-and-categories/isms_audit.jpg)](../../assets/images/en/i-doit-add-ons/isms/object-types-and-categories/isms_audit.jpg)
 
 With the Audit object type, you can document audits, including results and identified deviations.
 
@@ -28,7 +28,7 @@ With the Audit object type, you can document audits, including results and ident
 
 ## Threat
 
-[![Threat](../../assets/images/de/i-doit-add-ons/isms/object-types-and-categories/isms_threat.jpg)](../../assets/images/de/i-doit-add-ons/isms/object-types-and-categories/isms_threat.jpg)
+[![Threat](../../assets/images/en/i-doit-add-ons/isms/object-types-and-categories/isms_threat.jpg)](../../assets/images/en/i-doit-add-ons/isms/object-types-and-categories/isms_threat.jpg)
 
 The Threat object type describes risk sources for risk assessments.
 
@@ -47,7 +47,7 @@ The Threat object type describes risk sources for risk assessments.
 
 ## Assessment Criterion
 
-[![Assessment Criterion](../../assets/images/de/i-doit-add-ons/isms/object-types-and-categories/isms_protection_category.jpg)](../../assets/images/de/i-doit-add-ons/isms/object-types-and-categories/isms_protection_category.jpg)
+[![Assessment Criterion](../../assets/images/en/i-doit-add-ons/isms/object-types-and-categories/isms_protection_category.jpg)](../../assets/images/en/i-doit-add-ons/isms/object-types-and-categories/isms_protection_category.jpg)
 
 Assessment criteria form the basis for calculating the risk level.
 
@@ -60,7 +60,7 @@ Assessment criteria form the basis for calculating the risk level.
 
 ## Event
 
-[![Event](../../assets/images/de/i-doit-add-ons/isms/object-types-and-categories/isms_event.jpg)](../../assets/images/de/i-doit-add-ons/isms/object-types-and-categories/isms_event.jpg)
+[![Event](../../assets/images/en/i-doit-add-ons/isms/object-types-and-categories/isms_event.jpg)](../../assets/images/en/i-doit-add-ons/isms/object-types-and-categories/isms_event.jpg)
 
 With the Event object type, you can create risk events for event-based risk identification.
 
@@ -73,7 +73,7 @@ With the Event object type, you can create risk events for event-based risk iden
 
 ## Annex A Measure
 
-[![Annex A Measure](../../assets/images/de/i-doit-add-ons/isms/object-types-and-categories/isms_control_annex_a.jpg)](../../assets/images/de/i-doit-add-ons/isms/object-types-and-categories/isms_control_annex_a.jpg)
+[![Annex A Measure](../../assets/images/en/i-doit-add-ons/isms/object-types-and-categories/isms_control_annex_a.jpg)](../../assets/images/en/i-doit-add-ons/isms/object-types-and-categories/isms_control_annex_a.jpg)
 
 The Annex A Measure object type contains the measures from ISO 27001 Annex A. Its main purpose is the comparison with SOA measures.
 
@@ -87,7 +87,7 @@ The Annex A Measure object type contains the measures from ISO 27001 Annex A. It
 
 ## default Requirement
 
-[![default Requirement](../../assets/images/de/i-doit-add-ons/isms/object-types-and-categories/isms_standard_requirement.jpg)](../../assets/images/de/i-doit-add-ons/isms/object-types-and-categories/isms_standard_requirement.jpg)
+[![default Requirement](../../assets/images/en/i-doit-add-ons/isms/object-types-and-categories/isms_standard_requirement.jpg)](../../assets/images/en/i-doit-add-ons/isms/object-types-and-categories/isms_standard_requirement.jpg)
 
 default requirements store requirement texts and their implementation status.
 
@@ -102,7 +102,7 @@ default requirements store requirement texts and their implementation status.
 
 ## Damage Scenario
 
-[![Damage Scenario](../../assets/images/de/i-doit-add-ons/isms/object-types-and-categories/isms_incident_scenario.jpg)](../../assets/images/de/i-doit-add-ons/isms/object-types-and-categories/isms_incident_scenario.jpg)
+[![Damage Scenario](../../assets/images/en/i-doit-add-ons/isms/object-types-and-categories/isms_incident_scenario.jpg)](../../assets/images/en/i-doit-add-ons/isms/object-types-and-categories/isms_incident_scenario.jpg)
 
 Damage scenarios are used to assess the impact in risk evaluation.
 
@@ -116,7 +116,7 @@ Damage scenarios are used to assess the impact in risk evaluation.
 
 ## Security Incident
 
-[![Security Incident](../../assets/images/de/i-doit-add-ons/isms/object-types-and-categories/isms_security_incident.jpg)](../../assets/images/de/i-doit-add-ons/isms/object-types-and-categories/isms_security_incident.jpg)
+[![Security Incident](../../assets/images/en/i-doit-add-ons/isms/object-types-and-categories/isms_security_incident.jpg)](../../assets/images/en/i-doit-add-ons/isms/object-types-and-categories/isms_security_incident.jpg)
 
 The Security Incident object type is used for structured documentation of incidents.
 
@@ -130,7 +130,7 @@ The Security Incident object type is used for structured documentation of incide
 
 ## Vulnerability
 
-[![Vulnerability](../../assets/images/de/i-doit-add-ons/isms/object-types-and-categories/isms_vulnerability.jpg)](../../assets/images/de/i-doit-add-ons/isms/object-types-and-categories/isms_vulnerability.jpg)
+[![Vulnerability](../../assets/images/en/i-doit-add-ons/isms/object-types-and-categories/isms_vulnerability.jpg)](../../assets/images/en/i-doit-add-ons/isms/object-types-and-categories/isms_vulnerability.jpg)
 
 Vulnerabilities are used for risk assessments. The object type is optionally if your threats from catalogs already combine threat and vulnerability, for example in IT-Grundschutz.
 
@@ -145,7 +145,7 @@ Vulnerabilities are used for risk assessments. The object type is optionally if 
 
 ## SOA Measure
 
-[![SOA Measure](../../assets/images/de/i-doit-add-ons/isms/object-types-and-categories/isms_control.jpg)](../../assets/images/de/i-doit-add-ons/isms/object-types-and-categories/isms_control.jpg)
+[![SOA Measure](../../assets/images/en/i-doit-add-ons/isms/object-types-and-categories/isms_control.jpg)](../../assets/images/en/i-doit-add-ons/isms/object-types-and-categories/isms_control.jpg)
 
 SOA measures contain the measures applied or planned in the organization. You can import measures from catalogs and link them with Annex A measures.
 
@@ -161,7 +161,7 @@ SOA measures contain the measures applied or planned in the organization. You ca
 
 ## Virtual ISMS Location
 
-[![Virtual ISMS Location](../../assets/images/de/i-doit-add-ons/isms/object-types-and-categories/isms_virtual_location.jpg)](../../assets/images/de/i-doit-add-ons/isms/object-types-and-categories/isms_virtual_location.jpg)
+[![Virtual ISMS Location](../../assets/images/en/i-doit-add-ons/isms/object-types-and-categories/isms_virtual_location.jpg)](../../assets/images/en/i-doit-add-ons/isms/object-types-and-categories/isms_virtual_location.jpg)
 
 The virtual ISMS location is a helper object for structuring the location tree, especially when location rights are enabled. You can assign SOA measures to this virtual location. This keeps the location tree for infrastructure organized.
 

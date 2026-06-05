@@ -43,7 +43,7 @@ If prompted, overwrite everything by entering **A**.
 
 Now open the web interface updater, select the update to v1.8 and perform the update.
 
-[![Update from 1.7.4 to 1.8](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/1-u18-119.png)](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/1-u18-119.png)
+[![Update from 1.7.4 to 1.8](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/1-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/1-u18-119.png)
 
 !!! warning "**Possible error**"
     PHP Fatal error: Call to an undefined method idoit\Component\ContainerFacade::has() in /var/www/html/src/idoit/Model/Summary/SystemSummary.php on line 185
@@ -64,7 +64,7 @@ sudo -u www-data unzip idoit-1.9-update.zip
 If prompted, overwrite everything by entering **A**.
 Now open the web interface updater, select the update to v1.9 and perform the update.
 
-[![Update from 1.8 to 1.9](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/2-u18-119.png)](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/2-u18-119.png)
+[![Update from 1.8 to 1.9](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/2-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/2-u18-119.png)
 
 !!! success "**Check the update logs**"
     Please take the time to review the logs and check whether an error has occurred.
@@ -81,7 +81,7 @@ sudo -u www-data unzip idoit-1.10-update.zip
 If prompted, overwrite everything by entering **A**.
 Now open the web interface updater, select the update to v1.10 and perform the update.
 
-[![Update from 1.9 to 1.10](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/3-u18-119.png)](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/3-u18-119.png)
+[![Update from 1.9 to 1.10](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/3-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/3-u18-119.png)
 
 !!! success "**Check the update logs**"
     Please take the time to review the logs and check whether an error has occurred.
@@ -127,7 +127,7 @@ sudo -u www-data unzip idoit-1.12-update.zip
 If prompted, overwrite everything by entering **A**.
 Now open the web interface updater and the update to v1.12 is displayed and selected; perform the update.
 
-[![Update from 1.11 to 1.12](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/4-u18-119.png)](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/4-u18-119.png)
+[![Update from 1.11 to 1.12](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/4-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/4-u18-119.png)
 
 !!! success "**Check the update logs**"
     Please take the time to review the logs and check whether an error has occurred.
@@ -411,7 +411,7 @@ If prompted, overwrite everything by entering **A**.
 
 Now open the web interface updater. The update to v1.13 is displayed and selected; perform the update.
 
-[![Update from 1.12 to 1.13](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/5-u18-119.png)](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/5-u18-119.png)
+[![Update from 1.12 to 1.13](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/5-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/5-u18-119.png)
 
 You may receive this error:
 
@@ -437,7 +437,7 @@ If prompted, overwrite everything by entering **A**.
 
 Now open the web interface updater. The update to v1.14 is displayed and selected; perform the update.
 
-[![Update from 1.13 to 1.14](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/6-u18-119.png)](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/6-u18-119.png)
+[![Update from 1.13 to 1.14](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/6-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/6-u18-119.png)
 
 !!! success "**Check the update logs**"
     Please take the time to review the logs and check whether an error has occurred.
@@ -466,7 +466,7 @@ If prompted, overwrite everything by entering **A**.
 
 Now open the web interface updater. The update to v1.15 is displayed and selected; perform the update.
 
-[![Update from 1.14 to 1.15](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/7-u18-119.png)](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/7-u18-119.png)
+[![Update from 1.14 to 1.15](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/7-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/7-u18-119.png)
 
 !!! success "**Check the system and i-doit**"
     Check your system and i-doit!
@@ -485,7 +485,7 @@ If prompted, overwrite everything by entering **A**.
 
 Now open the web interface updater. The update to v1.16 is displayed and selected; perform the update.
 
-[![Update from 1.15 to 1.16](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/8-u18-119.png)](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/8-u18-119.png)
+[![Update from 1.15 to 1.16](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/8-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/8-u18-119.png)
 
 !!! success "**Check the system and i-doit**"
     Check your system and i-doit!
@@ -504,7 +504,7 @@ If prompted, overwrite everything by entering **A**.
 
 Now open the web interface updater. The update to v1.17 is displayed and selected; perform the update.
 
-[![Update from 1.16 to 1.17](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/9-u18-119.png)](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/9-u18-119.png)
+[![Update from 1.16 to 1.17](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/9-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/9-u18-119.png)
 
 !!! success "**Check the system and i-doit**"
     Check your system and i-doit!
@@ -521,7 +521,7 @@ If prompted, overwrite everything by entering **A**.
 
 Now open the web interface updater. The update to v1.18 is displayed and selected; perform the update.
 
-[![Update from 1.17 to 1.18](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/10-u18-119.png)](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/10-u18-119.png)
+[![Update from 1.17 to 1.18](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/10-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/10-u18-119.png)
 
 !!! success "**Check the system and i-doit**"
     Check your system and i-doit!
@@ -662,7 +662,7 @@ If you attempt the update without PHP 7.4, you will see this message:
 
 Now open the web interface updater. The update to v1.19 is displayed and selected; perform the update.
 
-[![Update from 1.18 to 1.19](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/11-u18-119.png)](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/11-u18-119.png)
+[![Update from 1.18 to 1.19](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/11-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/11-u18-119.png)
 
 !!! success "**Check the system and i-doit**"
 
@@ -682,7 +682,7 @@ If prompted, overwrite everything by entering **A**.
 
 In the web interface, verify that the update to version 20 is displayed and selected, then perform the update.
 
-[![Update from 1.19 to 20](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/12-u18-119.png)](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/12-u18-119.png)
+[![Update from 1.19 to 20](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/12-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/12-u18-119.png)
 
 !!! success "**Check the update logs**"
     Please take the time to review the logs and check whether an error has occurred.
@@ -701,7 +701,7 @@ If prompted, overwrite everything by entering **A**.
 
 In the web interface of the updater, verify that the update to version 29 is displayed and selected, then perform the update.
 
-[![Update from 20 to 29](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/13-u18-119.png)](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/13-u18-119.png)
+[![Update from 20 to 29](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/13-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/13-u18-119.png)
 
 !!! success "**Check the update logs**"
     Please take the time to review the logs and check whether an error has occurred.
@@ -852,7 +852,7 @@ If prompted, overwrite everything by entering **A**.
 
 In the web interface updater, verify that the update to version 34 is displayed and selected, then perform the update.
 
-[![Update from 29 to 34](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/14-u18-119.png)](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/14-u18-119.png)
+[![Update from 29 to 34](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/14-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/14-u18-119.png)
 
 !!! success "**Check the update logs**"
     Please take the time to review the logs and check whether an error has occurred.

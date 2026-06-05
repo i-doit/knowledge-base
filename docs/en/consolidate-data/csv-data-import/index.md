@@ -18,17 +18,17 @@ With the CSV data import you transfer tabular data from Microsoft Excel, OpenOff
 
 The CSV file must be in `.csv` format with **UTF-8** encoding. If your spreadsheet application cannot set the encoding when saving, convert the file afterwards with a text editor. In the screenshot you can see the **Convert to UTF-8** function in [Notepad++](https://notepad-plus-plus.org/):
 
-[![Encoding in Notepad++](../../assets/images/de/daten-konsolidieren/csv-import/1-csvi.png)](../../assets/images/de/daten-konsolidieren/csv-import/1-csvi.png)
+[![Encoding in Notepad++](../../assets/images/en/consolidate-data/csv-data-import/1-csvi.png)](../../assets/images/en/consolidate-data/csv-data-import/1-csvi.png)
 
 The structure of a usable .csv file looks approximately like the following example:
 
-[![Structure of a CSV](../../assets/images/de/daten-konsolidieren/csv-import/2-csvi.png)](../../assets/images/de/daten-konsolidieren/csv-import/2-csvi.png)
+[![Structure of a CSV](../../assets/images/en/consolidate-data/csv-data-import/2-csvi.png)](../../assets/images/en/consolidate-data/csv-data-import/2-csvi.png)
 
 The first row serves as a header and identifies the respective [attribute](../../basics/it-documentation-structure.md). Each additional row corresponds to an [object](../../glossary.md) in the IT documentation.
 
 Alternatively, you can also create CSV files with a text editor.
 
-[![CSV in text editor](../../assets/images/de/daten-konsolidieren/csv-import/3-csvi.png)](../../assets/images/de/daten-konsolidieren/csv-import/3-csvi.png)
+[![CSV in text editor](../../assets/images/en/consolidate-data/csv-data-import/3-csvi.png)](../../assets/images/en/consolidate-data/csv-data-import/3-csvi.png)
 
 Once the `.csv` file is prepared, you can start the import.
 
@@ -40,13 +40,13 @@ The CSV data import can be found under **Extras → Import → CSV Import**. No 
 2. The file appears in the list. Hover over the row -- the actions **Use for import**, **Download file**, and **Delete file** are displayed.
 3. Click **Use for import** to proceed to the next step.
 
-[![CSV for import](../../assets/images/de/daten-konsolidieren/csv-import/4-csvi.png)](../../assets/images/de/daten-konsolidieren/csv-import/4-csvi.png)
+[![CSV for import](../../assets/images/en/consolidate-data/csv-data-import/4-csvi.png)](../../assets/images/en/consolidate-data/csv-data-import/4-csvi.png)
 
 ## Setting options
 
 Before configuring the mapping, you first set some options.
 
-[![CSV import options](../../assets/images/de/daten-konsolidieren/csv-import/5-csvi.png)](../../assets/images/de/daten-konsolidieren/csv-import/5-csvi.png)
+[![CSV import options](../../assets/images/en/consolidate-data/csv-data-import/5-csvi.png)](../../assets/images/en/consolidate-data/csv-data-import/5-csvi.png)
 
 ### Object type
 
@@ -85,7 +85,7 @@ Click **Prepare mapping** to proceed to the next step.
 
 Select an [**object matching profile**](../identify-objects-during-imports.md) if you want to update existing objects. You can edit the profile at any time afterwards.
 
-[![Identify objects](../../assets/images/de/daten-konsolidieren/csv-import/6-csvi.png)](../../assets/images/de/daten-konsolidieren/csv-import/6-csvi.png)
+[![Identify objects](../../assets/images/en/consolidate-data/csv-data-import/6-csvi.png)](../../assets/images/en/consolidate-data/csv-data-import/6-csvi.png)
 
 ## Assigning columns to attributes
 
@@ -97,7 +97,7 @@ Each column of your CSV file receives its own row in the mapping. You link them 
 
 Repeat the process for all relevant columns. Assignments can be removed afterwards. Columns without an assignment are ignored by the import.
 
-[![Attribute assignments](../../assets/images/de/daten-konsolidieren/csv-import/7-csvi.png)](../../assets/images/de/daten-konsolidieren/csv-import/7-csvi.png)
+[![Attribute assignments](../../assets/images/en/consolidate-data/csv-data-import/7-csvi.png)](../../assets/images/en/consolidate-data/csv-data-import/7-csvi.png)
 
 ## Required fields
 
@@ -118,13 +118,13 @@ Below the mapping, you set the **level of detail for logging**. Detailed logging
 
 Click **Import** to start the import. After completion, i-doit shows a summary with direct links to the imported or updated objects. You can adjust these manually at any time.
 
-[![List of imported objects](../../assets/images/de/daten-konsolidieren/csv-import/8-csvi.png)](../../assets/images/de/daten-konsolidieren/csv-import/8-csvi.png)
+[![List of imported objects](../../assets/images/en/consolidate-data/csv-data-import/8-csvi.png)](../../assets/images/en/consolidate-data/csv-data-import/8-csvi.png)
 
 ## Overwriting object types during CSV import
 
 With the option **Can the CSV import overwrite the object type?** you change object types directly during the import.
 
-[![Overwrite option](../../assets/images/de/daten-konsolidieren/csv-import/11-csvi.png)](../../assets/images/de/daten-konsolidieren/csv-import/11-csvi.png)
+[![Overwrite option](../../assets/images/en/consolidate-data/csv-data-import/11-csvi.png)](../../assets/images/en/consolidate-data/csv-data-import/11-csvi.png)
 
 !!! note "This option can be found in the expert settings as `import.csv.overwrite-objecttype`."
 
@@ -134,7 +134,7 @@ With the option **Can the CSV import overwrite the object type?** you change obj
 
 You can also create [relationships](../../basics/object-relationships.md) between objects via the CSV import. Place the object to be linked in a separate column and assign the corresponding attribute during mapping. An example for the physical location in column H:
 
-[![Linking relationships](../../assets/images/de/daten-konsolidieren/csv-import/9-csvi.png)](../../assets/images/de/daten-konsolidieren/csv-import/9-csvi.png)
+[![Linking relationships](../../assets/images/en/consolidate-data/csv-data-import/9-csvi.png)](../../assets/images/en/consolidate-data/csv-data-import/9-csvi.png)
 
 During mapping you specify:
 
@@ -145,7 +145,7 @@ During mapping you specify:
 !!! note "Note"
     The special assignment is not available for all fields. In that case, only the object title is used for identification of the object to be updated.
 
-[![Special assignment](../../assets/images/de/daten-konsolidieren/csv-import/10-csvi.png)](../../assets/images/de/daten-konsolidieren/csv-import/10-csvi.png)
+[![Special assignment](../../assets/images/en/consolidate-data/csv-data-import/10-csvi.png)](../../assets/images/en/consolidate-data/csv-data-import/10-csvi.png)
 
 ## Importing values with units
 

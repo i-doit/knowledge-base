@@ -177,7 +177,7 @@ To set up the assignment:
 
 During login or synchronization, i-doit compares the user's group memberships in the directory with the configured mappings. If they match, the person group is automatically assigned.
 
-[![ldap-autozuweisung](../../assets/images/de/automatisierung-und-integration/ldap/1-ldap.png)](../../assets/images/de/automatisierung-und-integration/ldap/1-ldap.png)
+[![ldap-autozuweisung](../../assets/images/en/automation-and-integration/ldap/1-ldap.png)](../../assets/images/en/automation-and-integration/ldap/1-ldap.png)
 
 !!! info "memberOf with OpenLDAP"
     The automatic assignment relies on the LDAP query that determines which groups a user belongs to. The memberOf attribute plays an important role here. This attribute must be available as an overlay, which is not the case in many default installations of OpenLDAP. Good articles on the required configuration can be found [here](http://www.adimian.com/blog/2014/10/how-to-enable-memberof-using-openldap/) and [here](https://technicalnotes.wordpress.com/2014/04/19/openldap-setup-with-memberof-overlay/).
@@ -190,7 +190,7 @@ A detailed guide can be found in the article [Import users and groups from AD/LD
 
 The executing user requires supervisor permissions on the categories **Group membership** and **Person groups > Members** as well as on the object types **Persons** and **Person groups**.
 
-[![ldap-sync](../../assets/images/de/automatisierung-und-integration/ldap/2-ldap.png)](../../assets/images/de/automatisierung-und-integration/ldap/2-ldap.png)
+[![ldap-sync](../../assets/images/en/automation-and-integration/ldap/2-ldap.png)](../../assets/images/en/automation-and-integration/ldap/2-ldap.png)
 
 ## Logging
 

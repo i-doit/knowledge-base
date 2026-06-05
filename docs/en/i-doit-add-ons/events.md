@@ -15,13 +15,13 @@ With the Events [add-on](./index.md), you automate actions when changes are made
 
 Under **Administration → Permissions → Events**, [permissions for persons and person groups](../efficient-documentation/permission-management/index.md) can be adjusted.
 
-[![Assigning rights](../assets/images/de/i-doit-add-ons/events/1-eve.png)](../assets/images/de/i-doit-add-ons/events/1-eve.png)
+[![Assigning rights](../assets/images/en/i-doit-add-ons/events/1-eve.png)](../assets/images/en/i-doit-add-ons/events/1-eve.png)
 
 ## Configuration
 
 The configuration is accessed via **Administration → Add-ons → Events → Hooks**.
 
-[![Configuration](../assets/images/de/i-doit-add-ons/events/2-eve.png)](../assets/images/de/i-doit-add-ons/events/2-eve.png)
+[![Configuration](../assets/images/en/i-doit-add-ons/events/2-eve.png)](../assets/images/en/i-doit-add-ons/events/2-eve.png)
 
 !!! attention "404 Not Found"
     If only an error message appears when accessing the event configuration, stating that the page could not be found, this is most likely due to an incorrect [web server configuration](../administration/management/tenant-management/index.md). Both the Apache rewrite module must be activated and reading the .htaccess file in the i-doit installation directory must be perwithted (AllowOverride All).
@@ -47,7 +47,7 @@ When a configured event occurs, i-doit immediately executes a shell script. Note
 - On GNU/Linux, set the execute permission bit (`chmod +x`).
 - Any programming language is supported, as long as the operating system supports it (Bash, PHP, Python, Perl, etc.).
 
-[![Command call](../assets/images/de/i-doit-add-ons/events/3-eve.png)](../assets/images/de/i-doit-add-ons/events/3-eve.png)
+[![Command call](../assets/images/en/i-doit-add-ons/events/3-eve.png)](../assets/images/en/i-doit-add-ons/events/3-eve.png)
 
 The shell script receives information about the event as BASE64-encoded JSON. Here is an example after decoding -- it shows saving a category entry:
 
@@ -170,7 +170,7 @@ You can configure additional static parameters that are passed to the shell scri
 
 Each execution of an event command call is logged. The last 500 entries can be found under **Administration → Add-ons → Events → History (Log)**.
 
-[![Logging](../assets/images/de/i-doit-add-ons/events/4-eve.png)](../assets/images/de/i-doit-add-ons/events/4-eve.png)
+[![Logging](../assets/images/en/i-doit-add-ons/events/4-eve.png)](../assets/images/en/i-doit-add-ons/events/4-eve.png)
 
 ## Releases
 

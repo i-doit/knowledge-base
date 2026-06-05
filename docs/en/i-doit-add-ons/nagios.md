@@ -28,7 +28,7 @@ Set up the configuration under **Administration → Import and interfaces → Mo
 
 Under **Add-ons → Nagios** the base configurations are created.
 
-[![Nagios extras](../assets/images/de/automatisierung-und-integration/network-monitoring/nagios/2-nag.png)](../assets/images/de/automatisierung-und-integration/network-monitoring/nagios/2-nag.png)
+[![Nagios extras](../assets/images/en/automation-and-integration/network-monitoring/nagios/2-nag.png)](../assets/images/en/automation-and-integration/network-monitoring/nagios/2-nag.png)
 
 This includes the main configuration, service and host templates, and other basic settings. All values are identical to the Nagios configuration.
 

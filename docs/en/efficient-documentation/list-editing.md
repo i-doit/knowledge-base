@@ -14,11 +14,11 @@ Accessing List Editing
 
 You can find list editing under **Extras → CMDB → List Editing**.
 
-[![list-editing-find](../assets/images/de/effizientes-dokumentieren/listeneditierung/1-le.png)](../assets/images/de/effizientes-dokumentieren/listeneditierung/1-le.png)
+[![list-editing-find](../assets/images/en/efficient-documentation/list-editing/1-le.png)](../assets/images/en/efficient-documentation/list-editing/1-le.png)
 
 Alternatively, you can access list editing by selecting the checkboxes of multiple objects within an [object list](../basics/object-list/index.md) and then using the **Edit** button.
 
-[![list-editing-edit](../assets/images/de/effizientes-dokumentieren/listeneditierung/2-le.gif)](../assets/images/de/effizientes-dokumentieren/listeneditierung/2-le.gif)
+[![list-editing-edit](../assets/images/en/efficient-documentation/list-editing/2-le.gif)](../assets/images/en/efficient-documentation/list-editing/2-le.gif)
 
 Selecting Objects and Category to Edit
 -------------------------------------------------
@@ -26,7 +26,7 @@ Selecting Objects and Category to Edit
 If you access list editing via the Extras menu, you can select the objects to edit in the next step. Additionally, you can specify which [category](../basics/it-documentation-structure.md) you want to edit.
 A filter can also be defined to restrict the displayed entries to a defined selection. For example, you can display only software assignments for a specific software.
 
-[![list-editing-selection](../assets/images/de/effizientes-dokumentieren/listeneditierung/3-le.gif)](../assets/images/de/effizientes-dokumentieren/listeneditierung/3-le.gif)
+[![list-editing-selection](../assets/images/en/efficient-documentation/list-editing/3-le.gif)](../assets/images/en/efficient-documentation/list-editing/3-le.gif)
 
 Performing List Editing
 ---------------------------------
@@ -39,4 +39,4 @@ The placeholder **##COUNT**\## enables automatic sequential numbering of records
 
 A counter shows you the number of changes made.
 
-[![list-editing-edit](../assets/images/de/effizientes-dokumentieren/listeneditierung/4-le.gif)](../assets/images/de/effizientes-dokumentieren/listeneditierung/4-le.gif)
+[![list-editing-edit](../assets/images/en/efficient-documentation/list-editing/4-le.gif)](../assets/images/en/efficient-documentation/list-editing/4-le.gif)

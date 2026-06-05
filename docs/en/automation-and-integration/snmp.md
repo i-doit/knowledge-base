@@ -22,7 +22,7 @@ With the SNMP category, you read SNMP values from objects in real time and displ
 
 3. Ensure that a valid host address is documented in the corresponding category.
 
-[![snmp-hostaddress](../assets/images/de/automatisierung-und-integration/service-desk/snmp/1-snmp.png)](../assets/images/de/automatisierung-und-integration/service-desk/snmp/1-snmp.png)
+[![snmp-hostaddress](../assets/images/en/automation-and-integration/snmp/1-snmp.png)](../assets/images/en/automation-and-integration/snmp/1-snmp.png)
 
 First test the SNMP connection via SSH on the server. Install the `snmp` package for the `snmpwalk` command and check reachability:
 
