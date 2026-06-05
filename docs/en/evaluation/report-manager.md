@@ -208,7 +208,7 @@ You can assign permissions for the Report Manager to users and user groups (obje
 *   **Import report**
 *   **Self-created reports**
 
-[![assign-permissions](../assets/images/de/auswertungen/report-manager/14-rm.png)](../assets/images/de/auswertungen/report-manager/14-rm.png
+[![assign-permissions](../assets/images/en/evaluation/report-manager/14-rm.png)](../assets/images/en/evaluation/report-manager/14-rm.png
 
 ## Variable Reports
 
