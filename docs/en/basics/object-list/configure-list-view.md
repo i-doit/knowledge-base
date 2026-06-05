@@ -12,9 +12,9 @@ The view of [object lists](index.md) can be individually configured per list and
 
 ## Accessing the configuration
 
-The configuration of the respective object list is accessed via the [![system-settings](../../assets/images/de/grundlagen/listenansicht-konfigurieren/1-lk.svg)](../../assets/images/de/grundlagen/listenansicht-konfigurieren/1-lk.svg) button in the [navigation and filter bar](navigate-and-filter.md). Alternatively, navigate via **Administration → User settings → Object lists → [Object type]**.
+The configuration of the respective object list is accessed via the [![system-settings](../../assets/images/en/basics/object-list/configuration-of-the-list-view/1-cotlv.svg)](../../assets/images/en/basics/object-list/configuration-of-the-list-view/1-cotlv.svg) button in the [navigation and filter bar](navigate-and-filter.md). Alternatively, navigate via **Administration → User settings → Object lists → [Object type]**.
 
-[![object-lists](../../assets/images/de/grundlagen/listenansicht-konfigurieren/2-lk.png)](../../assets/images/de/grundlagen/listenansicht-konfigurieren/2-lk.png)
+[![object-lists](../../assets/images/en/basics/object-list/configuration-of-the-list-view/2-cotlv.png)](../../assets/images/en/basics/object-list/configuration-of-the-list-view/2-cotlv.png)
 
 ## Selecting attributes
 
@@ -22,9 +22,9 @@ Similar to the [Report Manager](../../evaluation/report-manager.md), columns are
 
 First, a [global, specific](../it-documentation-structure.md) or [custom](../custom-categories.md) category is selected in the drop-down menu. A text field allows filtering the list of categories.
 
-When a category is selected, the attributes that can be defined as columns appear. Clicking the [![plus](../../assets/images/de/grundlagen/listenansicht-konfigurieren/3-lk.svg)](../../assets/images/de/grundlagen/listenansicht-konfigurieren/3-lk.svg) button adds the attribute to the selected attributes.
+When a category is selected, the attributes that can be defined as columns appear. Clicking the [![plus](../../assets/images/en/basics/object-list/configuration-of-the-list-view/3-cotlv.svg)](../../assets/images/en/basics/object-list/configuration-of-the-list-view/3-cotlv.svg) button adds the attribute to the selected attributes.
 
-The list of selected attributes can be manipulated. The order can be influenced via drag-and-drop. The higher the attribute in the selection, the further left it is displayed in the object list. Via the [![delete](../../assets/images/de/grundlagen/listenansicht-konfigurieren/4-lk.svg)](../../assets/images/de/grundlagen/listenansicht-konfigurieren/4-lk.svg) button, an attribute is removed.
+The list of selected attributes can be manipulated. The order can be influenced via drag-and-drop. The higher the attribute in the selection, the further left it is displayed in the object list. Via the [![delete](../../assets/images/en/basics/object-list/configuration-of-the-list-view/4-cotlv.svg)](../../assets/images/en/basics/object-list/configuration-of-the-list-view/4-cotlv.svg) button, an attribute is removed.
 
 !!! info "Limitation"
     Not all attributes of all categories are available.
@@ -70,13 +70,13 @@ Each object list has a default configuration. If you want to reset the object li
 
 If you want to set an object list as the default list, click the **Define as [Tenant name] default list** button in the **Define configuration as default** field. This also affects object lists that have already been changed by other users.
 
-[![set-default](../../assets/images/de/grundlagen/listenansicht-konfigurieren/5-lk.png)](../../assets/images/de/grundlagen/listenansicht-konfigurieren/5-lk.png)
+[![set-default](../../assets/images/en/basics/object-list/configuration-of-the-list-view/5-cotlv.png)](../../assets/images/en/basics/object-list/configuration-of-the-list-view/5-cotlv.png)
 
 ## Assigning the configuration to other users
 
 If you want to predefine a specific object list for other users, select them in the **Assign configuration to other users** field via an object browser. Then confirm the selection with the **Overwrite configuration** button.
 
-[![assign-users](../../assets/images/de/grundlagen/listenansicht-konfigurieren/6-lk.png)](../../assets/images/de/grundlagen/listenansicht-konfigurieren/6-lk.png)
+[![assign-users](../../assets/images/en/basics/object-list/configuration-of-the-list-view/6-cotlv.png)](../../assets/images/en/basics/object-list/configuration-of-the-list-view/6-cotlv.png)
 
 ## Saving the configuration
 
