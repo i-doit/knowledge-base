@@ -58,7 +58,7 @@ Furthermore, the display can be influenced by the **Service Filter**. Here, cond
 
 In addition to the relationship type, its weighting, and the displayed object types, the depth of the display and the CMDB status of the objects can be set as conditions.
 
-[![service-filter](../../assets/images/de/auswertungen/cmdb-explorer/5-ce.png)](../../assets/images/de/auswertungen/cmdb-explorer/5-ce.png)
+[![service-filter](../../assets/images/en/evaluation/cmdb-explorer/5-ce.png)](../../assets/images/en/evaluation/cmdb-explorer/5-ce.png)
 
 Via the **Change orientation** button, the display direction is adjusted. Here it is possible to have the display run either from top to bottom or from left to right. For extensive visualizations, the left-to-right display is recommended. Furthermore, it is possible to select the display type.
 
