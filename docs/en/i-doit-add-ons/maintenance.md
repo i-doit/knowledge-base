@@ -131,7 +131,7 @@ The form for creating and editing offers the following Options:
 
 You can populate both the **Title** and the **Content** with placeholders that are replaced before sending. The list of available placeholders can also be found on the page.
 
-[![E-Mail-Vorlage](../assets/images/de/i-doit-add-ons/maintenance/11-main.png)](../assets/images/de/i-doit-add-ons/maintenance/11-main.png)
+[![E-Mail-Vorlage](../assets/images/en/i-doit-add-ons/maintenance/11-main.png)](../assets/images/en/i-doit-add-ons/maintenance/11-main.png)
 
 ## Sending emails automatically
 
