@@ -124,7 +124,7 @@ For **1-to-1 relationships**, you can type directly into the text field -- i-doi
 
 The object browser adapts to the respective relationship type -- not all functions described here are always available. Often the selection of filters is limited because only objects of certain object types are allowed.
 
-If the selection of the referenced object is done via radio buttons, only a single selection is possible. However, if the [![image](../assets/images/de/grundlagen/attributfelder/hinzufuegen.png)](../assets/images/de/grundlagen/attributfelder/hinzufuegen.png) buttons are available, a multiple selection is possible.
+If the selection of the referenced object is done via radio buttons, only a single selection is possible. However, if the [![image](../assets/images/en/basics/attribute-fields/hinzufuegen.png)](../assets/images/en/basics/attribute-fields/hinzufuegen.png) buttons are available, a multiple selection is possible.
 
 In the upper area there are several tabs:
 
