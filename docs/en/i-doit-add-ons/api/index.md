@@ -143,7 +143,7 @@ This table serves as a guide for where to find the required identifiers and cons
 
 Here you can find v2 API requests with their request types, response types, arguments and the form of the request.
 
-[![Endpoint documentation](../../assets/images/de/i-doit-add-ons/api/endpunkt-doku.png)](../../assets/images/de/i-doit-add-ons/api/endpunkt-doku.png)
+[![Endpoint documentation](../../assets/images/en/i-doit-add-ons/api/endpunkt-doku.png)](../../assets/images/en/i-doit-add-ons/api/endpunkt-doku.png)
 
 ## Clients and Libraries
 
