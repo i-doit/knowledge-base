@@ -100,7 +100,7 @@ To set conditions on attributes of linked objects, select the attribute with the
 
 Through i-doit updates, the Query Editor may also change, so that queries are constructed differently than before. To ensure that reports always use the current logic, it is necessary to update these queries. This is possible either via the [Administration](../administration/management/tenant-management/system-repair-and-cleanup.md) or via the [i-doit console utility](../automation-and-integration/cli/index.md).
 
-[![Update reports](../assets/images/de/auswertungen/report-manager/15-rm.png)](../assets/images/de/auswertungen/report-manager/15-rm.png)
+[![Update reports](../assets/images/en/evaluation/report-manager/15-rm.png)](../assets/images/en/evaluation/report-manager/15-rm.png)
 
 ### SQL Editor
 
