@@ -23,7 +23,7 @@ As part of the structural analysis, you ensure that all objects required for doc
 
 To reduce complexity, you group similar objects in the Target Object Group object type. The object group type must remain set to "static". You then assign the Target Object Group to the information domain via the "Information Domains" category.
 
-[![Target Object Groups](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/zielobjektgruppe-beispiel.png)](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/zielobjektgruppe-beispiel.png){:target="_blank"}
+[![Target Object Groups](../../assets/images/en/i-doit-add-ons/viva2/structural-analysis/targetobjectgroup-example.png)](../../assets/images/en/i-doit-add-ons/viva2/structural-analysis/targetobjectgroup-example.png){:target="_blank"}
 
 !!! note "It is technically possible to assign a Target Object Group to multiple information domains, but it is recommended to always assign a target group to only one information domain."
 
@@ -42,13 +42,13 @@ For all relevant objects, responsibilities should be documented via the Contact 
 
 The cleaned network plan should be linked in the "Information Domain" category on the information domain.
 
-[![Cleaned Network Plan](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/netzplan.png)](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/netzplan.png){:target="_blank"}
+[![Cleaned Network Plan](../../assets/images/en/i-doit-add-ons/viva2/structural-analysis/adjusted-network.png)](../../assets/images/en/i-doit-add-ons/viva2/structural-analysis/adjusted-network.png){:target="_blank"}
 
 ## Communication Links
 
 The communication links to be documented are maintained via the new [Communication Link object type](objecttypes-categories.md#kommunikationsverbindung) in i-doit.
 
-[![Communication Links](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/kommunikationsverbindungen.png)](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/kommunikationsverbindungen.png){:target="_blank"}
+[![Communication Links](../../assets/images/en/i-doit-add-ons/viva2/structural-analysis/communication-link.png)](../../assets/images/en/i-doit-add-ons/viva2/structural-analysis/communication-link.png){:target="_blank"}
 
 Communication links are typically assigned directly to the information domain, which is why the "IT-Grundschutz (Target Objects)" category is initially assigned to the "Communication Link" object type. In the "Information Domains" category, you then assign the corresponding information domain.
 

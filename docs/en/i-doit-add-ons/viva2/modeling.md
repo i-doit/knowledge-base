@@ -12,13 +12,13 @@ When modeling the information domain, you assign the modules from the Grundschut
 
 You assign process modules to the information domain via the "Process Modules" category.
 
-[![Assigning process modules](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/zielobjektgruppe-beispiel.png)](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/zielobjektgruppe-beispiel.png){:target="_blank"}
+[![Assigning process modules](../../assets/images/en/i-doit-add-ons/viva2/modeling/process-modules.png)](../../assets/images/en/i-doit-add-ons/viva2/modeling/process-modules.png){:target="_blank"}
 
 Here you assign all relevant process modules to the information domain.
 
 You assign modules for target objects/target object groups via the "Assigned Modules" category on the respective target object or target object group.
 
-[![Assigning modules](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/zielobjektgruppe-beispiel.png)](../../assets/images/de/i-doit-add-ons/viva2/structural-analysis/zielobjektgruppe-beispiel.png){:target="_blank"}
+[![Assigning modules](../../assets/images/en/i-doit-add-ons/viva2/modeling/assigned-modules.png)](../../assets/images/en/i-doit-add-ons/viva2/modeling/assigned-modules.png){:target="_blank"}
 
 Here you assign all system modules relevant to this target object or target object group. You can also assign process modules if this is appropriate at this point (e.g., differing backup concepts for individual objects).
 
