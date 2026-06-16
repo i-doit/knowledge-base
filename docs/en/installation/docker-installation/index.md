@@ -8,7 +8,7 @@ lang: en
 
 # Docker Installation
 
-i-doit can be fully operated in Docker containers. Two installation paths are available — either with the official synetics container images (recommended, fastest path) or with self-built containers based on a chosen Linux distribution.
+i-doit can be fully operated in Docker containers. Two installation paths are available — either with the official container images from the i-doit group (recommended, fastest path) or with self-built containers based on a chosen Linux distribution.
 
 ## Requirements
 
@@ -19,9 +19,9 @@ i-doit can be fully operated in Docker containers. Two installation paths are av
 
 ## Installation paths
 
-### With official synetics images (recommended)
+### With official images from the i-doit group (recommended)
 
-Prebuilt stack of two hardened containers (`app` with Apache + PHP + i-doit, `db` with MariaDB). The images are provided publicly by synetics — no image build required, faster setup, integrated healthchecks. Optionally extended by nginx for TLS termination.
+Prebuilt stack of two hardened containers (`app` with Apache + PHP + i-doit, `db` with MariaDB). The images are provided publicly by the i-doit group — no image build required, faster setup, integrated healthchecks. Optionally extended by nginx for TLS termination.
 
 | Container | Image | Purpose |
 |-----------|-------|---------|

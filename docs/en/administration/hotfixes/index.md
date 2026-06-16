@@ -97,3 +97,11 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 !!! note "You need to install the fixed Version via the [Admin-Center](../admin-center.md)."
 
 [hotfix-i-doit-flows-1.3.0.zip :material-file-download:](../../assets/downloads/hotfixes/flows/hotfix-i-doit-flows-1.3.0.zip){ .md-button .md-button--primary }
+
+## JDisc Connector
+
+### Importing layer-3-nets causes duplicated link-local nets (JDisc-112)
+
+??? info "This Hotfix is a new JDisc version and can be installed either bei extracting the file at the i-doit directory or by installing it like a normal add-on"
+
+[module-i-doit-jdisc-1.0.5.zip :material-file-download:](../../assets/downloads/hotfixes/jdisc/module-i-doit-jdisc-1.0.5.zip){ .md-button .md-button--primary }
