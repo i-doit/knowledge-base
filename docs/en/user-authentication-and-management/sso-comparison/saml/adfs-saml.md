@@ -184,63 +184,63 @@ The configuration of the Linux server is now complete for the time being. In the
 
 First download the `mellon_metadata.xml` from the Linux server (e.g. via WinSCP). Then open the AD FS Management and create a new Relying Party Trust:
 
-[![Add Relying Party Trust](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-1.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-1.png)
+[![Add Relying Party Trust](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-1.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-1.png)
 
 Leave **Claims aware** active and click **Start**.
 
-[![Welcome](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-2.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-2.png)
+[![Welcome](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-2.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-2.png)
 
 In the next step, select **Import data from a file** and navigate to the previously saved XML file.
 
-[![Select data source](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-3.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-3.png)
+[![Select data source](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-3.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-3.png)
 
 The following notice can be ignored if it appears.
 
-[![AD FS Management](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-4.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-4.png)
+[![AD FS Management](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-4.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-4.png)
 
 Enter the FQDN of your Linux server.
 
-[![Specify display name](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-5.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-5.png)
+[![Specify display name](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-5.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-5.png)
 
 In the next step you can configure access control. To start, leave the setting at **Permit everyone**.
 
-[![Choose access control policy](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-6.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-6.png)
+[![Choose access control policy](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-6.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-6.png)
 
 You can skip the next window -- click **Next**.
 
-[![Ready to add trust](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-7.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-7.png)
+[![Ready to add trust](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-7.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-7.png)
 
 Click **Close** -- the Relying Party Trust is now created.
 
-[![Finish](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-8.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-8.png)
+[![Finish](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-8.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-8.png)
 
 Now define the **Claim Issuance Policies** so that users can log in via email.
 
-[![AD FS edit claim](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-9.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-9.png)
+[![AD FS edit claim](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-9.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-9.png)
 
 A window opens -- click **Add Rule**.
 
-[![Add rule](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-10.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-10.png)
+[![Add rule](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-10.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-10.png)
 
 Select **Send LDAP Attributes as Claim** and click **Next**.
 
-[![Choose rule type](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-11.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-11.png)
+[![Choose rule type](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-11.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-11.png)
 
 Give the rule a unique name and add the mapping as shown.
 
-[![Configure claim rule](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-12.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-12.png)
+[![Configure claim rule](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-12.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-12.png)
 
 Create an additional rule and select **Transform an Incoming Claim**.
 
-[![Select rule template](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-13.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-13.png)
+[![Select rule template](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-13.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-13.png)
 
 Apply the configuration as follows:
 
-[![Configure rule](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-14.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-14.png)
+[![Configure rule](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-14.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-14.png)
 
 The Relying Party Trust is now fully configured. Test the authentication:
 
-[![Login page](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-15.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-15.png)
+[![Login page](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-15.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-15.png)
 
 ## Test SAML-SSO
 
@@ -249,7 +249,7 @@ Open the URL of the server in your browser:
 
 After successful login you should see the following output:
 
-[![Auth users only](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-16.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-16.png)
+[![Auth users only](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-16.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-16.png)
 
 ## Install i-doit
 
@@ -263,7 +263,7 @@ Open the **System settings** tab in the [Admin Center](../../../administration/a
 
     The email address of the respective user must be stored as the login in i-doit!
 
-[![i-doit SSO setting](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-17.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/adfs-saml/saml-17.png)
+[![i-doit SSO setting](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-17.png)](../../../assets/images/en/user-authentication-and-management/sso-comparison/saml/adfs-saml/saml-17.png)
 
 Adjust the VHost configuration so that SSO login works.
 

@@ -10,7 +10,7 @@ lang: en
 
 The navigation and filter functions help you quickly find the desired [objects](../it-documentation-structure.md) in [object lists](index.md).
 
-[![All-fields](../../assets/images/de/grundlagen/navigation-und-filtern/1-nuf.png)](../../assets/images/de/grundlagen/navigation-und-filtern/1-nuf.png)
+[![All-fields](../../assets/images/en/basics/object-list/navigation-and-filtering/1-naf.png)](../../assets/images/en/basics/object-list/navigation-and-filtering/1-naf.png)
 
 ## Navigating
 
@@ -30,7 +30,7 @@ Per user, it can be set [how many objects are displayed per page](advanced-setti
 
     To select a range of objects, the Shift key can also be used in combination with the left mouse button.
 
-    [![All-fields](../../assets/images/de/grundlagen/navigation-und-filtern/2-nuf.gif)](../../assets/images/de/grundlagen/navigation-und-filtern/2-nuf.gif)
+    [![All-fields](../../assets/images/en/basics/object-list/navigation-and-filtering/2-naf.gif)](../../assets/images/en/basics/object-list/navigation-and-filtering/2-naf.gif)
 
 ## Filtering
 
@@ -40,7 +40,7 @@ Via the drop-down menu, you can filter by multiple attributes simultaneously (AN
 
 From version 1.17, you can also filter for empty values. Check the checkbox behind the respective value.
 
-[![Select-objects](../../assets/images/de/grundlagen/navigation-und-filtern/3-nuf.png)](../../assets/images/de/grundlagen/navigation-und-filtern/3-nuf.png)
+[![Select-objects](../../assets/images/en/basics/object-list/navigation-and-filtering/3-naf.png)](../../assets/images/en/basics/object-list/navigation-and-filtering/3-naf.png)
 
 The object list can already be [filtered](configure-list-view.md) when loading.
 
@@ -50,6 +50,6 @@ Further functions are accessible via the navigation and filter bar:
 
 | Button                                                                                                                                                                                                             | Function                                                                                                                      |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------- |
-| [![full-screen-window-filled.svg](../../assets/images/de/grundlagen/navigation-und-filtern/fullscreen-window-filled.svg)](../../assets/images/de/grundlagen/navigation-und-filtern/fullscreen-window-filled.svg)   | The object list is reloaded                                                                                                   |
-| [![separator-vertical-filled.svg](../../assets/images/de/grundlagen/navigation-und-filtern/separator-vertical-filled.svg)](../../assets/images/de/grundlagen/navigation-und-filtern/separator-vertical-filled.svg) | Column widths are automatically set. Otherwise, columns can be varied in width per user.                                      |
-| [![gear.svg](../../assets/images/de/grundlagen/navigation-und-filtern/gear.svg)](../../assets/images/de/grundlagen/navigation-und-filtern/gear.svg)                                                                | [Configure list view](configure-list-view.md)                                                                         |
+| [![full-screen-window-filled.svg](../../assets/images/en/basics/object-list/navigation-and-filtering/fullscreen-window-filled.svg)](../../assets/images/en/basics/object-list/navigation-and-filtering/fullscreen-window-filled.svg)   | The object list is reloaded                                                                                                   |
+| [![separator-vertical-filled.svg](../../assets/images/en/basics/object-list/navigation-and-filtering/separator-vertical-filled.svg)](../../assets/images/en/basics/object-list/navigation-and-filtering/separator-vertical-filled.svg) | Column widths are automatically set. Otherwise, columns can be varied in width per user.                                      |
+| [![gear.svg](../../assets/images/en/basics/object-list/navigation-and-filtering/gear.svg)](../../assets/images/en/basics/object-list/navigation-and-filtering/gear.svg)                                                                | [Configure list view](configure-list-view.md)                                                                         |

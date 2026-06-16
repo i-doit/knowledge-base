@@ -26,7 +26,7 @@ Details on installing the respective extensions and modules can be found in the 
 
 Configure the connection under **Administration → Import and Interfaces → Trouble Ticket System (TTS)**.
 
-[![service-desk-configure](../../assets/images/de/automatisierung-und-integration/service-desk/1-sd.png)](../../assets/images/de/automatisierung-und-integration/service-desk/1-sd.png)
+[![service-desk-configure](../../assets/images/en/automation-and-integration/service-desk/1-sd.png)](../../assets/images/en/automation-and-integration/service-desk/1-sd.png)
 
 | Option                    | Description                                                                                                                                                           |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -39,9 +39,9 @@ Configure the connection under **Administration → Import and Interfaces → Tr
 
 ## Reading Tickets
 
-When you link a ticket in the service desk application with an i-doit object, this link becomes visible in i-doit. Prerequisite: The **Active** option is set to **Yes**. You can access the **All Tickets** category via the speech bubble icon ![service-desk-icon](../../assets/images/de/automatisierung-und-integration/service-desk/2-sd.png).
+When you link a ticket in the service desk application with an i-doit object, this link becomes visible in i-doit. Prerequisite: The **Active** option is set to **Yes**. You can access the **All Tickets** category via the speech bubble icon ![service-desk-icon](../../assets/images/en/automation-and-integration/service-desk/2-sd.png).
 
-[![service-desk-display](../../assets/images/de/automatisierung-und-integration/service-desk/3-sd.png)](../../assets/images/de/automatisierung-und-integration/service-desk/3-sd.png)
+[![service-desk-display](../../assets/images/en/automation-and-integration/service-desk/3-sd.png)](../../assets/images/en/automation-and-integration/service-desk/3-sd.png)
 
 The category lists all linked tickets with detailed information. Clicking on a ticket opens it in the web GUI of the service desk application.
 

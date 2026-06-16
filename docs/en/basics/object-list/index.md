@@ -10,18 +10,18 @@ lang: en
 
 The object lists in i-doit serve not only for the mere listing of [objects](../it-documentation-structure.md), but also provide a variety of functions and can be almost completely customized.
 
-[![object-list](../../assets/images/de/grundlagen/objekt-listen/1-ol.png)](../../assets/images/de/grundlagen/objekt-listen/1-ol.png)
+[![object-list](../../assets/images/en/basics/object-list/1-ol.png)](../../assets/images/en/basics/object-list/1-ol.png)
 
 Per [object type](../it-documentation-structure.md), all assigned objects are displayed in a tabular format in the object list. Each row features an object with its [attributes](../it-documentation-structure.md). Which attributes are displayed can be [configured](../object-list/configure-list-view.md).
 
 Columns can be sorted in ascending or descending order by clicking on the column headers. A [pre-sorting](../object-list/configure-list-view.md) can be configured for this. Additionally, column widths can be varied per user.
 
-[![object-list-2](../../assets/images/de/grundlagen/objekt-listen/2-ol.gif)](../../assets/images/de/grundlagen/objekt-listen/2-ol.gif)
+[![object-list-2](../../assets/images/en/basics/object-list/2-ol.gif)](../../assets/images/en/basics/object-list/2-ol.gif)
 
 Via the hatched area in each row, you assign an object to another object type:
 You drag the object via drag-and-drop to the desired object type in the left menu tree, the **Object view**.
 
-[![object-list-3](../../assets/images/de/grundlagen/objekt-listen/3-ol.gif)](../../assets/images/de/grundlagen/objekt-listen/3-ol.gif)
+[![object-list-3](../../assets/images/en/basics/object-list/3-ol.gif)](../../assets/images/en/basics/object-list/3-ol.gif)
 
 For this, the [interface display](../../administration/management/tenant-management/tenant-settings.md#oberflachendarstellung) Drag 'n' Drop of objects must be set to Yes.
 

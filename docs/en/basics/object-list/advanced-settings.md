@@ -10,7 +10,7 @@ lang: en
 
 The advanced settings allow you to adjust the behavior of [object lists](index.md) to your requirements -- from the number of entries per page to deletion options.
 
-[![Advanced-settings](../../assets/images/de/grundlagen/objekt-liste/erweiterte-einstellungen.png)](../../assets/images/de/grundlagen/objekt-liste/erweiterte-einstellungen.png)
+[![Advanced-settings](../../assets/images/en/basics/object-list/advanced-settings.png)](../../assets/images/en/basics/object-list/advanced-settings.png)
 
 ## Adjusting the number of objects per page
 

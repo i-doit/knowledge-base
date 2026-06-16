@@ -34,7 +34,7 @@ The API is offered as a free [add-on](../index.md) for download in the [customer
 
 The API is configured via the [Web GUI](../../basics/web-gui.md) of i-doit, found under **Administration → Add-ons → JSON-RPC API**.
 
-[![Configuration](../../assets/images/de/i-doit-add-ons/api/1-api.png)](../../assets/images/de/i-doit-add-ons/api/1-api.png)
+[![Configuration](../../assets/images/en/i-doit-add-ons/api/1-api.png)](../../assets/images/en/i-doit-add-ons/api/1-api.png)
 
 !!! info "Info"
     Removing HTML tags from description fields is only possible from i-doit version 1.15.2 with API version 1.11.3 installed.
@@ -122,7 +122,7 @@ In addition to standard JSON-RPC errors, i-doit can also return specific error m
 
 A helpful listing of all categories and attributes used in i-doit can be found in the administration:
 
-[![Categories in the IT documentation](../../assets/images/de/i-doit-add-ons/api/2-api.png)](../../assets/images/de/i-doit-add-ons/api/2-api.png)
+[![Categories in the IT documentation](../../assets/images/en/i-doit-add-ons/api/2-api.png)](../../assets/images/en/i-doit-add-ons/api/2-api.png)
 
 i-doit provides an "Attribute documentation" that contains a listing of all categories and attributes as well as their expected data types. This is the authoritative source for understanding the data elements of the i-doit CMDB model, especially when parameters or response fields use i-doit-specific constants or property keys. For custom categories and attributes, the technical keys can be found directly in the i-doit web interface in the respective custom category.
 
@@ -143,7 +143,7 @@ This table serves as a guide for where to find the required identifiers and cons
 
 Here you can find v2 API requests with their request types, response types, arguments and the form of the request.
 
-[![Endpoint documentation](../../assets/images/de/i-doit-add-ons/api/endpunkt-doku.png)](../../assets/images/de/i-doit-add-ons/api/endpunkt-doku.png)
+[![Endpoint documentation](../../assets/images/en/i-doit-add-ons/api/endpunkt-doku.png)](../../assets/images/en/i-doit-add-ons/api/endpunkt-doku.png)
 
 ## Clients and Libraries
 

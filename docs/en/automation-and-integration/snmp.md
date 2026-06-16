@@ -22,7 +22,7 @@ With the SNMP category, you read SNMP values from objects in real time and displ
 
 3. Ensure that a valid host address is documented in the corresponding category.
 
-[![snmp-hostaddress](../assets/images/de/automatisierung-und-integration/service-desk/snmp/1-snmp.png)](../assets/images/de/automatisierung-und-integration/service-desk/snmp/1-snmp.png)
+[![snmp-hostaddress](../assets/images/en/automation-and-integration/snmp/1-snmp.png)](../assets/images/en/automation-and-integration/snmp/1-snmp.png)
 
 First test the SNMP connection via SSH on the server. Install the `snmp` package for the `snmpwalk` command and check reachability:
 
@@ -58,7 +58,7 @@ Now switch to the SNMP category in i-doit. There, i-doit automatically shows the
 
 For a practical example, use OID `1.3.6.1.2.1.2.2.1.1.14.x` (erroneous packets per interface, where `x` is the interface index). Build a list with it:
 
-[![snmp-list](../assets/images/de/automatisierung-und-integration/service-desk/snmp/2-snmp.png)](../assets/images/de/automatisierung-und-integration/service-desk/snmp/2-snmp.png)
+[![snmp-list](../assets/images/en/automation-and-integration/snmp/2-snmp.png)](../assets/images/en/automation-and-integration/snmp/2-snmp.png)
 
 Save the category. On the next visit, i-doit reads the SNMP values in real time and displays them.
 
@@ -72,4 +72,4 @@ The following table lists useful OIDs to get started:
 | [http://oid-info.com/get/1.3.6.1.2.1.1.4](http://oid-info.com/get/1.3.6.1.2.1.1.4)           | "The textual identification of the contact person for  <br>this managed node, together with information on how to contact this person. If no contact information is known, the value is the zero-length string."                                                                                                                                                                                                                                                                                                                           |
 | [http://oid-info.com/get/1.3.6.1.2.1.1.3](http://oid-info.com/get/1.3.6.1.2.1.1.3)           | "The time (in hundredths of a second) since the  <br>network management portion of the system was last re-initialized."                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
-[![snmp-values](../assets/images/de/automatisierung-und-integration/service-desk/snmp/3-snmp.png)](../assets/images/de/automatisierung-und-integration/service-desk/snmp/3-snmp.png)
+[![snmp-values](../assets/images/en/automation-and-integration/snmp/3-snmp.png)](../assets/images/en/automation-and-integration/snmp/3-snmp.png)

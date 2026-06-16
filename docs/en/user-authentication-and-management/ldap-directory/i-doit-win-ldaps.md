@@ -39,4 +39,4 @@ Then restart Apache2 HTTPD via the command prompt: `C:\i-doit\apache-2.4\bin\htt
 
 Log in to i-doit and create a new server entry under **Administration > Import and Interfaces > LDAP > Server**. Fill in all required fields and set **TLS** to **LDAPS**.
 
-[![i-doit Configuration](../../assets/images/de/benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/i-doit-win-ldaps/i-doit-conf.png)](../../assets/images/de/benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/i-doit-win-ldaps/i-doit-conf.png)
+[![i-doit Configuration](../../assets/images/en/user-authentication-and-management/ldap-directory/i-doit-win-ldaps/i-doit-conf.png)](../../assets/images/en/user-authentication-and-management/ldap-directory/i-doit-win-ldaps/i-doit-conf.png)

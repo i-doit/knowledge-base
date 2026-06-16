@@ -12,7 +12,7 @@ The VIVA2 add-on introduces six new object types, all organized in the object ty
 
 ## Module
 
-[![Module](../../assets/images/de/i-doit-add-ons/viva2/objecttypes-categories/module.jpg)](../../assets/images/de/i-doit-add-ons/viva2/objecttypes-categories/module.jpg){:target="_blank"}
+[![Module](../../assets/images/en/i-doit-add-ons/viva2/objecttypes-categories/module.jpg)](../../assets/images/en/i-doit-add-ons/viva2/objecttypes-categories/module.jpg){:target="_blank"}
 
 The object type "Module" represents the modules from the Grundschutz Compendium. In the default configuration, the following categories belong to objects of the Module type:
 
@@ -29,7 +29,7 @@ The object type "Module" represents the modules from the Grundschutz Compendium.
 
 ## Requirement
 
-[![Requirement](../../assets/images/de/i-doit-add-ons/viva2/objecttypes-categories/requirement.jpg)](../../assets/images/de/i-doit-add-ons/viva2/objecttypes-categories/requirement.jpg){:target="_blank"}
+[![Requirement](../../assets/images/en/i-doit-add-ons/viva2/objecttypes-categories/requirement.jpg)](../../assets/images/en/i-doit-add-ons/viva2/objecttypes-categories/requirement.jpg){:target="_blank"}
 
 The object type "Requirement" represents the requirements from the modules of the Grundschutz Compendium. In the default configuration, the following categories belong to objects of the Requirement type:
 
@@ -42,7 +42,7 @@ The object type "Requirement" represents the requirements from the modules of th
 
 ## Threat
 
-[![Threat](../../assets/images/de/i-doit-add-ons/viva2/objecttypes-categories/threat.jpg)](../../assets/images/de/i-doit-add-ons/viva2/objecttypes-categories/threat.jpg){:target="_blank"}
+[![Threat](../../assets/images/en/i-doit-add-ons/viva2/objecttypes-categories/threat.jpg)](../../assets/images/en/i-doit-add-ons/viva2/objecttypes-categories/threat.jpg){:target="_blank"}
 
 The object type "Threat" represents the threats from the modules of the Grundschutz Compendium. In the default configuration, the following categories belong to objects of the Threat type:
 
@@ -53,7 +53,7 @@ The object type "Threat" represents the threats from the modules of the Grundsch
 
 ## Information Domain
 
-[![Information Domain](../../assets/images/de/i-doit-add-ons/viva2/objecttypes-categories/scope.jpg)](../../assets/images/de/i-doit-add-ons/viva2/objecttypes-categories/scope.jpg){:target="_blank"}
+[![Information Domain](../../assets/images/en/i-doit-add-ons/viva2/objecttypes-categories/scope.jpg)](../../assets/images/en/i-doit-add-ons/viva2/objecttypes-categories/scope.jpg){:target="_blank"}
 
 For each information domain, there is exactly one object of the type "Information Domain". Typically, there is only one Information Domain object, but the VIVA2 add-on also offers the possibility to document multiple information domains. In the default configuration, the following categories belong to objects of the Information Domain type:
 
@@ -78,7 +78,7 @@ For each information domain, there is exactly one object of the type "Informatio
 
 ## Target Object Group
 
-[![Target Object Group](../../assets/images/de/i-doit-add-ons/viva2/objecttypes-categories/targetgroup.jpg)](../../assets/images/de/i-doit-add-ons/viva2/objecttypes-categories/targetgroup.jpg){:target="_blank"}
+[![Target Object Group](../../assets/images/en/i-doit-add-ons/viva2/objecttypes-categories/targetgroup.jpg)](../../assets/images/en/i-doit-add-ons/viva2/objecttypes-categories/targetgroup.jpg){:target="_blank"}
 
 As part of the structural analysis, "similar" target objects should be grouped to reduce complexity. The Target Object Group object type serves to represent this grouping of target objects. In the default configuration, the following categories belong to objects of the Target Object Group type:
 
@@ -98,7 +98,7 @@ As part of the structural analysis, "similar" target objects should be grouped t
 
 ## Communication Link
 
-[![Communication Link](../../assets/images/de/i-doit-add-ons/viva2/objecttypes-categories/communication_link.jpg)](../../assets/images/de/i-doit-add-ons/viva2/objecttypes-categories/communication_link.jpg){:target="_blank"}
+[![Communication Link](../../assets/images/en/i-doit-add-ons/viva2/objecttypes-categories/communication_link.jpg)](../../assets/images/en/i-doit-add-ons/viva2/objecttypes-categories/communication_link.jpg){:target="_blank"}
 
 The object type "Communication Link" serves to document the communication links relevant to the information domain. In the default configuration, the following categories belong to objects of the Communication Link type:
 

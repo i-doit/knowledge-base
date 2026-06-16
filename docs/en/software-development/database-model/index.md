@@ -91,12 +91,12 @@ Specific categories behave the same way. The query for network information of al
 
 **Diagram: Relationship between categories and objects**
 
-**[![datenbankmodell-beziehungen](../../assets/images/de/software-entwicklung/datenbank-modell/1-dm.png)](../../assets/images/de/software-entwicklung/datenbank-modell/1-dm.png)
+**[![datenbankmodell-beziehungen](../../assets/images/en/software-development/database-model/1-dm.png)](../../assets/images/en/software-development/database-model/1-dm.png)
 **
 
 The graphic shows how an object is linked to the global category CPU. This category in turn accesses Dialog+ entries such as the manufacturer and the type. The same happens with the global category Form Factor, which accesses the form factor type.
 
-[![datenbankmodell-formfaktor](../../assets/images/de/software-entwicklung/datenbank-modell/2-dm.png)](../../assets/images/de/software-entwicklung/datenbank-modell/2-dm.png)
+[![datenbankmodell-formfaktor](../../assets/images/en/software-development/database-model/2-dm.png)](../../assets/images/en/software-development/database-model/2-dm.png)
 
 This illustration explains the relationships of an object to the "Host Address" (IP) category. The object itself (e.g., server1) is located in the table isys\_obj. The assigned IP addresses are in the table isys\_catg\_ip\_list. Due to the detailed configuration depth of the host address, three additional tables are referenced besides the basic information (hostname, address, etc.):
 

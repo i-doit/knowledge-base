@@ -76,7 +76,7 @@ This page describes the evaluations provided with the ISMS add-on in **i-doit**.
 
 **Filters:** *Scope* and *Location*.
 
-[![Risk matrix example](../../assets/images/de/i-doit-add-ons/isms/reports/matrix.png)](../../assets/images/de/i-doit-add-ons/isms/reports/matrix.png)
+[![Risk matrix example](../../assets/images/en/i-doit-add-ons/isms/reports/matrix.png)](../../assets/images/en/i-doit-add-ons/isms/reports/matrix.png)
 
 !!! tip "The axes and colors are derived from the assessment criteria, risk formula, and risk classes defined in the [**Configuration**](configuration.md). Adjust these first so you can use the matrix effectively."
 

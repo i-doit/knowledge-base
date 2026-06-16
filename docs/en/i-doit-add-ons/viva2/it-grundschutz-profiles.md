@@ -14,7 +14,7 @@ With profiles, you bundle a defined selection of modules including their associa
 
 Menu: Add-ons → IT-Grundschutz → Profiles. The overview page shows all existing profiles.
 
-[![Profile overview](../../assets/images/de/i-doit-add-ons/viva2/it-grundschutz-profiles/profil-uebersicht.png)](../../assets/images/de/i-doit-add-ons/viva2/it-grundschutz-profiles/profil-uebersicht.png){:target="_blank"}
+[![Profile overview](../../assets/images/en/i-doit-add-ons/viva2/it-grundschutz-profiles/profile-overview.png)](../../assets/images/en/i-doit-add-ons/viva2/it-grundschutz-profiles/profile-overview.png){:target="_blank"}
 
 ### Creating a New Profile
 
@@ -23,7 +23,7 @@ Menu: Add-ons → IT-Grundschutz → Profiles. The overview page shows all exist
 3. Select modules
 4. Save. Afterward, all associated requirements and threats are displayed.
 
-[![Create profile](../../assets/images/de/i-doit-add-ons/viva2/it-grundschutz-profiles/profil-anlegen.png)](../../assets/images/de/i-doit-add-ons/viva2/it-grundschutz-profiles/profil-anlegen.png){:target="_blank"}
+[![Create profile](../../assets/images/en/i-doit-add-ons/viva2/it-grundschutz-profiles/profile-create.png)](../../assets/images/en/i-doit-add-ons/viva2/it-grundschutz-profiles/profile-create.png){:target="_blank"}
 
 ### Exporting a Profile
 
@@ -39,7 +39,7 @@ Menu: Add-ons → IT-Grundschutz → Profiles. The overview page shows all exist
 2. Click Apply Profile
 3. Read the warning carefully and confirm
 
-[![Apply profile](../../assets/images/de/i-doit-add-ons/viva2/it-grundschutz-profiles/profil-anwenden.png)](../../assets/images/de/i-doit-add-ons/viva2/it-grundschutz-profiles/profil-anwenden.png){:target="_blank"}
+[![Apply profile](../../assets/images/en/i-doit-add-ons/viva2/it-grundschutz-profiles/profile-apply.png)](../../assets/images/en/i-doit-add-ons/viva2/it-grundschutz-profiles/profile-apply.png){:target="_blank"}
 
 !!! danger "Caution"
     When applying a profile, all existing modules, threats, and requirements are deleted and then replaced with the contents of the profile. Create a backup and verify the effects in a test environment first.

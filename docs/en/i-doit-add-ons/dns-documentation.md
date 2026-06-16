@@ -43,7 +43,7 @@ The "DNS Server" object type is based on a normal server object, supplemented wi
 
 !!! info "'DNS Zones' is a backward category -- you can only read the information here, not edit it."
 
-[![DNS Server](../assets/images/de/i-doit-add-ons/dns-documentation/1-dns.png)](../assets/images/de/i-doit-add-ons/dns-documentation/1-dns.png)
+[![DNS Server](../assets/images/en/i-doit-add-ons/dns-documentation/1-dns.png)](../assets/images/en/i-doit-add-ons/dns-documentation/1-dns.png)
 
 ## DNS Zone
 
@@ -57,22 +57,22 @@ In the "DNS Zone" object type, you document all zone information. Three categori
 
 The "Authoritative Nameservers" category is a multi-value category -- you can create any number of entries.
 
-[![Authoritative Nameservers](../assets/images/de/i-doit-add-ons/dns-documentation/2-dns.png)](../assets/images/de/i-doit-add-ons/dns-documentation/2-dns.png)
+[![Authoritative Nameservers](../assets/images/en/i-doit-add-ons/dns-documentation/2-dns.png)](../assets/images/en/i-doit-add-ons/dns-documentation/2-dns.png)
 
 Each entry contains two pieces of information:
 
 1. **DNS Server Object** -- Select the server via the object browser.
 2. **Role** -- Assign the "Primary" or "Secondary" role to the server.
 
-[![DNS Server Object](../assets/images/de/i-doit-add-ons/dns-documentation/3-dns.png)](../assets/images/de/i-doit-add-ons/dns-documentation/3-dns.png)
+[![DNS Server Object](../assets/images/en/i-doit-add-ons/dns-documentation/3-dns.png)](../assets/images/en/i-doit-add-ons/dns-documentation/3-dns.png)
 
 ### DNS Records
 
 "DNS Records" is also a multi-value category. This way you document a DNS file line by line and maintain an overview.
 
-[![DNS Records](../assets/images/de/i-doit-add-ons/dns-documentation/4-dns.png)](../assets/images/de/i-doit-add-ons/dns-documentation/4-dns.png)
+[![DNS Records](../assets/images/en/i-doit-add-ons/dns-documentation/4-dns.png)](../assets/images/en/i-doit-add-ons/dns-documentation/4-dns.png)
 
-[![DNS Records](../assets/images/de/i-doit-add-ons/dns-documentation/5-dns.png)](../assets/images/de/i-doit-add-ons/dns-documentation/5-dns.png)
+[![DNS Records](../assets/images/en/i-doit-add-ons/dns-documentation/5-dns.png)](../assets/images/en/i-doit-add-ons/dns-documentation/5-dns.png)
 
 Each entry consists of the text fields **Name**, **Time to live**, and **Data** as well as the Dialog+ fields **Class** and **Type**. Predefined entries are included for "Class" and "Type".
 
@@ -80,6 +80,6 @@ Each entry consists of the text fields **Name**, **Time to live**, and **Data** 
 
 In the "SOA Records" category, you document the "Start of Authority" in detail. Since the SOA record is unique per zone, this is a single-value category.
 
-[![SOA Records](../assets/images/de/i-doit-add-ons/dns-documentation/6-dns.png)](../assets/images/de/i-doit-add-ons/dns-documentation/6-dns.png)
+[![SOA Records](../assets/images/en/i-doit-add-ons/dns-documentation/6-dns.png)](../assets/images/en/i-doit-add-ons/dns-documentation/6-dns.png)
 
 Except for the Dialog+ field "Class", all fields are available as text fields.

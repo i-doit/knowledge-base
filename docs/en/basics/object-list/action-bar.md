@@ -10,7 +10,7 @@ lang: en
 
 Above an [object list](index.md) is the action bar, through which various actions can be performed.
 
-[![create-object](../../assets/images/de/grundlagen/aktionsleiste/1-al.png)](../../assets/images/de/grundlagen/aktionsleiste/1-al.png)
+[![create-object](../../assets/images/en/basics/object-list/actions-in-object-lists/1-aiol.png)](../../assets/images/en/basics/object-list/actions-in-object-lists/1-aiol.png)
 
 ## Creating an object
 
@@ -20,13 +20,13 @@ When creating a new object, various options are available:
 -   **New object from template** switches to the dialog where one or more objects can be created from a [template](../../efficient-documentation/templates.md)
 -   **Create new template** is similar to the first option, but the [condition](../life-and-documentation-cycle.md) **Template** is preselected, so that after saving the object becomes a [template](../../efficient-documentation/templates.md).
 
-[![Create-object](../../assets/images/de/grundlagen/aktionsleiste/2-al.png)](../../assets/images/de/grundlagen/aktionsleiste/2-al.png)
+[![Create-object](../../assets/images/en/basics/object-list/actions-in-object-lists/2-aiol.png)](../../assets/images/en/basics/object-list/actions-in-object-lists/2-aiol.png)
 
 ## Editing an object
 
 To edit an object, select it via the checkbox and click the **Edit** button. If you select multiple objects, the [list editing](../../efficient-documentation/list-editing.md) starts.
 
-[![Edit-object](../../assets/images/de/grundlagen/aktionsleiste/3-al.png)](../../assets/images/de/grundlagen/aktionsleiste/3-al.png)
+[![Edit-object](../../assets/images/en/basics/object-list/actions-in-object-lists/3-aiol.png)](../../assets/images/en/basics/object-list/actions-in-object-lists/3-aiol.png)
 
 ## Duplicating an object
 
@@ -40,7 +40,7 @@ To change the [condition](../life-and-documentation-cycle.md) of one or more obj
 
 Via the **Print view** button, a popup opens with a print-optimized view of the list. The list is supplemented with attributes displayed on the overview page of the respective object.
 
-[![print-view](../../assets/images/de/grundlagen/aktionsleiste/4-al.png)](../../assets/images/de/grundlagen/aktionsleiste/4-al.png)
+[![print-view](../../assets/images/en/basics/object-list/actions-in-object-lists/4-aiol.png)](../../assets/images/en/basics/object-list/actions-in-object-lists/4-aiol.png)
 
 !!! success "Web browser print preview"
     The web browser in use can also generate a print view. Unnecessary elements of the Web GUI are not displayed:
@@ -60,8 +60,8 @@ Via the **Link to this page** button, you reload the object list. The button is 
 
 To display only objects of a specific [condition](../life-and-documentation-cycle.md), select the desired condition via the drop-down menu on the right side of the action bar. In parentheses, you see how many objects of this type are in each condition. By default, i-doit shows the condition **Normal**. When you switch the condition, i-doit saves this selection -- it then applies to all object lists.
 
-[![switch-condition](../../assets/images/de/grundlagen/aktionsleiste/5-al.png)](../../assets/images/de/grundlagen/aktionsleiste/5-al.png)
+[![switch-condition](../../assets/images/en/basics/object-list/actions-in-object-lists/5-aiol.png)](../../assets/images/en/basics/object-list/actions-in-object-lists/5-aiol.png)
 
 You can activate the template filter in object lists in the [Administration](../../administration/management/tenant-management/tenant-settings.md#templates) area.
 
-[![Activate Template](../../assets/images/de/grundlagen/aktionsleiste/6-al.png)](../../assets/images/de/grundlagen/aktionsleiste/6-al.png)
+[![Activate Template](../../assets/images/en/basics/object-list/actions-in-object-lists/6-aiol.png)](../../assets/images/en/basics/object-list/actions-in-object-lists/6-aiol.png)

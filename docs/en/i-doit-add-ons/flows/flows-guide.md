@@ -20,15 +20,15 @@ If your instance can reach the internet, use the update via the Updater. The pre
 
 #### Step 1: Open the Administration in i-doit 32
 
-[![Open administration](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/update-step-1.png)](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/update-step-1.png)
+[![Open administration](../../assets/images/en/i-doit-add-ons/flows/update-i-doit-and-install-flows/update-step-1.png)](../../assets/images/en/i-doit-add-ons/flows/update-i-doit-and-install-flows/update-step-1.png)
 
 #### Step 2: Open [tenant-name] Administration
 
-[![Open tenant-name administration](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/update-step-2.png)](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/update-step-2.png)
+[![Open tenant-name administration](../../assets/images/en/i-doit-add-ons/flows/update-i-doit-and-install-flows/update-step-2.png)](../../assets/images/en/i-doit-add-ons/flows/update-i-doit-and-install-flows/update-step-2.png)
 
 #### Step 3: Click the i-doit Update button
 
-[![Click Update button](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/update-step-3.png)](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/update-step-3.png)
+[![Click Update button](../../assets/images/en/i-doit-add-ons/flows/update-i-doit-and-install-flows/update-step-3.png)](../../assets/images/en/i-doit-add-ons/flows/update-i-doit-and-install-flows/update-step-3.png)
 
 * * *
 
@@ -95,15 +95,15 @@ Now adjust the file permissions so that the web server has read and write access
 
 #### Step 4: Open the Administration in i-doit 32
 
-[![Open administration](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/update-step-1.png)](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/update-step-1.png)
+[![Open administration](../../assets/images/en/i-doit-add-ons/flows/update-i-doit-and-install-flows/update-step-1.png)](../../assets/images/en/i-doit-add-ons/flows/update-i-doit-and-install-flows/update-step-1.png)
 
 #### Step 5: Open [tenant-name] Administration
 
-[![Open tenant-name administration](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/update-step-2.png)](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/update-step-2.png)
+[![Open tenant-name administration](../../assets/images/en/i-doit-add-ons/flows/update-i-doit-and-install-flows/update-step-2.png)](../../assets/images/en/i-doit-add-ons/flows/update-i-doit-and-install-flows/update-step-2.png)
 
 #### Step 6: Click the i-doit Update button
 
-[![Click Update button](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/update-step-3.png)](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/update-step-3.png)
+[![Click Update button](../../assets/images/en/i-doit-add-ons/flows/update-i-doit-and-install-flows/update-step-3.png)](../../assets/images/en/i-doit-add-ons/flows/update-i-doit-and-install-flows/update-step-3.png)
 
 * * *
 
@@ -119,15 +119,15 @@ To use the **Subscription & Add-ons** feature, you need the license token. Enter
 
 #### Step 1: Open Subscription & Add-ons
 
-[![Open Subscription & Add-ons](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/flows-install-step-1.png)](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/flows-install-step-1.png)
+[![Open Subscription & Add-ons](../../assets/images/en/i-doit-add-ons/flows/update-i-doit-and-install-flows/flows-install-step-1.png)](../../assets/images/en/i-doit-add-ons/flows/update-i-doit-and-install-flows/flows-install-step-1.png)
 
 #### Step 2: Save license token
 
-[![Save license token](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/flows-install-step-2.png)](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/flows-install-step-2.png)
+[![Save license token](../../assets/images/en/i-doit-add-ons/flows/update-i-doit-and-install-flows/flows-install-step-2.png)](../../assets/images/en/i-doit-add-ons/flows/update-i-doit-and-install-flows/flows-install-step-2.png)
 
 #### Step 3: Open Add-ons and install the Flows Add-on via Actions
 
-[![Open Add-ons and install Flows Add-on](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/flows-install-step-3.png)](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/flows-install-step-3.png)
+[![Open Add-ons and install Flows Add-on](../../assets/images/en/i-doit-add-ons/flows/update-i-doit-and-install-flows/flows-install-step-3.png)](../../assets/images/en/i-doit-add-ons/flows/update-i-doit-and-install-flows/flows-install-step-3.png)
 
 * * *
 
@@ -141,17 +141,17 @@ First log in to the Customer Portal at <https://center.i-doit.com> and download 
 
 #### Step 2: Open Admin Center
 
-[![Open Admin Center](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/install-2.2-1.png)](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/install-2.2-1.png)
+[![Open Admin Center](../../assets/images/en/i-doit-add-ons/flows/update-i-doit-and-install-flows/install-2.2-1.png)](../../assets/images/en/i-doit-add-ons/flows/update-i-doit-and-install-flows/install-2.2-1.png)
 
 #### Step 3: Log in to the i-doit Admin Center
 
-[![Log in to Admin Center](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/install-2.2-2.png)](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/install-2.2-2.png)
+[![Log in to Admin Center](../../assets/images/en/i-doit-add-ons/flows/update-i-doit-and-install-flows/install-2.2-2.png)](../../assets/images/en/i-doit-add-ons/flows/update-i-doit-and-install-flows/install-2.2-2.png)
 
 #### Step 4: Install the Flows Add-on
 
 Click the heading **Add-ons**, then click **Install/update Add-on** and select the **Flows ZIP file**:
 
-[![Install via Admin Center](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/install-2.2-3.png)](../../assets/images/de/i-doit-add-ons/flows/update-i-doit-and-install-flows/install-2.2-3.png)
+[![Install via Admin Center](../../assets/images/en/i-doit-add-ons/flows/update-i-doit-and-install-flows/install-2.2-3.png)](../../assets/images/en/i-doit-add-ons/flows/update-i-doit-and-install-flows/install-2.2-3.png)
 
 * * *
 

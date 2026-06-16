@@ -14,7 +14,7 @@ Reporting is a suitable tool for condensing, preparing, and sharing data with th
 
 The Report Manager can be accessed via the main navigation bar under **Extras → Report Manager**. In the navigation tree on the left side, the items **Reports**, **Online Repository**, and **Views** appear, which are described below. If the Report Manager or the items in the navigation tree do not appear or appear incompletely, this is due to missing permissions.
 
-[![Overview](../assets/images/de/auswertungen/report-manager/1-rm.png)](../assets/images/de/auswertungen/report-manager/1-rm.png)
+[![Overview](../assets/images/en/evaluation/report-manager/1-rm.png)](../assets/images/en/evaluation/report-manager/1-rm.png)
 
 ## Report Special Add-on
 
@@ -24,11 +24,11 @@ With the Report Special add-on, approximately 50 pre-built reports are imported.
 
 The self-created reports are located under **Reports**. After the [setup of _i-doit_](../installation/manual-installation/setup.md), there are no reports in this area yet.
 
-[![evaluate-report](../assets/images/de/auswertungen/report-manager/2-rm.png)](../assets/images/de/auswertungen/report-manager/2-rm.png)
+[![evaluate-report](../assets/images/en/evaluation/report-manager/2-rm.png)](../assets/images/en/evaluation/report-manager/2-rm.png)
 
 Click on a report in the list to execute it with the current data. The result list is presented in tabular form. Reports always focus on objects and their attributes -- each result row focuses on a main object, for which any attributes such as relationships to other objects may be specified. Click on a row to open the corresponding object.
 
-[![evaluate-report2](../assets/images/de/auswertungen/report-manager/3-rm.png)](../assets/images/de/auswertungen/report-manager/3-rm.png)
+[![evaluate-report2](../assets/images/en/evaluation/report-manager/3-rm.png)](../assets/images/en/evaluation/report-manager/3-rm.png)
 
 The table offers various functionalities (column sorting, filtering by a column, pagination). Furthermore, a report can be exported to various formats (plain text, CSV, XML, and PDF). For further processing with a spreadsheet program or similar, export to CSV format is recommended.
 
@@ -38,7 +38,7 @@ From a report, you can generate an object of type **Object Group**. The objects 
 
 Reports can be organized into categories. By default, they are assigned to the **Global** category, which cannot be deleted. The advantage: You can define per category who is allowed to access it. On the **Reports** page, you create or edit categories via the **Categories** item. The optionally description field helps with orientation.
 
-[![categorize-reports](../assets/images/de/auswertungen/report-manager/4-rm.png)](../assets/images/de/auswertungen/report-manager/4-rm.png)
+[![categorize-reports](../assets/images/en/evaluation/report-manager/4-rm.png)](../assets/images/en/evaluation/report-manager/4-rm.png)
 
 !!! info "Note"
     If it is not possible to create and/or edit report categories, it is advisable to check the permissions and ensure that the currently logged-in user has the necessary permissions.
@@ -47,7 +47,7 @@ Reports can be organized into categories. By default, they are assigned to the *
 
 You can copy reports by selecting a report and clicking **Duplicate**. Via the **Purge** button, you irrevocably delete a report.
 
-[![create-or-edit-reports](../assets/images/de/auswertungen/report-manager/5-rm.png)](../assets/images/de/auswertungen/report-manager/5-rm.png)
+[![create-or-edit-reports](../assets/images/en/evaluation/report-manager/5-rm.png)](../assets/images/en/evaluation/report-manager/5-rm.png)
 
 Two methods are available for creating a report, which are explained in more detail below.
 
@@ -55,13 +55,13 @@ Two methods are available for creating a report, which are explained in more det
 
 The Query Editor provides a graphical interface for creating or editing reports. Access it via the **New** button or select **Query Editor** from the drop-down field next to it. To edit an existing report, check the checkbox next to the report and click one of the mentioned buttons.
 
-[![query-editor](../assets/images/de/auswertungen/report-manager/6-rm.png)](../assets/images/de/auswertungen/report-manager/6-rm.png)
+[![query-editor](../assets/images/en/evaluation/report-manager/6-rm.png)](../assets/images/en/evaluation/report-manager/6-rm.png)
 
 Essential are the title and the category. Additionally, it is often helpful to provide a short description. Via the **Check** button, the report can be tested. A popup displays a maximum of 25 results.
 
 #### Advanced Options
 
-[![advanced-options](../assets/images/de/auswertungen/report-manager/7-rm.png)](../assets/images/de/auswertungen/report-manager/7-rm.png)
+[![advanced-options](../assets/images/en/evaluation/report-manager/7-rm.png)](../assets/images/en/evaluation/report-manager/7-rm.png)
 
 The following advanced options are available.
 
@@ -78,7 +78,7 @@ The following advanced options are available.
 
 #### Output
 
-[![Output](../assets/images/de/auswertungen/report-manager/8-rm.png)](../assets/images/de/auswertungen/report-manager/8-rm.png)
+[![Output](../assets/images/en/evaluation/report-manager/8-rm.png)](../assets/images/en/evaluation/report-manager/8-rm.png)
 
 In the **Output** area, you define the columns of the result list. Select the desired attributes from the three category types **Global**, **Specific**, and **Custom**. Each attribute defines a column whose order you set via drag and drop.
 
@@ -88,7 +88,7 @@ If you select an object reference as an attribute, you can add further attribute
 
 #### Conditions
 
-[![Conditions](../assets/images/de/auswertungen/report-manager/9-rm.png)](../assets/images/de/auswertungen/report-manager/9-rm.png)
+[![Conditions](../assets/images/en/evaluation/report-manager/9-rm.png)](../assets/images/en/evaluation/report-manager/9-rm.png)
 
 Under **Conditions**, you specify the desired filter criteria. Select the attribute to be checked with the matching category and construct the logical query: What value must the attribute match (or not)? Typical operators such as `=`, `!=`, `<`, `>` are available depending on the field type.
 
@@ -100,7 +100,7 @@ To set conditions on attributes of linked objects, select the attribute with the
 
 Through i-doit updates, the Query Editor may also change, so that queries are constructed differently than before. To ensure that reports always use the current logic, it is necessary to update these queries. This is possible either via the [Administration](../administration/management/tenant-management/system-repair-and-cleanup.md) or via the [i-doit console utility](../automation-and-integration/cli/index.md).
 
-[![Update reports](../assets/images/de/auswertungen/report-manager/15-rm.png)](../assets/images/de/auswertungen/report-manager/15-rm.png)
+[![Update reports](../assets/images/en/evaluation/report-manager/15-rm.png)](../assets/images/en/evaluation/report-manager/15-rm.png)
 
 ### SQL Editor
 
@@ -109,7 +109,7 @@ Every report can be created or edited via the SQL Editor -- including those crea
 !!! info "Switching between Query and SQL Editor"
     If a report is created or edited with the SQL Editor, subsequent editing with the Query Editor is no longer possible. Background: The SQL Editor provides the full spectrum of SQL. Since the Query Editor is limited to a subset of SQL (which is sufficient in most cases), the created query could be destroyed by this difference.
 
-[![sql-editor](../assets/images/de/auswertungen/report-manager/10-rm.png)](../assets/images/de/auswertungen/report-manager/10-rm.png)
+[![sql-editor](../assets/images/en/evaluation/report-manager/10-rm.png)](../assets/images/en/evaluation/report-manager/10-rm.png)
 
 In the **SQL Query** form field, you write the query in SQL. Knowledge of the database structure of i-doit is required here. Important: You must always query objects and select the object ID as the first (invisible) column:
 
@@ -142,13 +142,13 @@ Note when transferring: Conditions and outputs that refer to individual content 
 
 Pre-built reports are available for download on the internet. Via the **Online Repository** item, you can execute them directly or save them locally. An existing internet connection is required.
 
-[![online-repository](../assets/images/de/auswertungen/report-manager/11-rm.png)](../assets/images/de/auswertungen/report-manager/11-rm.png)
+[![online-repository](../assets/images/en/evaluation/report-manager/11-rm.png)](../assets/images/en/evaluation/report-manager/11-rm.png)
 
 ## Report Views
 
 **Report Views** offer additional functions and views beyond the reports described above. New ones cannot be created, and existing ones cannot be edited or deleted.
 
-[![report-views](../assets/images/de/auswertungen/report-manager/12-rm.png)](../assets/images/de/auswertungen/report-manager/12-rm.png)
+[![report-views](../assets/images/en/evaluation/report-manager/12-rm.png)](../assets/images/en/evaluation/report-manager/12-rm.png)
 
 Selection of useful **Report Views**:
 
@@ -157,7 +157,7 @@ Selection of useful **Report Views**:
 *   **Network connections**
 *   **Open cable connections**
 
-[![report-views-2](../assets/images/de/auswertungen/report-manager/13-rm.png)](../assets/images/de/auswertungen/report-manager/13-rm.png)
+[![report-views-2](../assets/images/en/evaluation/report-manager/13-rm.png)](../assets/images/en/evaluation/report-manager/13-rm.png)
 
 ## Automated Report Export
 
@@ -208,7 +208,7 @@ You can assign permissions for the Report Manager to users and user groups (obje
 *   **Import report**
 *   **Self-created reports**
 
-[![assign-permissions](../assets/images/de/auswertungen/report-manager/14-rm.png)](../assets/images/de/auswertungen/report-manager/14-rm.png
+[![assign-permissions](../assets/images/en/evaluation/report-manager/14-rm.png)](../assets/images/en/evaluation/report-manager/14-rm.png
 
 ## Variable Reports
 

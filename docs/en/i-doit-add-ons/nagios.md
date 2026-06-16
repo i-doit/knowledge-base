@@ -22,13 +22,13 @@ Set up the configuration under **Administration → Import and interfaces → Mo
 - **Local path** -- Absolute or relative path where the generated configuration is stored.
 - **Link to the monitoring tool** -- Base link to generate links from i-doit to the monitoring instance.
 
-[![Nagios management](../assets/images/de/automatisierung-und-integration/network-monitoring/nagios/1-nag.png)](../assets/images/de/automatisierung-und-integration/network-monitoring/nagios/1-nag.png)
+[![Nagios management](../assets/images/en/automation-and-integration/network-monitoring/nagios/1-nag.png)](../assets/images/en/automation-and-integration/network-monitoring/nagios/1-nag.png)
 
 ## Base configurations
 
 Under **Add-ons → Nagios** the base configurations are created.
 
-[![Nagios extras](../assets/images/de/automatisierung-und-integration/network-monitoring/nagios/2-nag.png)](../assets/images/de/automatisierung-und-integration/network-monitoring/nagios/2-nag.png)
+[![Nagios extras](../assets/images/en/automation-and-integration/network-monitoring/nagios/2-nag.png)](../assets/images/en/automation-and-integration/network-monitoring/nagios/2-nag.png)
 
 This includes the main configuration, service and host templates, and other basic settings. All values are identical to the Nagios configuration.
 
@@ -39,7 +39,7 @@ All other configurations are made within the [objects](../basics/it-documentatio
 1. Assign via [Edit data structure](../administration/management/data-structure/edit-data-structure.md) the [category](../basics/it-documentation-structure.md) folder **Nagios (Host)** to the desired [object types](../basics/it-documentation-structure.md).
 2. Enter in the category **Host Definition** a host definition -- either via a Nagios template or through individual configuration.
 
-[![Nagios configuration](../assets/images/de/automatisierung-und-integration/network-monitoring/nagios/3-nag.png)](../assets/images/de/automatisierung-und-integration/network-monitoring/nagios/3-nag.png)
+[![Nagios configuration](../assets/images/en/automation-and-integration/network-monitoring/nagios/3-nag.png)](../assets/images/en/automation-and-integration/network-monitoring/nagios/3-nag.png)
 
 Host and service templates follow the Nagios principle. Via the **Service assignment** category, you assign service checks to a host.
 
@@ -54,7 +54,7 @@ You can find additional Nagios configurations in objects of the type **Persons**
 
 You start the export manually under **Administration → Import and interfaces → Monitoring → Export configuration**. Select an export configuration and optionally enable validation.
 
-[![Nagios export](../assets/images/de/automatisierung-und-integration/network-monitoring/nagios/4-nag.png)](../assets/images/de/automatisierung-und-integration/network-monitoring/nagios/4-nag.png)
+[![Nagios export](../assets/images/en/automation-and-integration/network-monitoring/nagios/4-nag.png)](../assets/images/en/automation-and-integration/network-monitoring/nagios/4-nag.png)
 
 The validation checks basic dependencies -- e.g. whether an IP address is entered for a host. It protects against corrupt configurations but does not offer 100 percent protection. Therefore, always additionally test the generated configuration with the Nagios binary.
 

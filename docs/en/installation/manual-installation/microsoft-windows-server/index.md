@@ -23,7 +23,7 @@ The installation package always includes the current [i-doit version](../../../v
 
 After running the `i-doit Windows Installer.exe`, the following GUI is displayed:
 
-[![GUI](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/2-idw.png)](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/2-idw.png)
+[![GUI](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/2-idw.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/2-idw.png)
 
 After clicking **Install**, all required components are installed in the background.
 
@@ -270,11 +270,11 @@ C:\ProgramData\i-doit\apache-2.4\bin\httpd.exe -k uninstall
 
 Then uninstall MariaDB by removing it under **Add or remove programs**.
 
-[![Uninstall MariaDB](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/3-idw.png)](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/3-idw.png)
+[![Uninstall MariaDB](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/3-idw.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/3-idw.png)
 
 Now the i-doit folder must be deleted and the PHP `PATH` must be removed from the environment variables:
 
-[![Uninstall PHP](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/4-idw.png)](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/4-idw.png)
+[![Uninstall PHP](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/4-idw.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/4-idw.png)
 
 ## Install i-doit Discovery for Windows Server
 
@@ -293,7 +293,7 @@ The installation package always contains the latest [i-doit version](../../../ve
 
 After running the `i-doit Discovery Installer.exe`, you will see the following GUI:
 
-[![GUI Discovery](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/5-idw.png)](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/5-idw.png)
+[![GUI Discovery](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/5-idw.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/5-idw.png)
 
 After clicking Install, all required components are installed in the background.
 
@@ -360,7 +360,7 @@ C:\ProgramData\i-doit-Discovery\apache-2.4\bin\httpd.exe -k uninstall
 
 Then uninstall MariaDB by removing it under **Add or remove programs**.
 
-[![Uninstall MariaDB](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/3-idw.png)](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/3-idw.png)
+[![Uninstall MariaDB](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/3-idw.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/3-idw.png)
 
 Additionally, JDisc and its add-ons must be removed under **Add or remove programs**.
 
@@ -370,7 +370,7 @@ Additionally, JDisc and its add-ons must be removed under **Add or remove progra
 
 Now the i-doit folder must be deleted and the PHP `PATH` must be removed from the environment variables:
 
-[![Uninstall PHP](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/4-idw.png)](../../../assets/images/de/installation/microsoft-windows/i-doit-windows/4-idw.png)
+[![Uninstall PHP](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/4-idw.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/4-idw.png)
 
 ## FAQ
 

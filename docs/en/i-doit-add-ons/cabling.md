@@ -22,13 +22,13 @@ After [installation](../i-doit-add-ons/index.md), no further technical configura
 
 Under **Administration → Permissions → Cabling view**, [permissions for persons and person groups](../efficient-documentation/permission-management/index.md) can be adjusted.
 
-[![Assigning rights](../assets/images/de/i-doit-add-ons/cabling/1-cab.png)](../assets/images/de/i-doit-add-ons/cabling/1-cab.png)
+[![Assigning rights](../assets/images/en/i-doit-add-ons/cabling/1-cab.png)](../assets/images/en/i-doit-add-ons/cabling/1-cab.png)
 
 ## Usage
 
 After installation and configuration of permissions, the add-on is available under **Add-ons → Cabling view**.
 
-[![Usage](../assets/images/de/i-doit-add-ons/cabling/2-cab.png)](../assets/images/de/i-doit-add-ons/cabling/2-cab.png)
+[![Usage](../assets/images/en/i-doit-add-ons/cabling/2-cab.png)](../assets/images/en/i-doit-add-ons/cabling/2-cab.png)
 
 ## Releases
 <!-- cSpell:disable -->

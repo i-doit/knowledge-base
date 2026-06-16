@@ -58,13 +58,13 @@ There are three ways to swap one object for another:
 
 The selected objects can be swapped using the **Swap** button.
 
-[![Selection via object list](../assets/images/de/i-doit-add-ons/replacement/1-rp.png)](../assets/images/de/i-doit-add-ons/replacement/1-rp.png)
+[![Selection via object list](../assets/images/en/i-doit-add-ons/replacement/1-rp.png)](../assets/images/en/i-doit-add-ons/replacement/1-rp.png)
 
-[![Selection via object](../assets/images/de/i-doit-add-ons/replacement/2-rp.png)](../assets/images/de/i-doit-add-ons/replacement/2-rp.png)
+[![Selection via object](../assets/images/en/i-doit-add-ons/replacement/2-rp.png)](../assets/images/en/i-doit-add-ons/replacement/2-rp.png)
 
 After selecting both objects, the options can be adjusted. Clicking the **Start device swap** button performs the swap of both objects.
 
-[![Swap objects](../assets/images/de/i-doit-add-ons/replacement/3-rp.png)](../assets/images/de/i-doit-add-ons/replacement/3-rp.png)
+[![Swap objects](../assets/images/en/i-doit-add-ons/replacement/3-rp.png)](../assets/images/en/i-doit-add-ons/replacement/3-rp.png)
 
 ## Swap by workstation systems
 
@@ -74,13 +74,13 @@ Under **Add-ons → Device Swap → Swap by workstation systems** you make a pre
 2. All **Workstation** objects whose **Workstation components** contain objects of this type appear.
 3. Select one object per workstation to swap and click **Swap selected objects**.
 
-[![Swap by workstation systems](../assets/images/de/i-doit-add-ons/replacement/4-rp.png)](../assets/images/de/i-doit-add-ons/replacement/4-rp.png)
+[![Swap by workstation systems](../assets/images/en/i-doit-add-ons/replacement/4-rp.png)](../assets/images/en/i-doit-add-ons/replacement/4-rp.png)
 
 ## Swap report
 
 A report on previous swap actions can be found under **Add-ons → Device Swap → Swap Report** (alternatively via **Extras → Report Manager → Views → Swap Report**).
 
-[![Swap report](../assets/images/de/i-doit-add-ons/replacement/5-rp.png)](../assets/images/de/i-doit-add-ons/replacement/5-rp.png)
+[![Swap report](../assets/images/en/i-doit-add-ons/replacement/5-rp.png)](../assets/images/en/i-doit-add-ons/replacement/5-rp.png)
 
 ## Releases
 

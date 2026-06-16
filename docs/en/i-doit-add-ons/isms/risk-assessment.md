@@ -23,7 +23,7 @@ The **Risk Assessment** category opens a **multi-value category** where you can 
 
 ### Creating a New Risk Assessment
 
-[![Form - new risk assessment](../../assets/images/de/i-doit-add-ons/isms/risk-assessment/create-ra.png)](../../assets/images/de/i-doit-add-ons/isms/risk-assessment/create-ra.png)
+[![Form - new risk assessment](../../assets/images/en/i-doit-add-ons/isms/risk-assessment/create-ra.png)](../../assets/images/en/i-doit-add-ons/isms/risk-assessment/create-ra.png)
 
 1. Select **Threat** and **Vulnerability** – together they form the risk.
 2. Enter **Protection Goals** (default: *Confidentiality*, *Integrity*, *Availability*).
@@ -34,7 +34,7 @@ The **Risk Assessment** category opens a **multi-value category** where you can 
 5. Assign **existing measures** (if available) and document a **comment** on the evaluation.
 6. Set the **Date of Risk Evaluation** and **Follow-up Date** (usable for evaluations).
 
-[![Risk evaluation - damage scenarios & probability of occurrence](../../assets/images/de/i-doit-add-ons/isms/risk-assessment/create-ra2.png)](../../assets/images/de/i-doit-add-ons/isms/risk-assessment/create-ra2.png)
+[![Risk evaluation - damage scenarios & probability of occurrence](../../assets/images/en/i-doit-add-ons/isms/risk-assessment/create-ra2.png)](../../assets/images/en/i-doit-add-ons/isms/risk-assessment/create-ra2.png)
 
 ### Risk Treatment
 
@@ -46,7 +46,7 @@ The **Risk Assessment** category opens a **multi-value category** where you can 
     - **Resources** and **costs**, **latest implementation date**
     - **Status** and **urgency** (*Dialog Plus* fields; values can be maintained via `Administration -> Predefined Content -> Dialog Admin`)
 
-[![Risk evaluation after treatment / residual risk](../../assets/images/de/i-doit-add-ons/isms/risk-assessment/create-ra3.png)](../../assets/images/de/i-doit-add-ons/isms/risk-assessment/create-ra3.png)
+[![Risk evaluation after treatment / residual risk](../../assets/images/en/i-doit-add-ons/isms/risk-assessment/create-ra3.png)](../../assets/images/en/i-doit-add-ons/isms/risk-assessment/create-ra3.png)
 
 !!! tip
     With **"Copy evaluation before treatment"**, all slider values can be transferred and adjusted as needed.
