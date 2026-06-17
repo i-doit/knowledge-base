@@ -65,6 +65,7 @@ plugins:
       strict: false
   - redirects:
       redirect_maps:
+        'system-administration/reset-token.md': 'administration/reset-token.md'
         'i-doit-add-ons/isms.md': 'i-doit-add-ons/isms/index.md'
         'i-doit-add-ons/viva2.md': 'i-doit-add-ons/viva2/index.md'
         'wartung-und-betrieb/lizenz-aktivieren.md': 'wartung-und-betrieb/lizenzierung.md'
