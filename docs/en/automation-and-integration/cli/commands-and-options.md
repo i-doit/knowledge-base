@@ -1664,3 +1664,15 @@ Import your tenant data including uploaded files from a ZIP package.
 |                      | --ansi<br>--no-ansi                         | Force ANSI output (or disable with --no-ansi)                                                                                                                                                                                                                                                         |
 | -n                   | --no-interaction                            | Disables all interaction questions of the i-doit console                                                                                                                                                                                                                                                  |
 | -v / -vv / -vvv      | --verbose                                   | Increases the verbosity of output (1 = normal output, 2 = detailed output, 3 = debug level)                                                                                                                                                                                                             |
+
+**Usage example**
+
+```shell
+sudo -u www-data php /var/www/html/console.php system:tenant-import \
+    --file /path/to/idoit-tenant-export.zip \
+    --tenant-database-name idoit_data \
+    --tenant-title "My Tenant" \
+    --db-root-user root \
+    --db-root-pass secret \
+    --db-host localhost
+```

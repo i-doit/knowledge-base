@@ -1664,3 +1664,15 @@ Importiere deine Mandantendaten inklusive hochgeladener Dateien aus einem ZIP-Pa
 |                      | --ansi<br>--no-ansi                         | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                                                                                                                                                                                                                                         |
 | -n                   | --no-interaction                            | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                                                                                                                                                                                                                                  |
 | -v / -vv / -vvv      | --verbose                                   | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level)                                                                                                                                                                                                             |
+
+**Beispiel zur Verwendung**
+
+```shell
+sudo -u www-data php /var/www/html/console.php system:tenant-import \
+    --file /pfad/zu/idoit-tenant-export.zip \
+    --tenant-database-name idoit_data \
+    --tenant-title "Mein Mandant" \
+    --db-root-user root \
+    --db-root-pass geheim \
+    --db-host localhost
+```
