@@ -1,12 +1,12 @@
 ---
 title: SHD Connect
 description: SHD Connect
-icon:
+icon: addons/shd-connect
 status:
 lang: en
 ---
 
-This module requires the [**SHD VIEW Client**](https://smdocu.atlassian.net/wiki/spaces/SKB/pages/742260740/SHD+View+Desktop+Client) as a base module.
+This module requires the [**SHD View Client**](https://smdocu.atlassian.net/wiki/spaces/SKB/pages/742260740/SHD+View+Desktop+Client) as a base module.
 
 ## Installation
 
