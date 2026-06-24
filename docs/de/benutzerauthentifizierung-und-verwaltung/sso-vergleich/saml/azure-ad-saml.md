@@ -160,7 +160,7 @@ Wähle die Methode **SAML** und stelle im nächsten Schritt die Datei `https_tu2
 
 !!! info "https_tu2_samlsso.synetics.test_.xml"
 
-    Die Datei muss vorher von unserem Server via z.B. SFTP heruntergeladen werden.
+    Die Datei wurde bei der Meelon Konfiguration erstellt und muss vorher heruntergeladen werden.
 
 [![Azure-AD-Unternehmensanwendung-4](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen-4.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen-4.png)
 
