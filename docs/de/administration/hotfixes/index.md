@@ -68,6 +68,14 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 [i-doit_38_hotfix_ID-12376_4fd97c7.zip :material-file-download:](../../assets/downloads/hotfixes/38/i-doit_38_hotfix_ID-12376_4fd97c7.zip){ .md-button .md-button--primary }
 
+### Do not archive persons when the response times from the AD are long (ID-11616)
+
+[i-doit_38_hotfix_ID-11616.zip :material-file-download:](../../assets/downloads/hotfixes/38/i-doit_38_hotfix_ID-11616.zip){ .md-button .md-button--primary }
+
+### Fix inverted address range for IPv4 /31 and /32 networks (ID-12434)
+
+[i-doit_38_hotfix_ID-12434.zip :material-file-download:](../../assets/downloads/hotfixes/38/i-doit_38_hotfix_ID-12434.zip){ .md-button .md-button--primary }
+
 * * *
 
 ## Documents Add-on
