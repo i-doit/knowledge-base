@@ -65,6 +65,22 @@ plugins:
       strict: false
   - redirects:
       redirect_maps:
+        'i-doit-add-ons/checkmk2/checkmk-sites-synchronisieren.md': 'i-doit-add-ons/checkmk2/index.md'
+        'i-doit-add-ons/checkmk2/erste-schritte.md': 'i-doit-add-ons/checkmk2/index.md'
+        'i-doit-add-ons/checkmk2/faq.md': 'i-doit-add-ons/checkmk2/index.md'
+        'i-doit-add-ons/checkmk2/generate-wato-configuration.md': 'i-doit-add-ons/checkmk2/index.md'
+        'i-doit-add-ons/checkmk2/host-tags-synchronisieren.md': 'i-doit-add-ons/checkmk2/index.md'
+        'i-doit-add-ons/checkmk2/i-doit-web-gui.md': 'i-doit-add-ons/checkmk2/index.md'
+        'i-doit-add-ons/checkmk2/import-inventory-data.md': 'i-doit-add-ons/checkmk2/index.md'
+        'i-doit-add-ons/checkmk2/installation.md': 'i-doit-add-ons/checkmk2/index.md'
+        'i-doit-add-ons/checkmk2/konfiguration.md': 'i-doit-add-ons/checkmk2/index.md'
+        'i-doit-add-ons/checkmk2/kontaktgruppen-synchronisieren.md': 'i-doit-add-ons/checkmk2/index.md'
+        'i-doit-add-ons/checkmk2/match-objects-with-checkmk-hosts.md': 'i-doit-add-ons/checkmk2/index.md'
+        'i-doit-add-ons/checkmk2/read-information-from-i-doit-and-checkmk.md': 'i-doit-add-ons/checkmk2/index.md'
+        'i-doit-add-ons/checkmk2/requirements.md': 'i-doit-add-ons/checkmk2/index.md'
+        'i-doit-add-ons/checkmk2/synchronize-checkmk-agents.md': 'i-doit-add-ons/checkmk2/index.md'
+        'i-doit-add-ons/checkmk2/usage.md': 'i-doit-add-ons/checkmk2/index.md'
+        'i-doit-add-ons/checkmk2/wato-ordner-synchronisieren.md': 'i-doit-add-ons/checkmk2/index.md'
         'system-administration/reset-token.md': 'administration/reset-token.md'
         'i-doit-add-ons/isms.md': 'i-doit-add-ons/isms/index.md'
         'i-doit-add-ons/viva2.md': 'i-doit-add-ons/viva2/index.md'
@@ -834,24 +850,7 @@ nav:
           - API Tips and Tricks: i-doit-add-ons/api/api-tips-and-tricks.md
       - Cabling: i-doit-add-ons/cabling.md
       - Checkmk: i-doit-add-ons/checkmk.md
-      - Checkmk 2:
-          - i-doit-add-ons/checkmk2/index.md
-          - Getting Started: i-doit-add-ons/checkmk2/erste-schritte.md
-          - Requirements: i-doit-add-ons/checkmk2/requirements.md
-          - Installation: i-doit-add-ons/checkmk2/installation.md
-          - Configuration: i-doit-add-ons/checkmk2/konfiguration.md
-          - Usage: i-doit-add-ons/checkmk2/usage.md
-          - Synchronize checkmk Agents: i-doit-add-ons/checkmk2/synchronize-checkmk-agents.md
-          - Synchronize Contact Groups: i-doit-add-ons/checkmk2/kontaktgruppen-synchronisieren.md
-          - Synchronize WATO Folders: i-doit-add-ons/checkmk2/wato-ordner-synchronisieren.md
-          - Synchronize checkmk Sites: i-doit-add-ons/checkmk2/checkmk-sites-synchronisieren.md
-          - Synchronize Host Tags: i-doit-add-ons/checkmk2/host-tags-synchronisieren.md
-          - Generate WATO Configuration Based on CMDB Data: i-doit-add-ons/checkmk2/generate-wato-configuration.md
-          - Import Inventory Data into CMDB: i-doit-add-ons/checkmk2/import-inventory-data.md
-          - i-doit Web GUI: i-doit-add-ons/checkmk2/i-doit-web-gui.md
-          - Read Information from i-doit and checkmk: i-doit-add-ons/checkmk2/read-information-from-i-doit-and-checkmk.md
-          - Match Objects from i-doit with Hosts from checkmk: i-doit-add-ons/checkmk2/match-objects-with-checkmk-hosts.md
-          - Frequently Asked Questions (FAQ): i-doit-add-ons/checkmk2/faq.md
+      - Checkmk 2: i-doit-add-ons/checkmk2/index.md
       - DNS Documentation: i-doit-add-ons/dns-documentation.md
       - Documents:
           - i-doit-add-ons/documents/index.md
