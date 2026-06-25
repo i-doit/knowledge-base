@@ -17,7 +17,7 @@ Der Vorteil: Du vermeidest doppelte Datenpflege. Hostmerkmale, die in Check\_MK 
 
 !!! attention "Achtung!"
 
-    Schnittstelle unterstützt offiziell ausschließlich Check\_MK bis Version 1.4. Für alle neueren Versionen ist das [Check\_MK 2 Add-on](./checkmk2/index.md) vorgesehen.
+    Schnittstelle unterstützt offiziell ausschließlich Check\_MK bis Version 1.4. Für alle neueren Versionen ist das [Check\_MK 2 Add-on](./shd-connect/checkmk-adapter.md) vorgesehen.
     Welche Funktionen/Bereiche der Schnittstelle auch mit Check\_MK Versionen > 1.4 fehlerfrei funktionieren ist daher unklar.
 
 ## Grundkonfiguration

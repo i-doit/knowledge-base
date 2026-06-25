@@ -12,7 +12,7 @@ Das [Add-on](index.md) **Analyse** bietet dir zwei zentrale Funktionen:
 1. **Datenqualität prüfen** -- Untersuche, wie vollständig deine IT-Dokumentation ausgefüllt ist, und erhalte eine interaktive Ergebnisansicht.
 2. **Ausfälle simulieren** -- Spiele "Was passiert wenn"-Szenarien durch und analysiere die Auswirkungen auf deine Infrastruktur.
 
-In Kombination mit der Schnittstelle zu [Checkmk](../i-doit-add-ons/checkmk2/index.md) kannst du auch tatsächliche Live-Ausfälle direkt untersuchen.
+In Kombination mit der Schnittstelle zu [Checkmk](../i-doit-add-ons/shd-connect/checkmk-adapter.md) kannst du auch tatsächliche Live-Ausfälle direkt untersuchen.
 
 ## Download und Installation
 

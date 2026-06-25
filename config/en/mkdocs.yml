@@ -65,22 +65,23 @@ plugins:
       strict: false
   - redirects:
       redirect_maps:
-        'i-doit-add-ons/checkmk2/checkmk-sites-synchronisieren.md': 'i-doit-add-ons/checkmk2/index.md'
-        'i-doit-add-ons/checkmk2/erste-schritte.md': 'i-doit-add-ons/checkmk2/index.md'
-        'i-doit-add-ons/checkmk2/faq.md': 'i-doit-add-ons/checkmk2/index.md'
-        'i-doit-add-ons/checkmk2/generate-wato-configuration.md': 'i-doit-add-ons/checkmk2/index.md'
-        'i-doit-add-ons/checkmk2/host-tags-synchronisieren.md': 'i-doit-add-ons/checkmk2/index.md'
-        'i-doit-add-ons/checkmk2/i-doit-web-gui.md': 'i-doit-add-ons/checkmk2/index.md'
-        'i-doit-add-ons/checkmk2/import-inventory-data.md': 'i-doit-add-ons/checkmk2/index.md'
-        'i-doit-add-ons/checkmk2/installation.md': 'i-doit-add-ons/checkmk2/index.md'
-        'i-doit-add-ons/checkmk2/konfiguration.md': 'i-doit-add-ons/checkmk2/index.md'
-        'i-doit-add-ons/checkmk2/kontaktgruppen-synchronisieren.md': 'i-doit-add-ons/checkmk2/index.md'
-        'i-doit-add-ons/checkmk2/match-objects-with-checkmk-hosts.md': 'i-doit-add-ons/checkmk2/index.md'
-        'i-doit-add-ons/checkmk2/read-information-from-i-doit-and-checkmk.md': 'i-doit-add-ons/checkmk2/index.md'
-        'i-doit-add-ons/checkmk2/requirements.md': 'i-doit-add-ons/checkmk2/index.md'
-        'i-doit-add-ons/checkmk2/synchronize-checkmk-agents.md': 'i-doit-add-ons/checkmk2/index.md'
-        'i-doit-add-ons/checkmk2/usage.md': 'i-doit-add-ons/checkmk2/index.md'
-        'i-doit-add-ons/checkmk2/wato-ordner-synchronisieren.md': 'i-doit-add-ons/checkmk2/index.md'
+        'i-doit-add-ons/checkmk2/index.md': 'i-doit-add-ons/shd-connect/checkmk-adapter.md'
+        'i-doit-add-ons/checkmk2/checkmk-sites-synchronisieren.md': 'i-doit-add-ons/shd-connect/checkmk-adapter.md'
+        'i-doit-add-ons/checkmk2/erste-schritte.md': 'i-doit-add-ons/shd-connect/checkmk-adapter.md'
+        'i-doit-add-ons/checkmk2/faq.md': 'i-doit-add-ons/shd-connect/checkmk-adapter.md'
+        'i-doit-add-ons/checkmk2/generate-wato-configuration.md': 'i-doit-add-ons/shd-connect/checkmk-adapter.md'
+        'i-doit-add-ons/checkmk2/host-tags-synchronisieren.md': 'i-doit-add-ons/shd-connect/checkmk-adapter.md'
+        'i-doit-add-ons/checkmk2/i-doit-web-gui.md': 'i-doit-add-ons/shd-connect/checkmk-adapter.md'
+        'i-doit-add-ons/checkmk2/import-inventory-data.md': 'i-doit-add-ons/shd-connect/checkmk-adapter.md'
+        'i-doit-add-ons/checkmk2/installation.md': 'i-doit-add-ons/shd-connect/checkmk-adapter.md'
+        'i-doit-add-ons/checkmk2/konfiguration.md': 'i-doit-add-ons/shd-connect/checkmk-adapter.md'
+        'i-doit-add-ons/checkmk2/kontaktgruppen-synchronisieren.md': 'i-doit-add-ons/shd-connect/checkmk-adapter.md'
+        'i-doit-add-ons/checkmk2/match-objects-with-checkmk-hosts.md': 'i-doit-add-ons/shd-connect/checkmk-adapter.md'
+        'i-doit-add-ons/checkmk2/read-information-from-i-doit-and-checkmk.md': 'i-doit-add-ons/shd-connect/checkmk-adapter.md'
+        'i-doit-add-ons/checkmk2/requirements.md': 'i-doit-add-ons/shd-connect/checkmk-adapter.md'
+        'i-doit-add-ons/checkmk2/synchronize-checkmk-agents.md': 'i-doit-add-ons/shd-connect/checkmk-adapter.md'
+        'i-doit-add-ons/checkmk2/usage.md': 'i-doit-add-ons/shd-connect/checkmk-adapter.md'
+        'i-doit-add-ons/checkmk2/wato-ordner-synchronisieren.md': 'i-doit-add-ons/shd-connect/checkmk-adapter.md'
         'system-administration/reset-token.md': 'administration/reset-token.md'
         'i-doit-add-ons/isms.md': 'i-doit-add-ons/isms/index.md'
         'i-doit-add-ons/viva2.md': 'i-doit-add-ons/viva2/index.md'
@@ -850,7 +851,6 @@ nav:
           - API Tips and Tricks: i-doit-add-ons/api/api-tips-and-tricks.md
       - Cabling: i-doit-add-ons/cabling.md
       - Checkmk: i-doit-add-ons/checkmk.md
-      - Checkmk 2: i-doit-add-ons/checkmk2/index.md
       - DNS Documentation: i-doit-add-ons/dns-documentation.md
       - Documents:
           - i-doit-add-ons/documents/index.md
@@ -893,6 +893,7 @@ nav:
           - i-doit-add-ons/shd-connect/index.md
           - Telekom-Adapter: i-doit-add-ons/shd-connect/telekom-adapter.md
           - Baramundi-Adapter: i-doit-add-ons/shd-connect/baramundi-adapter.md
+          - Connect Checkmk Add-on: i-doit-add-ons/shd-connect/checkmk-adapter.md
       - URL-Router: i-doit-add-ons/url-router.md
       - VIVA:
           - i-doit-add-ons/viva/index.md
