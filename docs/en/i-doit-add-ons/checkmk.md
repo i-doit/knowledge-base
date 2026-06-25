@@ -17,7 +17,7 @@ The advantage: You avoid duplicate data maintenance. Host tags that control moni
 
 !!! attention "Attention!"
 
-    The interface officially supports only Check\_MK up to version 1.4. For all newer versions, the [Check\_MK 2 add-on](./checkmk2/index.md) is intended.
+    The interface officially supports only Check\_MK up to version 1.4. For all newer versions, the [Check\_MK 2 add-on](./shd-connect/checkmk-adapter.md) is intended.
     It is therefore unclear which functions/areas of the interface work correctly with Check\_MK versions > 1.4.
 
 ## Basic configuration
