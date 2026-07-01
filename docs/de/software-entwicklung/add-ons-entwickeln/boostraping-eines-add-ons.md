@@ -1,13 +1,11 @@
 ---
 title: "Bootstrapping eines Add-ons (init.php)"
-description: "In erster Ebene des Add-on-Verzeichnisses muss eine init.php\\-Datei liegen."
-icon:
-status:
+description: "In der ersten Ebene des Add-on-Verzeichnisses muss eine init.php\\-Datei liegen."
 lang: de
 ---
 # Bootstrapping eines Add-ons (init.php)
 
-In erster Ebene des Add-on-Verzeichnisses muss eine init.php\-Datei liegen. Diese wird vom i-doit-System automatisch inkludiert, um das Add-on im Kern zu registrieren. Vom Entwickler sollte die init.php dazu genutzt werden, um Add-on-spezifische Vorbereitungen zu treffen. Dazu gehört unter anderem das Definieren von Konstanten oder das Registrieren der Autoloader und Routen. Ebenso können hier Callbacks via "Signal-Slot"-Komponente registriert werden.
+In der ersten Ebene des Add-on-Verzeichnisses muss eine init.php\-Datei liegen. Diese wird vom i-doit-System automatisch inkludiert, um das Add-on im Kern zu registrieren. Vom Entwickler sollte die init.php dazu genutzt werden, um Add-on-spezifische Vorbereitungen zu treffen. Dazu gehört unter anderem das Definieren von Konstanten oder das Registrieren der Autoloader und Routen. Ebenso können hier Callbacks via "Signal-Slot"-Komponente registriert werden.
 
 Weiterhin können innerhalb der init.php\-Report-Views und Dashboard-Widgets registriert werden, damit i-doit an den entsprechenden Stellen darauf zugreifen kann.
 
@@ -42,15 +40,14 @@ Für PHP-Klassen, die nach PSR-4 erstellt werden, bietet i-doit eine einfache M�
 ### Legacy Code
 
 Für PHP-Klassen im Legacy-Format (wie z.B. die Rechtesystem- oder Kategorie-Klassen) muss der Classmap-Autoloader verwendet werden.
-Die Classmap kann über einen internen Command erstellt werden, der zur Verfügung steht wenn man das i-doit Repository geklont hat:
+Die Classmap kann über einen internen Command erstellt werden, der zur Verfügung steht, wenn man das i-doit-Repository geklont hat:
 
 ```shell
 $ php console.php internal:generate-classmap --add-on=<identifier> --skip-psr4
 ```
 
-Durch den Identifier weiß der Command in welches Verzeichnis die Classmap geschrieben werden soll, das `--skip-psr4` flag
-kann optional gesetzt werden um PSR-4 Klassen zu überspringen. Das Ergebnis des Commands sollte eine Datei sein, die im Add-on
-Verzeichnis liegt: `src/classes/modules/<identifier>/classmap.php`.
+Durch den Identifier weiß der Command, in welches Verzeichnis die Classmap geschrieben werden soll. Das `--skip-psr4`-Flag
+kann optional gesetzt werden, um PSR-4-Klassen zu überspringen. Das Ergebnis des Commands sollte eine Datei sein, die im Add-on-Verzeichnis liegt: `src/classes/modules/<identifier>/classmap.php`.
 
 Anschließend kann diese Datei folgendermaßen eingebunden werden:
 
