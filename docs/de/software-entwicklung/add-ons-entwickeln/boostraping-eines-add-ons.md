@@ -1,81 +1,61 @@
 ---
 title: "Bootstrapping eines Add-ons (init.php)"
-description: "In erster Ebene des Add-on-Verzeichnisses muss eine init.php\\-Datei liegen."
-icon:
-status:
+description: "In der ersten Ebene des Add-on-Verzeichnisses muss eine init.php\\-Datei liegen."
 lang: de
 ---
 # Bootstrapping eines Add-ons (init.php)
 
-In erster Ebene des Add-on-Verzeichnisses muss eine init.php\-Datei liegen. Diese wird vom i-doit-System automatisch inkludiert, um das Add-on im Kern zu registrieren. Vom Entwickler sollte die init.php dazu genutzt werden, um Add-on-spezifische Vorbereitungen zu treffen. Dazu gehört unter anderem das Definieren von Konstanten oder das Registrieren der Autoloader und Routen. Ebenso können hier Callbacks via "Signal-Slot"-Komponente registriert werden.
+In der ersten Ebene des Add-on-Verzeichnisses muss eine init.php\-Datei liegen. Diese wird vom i-doit-System automatisch inkludiert, um das Add-on im Kern zu registrieren. Vom Entwickler sollte die init.php dazu genutzt werden, um Add-on-spezifische Vorbereitungen zu treffen. Dazu gehört unter anderem das Definieren von Konstanten oder das Registrieren der Autoloader und Routen. Ebenso können hier Callbacks via "Signal-Slot"-Komponente registriert werden.
 
 Weiterhin können innerhalb der init.php\-Report-Views und Dashboard-Widgets registriert werden, damit i-doit an den entsprechenden Stellen darauf zugreifen kann.
 
 Die init.php muss so wenig Logik wie möglich mitliefern, damit die Performance nicht darunter leidet. Die init.php\-Dateien aller Add-ons werden bei jedem Request durchlaufen!
 
-Prüfen, ob das Add-on aktiv ist
--------------------------------
+## Prüfen, ob das Add-on aktiv ist
 
 Die erste Codeanweisung innerhalb der init.php muss prüfen, ob das Add-on aktiv ist. Nur dann darf weiterer Code ausgeführt werden!
 
 Der nötige Code dazu sieht folgendermaßen aus:
 
-    if (isys_module_manager::instance()->is_active('example'))
-    {
-        // Hier werden nun Konstanten, Autoloader und Events definiert bzw. registriert.
-    }
+```php
+if (isys_module_manager::instance()->is_active('example'))
+{
+    // Hier werden nun Konstanten, Autoloader und Events definiert bzw. registriert.
+}
+```
 
 **Alle weiteren Anweisungen dürfen lediglich innerhalb dieser Überprüfung stattfinden!**
 
-Autoloader PSR-4 und Legacy
----------------------------
+## Autoloader PSR-4 und Legacy
 
 ### PSR-4
 
 Für PHP-Klassen, die nach PSR-4 erstellt werden, bietet i-doit eine einfache Möglichkeit, den Add-on-Namespace in den Autoloader zu implementieren:
 
-    // Adding the PSR-4 autoloader for files in the new structure (underneath "<add-on>/src").
-    \idoit\Psr4AutoloaderClass::factory()->addNamespace('idoit\Module\Example', __DIR__ . '/src/');
+```php
+// Adding the PSR-4 autoloader.
+\idoit\Psr4AutoloaderClass::factory()->addNamespace('idoit\Module\Example', __DIR__ . '/src/');
+```
 
 ### Legacy Code
 
-Für PHP-Klassen im Legacy-Format (wie z.B. die Rechtesystem- oder Kategorie-Klassen) muss der entsprechende Legacy-Autoloader verwendet werden. Üblicherweise liegt dieser direkt im Add-on-Verzeichnis und sollte in etwa so aussehen:
+Für PHP-Klassen im Legacy-Format (wie z.B. die Rechtesystem- oder Kategorie-Klassen) muss der Classmap-Autoloader verwendet werden.
+Die Classmap kann über einen internen Command erstellt werden, der zur Verfügung steht, wenn man das i-doit-Repository geklont hat:
 
-    class isys_module_example_autoload extends isys_module_manager_autoload
-    {
-        /**
-        * Add-on specific legacy autoloader.
-        *
-        * @param   string $className
-        *
-        * @return  boolean
-        */
-        public static function init($className)
-        {
-            $base = '/src/classes/modules/example/';
-            $classList = [
-                'isys_example_example' => 'example/isys_example_example.class.php',
-                // ...
-            ];
+```shell
+$ php console.php internal:generate-classmap --add-on=<identifier> --skip-psr4
+```
 
-            if (isset($classList[$className]) && parent::include_file($base . $classList[$className])) {
-                isys_caching::factory('autoload')->set($className, $base . $classList[$className]);
+Durch den Identifier weiß der Command, in welches Verzeichnis die Classmap geschrieben werden soll. Das `--skip-psr4`-Flag
+kann optional gesetzt werden, um PSR-4-Klassen zu überspringen. Das Ergebnis des Commands sollte eine Datei sein, die im Add-on-Verzeichnis liegt: `src/classes/modules/<identifier>/classmap.php`.
 
-                return true;
-            }
+Anschließend kann diese Datei folgendermaßen eingebunden werden:
 
-            return false;
-        }
-    }
+```php
+// Add classmap for legacy code.
+\idoit\Component\Autoloader::appendClassmap(require_once __DIR__ . '/classmap.php');
+```
 
-Der Legacy-Autoloader wird folgendermaßen in der init.php registriert:
-
-    if (file_exists(__DIR__ . '/isys_module_example_autoload.class.php') && (include_once __DIR__ . '/isys_module_example_autoload.class.php'))
-    {
-        spl_autoload_register('isys_module_example_autoload::init');
-    }
-
-Einstellungen für [Mandanten-Name] erweitern
------------------------------
+## Einstellungen für [Mandanten-Name] erweitern
 
 Die dargestellten Einstellungen für [Mandanten-Name] unter **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name]** können mittels Add-on erweitert werden. Weitere Informationen hierzu befinden sich im Artikel [Systemeinstellungen erweitern](systemeinstellungen-erweitern.md).
