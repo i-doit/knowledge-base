@@ -14,7 +14,7 @@ To load the protection needs assessment, first select an information domain in t
 
 Once the information domain is loaded, the left panel displays all target objects/target object groups that are assigned to the selected information domain via the "Information Domains" category (or via the corresponding reverse category "Infrastructure Analysis" in the information domain).
 
-[![Target Object Groups](../../assets/images/en/i-doit-add-ons/viva2/assessment-of-protection/zielobjektgruppen.png)](../../assets/images/en/i-doit-add-ons/viva2/assessment-of-protection/zielobjektgruppen.png){:target="_blank"}
+[![Target Object Groups](../../assets/images/en/i-doit-add-ons/viva2/assessment-of-protection/target-object-groups.png)](../../assets/images/en/i-doit-add-ons/viva2/assessment-of-protection/target-object-groups.png){:target="_blank"}
 
 The main area displays the complete information domain graphically.
 
@@ -34,9 +34,11 @@ The protection needs are inherited from top to bottom, starting at the top with 
 
 The protection needs for the various basic values are inherited downward according to the maximum principle.
 
-[![Target Objects](../../assets/images/en/i-doit-add-ons/viva2/assessment-of-protection/zielobjekte.png)](../../assets/images/en/i-doit-add-ons/viva2/assessment-of-protection/zielobjekte.png){:target="_blank"}
+[![Target Objects](../../assets/images/en/i-doit-add-ons/viva2/assessment-of-protection/target-objects.png)](../../assets/images/en/i-doit-add-ons/viva2/assessment-of-protection/target-objects.png){:target="_blank"}
 
 If the protection needs are entered directly on the object, the value is displayed in green text. If the value is inherited, it is displayed in gray. If the value entered on the object is lower than what the inheritance would dictate, the value is displayed in red text (e.g., in the case of a distribution effect).
+
+[![Target objects with inherited protection needs](../../assets/images/en/i-doit-add-ons/viva2/assessment-of-protection/target-objects-inherited.png)](../../assets/images/en/i-doit-add-ons/viva2/assessment-of-protection/target-objects-inherited.png){:target="_blank"}
 
 
 ## Filtering the View
@@ -47,11 +49,11 @@ Since the graphical display can quickly become cluttered for large information d
 
 You edit an object's protection needs directly in the graphical display. Click on an object in the tree view -- it will be loaded into the left panel.
 
-[![Protection needs](../../assets/images/en/i-doit-add-ons/viva2/assessment-of-protection/schutzbedarf-anzeigen.png)](../../assets/images/en/i-doit-add-ons/viva2/assessment-of-protection/schutzbedarf-anzeigen.png){:target="_blank"}
+[![Protection needs](../../assets/images/en/i-doit-add-ons/viva2/assessment-of-protection/protection-needs.png)](../../assets/images/en/i-doit-add-ons/viva2/assessment-of-protection/protection-needs.png){:target="_blank"}
 
 To enter or change the protection needs, click "Edit protection needs". In the editing form, enter the protection needs for the basic values and provide a justification for the classification.
 
-[![Edit protection needs](../../assets/images/en/i-doit-add-ons/viva2/assessment-of-protection/schutzbedarf-editieren.png)](../../assets/images/en/i-doit-add-ons/viva2/assessment-of-protection/schutzbedarf-editieren.png){:target="_blank"}
+[![Edit protection needs](../../assets/images/en/i-doit-add-ons/viva2/assessment-of-protection/edit-protection-needs.png)](../../assets/images/en/i-doit-add-ons/viva2/assessment-of-protection/edit-protection-needs.png){:target="_blank"}
 
 After clicking Save, the object is saved with the corresponding values. Then reload the information domain completely so that the protection needs inheritance is recalculated.
 
