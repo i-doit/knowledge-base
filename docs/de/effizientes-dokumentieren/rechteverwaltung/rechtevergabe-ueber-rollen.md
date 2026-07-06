@@ -11,13 +11,13 @@ Seit Version 1.18.2 kannst du Benutzern oder Gruppen Rechte auf Objekte über di
 
 ## Gruppe erstellen und Benutzer zuweisen
 
-Erstelle zunächst eine Personengruppe (im Beispiel "User Rights to Objects") und fuege den gewünschten Benutzer als Mitglied hinzu:
+Erstelle zunächst eine Personengruppe (im Beispiel "User Rights to Objects") und füge den gewünschten Benutzer als Mitglied hinzu:
 
 [![rechteüberrollen-testuser](../../assets/images/de/effizientes-dokumentieren/rechteverwaltung/rechtevergabe-ueber-rollen/1-rur.png)](../../assets/images/de/effizientes-dokumentieren/rechteverwaltung/rechtevergabe-ueber-rollen/1-rur.png)
 
 ## Rechtevergabe
 
-Wechsle in die Rechtevergabe unter **Verwaltung > Rechtesystem > Rechtevergabe > CMDB**. Wähle die soeben erstellte Gruppe aus und klicke auf ![rechteüberrollen-icon](../../assets/images/de/effizientes-dokumentieren/rechteverwaltung/rechtevergabe-ueber-rollen/2-rur.png):
+Wechsle in die Rechtevergabe unter **Verwaltung > Berechtigungen > CMDB**. Wähle die soeben erstellte Gruppe aus und klicke auf ![rechteüberrollen-icon](../../assets/images/de/effizientes-dokumentieren/rechteverwaltung/rechtevergabe-ueber-rollen/2-rur.png):
 
 [![rechteüberrollen-vergabe](../../assets/images/de/effizientes-dokumentieren/rechteverwaltung/rechtevergabe-ueber-rollen/3-rur.png)](../../assets/images/de/effizientes-dokumentieren/rechteverwaltung/rechtevergabe-ueber-rollen/3-rur.png)
 
@@ -33,6 +33,6 @@ Hier setzt du die gewünschten Rechte (Erstellen, Ansehen, Bearbeiten, Archivier
 
 ### Beispielkonfiguration
 
-In diesem Beispiel erhalten alle Mitglieder der Gruppe "User Rights to Objects" Rechte auf Objekte, bei denen sie in der Kontaktzuweisung mit der Rolle **Mitarbeiter** verknüpft sind:
+In diesem Beispiel erhalten alle Mitglieder der Gruppe "User Rights to Objects" Rechte auf Objekte, bei denen sie in der Kontaktzuweisung mit der Rolle **Benutzer** verknüpft sind:
 
 [![rechteüberrollen-konfigurieren](../../assets/images/de/effizientes-dokumentieren/rechteverwaltung/rechtevergabe-ueber-rollen/4-rur.png)](../../assets/images/de/effizientes-dokumentieren/rechteverwaltung/rechtevergabe-ueber-rollen/4-rur.png)
