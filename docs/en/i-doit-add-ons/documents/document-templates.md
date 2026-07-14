@@ -65,6 +65,19 @@ In the input field, you add the chapter content via the WYSIWYG editor. Via the 
 | [![icon](../../assets/images/de/i-doit-add-ons/documents/vorlagen/11-vor.png)](../../assets/images/de/i-doit-add-ons/documents/vorlagen/11-vor.png) | You dynamically embed content from the documentation via [placeholders](./platzhalter-im-add-on-dokumente.md). Details can be found in the [corresponding chapter](./platzhalter-im-add-on-dokumente.md).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | [![icon](../../assets/images/de/i-doit-add-ons/documents/vorlagen/12-vor.png)](../../assets/images/de/i-doit-add-ons/documents/vorlagen/12-vor.png) | Here you insert an automatic page break.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
+## Print-friendly tables
+
+The PDF is rendered by a different engine than the browser editor, so very complex table layouts can appear differently in the PDF than in the editor. This applies to tables in the content as well as in the header and footer. To keep tables rendering reliably in the PDF, follow these guidelines:
+
+* Use relative widths (for example, set the table to 100%) instead of fixed pixel widths, and keep the total width within the page.
+* Use the same column widths across all rows of a table.
+* Avoid merged cells (colspan/rowspan) where possible and use a consistent column layout instead.
+* Keep the header and footer compact. A very tall header reduces the space available for the content.
+* After editing, check the result with the preview before you finalize the template, because the editor view is not identical to the PDF output.
+
+!!! tip "Content pasted from Word"
+    Do not paste tables directly from Word or other office programs. This carries over inflated pixel widths and hidden styling that the PDF engine cannot reconcile. Paste the content as plain text and rebuild the table in the editor, or clean it up in the source code view.
+
 ## Exporting and Importing Templates
 
 You can export existing templates and import them into other tenants or i-doit installations. To do this, open the template in the editing view and click "Export Document Template." The template is provided as a ZIP file containing all content including inserted images.
