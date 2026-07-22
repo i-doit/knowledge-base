@@ -54,7 +54,7 @@ Am Beispiel eines Wechsels von PHP 8.2 auf PHP 8.3 mit PHP-FPM:
     date.timezone = Europe/Berlin
     session.gc_maxlifetime = 604800
     session.cookie_lifetime = 0
-    mysqli.default_socket = /var/lib/mysql/mysql.sock
+    mysqli.default_socket = /var/run/mysqld/mysqld.sock
     ```
     ```shell
     sudo phpenmod -v 8.3 i-doit
@@ -183,7 +183,7 @@ default_socket_timeout = 60
 date.timezone = Europe/Berlin
 session.gc_maxlifetime = 604800
 session.cookie_lifetime = 0
-mysqli.default_socket = /var/lib/mysql/mysql.sock
+mysqli.default_socket = /var/run/mysqld/mysqld.sock
 ```
 
 Aktiviere die Konfiguration für alle SAPIs (CLI und FPM):
