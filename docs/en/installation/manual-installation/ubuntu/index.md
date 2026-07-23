@@ -82,7 +82,7 @@ default_socket_timeout = 60
 date.timezone = Europe/Berlin
 session.gc_maxlifetime = 604800
 session.cookie_lifetime = 0
-mysqli.default_socket = /var/lib/mysql/mysql.sock
+mysqli.default_socket = /var/run/mysqld/mysqld.sock
 ```
 <!-- cSpell:enable -->
 The `memory_limit` must be increased if needed, e.g., for very large reports or extensive documents.
