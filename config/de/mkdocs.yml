@@ -880,7 +880,9 @@ nav:
           - Reporting: i-doit-add-ons/isms/reports.md
           - Objekttypen und Kategorien: i-doit-add-ons/isms/object-types-and-categories.md
           - Releases: i-doit-add-ons/isms/releases.md
-      - JDisc Connector: i-doit-add-ons/jdisc-connector/index.md
+      - JDisc Connector:
+          - i-doit-add-ons/jdisc-connector/index.md
+          - Cloud- und Kubernetes-Import: i-doit-add-ons/jdisc-connector/cloud-kubernetes-import.md
       - Maintenance: i-doit-add-ons/maintenance.md
       - Nagios: i-doit-add-ons/nagios.md
       - OCS Inventory NG: i-doit-add-ons/ocs-inventory-ng.md
