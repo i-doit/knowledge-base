@@ -73,7 +73,7 @@ Shows on which infrastructure layer the VM is executed -- for example, a cluster
         "object": 123,
         "category": "C__CATG__GUEST_SYSTEMS",
         "data": {
-            "object": 456
+            "connected_object": [456]
         }
     },
     "id": 1
@@ -107,7 +107,7 @@ Shows on which infrastructure layer the VM is executed -- for example, a cluster
         "category": "C__CATG__GUEST_SYSTEMS",
         "entry": 32,
         "data": {
-            "object": 789
+            "connected_object": [789]
         }
     },
     "id": 3
