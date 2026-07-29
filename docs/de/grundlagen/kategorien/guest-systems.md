@@ -73,7 +73,7 @@ Zeigt an, auf welcher Infrastruktur-Ebene die VM ausgeführt wird – beispielsw
         "object": 123,
         "category": "C__CATG__GUEST_SYSTEMS",
         "data": {
-            "object": 456
+            "connected_object": [456]
         }
     },
     "id": 1
@@ -107,7 +107,7 @@ Zeigt an, auf welcher Infrastruktur-Ebene die VM ausgeführt wird – beispielsw
         "category": "C__CATG__GUEST_SYSTEMS",
         "entry": 32,
         "data": {
-            "object": 789
+            "connected_object": [789]
         }
     },
     "id": 3
