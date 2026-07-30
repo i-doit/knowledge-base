@@ -141,7 +141,33 @@ Jeder `JDisc-Typ` wird mit einem `i-doit Objekttyp` verknüpft. Wenn kein `i-doi
 | **Berücksichtige Default Templates aus Objekttypen (nur für neu erstellte Objekte)** | Wird ein neues Objekt erstellt, wird automatisch das im Objekttyp hinterlegte [Template](../../effizientes-dokumentieren/templates.md) berücksichtigt.                                                                                                           |
 | **CMDB-Status von Objekten ändern zu**                                               | Bereits vorhandene Objekte können beim Aktualisieren einen bestimmten **[CMDB-Status](../../grundlagen/lebens-und-dokumentationszyklus.md)** erhalten. Soll der **CMDB-Status** nicht geändert werden, ist in der Auswahl **CMDB-Status beibehalten** zu wählen. |
 | **CMDB-Status für neu importierte Objekte**                                          | Neu erstellte Objekte können einen bestimmten **[CMDB-Status](../../grundlagen/lebens-und-dokumentationszyklus.md)** erhalten. Soll der **CMDB-Status** nicht geändert werden, ist in der Auswahl **-** zu wählen.                                               |
+| **Active Directory Benutzer importieren**                                            | Sollen Active Directory Benutzer als Objekte des Typs **Personen** importiert werden? Siehe [Active Directory Benutzer und Benutzergruppen](#active-directory-benutzer-und-benutzergruppen).                                                                      |
+| **Active Directory Benutzergruppen importieren**                                     | Sollen Active Directory Benutzergruppen als Objekte des Typs **Personengruppen** importiert werden?                                                                                                                                                              |
+| **Filter auf Organisationseinheiten (versteckt)**                                     | Nur sichtbar wenn eine der beiden Optionen darüber aktiv ist. Begrenzt den Import auf die angegebenen Organisationseinheiten.                                                                                                                                    |
 | **Custom attributes importieren**                                                    | Wenn in JDisc Discovery benutzerdefinierte Attribute (**Custom Attributes**) gepflegt werden, können diese in i-doit importiert werden. Diese werden nach dem Import in der Kategorie **JDisc Custom Attributes** angezeigt.                                     |
+
+#### Active Directory Benutzer und Benutzergruppen
+
+JDisc Discovery synchronisiert die Benutzer und Benutzergruppen deines Active Directory, sobald in JDisc ein Verzeichnis-Scan konfiguriert ist. Der JDisc Connector importiert sie als Objekte der Typen **Personen** und **Personengruppen** nach i-doit, du dokumentierst deine Kontakte also ohne eine zweite Verbindung von i-doit zu deinem Verzeichnisdienst.
+
+**Voraussetzung in JDisc Discovery:** das Verzeichnis muss synchronisiert sein. Hinterlege in JDisc unter **Discovery > Configuration > Directory** einen DNS Domain Controller samt Zugangsdaten, aktiviere auf dem Reiter **Data Collection** die Erfassung der Benutzer, stelle den Scope unter **Scope > Directory** auf **Enable subtree** und lasse die Optionen *synchronize users* und *synchronize user groups* des Discovery Jobs aktiv. Ohne Domain-Controller-Eintrag synchronisiert JDisc das Verzeichnis nie und der Import findet keine Benutzer.
+
+Aktiviere die Optionen im Sync Profil:
+
+[![Active Directory Benutzer und Benutzergruppen importieren](../../assets/images/de/i-doit-add-ons/jdisc-connector/sync-profile-ad-import-de.png)](../../assets/images/de/i-doit-add-ons/jdisc-connector/sync-profile-ad-import-de.png)
+
+| Option                                              | Beschreibung                                                                                                                                                                                                                                                          |
+| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Active Directory Benutzer importieren**           | Legt für jeden Active Directory Benutzer ein Objekt des Typs **Personen** an, mit Vorname, Nachname, LDAP DN und, wenn der User Principal Name eine Mailadresse ist, der primären Mailadresse.                                                                          |
+| **Active Directory Benutzergruppen importieren**    | Legt für jede Active Directory Benutzergruppe ein Objekt des Typs **Personengruppen** an. Mitgliedschaften werden nur geschrieben, wenn auch Benutzer importiert werden.                                                                                                |
+| **Filter auf Organisationseinheiten**               | Begrenzt den Import auf die angegebenen Organisationseinheiten, mit Semikolon getrennt. Entweder der Name (`Sales`) oder der DN (`OU=Sales,DC=example,DC=com`). Ein leeres Feld importiert das gesamte Verzeichnis, das können mehrere tausend Personen sein.           |
+
+Die Mitgliedschaften landen in der Kategorie **Personengruppen Mitglieder**. Mitglieder verschachtelter Gruppen werden zusätzlich der übergeordneten Gruppe zugewiesen, da Personengruppen in i-doit nicht verschachtelt werden können:
+
+[![Personengruppen Mitglieder nach dem Import](../../assets/images/de/i-doit-add-ons/jdisc-connector/ad-person-group-members-de.png)](../../assets/images/de/i-doit-add-ons/jdisc-connector/ad-person-group-members-de.png)
+
+!!! note "Vorhandene Personen werden weiterverwendet"
+    Personen werden über ihren LDAP DN erkannt, also über dasselbe Attribut, das die [LDAP-Synchronisation](../../benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/index.md) von i-doit schreibt. Wer sein Verzeichnis schon per `ldap-sync` abgleicht, bekommt durch den JDisc-Import keine Dubletten, sondern die vorhandenen Personen werden zugewiesen. Benutzergruppen werden über den Gruppennamen erkannt. Attribute vorhandener Personen überschreibt der Import nicht, und er archiviert oder löscht keine Personen oder Gruppen, die JDisc nicht mehr meldet.
 
 #### Software und Betriebssystem
 
