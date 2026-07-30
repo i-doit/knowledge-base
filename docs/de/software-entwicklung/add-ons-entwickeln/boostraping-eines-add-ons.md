@@ -56,6 +56,44 @@ Anschließend kann diese Datei folgendermaßen eingebunden werden:
 \idoit\Component\Autoloader::appendClassmap(require_once __DIR__ . '/classmap.php');
 ```
 
+## Eigene Services registrieren
+
+i-doit verfügt über einen „Dependency-Injection-Container“, der mit eigenen Services ergänzt werden kann. 
+Eigene Services zu hinterlegen ist denkbar einfach: Eure `isys_module_*`-Klasse muss dazu lediglich das 
+`idoit\AddOn\ExtensionProviderInterface`-Interface und die notwendige Methode `getContainerExtension` implementieren.
+
+Diese Methode muss eine Instanz einer "Extension"-Klasse zurückliefern. Diese verfügt üblicherweise nur über wenige Zeilen:
+
+```php
+<?php
+
+namespace idoit\Module\Example;
+
+use Symfony\Component\Config\FileLocator;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\DependencyInjection\Extension\Extension;
+use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
+
+class ExampleExtension extends Extension
+{
+    public function load(array $configs, ContainerBuilder$container)
+    {
+        (new YamlFileLoader($container, new FileLocator(dirname(__DIR__))))->load('config/services.yaml');
+    }
+}
+```
+
+Die Klasse referenziert zeigt auf eure `services.yaml` Datei, die eure Servicedefinition enthält. 
+Das kann unter anderem dafür genutzt werden, "getaggte Services" (zum Beispiel API-Endpunkte) zu erstellen. 
+Das kann wie folgt aussehen:
+
+```yaml
+services:
+    example.endpoint.a:
+        class: idoit\Module\Example\ApiEndpoint\Hello
+        tags: [ 'api.endpoint' ]
+```
+
 ## Einstellungen für [Mandanten-Name] erweitern
 
 Die dargestellten Einstellungen für [Mandanten-Name] unter **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name]** können mittels Add-on erweitert werden. Weitere Informationen hierzu befinden sich im Artikel [Systemeinstellungen erweitern](systemeinstellungen-erweitern.md).

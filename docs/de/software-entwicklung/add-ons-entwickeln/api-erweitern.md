@@ -60,9 +60,31 @@ class Example implements EndpointInterface
 
 Anschließend muss dieser Endpunkt in der API registriert werden, dazu gibt es zwei Optionen:
 
-### Registrierung über `registerEndpoint`
+### Registrierung über tagged service
 
-Innerhalb eurer `init.php` könnt ihr den folgenden Code hinterlegen um Endpunkte zu registrieren:
+Wenn du in deinem Add-on eigene Services definierst, die dem Dependency-Injection-Container hinzugefügt werden, 
+kannst du deine Endpunkte automatisch registrieren lassen, indem du das Tag `'api.endpoint'` verwendest. 
+Weitere Informationen dazu, wie man Services definiert, 
+findest du unter [boostraping-eines-add-ons.md](boostraping-eines-add-ons.md).
+
+```yaml
+services:
+    idoit.api.endpoint.example:
+        class: idoit\Module\YoudAddonIdentifier\Example
+        tags: [ 'api.endpoint' ]
+
+    idoit.api.endpoint.example2:
+        class: idoit\Module\YoudAddonIdentifier\Example2
+        tags: [ 'api.endpoint' ]
+```
+
+### Registrierung über `registerEndpoint` (deprecated)
+
+Alternativ könnt ihr in eurer `init.php` den folgenden Code hinterlegen um Endpunkte zu registrieren:
+
+!!! info "Veraltete Logik"
+
+    Achtung - diese Option sollte nicht länger verwendet werden. Endpunkte sind in diesem Fall nur nach API login erreichbar!
 
 ```php
 // Content of 'init.php'.
@@ -75,22 +97,6 @@ use idoit\Module\YoudAddonIdentifier\Example2;
 isys_application::instance()->container->get('api.endpoints')
     ->registerEndpoint(new Example())
     ->registerEndpoint(new Example2());
-```
-
-### Registrierung über tagged service
-
-Wenn du in deinem Add-on eigene Services definieren, die dem Dependency Injection Container hinzugefügt werden,
-kannst du deine Endpunkte automatisch registrieren lassen, indem du das Tag `'api.endpoint'` verwenden:
-
-```yaml
-services:
-    idoit.api.endpoint.example:
-        class: idoit\Module\YoudAddonIdentifier\Example
-        tags: [ 'api.endpoint' ]
-
-    idoit.api.endpoint.example2:
-        class: idoit\Module\YoudAddonIdentifier\Example2
-        tags: [ 'api.endpoint' ]
 ```
 
 ## Aufbau eines Endpunkts
