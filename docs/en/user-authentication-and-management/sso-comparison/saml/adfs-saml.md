@@ -307,8 +307,21 @@ Example
         MellonVariable "cookie"
         MellonSecureCookie On
     </Location>
+
+    # Exclude the JSON-RPC API from SSO: an API client cannot follow
+    # the redirect to the identity provider.
+    <Location /src/jsonrpc.php>
+        AuthType None
+        Require all granted
+    </Location>
 </IfModule>
 ```
+
+!!! warning "Keep the API reachable"
+
+    The `<Location />` block places the entire installation behind the identity provider, including the JSON-RPC API at `/src/jsonrpc.php`. An API client cannot follow the redirect to the login page, so without the second `<Location>` block every API request fails: the web server answers with a redirect instead of the API response.
+
+    The exception removes only the web server's SSO check for this one path. i-doit still requires a valid API key and, depending on the method, valid user credentials, so the API does not become publicly accessible.
 
 Restart Apache:
 
