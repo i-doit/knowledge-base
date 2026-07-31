@@ -142,6 +142,7 @@ Und ganz wichtig:
 | **extId**   | String         | Ja       | Objekt, zum Beispiel: **windows-server100**      |
 | **class**   | String         | Ja       | Objekttyp, zum Beispiel: **C__OBJTYPE__SERVER**  |
 | **title**   | String         | Ja       | Objekt Bezeichnung, zum Beispiel: **Server 100** |
+| **data**    | Object         | Ja       | Kategoriedaten, je Kategorie-Konstante (siehe Beispiele unten) |
 
 ### Example
 
@@ -378,7 +379,7 @@ Beim Pull bestimmt der External Identifier die abgefragten Daten zum Beispiel:
 | Key         | JSON data type | Required | Description                                  |
 | ----------- | -------------- | -------- | -------------------------------------------- |
 | **extType** | String         | Ja       | Datenquelle, zum Beispiel: **datenquelle-1** |
-| **extId**   | String         | Ja       | Objekt, zum Beispiel: **windows-server100**  |
+| **extId**   | String         | Nein     | Objekt, zum Beispiel: **windows-server100**. Ohne Angabe werden alle Objekte der Datenquelle gelesen |
 
 ### Example
 
@@ -568,4 +569,220 @@ Beim Pull bestimmt der External Identifier die abgefragten Daten zum Beispiel:
     }
     ```
 
-*[DQ]: Datenquellen
+## Anwendungsfälle
+
+Die folgenden Beispiele folgen einem typischen Ablauf: Ein externes System (hier `datenquelle-1`) führt eigene IDs und spiegelt Daten nach i-doit. Beachten Sie, dass `objectId` eine Zahl ohne Anführungszeichen ist und das JSON-RPC-Feld `id` auf die oberste Ebene der Anfrage gehört, nicht in `params`.
+
+### Ein vorhandenes Objekt mit einer externen Kennung verbinden
+
+Das Objekt liegt schon in i-doit, und Sie möchten es mit der ID aus Ihrem externen System verbinden, um es später anzureichern. Das erledigt `cmdb.external.link.v2`.
+
+| Key          | JSON data type | Required | Description                                       |
+| ------------ | -------------- | -------- | ------------------------------------------------- |
+| **extType**  | String         | Ja       | Datenquelle, zum Beispiel: **datenquelle-1**      |
+| **extId**    | String         | Ja       | Externe Kennung für das Objekt, zum Beispiel: **windows-server100** |
+| **objectId** | Number         | Ja       | Interne ID des vorhandenen i-doit-Objekts, zum Beispiel: **770** |
+
+??? example "cmdb.external.link.v2"
+
+    **Request**
+    ```json
+    {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "cmdb.external.link.v2",
+        "params": {
+            "apikey": "xxx",
+            "extType": "datenquelle-1",
+            "extId": "windows-server100",
+            "objectId": 770
+        }
+    }
+    ```
+    **Response**
+    ```json
+    {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "result": {
+            "success": true
+        }
+    }
+    ```
+
+    Ist das Objekt bereits mit dieser Kennung verbunden, erhalten Sie `success: true` zusammen mit der Meldung `External identifier is already linked to given object.`. Diese Antwort bestätigt die Zuordnung bereits, ein separater Pull zur Prüfung ist dafür nicht nötig.
+
+### Ein verbundenes Objekt anreichern
+
+Das Objekt ist verbunden, jetzt schreiben Sie Daten aus Ihrem externen System in eine seiner Kategorien. Unter `data` steht je Kategorie eine Kennung pro Eintrag, und erst darunter stehen die eigentlichen Felder.
+
+??? example "cmdb.external.push.v2 (eine Kategorie)"
+
+    **Request**
+    ```json
+    {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "cmdb.external.push.v2",
+        "params": {
+            "apikey": "xxx",
+            "extType": "datenquelle-1",
+            "extId": "windows-server100",
+            "class": "C__OBJTYPE__SERVER",
+            "title": "Server 100",
+            "data": {
+                "C__CATG__MODEL": {
+                    "strategy": "create",
+                    "data": {
+                        "model-1": {
+                            "manufacturer": "Dell",
+                            "title": "PowerEdge R760"
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ```
+    **Response**
+    ```json
+    {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "result": {
+            "messages": [
+                {
+                    "message": "Object for external id datenquelle-1/windows-server100 found: 770",
+                    "level": 200,
+                    "datetime": "2024-04-09T15:53:56.134886+02:00"
+                },
+                {
+                    "message": "Preparing data for category 'Model' using strategy create.",
+                    "level": 200,
+                    "datetime": "2024-04-09T15:53:56.135378+02:00"
+                }
+            ],
+            "success": true
+        }
+    }
+    ```
+
+### Ein Objekt anlegen und gleich anreichern
+
+Das Objekt gibt es noch nicht, also legen Sie es an und füllen es mit einem einzigen `cmdb.external.push.v2`-Aufruf. Die Objekt-Ebene (`extType`, `extId`, `title`, `class`) und die Kategorie-Ebene (`data`) werden zusammen gesendet.
+
+??? example "cmdb.external.push.v2 (Objekt anlegen)"
+
+    **Request**
+    ```json
+    {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "cmdb.external.push.v2",
+        "params": {
+            "apikey": "xxx",
+            "extType": "datenquelle-1",
+            "extId": "windows-server200",
+            "class": "C__OBJTYPE__SERVER",
+            "title": "Server 200",
+            "data": {
+                "C__CATG__CPU": {
+                    "strategy": "create",
+                    "data": {
+                        "intel-1": {
+                            "title": "Intel Core i9 3.5GHz #1",
+                            "manufacturer": "Intel",
+                            "type": "Core i9",
+                            "frequency": "3.5",
+                            "frequency_unit": "GHz"
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ```
+    **Response**
+    ```json
+    {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "result": {
+            "messages": [
+                {
+                    "message": "External id datenquelle-1/windows-server200 not found. Object with id 771 created.",
+                    "level": 200,
+                    "datetime": "2024-04-09T15:53:56.134886+02:00"
+                },
+                {
+                    "message": "New category entry 106 created for custom id intel-1.",
+                    "level": 200,
+                    "datetime": "2024-04-09T15:53:56.138370+02:00"
+                }
+            ],
+            "success": true
+        }
+    }
+    ```
+
+### Nachsehen, was mit einer Kennung verbunden ist
+
+Sie möchten sehen, was hinter einer Kennung steckt und wie deren Daten aussehen. `cmdb.external.pull.v2` liest anhand der Kennung, und wie viel Sie zurückbekommen, hängt davon ab, welchen Teil der Kennung Sie senden:
+
+| extType                                          | extId             | Liest                                            |
+| ------------------------------------------------ | ----------------- | ------------------------------------------------ |
+| datenquelle-1                                    | null              | alle Objekte und alle Kategoriedaten             |
+| datenquelle-1                                    | windows-server100 | dieses Objekt und alle seine Kategoriedaten      |
+| datenquelle-1 / windows-server100 / C__CATG__CPU | null              | dieses Objekt und alle CPU-Einträge              |
+| datenquelle-1 / windows-server100 / C__CATG__CPU | intel-1           | dieses Objekt und nur den CPU-Eintrag intel-1     |
+
+??? example "cmdb.external.pull.v2"
+
+    **Request**
+    ```json
+    {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "cmdb.external.pull.v2",
+        "params": {
+            "apikey": "xxx",
+            "extType": "datenquelle-1",
+            "extId": "windows-server100"
+        }
+    }
+    ```
+    **Response**
+    ```json
+    {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "result": [
+            {
+                "extId": "windows-server100",
+                "extType": "datenquelle-1",
+                "id": 770,
+                "title": "Server 100",
+                "sysid": "SYSID_1712671606",
+                "objecttype": 5,
+                "type_title": "Server",
+                "status": 2,
+                "cmdb_status": 6,
+                "data": {
+                    "C__CATG__MODEL": [
+                        {
+                            "extId": "model-1",
+                            "extType": "datenquelle-1/windows-server100/C__CATG__MODEL",
+                            "id": "104",
+                            "objID": "770",
+                            "manufacturer": {
+                                "id": "2",
+                                "title": "Dell"
+                            },
+                            "title": "PowerEdge R760"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+    ```

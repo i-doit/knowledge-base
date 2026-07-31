@@ -37,9 +37,9 @@ For example `my_vendor_id / my_object_id`.
 Examples would be:
 
 -   External identifier for an **object**
-    -   `datenquelle-1 / windows-server100`
+    -   `datasource-1 / windows-server100`
 -   External identifier for each **category entry**
-    -   `datenquelle-1 / windows-server100 / C__CATG__CPU / intel-1`
+    -   `datasource-1 / windows-server100 / C__CATG__CPU / intel-1`
 
 On the first level is the object. Here we define the **extType** and the **extId**. Together they form the complete identifier and uniquely identify the created object.
 
@@ -56,14 +56,14 @@ Here is an example push request for creating an object via the new endpoint.
     "params": {
         ...
         "apikey": "xxx",
-        <--- object Ebene
-        "extType": "datenquelle-1",
+        <--- object level
+        "extType": "datasource-1",
         "extId": "windows-server100",
         "title": "Server 100",
         "class": "C__OBJTYPE__SERVER",
-        object Ebene --->
+        object level --->
         "data": {
-            <--- Category Ebene
+            <--- category level
             "C__CATG__CPU": {
                 "strategy": "overwrite",
                 "data": {
@@ -83,7 +83,7 @@ Here is an example push request for creating an object via the new endpoint.
                     }
                 },...
             }
-            Category Ebene --->
+            category level --->
         }
     }
 }
@@ -114,7 +114,7 @@ At the category level, we have a similar handling:
 -   A special case for MV: **MV entries can be manually edited even if they originate from a data source**
 -   The reverse, however, is that manually created multi-value category entries remain protected from data source access
 -   But here too there is an exception, namely for single-value categories: **Manually created single-value category entries can be manipulated by data sources**
--   In the bottom right there is also a prohibited and non-representable case: The data source **"datenquelle-2"** cannot have a CPU entry in an object that is managed by **"datenquelle-1"**
+-   In the bottom right there is also a prohibited and non-representable case: The data source **"datasource-2"** cannot have a CPU entry in an object that is managed by **"datasource-1"**
 
 ## cmdb.external.push.v2
 
@@ -122,7 +122,7 @@ Creation and updating of objects and category entries through a single request.
 Additionally, various **"strategies"** allow us to represent different use cases, although it should be mentioned that these are only located at the category layer.
 
 Furthermore, the Push API also has procedures to convert human-readable values into their technical representation, for example Dialog+, object references or category references.
-Und ganz wichtig:
+And most importantly:
 
 !!! note "By using the Push API, you do not have to forgo general CMDB structures, such as the permission system, validation rules or the logbook. Everything works as before!"
 
@@ -138,10 +138,11 @@ Und ganz wichtig:
 
 | Key         | JSON data type | Required | Description                                      |
 | ----------- | -------------- | -------- | ------------------------------------------------ |
-| **extType** | String         | Yes      | Data source, for example: **datenquelle-1**     |
+| **extType** | String         | Yes      | Data source, for example: **datasource-1**     |
 | **extId**   | String         | Yes      | Object, for example: **windows-server100**      |
 | **class**   | String         | Yes      | Object type, for example: **C__OBJTYPE__SERVER**  |
 | **title**   | String         | Yes      | Object title, for example: **Server 100** |
+| **data**    | Object         | Yes      | Category data, keyed by category constant (see the examples below) |
 
 ### Example
 
@@ -154,7 +155,7 @@ Und ganz wichtig:
         "method": "cmdb.external.push.v2",
         "params": {
             "apikey": "xxx",
-            "extType": "datenquelle-1",
+            "extType": "datasource-1",
             "extId": "windows-server100",
             "class": "C__OBJTYPE__SERVER",
             "title": "Server 100",
@@ -201,7 +202,7 @@ Und ganz wichtig:
                                 "parent": {
                                     "title": "Düsseldorf",
                                     "class": "C__OBJTYPE__CITY",
-                                    "extType": "datenquelle-1",
+                                    "extType": "datasource-1",
                                     "extId": "CITY_OBJECT_DUESSELDORF"
                             }
                         }
@@ -221,7 +222,7 @@ Und ganz wichtig:
         "result": {
             "messages": [
                 {
-                    "message": "External id datenquelle-1/windows-server100 not found. Object with id 770 created.",
+                    "message": "External id datasource-1/windows-server100 not found. Object with id 770 created.",
                     "level": 200,
                     "datetime": "2024-04-09T15:53:56.134886+02:00"
                 },
@@ -321,7 +322,7 @@ Und ganz wichtig:
                     "datetime": "2024-04-09T15:53:56.159102+02:00"
                 },
                 {
-                    "message":"Original: {\"parent\":{\"title\":\"D\üsseldorf\",\"class\":\"C__OBJTYPE__CITY\",\"extType\":\"datenquelle-1\",\"extId\":\"CITY_OBJECT_DUESSELDORF\"}}",
+                    "message":"Original: {\"parent\":{\"title\":\"D\üsseldorf\",\"class\":\"C__OBJTYPE__CITY\",\"extType\":\"datasource-1\",\"extId\":\"CITY_OBJECT_DUESSELDORF\"}}",
                     "level": 100,
                     "datetime": "2024-04-09T15:53:56.159744+02:00"
                 },
@@ -368,17 +369,17 @@ With pull, the External Identifier determines the queried data, for example:
 
 | extType                                          | extId             | Action                                           |
 | ------------------------------------------------ | ----------------- | ------------------------------------------------ |
-| datenquelle-1                                    | null              | Reads all objects and all category data   |
-| datenquelle-1                                    | windows-server100 | Reads windows100 and all category data     |
-| datenquelle-1 / windows-server100 / C__CATG__CPU | null              | Reads windows100 and all CPU entries           |
-| datenquelle-1 / windows-server100 / C__CATG__CPU | intel-1           | Reads windows100 and only the CPU entry intel-1 |
+| datasource-1                                    | null              | Reads all objects and all category data   |
+| datasource-1                                    | windows-server100 | Reads windows100 and all category data     |
+| datasource-1 / windows-server100 / C__CATG__CPU | null              | Reads windows100 and all CPU entries           |
+| datasource-1 / windows-server100 / C__CATG__CPU | intel-1           | Reads windows100 and only the CPU entry intel-1 |
 
 ### Request parameters
 
 | Key         | JSON data type | Required | Description                                  |
 | ----------- | -------------- | -------- | -------------------------------------------- |
-| **extType** | String         | Yes      | Data source, for example: **datenquelle-1** |
-| **extId**   | String         | Yes      | Object, for example: **windows-server100**  |
+| **extType** | String         | Yes      | Data source, for example: **datasource-1** |
+| **extId**   | String         | No       | Object, for example: **windows-server100**. If omitted, all objects of the data source are read |
 
 ### Example
 
@@ -391,7 +392,7 @@ With pull, the External Identifier determines the queried data, for example:
         "method": "cmdb.external.pull.v2",
         "params": {
             "apikey": "xxx",
-            "extType": "datenquelle-1",
+            "extType": "datasource-1",
             "extId": "windows-server100"
         }
     }
@@ -406,7 +407,7 @@ With pull, the External Identifier determines the queried data, for example:
         "result": [
             {
                 "extId": "windows-server100",
-                "extType": "datenquelle-1",
+                "extType": "datasource-1",
                 "id": 770,
                 "title": "Server 100",
                 "sysid": "SYSID_1712671606",
@@ -419,7 +420,7 @@ With pull, the External Identifier determines the queried data, for example:
                     "C__CATG__CPU": [
                         {
                             "extId": "intel-1",
-                            "extType": "datenquelle-1/windows-server100/C__CATG__CPU",
+                            "extType": "datasource-1/windows-server100/C__CATG__CPU",
                             "id": "104",
                             "objID": "770",
                             "title": "5th Generation Intel® Xeon® Scalable Processors #1",
@@ -449,7 +450,7 @@ With pull, the External Identifier determines the queried data, for example:
                         },
                         {
                             "extId": "intel-2",
-                            "extType": "datenquelle-1/windows-server100/C__CATG__CPU",
+                            "extType": "datasource-1/windows-server100/C__CATG__CPU",
                             "id": "104",
                             "objID": "770",
                             "title": "5th Generation Intel® Xeon® Scalable Processors #1",
@@ -481,7 +482,7 @@ With pull, the External Identifier determines the queried data, for example:
                     "C__CATG__GLOBAL": [
                         {
                             "extId": "windows-server1001_TAGS",
-                            "extType": "datenquelle-1/windows-server100/C__CATG__GLOBAL",
+                            "extType": "datasource-1/windows-server100/C__CATG__GLOBAL",
                             "id": "770",
                             "objID": "770",
                             "title": "Server 100",
@@ -535,7 +536,7 @@ With pull, the External Identifier determines the queried data, for example:
                     "C__CATG__LOCATION": [
                         {
                             "extId": "CITY_OBJECT_DUESSELDORF",
-                            "extType": "datenquelle-1/windows-server100/C__CATG__LOCATION",
+                            "extType": "datasource-1/windows-server100/C__CATG__LOCATION",
                             "id": "167",
                             "objID": "770",
                             "location_path": "771",
@@ -568,4 +569,220 @@ With pull, the External Identifier determines the queried data, for example:
     }
     ```
 
-*[DQ]: Data sources
+## Use cases
+
+The following examples follow a typical flow: an external system (here `datasource-1`) keeps its own IDs and mirrors data into i-doit. Note that `objectId` is a number without quotes, and the JSON-RPC `id` field belongs at the top level of the request, not inside `params`.
+
+### Connect an existing object to an external identifier
+
+You already have the object in i-doit and want to tie it to the ID from your external system, so you can add data to it later. This is done with `cmdb.external.link.v2`.
+
+| Key          | JSON data type | Required | Description                                       |
+| ------------ | -------------- | -------- | ------------------------------------------------- |
+| **extType**  | String         | Yes      | Data source, for example: **datasource-1**        |
+| **extId**    | String         | Yes      | External identifier for the object, for example: **windows-server100** |
+| **objectId** | Number         | Yes      | Internal ID of the existing i-doit object, for example: **770** |
+
+??? example "cmdb.external.link.v2"
+
+    **Request**
+    ```json
+    {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "cmdb.external.link.v2",
+        "params": {
+            "apikey": "xxx",
+            "extType": "datasource-1",
+            "extId": "windows-server100",
+            "objectId": 770
+        }
+    }
+    ```
+    **Response**
+    ```json
+    {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "result": {
+            "success": true
+        }
+    }
+    ```
+
+    If the object is already connected to this identifier, you get `success: true` together with the message `External identifier is already linked to given object.`. That response already confirms the mapping, so you do not need a separate pull to check it.
+
+### Add data to a connected object
+
+The object is connected, now you write data from your external system into one of its categories. Under `data`, each category holds one identifier per entry, and the actual fields sit below that identifier.
+
+??? example "cmdb.external.push.v2 (one category)"
+
+    **Request**
+    ```json
+    {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "cmdb.external.push.v2",
+        "params": {
+            "apikey": "xxx",
+            "extType": "datasource-1",
+            "extId": "windows-server100",
+            "class": "C__OBJTYPE__SERVER",
+            "title": "Server 100",
+            "data": {
+                "C__CATG__MODEL": {
+                    "strategy": "create",
+                    "data": {
+                        "model-1": {
+                            "manufacturer": "Dell",
+                            "title": "PowerEdge R760"
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ```
+    **Response**
+    ```json
+    {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "result": {
+            "messages": [
+                {
+                    "message": "Object for external id datasource-1/windows-server100 found: 770",
+                    "level": 200,
+                    "datetime": "2024-04-09T15:53:56.134886+02:00"
+                },
+                {
+                    "message": "Preparing data for category 'Model' using strategy create.",
+                    "level": 200,
+                    "datetime": "2024-04-09T15:53:56.135378+02:00"
+                }
+            ],
+            "success": true
+        }
+    }
+    ```
+
+### Create an object and fill it in one call
+
+The object does not exist yet, so you create it and fill it in a single `cmdb.external.push.v2` call. The object level (`extType`, `extId`, `title`, `class`) and the category level (`data`) are sent together.
+
+??? example "cmdb.external.push.v2 (create object)"
+
+    **Request**
+    ```json
+    {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "cmdb.external.push.v2",
+        "params": {
+            "apikey": "xxx",
+            "extType": "datasource-1",
+            "extId": "windows-server200",
+            "class": "C__OBJTYPE__SERVER",
+            "title": "Server 200",
+            "data": {
+                "C__CATG__CPU": {
+                    "strategy": "create",
+                    "data": {
+                        "intel-1": {
+                            "title": "Intel Core i9 3.5GHz #1",
+                            "manufacturer": "Intel",
+                            "type": "Core i9",
+                            "frequency": "3.5",
+                            "frequency_unit": "GHz"
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ```
+    **Response**
+    ```json
+    {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "result": {
+            "messages": [
+                {
+                    "message": "External id datasource-1/windows-server200 not found. Object with id 771 created.",
+                    "level": 200,
+                    "datetime": "2024-04-09T15:53:56.134886+02:00"
+                },
+                {
+                    "message": "New category entry 106 created for custom id intel-1.",
+                    "level": 200,
+                    "datetime": "2024-04-09T15:53:56.138370+02:00"
+                }
+            ],
+            "success": true
+        }
+    }
+    ```
+
+### Look up what is connected to an identifier
+
+You want to see what is behind an identifier and how its data looks. `cmdb.external.pull.v2` reads by identifier, and how much you get back depends on which part of the identifier you send:
+
+| extType                                          | extId             | Reads                                            |
+| ------------------------------------------------ | ----------------- | ------------------------------------------------ |
+| datasource-1                                    | null              | all objects and all category data                |
+| datasource-1                                    | windows-server100 | that object and all its category data            |
+| datasource-1 / windows-server100 / C__CATG__CPU | null              | that object and all CPU entries                  |
+| datasource-1 / windows-server100 / C__CATG__CPU | intel-1           | that object and only the CPU entry intel-1        |
+
+??? example "cmdb.external.pull.v2"
+
+    **Request**
+    ```json
+    {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "cmdb.external.pull.v2",
+        "params": {
+            "apikey": "xxx",
+            "extType": "datasource-1",
+            "extId": "windows-server100"
+        }
+    }
+    ```
+    **Response**
+    ```json
+    {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "result": [
+            {
+                "extId": "windows-server100",
+                "extType": "datasource-1",
+                "id": 770,
+                "title": "Server 100",
+                "sysid": "SYSID_1712671606",
+                "objecttype": 5,
+                "type_title": "Server",
+                "status": 2,
+                "cmdb_status": 6,
+                "data": {
+                    "C__CATG__MODEL": [
+                        {
+                            "extId": "model-1",
+                            "extType": "datasource-1/windows-server100/C__CATG__MODEL",
+                            "id": "104",
+                            "objID": "770",
+                            "manufacturer": {
+                                "id": "2",
+                                "title": "Dell"
+                            },
+                            "title": "PowerEdge R760"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+    ```
