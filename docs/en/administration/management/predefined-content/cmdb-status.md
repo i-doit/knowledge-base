@@ -11,7 +11,7 @@ Under **Administration → Predefined Content → CMDB Status**, you manage the 
 
 i-doit already comes with default values such as **in operation**, **planned**, **defect**, **inoperative**, and **stored**. You can add your own status values, rename existing ones, or assign them an individual color. Via the status filter in the object lists, objects can be filtered by their current CMDB status. The CMDB status is independent of the condition (normal, archived, deleted) of an object -- both values complement each other to fully represent the lifecycle.
 
-[![CMDB Status](../../../assets/images/de/administration/verwaltung/vordefinierte-inhalte/cmdb-status/1-cs.png)](../../../assets/images/de/administration/verwaltung/vordefinierte-inhalte/cmdb-status/1-cs.png)
+[![CMDB Status](../../../assets/images/en/system-administration/administration/predefined-content/cmdb-status/1-cs.png)](../../../assets/images/en/system-administration/administration/predefined-content/cmdb-status/1-cs.png)
 
 ## IDs and constants
 
