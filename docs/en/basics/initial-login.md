@@ -31,7 +31,7 @@ All listed users -- with the exception of **systemapi** -- receive their permiss
 
 For the first login, it is best to use the **admin** user, as this user has no functional restrictions.
 
-[![login](../assets/images/de/grundlagen/erstanmeldung/1-erstanmeldung.png)](../assets/images/de/grundlagen/erstanmeldung/1-erstanmeldung.png)
+[![login](../assets/images/en/basics/initial-login/1-il.png)](../assets/images/en/basics/initial-login/1-il.png)
 
 ## Adding additional users and groups
 
@@ -48,4 +48,4 @@ Every user in i-doit is an [object](it-documentation-structure.md) of the type *
 
 You can display a custom text to users directly on the login page. Configure this in the [Admin-Center](../administration/admin-center.md) under **System settings → Login → Welcome text for Login**.
 
-[![login-welcome-text](../assets/images/de/grundlagen/erstanmeldung/2-erstanmeldung.png)](../assets/images/de/grundlagen/erstanmeldung/2-erstanmeldung.png)
+[![login-welcome-text](../assets/images/en/basics/initial-login/2-il.png)](../assets/images/en/basics/initial-login/2-il.png)
