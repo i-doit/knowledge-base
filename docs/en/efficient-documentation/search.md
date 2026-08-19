@@ -13,7 +13,7 @@ Targeted research in the [IT documentation](../glossary.md) is often the fastest
 
 You can find the search field in the web GUI of i-doit in the upper right corner. Enter any terms there. Already while typing, initial search results (search suggestions) appear, which you can select with the mouse or keyboard to jump directly to the found record.
 
-[![search-field](../assets/images/de/effizientes-dokumentieren/suche/1-suche.png)](../assets/images/de/effizientes-dokumentieren/suche/1-suche.png)
+[![search-field](../assets/images/en/efficient-documentation/search/1-se.png)](../assets/images/en/efficient-documentation/search/1-se.png)
 
 In addition to the free text search, the search can be limited to specific [object attributes](../glossary.md):
 
@@ -24,7 +24,7 @@ In addition to the free text search, the search can be limited to specific [obje
 
 If the search suggestions do not lead to the desired result, press the Return key. You will receive a page with search results. Next to each found record, the source is displayed, for example, the [attribute](../glossary.md) of a [category](../glossary.md) of an [object type](../glossary.md) in the [CMDB](../glossary.md) module.
 
-[![search-results](../assets/images/de/effizientes-dokumentieren/suche/2-suche.png)](../assets/images/de/effizientes-dokumentieren/suche/2-suche.png)
+[![search-results](../assets/images/en/efficient-documentation/search/2-se.png)](../assets/images/en/efficient-documentation/search/2-se.png)
 
 !!! success "Set bookmarks/favorites"
     Every search can be referenced via the URL. If you search for the term "acme", the URL is [http://i-doit/i-doit/search?q=acme](http://i-doit/i-doit/search?q=acme). This way, search results can be saved as bookmarks/favorites in the web browser to access them more quickly.
