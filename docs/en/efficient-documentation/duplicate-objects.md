@@ -25,4 +25,4 @@ After completion, a duplicate of the selected object including the desired conte
 
     It is only possible to duplicate one object at a time. If you want to duplicate multiple objects, repeat the process for each object individually.
 
-[![duplicate-objects-multiple](../assets/images/de/effizientes-dokumentieren/objekte-duplizieren/1-od.gif)](../assets/images/de/effizientes-dokumentieren/objekte-duplizieren/1-od.gif)
+[![object-duplicate-dialog](../assets/images/en/efficient-documentation/duplicate-objects/1-od.png)](../assets/images/en/efficient-documentation/duplicate-objects/1-od.png)
