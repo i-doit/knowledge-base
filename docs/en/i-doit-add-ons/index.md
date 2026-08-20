@@ -24,11 +24,11 @@ Evaluation users can download all free and commercial add-ons during the evaluat
 
 All modules and extensions are installed via the [Admin Center](../administration/admin-center.md) under **Modules → Install/update module**.
 
-[![installation](../assets/images/de/i-doit-add-ons/1-i-doit-add-ons.png)](../assets/images/de/i-doit-add-ons/1-i-doit-add-ons.png)
+[![installation](../assets/images/en/i-doit-add-ons/1-i-doit-add-ons.png)](../assets/images/en/i-doit-add-ons/1-i-doit-add-ons.png)
 
 The button opens a new dialog. Under **Tenant**, you specify whether the add-on should be installed in all [tenants](../administration/multi-tenancy.md) (**All tenants**) or only in a single one. Using the **Browse...** button under **ZIP File**, you select the add-on. After clicking the **Upload and install** button, the ZIP file is uploaded to the i-doit host and installed.
 
-[![Upload and install](../assets/images/de/i-doit-add-ons/2-i-doit-add-ons.png)](../assets/images/de/i-doit-add-ons/2-i-doit-add-ons.png)
+[![Upload and install](../assets/images/en/i-doit-add-ons/2-i-doit-add-ons.png)](../assets/images/en/i-doit-add-ons/2-i-doit-add-ons.png)
 
 System settings
 
@@ -36,7 +36,7 @@ For installation to be possible, the maximum file size liwith must exceed the fi
 
 After successful installation, a corresponding success message is displayed. The add-on is now listed in the list of installed add-ons. Each tenant has its own list here.
 
-[![System settings](../assets/images/de/i-doit-add-ons/3-i-doit-add-ons.png)](../assets/images/de/i-doit-add-ons/3-i-doit-add-ons.png)
+[![System settings](../assets/images/en/i-doit-add-ons/3-i-doit-add-ons.png)](../assets/images/en/i-doit-add-ons/3-i-doit-add-ons.png)
 
 If an add-on is available but not yet installed, it is marked as **not installed** in the respective tenant's list. The installation can be completed using the **Install** button without having to re-upload the ZIP file.
 
