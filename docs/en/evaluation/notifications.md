@@ -6,7 +6,7 @@ status: published
 lang: en
 ---
 
-[![Notifications](../assets/images/de/auswertungen/benachrichtigungen.png)](../assets/images/de/auswertungen/benachrichtigungen.png)
+[![Notifications](../assets/images/en/evaluation/notifications.png)](../assets/images/en/evaluation/notifications.png)
 
 ## Prerequisites
 

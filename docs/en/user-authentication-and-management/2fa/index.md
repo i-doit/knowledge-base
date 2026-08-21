@@ -10,7 +10,7 @@ lang: en
 
 Two-factor authentication (2FA) protects your i-doit access with an additional security layer. In addition to the password, you need a time-based code from an authenticator app when logging in.
 
-[![Two-Factor Authentication](../../assets/images/de/benutzerauthentifizierung-und-verwaltung/2fa.png)](../../assets/images/de/benutzerauthentifizierung-und-verwaltung/2fa.png)
+[![Two-Factor Authentication](../../assets/images/en/user-authentication-and-management/2fa.png)](../../assets/images/en/user-authentication-and-management/2fa.png)
 
 ## Integrated Two-Factor Authentication
 

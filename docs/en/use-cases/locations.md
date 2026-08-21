@@ -38,11 +38,11 @@ As an example, consider a printer that is in an office room, which in turn is as
 
 This creates a so-called location path: **Root Location > Building > Room > Printer**.
 
-[![Location path](../assets/images/de/anwendungsfaelle/standorte/1-stan.png)](../assets/images/de/anwendungsfaelle/standorte/1-stan.png)
+[![Location path](../assets/images/en/use-cases/locations/1-stan.png)](../assets/images/en/use-cases/locations/1-stan.png)
 
 For each location object, the subordinate object is displayed in the **Locally assigned objects** category. The location path can also be edited via this category.
 
-[![Location path](../assets/images/de/anwendungsfaelle/standorte/2-stan.png)](../assets/images/de/anwendungsfaelle/standorte/2-stan.png)
+[![Location path](../assets/images/en/use-cases/locations/2-stan.png)](../assets/images/en/use-cases/locations/2-stan.png)
 
 ## Defining an Object as a Location
 
@@ -81,7 +81,7 @@ In the **Location** category, [geo coordinates with latitude and longitude](./ge
 
 Navigating through all location paths is possible within the left navigation bar under **Location View**. The tree structure can be expanded and collapsed. An object opened in the main content area is highlighted in the **Location View**.
 
-[![Location view](../assets/images/de/anwendungsfaelle/standorte/3-stan.png)](../assets/images/de/anwendungsfaelle/standorte/3-stan.png)
+[![Location view](../assets/images/en/use-cases/locations/3-stan.png)](../assets/images/en/use-cases/locations/3-stan.png)
 
 ## Logical Locations
 
