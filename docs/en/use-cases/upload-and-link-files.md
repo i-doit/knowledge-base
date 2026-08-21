@@ -27,13 +27,13 @@ The actual functionality (uploading, linking, etc.) can be found in the [categor
 
 The **Files** category folder belongs to the [specific categories](../basics/it-documentation-structure.md) and can be assigned to any object type via the [object type configuration](../basics/custom-object-types.md).
 
-[![Current file](../assets/images/de/anwendungsfaelle/dateien-hochladen-und-verknuepfen/1-dhuv.png)](../assets/images/de/anwendungsfaelle/dateien-hochladen-und-verknuepfen/1-dhuv.png)
+[![Current file](../assets/images/en/use-cases/upload-and-link-files/1-dhuv.png)](../assets/images/en/use-cases/upload-and-link-files/1-dhuv.png)
 
-[![File versions](../assets/images/de/anwendungsfaelle/dateien-hochladen-und-verknuepfen/2-dhuv.png)](../assets/images/de/anwendungsfaelle/dateien-hochladen-und-verknuepfen/2-dhuv.png)
+[![File versions](../assets/images/en/use-cases/upload-and-link-files/2-dhuv.png)](../assets/images/en/use-cases/upload-and-link-files/2-dhuv.png)
 
-[![File versions](../assets/images/de/anwendungsfaelle/dateien-hochladen-und-verknuepfen/3-dhuv.png)](../assets/images/de/anwendungsfaelle/dateien-hochladen-und-verknuepfen/3-dhuv.png)
+[![File versions](../assets/images/en/use-cases/upload-and-link-files/3-dhuv.png)](../assets/images/en/use-cases/upload-and-link-files/3-dhuv.png)
 
-[![Assigned objects](../assets/images/de/anwendungsfaelle/dateien-hochladen-und-verknuepfen/4-dhuv.png)](../assets/images/de/anwendungsfaelle/dateien-hochladen-und-verknuepfen/4-dhuv.png)
+[![Assigned objects](../assets/images/en/use-cases/upload-and-link-files/4-dhuv.png)](../assets/images/en/use-cases/upload-and-link-files/4-dhuv.png)
 
 Several [reverse categories](../basics/it-documentation-structure.md) handle the linking between file objects and other objects:
 
@@ -43,7 +43,7 @@ Several [reverse categories](../basics/it-documentation-structure.md) handle the
 
 These [global categories](../basics/it-documentation-structure.md) can be [assigned to any object type](../basics/custom-object-types.md) and serve similar functions, namely assigning files.
 
-[![Global categories](../assets/images/de/anwendungsfaelle/dateien-hochladen-und-verknuepfen/5-dhuv.png)](../assets/images/de/anwendungsfaelle/dateien-hochladen-und-verknuepfen/5-dhuv.png)
+[![Global categories](../assets/images/en/use-cases/upload-and-link-files/5-dhuv.png)](../assets/images/en/use-cases/upload-and-link-files/5-dhuv.png)
 
 Uploading Files and Linking Them to Objects
 ---------------------------------------------
@@ -58,11 +58,11 @@ The **File assignment (Object)** attribute is quite flexible:
 *   Already uploaded files can be assigned via auto-completion.
 *   Via the magnifying glass icon, the **File Browser** opens, through which the file is uploaded and selected.
 
-[![File assignment](../assets/images/de/anwendungsfaelle/dateien-hochladen-und-verknuepfen/6-dhuv.png)](../assets/images/de/anwendungsfaelle/dateien-hochladen-und-verknuepfen/6-dhuv.png)
+[![File assignment](../assets/images/en/use-cases/upload-and-link-files/6-dhuv.png)](../assets/images/en/use-cases/upload-and-link-files/6-dhuv.png)
 
 The **File Browser** lists all available files. These can be classified via the **Category** attribute to provide a better overview.
 
-[![File browser](../assets/images/de/anwendungsfaelle/dateien-hochladen-und-verknuepfen/7-dhuv.png)](../assets/images/de/anwendungsfaelle/dateien-hochladen-und-verknuepfen/7-dhuv.png)
+[![File browser](../assets/images/en/use-cases/upload-and-link-files/7-dhuv.png)](../assets/images/en/use-cases/upload-and-link-files/7-dhuv.png)
 
 Linking Files in Custom Categories
 ----------------------------------------------------
