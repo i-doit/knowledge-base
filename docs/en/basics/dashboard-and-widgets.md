@@ -25,13 +25,13 @@ The dashboard appears automatically after logging in to _i-doit_. Alternatively,
 
 You can select one or more objects via the pencil icon and display the status history in a graph.
 
-[![CMDB-status-life-cycle](../assets/images/de/grundlagen/desktop-und-widgets/1-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/1-duw.png)
+[![CMDB-status-life-cycle](../assets/images/en/grundlagen/desktop-und-widgets/1-duw.png)](../assets/images/en/grundlagen/desktop-und-widgets/1-duw.png)
 
 ### CMDB Explorer
 
 Here the regular [CMDB Explorer](../evaluation/cmdb-explorer/index.md) can be displayed in a smaller variant without advanced features. To do this, an object must first be selected via the pencil icon, which is automatically loaded when the dashboard is opened.
 
-[![cmdb-explorer](../assets/images/de/grundlagen/desktop-und-widgets/2-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/2-duw.png)
+[![cmdb-explorer](../assets/images/en/grundlagen/desktop-und-widgets/2-duw.png)](../assets/images/en/grundlagen/desktop-und-widgets/2-duw.png)
 
 ### Logged-in users
 
@@ -103,9 +103,9 @@ Via the pencil icon you can set up the title, background and font color, and edi
 
 The widget displays a standard set of information for up to three objects configured via the pencil icon.
 
-[![object-information](../assets/images/de/grundlagen/desktop-und-widgets/16-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/16-duw.png)
+[![object-information](../assets/images/en/grundlagen/desktop-und-widgets/16-duw.png)](../assets/images/en/grundlagen/desktop-und-widgets/16-duw.png)
 
-[![object-information-1](../assets/images/de/grundlagen/desktop-und-widgets/17-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/17-duw.png)
+[![object-information-1](../assets/images/en/grundlagen/desktop-und-widgets/17-duw.png)](../assets/images/en/grundlagen/desktop-und-widgets/17-duw.png)
 
 ### Object list
 
@@ -135,7 +135,7 @@ Any reports can be displayed in the report widget.
 
 Via the pencil icon you can select a report and set limits. A limitation can benefit the dashboard's performance.
 
-[![report-2](../assets/images/de/grundlagen/desktop-und-widgets/23-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/23-duw.png)
+[![report-2](../assets/images/en/grundlagen/desktop-und-widgets/23-duw.png)](../assets/images/en/grundlagen/desktop-und-widgets/23-duw.png)
 
 ### RSS feed
 
