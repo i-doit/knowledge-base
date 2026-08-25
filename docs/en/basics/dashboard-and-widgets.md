@@ -13,7 +13,7 @@ Each user has their own dashboard and can set up their individual view of the da
 
 ## Access
 
-The dashboard appears automatically after logging in to _i-doit_. Alternatively, click on the ![Home](../assets/images/de/grundlagen/desktop-und-widgets/home_breadcrump.png) icon in the breadcrumb navigation or the _i-doit_ logo in the upper left corner.
+The dashboard appears automatically after logging in to _i-doit_. Alternatively, click on the ![Home](../assets/images/en/grundlagen/desktop-und-widgets/home_breadcrump.png) icon in the breadcrumb navigation or the _i-doit_ logo in the upper left corner.
 
 ## Available widgets
 
@@ -25,27 +25,27 @@ The dashboard appears automatically after logging in to _i-doit_. Alternatively,
 
 You can select one or more objects via the pencil icon and display the status history in a graph.
 
-[![CMDB-status-life-cycle](../assets/images/de/grundlagen/desktop-und-widgets/1-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/1-duw.png)
+[![CMDB-status-life-cycle](../assets/images/en/grundlagen/desktop-und-widgets/1-duw.png)](../assets/images/en/grundlagen/desktop-und-widgets/1-duw.png)
 
 ### CMDB Explorer
 
 Here the regular [CMDB Explorer](../evaluation/cmdb-explorer/index.md) can be displayed in a smaller variant without advanced features. To do this, an object must first be selected via the pencil icon, which is automatically loaded when the dashboard is opened.
 
-[![cmdb-explorer](../assets/images/de/grundlagen/desktop-und-widgets/2-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/2-duw.png)
+[![cmdb-explorer](../assets/images/en/grundlagen/desktop-und-widgets/2-duw.png)](../assets/images/en/grundlagen/desktop-und-widgets/2-duw.png)
 
 ### Logged-in users
 
 A list of all logged-in users is displayed.
 
-[![logged-in-users](../assets/images/de/grundlagen/desktop-und-widgets/3-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/3-duw.png)
+[![logged-in-users](../assets/images/en/grundlagen/desktop-und-widgets/3-duw.png)](../assets/images/en/grundlagen/desktop-und-widgets/3-duw.png)
 
 ### Calendar
 
 The calendar widget marks appointments in bold. To use this feature, the checkbox for considering object appointments such as status planning must be enabled via the pencil icon. It is mandatory to have the "Administrator" role for the respective object with a status plan in order for the calendar entry to be displayed.
 
-[![calendar](../assets/images/de/grundlagen/desktop-und-widgets/4-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/4-duw.png)
+[![calendar](../assets/images/en/grundlagen/desktop-und-widgets/4-duw.png)](../assets/images/en/grundlagen/desktop-und-widgets/4-duw.png)
 
-[![calendar-2](../assets/images/de/grundlagen/desktop-und-widgets/5-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/5-duw.png)
+[![calendar-2](../assets/images/en/grundlagen/desktop-und-widgets/5-duw.png)](../assets/images/en/grundlagen/desktop-und-widgets/5-duw.png)
 
 Alternatively, custom appointments can be defined via the widget settings, which will then appear in the calendar.
 
@@ -55,31 +55,31 @@ Alternatively, custom appointments can be defined via the widget settings, which
 
 The bookmarks widget allows you to specify your own bookmarks for any addresses.
 
-[![bookmarks](../assets/images/de/grundlagen/desktop-und-widgets/7-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/7-duw.png)
+[![bookmarks](../assets/images/en/grundlagen/desktop-und-widgets/7-duw.png)](../assets/images/en/grundlagen/desktop-und-widgets/7-duw.png)
 
 New links can be added using the pencil icon.
 
-[![bookmarks-2](../assets/images/de/grundlagen/desktop-und-widgets/8-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/8-duw.png)
+[![bookmarks-2](../assets/images/en/grundlagen/desktop-und-widgets/8-duw.png)](../assets/images/en/grundlagen/desktop-und-widgets/8-duw.png)
 
 ### License
 
 In the license widget you can view the current status of your _i-doit_ license. By default, the horizontal variant with descriptive text is displayed.
 
-[![license](../assets/images/de/grundlagen/desktop-und-widgets/9-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/9-duw.png)
+[![license](../assets/images/en/grundlagen/desktop-und-widgets/9-duw.png)](../assets/images/en/grundlagen/desktop-und-widgets/9-duw.png)
 
 In the configuration, accessible via the pencil icon, you can set up a vertical display with a compact form.
 
-[![license-1](../assets/images/de/grundlagen/desktop-und-widgets/10-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/10-duw.png)
+[![license-1](../assets/images/en/grundlagen/desktop-und-widgets/10-duw.png)](../assets/images/en/grundlagen/desktop-und-widgets/10-duw.png)
 
 This compact form looks as follows:
 
-[![license-2](../assets/images/de/grundlagen/desktop-und-widgets/11-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/11-duw.png)
+[![license-2](../assets/images/en/grundlagen/desktop-und-widgets/11-duw.png)](../assets/images/en/grundlagen/desktop-und-widgets/11-duw.png)
 
 ### My recently modified objects
 
 This widget displays the objects most recently modified by the logged-in user. The number of objects to display can be configured via the pencil icon. The default value is 25.
 
-[![modified-objects](../assets/images/de/grundlagen/desktop-und-widgets/12-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/12-duw.png)
+[![modified-objects](../assets/images/en/grundlagen/desktop-und-widgets/12-duw.png)](../assets/images/en/grundlagen/desktop-und-widgets/12-duw.png)
 
 ### Monitoring: Endangered hosts
 
@@ -97,15 +97,15 @@ Notes are simply added or edited with a **double-click**.
 
 Via the pencil icon you can set up the title, background and font color, and edit the text.
 
-[![notes-3](../assets/images/de/grundlagen/desktop-und-widgets/15-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/15-duw.png)
+[![notes-3](../assets/images/en/grundlagen/desktop-und-widgets/15-duw.png)](../assets/images/en/grundlagen/desktop-und-widgets/15-duw.png)
 
 ### Object information
 
 The widget displays a standard set of information for up to three objects configured via the pencil icon.
 
-[![object-information](../assets/images/de/grundlagen/desktop-und-widgets/16-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/16-duw.png)
+[![object-information](../assets/images/en/grundlagen/desktop-und-widgets/16-duw.png)](../assets/images/en/grundlagen/desktop-und-widgets/16-duw.png)
 
-[![object-information-1](../assets/images/de/grundlagen/desktop-und-widgets/17-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/17-duw.png)
+[![object-information-1](../assets/images/en/grundlagen/desktop-und-widgets/17-duw.png)](../assets/images/en/grundlagen/desktop-und-widgets/17-duw.png)
 
 ### Object list
 
@@ -119,13 +119,13 @@ Via the object list you can select one or more objects using the pencil icon and
 
 This widget is a collection of frequently needed functions.
 
-[![quicklaunch](../assets/images/de/grundlagen/desktop-und-widgets/20-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/20-duw.png)
+[![quicklaunch](../assets/images/en/grundlagen/desktop-und-widgets/20-duw.png)](../assets/images/en/grundlagen/desktop-und-widgets/20-duw.png)
 
 ### Calculator
 
 If you want to calculate performance, bandwidth, a RAID or storage capacity, the calculator widget is a suitable tool for your dashboard.
 
-[![calculator](../assets/images/de/grundlagen/desktop-und-widgets/21-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/21-duw.png)
+[![calculator](../assets/images/en/grundlagen/desktop-und-widgets/21-duw.png)](../assets/images/en/grundlagen/desktop-und-widgets/21-duw.png)
 
 ### Report
 
@@ -135,7 +135,7 @@ Any reports can be displayed in the report widget.
 
 Via the pencil icon you can select a report and set limits. A limitation can benefit the dashboard's performance.
 
-[![report-2](../assets/images/de/grundlagen/desktop-und-widgets/23-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/23-duw.png)
+[![report-2](../assets/images/en/grundlagen/desktop-und-widgets/23-duw.png)](../assets/images/en/grundlagen/desktop-und-widgets/23-duw.png)
 
 ### RSS feed
 
@@ -145,7 +145,7 @@ The RSS feed widget allows you to integrate a feed into the dashboard.
 
 The address and the number of entries to display can be configured via the pencil icon.
 
-[![rss-feed-2](../assets/images/de/grundlagen/desktop-und-widgets/25-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/25-duw.png)
+[![rss-feed-2](../assets/images/en/grundlagen/desktop-und-widgets/25-duw.png)](../assets/images/en/grundlagen/desktop-und-widgets/25-duw.png)
 
 ### Service consistency check
 
@@ -159,23 +159,23 @@ The consistency check examines whether objects that are part of a service have a
 
 In the configuration, consistent services can be shown.
 
-[![note-2](../assets/images/de/grundlagen/desktop-und-widgets/27-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/27-duw.png)
+[![note-2](../assets/images/en/grundlagen/desktop-und-widgets/27-duw.png)](../assets/images/en/grundlagen/desktop-und-widgets/27-duw.png)
 
 ### Statistics: Chart
 
 The statistics chart examines the object types configured via the pencil icon and displays them in one of many different presentation styles. In our example, it is a pie chart.
 
-[![chart](../assets/images/de/grundlagen/desktop-und-widgets/28-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/28-duw.png)
+[![chart](../assets/images/en/grundlagen/desktop-und-widgets/28-duw.png)](../assets/images/en/grundlagen/desktop-und-widgets/28-duw.png)
 
-[![chart-2](../assets/images/de/grundlagen/desktop-und-widgets/29-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/29-duw.png)
+[![chart-2](../assets/images/en/grundlagen/desktop-und-widgets/29-duw.png)](../assets/images/en/grundlagen/desktop-und-widgets/29-duw.png)
 
 ### Statistics: Tabular
 
-[![statistics](../assets/images/de/grundlagen/desktop-und-widgets/30-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/30-duw.png)
+[![statistics](../assets/images/en/grundlagen/desktop-und-widgets/30-duw.png)](../assets/images/en/grundlagen/desktop-und-widgets/30-duw.png)
 
 ### Tips
 
-[![tips](../assets/images/de/grundlagen/desktop-und-widgets/31-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/31-duw.png)
+[![tips](../assets/images/en/grundlagen/desktop-und-widgets/31-duw.png)](../assets/images/en/grundlagen/desktop-und-widgets/31-duw.png)
 
 ### VIVA Reports
 
@@ -191,12 +191,12 @@ This widget is a browser within the browser.
 
 Via the pencil icon you can give the widget a title, specify a URL that is loaded when the dashboard is opened, and configure the height of the widget to properly display longer pages.
 
-[![web-browser-2](../assets/images/de/grundlagen/desktop-und-widgets/34-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/34-duw.png)
+[![web-browser-2](../assets/images/en/grundlagen/desktop-und-widgets/34-duw.png)](../assets/images/en/grundlagen/desktop-und-widgets/34-duw.png)
 
 ### Welcome widget
 
 The widget greets you, depending on how it was configured via the pencil icon, and provides some helpful information about designing the dashboard. Here you can easily see how the widgets are arranged on the dashboard after selection.
 
-[![welcome-widget](../assets/images/de/grundlagen/desktop-und-widgets/35-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/35-duw.png)
+[![welcome-widget](../assets/images/en/grundlagen/desktop-und-widgets/35-duw.png)](../assets/images/en/grundlagen/desktop-und-widgets/35-duw.png)
 
-[![welcome-widget-2](../assets/images/de/grundlagen/desktop-und-widgets/36-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/36-duw.png)
+[![welcome-widget-2](../assets/images/en/grundlagen/desktop-und-widgets/36-duw.png)](../assets/images/en/grundlagen/desktop-und-widgets/36-duw.png)
