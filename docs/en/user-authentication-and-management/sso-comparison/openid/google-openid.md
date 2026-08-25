@@ -129,9 +129,27 @@ Open the SSL VirtualHost configuration (default: `/etc/apache2/sites-available/d
 </IfModule>
 ```
 
-
 !!! info "Automatic Endpoint Discovery"
 Thanks to `OIDCProviderMetadataURL`, the module automatically discovers all necessary Google endpoints. Manual configuration of individual endpoints is not required.
+
+!!! warning "`<Location />` also protects the login page, the Admin Center and the API"
+    With `Require valid-user` inside `<Location />`, Apache authenticates every request before it reaches i-doit. If the identity provider is unavailable, the i-doit login page, the Admin Center and the JSON-RPC API are locked out as well, and the [SSO fallback to local accounts](../sso-fallback/index.md) cannot take effect.
+
+    To keep an emergency access, drop `<Location />` and restrict the protection to the SSO entry point instead. i-doit starts the SSO login only when it is called with `?use-sso=1`:
+
+    ```apache
+    <If "%{QUERY_STRING} =~ /(^|&)use-sso=1(&|$)/">
+        AuthType openid-connect
+        Require valid-user
+    </If>
+
+    <Location "/redirect_uri">
+        AuthType openid-connect
+        Require valid-user
+    </Location>
+    ```
+
+    The second block is required because Google calls the redirect URI with its own parameters. As an alternative, keep `<Location />` protected and add a second VirtualHost that is reachable internally only, with the same `DocumentRoot` and without the OIDC directives.
 
 ***
 
@@ -182,4 +200,6 @@ When **Use Domain Part = No** is set, the full email address is expected as the 
 
 ## Result
 
-The next time i-doit is accessed, the Google login screen appears automatically. After successful authentication with Google, the user is logged directly into i-doit — without a separate i-doit password entry.
+The next time i-doit is called, the login page appears with the additional **SSO Login** option. After a click on it and a successful authentication with Google, the user is logged into i-doit without entering an i-doit password.
+
+Since i-doit 29 the plain URL no longer logs users in automatically, which keeps a proper logout possible. To skip the extra click, call i-doit directly with `https://<YOUR-SERVER-URL>/?use-sso=1`, for example as a bookmark or as the browser start page.
