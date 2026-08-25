@@ -32,7 +32,7 @@ The life cycle of an IT component is documented in the **CMDB status**. With a f
 
 The **CMDB status** can be displayed as a column in the object lists to quickly look up the target state of a documented object.
 
-[![cmdb-status](../assets/images/de/grundlagen/lebens-und-dokumentationszyklus/1-lud.png)](../assets/images/de/grundlagen/lebens-und-dokumentationszyklus/1-lud.png)
+[![cmdb-status](../assets/images/en/basics/life-and-documentation-cycle/1-lud.png)](../assets/images/en/basics/life-and-documentation-cycle/1-lud.png)
 
 !!! success "Planning"
     By mapping the life cycle, it is possible to use _i-doit_ for planning. Whether a procurement, a major update or a relocation is pending -- the IT documentation is always included and provides valid information.
@@ -41,7 +41,7 @@ The **CMDB status** can be displayed as a column in the object lists to quickly 
 
 To map the entire life cycle of an object, the [attribute](../glossary.md) **CMDB status** in the [category](../glossary.md) **General** is used per [object](../glossary.md). When a new object is created, it receives **In operation** as its **CMDB status**, unless something else is explicitly specified.
 
-[![cmdb-status-per-object](../assets/images/de/grundlagen/lebens-und-dokumentationszyklus/2-lud.png)](../assets/images/de/grundlagen/lebens-und-dokumentationszyklus/2-lud.png)
+[![cmdb-status-per-object](../assets/images/en/basics/life-and-documentation-cycle/2-lud.png)](../assets/images/en/basics/life-and-documentation-cycle/2-lud.png)
 
 ### Managing CMDB status
 
@@ -51,7 +51,7 @@ Adding, changing or deleting a **CMDB status** is done via **Administration → 
 -   Unique constant (helpful for example when using the [API](../i-doit-add-ons/api/index.md))
 -   Color (used in object lists, the **General** category, in the [**CMDB Explorer**](../evaluation/cmdb-explorer/index.md) and in many other places)
 
-[![cmdb-status-manage](../assets/images/de/grundlagen/lebens-und-dokumentationszyklus/3-lud.png)](../assets/images/de/grundlagen/lebens-und-dokumentationszyklus/3-lud.png)
+[![cmdb-status-manage](../assets/images/en/basics/life-and-documentation-cycle/3-lud.png)](../assets/images/en/basics/life-and-documentation-cycle/3-lud.png)
 
 ## Life cycle of IT documentation
 
@@ -86,7 +86,7 @@ You can see the condition of an object in the **General** category. To change th
 2. Check the checkboxes of the desired objects.
 3. Click **Archive**, **Delete** or **Purge**.
 
-[![archive-or-purge-objects](../assets/images/de/grundlagen/lebens-und-dokumentationszyklus/4-lud.png)](../assets/images/de/grundlagen/lebens-und-dokumentationszyklus/4-lud.png)
+[![archive-or-purge-objects](../assets/images/en/basics/life-and-documentation-cycle/4-lud.png)](../assets/images/en/basics/life-and-documentation-cycle/4-lud.png)
 
 You can only change to the next possible condition. An object with the status **Normal** can only be **archived** from the list. To delete, filter for archived objects in the upper right corner and then change to the **Deleted** condition. With **Restore** you can return to the previous condition at any time.
 

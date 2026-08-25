@@ -15,7 +15,7 @@ _i-doit_ automatically sends emails on certain events or status queries -- for e
 
 The SMTP configuration can be found under **Administration → Import and Interfaces → SMTP Configuration (Email)**.
 
-[![smtp-configuration](../assets/images/de/automatisierung-und-integration/1-smtp.png)](../assets/images/de/automatisierung-und-integration/1-smtp.png)
+[![smtp-configuration](../assets/images/en/automation-and-integration/1-smtp.png)](../assets/images/en/automation-and-integration/1-smtp.png)
 
 A configuration form with the following fields is available:
 
