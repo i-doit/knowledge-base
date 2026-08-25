@@ -12,13 +12,13 @@ i-doit allows the creation of objects that serve as templates for new [objects](
 
 You can find the template function in i-doit under **Extras → Templates**. Here you can view and edit existing templates, create new templates, and generate objects from templates.
 
-[![templates-view](../assets/images/de/effizientes-dokumentieren/templates/1-temp.png)](../assets/images/de/effizientes-dokumentieren/templates/1-temp.png)
+[![templates-view](../assets/images/en/efficient-documentation/templates/1-temp.png)](../assets/images/en/efficient-documentation/templates/1-temp.png)
 
 ## Configuration
 
 Under **Administration → [Tenant Name] Administration → Settings for [Tenant Name] → Templates**, template settings can be configured. By activating the template filter, it is possible to display templates in the [object lists](../basics/object-list/index.md). If you set the status filter to Template within an object list, all templates belonging to this [object type](../basics/it-documentation-structure.md) will be displayed.
 
-[![templates-display](../assets/images/de/effizientes-dokumentieren/templates/2-temp.png)](../assets/images/de/effizientes-dokumentieren/templates/2-temp.png)
+[![templates-display](../assets/images/en/efficient-documentation/templates/2-temp.png)](../assets/images/en/efficient-documentation/templates/2-temp.png)
 
 ## Creating a Template
 
@@ -26,13 +26,13 @@ Once you have accessed the template function, you can create a template under **
 
 Alternatively, you can access the template creation configuration within an object list via the arrow icon next to the **New** button.
 
-[![templates-create](../assets/images/de/effizientes-dokumentieren/templates/3-temp.png)](../assets/images/de/effizientes-dokumentieren/templates/3-temp.png)
+[![templates-create](../assets/images/en/efficient-documentation/templates/3-temp.png)](../assets/images/en/efficient-documentation/templates/3-temp.png)
 
 ## Viewing, Editing, and Deleting Existing Templates
 
 In the template function, you can view all previously created templates under **Existing templates** in the tree menu on the left side. To edit a template, click on it. If you check the checkbox of one or more templates, you can remove the selected templates from the system using the **Purge** button. Please make sure you want to delete the selected templates, as deleted templates cannot be restored. Templates can be downloaded as XML and imported via XML import.
 
-[![templates-remove](../assets/images/de/effizientes-dokumentieren/templates/4-temp.png)](../assets/images/de/effizientes-dokumentieren/templates/4-temp.png)
+[![templates-remove](../assets/images/en/efficient-documentation/templates/4-temp.png)](../assets/images/en/efficient-documentation/templates/4-temp.png)
 
 ## Creating Objects from Templates
 
@@ -42,7 +42,7 @@ Here you will first be asked to provide basic information about your new objects
 
 In the **Select template(s)** section, you can now specify which template or templates should be used for creating the objects. Select the desired templates from the drop-down menu and add them one by one using the **Use selected template** button. Information from multiple templates is combined in each object.
 
-[![templates-create-object](../assets/images/de/effizientes-dokumentieren/templates/5-temp.png)](../assets/images/de/effizientes-dokumentieren/templates/5-temp.png)
+[![templates-create-object](../assets/images/en/efficient-documentation/templates/5-temp.png)](../assets/images/en/efficient-documentation/templates/5-temp.png)
 
 !!! info "The placeholders can be displayed via the :fontawesome-regular-circle-question:."
 
@@ -50,10 +50,10 @@ In the **Select template(s)** section, you can now specify which template or tem
 
 You can also access the functions for creating new templates and creating objects from templates via the object lists. Use the downward-pointing arrow next to the **New** button to open the context menu. This contains the corresponding items to jump directly to the desired operation.
 
-[![templates-view](../assets/images/de/effizientes-dokumentieren/templates/6-temp.png)](../assets/images/de/effizientes-dokumentieren/templates/6-temp.png)
+[![templates-view](../assets/images/en/efficient-documentation/templates/6-temp.png)](../assets/images/en/efficient-documentation/templates/6-temp.png)
 
 ## Default Template in the Object Type Configuration
 
 In the [object type configuration](../basics/custom-object-types.md), you can select a default template. Any template you have created can be used here. If you specify a default template, all newly created objects will be populated according to this template. Of course, you can adjust objects created this way at any time and change the populated values.
 
-[![templates-default](../assets/images/de/effizientes-dokumentieren/templates/7-temp.png)](../assets/images/de/effizientes-dokumentieren/templates/7-temp.png)
+[![templates-default](../assets/images/en/efficient-documentation/templates/7-temp.png)](../assets/images/en/efficient-documentation/templates/7-temp.png)
