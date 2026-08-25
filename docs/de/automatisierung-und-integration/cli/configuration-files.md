@@ -119,7 +119,7 @@ attributes[fax]=facsimileTelephoneNumber
 attributes[description]=info
 attributes[personnel_number]=initials
 attributes[organization]=company
-attributes[location]=physicalDeliveryOfficeName
+attributes[office]=physicalDeliveryOfficeName
 attributes[salutation]=title
 attributes[street]=streetAddress
 attributes[city]=l
@@ -147,13 +147,13 @@ syncEmptyAttributes=true
 
 | Schlüssel                     | Wert                                     | Beschreibung                                                                                                                                                                                                                                                                       |
 | ----------------------------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `import_rooms`                | `true` oder `false`                      | Wenn `true`, wird das Attribut `physicalDeliveryOfficeName` importiert und ein entsprechendes Raum-Objekt erstellt, falls es nicht existiert.                                                                                                                                      |
+| `import_rooms`                | `true` oder `false`                      | Wenn `true`, wird das unter `attributes[office]` konfigurierte Attribut importiert und ein entsprechendes Raum-Objekt erstellt, falls es nicht existiert. Beide Einträge sind nötig, `import_rooms` allein bewirkt nichts.                                                          |
 | `defaultCompany`              | `"Name der Organisation"`                | Setzt eine Standard-Organisation für importierte Benutzer. Leer lassen, um keine Änderungen vorzunehmen.                                                                                                                                                                           |
 | `deletedUsersBehaviour`       | `archive`, `delete` oder `disable_login` | Definiert, was mit i-doit-Benutzern passiert, wenn sie aus dem LDAP gelöscht werden.                                                                                                                                                                                               |
 | `disabledUsersBehaviour`      | `archive`, `delete` oder `disable_login` | Definiert, was mit i-doit-Benutzern passiert, wenn sie im LDAP deaktiviert werden.                                                                                                                                                                                                 |
 | `attributes[]`                | `attributes[i-doit-Feld]=AD-Attribut`    | Mappt ein i-doit Objektattribut (Schlüssel) auf ein LDAP-Attribut (Wert). Wenn benutzerdefinierte Informationen gespeichert werden sollen, kann die [Attributerweiterung](../../administration/verwaltung/import-und-schnittstellen/ldap/attributerweiterung.md) aktiviert werden. |
 | `autoReactivateUsers`         | `true` oder `false`                      | Wenn `true`, werden alle Benutzer vor der Synchronisierung auf den Status "normal" gesetzt. Nur für OpenLDAP/NDS erforderlich.                                                                                                                                                     |
-| `ignoreUsersWithAttributes[]` | `ignoreUsersWithAttributes[]="sn"`       | Verhindert die Synchronisierung von Benutzern, wenn ein angegebenes LDAP-Attribut leer ist (z. B. `sn` für Nachname). Mehrere Attribute können aufgelistet werden.                                                                                                                 |
+| `ignoreUsersWithAttributes[]` | `ignoreUsersWithAttributes[]="sn"`       | Verhindert die Synchronisierung von Benutzern, bei denen `ignoreFunction` auf jedes hier gelistete Attribut zutrifft. Bei mehreren Einträgen ist die Prüfung ein UND, mit `ignoreFunction=empty` fällt ein Benutzer also nur raus, wenn alle leer sind.                                                        |
 | `ignoreFunction`              | `empty`, `!empty`, `isset`, `!isset`     | Die Prüffunktion für `ignoreUsersWithAttributes`. `empty` prüft beispielsweise, ob der Attributwert leer oder nicht gesetzt ist.                                                                                                                                                   |
 
 **Ausführung:**

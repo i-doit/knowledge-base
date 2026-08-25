@@ -1,13 +1,16 @@
 ---
 title: Erweiterte ldap-sync Konfiguration
-description: Anleitung zur Konfiguration einer LDAPS Verbindung mit i-doit für Debian
+description: Referenz zu den ldap-sync Filtern und zu jedem Parameter der ldap.ini
 icon: octicons/person-add-24
 lang: de
 ---
 
 !!! warning "Bitte erstelle vor jeder Änderung an einer Schnittstelle/Import ein vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist, kann dieses dann wiederhergestellt werden"
 
-Dieser Artikel zeigt dir, wie du Benutzer und Gruppen aus dem Active Directory gezielt in i-doit importierst. Der Import erfolgt immer über den [console.php](../../automatisierung-und-integration/cli/index.md)-Befehl `ldap-sync`. Am Ende des Artikels findest du ein komplettes Beispiel einer erweiterten Konfiguration.
+Dieser Artikel zeigt dir, wie du Benutzer und Gruppen aus dem Active Directory gezielt in i-doit importierst.
+Der hier beschriebene Import erfolgt über den [console.php](../../automatisierung-und-integration/cli/index.md)-Befehl `ldap-sync`.
+Unabhängig davon wird ein Benutzer, der sich über LDAP anmeldet, in diesem Moment in i-doit angelegt, mit den Attributen aus dem LDAP-Mapping des Verzeichnisses.
+Am Ende des Artikels findest du ein komplettes Beispiel einer erweiterten Konfiguration.
 
 **Voraussetzungen:**
 
@@ -108,6 +111,46 @@ Wenn sich die Benutzer dadurch unterscheiden, dass sie zwei `objectClass`-Attrib
 
 * * *
 
+### Import von Benutzern, bei denen ein Attribut gefüllt ist
+
+LDAP kennt keinen leeren Wert.
+Ein Attribut ohne Inhalt existiert am Objekt schlicht nicht, du prüfst es deshalb mit dem Present-Filter `=*`.
+Im folgenden Beispiel werden nur Benutzer synchronisiert, bei denen `company` einen Wert hat:
+
+```ini
+(&(objectClass=user)(company=*))
+```
+
+Die Negation liefert genau das Gegenteil, also nur Benutzer ohne Firma:
+
+```ini
+(&(objectClass=user)(!(company=*)))
+```
+
+* * *
+
+### So schließt du eine einzelne OU aus
+
+Eine OU lässt sich nicht über ihren Pfad ausschließen.
+Active Directory unterstützt keine Wildcards auf Attributen mit DN-Syntax, ein Filter wie `(!(distinguishedName=*OU=Extern*))` liefert deshalb nie ein Ergebnis.
+Nutze stattdessen einen der folgenden Wege.
+
+Trage unter **Nach Benutzern suchen in (OU)** die OU ein, die du synchronisieren möchtest, und schalte **Rekursive Suche** aus, damit untergeordnete OUs nicht gelesen werden.
+
+Oder schließe die Objekte über die Gruppenmitgliedschaft aus:
+
+```ini
+(&(objectClass=user)(!(memberOf=CN=no-sync,CN=Users,DC=synetics,DC=test)))
+```
+
+Oder über ein Attribut, das nur an diesen Objekten gesetzt ist:
+
+```ini
+(&(objectClass=user)(!(department=Extern)))
+```
+
+* * *
+
 ## Welche weiteren Attribute über die ldap.ini importiert werden können
 
 Stelle sicher, dass du mit der [ldap.ini-Konfiguration](../../automatisierung-und-integration/cli/configuration-files.md) vertraut bist und die [Attributerweiterungen](../../administration/verwaltung/import-und-schnittstellen/ldap/attributerweiterung.md) bereits konfiguriert hast. Die folgenden Einstellungen nutzen den Abschnitt `[additional]` der .ini-Datei.
@@ -133,7 +176,9 @@ Die Konfiguration als Tabelle:
 
 ### Benutzer statisch Räumen zuordnen
 
-In der `ldap.ini` kannst du feste Zuweisungen von Benutzern zu Räumen eintragen. Die Benutzer werden dann dem jeweiligen Raum als Kontakt zugewiesen. Die Räume müssen vorher in i-doit existieren.
+In der `ldap.ini` kannst du feste Zuweisungen von Benutzern zu Räumen eintragen.
+Die Benutzer werden dann dem jeweiligen Raum als Kontakt zugewiesen.
+Existiert noch kein Raum mit diesem Titel, legt i-doit ihn an.
 
 ```ini
 ;Attach users to Rooms statically
@@ -224,10 +269,13 @@ funktioniert so:
 
 #### autoReactivateUsers
 
-Diese Einstellung setzt vor der Synchronisierung automatisch alle Benutzer auf den Status "normal". Das ist hilfreich, falls Benutzer versehentlich archiviert oder gelöscht wurden.
+Diese Einstellung setzt jeden bei der Synchronisation gefundenen Benutzer wieder auf den Status "normal".
+Das ist hilfreich, falls Benutzer versehentlich archiviert wurden.
 
 !!! info
-    Wir sollten uns bewusst sein, dass es mit NDS oder OpenLDAP derzeit nicht möglich ist, gelöschte Benutzer zu identifizieren, um sie später zu archivieren. Benutzer sind dann immer aktiviert!
+    Für Active Directory passiert das ohnehin, die Option ist deshalb nur für NDS und OpenLDAP relevant.
+    Grund ist, dass diese Verzeichnisse kein Kennzeichen für ein deaktiviertes Konto liefern, i-doit dort also nicht erkennen kann, ob ein Benutzer absichtlich deaktiviert wurde.
+    Benutzer, die im Verzeichnis nicht mehr vorhanden sind, werden dagegen unabhängig vom Verzeichnistyp erkannt und über `deletedUsersBehaviour` behandelt.
 
 ```ini
 autoReactivateUsers=false
@@ -237,11 +285,17 @@ autoReactivateUsers=false
 
 #### ignoreUsersWithAttributes
 
-Mit dieser Option verhinderst du die Synchronisation unerwünschter Verzeichnisobjekte. Ein Benutzer wird nicht synchronisiert, wenn `ignoreFunction` für ALLE ausgewählten Attribute fehlschlaegt.
+Mit dieser Option verhinderst du die Synchronisation unerwünschter Verzeichnisobjekte.
+Die Prüfung läuft nach der LDAP-Suche, auf den Objekten, die der Filter geliefert hat.
+
+`ignoreFunction` wird gegen jedes hier gelistete Attribut ausgeführt.
+Der Benutzer wird nur übersprungen, wenn die Funktion auf **alle** zutrifft.
+Sobald sie auf ein Attribut nicht zutrifft, wird der Benutzer synchronisiert.
 
 Standardmäßig steht `ignoreUsersWithAttributes=[]`, sodass nichts ignoriert wird.
 
-Im folgenden Beispiel werden nur Benutzer importiert, bei denen die Attribute `samaccountname`, `sn`, `givenname` und `mail` nicht leer sind:
+Im folgenden Beispiel wird ein Benutzer zusammen mit `ignoreFunction=empty` nur dann übersprungen, wenn `samaccountname`, `sn`, `givenname` und `mail` gleichzeitig leer sind.
+Ein Benutzer mit leerem `sn`, aber gefülltem `mail` wird weiterhin synchronisiert:
 
 ```ini
 ignoreUsersWithAttributes[] = "samaccountname"
@@ -250,11 +304,25 @@ ignoreUsersWithAttributes[] = "givenname"
 ignoreUsersWithAttributes[] = "mail"
 ```
 
+Soll ein Benutzer schon dann herausfallen, wenn **eines** von mehreren Attributen leer ist, gehört das in den LDAP-Filter der Server-Konfiguration:
+
+```ini
+(&(objectClass=user)(sn=*)(mail=*))
+```
+
+Übersprungene Benutzer erscheinen in der Ausgabe als `Validation for <DN> failed: ignoreFunction prohibited syncing user.`, der Lauf geht mit dem nächsten Objekt weiter.
+
+!!! info
+    Hier übersprungene Benutzer gelten anschließend als verwaist, weil sie in i-doit keinen aktuellen DN mehr tragen.
+    Beim nächsten Lauf greift für sie `deletedUsersBehaviour`.
+    Bereits importierte Personen, die erst später unter die Ignore-Regel fallen, werden also standardmäßig archiviert.
+
 * * *
 
 #### ignoreFunction
 
-Die Prüffunktion zum Ignorieren von Benutzern (siehe `ignoreUsersWithAttributes`). Dies kann ein beliebiger Funktionsname sein, der über `call_user_func` oder die folgenden definierten Funktionen aufrufbar ist:
+Die Prüffunktion zum Ignorieren von Benutzern (siehe `ignoreUsersWithAttributes`).
+Entweder eines der folgenden Sprachkonstrukte oder ein beliebiger Funktionsname, der über `call_user_func` aufrufbar ist:
 
 ```ini
 empty
@@ -263,13 +331,42 @@ isset
 !isset
 ```
 
-Beispiel: `empty` würde als empty($value) ausgeführt werden
+`empty` wird als `empty($value)` ausgeführt.
+Fehlt das Attribut am Verzeichnisobjekt, ist der geprüfte Wert `null`.
 
-So prüfst du auf leere Attribute:
+Benutzer ohne Firma nicht synchronisieren:
 
 ```ini
-ignoreFunction=empty
+ignoreUsersWithAttributes[] = "company"
+ignoreFunction = empty
 ```
+
+Benutzer mit gefüllter Firma nicht synchronisieren, also nur Personen ohne Firmenzuordnung importieren:
+
+```ini
+ignoreUsersWithAttributes[] = "company"
+ignoreFunction = !empty
+```
+
+Datensätze aussortieren, bei denen Firma und Abteilung gleichzeitig leer sind:
+
+```ini
+ignoreUsersWithAttributes[] = "company"
+ignoreUsersWithAttributes[] = "department"
+ignoreFunction = empty
+```
+
+Benutzer aussortieren, bei denen das Attribut gar nicht existiert, während ein vorhandenes, aber leeres Attribut durchgeht:
+
+```ini
+ignoreUsersWithAttributes[] = "employeeid"
+ignoreFunction = !isset
+```
+
+!!! warning "Eigene Funktionen wirken umgekehrt"
+    Bei einer über `call_user_func` aufgerufenen Funktion wird das Ergebnis negiert.
+    Eine solche Funktion muss `true` zurückgeben, damit der Benutzer synchronisiert **wird**, während `true` bei den Sprachkonstrukten oben bedeutet, dass der Benutzer übersprungen wird.
+    Aufgerufen wird sie als `funktion($wert, $alleAttribute)`.
 
 #### Synchronisiere leere Attribute
 
@@ -278,6 +375,111 @@ Diese Option entscheidet, ob geleerte Attribute aus dem AD mit i-doit synchronis
 ```ini
 syncEmptyAttributes=true
 ```
+
+* * *
+
+#### defaultCompany
+
+Firma, die gesetzt wird, wenn über `attributes[organization]` kein Wert kam.
+Objekttitel oder Objekt-ID.
+Existiert kein Objekt mit diesem Titel, legt i-doit ein neues Objekt vom Typ Organisation an.
+
+Schreibe den Wert ohne Anführungszeichen oder in doppelten Anführungszeichen.
+Einfache Anführungszeichen bleiben Teil des Werts und landen im Objekttitel.
+Einzige Ausnahme ist `defaultCompany=''`, das vom Kommando in einen leeren Wert übersetzt wird.
+
+```ini
+defaultCompany="Musterfirma AG"
+```
+
+* * *
+
+#### deletedUsersBehaviour
+
+Was mit Personen passiert, die im Verzeichnis nicht mehr gefunden werden.
+
+| Wert | Wirkung |
+| --- | --- |
+| `archive` | Das Objekt wird archiviert. Default, greift auch bei jedem unbekannten Wert. |
+| `delete` | Das Objekt bekommt den Status gelöscht. |
+| `disable_login` | Das Objekt bleibt normal, das Login wird deaktiviert. |
+
+```ini
+deletedUsersBehaviour=archive
+```
+
+* * *
+
+#### disabledUsersBehaviour
+
+Was mit Personen passiert, deren Konto im Verzeichnis deaktiviert ist.
+Dieselben drei Werte wie oben, der Default ist ebenfalls `archive`.
+
+Diese Option wird nur für Active Directory ausgewertet.
+OpenLDAP und NDS haben kein vergleichbares Kennzeichen, deaktivierte Konten werden dort nicht erkannt.
+Objekte, bei denen das Feld **Konstante** gefüllt ist, werden nie angefasst.
+
+```ini
+disabledUsersBehaviour=disable_login
+```
+
+* * *
+
+### Parameter-Referenz
+
+Die .ini-Datei wird mit `-c` übergeben, die Langform ist `--config`.
+Gelesen wird sie mit den Abschnitten `[commandArguments]`, `[commandOptions]` und `[additional]`.
+`ldap-sync` hat keine Argumente, `[commandArguments]` bleibt also leer.
+
+Werte werden wörtlich gelesen.
+Umschließende doppelte Anführungszeichen werden entfernt, einfache nicht, die bleiben Teil des Werts.
+`true` und `false` werden zu Booleans, `[]` wird zu einem leeren Array, und das wörtliche `''` wird zu einem leeren String.
+Kommentare beginnen mit `;`.
+
+Um zu prüfen, was das Kommando tatsächlich eingelesen hat, rufe es mit `--dumpConfig` auf.
+Damit wird die geparste Konfiguration ausgegeben und das Kommando beendet sich, ohne zu synchronisieren.
+
+#### Optionen in [commandOptions]
+
+| Option | Kurzform | Werte | Bedeutung |
+| --- | --- | --- | --- |
+| `user` | `-u` | Login | i-doit-Benutzer für die Anmeldung. |
+| `password` | `-p` | Passwort | Passwort dieses Benutzers. |
+| `tenantId` | `-i` | Zahl, Default 1 | Mandanten-ID. |
+| `ldapServerId` | `-l` | Zahl | Nur diese eine LDAP-Server-Konfiguration synchronisieren. Ohne die Option laufen alle aktiven Konfigurationen durch. |
+| `dumpConfig` | | Schalter | Geparste Konfiguration ausgeben und beenden. |
+| `connectionRankingActive` | | 0 oder 1 | Ändert sich der Status eines Personenobjekts, werden die Kategorieeinträge, die dieses Objekt referenzieren, auf denselben Status gesetzt. Der Default kommt aus der Mandanteneinstellung `ldap.connection-ranking-active`. |
+| `dropExistingRelations` | | 0 oder 1 | 1 löst bei einer LDAP-Gruppe alle Mitglieder, die nicht aus dem aktuellen Lauf stammen. Die Option ohne Wert zu setzen bedeutet ebenfalls 1. |
+| `archiveDeletedGroups` | | `archive` oder `delete` | Was mit Gruppen in i-doit passiert, die es im Verzeichnis nicht mehr gibt. Die Option ohne Wert bedeutet `archive`. Ohne die Option passiert nichts. |
+| `useDefaultTemplates` | | Schalter | Objekte, die der Lauf anlegt, also Personen, Personengruppen, Organisationen und Räume, werden aus der Standard-Objektvorlage ihres Objekttyps erzeugt, sofern eine definiert ist. |
+
+!!! warning
+    `connectionRankingActive`, `dropExistingRelations` und `archiveDeletedGroups` gehören nach `[commandOptions]`.
+    In `[additional]` haben sie keine Wirkung, weil die Kommando-Optionen sie überschreiben.
+
+#### Optionen in [additional]
+
+| Parameter | Werte | Bedeutung |
+| --- | --- | --- |
+| `attributes[<Feld>]` | LDAP-Attribut | Bildet ein i-doit-Personenfeld auf ein Verzeichnisattribut ab. |
+| `defaultCompany` | Objekttitel oder ID | Firma für Benutzer ohne Firma aus dem Verzeichnis. |
+| `syncEmptyAttributes` | true / false | Ob geleerte Attribute nach i-doit geschrieben werden. |
+| `deletedUsersBehaviour` | archive / delete / disable_login | Personen, die es im Verzeichnis nicht mehr gibt. |
+| `disabledUsersBehaviour` | archive / delete / disable_login | Deaktivierte Konten, nur Active Directory. |
+| `autoReactivateUsers` | true / false | Setzt gefundene Personen wieder auf den Status normal. |
+| `import_rooms` | true / false | Legt Räume aus `attributes[office]` an und hängt die Person als Kontakt daran. |
+| `rooms["<Raum>"]` | JSON-Array | Statische Zuordnung von Benutzern zu Räumen. Fehlende Räume werden angelegt. |
+| `ignoreUsersWithAttributes[]` | Attributname | Attribute, die `ignoreFunction` prüft. |
+| `ignoreFunction` | empty / !empty / isset / !isset / Funktionsname | Prüffunktion zur Option darüber. |
+
+Für `attributes[...]` sind diese Feldnamen gültig: `academic_degree`, `city`, `custom_1` bis `custom_8`, `department`, `description`, `fax`, `first_name`, `function`, `last_name`, `mail`, `organization`, `pager`, `personnel_number`, `phone_company`, `phone_home`, `phone_mobile`, `salutation`, `service_designation`, `street`, `title`, `zip_code`.
+
+Benutzername und die Gruppe für die Anmeldung werden nicht hier konfiguriert, sie kommen aus dem LDAP-Mapping des Verzeichnisses.
+Vorname, Nachname und E-Mail-Adresse stammen ebenfalls aus diesem Mapping, ein Eintrag in `attributes[...]` überschreibt sie aber.
+
+!!! info
+    Der LDAP-Filter und der Basis-DN stehen ebenfalls nicht in dieser Datei.
+    `ldap-sync` liest beide aus der Server-Konfiguration unter **Verwaltung > Import und Schnittstellen > LDAP > Server**.
 
 * * *
 
@@ -299,7 +501,7 @@ attributes[office]=physicalDeliveryOfficeName
 ;Automatically assign this company to every ldap user
 defaultCompany=''
 
-;What to do with deleted users - archive, delete, purge
+;What to do with deleted users - archive, delete, disable_login
 deletedUsersBehaviour=archive
 
 ;What to do with disabled users - archive, delete, disable_login
@@ -351,7 +553,7 @@ syncEmptyAttributes=true
 Damit die .ini Datei verwendet wird, muss diese mit dem `-c` parameter angegeben werden.
 
 ```shell
-sudo -u www-data php console.php ldap-sync -c /var/www/html/src/handler/config/ldap-sync.ini
+sudo -u www-data php console.php ldap-sync -c /path/to/config/ldap-sync.ini
 ```
 
 [ldap.ini :material-file-download:](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/example-ldap.ini){ .md-button .md-button--primary }
