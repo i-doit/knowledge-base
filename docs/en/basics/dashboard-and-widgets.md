@@ -49,7 +49,7 @@ The calendar widget marks appointments in bold. To use this feature, the checkbo
 
 Alternatively, custom appointments can be defined via the widget settings, which will then appear in the calendar.
 
-[![calendar-3](../assets/images/de/grundlagen/desktop-und-widgets/6-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/6-duw.png)
+[![calendar-3](../assets/images/en/grundlagen/desktop-und-widgets/6-duw.png)](../assets/images/en/grundlagen/desktop-und-widgets/6-duw.png)
 
 ### Bookmarks
 
@@ -89,7 +89,7 @@ This widget requires a connection to [Nagios or Check\_MK](../automation-and-int
 
 With the notes widget you can place any text notes on the dashboard.
 
-[![notes](../assets/images/de/grundlagen/desktop-und-widgets/13-duw.png)](../assets/images/de/grundlagen/desktop-und-widgets/13-duw.png)
+[![notes](../assets/images/en/grundlagen/desktop-und-widgets/13-duw.png)](../assets/images/en/grundlagen/desktop-und-widgets/13-duw.png)
 
 Notes are simply added or edited with a **double-click**.
 
