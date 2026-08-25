@@ -50,6 +50,7 @@ The **license token** is sent by email. The **offline license** can be retrieved
 1. Open the i-doit installation in your browser and log in with the default credentials. More info at [First login](../basics/initial-login.md)
 
 2. After login, a popup window appears where you enter the license token that was received by email.
+
     [![Eval Token popup](../assets/images/en/maintenance-and-operation/licensing/eval-license-popup-online.png)](../assets/images/en/maintenance-and-operation/licensing/eval-license-popup-online.png)
 
 3. After a short time, i-doit detects that no internet connection is available and requests the **offline license** in addition to the **license token**.
@@ -67,6 +68,7 @@ The **license token** is sent by email. The **offline license** can be retrieved
 <div class="steps" markdown>
 
 1. Open the i-doit installation in your browser. To access the [Admin Center](../administration/admin-center.md), click on the link in the login screen.
+
     [![02-update-login](../assets/images/en/maintenance-and-operation/licensing/02-update-login.png)](../assets/images/en/maintenance-and-operation/licensing/02-update-login.png)
 
 2. Next, enter the credentials that were set during the i-doit installation for the [Admin Center](../administration/admin-center.md).
@@ -76,12 +78,15 @@ The **license token** is sent by email. The **offline license** can be retrieved
     [![03-update-login-admin-center](../assets/images/en/maintenance-and-operation/licensing/03-update-login-admin-center.png)](../assets/images/en/maintenance-and-operation/licensing/03-update-login-admin-center.png)
 
 3. Click on the **Licenses** tab.
+
     [![04-update-admin-center-home](../assets/images/en/maintenance-and-operation/licensing/04-update-admin-center-home.png)](../assets/images/en/maintenance-and-operation/licensing/04-update-admin-center-home.png)
 
 4. Paste the **license token** into the text field.
+
     [![05-update-insert-weblicense-token](../assets/images/en/maintenance-and-operation/licensing/05-update-insert-weblicense-token.png)](../assets/images/en/maintenance-and-operation/licensing/05-update-insert-weblicense-token.png)
 
 5. Click the {++Save & Check++} button. The **license token** is now verified by the license server and i-doit is licensed.
+
     [![06-update-save-and-check](../assets/images/en/maintenance-and-operation/licensing/06-update-save-and-check.png)](../assets/images/en/maintenance-and-operation/licensing/06-update-save-and-check.png)
 
 </div>
@@ -93,9 +98,11 @@ The **license token** is sent by email. The **offline license** can be retrieved
 <div class="steps" markdown>
 
 1. Log in to the [customer portal](https://center.i-doit.com/portal/advanced) and copy the **offline license** from the **Advanced** tab.
+
     [![01-update-get-offline-token](../assets/images/en/maintenance-and-operation/licensing/01-update-get-offline-token.png)](../assets/images/en/maintenance-and-operation/licensing/01-update-get-offline-token.png)
 
 2. Open the i-doit installation in your browser. To access the [Admin Center](../administration/admin-center.md), click on the link in the login screen.
+
     [![02-update-login](../assets/images/en/maintenance-and-operation/licensing/02-update-login.png)](../assets/images/en/maintenance-and-operation/licensing/02-update-login.png)
 
 3. Next, enter the credentials that were set during the i-doit installation for the [Admin Center](../administration/admin-center.md).
@@ -105,24 +112,31 @@ The **license token** is sent by email. The **offline license** can be retrieved
     [![03-update-login-admin-center](../assets/images/en/maintenance-and-operation/licensing/03-update-login-admin-center.png)](../assets/images/en/maintenance-and-operation/licensing/03-update-login-admin-center.png)
 
 4. Click on the **Licenses** tab.
+
     [![04-update-admin-center-home](../assets/images/en/maintenance-and-operation/licensing/04-update-admin-center-home.png)](../assets/images/en/maintenance-and-operation/licensing/04-update-admin-center-home.png)
 
 5. Paste the **license token** into the text field.
+
     [![05-update-insert-weblicense-token](../assets/images/en/maintenance-and-operation/licensing/05-update-insert-weblicense-token.png)](../assets/images/en/maintenance-and-operation/licensing/05-update-insert-weblicense-token.png)
 
 6. Click the {++Save++} button. Do **not** click {--Save & Check--}.
+
     [![06-update-save](../assets/images/en/maintenance-and-operation/licensing/06-update-save.png)](../assets/images/en/maintenance-and-operation/licensing/06-update-save.png)
 
 7. After the license token has been saved, click the **Install new license** button.
+
     [![07-update-offline-install-new-license](../assets/images/en/maintenance-and-operation/licensing/07-update-offline-install-new-license.png)](../assets/images/en/maintenance-and-operation/licensing/07-update-offline-install-new-license.png)
 
 8. Here the field is displayed where the entire **offline license** must be pasted. Where to get the **offline license** is described [here](#how-do-i-obtain-the-license-token-and-the-offline-license).
+
     [![08-update-offline-insert-offline-license](../assets/images/en/maintenance-and-operation/licensing/08-update-offline-insert-offline-license.png)](../assets/images/en/maintenance-and-operation/licensing/08-update-offline-insert-offline-license.png)
 
 9. Then click the **Add license** button.
+
     [![09-update-offline-insert-offline-license-add-license](../assets/images/en/maintenance-and-operation/licensing/09-update-offline-insert-offline-license-add-license.png)](../assets/images/en/maintenance-and-operation/licensing/09-update-offline-insert-offline-license-add-license.png)
 
 10. The license token is verified with the **offline license** and all associated licenses are displayed.
+
     [![10-update-offline-done](../assets/images/en/maintenance-and-operation/licensing/10-update-offline-done.png)](../assets/images/en/maintenance-and-operation/licensing/10-update-offline-done.png)
 
 </div>
