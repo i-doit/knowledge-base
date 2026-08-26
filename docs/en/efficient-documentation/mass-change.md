@@ -14,14 +14,14 @@ Accessing
 
 You can find mass change under **Extras → CMDB → Mass Change**. Here you can view and edit existing change templates, create new change templates, and adjust objects according to the templates.
 
-[![mass-change-find](../assets/images/de/effizientes-dokumentieren/massenaenderung/1-mae.png)](../assets/images/de/effizientes-dokumentieren/massenaenderung/1-mae.png)
+[![mass-change-find](../assets/images/en/effizientes-dokumentieren/massenaenderung/1-mae.png)](../assets/images/en/effizientes-dokumentieren/massenaenderung/1-mae.png)
 
 Creating a Change Template
 --------------------------------
 
 Once you have accessed mass change, you can create a change template under **Create new template** in the tree menu on the left side. In the first step, you will be asked to specify which [object type](../basics/it-documentation-structure.md) the template should belong to. Select it from the drop-down menu and confirm with the **Create new template** button. The subsequent configuration of a template is identical to creating a regular object. Enter all content that you want to transfer to the objects later and save your entries.
 
-[![mass-change-create](../assets/images/de/effizientes-dokumentieren/massenaenderung/2-mae.png)](../assets/images/de/effizientes-dokumentieren/massenaenderung/2-mae.png)
+[![mass-change-create](../assets/images/en/effizientes-dokumentieren/massenaenderung/2-mae.png)](../assets/images/en/effizientes-dokumentieren/massenaenderung/2-mae.png)
 
 !!! info "Note"
 
@@ -32,7 +32,7 @@ Viewing, Editing, and Deleting Existing Change Templates
 
 In mass change, you can view all previously created change templates under **Existing templates** in the tree menu on the left side. To edit a change template, click on it. If you check the checkbox of one or more change templates, you can remove the selected change templates from the system using the **Purge** button. Please make sure you want to delete the selected change templates, as deleted change templates cannot be restored.
 
-[![mass-change-delete](../assets/images/de/effizientes-dokumentieren/massenaenderung/3-mae.png)](../assets/images/de/effizientes-dokumentieren/massenaenderung/3-mae.png)
+[![mass-change-delete](../assets/images/en/effizientes-dokumentieren/massenaenderung/3-mae.png)](../assets/images/en/effizientes-dokumentieren/massenaenderung/3-mae.png)
 
 Changing Object Information with a Change Template
 ---------------------------------------------------------
@@ -58,4 +58,4 @@ If you leave the categories untouched, no content will be transferred to multi-v
 
 Once all settings meet your requirements, you can transfer the changes to the objects using the **Perform mass change** button.
 
-[![mass-change-perform](../assets/images/de/effizientes-dokumentieren/massenaenderung/4-mae.png)](../assets/images/de/effizientes-dokumentieren/massenaenderung/4-mae.png)
+[![mass-change-perform](../assets/images/en/effizientes-dokumentieren/massenaenderung/4-mae.png)](../assets/images/en/effizientes-dokumentieren/massenaenderung/4-mae.png)
