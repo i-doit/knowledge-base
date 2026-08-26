@@ -11,17 +11,17 @@ lang: en
 
 In i-doit, you automatically generate barcodes or QR codes for all objects. You can use these, for example, to [print machine-readable labels](./i-doit-qr-code-printer.md). After configuration, the code appears in the upper right corner as soon as you select an object.
 
-[![Overview page](../assets/images/de/i-doit-add-ons/qr-code-printer/1-qr.png)](../assets/images/de/i-doit-add-ons/qr-code-printer/1-qr.png)
+[![Overview page](../assets/images/en/i-doit-add-ons/qr-code-printer/1-qr.png)](../assets/images/en/i-doit-add-ons/qr-code-printer/1-qr.png)
 
 ## Barcode
 
-[![Barcode](../assets/images/de/i-doit-add-ons/qr-code-printer/2-qr.png)](../assets/images/de/i-doit-add-ons/qr-code-printer/2-qr.png)
+[![Barcode](../assets/images/en/i-doit-add-ons/qr-code-printer/2-qr.png)](../assets/images/en/i-doit-add-ons/qr-code-printer/2-qr.png)
 
 A barcode is an optoelectronically readable font made of bars and gaps of varying widths. The disadvantage: A barcode can only store relatively little information.
 
 ## QR code
 
-[![QR code](../assets/images/de/i-doit-add-ons/qr-code-printer/3-qr.png)](../assets/images/de/i-doit-add-ons/qr-code-printer/3-qr.png)
+[![QR code](../assets/images/en/i-doit-add-ons/qr-code-printer/3-qr.png)](../assets/images/en/i-doit-add-ons/qr-code-printer/3-qr.png)
 
 The QR code (Quick Response) is a two-dimensional code with automatic error correction. Its advantage over the barcode: It stores significantly more information.
 
@@ -29,7 +29,7 @@ The QR code (Quick Response) is a two-dimensional code with automatic error corr
 
 The configuration within i-doit can be found under **Administration → Predefined content → QR code**
 
-[![QR code or barcode configuration](../assets/images/de/i-doit-add-ons/qr-code-printer/4-qr.png)](../assets/images/de/i-doit-add-ons/qr-code-printer/4-qr.png)
+[![QR code or barcode configuration](../assets/images/en/i-doit-add-ons/qr-code-printer/4-qr.png)](../assets/images/en/i-doit-add-ons/qr-code-printer/4-qr.png)
 
 Here you activate or deactivate the code display and choose between barcode and QR code.
 
@@ -37,13 +37,13 @@ Here you activate or deactivate the code display and choose between barcode and 
 
 You configure which information is stored in the QR code under **Administration → Predefined content → QR code**:
 
-[![QR code content configuration](../assets/images/de/i-doit-add-ons/qr-code-printer/5-qr.png)](../assets/images/de/i-doit-add-ons/qr-code-printer/5-qr.png)
+[![QR code content configuration](../assets/images/en/i-doit-add-ons/qr-code-printer/5-qr.png)](../assets/images/en/i-doit-add-ons/qr-code-printer/5-qr.png)
 
 ### Global definition
 
 With the global definition, you fill the QR code information using the following placeholders:
 
-[![Global definition](../assets/images/de/i-doit-add-ons/qr-code-printer/6-qr.png)](../assets/images/de/i-doit-add-ons/qr-code-printer/6-qr.png)
+[![Global definition](../assets/images/en/i-doit-add-ons/qr-code-printer/6-qr.png)](../assets/images/en/i-doit-add-ons/qr-code-printer/6-qr.png)
 
 ### Primary access URL
 
@@ -96,7 +96,7 @@ To print a label:
 2. The barcode information is automatically loaded from i-doit -- you can edit it if needed.
 3. Print, save, or export the QR code via the icons or **File** in the context menu. Export is in `.bmp` format.
 
-[![Printing labels](../assets/images/de/i-doit-add-ons/qr-code-printer/7-qr.png)](../assets/images/de/i-doit-add-ons/qr-code-printer/7-qr.png)
+[![Printing labels](../assets/images/en/i-doit-add-ons/qr-code-printer/7-qr.png)](../assets/images/en/i-doit-add-ons/qr-code-printer/7-qr.png)
 
 ## Releases
 
