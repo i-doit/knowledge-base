@@ -14,15 +14,15 @@ lang: en
 
 Objects can be related in many different ways. To provide clarity, each relationship is given a type. i-doit comes with many predefined relationship types in the standard installation. You can find all types under **Administration → Predefined content → Object relationship types**.
 
-[![Relationships](../assets/images/de/grundlagen/objekt-beziehungen/1-ob.png)](../assets/images/de/grundlagen/objekt-beziehungen/1-ob.png)
+[![Relationships](../assets/images/en/grundlagen/objekt-beziehungen/1-ob.png)](../assets/images/en/grundlagen/objekt-beziehungen/1-ob.png)
 
 Via the **Add new value** button below the list, you create a new relationship type. If you want to use this relationship in a custom category, define it as "Implicit".
 
-[![Add-relationship](../assets/images/de/grundlagen/objekt-beziehungen/2-ob.png)](../assets/images/de/grundlagen/objekt-beziehungen/2-ob.png)
+[![Add-relationship](../assets/images/en/grundlagen/objekt-beziehungen/2-ob.png)](../assets/images/en/grundlagen/objekt-beziehungen/2-ob.png)
 
 All already documented object relationships can be found under **Extras → CMDB → Relationships**, listed by type. If you click **All** in the left navigation tree, i-doit loads all object relationships regardless of type. With a larger IT documentation, loading may take a moment.
 
-[![existing-relationship-types](../assets/images/de/grundlagen/objekt-beziehungen/3-ob.png)](../assets/images/de/grundlagen/objekt-beziehungen/3-ob.png)
+[![existing-relationship-types](../assets/images/en/grundlagen/objekt-beziehungen/3-ob.png)](../assets/images/en/grundlagen/objekt-beziehungen/3-ob.png)
 
 ## Relationship objects
 
@@ -42,7 +42,7 @@ The relationship object is necessary to store properties of the relationship as 
 
 As already evident, an object relationship consists of a master and a slave object. It is therefore a directed relationship. The slave object is dependent on the master object.
 
-[![relationship-object](../assets/images/de/grundlagen/objekt-beziehungen/4-ob.png)](../assets/images/de/grundlagen/objekt-beziehungen/4-ob.png)
+[![relationship-object](../assets/images/en/grundlagen/objekt-beziehungen/4-ob.png)](../assets/images/en/grundlagen/objekt-beziehungen/4-ob.png)
 
 The direction of the relationship -- i.e. which object is master, which is slave -- affects the [CMDB Explorer](../evaluation/cmdb-explorer/index.md). In the tree view, object relationships are recursively built either upward or downward. In the [standard profile](../evaluation/cmdb-explorer/profile-im-cmdb-explorer.md), master objects are positioned below the slave objects.
 
@@ -52,7 +52,7 @@ The direction of the relationship -- i.e. which object is master, which is slave
 
 Per object, relationships to other objects are collected in the [category](it-documentation-structure.md) **Relationships**. This category is permanently assigned to every object type and can be accessed via the arrows icon.
 
-[![Category-relationships](../assets/images/de/grundlagen/objekt-beziehungen/5-ob.png)](../assets/images/de/grundlagen/objekt-beziehungen/5-ob.png)
+[![Category-relationships](../assets/images/en/grundlagen/objekt-beziehungen/5-ob.png)](../assets/images/en/grundlagen/objekt-beziehungen/5-ob.png)
 
 ## Implicit vs. explicit relationships
 
@@ -62,7 +62,7 @@ Relationships differ not only by their type (see above), but also by whether the
 
 **Explicit relationships** are created independently of categories and their attributes directly in the **Relationships** category. The current object is preselected as **Object 1**. Under **Object 2**, you select the object to which a relationship should exist and set the direction. The default relationship type is **Dependency**. However, you can also directly define a new explicit relationship type -- via the note icon, as with Dialog+ fields.
 
-[![explicit-relationship-type](../assets/images/de/grundlagen/objekt-beziehungen/6-ob.png)](../assets/images/de/grundlagen/objekt-beziehungen/6-ob.png)
+[![explicit-relationship-type](../assets/images/en/grundlagen/objekt-beziehungen/6-ob.png)](../assets/images/en/grundlagen/objekt-beziehungen/6-ob.png)
 
 When creating a new explicit relationship type, the type and descriptions from the respective object views can be defined.
 
@@ -85,7 +85,7 @@ Example: If a web cluster with several nodes is documented in i-doit, the nodes 
 
 All parallel relationships can be found under **Extras → Predefined content → Object relationships → Parallel relationships**. You cannot create them manually -- i-doit creates them implicitly and automatically in the background.
 
-[![parallel-relationships](../assets/images/de/grundlagen/objekt-beziehungen/7-ob.png)](../assets/images/de/grundlagen/objekt-beziehungen/7-ob.png)
+[![parallel-relationships](../assets/images/en/grundlagen/objekt-beziehungen/7-ob.png)](../assets/images/en/grundlagen/objekt-beziehungen/7-ob.png)
 
 ## Object relationship in custom category
 
