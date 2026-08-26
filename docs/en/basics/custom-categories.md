@@ -13,7 +13,7 @@ Custom categories allow you to create your own [categories](it-documentation-str
 
 You can find the configuration under **Administration → Data structure → Custom categories**. Use the **New** button to create a new category. Existing custom categories can be edited there at any time.
 
-[![custom-categories](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/1-bk.png)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/1-bk.png)
+[![custom-categories](../assets/images/en/grundlagen/benutzerdefinierte-kategorien/1-bk.png)](../assets/images/en/grundlagen/benutzerdefinierte-kategorien/1-bk.png)
 
 Here is how to configure a new category step by step:
 
@@ -21,31 +21,31 @@ Here is how to configure a new category step by step:
 
 Give the category a unique name so you can easily identify it in the category list.
 
-[![custom-categories-2](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/2-bk.png)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/2-bk.png)
+[![custom-categories-2](../assets/images/en/grundlagen/benutzerdefinierte-kategorien/2-bk.png)](../assets/images/en/grundlagen/benutzerdefinierte-kategorien/2-bk.png)
 
 **2. Assign object types**
 
 Link the category with one or more [object types](it-documentation-structure.md) so it becomes available there.
 
-[![custom-categories-3](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/3-bk.png)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/3-bk.png)
+[![custom-categories-3](../assets/images/en/grundlagen/benutzerdefinierte-kategorien/3-bk.png)](../assets/images/en/grundlagen/benutzerdefinierte-kategorien/3-bk.png)
 
 **3. Set the category type**
 
 Choose between [single-value](it-documentation-structure.md) and [multi-value category](it-documentation-structure.md) (list category). If the attributes only need to be maintained once per object, a single-value category is sufficient. If you need multiple entries per object (e.g. multiple contracts), choose a multi-value category.
 
-[![custom-categories-4](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/4-bk.png)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/4-bk.png)
+[![custom-categories-4](../assets/images/en/grundlagen/benutzerdefinierte-kategorien/4-bk.png)](../assets/images/en/grundlagen/benutzerdefinierte-kategorien/4-bk.png)
 
 **4. Define a constant**
 
 Define a constant so the category can be referenced in queries (e.g. in custom [reports](../evaluation/report-manager.md)). i-doit automatically suggests a constant when creating -- you can adjust it if needed.
 
-[![custom-categories-5](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/5-bk.png)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/5-bk.png)
+[![custom-categories-5](../assets/images/en/grundlagen/benutzerdefinierte-kategorien/5-bk.png)](../assets/images/en/grundlagen/benutzerdefinierte-kategorien/5-bk.png)
 
 **5. Select an icon (from version 37)**
 
 You can select a custom icon for the category. Click **Change icon** and choose from the collection or upload your own icon. Maximum file size: **1024 KB**. Allowed formats: **apng**, **avif**, **gif**, **jpg**, **jpeg**, **jfif**, **pjpeg**, **pjp**, **png**, **svg** and **webp**.
 
-[![custom-categories-5](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/icon-bk.png)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/icon-bk.png)
+[![custom-categories-5](../assets/images/en/grundlagen/benutzerdefinierte-kategorien/icon-bk.png)](../assets/images/en/grundlagen/benutzerdefinierte-kategorien/icon-bk.png)
 
 ## Defining the category
 
@@ -101,7 +101,7 @@ Below the configuration, an evaluation is displayed:
 | **Total category entries**   | How often was the category saved? Per object, the entries (for single-value once, for multi-value per entry) are counted together.                        |
 | **Maintained values**        | Each attribute that was filled in and saved is counted across all objects.                                                                                |
 
-[![custom-categories-8](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/8-bk.png)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/8-bk.png)
+[![custom-categories-8](../assets/images/en/grundlagen/benutzerdefinierte-kategorien/8-bk.png)](../assets/images/en/grundlagen/benutzerdefinierte-kategorien/8-bk.png)
 
 Once your category has been configured and defined, you can use the **Save** button so the category becomes available in the selected object types.
 
@@ -126,4 +126,4 @@ Now you can change the key. i-doit automatically validates the new value before 
 
 After saving the custom category, you can view and use the new technical configuration.
 
-[![Technical-configuration](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/11-bk.png)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/11-bk.png)
+[![Technical-configuration](../assets/images/en/grundlagen/benutzerdefinierte-kategorien/11-bk.png)](../assets/images/en/grundlagen/benutzerdefinierte-kategorien/11-bk.png)
