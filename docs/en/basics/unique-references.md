@@ -18,7 +18,7 @@ Every object in i-doit receives an identifier (ID). This is always unique per i-
 
 The object ID is displayed in the [category](it-documentation-structure.md) **General** as the attribute **Object ID**.
 
-[![object-id](../assets/images/de/grundlagen/eindeutige-referenzierungen/1-er.png)](../assets/images/de/grundlagen/eindeutige-referenzierungen/1-er.png)
+[![object-id](../assets/images/en/grundlagen/eindeutige-referenzierungen/1-er.png)](../assets/images/en/grundlagen/eindeutige-referenzierungen/1-er.png)
 
 During [i-doit setup](../installation/manual-installation/setup.md), you can determine from which point object IDs are assigned. By default, counting starts at 1.
 
@@ -32,11 +32,11 @@ Object IDs are primarily used for internal purposes, but can also be very useful
 
 The **SYS-ID** (also **SYSID** without hyphen) is another identification feature, but is not reliably suitable for unique referencing in automated imports. When creating a new object, i-doit generates a positive number with at least 10 digits, derived from the [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time). You can find it in the **General** category.
 
-[![sysid](../assets/images/de/grundlagen/eindeutige-referenzierungen/2-er.png)](../assets/images/de/grundlagen/eindeutige-referenzierungen/2-er.png)
+[![sysid](../assets/images/en/grundlagen/eindeutige-referenzierungen/2-er.png)](../assets/images/en/grundlagen/eindeutige-referenzierungen/2-er.png)
 
 Per [object type](it-documentation-structure.md), you can specify a prefix that is prepended to the automatically generated number. You configure the prefix under **Administration → Data structure → Object types → [Object type group] → [Object type] → SYSID prefix**. Without specification, a SYS-ID begins with the prefix SYSID_. If you specify an alternative prefix, the generation changes: instead of the UNIX timestamp, i-doit uses the object ID.
 
-[![sysid-prefix](../assets/images/de/grundlagen/eindeutige-referenzierungen/3-er.png)](../assets/images/de/grundlagen/eindeutige-referenzierungen/3-er.png)
+[![sysid-prefix](../assets/images/en/grundlagen/eindeutige-referenzierungen/3-er.png)](../assets/images/en/grundlagen/eindeutige-referenzierungen/3-er.png)
 
 By default, you cannot change the SYS-ID after creation. If you want to enable changes, activate this under **Administration → [Tenant name] Administration → Settings for [Tenant name] → CMDB → SYS-ID readonly**.
 
@@ -44,7 +44,7 @@ By default, you cannot change the SYS-ID after creation. If you want to enable c
 
 Every object must have a title. This is documented as an attribute in the **General** category. This attribute is also synonymously called **designation**, **name**, **object link**.
 
-[![object-title](../assets/images/de/grundlagen/eindeutige-referenzierungen/4-er.png)](../assets/images/de/grundlagen/eindeutige-referenzierungen/4-er.png)
+[![object-title](../assets/images/en/grundlagen/eindeutige-referenzierungen/4-er.png)](../assets/images/en/grundlagen/eindeutige-referenzierungen/4-er.png)
 
 !!! success "Automatically assign object titles"
     Object titles can be assigned automatically. This is particularly helpful with [templates](../efficient-documentation/templates.md):
@@ -65,13 +65,13 @@ The **hostname** is assigned in the **Host address** category. Even though it is
 
 If the **DNS Domain** attribute is also specified per category entry, the Fully Qualified Domain Name (**FQDN**) is automatically derived from it. This should, similar to IP addresses, be unique, but can recur for various reasons. The FQDN is often equated with the object title. The use of hostname or FQDN for referencing should be carefully considered.
 
-[![hostname-fqdn](../assets/images/de/grundlagen/eindeutige-referenzierungen/5-er.png)](../assets/images/de/grundlagen/eindeutige-referenzierungen/5-er.png)
+[![hostname-fqdn](../assets/images/en/grundlagen/eindeutige-referenzierungen/5-er.png)](../assets/images/en/grundlagen/eindeutige-referenzierungen/5-er.png)
 
 ## MAC address
 
 MAC addresses are generally unique worldwide because they are assigned by the manufacturers of network components. However, the risk of recurring MAC addresses is only theoretically very low. Due to the ever-growing virtualization and the associated self-modifiable MAC addresses, this attribute is also not always the best choice for unique referencing. In the **Port (Network)** category, any number of MAC addresses can be specified by entering a **MAC address** per port. For techniques such as bonding/trunking, the MAC address is documented in the **Logical port (Network)** category.
 
-[![mac-address](../assets/images/de/grundlagen/eindeutige-referenzierungen/6-er.png)](../assets/images/de/grundlagen/eindeutige-referenzierungen/6-er.png)
+[![mac-address](../assets/images/en/grundlagen/eindeutige-referenzierungen/6-er.png)](../assets/images/en/grundlagen/eindeutige-referenzierungen/6-er.png)
 
 ## Inventory number
 
@@ -79,7 +79,7 @@ The inventory number serves for cross-organizational inventorying (asset managem
 
 If you want to generate inventory numbers automatically, configure this under **Administration → Data structure → Object types → [Object type group] → [Object type]**. Various placeholders are available to create a naming schema per object type.
 
-[![Inventory-number](../assets/images/de/grundlagen/eindeutige-referenzierungen/7-er.png)](../assets/images/de/grundlagen/eindeutige-referenzierungen/7-er.png)
+[![Inventory-number](../assets/images/en/grundlagen/eindeutige-referenzierungen/7-er.png)](../assets/images/en/grundlagen/eindeutige-referenzierungen/7-er.png)
 
 !!! success "Labels"
     Inventory numbers can be ideally combined with QR codes to create a label. QR codes are generated per i-doit object. Such labels can be printed, for example, with the [i-doit QR Code Printer](../i-doit-add-ons/i-doit-qr-code-printer.md).
@@ -88,7 +88,7 @@ If you want to generate inventory numbers automatically, configure this under **
 
 Data from third-party systems, for example from the areas of inventory/discovery, can be [imported](../consolidate-data/index.md) into i-doit. Such systems usually also have unique identifiers or similar. If these identifiers are imported, the **Data Source** category can be used. In this way, multiple systems in use can be coordinated so that objects can be uniquely referenced across all systems.
 
-[![identifier](../assets/images/de/grundlagen/eindeutige-referenzierungen/8-er.png)](../assets/images/de/grundlagen/eindeutige-referenzierungen/8-er.png)
+[![identifier](../assets/images/en/grundlagen/eindeutige-referenzierungen/8-er.png)](../assets/images/en/grundlagen/eindeutige-referenzierungen/8-er.png)
 
 ## Constants
 
