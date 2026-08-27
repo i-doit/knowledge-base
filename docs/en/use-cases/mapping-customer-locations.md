@@ -10,9 +10,9 @@ In this article you will learn how to hierarchically map customers with multiple
 
 You equip your customers with hardware and software components and want to document both the customers and their IT components. The location view in i-doit provides a clear representation for this purpose.
 
-[![Location view](../assets/images/de/anwendungsfaelle/abbildung-von-kundenstandorten/1-avk.png)](../assets/images/de/anwendungsfaelle/abbildung-von-kundenstandorten/1-avk.png)
+[![Location view](../assets/images/en/anwendungsfaelle/abbildung-von-kundenstandorten/1-avk.png)](../assets/images/en/anwendungsfaelle/abbildung-von-kundenstandorten/1-avk.png)
 
-[![Object](../assets/images/de/anwendungsfaelle/abbildung-von-kundenstandorten/2-avk.png)](../assets/images/de/anwendungsfaelle/abbildung-von-kundenstandorten/2-avk.png)
+[![Object](../assets/images/en/anwendungsfaelle/abbildung-von-kundenstandorten/2-avk.png)](../assets/images/en/anwendungsfaelle/abbildung-von-kundenstandorten/2-avk.png)
 
 ## Configuration
 
@@ -23,9 +23,9 @@ Here is how to set up the object type:
 3. Assign at least the categories **Location** and **Locally assigned objects**.
 4. Optionally add further categories such as **Organization**, **Address**, **Email Addresses**, **Contact Assignment**, or **Access**.
 
-[![Object type configuration](../assets/images/de/anwendungsfaelle/abbildung-von-kundenstandorten/3-avk.png)](../assets/images/de/anwendungsfaelle/abbildung-von-kundenstandorten/3-avk.png)
+[![Object type configuration](../assets/images/en/anwendungsfaelle/abbildung-von-kundenstandorten/3-avk.png)](../assets/images/en/anwendungsfaelle/abbildung-von-kundenstandorten/3-avk.png)
 
-[![Object view](../assets/images/de/anwendungsfaelle/abbildung-von-kundenstandorten/4-avk.png)](../assets/images/de/anwendungsfaelle/abbildung-von-kundenstandorten/4-avk.png)
+[![Object view](../assets/images/en/anwendungsfaelle/abbildung-von-kundenstandorten/4-avk.png)](../assets/images/en/anwendungsfaelle/abbildung-von-kundenstandorten/4-avk.png)
 
 ## Usage
 
