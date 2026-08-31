@@ -13,27 +13,27 @@ The structure of IT documentation describes how i-doit organizes your [IT docume
 
 After [logging in](initial-login.md), the [dashboard with widgets](dashboard-and-widgets.md) appears first. From there you explore the IT documentation. Via the main navigation bar (the black area at the top) you can reach almost all functions in i-doit.
 
-[![Navigation](../assets/images/de/grundlagen/struktur-der-it-dokumentation/1-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/1-sitdoku.png)
+[![Navigation](../assets/images/en/grundlagen/struktur-der-it-dokumentation/1-sitdoku.png)](../assets/images/en/grundlagen/struktur-der-it-dokumentation/1-sitdoku.png)
 
 To orient yourself, take a look at the breadcrumb navigation. From there you can navigate to parent pages.
 
-[![Navigation-2](../assets/images/de/grundlagen/struktur-der-it-dokumentation/2-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/2-sitdoku.png)
+[![Navigation-2](../assets/images/en/grundlagen/struktur-der-it-dokumentation/2-sitdoku.png)](../assets/images/en/grundlagen/struktur-der-it-dokumentation/2-sitdoku.png)
 
 ## About groups, types and categorizations
 
 The hierarchy in i-doit follows a clear logic: **Object type groups** contain **object types**, objects are created from object types, **categories** are assigned to them, and categories contain **attributes**. The following sections explain each of these terms in detail.
 
-[![Object-type-groups](../assets/images/de/grundlagen/struktur-der-it-dokumentation/3-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/3-sitdoku.png)
+[![Object-type-groups](../assets/images/en/grundlagen/struktur-der-it-dokumentation/3-sitdoku.png)](../assets/images/en/grundlagen/struktur-der-it-dokumentation/3-sitdoku.png)
 
 ### Object type group
 
 An object type group combines similar object types to provide clarity. In a well-populated IT documentation, many object types are in use -- grouping helps maintain an overview. The object type groups appear in the main navigation bar (top area) of i-doit.
 
-[![Object-type-groups-2](../assets/images/de/grundlagen/struktur-der-it-dokumentation/4-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/5-sitdoku.png)
+[![Object-type-groups-2](../assets/images/en/grundlagen/struktur-der-it-dokumentation/4-sitdoku.png)](../assets/images/en/grundlagen/struktur-der-it-dokumentation/5-sitdoku.png)
 
 In our example, we look at the object type group "Hardware".
 
-[![Object-type-groups-3](../assets/images/de/grundlagen/struktur-der-it-dokumentation/5-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/5-sitdoku.png)
+[![Object-type-groups-3](../assets/images/en/grundlagen/struktur-der-it-dokumentation/5-sitdoku.png)](../assets/images/en/grundlagen/struktur-der-it-dokumentation/5-sitdoku.png)
 
 ### Object type
 
@@ -43,7 +43,7 @@ i-doit already contains a large number of preconfigured object types in the stan
 
 Each object type has an [object list](object-list/index.md) that lists all assigned objects with selected attributes. As an example, we use the object list for the object type "Virtualization server".
 
-[![Object-type](../assets/images/de/grundlagen/struktur-der-it-dokumentation/6-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/6-sitdoku.png)
+[![Object-type](../assets/images/en/grundlagen/struktur-der-it-dokumentation/6-sitdoku.png)](../assets/images/en/grundlagen/struktur-der-it-dokumentation/6-sitdoku.png)
 
 ### Object
 
@@ -55,7 +55,7 @@ In the standard installation, some essential objects already exist: user objects
 
 Each object receives a title, which is stored as an attribute in the "General" category. Synonyms for this are "designation", "name" and "object link".
 
-[![Object](../assets/images/de/grundlagen/struktur-der-it-dokumentation/7-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/7-sitdoku.png)
+[![Object](../assets/images/en/grundlagen/struktur-der-it-dokumentation/7-sitdoku.png)](../assets/images/en/grundlagen/struktur-der-it-dokumentation/7-sitdoku.png)
 
 In the example, we examine the object with the object title "ESX1". A click on the object link in the above-mentioned object list is sufficient.
 
@@ -71,33 +71,33 @@ Additionally, a distinction is made between single-value and multi-value categor
 
 Categories are displayed in the left navigation tree in the object view.
 
-[![Category](../assets/images/de/grundlagen/struktur-der-it-dokumentation/8-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/8-sitdoku.png)
+[![Category](../assets/images/en/grundlagen/struktur-der-it-dokumentation/8-sitdoku.png)](../assets/images/en/grundlagen/struktur-der-it-dokumentation/8-sitdoku.png)
 
 Above the left navigation tree, the static categories are listed as icons.
 
-[![Icons](../assets/images/de/grundlagen/struktur-der-it-dokumentation/9-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/9-sitdoku.png)
+[![Icons](../assets/images/en/grundlagen/struktur-der-it-dokumentation/9-sitdoku.png)](../assets/images/en/grundlagen/struktur-der-it-dokumentation/9-sitdoku.png)
 
 Categories typically have two views: one for reading and one for editing. To edit attributes in a category, click the **Edit** button in the action bar.
 
-[![Categories](../assets/images/de/grundlagen/struktur-der-it-dokumentation/10-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/10-sitdoku.png)
+[![Categories](../assets/images/en/grundlagen/struktur-der-it-dokumentation/10-sitdoku.png)](../assets/images/en/grundlagen/struktur-der-it-dokumentation/10-sitdoku.png)
 
 For our example, we look at the Model category.
 
-[![Category-Model](../assets/images/de/grundlagen/struktur-der-it-dokumentation/11-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/11-sitdoku.png)
+[![Category-Model](../assets/images/en/grundlagen/struktur-der-it-dokumentation/11-sitdoku.png)](../assets/images/en/grundlagen/struktur-der-it-dokumentation/11-sitdoku.png)
 
 [Categories are assigned to object types](assigning-categories-to-object-types.md), not to objects. Every object of an object type has the same categories assigned.
 
 #### Overview page
 
-The overview page is displayed when opening an object in the Web GUI of i-doit. It consists of the "General" category and optionally additional categories assigned to the object type. These can be selected or deselected and sorted in the [object type configuration](../assets/images/de/grundlagen/struktur-der-it-dokumentation/0-sitdoku.png).
+The overview page is displayed when opening an object in the Web GUI of i-doit. It consists of the "General" category and optionally additional categories assigned to the object type. These can be selected or deselected and sorted in the [object type configuration](../assets/images/en/grundlagen/struktur-der-it-dokumentation/0-sitdoku.png).
 
-[![Overview-page](../assets/images/de/grundlagen/struktur-der-it-dokumentation/12-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/12-sitdoku.png)
+[![Overview-page](../assets/images/en/grundlagen/struktur-der-it-dokumentation/12-sitdoku.png)](../assets/images/en/grundlagen/struktur-der-it-dokumentation/12-sitdoku.png)
 
 #### "General" category
 
 The "General" category belongs to those categories that are an integral part of every object. Therefore, it cannot be deselected per object type. This category holds important attributes such as the object title, SYS-ID, [CMDB status and condition](life-and-documentation-cycle.md).
 
-[![Category-General](../assets/images/de/grundlagen/struktur-der-it-dokumentation/13-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/13-sitdoku.png)
+[![Category-General](../assets/images/en/grundlagen/struktur-der-it-dokumentation/13-sitdoku.png)](../assets/images/en/grundlagen/struktur-der-it-dokumentation/13-sitdoku.png)
 
 #### Global category
 
@@ -131,17 +131,17 @@ In some categories, no attributes can be stored per object. They serve to evalua
 
 An attribute is a documented value for an object. Similar attributes are grouped into categories in i-doit. Example: in the "Model" category, the attribute "Serial number".
 
-[![Attribute-serial-number](../assets/images/de/grundlagen/struktur-der-it-dokumentation/14-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/14-sitdoku.png)
+[![Attribute-serial-number](../assets/images/en/grundlagen/struktur-der-it-dokumentation/14-sitdoku.png)](../assets/images/en/grundlagen/struktur-der-it-dokumentation/14-sitdoku.png)
 
 Important attributes from various categories are combined into a view displayed above each category. These primary attributes are "SYS-ID", "Purpose" (both in the "General" category), "Relationships", "Location", "Contact assignment" and "Primary access URL" (category "Access"). Additionally, a QR code is displayed that contains the link to the overview page.
 
-[![Category-Access](../assets/images/de/grundlagen/struktur-der-it-dokumentation/15-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/15-sitdoku.png)
+[![Category-Access](../assets/images/en/grundlagen/struktur-der-it-dokumentation/15-sitdoku.png)](../assets/images/en/grundlagen/struktur-der-it-dokumentation/15-sitdoku.png)
 
 ### Attribute field
 
 In the Web GUI of i-doit, attributes of objects are stored and edited via form fields. These fields are therefore called attribute fields. They can be of different types: there are single-line or multi-line text fields, date fields, HTML editors, object browsers, [Dialog-Plus fields](dialog-admin.md) and many more.
 
-[![Attribute-field](../assets/images/de/grundlagen/struktur-der-it-dokumentation/16-sitdoku.png)](../assets/images/de/grundlagen/struktur-der-it-dokumentation/16-sitdoku.png)
+[![Attribute-field](../assets/images/en/grundlagen/struktur-der-it-dokumentation/16-sitdoku.png)](../assets/images/en/grundlagen/struktur-der-it-dokumentation/16-sitdoku.png)
 
 ## About relationships
 
