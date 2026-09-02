@@ -44,15 +44,8 @@ Unter **Datenbank Hierarchie → Datenbanktabelle** kannst du zusätzlich einzel
 
 ## Migration zum neuen Modell
 
-Du kannst frei wählen, welches Modell besser zu deinen Anforderungen passt. Für den Wechsel vom klassischen zum neuen Modell findest du eine Migrationsfunktion unter **Verwaltung → Systemtools → Cache Datenbank**:
+Du kannst frei wählen, welches Modell besser zu deinen Anforderungen passt. Für den Wechsel vom klassischen zum neuen Modell findest du unter **Verwaltung → Systemreparatur und Bereinigung** die Schaltfläche **Migriere Datenbankobjekte in Kategorien**:
 
-[![Cache / Datenbanken](../assets/images/de/anwendungsfaelle/dokumentation-von-datenbanken/5-dvd.png)](../assets/images/de/anwendungsfaelle/dokumentation-von-datenbanken/5-dvd.png)
+[![Migration](../assets/images/de/anwendungsfaelle/dokumentation-von-datenbanken/5-dvd.png)](../assets/images/de/anwendungsfaelle/dokumentation-von-datenbanken/5-dvd.png)
 
-Nach dem Klick erscheint eine Meldung über die Auswirkungen der Migration:
-
-[![Migration](../assets/images/de/anwendungsfaelle/dokumentation-von-datenbanken/6-dvd.png)](../assets/images/de/anwendungsfaelle/dokumentation-von-datenbanken/6-dvd.png)
-
-
-Nach Abschluss zeigt dir eine Meldung, ob die Migration erfolgreich war:
-
-[![Systemansicht](../assets/images/de/anwendungsfaelle/dokumentation-von-datenbanken/7-dvd.png)](../assets/images/de/anwendungsfaelle/dokumentation-von-datenbanken/7-dvd.png)
+Die Migration übernimmt vorhandene Datenbankinstanzen, Datenbankschemata und Datenbankzugriffe in die neue Kategorie und entfernt dabei keine Daten.
