@@ -142,9 +142,27 @@ Das Modul wird automatisch aktiviert.
 
     Die Ausnahme entfernt ausschließlich die SSO-Prüfung des Webservers für diesen einen Pfad. i-doit verlangt weiterhin einen gültigen API-Key und, je nach Methode, gültige Benutzer-Anmeldedaten. Die API wird dadurch also nicht öffentlich zugänglich.
 
-
 !!! info "Automatische Endpoint-Erkennung"
 Dank `OIDCProviderMetadataURL` erkennt das Modul alle notwendigen Google-Endpoints automatisch. Eine manuelle Angabe einzelner Endpoints ist nicht erforderlich.
+
+!!! warning "`<Location />` schützt auch Login-Seite, Admin Center und API"
+    Mit `Require valid-user` innerhalb von `<Location />` prüft Apache jeden Request, bevor er i-doit erreicht. Ist der Identity Provider nicht verfügbar, sind damit auch die i-doit Login-Seite, das Admin Center und die JSON-RPC-API gesperrt, und der [SSO-Fallback auf lokale Konten](../sso-fallback/index.md) kann nicht greifen.
+
+    Für einen Notzugang lasse `<Location />` weg und begrenze den Schutz auf den SSO-Einsprung. i-doit startet die SSO-Anmeldung ausschließlich bei einem Aufruf mit `?use-sso=1`:
+
+    ```apache
+    <If "%{QUERY_STRING} =~ /(^|&)use-sso=1(&|$)/">
+        AuthType openid-connect
+        Require valid-user
+    </If>
+
+    <Location "/redirect_uri">
+        AuthType openid-connect
+        Require valid-user
+    </Location>
+    ```
+
+    Der zweite Block ist notwendig, weil Google die Redirect-URI mit eigenen Parametern aufruft. Alternativ bleibt `<Location />` geschützt und ein zweiter, nur intern erreichbarer VirtualHost mit demselben `DocumentRoot` und ohne die OIDC-Direktiven dient als Notzugang.
 
 ***
 
@@ -195,4 +213,6 @@ Wenn **Use Domain Part = No** gesetzt ist, wird die vollständige E-Mail-Adresse
 
 ## Ergebnis
 
-Beim nächsten Aufruf von i-doit erscheint automatisch die Google-Anmeldemaske. Nach erfolgreicher Authentifizierung bei Google wird der Benutzer direkt in i-doit eingeloggt — ohne separate i-doit-Passwort-Eingabe.
+Beim nächsten Aufruf von i-doit erscheint die Login-Seite mit der zusätzlichen Option **SSO Login**. Nach einem Klick darauf und erfolgreicher Authentifizierung bei Google wird der Benutzer in i-doit angemeldet, ohne ein i-doit Passwort einzugeben.
+
+Seit i-doit 29 melden sich Benutzer über die einfache URL nicht mehr automatisch an, dadurch bleibt ein sauberer Logout möglich. Um den zusätzlichen Klick zu sparen, rufe i-doit direkt mit `https://<DEINE-SERVER-URL>/?use-sso=1` auf, zum Beispiel als Lesezeichen oder als Startseite des Browsers.
