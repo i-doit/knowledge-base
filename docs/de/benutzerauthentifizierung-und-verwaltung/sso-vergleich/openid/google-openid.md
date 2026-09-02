@@ -125,9 +125,22 @@ Das Modul wird automatisch aktiviert.
             Require valid-user
             AllowOverride All
         </Location>
+
+        # JSON-RPC-API von SSO ausnehmen: Ein API-Client kann der
+        # Weiterleitung zum Identity Provider nicht folgen.
+        <Location /src/jsonrpc.php>
+            AuthType None
+            Require all granted
+        </Location>
     </VirtualHost>
 </IfModule>
 ```
+
+!!! warning "API erreichbar halten"
+
+    Der Block `<Location />` stellt die komplette Installation hinter den Identity Provider, einschließlich der JSON-RPC-API unter `/src/jsonrpc.php`. Ein API-Client kann der Weiterleitung zur Anmeldeseite nicht folgen. Ohne den zweiten `<Location>`-Block schlägt daher jede API-Anfrage fehl: Der Webserver antwortet mit einer Weiterleitung (HTTP 302) statt mit der API-Antwort.
+
+    Die Ausnahme entfernt ausschließlich die SSO-Prüfung des Webservers für diesen einen Pfad. i-doit verlangt weiterhin einen gültigen API-Key und, je nach Methode, gültige Benutzer-Anmeldedaten. Die API wird dadurch also nicht öffentlich zugänglich.
 
 !!! info "Automatische Endpoint-Erkennung"
 Dank `OIDCProviderMetadataURL` erkennt das Modul alle notwendigen Google-Endpoints automatisch. Eine manuelle Angabe einzelner Endpoints ist nicht erforderlich.
