@@ -23,22 +23,24 @@ Das klassische Modell arbeitet mit drei Objekttypen:
 
 ## Neues Modell
 
-Im neuen Modell entfallen die Objekttypen "Datenbankschema" und "Datenbankinstanz". Stattdessen dokumentierst du Datenbanken dort, wo sie ausgeführt werden -- direkt am Server oder Cluster über die neue Kategorie **Datenbanken**.
+Im neuen Modell entfallen die Objekttypen "Datenbankschema" und "Datenbankinstanz". Stattdessen dokumentierst du Datenbanken dort, wo sie ausgeführt werden -- direkt am Server oder Cluster über die neue Kategorie **Datenbank Hierarchie**. Sie enthält die Einträge **Datenbanken**, **DBMS Information** und **Datenbanktabelle**.
 
 Das DBMS-Objekt bleibt erhalten und zeigt über den Reiter **Zugewiesene Datenbanken** in der Kategorie "DBMS - Datenbank Installation", welche Datenbanken durch die Software bereitgestellt werden.
 
-Die neue Kategorie bietet eine aufklappbare Ansicht der Datenbank-Hierarchie:
+Die Kategorie **Datenbank Hierarchie** bietet eine aufklappbare Ansicht der Datenbank-Hierarchie:
 
 [![Datenbanken](../assets/images/de/anwendungsfaelle/dokumentation-von-datenbanken/2-dvd.png)](../assets/images/de/anwendungsfaelle/dokumentation-von-datenbanken/2-dvd.png)
 
 
-Unter **Datenbanken → Datenbanken** dokumentierst du die einzelnen Datenbanken auf der Ressource:
+Unter **Datenbank Hierarchie → Datenbanken** dokumentierst du die einzelnen Datenbanken auf der Ressource:
 
 [![Datenbanken](../assets/images/de/anwendungsfaelle/dokumentation-von-datenbanken/3-dvd.png)](../assets/images/de/anwendungsfaelle/dokumentation-von-datenbanken/3-dvd.png)
 
-Unter **Datenbanken → DBMS** siehst du die Verbindung zum zugehörigen DBMS-Objekt:
+Unter **Datenbank Hierarchie → DBMS Information** siehst du die Verbindung zum zugehörigen DBMS-Objekt:
 
-[![DBMS](../assets/images/de/anwendungsfaelle/dokumentation-von-datenbanken/4-dvd.png)](../assets/images/de/anwendungsfaelle/dokumentation-von-datenbanken/4-dvd.png)
+[![DBMS Information](../assets/images/de/anwendungsfaelle/dokumentation-von-datenbanken/4-dvd.png)](../assets/images/de/anwendungsfaelle/dokumentation-von-datenbanken/4-dvd.png)
+
+Unter **Datenbank Hierarchie → Datenbanktabelle** kannst du zusätzlich einzelne Tabellen einer Datenbank dokumentieren.
 
 ## Migration zum neuen Modell
 
