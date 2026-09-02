@@ -13,7 +13,7 @@ i-doit includes a visualization for 19" racks. All installed components are disp
 
 The [category](../basics/it-documentation-structure.md) **Rack** is already assigned to the [object type](../basics/it-documentation-structure.md) **Rack** in the standard [installation](../installation/index.md) of i-doit. The category shows the modeled rack from the front and back.
 
-[![Rack category](../assets/images/de/auswertungen/rack-ansicht/1-ra.png)](../assets/images/de/auswertungen/rack-ansicht/1-ra.png)
+[![Rack category](../assets/images/en/auswertungen/rack-ansicht/1-ra.png)](../assets/images/en/auswertungen/rack-ansicht/1-ra.png)
 
 !!! success "Schrank = Rack"
 
@@ -23,7 +23,7 @@ The [category](../basics/it-documentation-structure.md) **Rack** is already assi
 
 The rack units of the rack are defined in the **Form Factor** category. This category is also already assigned to the **Rack** object type when i-doit is installed. In the category, in addition to the **Rack Units** attribute, the **Form Factor** of **19"** should also be specified.
 
-[![Editing rack attributes](../assets/images/de/auswertungen/rack-ansicht/2-ra.png)](../assets/images/de/auswertungen/rack-ansicht/2-ra.png)
+[![Editing rack attributes](../assets/images/en/auswertungen/rack-ansicht/2-ra.png)](../assets/images/en/auswertungen/rack-ansicht/2-ra.png)
 
 In the example, the rack accommodates 19" components in a maximum of 42 rack units.
 
@@ -31,7 +31,7 @@ The ascending or descending **sorting of rack units** is also configured in the 
 
 In this box, you can also specify how many **vertical slots** are available for **front** and **back**. For example, PDUs mounted on the side are documented this way. In the screenshot, 2 **vertical slots** each are shown for **front** and **back**, which are alternately placed on the left and right.
 
-[![Editing rack attributes](../assets/images/de/auswertungen/rack-ansicht/3-ra.png)](../assets/images/de/auswertungen/rack-ansicht/3-ra.png)
+[![Editing rack attributes](../assets/images/en/auswertungen/rack-ansicht/3-ra.png)](../assets/images/en/auswertungen/rack-ansicht/3-ra.png)
 
 ## Positioning Objects in the Rack
 
@@ -48,11 +48,11 @@ The assignment of object to rack takes place in the **Location** category, where
 *   **Position in rack**:<br>
     For **horizontal** assembly, the rack units are selected. Depending on how many RUs an object occupies, the entries in the drop-down menu change. For **vertical** assembly, the **slots** are listed here (top right = 1, top left = 2, bottom right = 3, bottom left = 4, etc.). Already occupied RUs or slots are hidden.
 
-[![Positioning objects in rack](../assets/images/de/auswertungen/rack-ansicht/4-ra.png)](../assets/images/de/auswertungen/rack-ansicht/4-ra.png)
+[![Positioning objects in rack](../assets/images/en/auswertungen/rack-ansicht/4-ra.png)](../assets/images/en/auswertungen/rack-ansicht/4-ra.png)
 
 Already assigned objects are displayed in the **Location View** and in the **Locally Assigned Objects** category.
 
-[![Positioning objects in rack](../assets/images/de/auswertungen/rack-ansicht/5-ra.png)](../assets/images/de/auswertungen/rack-ansicht/5-ra.png)
+[![Positioning objects in rack](../assets/images/en/auswertungen/rack-ansicht/5-ra.png)](../assets/images/en/auswertungen/rack-ansicht/5-ra.png)
 
 ## Editing Assigned Objects
 
@@ -67,21 +67,21 @@ In the **Rack** category, you can edit the assigned objects. Each object has a s
 *   **Detach object**:<br>
     The information about the object's position in the rack is deleted. The object remains assigned to the rack via the location assignment.
 
-[![Editing assigned objects](../assets/images/de/auswertungen/rack-ansicht/6-ra.png)](../assets/images/de/auswertungen/rack-ansicht/6-ra.png)
+[![Editing assigned objects](../assets/images/en/auswertungen/rack-ansicht/6-ra.png)](../assets/images/en/auswertungen/rack-ansicht/6-ra.png)
 
 Objects that are spatially assigned to the rack but not yet positioned can be found on the right side in the **Unpositioned Objects** box. Via the gear button, you change the required RUs of the object. Via the X button, the location assignment is irrevocably deleted (**purge**).
 
-[![Editing assigned objects](../assets/images/de/auswertungen/rack-ansicht/7-ra.png)](../assets/images/de/auswertungen/rack-ansicht/7-ra.png)
+[![Editing assigned objects](../assets/images/en/auswertungen/rack-ansicht/7-ra.png)](../assets/images/en/auswertungen/rack-ansicht/7-ra.png)
 
 Click on the object in the list to open another box below. Use the dialogs to position the object in the rack.
 
-[![Editing assigned objects](../assets/images/de/auswertungen/rack-ansicht/8-ra.png)](../assets/images/de/auswertungen/rack-ansicht/8-ra.png)
+[![Editing assigned objects](../assets/images/en/auswertungen/rack-ansicht/8-ra.png)](../assets/images/en/auswertungen/rack-ansicht/8-ra.png)
 
 ## Statistics
 
 The Rack category provides a comprehensive evaluation of the assigned objects. Above the visual view of the rack, there is a Statistics box that can be expanded and collapsed by clicking the arrow on the left side.
 
-[![Statistics](../assets/images/de/auswertungen/rack-ansicht/9-ra.png)](../assets/images/de/auswertungen/rack-ansicht/9-ra.png)
+[![Statistics](../assets/images/en/auswertungen/rack-ansicht/9-ra.png)](../assets/images/en/auswertungen/rack-ansicht/9-ra.png)
 
 The statistics are composed of various attributes of the rack and assigned objects:
 
@@ -104,7 +104,7 @@ The statistics are composed of various attributes of the rack and assigned objec
 
 If a rack is assigned to a room via the Location category, an additional visualization is available. The **Racks** category is already assigned to the Room object type in the standard installation of i-doit. Through this, all objects of type Rack assigned to the room are visually displayed.
 
-[![Racks category](../assets/images/de/auswertungen/rack-ansicht/10-ra.png)](../assets/images/de/auswertungen/rack-ansicht/10-ra.png)
+[![Racks category](../assets/images/en/auswertungen/rack-ansicht/10-ra.png)](../assets/images/en/auswertungen/rack-ansicht/10-ra.png)
 
 Above the visualization, various options are available.
 
