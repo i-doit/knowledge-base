@@ -141,7 +141,33 @@ Each `JDisc type` is linked with an `i-doit object type`  If no `i-doit object t
 | **Consider default templates from object types (only for newly created objects)** | When a new object is created, the [Template](../../efficient-documentation/templates.md) stored in the object type is automatically applied.                                                    |
 | **Change CMDB status of objects to**                                              | Existing objects can receive a specific **[CMDB-Status](../../basics/life-and-documentation-cycle.md)** . If the **CMDB status** should not be changed, select **Keep CMDB status**.            |
 | **CMDB status for newly imported objects**                                        | Newly created objects can receive a specific **[CMDB-Status](../../basics/life-and-documentation-cycle.md)** erhalten. If the **CMDB status** should not be changed, select **-**.              |
+| **Import Active Directory users**                                                 | Should Active Directory users be imported as objects of the type **Persons**? See [Active Directory users and user groups](#active-directory-users-and-user-groups).                              |
+| **Import Active Directory user groups**                                           | Should Active Directory user groups be imported as objects of the type **Person groups**?                                                                                                        |
+| **Organizational unit filter (hidden)**                                           | Only visible when one of the two options above is active. Limits the import to the listed organizational units.                                                                                  |
 | **Import custom attributes**                                                      | If in JDisc Discovery custom attributes (**Custom Attributes**) are maintained, they can be imported into i-doit. After import, they are displayed in the **JDisc Custom Attributes** category. |
+
+#### Active Directory users and user groups
+
+JDisc Discovery synchronizes the users and user groups of your Active Directory when a directory scan is configured in JDisc. The JDisc Connector imports them into i-doit as objects of the type **Persons** and **Person groups**, so you document your contacts without a second connection from i-doit to your directory service.
+
+**Prerequisite in JDisc Discovery:** the directory has to be synchronized. In JDisc, configure a DNS domain controller with credentials for the domain (**Discovery > Configuration > Directory**), enable the discovery of users on the **Data Collection** tab, set the directory scope to **Enable subtree** under **Scope > Directory** and keep the *synchronize users* and *synchronize user groups* options of the discovery job active. Without a domain controller entry JDisc never synchronizes the directory and the import finds no users.
+
+Activate the options in the sync profile:
+
+[![Import Active Directory users and user groups](../../assets/images/en/i-doit-add-ons/jdisc-connector/sync-profile-ad-import-en.png)](../../assets/images/en/i-doit-add-ons/jdisc-connector/sync-profile-ad-import-en.png)
+
+| Option                                     | Description                                                                                                                                                                                                                                    |
+| ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Import Active Directory users**          | Creates an object of the type **Persons** for every Active Directory user, with first name, last name, LDAP DN and, when the user principal name is a mail address, the primary mail address.                                                   |
+| **Import Active Directory user groups**    | Creates an object of the type **Person groups** for every Active Directory user group. Group memberships are only written when users are imported as well.                                                                                      |
+| **Organizational unit filter**             | Limits the import to the listed organizational units, semicolon separated. Either the name (`Sales`) or the distinguished name (`OU=Sales,DC=example,DC=com`). An empty field imports the whole directory, which can be several thousand persons. |
+
+Group memberships end up in the category **Person group members**. Members of nested groups are additionally assigned to the parent group, because person groups in i-doit cannot be nested:
+
+[![Person group members after the import](../../assets/images/en/i-doit-add-ons/jdisc-connector/ad-person-group-members-en.png)](../../assets/images/en/i-doit-add-ons/jdisc-connector/ad-person-group-members-en.png)
+
+!!! note "Existing persons are reused"
+    Persons are recognized by their LDAP DN, the same attribute the [LDAP synchronisation](../../user-authentication-and-management/ldap-directory/index.md) of i-doit writes. If you already synchronize your directory with `ldap-sync`, the JDisc import assigns the existing persons instead of creating duplicates. User groups are recognized by their group name. The import never overwrites attributes of existing persons and never archives or deletes persons or groups that JDisc no longer reports.
 
 #### Software and operating system
 
