@@ -38,3 +38,28 @@ Du benötigst die Berechtigung **Kategorieordner** im Bereich **Administration**
 
 !!! abstrakt "Kategorieordner für einen Objekttyp zurücksetzen"
     Mit der **Zurücksetzen** Schaltfläche werden die Änderungen rückgängig gemacht und die erstellten Kategorieordner werden gelöscht.
+
+## Kategorien ausblenden
+
+Ab i-doit Version XX blendest du einzelne Kategorien für einen Objekttyp aus. Das hilft, wenn ein Objekttyp eine Kategorie führt, die du nicht pflegen willst, etwa weil dieselben Daten bereits über eine andere Kategorie erfasst werden.
+
+1. Wähle den Objekttyp aus.
+2. Fahre mit der Maus über die Kategorie und klicke auf das Auge-Symbol.
+
+[![Kategorie ausblenden](../../../assets/images/de/administration/kategorieordner-ausblenden.png)](../../../assets/images/de/administration/kategorieordner-ausblenden.png)
+
+Die Kategorie wird in der Konfiguration grau und kursiv dargestellt, das Symbol wechselt auf ein durchgestrichenes Auge. Mit demselben Symbol blendest du die Kategorie wieder ein.
+
+[![Ausgeblendete Kategorie](../../../assets/images/de/administration/kategorieordner-ausgeblendet.png)](../../../assets/images/de/administration/kategorieordner-ausgeblendet.png)
+
+Für den gewählten Objekttyp verschwindet eine ausgeblendete Kategorie aus:
+
+-   dem Kategoriebaum am Objekt
+-   der Übersichtsseite des Objekts
+-   der Kategorieauswahl der Listeneditierung
+
+!!! note "Nur für den gewählten Objekttyp"
+    Das Ausblenden gilt ausschließlich für den Objekttyp, in dem du es einstellst. Dieselbe Kategorie bleibt an anderen Objekttypen sichtbar.
+
+!!! warning "Ausblenden ist keine Berechtigung"
+    Vorhandene Einträge der Kategorie bleiben erhalten und weiterhin über die API, Reports und Exporte erreichbar. Wenn du den Zugriff einschränken willst, nutze die [Rechteverwaltung für die CMDB](../../../effizientes-dokumentieren/rechteverwaltung/cmdb.md).
