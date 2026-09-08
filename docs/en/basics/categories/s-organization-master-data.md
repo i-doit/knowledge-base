@@ -29,7 +29,7 @@ Typical use cases:
 
 ### Title
 
-The official name of the organization, e.g. `synetics GmbH`, `Deutsche Telekom AG`, or `Infrastructure Department`. This value appears in the list view, in reports, and everywhere the organization object is referenced. Use the complete, official company name including legal form to avoid confusion -- especially in corporate groups with similarly named subsidiaries.
+The official name of the organization, e.g. `i-doit GmbH`, `Deutsche Telekom AG`, or `Infrastructure Department`. This value appears in the list view, in reports, and everywhere the organization object is referenced. Use the complete, official company name including legal form to avoid confusion -- especially in corporate groups with similarly named subsidiaries.
 
 ### Phone
 
@@ -87,7 +87,7 @@ Free text for additional details: industry, customer number at the supplier, int
         "object": 200,
         "category": "C__CATS__ORGANIZATION_MASTER_DATA",
         "data": {
-            "title": "synetics GmbH",
+            "title": "i-doit GmbH",
             "telephone": "+49 211 699 31-0",
             "fax": "+49 211 699 31-99",
             "website": "https://www.i-doit.com",

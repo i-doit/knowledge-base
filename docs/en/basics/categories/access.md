@@ -39,6 +39,36 @@ The type of access -- i.e. the protocol or technology used. Dialog+ field with p
 
 The complete address of the access point. Enter the URL or connection string here, e.g. `https://srv-web-01.bhb.local:8443`, `ssh://admin@10.10.1.100`, or `rdp://jumphost.intern.local`. i-doit renders this value as a clickable link. Make sure to include the protocol prefix and, if applicable, the port so that the link works directly.
 
+#### Placeholder variables and modifiers
+
+The URL field accepts placeholder variables that i-doit replaces with the object's values when the link is used, e.g. `%objectname%`. The info button next to the URL field lists the available variables.
+
+!!! info "Modifiers as of version 39"
+    As of i-doit 39 you can append a **modifier** to any variable, separated by a vertical bar. The value is transformed before it is inserted -- useful when the target system expects a particular notation.
+
+| Modifier | Effect |
+|---|---|
+| `encode` | URL encoding; spaces become `+` |
+| `raw-encode` | URL encoding per RFC 3986; spaces become `%20` |
+| `lower` | converts to lower case |
+| `upper` | converts to upper case |
+| `slug` | strips special characters and joins the words with hyphens |
+
+Example for an object named `Example (with special chars) + !`:
+
+| Variable | Result |
+|---|---|
+| `%objectname%` | `Example (with special chars) + !` |
+| `%objectname\|encode%` | `Example+%28with+special+chars%29+%2B+%21` |
+| `%objectname\|raw-encode%` | `Example%20%28with%20special%20chars%29%20%2B%20%21` |
+| `%objectname\|lower%` | `example (with special chars) + !` |
+| `%objectname\|upper%` | `EXAMPLE (WITH SPECIAL CHARS) + !` |
+| `%objectname\|slug%` | `Example-with-special-chars` |
+
+Modifiers can be combined and are applied **from left to right**: `%objectname\|lower\|slug%` yields `example-with-special-chars`.
+
+Modifiers take effect wherever placeholder variables are replaced -- in the category view, in object and category lists, in reports, in the QR code configuration, and when reading the category via the API. The [Patch Manager bridge](../../use-cases/i-doit-patch-manager-bridge.md) shows an example.
+
 ### Primary access
 
 Indicates whether this entry is the preferred access path to the object. Dialog field with values `Yes` and `No`. Exactly one entry per object should be marked as primary -- this entry is displayed prominently in overviews and the object list. Typically, this is the web interface or the most frequently used access path.

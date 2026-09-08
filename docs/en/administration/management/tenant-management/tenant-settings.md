@@ -190,6 +190,9 @@ These options affect how information is displayed in the user interface.
 
 **Object type sorting** — "Alphabetical" sorts the object type groups and types in the navigation automatically. "Manual" allows a custom order via the object type configuration.
 
+!!! info "Default value as of version 39"
+    In a **fresh installation** of i-doit 39, "Alphabetical" is the default value. When you **update** from an earlier version, the sorting that is already configured is kept -- the change does not take effect there.
+
 ---
 
 ## Maximum length of strings
