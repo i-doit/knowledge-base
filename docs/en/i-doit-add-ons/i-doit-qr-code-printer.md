@@ -45,6 +45,9 @@ With the global definition, you fill the QR code information using the following
 
 [![Global definition](../assets/images/en/i-doit-add-ons/qr-code-printer/6-qr.png)](../assets/images/en/i-doit-add-ons/qr-code-printer/6-qr.png)
 
+!!! info "Modifiers as of version 39"
+    As of i-doit 39 the placeholders can be transformed with a **modifier**, e.g. `%objectname|slug%`. The complete list of modifiers is documented for the [Access category](../basics/categories/access.md#placeholder-variables-and-modifiers).
+
 ### Primary access URL
 
 With this option, only the URL stored in the object is included in the QR code.
