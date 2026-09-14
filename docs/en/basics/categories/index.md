@@ -11,6 +11,7 @@ lang: en
 Each category in i-doit has its own documentation page with field descriptions and API examples.
 
 ## Global Categories
+
 | Category | Constant | Fields |
 |---|---|---|
 | [Address](address.md) | `C__CATG__ADDRESS` | 9 |
@@ -106,7 +107,10 @@ Each category in i-doit has its own documentation page with field descriptions a
 | [Assigned SIM Cards](assigned-sim-cards.md) | `C__CATG__ASSIGNED_SIM_CARDS` | 2 |
 | [Assigned Workstation](assigned-workstation.md) | `C__CATG__ASSIGNED_WORKSTATION` | 2 |
 | [Access](access.md) | `C__CATG__ACCESS` | 7 |
-| Access Permissions | `C__CATG__VIRTUAL_AUTH` | 0 |## Specific Categories
+| Access Permissions | `C__CATG__VIRTUAL_AUTH` | 0 |
+
+## Specific Categories
+
 | Category | Constant | Fields |
 |---|---|---|
 | [Applications (specific)](s-application.md) | `C__CATS__APPLICATION` | 7 |

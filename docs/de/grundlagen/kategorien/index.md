@@ -11,6 +11,7 @@ lang: de
 Jede Kategorie in i-doit hat eine eigene Dokumentationsseite mit Feldbeschreibungen und API-Beispielen.
 
 ## Globale Kategorien
+
 | Kategorie | Konstante | Felder |
 |---|---|---|
 | [Adresse](address.md) | `C__CATG__ADDRESS` | 9 |
@@ -106,7 +107,10 @@ Jede Kategorie in i-doit hat eine eigene Dokumentationsseite mit Feldbeschreibun
 | [Zugewiesene SIM-Karten](assigned-sim-cards.md) | `C__CATG__ASSIGNED_SIM_CARDS` | 2 |
 | [Zugewiesener Arbeitsplatz](assigned-workstation.md) | `C__CATG__ASSIGNED_WORKSTATION` | 2 |
 | [Zugriff](access.md) | `C__CATG__ACCESS` | 7 |
-| Zugriffsberechtigungen | `C__CATG__VIRTUAL_AUTH` | 0 |## Spezifische Kategorien
+| Zugriffsberechtigungen | `C__CATG__VIRTUAL_AUTH` | 0 |
+
+## Spezifische Kategorien
+
 | Kategorie | Konstante | Felder |
 |---|---|---|
 | [Anwendungen (spezifisch)](s-application.md) | `C__CATS__APPLICATION` | 7 |
