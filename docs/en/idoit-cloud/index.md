@@ -161,7 +161,6 @@ The cloud version offers the same feature set as the on-premise variant -- with 
 | SSO (SAML, Azure AD) | Configurable via Apache | Not yet available (planned) |
 | Tenants | Multiple possible | One per instance |
 | API access | Yes | Yes (note firewall configuration) |
-| Email dispatch (SMTP) | Own mail server, set up under [SMTP Configuration](../automation-and-integration/e-mail.md) | Preconfigured by i-doit, sender `no-reply@i-doit.cloud` |
 
 ### Add-ons in the Cloud
 
