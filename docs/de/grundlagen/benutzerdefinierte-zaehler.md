@@ -38,6 +38,8 @@ Pro Zähler stehen dir folgende Elemente zur Verfügung:
 
 Du verwendest einen benutzerdefinierten Zähler, indem du seinen Platzhalter manuell in das gewünschte Feld einträgst. Bei jeder Verwendung zählt i-doit den Wert automatisch um 1 hoch.
 
+Trage zum Beispiel `Server-%COUNTER_SERVERS%` als **Titel** in der Kategorie **Allgemein** eines neuen Objekts ein. i-doit speichert das Objekt als `Server-1`, das nächste auf diesem Weg angelegte Objekt erhält `Server-2`.
+
 ### Führende Nullen
 
 Für führende Nullen hängst du **#N** an den Platzhalter an, wobei **N** die Gesamtstellenzahl festlegt:
@@ -52,10 +54,10 @@ Für führende Nullen hängst du **#N** an den Platzhalter an, wobei **N** die G
 
 Benutzerdefinierte Zähler stehen dir in folgenden Bereichen zur Verfügung:
 
-- Listenbearbeitung
-- Massenbearbeitung
-- Vorlagen (Templates)
-- Automatisch generierte Inventarnummern aus der Objekttyp-Konfiguration
-- Textfelder in benutzerdefinierten Kategorien
+- [Listeneditierung](../effizientes-dokumentieren/listeneditierung.md)
+- [Massenänderung](../effizientes-dokumentieren/massenaenderung.md)
+- [Templates](../effizientes-dokumentieren/templates.md)
+- [Automatisch generierte Inventarnummern](eindeutige-referenzierungen.md#inventarnummer) aus der Objekttyp-Konfiguration
+- Textfelder in [benutzerdefinierten Kategorien](benutzerdefinierte-kategorien.md)
 
 Die verfügbaren Zähler werden dir durch Klick auf das [![icon](../assets/images/de/grundlagen/icons/riddle.png)](../assets/images/de/grundlagen/icons/riddle.png) Fragezeichen-Symbol neben dem jeweiligen Feld aufgelistet.

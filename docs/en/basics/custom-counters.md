@@ -38,6 +38,8 @@ The following elements are available per counter:
 
 You use a custom counter by manually entering its placeholder in the desired field. Each time it is used, i-doit automatically increments the value by 1.
 
+For example, enter `Server-%COUNTER_SERVERS%` as the **Title** in the **General** category of a new object. i-doit saves the object as `Server-1`, and the next object created the same way receives `Server-2`.
+
 ### Leading zeros
 
 For leading zeros, append **#N** to the placeholder, where **N** specifies the total number of digits:
@@ -52,10 +54,10 @@ Via the [expert settings](../administration/management/tenant-management/expert-
 
 Custom counters are available in the following areas:
 
-- List editing
-- Mass editing
-- Templates
-- Automatically generated inventory numbers from the object type configuration
-- Text fields in custom categories
+- [List editing](../efficient-documentation/list-editing.md)
+- [Mass change](../efficient-documentation/mass-change.md)
+- [Templates](../efficient-documentation/templates.md)
+- [Automatically generated inventory numbers](unique-references.md#inventory-number) from the object type configuration
+- Text fields in [custom categories](custom-categories.md)
 
 The available counters are listed for you by clicking the [![icon](../assets/images/de/grundlagen/icons/riddle.png)](../assets/images/de/grundlagen/icons/riddle.png) question mark icon next to the respective field.
