@@ -40,6 +40,22 @@ su
 
 The script asks several configuration questions. All questions have predefined answers that can be accepted by pressing **ENTER**.
 
+## What the script does
+
+Before it changes anything, the script lists its steps and asks for confirmation before each of them, so individual steps can be skipped. In this order it:
+
+1. detects the operating system and checks the hardware and software requirements,
+2. optionally configures a proxy server for the web access it needs,
+3. installs the required distribution packages, including memcached,
+4. configures PHP and PHP-FPM,
+5. configures the Apache web server (virtual host for i-doit, event MPM),
+6. configures MariaDB (for example the size of the InnoDB buffer pool),
+7. downloads and installs the latest i-doit version in the variant you choose (EVAL, pro, or open) and optionally creates the first tenant,
+8. deploys the cron jobs and the `idoit` command line wrapper for `console.php`,
+9. deploys the `idoit-backup` and `idoit-restore` scripts and creates the first backup.
+
+A detailed description of the individual steps and of the deployed scripts can be found in the [README of the i-doit/scripts repository](https://github.com/i-doit/scripts#readme).
+
 ## Next Steps
 
 -   [Apply a valid license (i-doit only)](../maintenance-and-operation/licensing.md)
