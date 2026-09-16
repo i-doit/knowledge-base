@@ -244,7 +244,7 @@ Templates allow you to create objects with predefined attribute values. When the
 | **Passwords in plain text** | Yes / No |
 | **Information about last login** | Active / Inactive |
 | **Last login information** | Yes / No |
-| **Sanitize data input** | Yes / No |
+| **Sanitize input data** | Yes / No |
 
 !!! danger "Do not disable the permission system carelessly"
     If you disable the permission system, **all authenticated users have full access** to all objects, categories, and administration functions of the tenant. Only disable the permission system for testing purposes or in single-user installations.
@@ -256,7 +256,7 @@ Templates allow you to create objects with predefined attribute values. When the
 !!! warning "Passwords in plain text"
     This option affects the display in the "Passwords" category. Even when disabled, passwords are stored in the database — this option only controls visibility on the interface.
 
-**Sanitize data input** — Automatically filters out potentially harmful input (e.g., HTML tags, script injections). Keep this option enabled unless you have a specific reason to store special characters unfiltered.
+**Sanitize input data** — Filters markup that can execute code in the browser (for example `<script>` elements, event handler attributes such as `onclick`, `<iframe>` elements, and `javascript:` links) out of attribute contents when they are displayed. The filter applies to the output, not to the stored data: what you save is written to the database unchanged. The option also reduces the toolbar of the [HTML editor](../../../basics/attribute-fields.md#why-the-editor-offers-fewer-formatting-options), which is why links, fonts, and colors are missing there by default. Keep this option enabled unless you have a specific reason to output unfiltered HTML.
 
 ---
 

@@ -44,6 +44,35 @@ Almost every category entry contains a **Description** attribute at the end, whi
 
 [![Description](../assets/images/en/basics/attribute-fields/5-af.png)](../assets/images/en/basics/attribute-fields/5-af.png)
 
+### Why the editor offers fewer formatting options
+
+The toolbar of the HTML editor does not show every formatting function. Which icons appear depends on the security setting **Sanitize input data**: **Administration → [Tenant name] Administration → Settings for [Tenant name] → Security → Sanitize input data**. The setting is set to **Yes** by default, which is why a standard installation shows the reduced toolbar pictured above.
+
+As long as the setting is active, i-doit hides the toolbar functions that produce markup which the security filter is meant to control:
+
+| Toolbar function | Sanitize input data = Yes | Sanitize input data = No |
+| --- | --- | --- |
+| **Link**, **Unlink**, **Anchor** | Hidden | Available |
+| **Styles**, **Format**, **Font**, **Size** | Hidden | Available |
+| **Text Color**, **Background Color** | Hidden | Available |
+| **Strikethrough** | Hidden | Available |
+| **Decrease/Increase Indent**, **Block Quote**, alignment | Hidden | Available |
+| **Bold**, **Italic**, **Underline**, **Subscript**, **Superscript**, **Remove Format** | Available | Available |
+| Numbered and bulleted list | Available | Available |
+| **Image**, **Table**, **Horizontal Line**, **Source** | Available | Available |
+
+With **Sanitize input data** set to **No**, the editor offers the complete toolbar:
+
+[![Description field with the complete toolbar](../assets/images/en/basics/attribute-fields/19-af.png)](../assets/images/en/basics/attribute-fields/19-af.png)
+
+!!!info "The setting filters the display, not the stored data"
+    i-doit applies the filter when a field is displayed -- both in edit mode and in view mode. The text you save is written to the database unchanged. Formatting that already exists in a field is therefore not deleted when you set the option to **Yes**, and text that was entered while the option was **No** remains intact.
+
+The filter removes only markup that can be used to execute code in the browser, for example `<script>` elements, event handler attributes such as `onclick`, `<iframe>` elements, and links with a `javascript:` target. Ordinary formatting -- including links, strikethrough, and colors that were inserted via the **Source** view or imported -- is displayed normally even when the option is set to **Yes**.
+
+!!!warning "Only disable the option deliberately"
+    **Sanitize input data** is the protection against cross-site scripting in documentation content. If you set it to **No**, i-doit outputs the stored HTML unchanged, so any script code that a user has entered is executed in the browser of everyone who views the attribute. Set the option to **No** only in a trusted environment and only for as long as you actually need the additional formatting functions.
+
 ## Dialog field (drop-down)
 
 The dialog field is a selection field (drop-down) with predefined values that you generally cannot edit. If you do not want to select a value, choose -- if available -- the simple dash (**-**).

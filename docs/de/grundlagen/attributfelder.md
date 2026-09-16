@@ -44,6 +44,35 @@ Fast jeder Kategorie-Eintrag enthält am Ende ein **Beschreibung**-Attribut, das
 
 [![Beschreibung](../assets/images/de/grundlagen/attributfelder/5-af.png)](../assets/images/de/grundlagen/attributfelder/5-af.png)
 
+### Warum der Editor weniger Formatierungsoptionen anbietet
+
+Die Werkzeugleiste des HTML-Editors zeigt nicht alle Formatierungsfunktionen an. Welche Symbole erscheinen, hängt von der Sicherheitseinstellung **Dateneingabe bereinigen** ab: **Verwaltung → [Mandanten-Name] Verwaltung → Einstellungen für [Mandanten-Name] → Sicherheit → Dateneingabe bereinigen**. Die Einstellung steht standardmäßig auf **Ja**, weshalb eine Standardinstallation die oben abgebildete reduzierte Werkzeugleiste zeigt.
+
+Solange die Einstellung aktiv ist, blendet i-doit die Funktionen aus, die Markup erzeugen, das der Sicherheitsfilter kontrollieren soll:
+
+| Funktion der Werkzeugleiste | Dateneingabe bereinigen = Ja | Dateneingabe bereinigen = Nein |
+| --- | --- | --- |
+| **Link einfügen/editieren**, **Link entfernen**, **Anker** | Ausgeblendet | Verfügbar |
+| **Stil**, **Format**, **Schriftart**, **Größe** | Ausgeblendet | Verfügbar |
+| **Textfarbe**, **Hintergrundfarbe** | Ausgeblendet | Verfügbar |
+| **Durchgestrichen** | Ausgeblendet | Verfügbar |
+| **Einzug vergrößern/verkleinern**, **Zitatblock**, Ausrichtung | Ausgeblendet | Verfügbar |
+| **Fett**, **Kursiv**, **Unterstrichen**, **Tiefgestellt**, **Hochgestellt**, **Formatierung entfernen** | Verfügbar | Verfügbar |
+| Nummerierte Liste und Liste | Verfügbar | Verfügbar |
+| **Bild**, **Tabelle**, **Horizontale Linie**, **Quellcode** | Verfügbar | Verfügbar |
+
+Steht **Dateneingabe bereinigen** auf **Nein**, bietet der Editor die vollständige Werkzeugleiste an:
+
+[![Beschreibungsfeld mit vollständiger Werkzeugleiste](../assets/images/de/grundlagen/attributfelder/19-af.png)](../assets/images/de/grundlagen/attributfelder/19-af.png)
+
+!!!info "Die Einstellung filtert die Anzeige, nicht die gespeicherten Daten"
+    i-doit wendet den Filter an, wenn ein Feld dargestellt wird -- sowohl im Bearbeitungs- als auch im Ansichtsmodus. Der Text, den du speicherst, wird unverändert in die Datenbank geschrieben. Bereits vorhandene Formatierungen gehen daher nicht verloren, wenn du die Option auf **Ja** setzt, und Texte, die bei **Nein** erfasst wurden, bleiben erhalten.
+
+Der Filter entfernt ausschließlich Markup, mit dem sich Code im Browser ausführen lässt, zum Beispiel `<script>`-Elemente, Event-Handler-Attribute wie `onclick`, `<iframe>`-Elemente und Links mit einem `javascript:`-Ziel. Übliche Formatierungen -- auch Links, Durchstreichungen und Farben, die über die Ansicht **Quellcode** eingefügt oder importiert wurden -- werden auch bei **Ja** normal dargestellt.
+
+!!!warning "Die Option nur bewusst deaktivieren"
+    **Dateneingabe bereinigen** ist der Schutz vor Cross-Site-Scripting in Dokumentationsinhalten. Setzt du die Option auf **Nein**, gibt i-doit das gespeicherte HTML unverändert aus. Skriptcode, den ein Benutzer erfasst hat, wird dann im Browser aller Personen ausgeführt, die das Attribut ansehen. Setze die Option nur in einer vertrauenswürdigen Umgebung auf **Nein** und nur so lange, wie du die zusätzlichen Formatierungsfunktionen wirklich benötigst.
+
 ## Dialog-Feld (Drop Down)
 
 Das Dialog-Feld ist ein Auswahlfeld (Drop-Down) mit vorgegebenen Werten, die du in der Regel nicht bearbeiten kannst. Wenn du keinen Wert auswählen möchtest, wähle -- sofern verfügbar -- den einfachen Strich (**-**).

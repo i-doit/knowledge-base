@@ -256,7 +256,7 @@ Templates ermöglichen es, Objekte mit vordefinierten Attributwerten anzulegen. 
 !!! warning "Passwörter im Klartext"
     Diese Option betrifft die Anzeige in der Kategorie "Passwörter". Auch bei Deaktivierung werden Passwörter in der Datenbank gespeichert — diese Option regelt lediglich die Sichtbarkeit auf der Oberfläche.
 
-**Dateneingabe bereinigen** — Filtert potenziell schädliche Eingaben (z.B. HTML-Tags, Script-Injections) automatisch heraus. Lass diese Option aktiviert, es sei denn, du hast einen konkreten Grund, Sonderzeichen ungefiltert zu speichern.
+**Dateneingabe bereinigen** — Filtert Markup, mit dem sich Code im Browser ausführen lässt (zum Beispiel `<script>`-Elemente, Event-Handler-Attribute wie `onclick`, `<iframe>`-Elemente und `javascript:`-Links), aus den Inhalten von Attributen heraus, wenn diese dargestellt werden. Der Filter wirkt auf die Ausgabe, nicht auf die gespeicherten Daten: Was du speicherst, wird unverändert in die Datenbank geschrieben. Die Option reduziert außerdem die Werkzeugleiste des [HTML-Editors](../../../grundlagen/attributfelder.md#warum-der-editor-weniger-formatierungsoptionen-anbietet), weshalb dort Links, Schriftarten und Farben standardmäßig fehlen. Lass diese Option aktiviert, es sei denn, du hast einen konkreten Grund, ungefiltertes HTML auszugeben.
 
 ---
 
