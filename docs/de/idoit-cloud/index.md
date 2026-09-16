@@ -161,7 +161,7 @@ Die Cloud-Version bietet denselben Funktionsumfang wie die On-Premise-Variante �
 | SSO (SAML, Azure AD) | Über Apache konfigurierbar | Noch nicht verfügbar (geplant) |
 | Mandanten | Mehrere möglich | Einer pro Instanz |
 | API-Zugriff | Ja | Ja (Firewall-Konfiguration beachten) |
-| E-Mail-Versand (SMTP) | Eigener Mailserver, eingerichtet unter [SMTP Konfiguration (E-Mail)](../automatisierung-und-integration/e-mail.md) | Von i-doit vorkonfiguriert, Absender `no-reply@i-doit.cloud`; nicht änderbar |
+| E-Mail-Versand (SMTP) | Eigener Mailserver, eingerichtet unter [SMTP Konfiguration (E-Mail)](../automatisierung-und-integration/e-mail.md) | Von i-doit vorkonfiguriert, Absender `no-reply@i-doit.cloud` |
 
 ### Add-ons in der Cloud
 
@@ -227,7 +227,7 @@ Flows Lite ersetzt damit die manuelle [Cronjob-Konfiguration](../wartung-und-bet
 
 ???+ question "**Mit welcher Absenderadresse verschickt meine Cloud-Instanz E-Mails?**"
 
-    Deine Cloud-Instanz bringt eine funktionierende SMTP-Konfiguration von i-doit mit. Benachrichtigungen und andere E-Mails werden von `no-reply@i-doit.cloud` verschickt, ein Mailserver muss also nicht eingerichtet werden. Die Seite [SMTP Konfiguration (E-Mail)](../automatisierung-und-integration/e-mail.md) der On-Premise-Version steht in der Cloud nicht zur Verfügung, Mailserver und Absenderadresse lassen sich daher nicht ändern.
+    Deine Cloud-Instanz bringt eine funktionierende SMTP-Konfiguration von i-doit mit. Benachrichtigungen und andere E-Mails werden von `no-reply@i-doit.cloud` verschickt, ein Mailserver muss also nicht eingerichtet werden.
 
 ???+ question "**Kann ich Cronjobs einrichten?**"
 
