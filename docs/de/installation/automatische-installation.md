@@ -42,7 +42,7 @@ Das Script stellt mehrere Fragen zur Konfiguration. Für alle Fragen gibt es vor
 
 ## Was das Script macht
 
-Bevor es etwas ändert, listet das Script seine Schritte auf und fragt vor jedem einzelnen nach, sodass sich Schritte auch überspringen lassen. In dieser Reihenfolge
+Bevor es etwas ändert, listet das Script seine Schritte auf und fragt vor jedem einzelnen nach, sodass sich Schritte auch überspringen lassen. In dieser Reihenfolge:
 
 1. erkennt es das Betriebssystem und prüft die Hardware- und Softwarevoraussetzungen,
 2. konfiguriert optional einen Proxy-Server für den benötigten Web-Zugriff,

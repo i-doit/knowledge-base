@@ -42,7 +42,7 @@ The script asks several configuration questions. All questions have predefined a
 
 ## What the script does
 
-Before it changes anything, the script lists its steps and asks for confirmation before each of them, so individual steps can be skipped. In this order it
+Before it changes anything, the script lists its steps and asks for confirmation before each of them, so individual steps can be skipped. In this order it:
 
 1. detects the operating system and checks the hardware and software requirements,
 2. optionally configures a proxy server for the web access it needs,
