@@ -29,7 +29,7 @@ Typische Anwendungsfälle:
 
 ### Bezeichnung
 
-Der Name der Organisation, z.B. `synetics GmbH`, `ACME Corp.` oder `IT-Abteilung Standort Berlin`. Dieser Wert erscheint in der Listenansicht und in Reports. Bei externen Organisationen empfiehlt sich der offizielle Firmenname, bei internen Einheiten eine eindeutige Bezeichnung nach interner Nomenklatur.
+Der Name der Organisation, z.B. `i-doit GmbH`, `ACME Corp.` oder `IT-Abteilung Standort Berlin`. Dieser Wert erscheint in der Listenansicht und in Reports. Bei externen Organisationen empfiehlt sich der offizielle Firmenname, bei internen Einheiten eine eindeutige Bezeichnung nach interner Nomenklatur.
 
 ### Telefon
 
@@ -84,7 +84,7 @@ Freitext für zusätzliche Angaben: Branche, Vertragspartner-Nummer, interne Kur
         "object": 200,
         "category": "C__CATS__ORGANIZATION",
         "data": {
-            "title": "synetics GmbH",
+            "title": "i-doit GmbH",
             "telephone": "+49 211 699 31-0",
             "fax": "+49 211 699 31-99",
             "website": "https://www.i-doit.com",

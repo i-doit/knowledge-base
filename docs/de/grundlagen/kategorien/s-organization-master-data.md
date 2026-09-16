@@ -29,7 +29,7 @@ Typische Anwendungsfälle:
 
 ### Bezeichnung
 
-Der offizielle Name der Organisation, z.B. `synetics GmbH`, `Deutsche Telekom AG` oder `Abteilung Infrastruktur`. Dieser Wert erscheint in der Listenansicht, in Reports und überall dort, wo das Organisations-Objekt referenziert wird. Verwende den vollständigen, offiziellen Firmennamen inklusive Rechtsform, um Verwechslungen zu vermeiden -- insbesondere bei Konzernen mit ähnlich benannten Tochtergesellschaften.
+Der offizielle Name der Organisation, z.B. `i-doit GmbH`, `Deutsche Telekom AG` oder `Abteilung Infrastruktur`. Dieser Wert erscheint in der Listenansicht, in Reports und überall dort, wo das Organisations-Objekt referenziert wird. Verwende den vollständigen, offiziellen Firmennamen inklusive Rechtsform, um Verwechslungen zu vermeiden -- insbesondere bei Konzernen mit ähnlich benannten Tochtergesellschaften.
 
 ### Telefon
 
@@ -87,7 +87,7 @@ Freitext für ergänzende Angaben: Branche, Kundennummer beim Lieferanten, inter
         "object": 200,
         "category": "C__CATS__ORGANIZATION_MASTER_DATA",
         "data": {
-            "title": "synetics GmbH",
+            "title": "i-doit GmbH",
             "telephone": "+49 211 699 31-0",
             "fax": "+49 211 699 31-99",
             "website": "https://www.i-doit.com",

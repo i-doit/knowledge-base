@@ -39,6 +39,36 @@ Die Art des Zugangs – also das verwendete Protokoll oder die Technologie. Dial
 
 Die vollständige Adresse des Zugangs. Hier wird die URL oder der Verbindungsstring eingetragen, z.B. `https://srv-web-01.bhb.local:8443`, `ssh://admin@10.10.1.100` oder `rdp://jumphost.intern.local`. i-doit rendert diesen Wert als klickbaren Link. Achte darauf, das Protokoll-Präfix und ggf. den Port mit anzugeben, damit der Link direkt funktioniert.
 
+#### Platzhaltervariablen und Modifier
+
+Im URL-Feld lassen sich Platzhaltervariablen verwenden, die i-doit beim Aufruf durch die Werte des Objekts ersetzt, z.B. `%objectname%`. Welche Variablen zur Verfügung stehen, zeigt der Info-Button neben dem URL-Feld.
+
+!!! info "Modifier ab Version 39"
+    Ab i-doit 39 kannst du an jede Variable einen **Modifier** anhängen, abgetrennt durch einen senkrechten Strich. Der eingesetzte Wert wird dadurch vor dem Einfügen umgeformt -- nützlich, wenn das Zielsystem die Werte in einer bestimmten Schreibweise erwartet.
+
+| Modifier | Wirkung |
+|---|---|
+| `encode` | URL-Kodierung; Leerzeichen werden zu `+` |
+| `raw-encode` | URL-Kodierung nach RFC 3986; Leerzeichen werden zu `%20` |
+| `lower` | wandelt in Kleinbuchstaben um |
+| `upper` | wandelt in Großbuchstaben um |
+| `slug` | entfernt Sonderzeichen und verbindet die Wörter mit Bindestrichen |
+
+Beispiel für ein Objekt mit dem Namen `Example (with special chars) + !`:
+
+| Variable | Ergebnis |
+|---|---|
+| `%objectname%` | `Example (with special chars) + !` |
+| `%objectname\|encode%` | `Example+%28with+special+chars%29+%2B+%21` |
+| `%objectname\|raw-encode%` | `Example%20%28with%20special%20chars%29%20%2B%20%21` |
+| `%objectname\|lower%` | `example (with special chars) + !` |
+| `%objectname\|upper%` | `EXAMPLE (WITH SPECIAL CHARS) + !` |
+| `%objectname\|slug%` | `Example-with-special-chars` |
+
+Modifier lassen sich kombinieren und werden **von links nach rechts** angewendet: `%objectname\|lower\|slug%` ergibt `example-with-special-chars`.
+
+Die Modifier greifen überall dort, wo Platzhaltervariablen ersetzt werden -- in der Kategorie-Ansicht, in Objekt- und Kategorie-Listen, in Reports, in der QR-Code-Konfiguration und beim Lesen der Kategorie über die API. Ein Anwendungsbeispiel zeigt die [Patch-Manager-Bridge](../../anwendungsfaelle/i-doit-patch-manager-bridge.md).
+
 ### Primärer Zugriff
 
 Kennzeichnet, ob dieser Eintrag der bevorzugte Zugangsweg zum Objekt ist. Dialog-Feld mit den Werten `Ja` und `Nein`. Pro Objekt sollte genau ein Eintrag als primär markiert werden – dieser wird in Übersichten und der Objektliste bevorzugt angezeigt. Typischerweise ist das die Web-Oberfläche oder der am häufigsten genutzte Zugangsweg.

@@ -108,6 +108,14 @@ In the left navigation tree under **Email Templates**, you can globally customiz
 | Subject             | The subject of the message to be sent can be defined using placeholders from the lower area of the interface.                                      |
 | Notification text   | The text can, like the subject, be composed using placeholders.                                                                                    |
 | Report              | A report can be defined here to send the object information found by the notification in a formatted manner within the email.                      |
+| Send as HTML        | Yes/No selection. With **Yes**, the e-mail is sent as HTML and HTML markup in the template text is rendered. The default is **No**.                |
+
+!!! info "Send as HTML -- as of version 39"
+    The control is not a checkbox but a **Yes/No selection**, and it defaults to **No**. Existing templates therefore keep sending plain text e-mails until you switch them over.
+
+    Switching to **Yes** also changes the editor for the notification text: a WYSIWYG editor replaces the plain text field.
+
+    Switching between HTML and plain text e-mails **only takes effect after saving**. i-doit displays a corresponding notice that stays visible until you save.
 
 ## Configuration of the CLI Call
 
