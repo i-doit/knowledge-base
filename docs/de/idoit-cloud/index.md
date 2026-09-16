@@ -224,6 +224,10 @@ Flows Lite ersetzt damit die manuelle [Cronjob-Konfiguration](../wartung-und-bet
 
     Derzeit ist pro Instanz nur ein Mandant möglich. Du kannst jedoch bei Bedarf jederzeit weitere, separate Instanzen buchen.
 
+???+ question "**Mit welcher Absenderadresse verschickt meine Cloud-Instanz E-Mails?**"
+
+    Deine Cloud-Instanz bringt eine funktionierende SMTP-Konfiguration von i-doit mit. Benachrichtigungen und andere E-Mails werden von `no-reply@i-doit.cloud` verschickt, ein Mailserver muss also nicht eingerichtet werden.
+
 ???+ question "**Kann ich Cronjobs einrichten?**"
 
     Nein, in der Cloud gibt es keinen Shell-Zugang. Stattdessen nutzt du [Flows Lite](#automatisierung-mit-flows-lite) für zeitgesteuerte Aufgaben wie LDAP-Sync, JDisc-Import oder Suchindex-Aktualisierung.
