@@ -161,6 +161,7 @@ Die Cloud-Version bietet denselben Funktionsumfang wie die On-Premise-Variante �
 | SSO (SAML, Azure AD) | Über Apache konfigurierbar | Noch nicht verfügbar (geplant) |
 | Mandanten | Mehrere möglich | Einer pro Instanz |
 | API-Zugriff | Ja | Ja (Firewall-Konfiguration beachten) |
+| E-Mail-Versand (SMTP) | Eigener Mailserver, eingerichtet unter [SMTP Konfiguration (E-Mail)](../automatisierung-und-integration/e-mail.md) | Von i-doit vorkonfiguriert, Absender `no-reply@i-doit.cloud`; ein eigener Mailserver kann eingetragen werden |
 
 ### Add-ons in der Cloud
 
@@ -223,6 +224,10 @@ Flows Lite ersetzt damit die manuelle [Cronjob-Konfiguration](../wartung-und-bet
 ???+ question "**Sind mehrere Mandanten in einer Instanz möglich?**"
 
     Derzeit ist pro Instanz nur ein Mandant möglich. Du kannst jedoch bei Bedarf jederzeit weitere, separate Instanzen buchen.
+
+???+ question "**Mit welcher Absenderadresse verschickt meine Cloud-Instanz E-Mails?**"
+
+    Deine Cloud-Instanz bringt eine funktionierende SMTP-Konfiguration von i-doit mit. Benachrichtigungen und andere E-Mails werden von `no-reply@i-doit.cloud` verschickt, ein Mailserver muss also nicht erst eingerichtet werden. Möchtest du lieber deinen eigenen Mailserver und eine eigene Absenderadresse verwenden, trägst du diese unter **Verwaltung → Import und Schnittstellen → SMTP Konfiguration (E-Mail)** ein, siehe [SMTP Konfiguration (E-Mail)](../automatisierung-und-integration/e-mail.md).
 
 ???+ question "**Kann ich Cronjobs einrichten?**"
 

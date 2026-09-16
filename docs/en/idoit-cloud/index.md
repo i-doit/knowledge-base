@@ -161,6 +161,7 @@ The cloud version offers the same feature set as the on-premise variant -- with 
 | SSO (SAML, Azure AD) | Configurable via Apache | Not yet available (planned) |
 | Tenants | Multiple possible | One per instance |
 | API access | Yes | Yes (note firewall configuration) |
+| Email dispatch (SMTP) | Own mail server, set up under [SMTP Configuration](../automation-and-integration/e-mail.md) | Preconfigured by i-doit, sender `no-reply@i-doit.cloud`; an own mail server can be entered |
 
 ### Add-ons in the Cloud
 
@@ -223,6 +224,10 @@ Flows Lite thus replaces the manual [cronjob configuration](../maintenance-and-o
 ???+ question "**Are multiple tenants possible in one instance?**"
 
     Currently, only one tenant per instance is possible. However, you can book additional separate instances at any time if needed.
+
+???+ question "**Which sender address do emails from my cloud instance use?**"
+
+    Your cloud instance comes with a working SMTP configuration from i-doit. Notifications and other emails are sent from `no-reply@i-doit.cloud`, so no mail server has to be set up first. If you prefer your own mail server and sender address, enter it under **Administration → Import and Interfaces → SMTP Configuration (Email)**, see [SMTP Configuration](../automation-and-integration/e-mail.md).
 
 ???+ question "**Can I set up cronjobs?**"
 
