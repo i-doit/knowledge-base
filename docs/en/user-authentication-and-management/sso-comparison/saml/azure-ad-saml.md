@@ -1,15 +1,15 @@
 ---
-title: Azure AD (SAML) authentication
+title: Microsoft Entra ID (SAML) authentication
 description: "This guide describes the setup of Single Sign-On (SSO) for i-doit with SAML."
 icon:
 status:
 lang: en
 ---
-# Azure AD (SAML) authentication
+# Microsoft Entra ID (SAML) authentication
 
 !!! warning "Please create a complete backup before making any changes to an interface/import. If the result is not satisfactory, the backup can then be restored"
 
-This guide describes the setup of Single Sign-On (SSO) for i-doit with SAML. Mellon is used as the authenticator against Azure AD.
+This guide describes the setup of Single Sign-On (SSO) for i-doit with SAML. Mellon is used as the authenticator against Microsoft Entra ID (formerly Azure Active Directory).
 
 ## Preparations
 
@@ -17,7 +17,7 @@ The example configuration uses a Debian 11 server with Apache, Mellon, and i-doi
 
 ### Basic configuration
 
-✔ This guide assumes that your Azure Active Directory has already been properly configured.<br>
+✔ This guide assumes that your Microsoft Entra tenant has already been properly configured.<br>
 ✔ i-doit is already pre-installed and usable.
 
 ### Install packages
@@ -62,7 +62,7 @@ Insert the following directives:
     MellonSPPrivateKeyFile /etc/apache2/mellon/https_tu2_samlsso.synetics.test_.key
     MellonSPCertFile /etc/apache2/mellon/https_tu2_samlsso.synetics.test_.cert
     MellonSPMetadataFile /etc/apache2/mellon/https_tu2_samlsso.synetics.test_.xml
-    MellonIdPMetadataFile /etc/apache2/mellon/AzureAD_metadata.xml
+    MellonIdPMetadataFile /etc/apache2/mellon/EntraID_metadata.xml
     MellonEndpointPath /mellon
     MellonEnable "info"
 </Location>
@@ -151,17 +151,20 @@ Open the **System settings** tab in the [Admin Center](../../../administration/a
 
 As long as the configurations on the Linux server have not been enabled yet, users can still log in with the i-doit login form and a local user.
 
-## Azure AD (SAML)
+## Microsoft Entra ID (SAML)
 
 To obtain the required XML for the Mellon configuration, perform the following steps:
 
 ### Creating a custom enterprise application
 
-Log in to Azure AD and navigate to **Enterprise applications**.
+Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com) and browse to **Entra ID → Enterprise apps → All applications**. The same pages are still reachable in the Azure portal under **Microsoft Entra ID → Enterprise applications**.
+
+!!! info "About the screenshots"
+    The screenshots in this section were taken in the former Azure portal. The Microsoft Entra admin center arranges the pages slightly differently, the steps and the field names are the same.
 
 [![Azure-AD-Unternehmensanwendung](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen.png)
 
-Create your own custom application.
+Select **New application** and then **Create your own application**.
 
 [![Azure-AD-Unternehmensanwendung-2](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen-2.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen-2.png)
 
@@ -207,7 +210,7 @@ Change the **name identifier format** to `Email address` and the **source attrib
 
 [![Azure-AD-Unternehmensanwendung-10](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen-10.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen-10.png)
 
-The configuration of the enterprise application in Azure AD is now complete.
+The configuration of the enterprise application in Microsoft Entra ID is now complete.
 
 ## Enabling the configurations on the Linux server
 
@@ -217,7 +220,7 @@ Place the previously created metadata XML on your Linux server in the directory 
 
 !!!attention "Filename"
 
-    Please adjust the filename according to the `mellon.conf` to `AzureAD_metadata.xml`.
+    Please adjust the filename according to the `mellon.conf` to `EntraID_metadata.xml`.
     Alternatively, adjust the filename in the `mellon.conf`.
 
 Now test the configuration and enable all required modules.
@@ -239,7 +242,7 @@ sudo systemctl restart apache2
 
 The configuration of the Linux server is now complete.
 
-If you now open the URL `https://tu2-samlsso.synetics.test` in your browser, you will be redirected to the Azure AD login. After successful login, you will be taken directly to your i-doit.
+If you now open the URL `https://tu2-samlsso.synetics.test` in your browser, you will be redirected to the Microsoft Entra sign-in page. After successful login, you will be taken directly to your i-doit.
 
 !!! info "Fallback to login form"
     If a user logs in who does not yet exist in i-doit, they will automatically be redirected to the i-doit login form and can log in with a local user.

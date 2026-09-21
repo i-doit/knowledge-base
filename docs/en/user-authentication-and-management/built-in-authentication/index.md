@@ -59,7 +59,7 @@ To further increase convenience and security, i-doit supports modern authenticat
 
 Additional information:
 
-* [SSO via Azure AD (SAML)](../sso-comparison/saml/azure-ad-saml.md)
+* [SSO via Microsoft Entra ID (SAML)](../sso-comparison/saml/azure-ad-saml.md)
 * [Two-Factor Authentication](../2fa/index.md)
 
 ---
