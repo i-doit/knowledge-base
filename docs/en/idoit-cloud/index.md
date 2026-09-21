@@ -224,6 +224,10 @@ Flows Lite thus replaces the manual [cronjob configuration](../maintenance-and-o
 
     Currently, only one tenant per instance is possible. However, you can book additional separate instances at any time if needed.
 
+???+ question "**Which sender address do emails from my cloud instance use?**"
+
+    Your cloud instance comes with a working SMTP configuration from i-doit. Notifications and other emails are sent from `no-reply@i-doit.cloud`, so no mail server has to be set up.
+
 ???+ question "**Can I set up cronjobs?**"
 
     No, there is no shell access in the cloud. Instead, you use [Flows Lite](#automation-with-flows-lite) for scheduled tasks such as LDAP sync, JDisc import, or search index updates.
