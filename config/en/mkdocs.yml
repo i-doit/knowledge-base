@@ -367,6 +367,7 @@ nav:
       - Migration of an Installation on GNU/Linux: upgrades-and-migrations/migration-on-linux.md
       - Migration from Windows to Linux: upgrades-and-migrations/migration-windows-to-linux.md
       - Migration from Linux to Windows: upgrades-and-migrations/migration-linux-to-windows.md
+      - Migration from XAMPP to the Windows Installer: upgrades-and-migrations/migration-xampp-to-windows-installer.md
       - Update PHP and MariaDB for Windows: upgrades-and-migrations/update-php-and-mariadb-for-windows.md
   - Basics:
       - basics/index.md

@@ -16,4 +16,5 @@ This section covers specific upgrades and migrations related to i-doit.
 *   [Migration of an installation on GNU/Linux](migration-on-linux.md) — In this article, we describe the general procedure for migrating an i-doit installation from one GNU/Linux system to another.
 *   [Migration from Windows to Linux](migration-windows-to-linux.md) — This article describes how to migrate your i-doit installation from Windows to GNU/Linux -- without extended downtime and without data loss.
 *   [Migration from Linux to Windows](migration-linux-to-windows.md) — This article describes how to migrate your i-doit installation from Linux to a Windows Server.
+*   [Migration from XAMPP to the i-doit Windows Installer](migration-xampp-to-windows-installer.md) — This article describes how to migrate an i-doit installation running under XAMPP on Windows to a Windows Server set up with the i-doit Windows Installer.
 *   [Update PHP and MariaDB for i-doit Windows](update-php-and-mariadb-for-windows.md) — Guide for updating PHP and MariaDB for i-doit Windows installations. Included PHP versions are 8.2, 8.3, and 8.4. Included MariaDB versions are MariaDB 10.11. Here we show which...
