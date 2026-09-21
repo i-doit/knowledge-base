@@ -329,6 +329,9 @@ sudo setsebool -P httpd_can_network_connect 1
 sudo semanage port -a -t postgresql_port_t -p tcp 25321
 ```
 <!-- cSpell:enable -->
+
+!!! note "The last command is only needed if you plan to connect [JDisc](../../../consolidate-data/jdisc/index.md). SELinux otherwise blocks `php-fpm` from connecting to the PostgreSQL port `25321` of JDisc (`name_connect` on `tcp_socket`), so the port is assigned to the `postgresql_port_t` type here. Without JDisc you can skip it."
+
 ## Next Step
 
 The operating system is now prepared so that i-doit can be installed:
