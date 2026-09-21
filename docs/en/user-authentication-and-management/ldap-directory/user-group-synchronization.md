@@ -21,6 +21,25 @@ In the following examples, `objectClass = user` is used for persons and `objectC
 
 [![ldap_personen-suchen](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/1-ldap-bg.png)](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/1-ldap-bg.png)
 
+## How the synchronization works
+
+Every run of `ldap-sync` handles each active LDAP server in the same order. Knowing this order explains what a filter does and does not control:
+
+1. **Disabled accounts (Active Directory only).** Before your filter is applied, i-doit searches the configured **Search for users in (OU)** for all disabled accounts (`userAccountControl` bit 2), regardless of the filter. Each of them that already exists as a person in i-doit is treated according to `disabledUsersBehaviour` (default: archived) and remembered, so that step 3 does not reactivate it.
+2. **Search with your filter.** i-doit clears the stored LDAP DN of all persons that belong to this server, then runs your **Filter** below the search OU (recursively if configured, in pages if **Enable LDAP Paging** is set). Every result is sorted by its `objectClass`: groups become person groups, users are synchronized one by one.
+3. **Users.** For each user, i-doit reads the user name from the **Username** mapping, looks the person up by the [unique identifier](index.md#identifying-objects) if one is configured, otherwise by user name, creates it if it does not exist and updates first name, last name, mail address, the fields of the attribute extension and the stored DN. Users matching `ignoreUsersWithAttributes` are skipped. On an Active Directory server, persons that are archived in i-doit are reactivated, unless step 1 marked them as disabled; `autoReactivateUsers` extends this to other directories.
+4. **Groups and memberships.** Groups found in step 2 are created or updated (matched by `objectSid` on Active Directory, by name otherwise). Each synchronized user is attached to the groups from its `memberOf` and primary group (`memberUid` on OpenLDAP) plus the groups from the tenant setting `ldap.default-group`. Existing memberships are kept unless `dropExistingRelations` is set; groups that vanished from the directory are handled by `archiveDeletedGroups`.
+5. **Orphaned persons.** Every person of this server whose DN was not written in step 3, in other words every person your filter did not return, is treated according to `deletedUsersBehaviour` (default: archived).
+
+What this means for your filters:
+
+- The filter decides who counts as present. A user who still exists in the directory but is no longer matched, for example because they left the group your filter checks, is an orphan in step 5 and is archived, deleted or login-disabled.
+- Disabled Active Directory accounts that your filter still returns stay as `disabledUsersBehaviour` left them, because step 3 does not reactivate them. Disabled accounts your filter does **not** return are handled by step 5 instead: with `deletedUsersBehaviour = disable_login` they end up **normal with disabled login**, not archived. If you rely on `disabledUsersBehaviour`, keep disabled accounts inside your filter or move them out of the search OU.
+- Built-in persons with a constant, for example `admin`, are never archived or deleted by the sync.
+- A user who logs in through LDAP is created or updated at that moment with the mapped attributes only; steps 1, 4 and 5 run exclusively in `ldap-sync`.
+
+Every decision is written to `log/ldap_<date>.log`, for example `User with username "..." was not found. Creating..`, `Username has changed from "..." to "..."`, or `Found 2 orphaned user(s) which is/are archived now`.
+
 ## Configuring the filters
 
 * * *

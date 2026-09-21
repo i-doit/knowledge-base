@@ -149,6 +149,8 @@ Du kannst auch eigene LDAP-Attribute in die Stammdaten importieren. Konfiguriere
 
 Die Grundkonfiguration hast du in den vorherigen Schritten bereits erledigt. Richte nun den passenden [i-doit console utility](../../automatisierung-und-integration/cli/index.md) Befehl ein, um die Synchronisation regelmäßig auszuführen. Optional konfigurierst du weitere zu synchronisierende Felder.
 
+Was `ldap-sync` in welcher Reihenfolge tut und warum ein Filter darüber entscheidet, welche Personen archiviert werden, erklärt [So läuft die Synchronisation ab](so-werden-benutzer-und-gruppen-aus-dem-ad-ldap-importiert.md#so-lauft-die-synchronisation-ab).
+
 ### Erweiterte Konfiguration
 
 Ein Beispiel findest du [hier](../../automatisierung-und-integration/cli/configuration-files.md). Diese Datei kannst du mit Login-Daten, Tenant und weiteren Optionen erweitern. Damit sie beim `ldap-sync`-Befehl berücksichtigt wird, gib sie über den Parameter `-c /pfad/` an. Weitere Informationen findest du beim [i-doit console utility](../../automatisierung-und-integration/cli/index.md).
