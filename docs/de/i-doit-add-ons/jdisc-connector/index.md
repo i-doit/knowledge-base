@@ -76,6 +76,9 @@ Einstellungen die Konfiguriert werden müssen damit die Verbindung zur JDisc Ins
 | **Password**             | Password für die JDisc Datenbank                                       |
 | **Versionsprüfung**      | Nur bei sehr alten JDisc-Versionen relevant                            |
 
+!!! info "Passwort des lesenden Datenbankbenutzers ändern"
+    Der Connector meldet sich mit dem lesenden Benutzer `postgresro` an der JDisc-Datenbank an. Sein Passwort wird in JDisc gesetzt, nicht in i-doit: Stoppe JDisc Discovery und wähle **Administration → Database → Change Read-Only Password** (der Menüpunkt **Change Password** daneben ändert stattdessen das administrative Datenbankpasswort). Trage das neue Passwort anschließend im Feld **Passwort** des Discovery-Server-Eintrags in i-doit ein und führe den **Configuration Check** aus. Details: [JDisc Discovery Administration Guide](https://jdisc.com/guides/JDisc%20Discovery%20AdministrationGuide.pdf), Abschnitt *Change The Database Password*.
+
 <!--[![discovery-server-common-settings-de](../../assets/images/de/i-doit-add-ons/jdisc-connector/discovery-server-discovery-settings-de.png)](../../assets/images/de/i-doit-add-ons/jdisc-connector/discovery-server-discovery-settings-de.png)-->
 
 | Discovery Einstellungen | Beschreibung                                       |
