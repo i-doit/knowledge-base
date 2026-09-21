@@ -58,3 +58,29 @@ service apache2 restart
 ```
 
 !!! warning "Das Output File muss die Dateiendung .crt haben, sonst wird es vom Befehl update-ca-certificates nicht berücksichtigt. Ist es korrekt übernommen, muss das Zertifikat unter /etc/ssl/certs/ zu sehen sein."
+
+## Schritt 3: Verbindung testen
+
+Prüfe vom i-doit-Server aus, ob das Zertifikat für den Hostnamen vertraut wird, den du in der LDAP-Server-Konfiguration verwendest:
+
+```shell
+echo | openssl s_client -connect ldap.synetics.test:636 2>/dev/null | grep "Verify return code"
+```
+
+| Ausgabe | Bedeutung |
+| ------- | --------- |
+| `Verify return code: 0 (ok)` | Dem Zertifikat wird vertraut, LDAPS funktioniert. |
+| `Verify return code: 18 (self-signed certificate)` | Das Zertifikat ist noch nicht im Zertifikatsspeicher. Wiederhole Schritt 2 und prüfe die Endung `.crt` und `/etc/ssl/certs/`. |
+| `Verify return code: 62 (hostname mismatch)` | Das Zertifikat enthält den Hostnamen nicht, mit dem du dich verbindest (siehe unten). |
+
+### Selbstsignierte Zertifikate
+
+Schritt 2 funktioniert auch mit selbstsignierten Zertifikaten: Das Serverzertifikat selbst wird in den Zertifikatsspeicher importiert und ist danach vertrauenswürdig. Entscheidend ist der **Hostname**. Der **Host** in der [LDAP-Server-Konfiguration](index.md#server) von i-doit muss genau der Name sein, auf den das Zertifikat ausgestellt ist (CN oder Subject Alternative Name). Trägst du die IP-Adresse oder einen anderen Alias ein, scheitert der LDAP-Bind mit `Can't contact LDAP server`, obwohl dem Zertifikat vertraut wird. Eine zusätzliche `TLS_CACERT`-Zeile in `/etc/ldap/ldap.conf`, die auf das einzelne Zertifikat zeigt, behebt das nicht, das importierte Zertifikat ist bereits Teil des Standardbündels `/etc/ssl/certs/ca-certificates.crt`.
+
+Lässt sich das Zertifikat nicht mit dem richtigen Namen neu ausstellen, kannst du die Zertifikatsprüfung als letzten Ausweg abschalten. Ergänze dazu in `/etc/ldap/ldap.conf` die folgende Zeile und starte Apache neu:
+
+```text
+TLS_REQCERT never
+```
+
+!!! warning "Die Verbindung bleibt verschlüsselt, aber die Identität des LDAP-Servers wird nicht mehr geprüft. Bevorzuge ein Zertifikat mit dem richtigen Hostnamen."
