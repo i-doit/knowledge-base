@@ -110,7 +110,12 @@ Du kannst die Kategorie **Wartungsübersicht** dem Objekttyp über die [Objektty
 
 ## Wartungen auf dem Dashboard
 
-Auf dem [Dashboard](../grundlagen/dashboard-und-widgets.md) zeigst du geplante und abgeschlossene Wartungen im Kalender-Widget an. Diese werden hervorgehoben.
+Auf dem [Dashboard](../grundlagen/dashboard-und-widgets.md) markiert das Kalender-Widget die Tage geplanter und abgeschlossener Wartungen. Klicke auf einen markierten Tag, um zu sehen, welches Objekt gewartet wird.
+
+Das Widget zeigt nur Wartungen von Objekten, bei denen **du** in der Kategorie **Kontaktzuweisung** mit der Rolle **Administrator** eingetragen bist. Wartungen anderer Objekte oder von Objekten, bei denen du mit einer anderen Rolle (zum Beispiel Benutzer) zugewiesen bist, erscheinen nicht, unabhängig von deinen Rechten in i-doit. Zwei weitere Bedingungen gelten:
+
+- Die Option **Objekt-Termine darstellen** muss in der Widget-Konfiguration aktiviert sein (Standard).
+- Es werden nur Wartungen vom Anfang des Vormonats bis zum Ende des Folgemonats angezeigt.
 
 [![Kalender-Widget](../assets/images/de/i-doit-add-ons/maintenance/9-main.png)](../assets/images/de/i-doit-add-ons/maintenance/9-main.png)
 
