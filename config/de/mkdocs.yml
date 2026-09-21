@@ -367,6 +367,7 @@ nav:
       - Umzug einer Installation unter GNU/Linux: upgrades-und-umzuege/umzug-einer-installation-unter-linux.md
       - Umzug von Windows zu Linux: upgrades-und-umzuege/umzug-von-windows-zu-linux.md
       - Umzug von Linux zu Windows: upgrades-und-umzuege/umzug-von-linux-zu-windows.md
+      - Umzug von XAMPP zum Windows Installer: upgrades-und-umzuege/umzug-von-xampp-zum-windows-installer.md
       - Update PHP und MariaDB für Windows: upgrades-und-umzuege/update-php-und-mariadb-fuer-windows.md
   - Grundlagen:
       - grundlagen/index.md
