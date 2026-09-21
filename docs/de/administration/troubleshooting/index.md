@@ -77,6 +77,7 @@ Wenn du dich nicht anmelden kannst, gibt es mehrere mögliche Ursachen:
 
 - **"Lost link to database"** — die Datenbankverbindung ist unterbrochen. Detaillierte Hilfe findest du im Artikel ["Lost link to database"](lost-link-to-database.md).
 - **Session-Timeout falsch konfiguriert** — ein zu niedriger Wert kann dazu führen, dass du sofort nach dem Login wieder abgemeldet wirst. Lies dazu [Kein Login nach Änderung des Session Timeouts](kein-login-nach-aenderung-des-session-timeouts.md).
+- **Nach wenigen Klicks wieder abgemeldet** — seit i-doit 33 ist die Session an die IP-Adresse des Clients und den Browser gebunden. Hinter einem Load Balancer, einem Proxy oder im Mobilfunknetz kann sich die IP-Adresse zwischen den Anfragen ändern, was die Session beendet. Setze die System-Experteneinstellung `system.verify-ip-between-requests` auf `0`, um diese Prüfung zu überspringen, siehe [Admin-Center](../../administration/admin-center.md#sicherheit-und-passworter).
 - **LDAP-Probleme** — wenn LDAP-Benutzer sich nicht anmelden können, prüfe die LDAP-Konfiguration und das Debug-Log. Bei TLS-Verbindungen hilft der Artikel [LDAP via TLS](ldap-via-tls.md).
 - **Admin-Center Login** — das Admin-Center verwendet separate Zugangsdaten. Bei vergessenem Passwort kann es nur über das [CLI-Tool](../../automatisierung-und-integration/cli/index.md) zurückgesetzt werden. Siehe [Admin-Center](../../administration/admin-center.md).
 

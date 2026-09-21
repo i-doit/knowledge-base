@@ -163,6 +163,7 @@ Via the **Expert settings** link at the top right of the System Settings page, y
 | Key | Default | What happens when you change it? |
 |-----|---------|----------------------------------|
 | `security.passwort.minlength` | (empty) | Minimum length for user passwords. Set this value to at least **8**, preferably **12**, in production environments. |
+| `system.verify-ip-between-requests` | `1` | Since i-doit 33 the session is bound to the client: with every request i-doit checks whether the IP address and the browser (user agent) still match the values from login. On a mismatch the session is destroyed and the user is logged out. Set to `0` if your users reach i-doit through a load balancer, a proxy or a mobile network, where the IP address can change between requests. The key is not listed until you create it: enter key and value in the empty row at the end of the table and save. |
 
 ### Logging and debug
 
