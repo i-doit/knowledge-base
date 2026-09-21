@@ -530,3 +530,25 @@ sudo docker compose logs --tail 100 app
 ```
 <!-- cSpell:enable -->
 
+### Add-on reports a missing PHP extension `calendar`
+
+Some add-ons, for example the Checkmk connector with its `idoitcmk` tool, require the PHP extension `calendar`. The official `app` image does not ship it, so the add-on aborts with `requires the extension "calendar"`. Add the extension in a derived image:
+<!-- cSpell:disable -->
+```dockerfile
+FROM registry.on.ops.docupike.net/i-doit/app:38
+USER root
+RUN docker-php-ext-install calendar
+USER www-data
+```
+<!-- cSpell:enable -->
+
+Build it, replace the `image:` of the `app` service with your tag and run `docker compose up -d`. Rebuild after every image update.
+
+### Add-on command line tool not found (for example `idoitcmk`)
+
+Add-on installers run as the web server user (UID 33) and can only write into the application tree. A tool the add-on would normally place in `/usr/local/bin` on a classic server is therefore missing in the container (`idoitcmk: not found`), and the application tree does not survive a recreate anyway (see **Persistence**). Either point the add-on to the tool inside its module directory (for Checkmk under **Administration → Add-ons → Check_MK**), or bake the binary into the derived image:
+<!-- cSpell:disable -->
+```dockerfile
+COPY --chmod=755 idoitcmk /usr/local/bin/idoitcmk
+```
+<!-- cSpell:enable -->
