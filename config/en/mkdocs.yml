@@ -604,6 +604,7 @@ nav:
       - Authentication with LDAP:
           - user-authentication-and-management/ldap-directory/index.md
           - LDAPS Debian Configuration: user-authentication-and-management/ldap-directory/ldap-tls.md
+          - LDAPS Red Hat Enterprise Linux Configuration: user-authentication-and-management/ldap-directory/ldap-tls-rhel.md
           - LDAPS i-doit for Windows: user-authentication-and-management/ldap-directory/i-doit-win-ldaps.md
           - User/Group Synchronization: user-authentication-and-management/ldap-directory/user-group-synchronization.md
       - Two-Factor Authentication (2FA): user-authentication-and-management/2fa/index.md
