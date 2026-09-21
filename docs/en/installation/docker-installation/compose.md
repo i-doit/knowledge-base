@@ -368,6 +368,51 @@ sudo docker compose restart app
 
 After the restart, the license status can be verified in the Admin Center on the **License** tab.
 
+## Persistence: what survives a container recreate
+
+Only the two named volumes survive `docker compose down`, an image update or any other recreate of the `app` container: `db` holds the database, `app` is mounted at `/data/data` and holds the configuration (`config.inc.php`), the license, uploads, imports, logs and add-ons. Everything else in the container, including the application tree `/var/www/html` (a symlink to `/var/www/idoit/updates/versions/<version>/files`), is recreated from the image every time. On start, the entrypoint links the directories `upload/`, `imports/` and `log/` of the application tree to `/data/data/` and re-links the add-ons stored under `/data/data/addons/`.
+
+Two kinds of data are affected by this and need a persistent place:
+
+### Add-ons
+
+An add-on installed through the **Subscription Center** or by uploading a ZIP in the UI is unpacked into the application tree (`src/classes/modules/<identifier>`) and disappears with the next recreate. Install add-ons through the volume instead:
+
+1. Copy the add-on ZIP into `addons-to-install/` on the `app` volume, for example:
+<!-- cSpell:disable -->
+```sh
+sudo docker compose cp idoit-maintenance-1.7.zip app:/data/data/addons-to-install/
+sudo docker compose restart app
+```
+<!-- cSpell:enable -->
+2. On every start, the entrypoint installs each ZIP found there (`console.php addon-install`), moves the module directory to `/data/data/addons/<identifier>/`, links it back into the application tree and deletes the ZIP.
+
+Add-ons placed this way are re-linked on every start, so they survive recreates and image updates. Add-on updates work the same way: drop the new ZIP into `addons-to-install/` and restart.
+
+### Custom translations and renamings
+
+Changes made under **Administration → Multilingual support** (see [Multilingual support](../../administration/multilingual-support.md)) are written to `src/lang/<abbr>_custom.inc.php` inside the application tree, so they are lost on recreate. Until the image persists them itself, keep a copy outside the container and put it back with a derived image or a bind mount:
+
+=== "Derived image"
+
+    ```dockerfile
+    FROM registry.on.ops.docupike.net/i-doit/app:38
+    COPY --chown=33:33 de_custom.inc.php en_custom.inc.php /var/www/idoit/updates/versions/38/files/src/lang/
+    ```
+
+    Build it, replace the `image:` of the `app` service with your tag and run `docker compose up -d`. Rebuild after every image update.
+
+=== "Bind mount"
+
+    ```yaml
+      app:
+        volumes:
+          - app:/data/data
+          - ./lang/de_custom.inc.php:/var/www/idoit/updates/versions/38/files/src/lang/de_custom.inc.php
+    ```
+
+    The file must be writable by the web server user (UID 33), otherwise saving in **Multilingual support** fails. Adjust the version in the path after an update.
+
 ## Update
 
 Upgrade to a newer image version:

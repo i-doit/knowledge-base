@@ -368,6 +368,51 @@ sudo docker compose restart app
 
 Nach dem Restart lässt sich der Lizenzstatus im Admin-Center (Tab **Lizenz**) prüfen.
 
+## Persistenz: was einen Container-Neustart überlebt
+
+Nur die beiden benannten Volumes überleben `docker compose down`, ein Image-Update oder jedes andere Neuerstellen des `app`-Containers: `db` enthält die Datenbank, `app` ist unter `/data/data` eingehängt und enthält die Konfiguration (`config.inc.php`), die Lizenz, Uploads, Importe, Logs und Add-ons. Alles andere im Container, auch der Anwendungsbaum `/var/www/html` (ein Symlink auf `/var/www/idoit/updates/versions/<Version>/files`), wird bei jedem Start neu aus dem Image erzeugt. Beim Start verlinkt das Entrypoint-Skript die Verzeichnisse `upload/`, `imports/` und `log/` des Anwendungsbaums nach `/data/data/` und bindet die unter `/data/data/addons/` abgelegten Add-ons wieder ein.
+
+Zwei Arten von Daten sind davon betroffen und brauchen einen persistenten Ort:
+
+### Add-ons
+
+Ein Add-on, das über das **Subscription Center** oder per ZIP-Upload in der Oberfläche installiert wird, landet im Anwendungsbaum (`src/classes/modules/<identifier>`) und verschwindet beim nächsten Neuerstellen. Installiere Add-ons stattdessen über das Volume:
+
+1. Kopiere das Add-on-ZIP nach `addons-to-install/` auf dem `app`-Volume, zum Beispiel:
+<!-- cSpell:disable -->
+```sh
+sudo docker compose cp idoit-maintenance-1.7.zip app:/data/data/addons-to-install/
+sudo docker compose restart app
+```
+<!-- cSpell:enable -->
+2. Bei jedem Start installiert das Entrypoint-Skript jedes dort gefundene ZIP (`console.php addon-install`), verschiebt das Modulverzeichnis nach `/data/data/addons/<identifier>/`, verlinkt es zurück in den Anwendungsbaum und löscht das ZIP.
+
+So abgelegte Add-ons werden bei jedem Start neu verlinkt und überleben damit Neuerstellen und Image-Updates. Add-on-Updates funktionieren genauso: neues ZIP nach `addons-to-install/` legen und neu starten.
+
+### Eigene Übersetzungen und Umbenennungen
+
+Änderungen unter **Verwaltung → Mehrsprachigkeit** (siehe [Mehrsprachigkeit und Übersetzungen](../../administration/mehrsprachigkeit-und-uebersetzungen.md)) werden nach `src/lang/<Kürzel>_custom.inc.php` im Anwendungsbaum geschrieben und gehen beim Neuerstellen verloren. Bis das Image sie selbst persistiert, bewahre eine Kopie außerhalb des Containers auf und bringe sie über ein abgeleitetes Image oder einen Bind-Mount zurück:
+
+=== "Abgeleitetes Image"
+
+    ```dockerfile
+    FROM registry.on.ops.docupike.net/i-doit/app:38
+    COPY --chown=33:33 de_custom.inc.php en_custom.inc.php /var/www/idoit/updates/versions/38/files/src/lang/
+    ```
+
+    Baue es, ersetze das `image:` des `app`-Services durch dein Tag und führe `docker compose up -d` aus. Nach jedem Image-Update neu bauen.
+
+=== "Bind-Mount"
+
+    ```yaml
+      app:
+        volumes:
+          - app:/data/data
+          - ./lang/de_custom.inc.php:/var/www/idoit/updates/versions/38/files/src/lang/de_custom.inc.php
+    ```
+
+    Die Datei muss für den Webserver-Benutzer (UID 33) beschreibbar sein, sonst scheitert das Speichern unter **Mehrsprachigkeit**. Passe die Version im Pfad nach einem Update an.
+
 ## Update
 
 Auf eine neuere Image-Version aktualisieren:
