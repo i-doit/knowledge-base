@@ -113,7 +113,7 @@ Delete unwanted entries (e.g., wildcards `%` or external addresses). Only `local
 Always keep PHP on the latest patch level. The settings required for i-doit can be found in the [system settings](../installation/manual-installation/system-settings.md). Additional hardening can be achieved via a dedicated configuration file:
 
 ```shell
-sudo nano /etc/php/8.2/mods-available/zz_security.ini
+sudo nano /etc/php/8.4/mods-available/zz_security.ini
 ```
 
 ```ini
@@ -135,7 +135,7 @@ sudo systemctl restart apache2.service
 ```
 
 !!! tip "Adjust PHP version"
-    Replace `8.2` with the PHP version you are using. Which versions i-doit supports can be found in the [system requirements](../installation/system-requirements.md).
+    Replace `8.4` with the PHP version you are using. Which versions i-doit supports can be found in the [system requirements](../installation/system-requirements.md).
 
 ### Backup and Restore
 
@@ -166,7 +166,7 @@ sudo apt install certbot python3-certbot-apache
 sudo certbot --apache -d cmdb.company.com
 ```
 
-Certbot automatically configures Apache and sets up certificate renewal via cronjob. Test the renewal:
+Certbot automatically configures Apache and sets up certificate renewal via a systemd timer (a cronjob on older systems). Test the renewal:
 
 ```shell
 sudo certbot renew --dry-run
@@ -180,7 +180,7 @@ Example for Apache with security headers:
 
 ```apache
 <IfModule mod_headers.c>
-    # Redirect HTTP to HTTPS
+    # Enforce HTTPS (HSTS)
     Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains"
     # Prevent clickjacking
     Header always set X-Frame-Options "SAMEORIGIN"
@@ -188,10 +188,9 @@ Example for Apache with security headers:
     Header always set X-Content-Type-Options "nosniff"
     # Restrict referrer
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
-    # Hide server version
-    Header unset Server
 </IfModule>
 
+# Hide the server version (mod_headers cannot remove the Server header)
 ServerSignature Off
 ServerTokens    Prod
 
@@ -264,10 +263,14 @@ sudo chown www-data:www-data -R .
 sudo find . -type d -exec chmod 550 {} \;
 sudo find . -type f -exec chmod 440 {} \;
 
-# Write permissions only for directories that need them:
-for dir in log/ imports/ temp/ upload/; do
+# Write permissions only where i-doit writes at runtime
+# (logs, imports, cache, uploads, custom translations):
+for dir in log/ imports/ temp/ upload/ src/lang/; do
     sudo find "$dir" -type d -exec chmod 770 {} \;
 done
+
+# The Admin Center writes the configuration file:
+sudo chmod 660 src/config.inc.php
 ```
 
 Before an [update](i-doit-update.md), temporarily relax the restrictions:
@@ -292,7 +295,11 @@ The users **admin**, **reader**, **author**, and **editor** have the password se
 
 #### Admin Center Password
 
-You can change the password in the [Admin Center](../administration/admin-center.md) under **Config** or directly in the file `src/config.inc.php`.
+You can change the password in the [Admin Center](../administration/admin-center.md) under **Config**. If you have locked yourself out, reset it on the command line (the file `src/config.inc.php` only holds a hash, do not edit it by hand):
+
+```shell
+sudo -u www-data php console.php admin-center-password-reset
+```
 
 #### MySQL Users
 
@@ -300,15 +307,7 @@ You can change the password in the [Admin Center](../administration/admin-center
 ALTER USER 'idoit'@'localhost' IDENTIFIED BY 'ASecurePassword!2026';
 ```
 
-Also store the new password in the system database:
-
-```sql
-UPDATE idoit_system.isys_mandator
-SET isys_mandator__db_pass = 'ASecurePassword!2026'
-WHERE isys_mandator__db_user = 'idoit';
-```
-
-Additionally, update it in `src/config.inc.php` or in the Admin Center under **Config**.
+Then store the new password where i-doit reads it: the connection to the **system database** is configured in the [Admin Center](../administration/admin-center.md) under **Config** (written to `src/config.inc.php`), the connection of each **tenant database** under **Tenants**. Use the Admin Center for both, it stores the tenant password encrypted in the system database; do not edit the table `isys_mandator` by hand.
 
 #### Linux Users
 
@@ -330,9 +329,9 @@ Additional authentication mechanisms can be set up via the Apache web server, e.
 
 ### Configure Session Timeout
 
-By default, sessions in i-doit remain active for a very long time. For security-critical environments, you should shorten the session timeout so that forgotten browser windows do not remain open indefinitely.
+By default, an i-doit session ends after **3600** seconds (1 hour) without activity. For security-critical environments, shorten the session timeout so that forgotten browser windows do not stay logged in, for example to **1800** (30 minutes) or less.
 
-The setting can be found in the [expert settings](../administration/management/tenant-management/expert-settings.md) under `session.time` -- the value is specified in seconds. A sensible value for production environments is **3600** (1 hour).
+The setting is system-wide and can be found in the [Admin Center](../administration/admin-center.md) under **System settings → Session → Session timeout**; the value is specified in seconds.
 
 ### Secure the API
 
@@ -348,8 +347,8 @@ The [JSON-RPC API](../i-doit-add-ons/api/index.md) is a powerful tool -- and an 
 </Location>
 ```
 
-- **Create a dedicated API user** -- do not use the admin account for API access. Create a dedicated user with minimal permissions.
-- **Disable the API** if it is not needed -- the add-on can be deactivated in [Administration](../administration/management/import-and-interfaces/index.md).
+- **Create a dedicated API user** -- do not use the admin account for API access. Create a dedicated user with minimal permissions and set the [expert setting](../administration/management/tenant-management/expert-settings.md) `api.authenticated-users-only` to `1`, so that every request must carry valid user credentials in addition to the API key.
+- **Disable the API** if it is not needed -- set the [expert setting](../administration/management/tenant-management/expert-settings.md) `api.status` to `0`; every request is then answered with an error.
 
 ---
 
@@ -424,7 +423,7 @@ On GNU/Linux, [SELinux](https://en.wikipedia.org/wiki/SELinux) and [AppArmor](ht
 
 ### Automatically Block Attacks
 
-[fail2ban](http://www.fail2ban.org/) analyzes log files and automatically blocks IP addresses after repeated failed login attempts:
+[fail2ban](https://www.fail2ban.org/) analyzes log files and automatically blocks IP addresses after repeated failed login attempts:
 
 ```shell
 sudo apt install fail2ban
