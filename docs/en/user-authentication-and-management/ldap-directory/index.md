@@ -137,6 +137,8 @@ If the error message is not informative enough, increase the debug level. This c
 
 Without additional settings (e.g. **Unique identifier**), i-doit identifies objects based on the **Login** attribute from the **category Persons > Login**.
 
+If you want to change the attribute behind the user name later, for example from `sAMAccountName` to `userPrincipalName`, set a unique identifier first, see [Changing the LDAP login attribute](change-login-attribute.md).
+
 ### Directories
 
 Under **Administration → Import and Interfaces → LDAP → Directories** you set up the attribute mapping. During login, i-doit queries basic information about the user and stores it in the person object. Select the applicable directory and adjust the assignment as needed. As a rule, the fields are already correctly pre-filled.
