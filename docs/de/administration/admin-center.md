@@ -163,6 +163,7 @@ E-Mail-Konfiguration für [Benachrichtigungen](../auswertungen/benachrichtigunge
 | Key                           | Standard | Was passiert wenn du es änderst?                                                                                     |
 | ----------------------------- | -------- | -------------------------------------------------------------------------------------------------------------------- |
 | `security.passwort.minlength` | (leer)   | Mindestlänge für Benutzerpasswörter. Setze diesen Wert in Produktionsumgebungen auf mindestens **8**, besser **12**. |
+| `system.verify-ip-between-requests` | `1` | Seit i-doit 33 ist die Session an den Client gebunden: Bei jeder Anfrage prüft i-doit, ob IP-Adresse und Browser (User Agent) noch zu den Werten vom Login passen. Bei einer Abweichung wird die Session beendet und der Benutzer abgemeldet. Setze den Wert auf `0`, wenn deine Benutzer i-doit über einen Load Balancer, einen Proxy oder ein Mobilfunknetz erreichen, wo sich die IP-Adresse zwischen den Anfragen ändern kann. Der Key ist erst gelistet, wenn du ihn anlegst: Trage Key und Wert in die leere Zeile am Ende der Tabelle ein und speichere. |
 
 ### Logging und Debug
 
