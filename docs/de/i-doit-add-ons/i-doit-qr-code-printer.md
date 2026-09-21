@@ -45,6 +45,9 @@ Bei der globalen Definition befuellst du die QR-Code-Informationen mit folgenden
 
 [![Globale Definition](../assets/images/de/i-doit-add-ons/qr-code-printer/6-qr.png)](../assets/images/de/i-doit-add-ons/qr-code-printer/6-qr.png)
 
+!!! info "Modifier ab Version 39"
+    Ab i-doit 39 lassen sich die Platzhalter mit einem **Modifier** umformen, z.B. `%objectname|slug%`. Die vollständige Liste der Modifier steht bei der [Kategorie Zugriff](../grundlagen/kategorien/access.md#platzhaltervariablen-und-modifier).
+
 ### Primäre Zugriffs URL
 
 Bei dieser Option fliesst ausschließlich die im Objekt hinterlegte URL in den QR-Code ein.

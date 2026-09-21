@@ -190,6 +190,9 @@ Diese Optionen beeinflussen, wie Informationen in der Benutzeroberfläche darges
 
 **Objekttyp Sortierung** — "Alphabetisch" sortiert die Objekttyp-Gruppen und -Typen in der Navigation automatisch. "Manuell" erlaubt eine eigene Reihenfolge über die Objekttyp-Konfiguration.
 
+!!! info "Standardwert ab Version 39"
+    Bei einer **Neuinstallation** von i-doit 39 ist "Alphabetisch" der Standardwert. Bei einem **Update** von einer früheren Version bleibt die bisher eingestellte Sortierung erhalten — die Umstellung wirkt sich dort nicht aus.
+
 ---
 
 ## Maximallänge von Zeichenfolgen

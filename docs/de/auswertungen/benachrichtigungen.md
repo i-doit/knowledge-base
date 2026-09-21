@@ -108,6 +108,14 @@ Im linken Navigationsbaum unter **E-Mail-Vorlagen** kannst du den Inhalt der Ben
 | Betreff               | Der Betreff der zu verschickenden Nachricht kann mit Platzhaltern aus dem unteren Bereich der Oberfläche selbst definiert werden.                      |
 | Benachrichtigungstext | Der Text kann, wie auch der Betreff, mit Platzhaltern zusammengestellt werden.                                                                         |
 | Report                | Ein Report kann hier definiert werden, mit dem in der E-Mail die in der Benachrichtigung gefundenen Objektinformationen aufbereitet verschickt werden. |
+| Als HTML senden       | Ja/Nein-Auswahl. Bei **Ja** wird die E-Mail als HTML versendet und HTML-Markup im Vorlagentext dargestellt. Standard ist **Nein**.                     |
+
+!!! info "Als HTML senden -- ab Version 39"
+    Der Schalter ist keine Checkbox, sondern eine **Ja/Nein-Auswahl**, und steht standardmäßig auf **Nein**. Bestehende Vorlagen versenden also weiterhin reine Text-Mails, bis du sie umstellst.
+
+    Beim Umschalten auf **Ja** wechselt zugleich der Editor für den Benachrichtigungstext: Statt des einfachen Textfeldes erscheint ein WYSIWYG-Editor.
+
+    Die Umstellung zwischen HTML- und Text-E-Mails wird **erst nach dem Speichern aktiv**. i-doit blendet dazu einen entsprechenden Hinweis ein, der bis zum Speichern stehen bleibt.
 
 ## Konfiguration des Aufrufs mit CLI
 
