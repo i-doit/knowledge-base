@@ -1,5 +1,5 @@
 ---
-title: Update Anleitung von i-doit 1.7.4 zu 34
+title: Update Anleitung von i-doit 1.7.4 zu 38
 description: i-doit update guide
 icon: fontawesome/brands/linux
 status:
@@ -8,7 +8,7 @@ lang: de
 
 ## Wichtige Informationen bevor du beginnst
 
-Hier findest du eine kurze Anleitung zum Aktualisieren deines i-doit auf i-doit 31.<br>
+Hier findest du eine kurze Anleitung zum Aktualisieren deines i-doit auf i-doit 38.<br>
 Möglicherweise musst du dein Betriebssystem aktualisieren.<br>
 Diese Anweisungen gelten für **Debian**, die verwendeten Befehle unterscheiden sich in anderen Betriebssystemen. Bevor du beginnst, lädst du alle Updates herunter, die du durchführen musst, und kopiere sie in den i-doit-Stammordner.
 
@@ -850,7 +850,7 @@ entpacken.
 
 Wenn du gefragt werden, überschreiben du alles, indem du **A** eingibst.
 
-Im Web-Interface-Updater Überprüfe, ob das Update auf Version 33 angezeigt und ausgewählt ist, und führst du dann das Update durch.
+Im Web-Interface-Updater Überprüfe, ob das Update auf Version 34 angezeigt und ausgewählt ist, und führst du dann das Update durch.
 
 [![Aktualisierung von 29 auf 34](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/14-u18-119.png)](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/14-u18-119.png)
 
@@ -858,6 +858,32 @@ Im Web-Interface-Updater Überprüfe, ob das Update auf Version 33 angezeigt und
     Bitte nimmst du dich die Zeit, um die Logs durchzusehen und zu überprüfen, ob ein Fehler aufgetreten ist.
 
 !!! success "**Überprüfe das System und i-doit**"
+
+## Aktualisierung von 34 auf 38
+
+Version 35 kann nicht übersprungen werden: Die Versionen 36, 37 und 38 setzen eine installierte Version 35 voraus (siehe [Kompatibilitätsmatrix](../installation/systemvoraussetzungen.md#kompatibilitatsmatrix)). Version 35 läuft noch mit PHP 8.1 (veraltet), ab Version 36 ist PHP 8.2 oder neuer erforderlich, Version 38 setzt MariaDB 10.6 oder neuer voraus. Aktualisiere bei Bedarf zuerst PHP und MariaDB, siehe [PHP aktualisieren (Debian/Ubuntu)](../wartung-und-betrieb/php-update.md).
+
+Bereite zuerst das Update auf Version 35 über die CLI vor, indem du den i-doit-Ordner unter `/var/www/html/` öffnest und das Update-Paket entpackst:
+
+```sh
+sudo -u www-data unzip idoit-35-update.zip
+```
+
+Wenn du gefragt wirst, überschreibe alles, indem du **A** eingibst.
+
+Überprüfe im Web-Interface-Updater, ob das Update auf Version 35 angezeigt und ausgewählt ist, und führe das Update durch.
+
+!!! success "**Überprüfe die Update-Logs**"
+    Bitte nimm dir die Zeit, die Logs durchzusehen und zu prüfen, ob ein Fehler aufgetreten ist.
+
+Aktualisiere anschließend auf demselben Weg von 35 direkt auf 38 mit dem Paket `idoit-38-update.zip`. Alternativ lassen sich beide Schritte über die [Konsole](../wartung-und-betrieb/update-einspielen.md) durchführen:
+
+```sh
+sudo -u www-data php console.php update -u {username} -p {password} -z /var/www/html/idoit-38-update.zip --v 38
+```
+
+!!! success "**Überprüfe das System und i-doit**"
+    Führe nach dem Update die Schritte unter [Nach dem Update](../wartung-und-betrieb/update-einspielen.md#nach-dem-update) aus.
 
 ## Quellen
 
