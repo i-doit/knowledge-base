@@ -37,65 +37,65 @@ Open the update via one of the following methods:
 *   Quicklaunch widget on the dashboard
 *   Direct URL: `http://i-doit-host/i-doit/?load=update`
 
-[![Update via Dashboard](../assets/images/de/wartung-und-betrieb/update/1-update.png)](../assets/images/de/wartung-und-betrieb/update/1-update.png)
+[![Update via Dashboard](../assets/images/en/maintenance-and-operation/update/1-update.png)](../assets/images/en/maintenance-and-operation/update/1-update.png)
 
 i-doit checks the current system status. If something is not right, compare the [system requirements](../installation/system-requirements.md) and [system settings](../installation/manual-installation/system-settings.md). After adjustments, everything should be green or show "OK".
 
 ### Step 1: i-doit Update and Compatibility Check
 
-[![i-doit update](../assets/images/de/wartung-und-betrieb/update/2-update.png)](../assets/images/en/maintenance-and-operation/update/2-update.png)
+[![i-doit update](../assets/images/en/maintenance-and-operation/update/2-update.png)](../assets/images/en/maintenance-and-operation/update/2-update.png)
 
 ### Step 2: Available Updates
 
 Here you can see all available update packages.
 
-[![Update-Available-Check](../assets/images/de/wartung-und-betrieb/update/3-update.png)](../assets/images/de/wartung-und-betrieb/update/3-update.png)
+[![Update-Available-Check](../assets/images/en/maintenance-and-operation/update/3-update.png)](../assets/images/en/maintenance-and-operation/update/3-update.png)
 
 *   **Check for a new version** -- checks which latest version is available.
 *   **Download** -- downloads the update package and extracts it.
 *   If you have a URL, paste it in and click **Download and extract**.
 
-[![Update-Available-Download](../assets/images/de/wartung-und-betrieb/update/4-update.png)](../assets/images/de/wartung-und-betrieb/update/4-update.png)
+[![Update-Available-Download](../assets/images/en/maintenance-and-operation/update/4-update.png)](../assets/images/en/maintenance-and-operation/update/4-update.png)
 
 Select the new version and click **Next**. Under **see changelog** you will find a list of changes.
 
-[![Update-Available-Donwload](../assets/images/de/wartung-und-betrieb/update/5-update.png)](../assets/images/de/wartung-und-betrieb/update/5-update.png)
+[![Update-Available-Donwload](../assets/images/en/maintenance-and-operation/update/5-update.png)](../assets/images/en/maintenance-and-operation/update/5-update.png)
 
 ### Step 3: Database(s)
 
 The system database and all tenants are usually already selected. Leave the checkboxes checked unless you have a reason to exclude individual tenants.
 
-[![Update-DB](../assets/images/de/wartung-und-betrieb/update/6-update.png)](../assets/images/de/wartung-und-betrieb/update/6-update.png)
+[![Update-DB](../assets/images/en/maintenance-and-operation/update/6-update.png)](../assets/images/en/maintenance-and-operation/update/6-update.png)
 
 ### Step 4: File Update
 
 At this point you should have a [backup](backup-and-restore/index.md). Click **Yes, I did a backup! - Start the update** to start the update.
 
-[![Update-Files](../assets/images/de/wartung-und-betrieb/update/7-update.png)](../assets/images/de/wartung-und-betrieb/update/7-update.png)
+[![Update-Files](../assets/images/en/maintenance-and-operation/update/7-update.png)](../assets/images/en/maintenance-and-operation/update/7-update.png)
 
 ### Step 5: Overview (Log)
 
 Check the log: green "DONE" means success, red "ERROR" indicates a problem (often missing write permissions). If all entries are green, click **Next**.
 
-[![Update-Overview](../assets/images/de/wartung-und-betrieb/update/8-update.png)](../assets/images/de/wartung-und-betrieb/update/8-update.png)
+[![Update-Overview](../assets/images/en/maintenance-and-operation/update/8-update.png)](../assets/images/en/maintenance-and-operation/update/8-update.png)
 
 ### Step 6: Migration
 
 Depending on the update, changes are made to existing data. The "Migration" step executes these and reports whether the changes were successful.
 
-[![Update-Migration](../assets/images/de/wartung-und-betrieb/update/9-update.png)](../assets/images/de/wartung-und-betrieb/update/9-update.png)
+[![Update-Migration](../assets/images/en/maintenance-and-operation/update/9-update.png)](../assets/images/en/maintenance-and-operation/update/9-update.png)
 
 ### Step 7: Attribute Migration
 
 After the so-called "Property Migration", everything should also be displayed in green here.
 
-[![Update-Attributes](../assets/images/de/wartung-und-betrieb/update/10-update.png)](../assets/images/de/wartung-und-betrieb/update/10-update.png)
+[![Update-Attributes](../assets/images/en/maintenance-and-operation/update/10-update.png)](../assets/images/en/maintenance-and-operation/update/10-update.png)
 
 ### Step 8: Completion
 
 The update is complete. Details can be found in the linked log file. Click **Run i-doit v.[VERSION]** to return. Then clear the browser and i-doit cache under **Administration > [Tenant Name] Administration > System Repair and Cleanup**.
 
-[![Update-Complete](../assets/images/de/wartung-und-betrieb/update/11-update.png)](../assets/images/de/wartung-und-betrieb/update/11-update.png)
+[![Update-Complete](../assets/images/en/maintenance-and-operation/update/11-update.png)](../assets/images/en/maintenance-and-operation/update/11-update.png)
 
 ## Prepare Update via the Console
 

@@ -18,7 +18,7 @@ After a new version is released, you upload the updated package from the [Custom
 
 For a user to be able to create templates and generate documents, you need to assign the corresponding [rights](../../efficient-documentation/permission-management/index.md). This is possible in the i-doit Administration under **Authorization System > Rights Assignment > Documents** when the add-on is installed.
 
-[![Rights assignment](../../assets/images/de/i-doit-add-ons/documents/vorbereitung/1-vor.png)](../../assets/images/de/i-doit-add-ons/documents/vorbereitung/1-vor.png)
+[![Rights assignment](../../assets/images/en/i-doit-add-ons/documents/preperation/1-dp.png)](../../assets/images/en/i-doit-add-ons/documents/preperation/1-dp.png)
 
 The following permissions are available:
 
@@ -39,6 +39,6 @@ The add-on makes the [category](../../basics/it-documentation-structure.md) "Doc
 
 After all preparations are complete, you can access the add-on via **Extras > Documents**.
 
-[![Accessing the add-on](../../assets/images/de/i-doit-add-ons/documents/vorbereitung/2-vor.png)](../../assets/images/de/i-doit-add-ons/documents/vorbereitung/2-vor.png)
+[![Accessing the add-on](../../assets/images/en/i-doit-add-ons/documents/preperation/2-dp.png)](../../assets/images/en/i-doit-add-ons/documents/preperation/2-dp.png)
 
 The appearance of the "Extras" menu may vary due to different rights and/or additional installed add-ons.

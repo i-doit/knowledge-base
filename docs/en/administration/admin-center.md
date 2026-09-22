@@ -21,7 +21,7 @@ You can reach the Admin Center in two ways:
 1. Via the **Admin Center** link below the i-doit login form
 2. Directly via the URL `https://your-instance/admin/`
 
-[![Login](../assets/images/de/administration/admin-center/1-ac.png)](../assets/images/de/administration/admin-center/1-ac.png)
+[![Login](../assets/images/en/system-administration/admin-center/1-ac.png)](../assets/images/en/system-administration/admin-center/1-ac.png)
 
 !!! warning "Forgot your password?"
     If you can no longer log in, the password can only be reset via the [i-doit console utility](../automation-and-integration/cli/index.md).
@@ -33,7 +33,7 @@ You can reach the Admin Center in two ways:
 
 Shows the installed i-doit version. Under **Actions** you can download the **i-doit environment info file** — an XML file with system settings that is very helpful for [troubleshooting](troubleshooting/index.md).
 
-[![Overview](../assets/images/de/administration/admin-center/3-ac.png)](../assets/images/de/administration/admin-center/3-ac.png)
+[![Overview](../assets/images/en/system-administration/admin-center/3-ac.png)](../assets/images/en/system-administration/admin-center/3-ac.png)
 
 ## Tenants
 
@@ -41,19 +41,19 @@ Here you manage tenants — relevant for multi-tenant licenses. You can create n
 
 !!! warning "A deleted tenant can only be restored from a [backup](../maintenance-and-operation/backup-and-restore/index.md)."
 
-[![Tenants](../assets/images/de/administration/admin-center/4-ac.png)](../assets/images/de/administration/admin-center/4-ac.png)
+[![Tenants](../assets/images/en/system-administration/admin-center/4-ac.png)](../assets/images/en/system-administration/admin-center/4-ac.png)
 
 ## Licenses
 
 Here you import your [license](../maintenance-and-operation/licensing.md).
 
-[![Licenses](../assets/images/de/administration/admin-center/5-ac.png)](../assets/images/de/administration/admin-center/5-ac.png)
+[![Licenses](../assets/images/en/system-administration/admin-center/5-ac.png)](../assets/images/en/system-administration/admin-center/5-ac.png)
 
 ## Add-ons
 
 Here you install and manage [i-doit add-ons](../i-doit-add-ons/index.md).
 
-[![Add-ons](../assets/images/de/administration/admin-center/6-ac.png)](../assets/images/de/administration/admin-center/6-ac.png)
+[![Add-ons](../assets/images/en/system-administration/admin-center/6-ac.png)](../assets/images/en/system-administration/admin-center/6-ac.png)
 
 ## System settings
 
@@ -191,7 +191,7 @@ Here you change three basic settings:
 - **Security configuration** — Select encryption method
 - **Connection to i-doit System Database** — Change database credentials
 
-[![Configuration](../assets/images/de/administration/admin-center/7-ac.png)](../assets/images/de/administration/admin-center/7-ac.png)
+[![Configuration](../assets/images/en/system-administration/admin-center/7-ac.png)](../assets/images/en/system-administration/admin-center/7-ac.png)
 
 !!! tip "Emergency access"
     In an emergency, you can change the database settings directly in the file `src/config.inc.php` in the installation directory. During an [update](../maintenance-and-operation/i-doit-update.md), i-doit automatically creates a backup of this file.

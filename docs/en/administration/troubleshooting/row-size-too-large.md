@@ -11,9 +11,9 @@ lang: en
 
 During an i-doit update, an error message like "Row size too large" appears:
 
-[![Problem](../../assets/images/de/administration/troubleshooting/row-size-too-large/1-rstl.png)](../../assets/images/de/administration/troubleshooting/row-size-too-large/1-rstl.png)
+[![Problem](../../assets/images/en/system-administration/troubleshooting/row-size-too-large/1-rstl.png)](../../assets/images/en/system-administration/troubleshooting/row-size-too-large/1-rstl.png)
 
-[![Problem](../../assets/images/de/administration/troubleshooting/row-size-too-large/2-rstl.png)](../../assets/images/de/administration/troubleshooting/row-size-too-large/2-rstl.png)
+[![Problem](../../assets/images/en/system-administration/troubleshooting/row-size-too-large/2-rstl.png)](../../assets/images/en/system-administration/troubleshooting/row-size-too-large/2-rstl.png)
 
 ## Solution
 

@@ -9,7 +9,7 @@ lang: en
 
 With attribute settings, you define required fields, set advanced content defaults, and control the visibility of attributes. You can find this function in the [Data View](../index.md).
 
-[![Attribute Settings](../../../assets/images/de/administration/verwaltung/datenansicht/attribut-einstellungen/as-1.png)](../../../assets/images/de/administration/verwaltung/datenansicht/attribut-einstellungen/as-1.png)
+[![Attribute Settings](../../../assets/images/en/system-administration/administration/data-view/attribute-settings/as-1.png)](../../../assets/images/en/system-administration/administration/data-view/attribute-settings/as-1.png)
 
 ## Attribute visibility
 
@@ -19,13 +19,13 @@ To do this, click **Edit** next to the respective attribute name and select the 
 
 The configured visibility is applied for all users.
 
-[![Attribute visibility](../../../assets/images/de/administration/verwaltung/datenansicht/attribut-einstellungen/as-2.png)](../../../assets/images/de/administration/verwaltung/datenansicht/attribut-einstellungen/as-2.png)
+[![Attribute visibility](../../../assets/images/en/system-administration/administration/data-view/attribute-settings/as-2.png)](../../../assets/images/en/system-administration/administration/data-view/attribute-settings/as-2.png)
 
 ## Setting permissions
 
 [Permissions](../permissions.md) to view and edit attribute visibility can be assigned per user (group). For example, it is possible and often advisable that only certain user groups can hide attributes.
 
-[![set-permissions](../../../assets/images/de/administration/verwaltung/datenansicht/attribut-einstellungen/as-3.png)](../../../assets/images/de/administration/verwaltung/datenansicht/attribut-einstellungen/as-3.png)
+[![set-permissions](../../../assets/images/en/system-administration/administration/data-view/attribute-settings/as-3.png)](../../../assets/images/en/system-administration/administration/data-view/attribute-settings/as-3.png)
 
 ## Usage
 
@@ -33,10 +33,10 @@ Via the **Add** button, you select categories (global, specific, or custom). The
 
 Via the pencil icon, you edit the visibility and validation of an attribute. By default, all attributes are visible.
 
-[![button-displayed](../../../assets/images/de/administration/verwaltung/datenansicht/attribut-einstellungen/as-4.png)](../../../assets/images/de/administration/verwaltung/datenansicht/attribut-einstellungen/as-4.png)<br>
+[![button-displayed](../../../assets/images/en/system-administration/administration/data-view/attribute-settings/as-4.png)](../../../assets/images/en/system-administration/administration/data-view/attribute-settings/as-4.png)<br>
 In this state, the visibility on the overview page is labeled **Visible**.
 If you set the visibility to **Hidden**, the display is adjusted accordingly<br>
-[![button-hidden](../../../assets/images/de/administration/verwaltung/datenansicht/attribut-einstellungen/as-5.png)](../../../assets/images/de/administration/verwaltung/datenansicht/attribut-einstellungen/as-5.png)<br>
+[![button-hidden](../../../assets/images/en/system-administration/administration/data-view/attribute-settings/as-5.png)](../../../assets/images/en/system-administration/administration/data-view/attribute-settings/as-5.png)<br>
 
 **Object title**, **Status**, and **CMDB status** **cannot** be hidden. The corresponding columns display a note "Cannot be hidden".
 
@@ -53,6 +53,6 @@ This change is confirmed or rejected via a Yes/No selection. -->
 
 The third option allows you to hide the selected attributes only on overview pages; in the regular categories, these attributes continue to be displayed. This is also labeled accordingly on the overview page:
 
-[![button-hidden-on-overview](../../../assets/images/de/administration/verwaltung/datenansicht/attribut-einstellungen/as-6.png)](../../../assets/images/de/administration/verwaltung/datenansicht/attribut-einstellungen/as-1.png)
+[![button-hidden-on-overview](../../../assets/images/en/system-administration/administration/data-view/attribute-settings/as-6.png)](../../../assets/images/en/system-administration/administration/data-view/attribute-settings/as-1.png)
 
 You remove unwanted entries by selecting them and clicking **Remove**.

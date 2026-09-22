@@ -22,7 +22,7 @@ This example assumes an i-doit instance that was set up with the [i-doit Windows
 1. Open a text editor and create a new file.
 2. Save it as **"i-doit-jobs.bat"**.
 
-[![create-batch](../assets/images/de/automatisierung-und-integration/aufgabenplanung-und-cronjobs/1-auc.png)](../assets/images/de/automatisierung-und-integration/aufgabenplanung-und-cronjobs/1-auc.png)
+[![create-batch](../assets/images/en/automation-and-integration/task-scheduling-and-cronjobs/1-auc.png)](../assets/images/en/automation-and-integration/task-scheduling-and-cronjobs/1-auc.png)
 
 Fill the file with commands from the [i-doit console utility](../automation-and-integration/cli/index.md). Example content:
 
@@ -57,20 +57,20 @@ For the batch file to run automatically, create a **scheduled task**:
 1. Open **Task Scheduler** via the Windows search.
 2. Create a "Basic Task" under the Actions tab:
 
-[![Create basic task](../assets/images/de/automatisierung-und-integration/aufgabenplanung-und-cronjobs/2-auc.png)](../assets/images/de/automatisierung-und-integration/aufgabenplanung-und-cronjobs/2-auc.png)
+[![Create basic task](../assets/images/en/automation-and-integration/task-scheduling-and-cronjobs/2-auc.png)](../assets/images/en/automation-and-integration/task-scheduling-and-cronjobs/2-auc.png)
 
 3. Assign a name and optionally a description.
 4. Set the trigger -- it determines when the task runs. In this example: **Daily at 4:00 AM**.
 
-[![Set trigger](../assets/images/de/automatisierung-und-integration/aufgabenplanung-und-cronjobs/3-auc.png)](../assets/images/de/automatisierung-und-integration/aufgabenplanung-und-cronjobs/3-auc.png)
+[![Set trigger](../assets/images/en/automation-and-integration/task-scheduling-and-cronjobs/3-auc.png)](../assets/images/en/automation-and-integration/task-scheduling-and-cronjobs/3-auc.png)
 
 5. Select **"Start a program"** as the action and specify the batch file.
 
-[![Run program](../assets/images/de/automatisierung-und-integration/aufgabenplanung-und-cronjobs/4-auc.png)](../assets/images/de/automatisierung-und-integration/aufgabenplanung-und-cronjobs/4-auc.png)
+[![Run program](../assets/images/en/automation-and-integration/task-scheduling-and-cronjobs/4-auc.png)](../assets/images/en/automation-and-integration/task-scheduling-and-cronjobs/4-auc.png)
 
 6. Review your settings and complete the configuration.
 7. Open the properties of the created task and select the option **"Run whether user is logged on or not"** on the General page.
 
-[![Adjust properties](../assets/images/de/automatisierung-und-integration/aufgabenplanung-und-cronjobs/5-auc.png)](../assets/images/de/automatisierung-und-integration/aufgabenplanung-und-cronjobs/5-auc.png)
+[![Adjust properties](../assets/images/en/automation-and-integration/task-scheduling-and-cronjobs/5-auc.png)](../assets/images/en/automation-and-integration/task-scheduling-and-cronjobs/5-auc.png)
 
 Task scheduling is now complete. The task will execute the batch file with all specified commands daily at 4:00 AM.

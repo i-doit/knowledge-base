@@ -11,14 +11,14 @@ With this function, you modify the data structure of your tenant -- i.e., the as
 
 The configuration is divided into three columns: ==Object Type Groups==, ==Object Types==, and ==Categories==. In each column, every row has a ==dotted area== that you can use to change the order via drag and drop.
 
-[![Layout](../../../assets/images/de/administration/verwaltung/datenstruktur/1-ds.png)](../../../assets/images/de/administration/verwaltung/datenstruktur/1-ds.png)
+[![Layout](../../../assets/images/en/system-administration/administration/data-structure/1-ds.png)](../../../assets/images/en/system-administration/administration/data-structure/1-ds.png)
 
 ## Customizing object groups, object types, and categories
 
 In all three main fields, you can switch to edit mode by pressing the ==Customize button==.
 Here you can ==edit the assignments of the respective object groups==, but also create and develop new groups, object types, or categories.
 
-[![Customize](../../../assets/images/de/administration/verwaltung/datenstruktur/2-ds.png)](../../../assets/images/de/administration/verwaltung/datenstruktur/2-ds.png)
+[![Customize](../../../assets/images/en/system-administration/administration/data-structure/2-ds.png)](../../../assets/images/en/system-administration/administration/data-structure/2-ds.png)
 
 ## Editing the assignments
 
