@@ -797,6 +797,7 @@ nav:
       - Upload and Link Files: use-cases/upload-and-link-files.md
       - Documenting Databases: use-cases/documenting-databases.md
       - Documenting Licenses: use-cases/documenting-licenses.md
+      - End of Life (EOL) Documentation: use-cases/end-of-life.md
       - Populate Excel with i-doit Data: use-cases/populate-excel-with-i-doit-data.md
       - Geo Coordinates: use-cases/geo-koordinaten.md
       - i-doit - Patch Manager bridge: use-cases/i-doit-patch-manager-bridge.md
