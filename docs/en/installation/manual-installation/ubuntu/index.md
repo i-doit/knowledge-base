@@ -1,10 +1,12 @@
 ---
-title: Ubuntu 24.04.1 GNU/Linux
-description: i-doit installation on Ubuntu 24.04.1
+title: Ubuntu 24.04 LTS GNU/Linux
+description: i-doit installation on Ubuntu 24.04 LTS
 icon: material/ubuntu
 status:
 lang: en
 ---
+
+!!! note "Tested with i-doit **38** and **Ubuntu 24.04.4 LTS**"
 
 We explain which packages need to be installed and configured in a few steps in this article. We use an environment without a **desktop**.
 
@@ -62,7 +64,6 @@ sudo nano /etc/php/8.3/mods-available/i-doit.ini
 ```ini
 allow_url_fopen = Yes
 file_uploads = On
-magic_quotes_gpc = Off
 max_execution_time = 300
 max_file_uploads = 42
 max_input_time = 60
@@ -70,7 +71,6 @@ max_input_vars = 10000
 memory_limit = 256M
 post_max_size = 128M
 register_argc_argv = On
-register_globals = Off
 short_open_tag = On
 upload_max_filesize = 128M
 display_errors = Off
@@ -108,11 +108,10 @@ sudo nano /etc/apache2/sites-available/i-doit.conf
 <!-- cSpell:disable -->
 ```conf
 <VirtualHost *:80>
-        ServerAdmin i-doit@example.net
+    ServerAdmin i-doit@example.net
 
-        DocumentRoot /var/www/html/
-DirectoryIndex index.php
-DocumentRoot /var/www/html
+    DirectoryIndex index.php
+    DocumentRoot /var/www/html
 
     <Directory /var/www/html>
         ## See https://httpd.apache.org/docs/2.2/mod/core.html#allowoverride
@@ -263,10 +262,13 @@ DocumentRoot /var/www/html
 <!-- cSpell:enable -->
 !!! note "i-doit ships custom Apache settings in files named **.htaccess**. These must be reviewed after each update and updated in the VirtualHost configuration."
 
-In the next step, the new VHost and the required Apache module **rewrite** are activated, and the Apache web server is restarted:
+In the next step, the new VHost and the required Apache modules are activated, and the Apache web server and PHP-FPM are restarted:
 
 ```shell
-sudo a2ensite i-doit && sudo a2enmod rewrite proxy_fcgi setenvif && sudo systemctl restart apache2 php8.3-fpm
+sudo a2dismod mpm_prefork
+sudo a2enmod mpm_event proxy proxy_fcgi setenvif rewrite
+sudo a2ensite i-doit
+sudo systemctl restart apache2 php8.3-fpm
 ```
 
 ### MariaDB

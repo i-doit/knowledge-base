@@ -1,6 +1,6 @@
 ---
-title: Ubuntu 24.04.1 GNU/Linux
-description: i-doit installation auf Ubuntu 24.04.1
+title: Ubuntu 24.04 LTS GNU/Linux
+description: i-doit installation auf Ubuntu 24.04 LTS
 icon: material/ubuntu
 status:
 lang: de

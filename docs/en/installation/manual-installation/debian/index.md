@@ -6,6 +6,8 @@ status:
 lang: en
 ---
 
+!!! note "Tested with i-doit **38** and **Debian 13 "trixie"**"
+
 We explain which packages need to be installed and configured in a few steps in this article. We use an environment **without a desktop**.
 
 !!! warning ""
