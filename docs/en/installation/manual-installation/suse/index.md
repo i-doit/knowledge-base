@@ -6,15 +6,15 @@ status:
 lang: en
 ---
 
-!!! note "Tested with i-doit **32**"
+!!! note "Tested with i-doit **38** and **openSUSE Leap 15.6** (compatible with SLES 15 SP6)"
 
 We explain which packages need to be installed and configured in a few steps in this article.
 
 ## System Requirements
 
-The general [system requirements](../../system-requirements.md).
+The general [system requirements](../../system-requirements.md) apply.
 
-This article refers to [**SUSE Linux Enterprise Server 15 SP6**](https://www.suse.com/). To determine which version is in use, you can run the following command in the console:
+This article refers to [**openSUSE Leap 15.6**](https://www.opensuse.org/) and is also compatible with **SUSE Linux Enterprise Server 15 SP6**. To determine which version is in use, you can run the following command in the console:
 
 ```sh
 cat /etc/os-release
@@ -35,51 +35,33 @@ The standard repositories of SUSE Linux Enterprise Server (SLES) already include
 -   the **Apache** HTTP Server 2.4,
 -   the scripting language **PHP** 8.2,
 -   the database management system **MariaDB** 10.11, and
--   the caching server **memcached**
+-   the caching server **memcached**.
 
-to install.
-
-First, the activation of additional add-ons is required:
-
--   **Web and Scripting Module**
-
-To check whether the **Web and Scripting Add-on Module** is activated, run the following command:
-
-```sh
-sudo zypper repos -E
-```
-
-If it is not activated, it can be activated with the following command:
-
-```sh
-sudo suseconnect -p sle-module-web-scripting/15.6/x86_64
-```
-
-The packages are then updated using zypper:
+First, the packages are updated with zypper:
 
 ```sh
 sudo zypper refresh && sudo zypper update
 ```
 
-Now the packages required by i-doit are installed:
+Now the packages required by i-doit are installed. PHP 8.2 is included in the standard repositories of openSUSE Leap 15.6, so no additional repository is needed:
 
 ```sh
-sudo zypper install vim apache2 apache2-mod-php8 mariadb-server mariadb-client memcached php8 php8-{bz2,ctype,bcmath,curl,gd,gettext,fileinfo,fpm,ldap,mbstring,memcached,mysql,odbc,opcache,openssl,phar,posix,pgsql,pdo,snmp,soap,sockets,sqlite,zip,zlib}
+sudo zypper install apache2 apache2-mod_fcgid mariadb mariadb-client memcached sudo unzip wget moreutils php8 php8-cli php8-fpm php8-fpm-apache php8-bcmath php8-curl php8-dom php8-gd php8-ldap php8-mbstring php8-mysql php8-opcache php8-openssl php8-pdo php8-pgsql php8-soap php8-xmlreader php8-xmlwriter php8-xsl php8-zip php8-zlib
 ```
 
-The following command is required to ensure the necessary services are started at boot:
+To start the required services at boot time, this command is necessary:
 
 ```sh
-sudo systemctl enable apache2 mysql memcached
+sudo systemctl enable apache2 php-fpm mariadb memcached
 ```
 
 Then the services are started:
 
 ```sh
-sudo systemctl start apache2 mysql memcached
+sudo systemctl start apache2 php-fpm mariadb memcached
 ```
 
-!!! info "For **HTTPS**, additional steps must be performed that are not covered here, see [Security and Protection](../../../maintenance-and-operation/security-and-protection.md)"
+!!! info "For **HTTPS**, further steps are required that are not covered here, see [Security and protection](../../../maintenance-and-operation/security-and-protection.md)"
 
 ## Configuration
 
@@ -87,31 +69,14 @@ The installed packages for Apache HTTP Server, PHP, and MariaDB already come wit
 
 ### PHP-FPM Configuration
 
-First, the old configuration is deactivated by renaming:
+The default pool configuration is adjusted so that PHP-FPM listens on the right socket and runs as the Apache user:
 
 ```sh
-sudo mv /etc/php8/fpm/php-fpm.d/www.conf /etc/php8/fpm/php-fpm.d/www.conf.bak
-```
-
-and then a new file is created and populated with the settings:
-
-```sh
-sudo vi /etc/php8/fpm/php-fpm.d/i-doit.conf
-```
-
-```ini
-[i-doit]
-listen = /var/run/php-fpm/php8-fpm.sock
-user = wwwrun
-group = www
-listen.owner = wwwrun
-listen.group = www
-pm = dynamic
-pm.max_children = 50
-pm.start_servers = 5
-pm.min_spare_servers = 5
-pm.max_spare_servers = 35
-security.limit_extensions = .php
+sudo sed -i "s|^listen = .*|listen = /var/run/php-fpm.sock|" /etc/php8/fpm/php-fpm.d/www.conf
+sudo sed -i "s|^;*listen.owner = .*|listen.owner = wwwrun|" /etc/php8/fpm/php-fpm.d/www.conf
+sudo sed -i "s|^;*listen.group = .*|listen.group = www|" /etc/php8/fpm/php-fpm.d/www.conf
+sudo sed -i "s|^user = .*|user = wwwrun|" /etc/php8/fpm/php-fpm.d/www.conf
+sudo sed -i "s|^group = .*|group = www|" /etc/php8/fpm/php-fpm.d/www.conf
 ```
 
 ### PHP Configuration
@@ -126,10 +91,9 @@ sudo vi /etc/php8/conf.d/i-doit.ini
 
 This file receives the following content:
 
-```sh
+```ini
 allow_url_fopen = Yes
 file_uploads = On
-magic_quotes_gpc = Off
 max_execution_time = 300
 max_file_uploads = 42
 max_input_time = 60
@@ -137,7 +101,6 @@ max_input_vars = 10000
 memory_limit = 256M
 post_max_size = 128M
 register_argc_argv = On
-register_globals = Off
 short_open_tag = On
 upload_max_filesize = 128M
 display_errors = Off
@@ -152,7 +115,7 @@ session.cookie_lifetime = 0
 mysqli.default_socket = /var/run/mysql/mysql.sock
 ```
 
-The `memory_limit` must be increased if needed, e.g., for very large reports or extensive documents.
+The `memory_limit` must be increased if needed, e.g. for very large reports or extensive documents.
 The value (in seconds) of `session.gc_maxlifetime` should be greater than or equal to the **Session Timeout** in the [system settings](../system-settings.md) of i-doit.
 The `date.timezone` parameter should be adjusted to the local time zone (see [list of supported time zones](http://php.net/manual/en/timezones.php)).
 
@@ -172,8 +135,8 @@ ServerName i-doit
     ServerAdmin i-doit@example.net
 
     DirectoryIndex index.php
-    DocumentRoot /srv/www/htdocs/i-doit
-    <Directory /srv/www/htdocs/i-doit>
+    DocumentRoot /srv/www/htdocs
+    <Directory /srv/www/htdocs>
     ## See https://httpd.apache.org/docs/2.4/mod/core.html#allowoverride
     AllowOverride None
 
@@ -312,9 +275,9 @@ ServerName i-doit
     ErrorLog /var/log/apache2/error_log
     CustomLog /var/log/apache2/access_log combined
 
-    <FilesMatch "\\.php$">
+    <FilesMatch "\.php$">
         <If "-f %{REQUEST_FILENAME}">
-            SetHandler "proxy:unix:/var/run/php-fpm/php8-fpm.sock|fcgi://localhost"
+            SetHandler "proxy:unix:/var/run/php-fpm.sock|fcgi://localhost"
         </If>
     </FilesMatch>
 </VirtualHost>
@@ -322,48 +285,33 @@ ServerName i-doit
 
 !!! note "i-doit ships custom Apache settings in files named .htaccess. These must be reviewed after each update and updated in the VirtualHost configuration."
 
-In the next step, the necessary Apache2 HTTP Server modules **php8**, **rewrite**, and **mod_access_compat** are activated:
+In the next step, the required Apache HTTP Server modules are activated and the services are restarted:
 
 ```sh
-sudo a2enmod proxy && sudo a2enmod proxy_fcgi && sudo a2enmod php8 && sudo a2enmod rewrite && sudo a2enmod mod_access_compat
-```
-
-!!! note "Unfortunately, each module must be activated individually"
-
-and then restart the necessary services:
-
-```sh
+sudo a2enmod rewrite proxy proxy_fcgi
 sudo systemctl restart apache2 php-fpm
 ```
 
 ### MariaDB
 
-To ensure MariaDB delivers good performance and can be operated securely, a few steps are needed that should be carried out meticulously. This starts with a secure installation. **The recommendations should be followed**. The **root** user should receive a secure password:
+To ensure MariaDB delivers good performance and can be operated securely, a few steps are necessary that should be carried out meticulously. This starts with a secure installation. **The recommendations should be followed**. The **root** user should receive a secure password:
 
 ```sh
 sudo mysql_secure_installation
 ```
 
-To allow i-doit to use the **root** user during setup, open the MariaDB shell:
+So that i-doit may use the **root** user during setup, a password is set:
+
+!!! note "Please replace 'password' with a secure password"
 
 ```sh
-sudo mysql -uroot
+sudo mysql -uroot -e "SET PASSWORD FOR 'root'@'localhost' = PASSWORD('password'); FLUSH PRIVILEGES;"
 ```
 
-The following SQL statements are now executed in the MariaDB shell:
+The InnoDB shutdown mode still needs to be changed:
 
-!!! note "Please replace ('passwort') with your own password"
-
-```sql
-ALTER USER 'root'@'localhost' IDENTIFIED VIA mysql_native_password USING PASSWORD('passwort');
-```
-
-The InnoDB shutdown mode still needs to be changed. The value 0 causes a full purge and change buffer merge to be performed before MariaDB shuts down:
-
-```sql
-FLUSH PRIVILEGES;
-SET GLOBAL innodb_fast_shutdown = 0;
-EXIT;
+```sh
+sudo mysql -uroot -p -e "SET GLOBAL innodb_fast_shutdown = 0"
 ```
 
 A new file is created for the custom configuration settings:
@@ -407,8 +355,7 @@ innodb_flush_method = O_DIRECT
 innodb_lru_scan_depth = 2048
 table_definition_cache = 1024
 table_open_cache = 2048
-# Only if your have MySQL 5.6 or higher, do not use with MariaDB!
-#table_open_cache_instances = 4
+table_open_cache_instances = 8
 innodb_stats_on_metadata = 0
 sql-mode = ""
 ```
@@ -416,20 +363,7 @@ sql-mode = ""
 Finally, MariaDB is restarted:
 
 ```sh
-sudo systemctl restart mysql
-```
-
-and HTTP connections are allowed through the firewall:
-
-```sh
-sudo firewall-cmd --permanent --add-service=http && sudo firewall-cmd --reload
-```
-
-Before i-doit is accessible, [AppArmor](https://apparmor.net/) for PHP-FPM must either be **configured**, **deactivated**, or set to **complain** mode.
-In this guide, we use complain mode; it should be properly configured afterwards:
-
-```sh
-sudo aa-complain '/etc/apparmor.d/php-fpm'
+sudo systemctl restart mariadb
 ```
 
 ## Next Step
