@@ -157,3 +157,4 @@ Perform the following steps after every update:
 1. [Clear cache](../administration/management/tenant-management/system-repair-and-cleanup.md)
 2. [Rebuild search index](../administration/management/tenant-management/system-repair-and-cleanup.md)
 3. [Update reports](../evaluation/report-manager.md#updating-reports-after-an-update)
+4. Compare the `.htaccess` file shipped in the i-doit directory with your Apache configuration. Systems set up with the idoit-install script or according to our [installation guides](../installation/manual-installation/index.md) run with `AllowOverride None`, so the rules of the `.htaccess` file live in the VirtualHost configuration and changes must be carried over there.

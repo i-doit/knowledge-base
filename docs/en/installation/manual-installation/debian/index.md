@@ -44,16 +44,16 @@ to install:
 
 ```shell
 apt update
-apt install apache2 libapache2-mod-php mariadb-client mariadb-server memcached unzip sudo moreutils php php-{bcmath,cli,common,curl,gd,imagick,json,ldap,mbstring,memcached,mysql,pgsql,soap,xml,zip}
+apt install apache2 libapache2-mod-fcgid mariadb-client mariadb-server memcached unzip sudo moreutils php-{bcmath,cli,common,curl,fpm,gd,imagick,ldap,mbstring,memcached,mysql,opcache,pgsql,soap,xml,zip}
 ```
 
 ## Configuration
 
 The installed packages for Apache web server, PHP, and MariaDB already come with configuration files. It is recommended to store custom settings in separate files rather than modifying the existing configuration files. With each package upgrade, any divergent settings would be flagged or overwritten. The default configuration settings are supplemented or overridden by the custom ones.
 
-### PHP
+### PHP-FPM
 
-First, a new file is created and populated with the required settings:
+PHP runs as **PHP-FPM** and is connected to the Apache web server via `mod_proxy_fcgi`, exactly as the [idoit-install script](../../automatic-installation.md) sets it up. First, a new file is created and populated with the required settings:
 
 ```shell
 sudo nano /etc/php/8.4/mods-available/i-doit.ini
@@ -64,7 +64,6 @@ sudo nano /etc/php/8.4/mods-available/i-doit.ini
 ```ini
 allow_url_fopen = Yes
 file_uploads = On
-magic_quotes_gpc = Off
 max_execution_time = 300
 max_file_uploads = 42
 max_input_time = 60
@@ -72,7 +71,6 @@ max_input_vars = 10000
 memory_limit = 256M
 post_max_size = 128M
 register_argc_argv = On
-register_globals = Off
 short_open_tag = On
 upload_max_filesize = 128M
 display_errors = Off
@@ -110,11 +108,10 @@ sudo nano /etc/apache2/sites-available/i-doit.conf
 <!-- cSpell:disable -->
 ```shell
 <VirtualHost *:80>
-        ServerAdmin i-doit@example.net
+    ServerAdmin i-doit@example.net
 
-        DocumentRoot /var/www/html/
-DirectoryIndex index.php
-DocumentRoot /var/www/html
+    DirectoryIndex index.php
+    DocumentRoot /var/www/html
 
     <Directory /var/www/html>
         ## See https://httpd.apache.org/docs/2.2/mod/core.html#allowoverride
@@ -269,7 +266,7 @@ In the next step, the new VHost and the required Apache module **rewrite** are a
 
 ```shell
 sudo a2ensite i-doit
-sudo a2enmod rewrite proxy_fcgi setenvif
+sudo a2enmod mpm_event proxy proxy_fcgi setenvif rewrite
 sudo systemctl restart apache2 php8.4-fpm
 ```
 

@@ -810,6 +810,9 @@ mysqli.default_socket = /var/run/mysqld/mysqld.sock
 
 Änderungen aktivieren
 
+!!! info "PHP-FPM"
+    Die folgenden Befehle gelten für das Apache-Modul mod_php. Wurde dein System mit dem idoit-install Skript oder nach unseren aktuellen [Installationsanleitungen](../installation/manuelle-installation/index.md) eingerichtet, läuft PHP als PHP-FPM. Überspringe dann `a2dismod` und `a2enmod` an dieser Stelle und wechsle die PHP-FPM-Version wie in [PHP aktualisieren (Debian/Ubuntu)](../wartung-und-betrieb/php-update.md) beschrieben.
+
 ```sh
 sudo a2dismod php7.4
 sudo a2enmod php8.2
