@@ -604,6 +604,7 @@ nav:
           - LDAPS Debian Konfiguration: benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/ldap-tls.md
           - LDAPS i-doit für Windows: benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/i-doit-win-ldaps.md
           - Benutzer-/Gruppen-Synchronisierung: benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/so-werden-benutzer-und-gruppen-aus-dem-ad-ldap-importiert.md
+          - LDAP-Anmeldeattribut ändern: benutzerauthentifizierung-und-verwaltung/ldap-verzeichnis/anmeldeattribut-aendern.md
       - Zwei-Faktor-Authentisierung (2FA): benutzerauthentifizierung-und-verwaltung/2fa/index.md
       - SSO-Authentifizierung im Vergleich:
           - benutzerauthentifizierung-und-verwaltung/sso-vergleich/index.md

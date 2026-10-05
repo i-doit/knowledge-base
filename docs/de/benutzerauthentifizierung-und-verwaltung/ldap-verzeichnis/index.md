@@ -137,6 +137,8 @@ Falls die Fehlermeldung nicht aussagekräftig genug ist, erhöhe das Debug-Level
 
 Ohne weitere Einstellung (z.B. **Eindeutige Kennung**) identifiziert i-doit Objekte anhand des **Login**-Attributs aus der **Kategorie Personen > Login**.
 
+Möchtest du das Attribut hinter dem Benutzernamen später wechseln, zum Beispiel von `sAMAccountName` auf `userPrincipalName`, setze zuerst eine eindeutige Kennung, siehe [LDAP-Anmeldeattribut ändern](anmeldeattribut-aendern.md).
+
 ### Directories
 
 Unter **Verwaltung → Import und Schnittstellen → LDAP → Directories** richtest du das Attribut-Mapping ein. Beim Login fragt i-doit grundlegende Informationen des Benutzers ab und legt sie im Personen-Objekt ab. Wähle das zutreffende Directory aus und passe bei Bedarf die Zuweisung an. In der Regel sind die Felder bereits korrekt vorausgefüllt.

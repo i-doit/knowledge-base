@@ -606,6 +606,7 @@ nav:
           - LDAPS Debian Configuration: user-authentication-and-management/ldap-directory/ldap-tls.md
           - LDAPS i-doit for Windows: user-authentication-and-management/ldap-directory/i-doit-win-ldaps.md
           - User/Group Synchronization: user-authentication-and-management/ldap-directory/user-group-synchronization.md
+          - Changing the LDAP login attribute: user-authentication-and-management/ldap-directory/change-login-attribute.md
       - Two-Factor Authentication (2FA): user-authentication-and-management/2fa/index.md
       - SSO Authentication Comparison:
           - user-authentication-and-management/sso-comparison/index.md
