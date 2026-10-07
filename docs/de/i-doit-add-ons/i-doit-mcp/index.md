@@ -47,11 +47,18 @@ Ein Zugriffstoken ist das, was einem Client Zugang zum MCP-Server gibt. Ein eige
 
 [![Anleitung zum Verbinden](../../assets/images/de/i-doit-add-ons/i-doit-mcp/1-mcp-connect.png)](../../assets/images/de/i-doit-add-ons/i-doit-mcp/1-mcp-connect.png)
 
-Der **Einrichtungsstatus** prüft, ob das API Add-on verfügbar ist und ob die JSON-RPC API für den Mandanten eingeschaltet ist. Nur wenn beides erfüllt ist, können Tool-Aufrufe Daten lesen.
+Der **Einrichtungsstatus** zeigt vier Punkte:
+
+- **i-doit API Add-on**: ob das API Add-on installiert und geladen ist. Ohne das Add-on können keine Kategoriedaten gelesen werden.
+- **JSON-RPC API aktiviert**: ob die JSON-RPC API für den Mandanten eingeschaltet ist. Solange sie aus ist, wird jeder Tool-Aufruf abgewiesen.
+- **Berechtigungen pro Person**: Ein Client liest immer als die Person, zu der sein Token gehört. Dafür muss nichts konfiguriert werden.
+- **Schreibzugriff**: ob KI-Clients Daten ändern dürfen, siehe [Schreibzugriff](#schreibzugriff). Das ist keine Voraussetzung, Lesen funktioniert in jedem Fall.
+
+Nur wenn die ersten beiden Punkte erfüllt sind, können Tool-Aufrufe Daten lesen.
 
 ### 1. Zugriffstoken besorgen
 
-Lege auf der Seite **Zugriffstoken** mit **Token erstellen** ein Token an:
+Lege auf der Seite **Zugriffstoken** mit **Neu** ein Token an:
 
 1. Wähle das **Personenobjekt**, zu dem das Token gehört. Es lassen sich nur Personenobjekte auswählen.
 2. Gib optional eine **Bezeichnung** ein, zum Beispiel das Gerät oder den Client, auf dem das Token verwendet wird.
@@ -113,7 +120,7 @@ Füge die Konfiguration in deinen KI-Client ein. Der Client erkennt die verfügb
 Die Seite **Zugriffstoken** listet alle Token des Mandanten. Markiere ein oder mehrere Token und nutze die Schaltflächen in der Werkzeugleiste:
 
 - **Aktivieren** und **Deaktivieren** schalten ein Token ein oder aus. Ein Client mit einem deaktivierten Token funktioniert sofort nicht mehr.
-- **Löschen** entfernt ein Token endgültig. Das lässt sich nicht rückgängig machen.
+- **Bereinigen** entfernt ein Token endgültig. Das lässt sich nicht rückgängig machen.
 - **Schreiben erlauben** und **Nur lesen** legen fest, ob ein Token Daten ändern darf. Die Spalte **Zugriff** zeigt **nur lesen** oder **lesen und schreiben**.
 
 Neue Token sind immer **nur lesen**.

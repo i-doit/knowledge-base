@@ -28,7 +28,7 @@ The add-on is installed like every other add-on, see [Add-ons](../index.md). Aft
 
 ## Assigning rights
 
-Under **Administration → Permissions → i-doit MCP**, [permissions for persons and person groups](../../efficient-documentation/permission-management/index.md) can be adjusted:
+Under **Administration → User permissions → i-doit MCP**, [permissions for persons and person groups](../../efficient-documentation/permission-management/index.md) can be adjusted:
 
 | Right | Purpose |
 | --- | --- |
@@ -47,11 +47,18 @@ Open **Add-ons → i-doit MCP → How to connect**. The page shows the section *
 
 [![How to connect](../../assets/images/en/i-doit-add-ons/i-doit-mcp/1-mcp-connect.png)](../../assets/images/en/i-doit-add-ons/i-doit-mcp/1-mcp-connect.png)
 
-The **Setup status** checks whether the API add-on is available and whether the JSON-RPC API is switched on for the tenant. Only when both are met can tool calls read data.
+The **Setup status** shows four items:
+
+- **i-doit API add-on**: whether the API add-on is installed and loaded. Without it, category data cannot be read.
+- **JSON-RPC API switched on**: whether the JSON-RPC API is switched on for the tenant. While it is off, every tool call is refused.
+- **Per-person permissions**: a client always reads as the person its token belongs to. Nothing has to be configured for this.
+- **Write access**: whether AI clients may change data, see [Write access](#write-access). This is not a prerequisite, reading works either way.
+
+Only when the first two items are met can tool calls read data.
 
 ### 1. Get an access token
 
-Create a token on the **Access tokens** page with **Create token**:
+Create a token on the **Access tokens** page with **New**:
 
 1. Select the **Person object** the token belongs to. Only person objects can be selected.
 2. Optionally enter a **Label**, for example the device or client the token is used on.
@@ -113,7 +120,7 @@ Paste the configuration into your AI client. The client discovers the available 
 The **Access tokens** page lists all tokens of the tenant. Select one or more tokens and use the buttons in the toolbar:
 
 - **Enable** and **Disable** switch a token on or off. A client with a disabled token stops working immediately.
-- **Delete** removes a token for good. This cannot be undone.
+- **Purge** removes a token for good. This cannot be undone.
 - **Allow writing** and **Make read-only** set whether a token may change data. The column **Access** shows **read only** or **read and write**.
 
 New tokens are always **read only**.
