@@ -150,4 +150,4 @@ The **Request log** page lists every request of the AI clients with time, person
 
 | Version | Date | Changelog |
 | --- | --- | --- |
-| 1.0 | 2026-10-08 | Initial release |
+| 1.1.1 | 2026-10-08 | Initial release |
