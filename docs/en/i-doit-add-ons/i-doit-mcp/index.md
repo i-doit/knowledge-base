@@ -1,7 +1,7 @@
 ---
 title: i-doit MCP
 description: "With the i-doit MCP add-on, you connect an AI assistant to your IT documentation via the Model Context Protocol."
-icon:
+icon: addons/i-doit-mcp
 status: new
 lang: en
 ---

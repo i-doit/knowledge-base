@@ -1,7 +1,7 @@
 ---
 title: i-doit MCP
 description: "Mit dem i-doit MCP Add-on verbindest du einen KI-Assistenten über das Model Context Protocol mit deiner IT-Dokumentation."
-icon:
+icon: addons/i-doit-mcp
 status: new
 lang: de
 ---
