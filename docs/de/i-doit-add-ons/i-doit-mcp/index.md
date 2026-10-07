@@ -37,11 +37,15 @@ Unter **Verwaltung → Berechtigungen → i-doit MCP** können [Rechte für Pers
 | **Zugriffstoken verwalten** | Zugriffstoken ansehen, anlegen, aktivieren und deaktivieren (Anzeigen, Bearbeiten) sowie löschen (Löschen) |
 | **Zugriffstoken Schreibzugriff erteilen** | Zugriffstoken für das Schreiben freigeben oder wieder auf nur lesen setzen |
 
+[![Rechte für i-doit MCP](../../assets/images/de/i-doit-add-ons/i-doit-mcp/6-mcp-rights.png)](../../assets/images/de/i-doit-add-ons/i-doit-mcp/6-mcp-rights.png)
+
 Ein Zugriffstoken ist das, was einem Client Zugang zum MCP-Server gibt. Ein eigenes Recht dafür gibt es nicht. Um den Zugang zu entziehen, deaktivierst oder löschst du das Token.
 
 ## KI-Client verbinden
 
 Öffne **Add-ons → i-doit MCP → Anleitung zum Verbinden**. Die Seite zeigt den Abschnitt **Ihren KI-Assistenten in 3 Schritten verbinden**, den **Einrichtungsstatus** und die **Client-Konfiguration**.
+
+[![Anleitung zum Verbinden](../../assets/images/de/i-doit-add-ons/i-doit-mcp/1-mcp-connect.png)](../../assets/images/de/i-doit-add-ons/i-doit-mcp/1-mcp-connect.png)
 
 Der **Einrichtungsstatus** prüft, ob das API Add-on verfügbar ist und ob die JSON-RPC API für den Mandanten eingeschaltet ist. Nur wenn beides erfüllt ist, können Tool-Aufrufe Daten lesen.
 
@@ -54,6 +58,8 @@ Lege auf der Seite **Zugriffstoken** mit **Token erstellen** ein Token an:
 3. Speichere.
 
 Das neue Token wird nur einmal angezeigt. Kopiere es sofort. i-doit speichert nur einen Fingerabdruck, daher lässt sich das Token später nicht mehr anzeigen. Geht es verloren, löschst du das Token und legst ein neues an.
+
+[![Neues Zugriffstoken](../../assets/images/de/i-doit-add-ons/i-doit-mcp/3-mcp-new-token.png)](../../assets/images/de/i-doit-add-ons/i-doit-mcp/3-mcp-new-token.png)
 
 Ein Token gehört immer zu dem Mandanten, in dem es angelegt wurde, und funktioniert nur dort. Die Person eines Tokens lässt sich nachträglich nicht ändern. Lege stattdessen für die andere Person ein neues Token an.
 
@@ -112,6 +118,8 @@ Die Seite **Zugriffstoken** listet alle Token des Mandanten. Markiere ein oder m
 
 Neue Token sind immer **nur lesen**.
 
+[![Zugriffstoken](../../assets/images/de/i-doit-add-ons/i-doit-mcp/2-mcp-tokens.png)](../../assets/images/de/i-doit-add-ons/i-doit-mcp/2-mcp-tokens.png)
+
 ## Schreibzugriff
 
 Lesen funktioniert ohne weitere Einstellung. Schreiben braucht alles Folgende zugleich:
@@ -130,6 +138,8 @@ Passwörter werden nie an den KI-Client zurückgegeben und lassen sich über MCP
 
 Die Einstellungen findest du unter **Verwaltung → Add-ons → i-doit MCP**. Zum Ansehen und Ändern brauchst du das Recht für die Systemeinstellungen.
 
+[![Einstellungen von i-doit MCP](../../assets/images/de/i-doit-add-ons/i-doit-mcp/4-mcp-settings.png)](../../assets/images/de/i-doit-add-ons/i-doit-mcp/4-mcp-settings.png)
+
 | Einstellung | Bedeutung |
 | --- | --- |
 | **Standard-Ergebnisgrenze** | Wie viele Einträge ein Tool-Aufruf standardmäßig zurückgibt. Standardwert: 500. Ein Client kann weniger anfordern. Das Maximum ist 5000. |
@@ -145,6 +155,8 @@ Die Seite **Anfrage-Protokoll** listet jede Anfrage der KI-Clients mit Zeitpunkt
 
 - **Als CSV exportieren** lädt das vollständige Protokoll herunter. Der Filter auf der Seite gilt nicht für den Export.
 - **Log leeren** löscht alle Einträge. Das lässt sich nicht rückgängig machen.
+
+[![Anfrage-Protokoll](../../assets/images/de/i-doit-add-ons/i-doit-mcp/5-mcp-request-log.png)](../../assets/images/de/i-doit-add-ons/i-doit-mcp/5-mcp-request-log.png)
 
 ## Releases
 

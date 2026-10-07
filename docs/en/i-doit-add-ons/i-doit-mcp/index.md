@@ -37,11 +37,15 @@ Under **Administration → Permissions → i-doit MCP**, [permissions for person
 | **Manage access tokens** | View, create, enable and disable access tokens (View, Edit) and delete them (Delete) |
 | **Grant write access to access tokens** | Mark access tokens for writing or make them read-only again |
 
+[![Rights for i-doit MCP](../../assets/images/en/i-doit-add-ons/i-doit-mcp/6-mcp-rights.png)](../../assets/images/en/i-doit-add-ons/i-doit-mcp/6-mcp-rights.png)
+
 Holding an access token is what admits a client to the MCP server. There is no separate permission for it. To withdraw access, disable or delete the token.
 
 ## Connecting an AI client
 
 Open **Add-ons → i-doit MCP → How to connect**. The page shows the section **Connect your AI assistant in 3 steps**, a **Setup status** and the **Client configuration**.
+
+[![How to connect](../../assets/images/en/i-doit-add-ons/i-doit-mcp/1-mcp-connect.png)](../../assets/images/en/i-doit-add-ons/i-doit-mcp/1-mcp-connect.png)
 
 The **Setup status** checks whether the API add-on is available and whether the JSON-RPC API is switched on for the tenant. Only when both are met can tool calls read data.
 
@@ -54,6 +58,8 @@ Create a token on the **Access tokens** page with **Create token**:
 3. Save.
 
 The new token is shown only once. Copy it right away. i-doit only stores a fingerprint, so the token cannot be displayed again later. If you lose it, delete the token and create a new one.
+
+[![New access token](../../assets/images/en/i-doit-add-ons/i-doit-mcp/3-mcp-new-token.png)](../../assets/images/en/i-doit-add-ons/i-doit-mcp/3-mcp-new-token.png)
 
 A token always belongs to the tenant in which it was created and only works there. The person of a token cannot be changed afterwards. Create a new token for another person instead.
 
@@ -112,6 +118,8 @@ The **Access tokens** page lists all tokens of the tenant. Select one or more to
 
 New tokens are always **read only**.
 
+[![Access tokens](../../assets/images/en/i-doit-add-ons/i-doit-mcp/2-mcp-tokens.png)](../../assets/images/en/i-doit-add-ons/i-doit-mcp/2-mcp-tokens.png)
+
 ## Write access
 
 Reading works without any further setting. Writing needs all of the following at the same time:
@@ -130,6 +138,8 @@ Passwords are never returned to the AI client and cannot be written through MCP.
 
 The settings are located under **Administration → Add-ons → i-doit MCP**. Viewing and changing them requires the right for the system settings.
 
+[![i-doit MCP settings](../../assets/images/en/i-doit-add-ons/i-doit-mcp/4-mcp-settings.png)](../../assets/images/en/i-doit-add-ons/i-doit-mcp/4-mcp-settings.png)
+
 | Setting | Meaning |
 | --- | --- |
 | **Default result limit** | How many entries one tool call returns by default. Default value: 500. A client can ask for fewer. The maximum is 5000. |
@@ -145,6 +155,8 @@ The **Request log** page lists every request of the AI clients with time, person
 
 - **Export as CSV** downloads the complete log. The filter on the page does not apply to the export.
 - **Clear the log** deletes all entries. This cannot be undone.
+
+[![Request log](../../assets/images/en/i-doit-add-ons/i-doit-mcp/5-mcp-request-log.png)](../../assets/images/en/i-doit-add-ons/i-doit-mcp/5-mcp-request-log.png)
 
 ## Releases
 
