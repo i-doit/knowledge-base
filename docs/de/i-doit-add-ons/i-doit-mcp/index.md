@@ -13,10 +13,11 @@ Der Assistent arbeitet immer mit den Rechten der Person, zu der sein Zugriffstok
 
 ## Voraussetzungen
 
-- i-doit 39 oder neuer. Die Adresse, mit der sich der KI-Client verbindet (`src/mcp.php`), ist Teil von i-doit 39.
-- Das [i-doit API Add-on](../api/index.md), installiert und aktiv. Ohne das API Add-on lassen sich keine Kategoriedaten lesen. Objekttypen, die Suche und die allgemeinen Daten eines Objekts funktionieren auch ohne.
-- Die JSON-RPC API ist für den Mandanten eingeschaltet: **JSON-RPC API aktivieren** unter **Verwaltung → Add-ons → JSON-RPC API** steht auf **Ja**. Solange die Option aus ist, wird jede Anfrage eines KI-Clients abgewiesen.
-- Ein KI-Client, der MCP über HTTP unterstützt.
+!!! info "Vor der Installation prüfen"
+    - i-doit 39 oder neuer. Die Adresse, mit der sich der KI-Client verbindet (`src/mcp.php`), ist Teil von i-doit 39.
+    - Das [i-doit API Add-on](../api/index.md), installiert und aktiv. Ohne das API Add-on lassen sich keine Kategoriedaten lesen. Objekttypen, die Suche und die allgemeinen Daten eines Objekts funktionieren auch ohne.
+    - Die JSON-RPC API ist für den Mandanten eingeschaltet: **JSON-RPC API aktivieren** unter **Verwaltung → Add-ons → JSON-RPC API** steht auf **Ja**. Solange die Option aus ist, wird jede Anfrage eines KI-Clients abgewiesen.
+    - Ein KI-Client, der MCP über HTTP unterstützt.
 
 ## Installation
 

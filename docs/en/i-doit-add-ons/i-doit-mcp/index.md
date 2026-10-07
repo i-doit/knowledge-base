@@ -13,10 +13,11 @@ The assistant always works with the permissions of the person its access token b
 
 ## Requirements
 
-- i-doit 39 or newer. The address the AI client connects to (`src/mcp.php`) is part of i-doit 39.
-- The [i-doit API add-on](../api/index.md), installed and active. Without it, category data cannot be read. Object types, the search and the general data of an object work without it.
-- The JSON-RPC API switched on for the tenant: **Activate JSON-RPC API** under **Administration → Add-ons → JSON-RPC API** has to be set to **Yes**. While it is off, every request of an AI client is refused.
-- An AI client that supports MCP over HTTP.
+!!! info "Check before installing"
+    - i-doit 39 or newer. The address the AI client connects to (`src/mcp.php`) is part of i-doit 39.
+    - The [i-doit API add-on](../api/index.md), installed and active. Without it, category data cannot be read. Object types, the search and the general data of an object work without it.
+    - The JSON-RPC API switched on for the tenant: **Activate JSON-RPC API** under **Administration → Add-ons → JSON-RPC API** has to be set to **Yes**. While it is off, every request of an AI client is refused.
+    - An AI client that supports MCP over HTTP.
 
 ## Installation
 
