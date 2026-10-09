@@ -1,0 +1,35 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+     width="32px" height="32px" viewBox="1 2 17 17" enable-background="new 1 2 17 17" xml:space="preserve"
+     shape-rendering="geometricPrecision">
+
+  <!-- Robot -->
+  <g id="robot" transform="translate(2,3)">
+    <!-- body -->
+    <path d="M10.517,15.5H5.483c-0.543,0,-0.983,-0.44,-0.983,-0.983V9.483C4.5,8.94,4.94,8.5,5.483,8.5h5.033c0.543,0,0.983,0.44,0.983,0.983v5.033C11.5,15.06,11.06,15.5,10.517,15.5z" fill="#FFFFFF" stroke="#383838" stroke-width="1.15" stroke-miterlimit="1"/>
+    <line x1="6.5" y1="5.5" x2="6.5" y2="8.5" fill="#FFFFFF" stroke="#383838" stroke-width="1.15" stroke-miterlimit="1"/>
+    <line x1="9.5" y1="5.5" x2="9.5" y2="8.5" fill="#FFFFFF" stroke="#383838" stroke-width="1.15" stroke-miterlimit="1"/>
+
+    <!-- right arm: reaches up, hand closes around the glass handle -->
+    <path d="M11.5,11.5h0.842c0.916,0,1.658,-0.742,1.658,-1.658V8.5L13.6,7" fill="none" stroke="#383838" stroke-width="1.15" stroke-miterlimit="1" stroke-linecap="round"/>
+    <circle cx="13.6" cy="7" r="0.9" fill="#FFFFFF" stroke="#383838" stroke-width="1.15"/>
+
+    <!-- left arm: lowered, small closed fist kept within the body's width -->
+    <path d="M4.5,11.5h-0.5c-0.552,0,-1,0.448,-1,1v1.55" fill="none" stroke="#383838" stroke-width="1.15" stroke-miterlimit="1" stroke-linecap="round"/>
+    <circle cx="3" cy="14.9" r="0.9" fill="#FFFFFF" stroke="#383838" stroke-width="1.15"/>
+
+    <!-- body detail lines -->
+    <path d="M6.5,12.5h3M6.5,10.5h3" fill="#FFFFFF" stroke="#787979" stroke-width="1.15" stroke-miterlimit="1"/>
+
+    <!-- head -->
+    <path d="M10,5.5H6c-1.381,0,-2.5,-1.119,-2.5,-2.5v0C3.5,1.619,4.619,0.5,6,0.5h4c1.381,0,2.5,1.119,2.5,2.5v0C12.5,4.381,11.381,5.5,10,5.5z" fill="#FFFFFF" stroke="#228BCB" stroke-width="1.15" stroke-miterlimit="1"/>
+    <!-- left eye only — the right eye is where the robot is holding the glass -->
+    <path d="M6.9,3c0,0.414,-0.336,0.75,-0.75,0.75S5.4,3.414,5.4,3s0.336,-0.75,0.75,-0.75S6.9,2.586,6.9,3z" fill="#FFFFFF" stroke="#228BCB" stroke-width="1.05" stroke-miterlimit="1"/>
+  </g>
+
+  <!-- Magnifying glass -->
+  <g id="glass" transform="translate(9.575,3.725) scale(0.42)">
+    <path d="M0.5,6.5C0.5,3.186,3.186,0.5,6.5,0.5s6,2.686,6,6s-2.686,6,-6,6S0.5,9.814,0.5,6.5zM10.7,10.7l4.8,4.8"
+          fill="#FFFFFF" stroke="#383838" stroke-width="1.9" stroke-miterlimit="5"/>
+    <circle cx="6.5" cy="6.5" r="1.7" fill="#228BCB"/>
+  </g>
+</svg>
