@@ -65,6 +65,7 @@ plugins:
       strict: false
   - redirects:
       redirect_maps:
+        'i-doit-add-ons/mcp/index.md': 'i-doit-add-ons/i-doit-mcp/index.md'
         'i-doit-add-ons/checkmk2/index.md': 'i-doit-add-ons/shd-connect/checkmk-adapter.md'
         'i-doit-add-ons/checkmk2/abgleich-von-objekten-aus-i-doit-mit-hosts-aus-checkmk.md': 'i-doit-add-ons/shd-connect/checkmk-adapter.md'
         'i-doit-add-ons/checkmk2/anforderungen.md': 'i-doit-add-ons/shd-connect/checkmk-adapter.md'
@@ -168,6 +169,7 @@ nav:
       - versionshistorie/index.md
       - Release Notes:
           - versionshistorie/release-notes/index.md
+          - Release Notes 39: versionshistorie/release-notes/release-notes-39.md
           - Release Notes 38: versionshistorie/release-notes/release-notes-38.md
           - Release Notes 37: versionshistorie/release-notes/release-notes-37.md
           - Release Notes 36: versionshistorie/release-notes/release-notes-36.md
@@ -201,6 +203,7 @@ nav:
           - Release Notes 1.7: versionshistorie/release-notes/release-notes-1.7.md
       - Changelogs:
           - versionshistorie/changelogs/index.md
+          - Changelog 39: versionshistorie/changelogs/changelog-39.md
           - Changelog 38: versionshistorie/changelogs/changelog-38.md
           - Changelog 37: versionshistorie/changelogs/changelog-37.md
           - Changelog 36: versionshistorie/changelogs/changelog-36.md
@@ -398,6 +401,7 @@ nav:
           - Buchhaltung: grundlagen/kategorien/accounting.md
           - Chassis: grundlagen/kategorien/s-chassis.md
           - Chassis Ansicht: grundlagen/kategorien/s-chassis-view.md
+          - Cloud: grundlagen/kategorien/cloud.md
           - Cluster: grundlagen/kategorien/cluster.md
           - Cluster (Root): grundlagen/kategorien/cluster-root.md
           - Clusterdienstzuweisung: grundlagen/kategorien/cluster-service.md
@@ -438,6 +442,7 @@ nav:
           - Kabel: grundlagen/kategorien/cable.md
           - Karten: grundlagen/kategorien/cards.md
           - Kontaktzuweisung: grundlagen/kategorien/contact.md
+          - Kubernetes: grundlagen/kategorien/kubernetes.md
           - Laufwerk: grundlagen/kategorien/drive.md
           - Listener: grundlagen/kategorien/net-listener.md
           - Lizenzschlüssel: grundlagen/kategorien/s-licence-list.md
@@ -516,6 +521,7 @@ nav:
           - Betriebssystem: grundlagen/objekttypen/betriebssystem.md
           - Blade Chassis: grundlagen/objekttypen/blade-chassis.md
           - Blade Server: grundlagen/objekttypen/blade-server.md
+          - Cloud Storage: grundlagen/objekttypen/cloud-storage.md
           - Cluster: grundlagen/objekttypen/cluster.md
           - Clusterdienst: grundlagen/objekttypen/clusterdienst.md
           - Dateien: grundlagen/objekttypen/dateien.md
@@ -536,6 +542,9 @@ nav:
           - Konverter: grundlagen/objekttypen/konverter.md
           - Kryptokarte: grundlagen/objekttypen/kryptokarte.md
           - KVM-Switch: grundlagen/objekttypen/kvm-switch.md
+          - Kubernetes Container: grundlagen/objekttypen/k8s-container.md
+          - Kubernetes Pod: grundlagen/objekttypen/k8s-pod.md
+          - Kubernetes Service: grundlagen/objekttypen/k8s-service.md
           - Land: grundlagen/objekttypen/land.md
           - Layer-2-Netz: grundlagen/objekttypen/layer-2-netz.md
           - Layer-3-Netz: grundlagen/objekttypen/layer-3-netz.md
@@ -770,6 +779,7 @@ nav:
           - i-doit 1.13.2 & 1.14 Login im Admin-Center nicht möglich: administration/hotfixes/i-doit-1.13.2-1.14-login-im-admin-center-nicht-moeglich.md
           - Hotfix Archiv:
               - administration/hotfixes/hotfix-archiv/index.md
+              - Version 38: administration/hotfixes/hotfix-archiv/v38.md
               - Version 37: administration/hotfixes/hotfix-archiv/v37.md
               - Version 36: administration/hotfixes/hotfix-archiv/v36.md
               - Version 35: administration/hotfixes/hotfix-archiv/v35.md
@@ -856,6 +866,7 @@ nav:
           - Dokumentenvorlagen: i-doit-add-ons/documents/dokumentenvorlagen.md
           - Platzhalter: i-doit-add-ons/documents/platzhalter-im-add-on-dokumente.md
           - Dokumenterstellung: i-doit-add-ons/documents/dokumenterstellung.md
+          - KI Funktionen: i-doit-add-ons/documents/ki-funktionen.md
       - Events: i-doit-add-ons/events.md
       - Floorplan: i-doit-add-ons/floorplan.md
       - Flows:
@@ -872,6 +883,7 @@ nav:
           - Formular ausfüllen: i-doit-add-ons/forms/formulare-ausfuellen.md
           - Verwendung der Forms API: i-doit-add-ons/forms/verwenden-der-forms-api.md
       - i-diary: i-doit-add-ons/i-diary.md
+      - i-doit MCP: i-doit-add-ons/i-doit-mcp/index.md
       - i-doit QR-Code Printer: i-doit-add-ons/i-doit-qr-code-printer.md
       - ISMS:
           - i-doit-add-ons/isms/index.md

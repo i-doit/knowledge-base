@@ -39,6 +39,29 @@ The type of access -- i.e. the protocol or technology used. Dialog+ field with p
 
 The complete address of the access point. Enter the URL or connection string here, e.g. `https://srv-web-01.bhb.local:8443`, `ssh://admin@10.10.1.100`, or `rdp://jumphost.intern.local`. i-doit renders this value as a clickable link. Make sure to include the protocol prefix and, if applicable, the port so that the link works directly.
 
+#### Variables and modifiers
+
+The URL can contain variables that i-doit replaces with values of the object when the link is displayed, for example `%hostname%`, `%ipaddress%`, `%objectname%`, `%objid%` or `%sysid%`. In edit mode, the help icon next to the field shows all available variables.
+
+Since i-doit 39 you can change the value of a variable with modifiers. Append the modifier to the variable name with a pipe character. Several modifiers can be chained and are applied from left to right.
+
+| Modifier | Effect |
+| --- | --- |
+| `encode` | Applies URL encoding (spaces become `+`) |
+| `raw-encode` | Applies raw URL encoding according to RFC 3986 (spaces become `%20`) |
+| `lower` | Converts the value to lower case |
+| `upper` | Converts the value to upper case |
+| `slug` | Converts the value to a URL friendly form (slug), umlauts are transliterated |
+
+Example for an object named `Web Server 01`:
+
+| URL in the field | Result |
+| --- | --- |
+| `https://wiki.example.com/%objectname|lower|slug%` | `https://wiki.example.com/web-server-01` |
+| `https://search.example.com/?q=%objectname|raw-encode%` | `https://search.example.com/?q=Web%20Server%2001` |
+
+Unknown modifiers are ignored. The same modifiers can be used in the [QR code configuration](../../administration/management/predefined-content/qr-code.md#modifying-variables).
+
 ### Primary access
 
 Indicates whether this entry is the preferred access path to the object. Dialog field with values `Yes` and `No`. Exactly one entry per object should be marked as primary -- this entry is displayed prominently in overviews and the object list. Typically, this is the web interface or the most frequently used access path.

@@ -7,7 +7,7 @@ lang: en
 
 # Hotfixes
 
-!!! success "Hotfixes for version **37**"
+!!! success "Hotfixes for version **39**"
 
 A hotfix fixes a specific bug and is provided as a ZIP file. You extract the ZIP file in the **installation directory** of i-doit and confirm overwriting existing files.
 
@@ -47,42 +47,6 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 * * *
 
 ## i-doit core
-
-### Load available Object Types when creating a Form (ID-12397)
-
-[i-doit_38_hotfix_ID-12397_41355bc.zip :material-file-download:](../../assets/downloads/hotfixes/38/i-doit_38_hotfix_ID-12397_41355bc.zip){ .md-button .md-button--primary }
-
-### Load category folders (ID-12359)
-
-[i-doit_38_hotfix_ID-12359_2328dd6.zip :material-file-download:](../../assets/downloads/hotfixes/38/i-doit_38_hotfix_ID-12359_2328dd6.zip){ .md-button .md-button--primary }
-
-### Enable URL encoded variables in category Access (ID-12361)
-
-[i-doit_38_hotfix_ID-12361.zip :material-file-download:](../../assets/downloads/hotfixes/38/i-doit_38_hotfix_ID-12361.zip){ .md-button .md-button--primary }
-
-### Prevent creation of orphaned relation when duplicating object (ID-12367)
-
-[i-doit_35-38_hotfix_ID-12367_01bc42c.zip :material-file-download:](../../assets/downloads/hotfixes/38/i-doit_35-38_hotfix_ID-12367_01bc42c.zip){ .md-button .md-button--primary }
-
-### Fix file list for old import files with special characters (ID-12376)
-
-[i-doit_38_hotfix_ID-12376_4fd97c7.zip :material-file-download:](../../assets/downloads/hotfixes/38/i-doit_38_hotfix_ID-12376_4fd97c7.zip){ .md-button .md-button--primary }
-
-### Do not archive persons when the response times from the AD are long (ID-11616)
-
-[i-doit_38_hotfix_ID-11616.zip :material-file-download:](../../assets/downloads/hotfixes/38/i-doit_38_hotfix_ID-11616.zip){ .md-button .md-button--primary }
-
-### Fix inverted address range for IPv4 /31 and /32 networks (ID-12434)
-
-[i-doit_38_hotfix_ID-12434.zip :material-file-download:](../../assets/downloads/hotfixes/38/i-doit_38_hotfix_ID-12434.zip){ .md-button .md-button--primary }
-
-* * *
-
-## Documents Add-on
-
-### Turning off the auth system causes error when opening the administration (DOKU-526)
-
-[Documents_1.11_hotfix_DOKU-526_919d515.zip :material-file-download:](../../assets/downloads/hotfixes/documents/Documents_1.11_hotfix_DOKU-526_919d515.zip){ .md-button .md-button--primary }
 
 * * *
 

@@ -186,9 +186,9 @@ Diese Datei erhält folgenden Inhalt:
                     Require all granted
                 </IfModule>
             </FilesMatch>
-            <Files "jsonrpc.php">
+            <FilesMatch "^(jsonrpc\.php|mcp\.php)$">
                 Require all granted
-            </Files>
+            </FilesMatch>
             <FilesMatch "^(rt\.php|barcode_window\.php|barcode\.php)$">
                 Require all granted
             </FilesMatch>
@@ -228,6 +228,8 @@ Diese Datei erhält folgenden Inhalt:
 
         <IfModule mod_rewrite.c>
             RewriteEngine On
+            RewriteCond %{HTTP:Authorization} .+
+            RewriteRule ^ - [E=HTTP_AUTHORIZATION:%0]
             RewriteRule favicon\.ico$ images/favicon.ico [L]
             RewriteCond %{REQUEST_FILENAME} !-l
             RewriteCond %{REQUEST_FILENAME} !-f

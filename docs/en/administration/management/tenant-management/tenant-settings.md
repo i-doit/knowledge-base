@@ -51,6 +51,7 @@ This section contains the most options and controls the basic behavior of the Co
 | **CSV export delimiter** | Comma, Semicolon, Hash, or Tab |
 | **One-Click-Edit** | Yes / No |
 | **Global SYS-ID prefix** | String |
+| **Allowed file extensions for CMDB category uploads** | Comma-separated list or empty |
 | **Set CMDB status of cables to "In operation" after cabling** | Yes / No |
 | **Set CMDB status of cables to "Out of operation" after uncabling** | Yes / No |
 | **Object type constant for segmentation templates** | String |
@@ -80,6 +81,8 @@ This section contains the most options and controls the basic behavior of the Co
 **One-Click-Edit** — When enabled, you can edit attribute values in the list view directly by clicking, without opening the object's detail page. This speeds up maintenance but increases the risk of accidental changes.
 
 **Global SYS-ID prefix** — Every new object automatically receives a SYS-ID with this prefix (e.g., `CMDB-`). Only change the prefix if you operate multiple i-doit instances and want to keep the SYS-IDs distinguishable.
+
+**Allowed file extensions for CMDB category uploads**: Comma-separated list of file extensions that i-doit accepts when files are uploaded to file objects or in the category **File assignment**. Files with other extensions are rejected. New installations come with the system-wide default list `pdf, doc, docx, xls, xlsx, ppt, pptx, odt, ods, odp, txt, csv, rtf, png, jpg, jpeg, gif, bmp, zip`. If the field in the tenant is empty, this default list applies. After an update from an earlier version there is no system-wide default list, so an empty field allows all extensions until you fill it.
 
 **Automatically set cable status** — The two options for the CMDB status of cables ensure that cable objects are automatically set to "In operation" when cabled and to "Out of operation" when uncabled. This saves manual effort in cabling documentation.
 
@@ -188,7 +191,7 @@ These options affect how information is displayed in the user interface.
 
 **Drag 'n' drop** — Allows moving objects via drag & drop in location and object lists. Disable it if users accidentally move objects.
 
-**Object type sorting** — "Alphabetical" sorts the object type groups and types in the navigation automatically. "Manual" allows a custom order via the object type configuration.
+**Object type sorting** — "Alphabetical" sorts the object type groups and types in the navigation automatically. "Manual" allows a custom order via the object type configuration. New installations use "Alphabetical" by default. Existing installations keep their previous setting after an update.
 
 ---
 
@@ -245,6 +248,7 @@ Templates allow you to create objects with predefined attribute values. When the
 | **Information about last login** | Active / Inactive |
 | **Last login information** | Yes / No |
 | **Sanitize input data** | Yes / No |
+| **Allowed URL schemes** | Comma-separated list |
 
 !!! danger "Do not disable the permission system carelessly"
     If you disable the permission system, **all authenticated users have full access** to all objects, categories, and administration functions of the tenant. Only disable the permission system for testing purposes or in single-user installations.
@@ -257,6 +261,8 @@ Templates allow you to create objects with predefined attribute values. When the
     This option affects the display in the "Passwords" category. Even when disabled, passwords are stored in the database — this option only controls visibility on the interface.
 
 **Sanitize input data** — Filters markup that can execute code in the browser (for example `<script>` elements, event handler attributes such as `onclick`, `<iframe>` elements, and `javascript:` links) out of attribute contents when they are displayed. The filter applies to the output, not to the stored data: what you save is written to the database unchanged. The option also reduces the toolbar of the [HTML editor](../../../basics/attribute-fields.md#why-the-editor-offers-fewer-formatting-options), which is why links, fonts, and colors are missing there by default. Keep this option enabled unless you have a specific reason to output unfiltered HTML.
+
+**Allowed URL schemes**: Comma-separated list of URL schemes that are allowed in link fields, for example in the categories **File assignment** and **Access**. Links with another scheme, such as `javascript:`, cannot be saved and are not displayed as clickable links. URLs without a scheme automatically get `http://` prepended. The default is `http, https, ftp, ftps, mailto, tel`, both for new installations and after an update.
 
 ---
 

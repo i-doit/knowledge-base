@@ -11,7 +11,7 @@ lang: en
 To ensure the operation of all i-doit functionalities, there are prerequisites for the underlying system that must be met.
 
 !!! info Currency
-    The system requirements listed below refer to the current version of i-doit, in this case **38**. These specifications are updated with each major release of i-doit. If you need the specifications for older versions of i-doit, you can follow the change history of this page.
+    The system requirements listed below refer to the current version of i-doit, in this case **39**. These specifications are updated with each major release of i-doit. If you need the specifications for older versions of i-doit, you can follow the change history of this page.
 
 ## Minimum System Requirements
 
@@ -74,7 +74,44 @@ A web browser is required on the client to access the i-doit Web GUI. The curren
 
 ## Compatibility Matrix
 
-### Versions 30 to 38
+### Versions 30 to 39
+
+=== "39"
+
+    | **i-doit Version**                   | 39                                                        |
+    | ------------------------------------ | --------------------------------------------------------- |
+    | **Release**                          | 2026-10                                                   |
+    | **Apache web server**                 | 2.4                                                       |
+    | **PHP**                              | 8.2 (deprecated)<br>8.3<br>==8.4== (recommended)  |
+    | **MySQL**                            | 5.7 (deprecated)<br>8.0<br>==8.4== (recommended)  |
+    | **MariaDB**                          | 10.6<br>==10.11== (recommended)<br>11.4<br>11.8 |
+    | **Can update be skipped?** |                                                           |
+    | **Requires i-doit version**      | v35                                                       |
+
+    | Add-on                  | Incompatible below version |
+    | ----------------------- | -------------------------- |
+    | **analytics**           | 1.5                        |
+    | **api**                 | 2.3                        |
+    | **cabling**             | 1.5                        |
+    | **document**            | 1.10                       |
+    | **donamic_disposal**    | 1.2.9                      |
+    | **donamic_inheritance** | 1.3.7                      |
+    | **events**              | 1.3                        |
+    | **floorplan**           | 1.9                        |
+    | **iso27001**            | 1.6.3                      |
+    | **isms**                | 1.5.2                      |
+    | **maintenance**         | 1.2.2                      |
+    | **nagios**              | 1.3                        |
+    | **packager**            | 1.2.1                      |
+    | **privacy**             | 2.1.1                      |
+    | **relocate_ci**         | 1.5                        |
+    | **scanit**              | 2.0.1                      |
+    | **swapci**              | 1.6                        |
+    | **viva2**               | 3.2.5                      |
+    | **workflow**            | 1.5                        |
+    | **sectornord_snagview** | 1.2.5                      |
+    | **shd_smview_connect**  | 2025.1.1.2751              |
+    | **synetics_flows**      | 1.2.0                      |
 
 === "38"
 

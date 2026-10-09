@@ -65,6 +65,7 @@ plugins:
       strict: false
   - redirects:
       redirect_maps:
+        'i-doit-add-ons/mcp/index.md': 'i-doit-add-ons/i-doit-mcp/index.md'
         'i-doit-add-ons/checkmk2/index.md': 'i-doit-add-ons/shd-connect/checkmk-adapter.md'
         'i-doit-add-ons/checkmk2/checkmk-sites-synchronisieren.md': 'i-doit-add-ons/shd-connect/checkmk-adapter.md'
         'i-doit-add-ons/checkmk2/erste-schritte.md': 'i-doit-add-ons/shd-connect/checkmk-adapter.md'
@@ -168,6 +169,7 @@ nav:
       - version-history/index.md
       - Release Notes:
           - version-history/release-notes/index.md
+          - Release Notes 39: version-history/release-notes/release-notes-39.md
           - Release Notes 38: version-history/release-notes/release-notes-38.md
           - Release Notes 37: version-history/release-notes/release-notes-37.md
           - Release Notes 36: version-history/release-notes/release-notes-36.md
@@ -201,6 +203,7 @@ nav:
           - Release Notes 1.7: version-history/release-notes/release-notes-1.7.md
       - Changelogs:
           - version-history/changelogs/index.md
+          - Changelog 39: version-history/changelogs/changelog-39.md
           - Changelog 38: version-history/changelogs/changelog-38.md
           - Changelog 37: version-history/changelogs/changelog-37.md
           - Changelog 36: version-history/changelogs/changelog-36.md
@@ -392,6 +395,7 @@ nav:
           - Operating System: basics/object-types/operating-system.md
           - Blade Chassis: basics/object-types/blade-chassis.md
           - Blade Server: basics/object-types/blade-server.md
+          - Cloud Storage: basics/object-types/cloud-storage.md
           - Cluster: basics/object-types/cluster.md
           - Cluster Service: basics/object-types/cluster-service.md
           - Client: basics/object-types/client.md
@@ -412,6 +416,9 @@ nav:
           - Converter: basics/object-types/converter.md
           - Crypto Card: basics/object-types/kryptokarte.md
           - KVM-Switch: basics/object-types/kvm-switch.md
+          - Kubernetes Container: basics/object-types/k8s-container.md
+          - Kubernetes Pod: basics/object-types/k8s-pod.md
+          - Kubernetes Service: basics/object-types/k8s-service.md
           - Country: basics/object-types/land.md
           - Layer 2 Net: basics/object-types/layer-2-netz.md
           - Layer 3 Net: basics/object-types/layer-3-netz.md
@@ -479,6 +486,7 @@ nav:
           - Accounting: basics/categories/accounting.md
           - Chassis: basics/categories/s-chassis.md
           - Chassis View: basics/categories/s-chassis-view.md
+          - Cloud: basics/categories/cloud.md
           - Cluster: basics/categories/cluster.md
           - Cluster (Root): basics/categories/cluster-root.md
           - Cluster Service Assignment: basics/categories/cluster-service.md
@@ -520,6 +528,7 @@ nav:
           - Cards: basics/categories/cards.md
           - Contact Assignment: basics/categories/contact.md
           - Drive: basics/categories/drive.md
+          - Kubernetes: basics/categories/kubernetes.md
           - Listener: basics/categories/net-listener.md
           - License Keys: basics/categories/s-licence-list.md
           - Logbook: basics/categories/logbook.md
@@ -772,6 +781,7 @@ nav:
           - i-doit 1.13.2 & 1.14 Login in Admin Center Not Possible: administration/hotfixes/i-doit-1.13.2-1.14-login-issue.md
           - Hotfix Archive:
               - administration/hotfixes/hotfix-archive/index.md
+              - Version 38: administration/hotfixes/hotfix-archive/v38.md
               - Version 37: administration/hotfixes/hotfix-archive/v37.md
               - Version 36: administration/hotfixes/hotfix-archive/v36.md
               - Version 35: administration/hotfixes/hotfix-archive/v35.md
@@ -858,6 +868,7 @@ nav:
           - Document Templates: i-doit-add-ons/documents/document-templates.md
           - Placeholders: i-doit-add-ons/documents/platzhalter-im-add-on-dokumente.md
           - Document Creation: i-doit-add-ons/documents/dokumenterstellung.md
+          - AI functions: i-doit-add-ons/documents/ai-functions.md
       - Events: i-doit-add-ons/events.md
       - Floorplan: i-doit-add-ons/floorplan.md
       - Flows:
@@ -874,6 +885,7 @@ nav:
           - Fill Out Form: i-doit-add-ons/forms/fill-out-forms.md
           - Using the Forms API: i-doit-add-ons/forms/using-the-forms-api.md
       - i-diary: i-doit-add-ons/i-diary.md
+      - i-doit MCP: i-doit-add-ons/i-doit-mcp/index.md
       - i-doit QR-Code Printer: i-doit-add-ons/i-doit-qr-code-printer.md
       - ISMS:
           - i-doit-add-ons/isms/index.md

@@ -39,6 +39,29 @@ Die Art des Zugangs – also das verwendete Protokoll oder die Technologie. Dial
 
 Die vollständige Adresse des Zugangs. Hier wird die URL oder der Verbindungsstring eingetragen, z.B. `https://srv-web-01.bhb.local:8443`, `ssh://admin@10.10.1.100` oder `rdp://jumphost.intern.local`. i-doit rendert diesen Wert als klickbaren Link. Achte darauf, das Protokoll-Präfix und ggf. den Port mit anzugeben, damit der Link direkt funktioniert.
 
+#### Variablen und Modifikatoren
+
+Die URL kann Variablen enthalten, die i-doit bei der Anzeige durch Werte des Objekts ersetzt, zum Beispiel `%hostname%`, `%ipaddress%`, `%objectname%`, `%objid%` oder `%sysid%`. Im Bearbeitungsmodus zeigt das Hilfe-Symbol neben dem Feld alle verfügbaren Variablen an.
+
+Seit i-doit 39 kannst du den Wert einer Variable mit Modifikatoren verändern. Hänge den Modifikator mit einem senkrechten Strich an den Variablennamen an. Mehrere Modifikatoren lassen sich verketten und werden von links nach rechts angewendet.
+
+| Modifikator | Wirkung |
+| --- | --- |
+| `encode` | Wendet URL-Encoding an (Leerzeichen werden zu `+`) |
+| `raw-encode` | Wendet Raw URL-Encoding nach RFC 3986 an (Leerzeichen werden zu `%20`) |
+| `lower` | Wandelt den Wert in Kleinbuchstaben um |
+| `upper` | Wandelt den Wert in Großbuchstaben um |
+| `slug` | Wandelt den Wert in eine URL-freundliche Form (Slug) um, Umlaute werden umschrieben |
+
+Beispiel für ein Objekt mit dem Namen `Web Server 01`:
+
+| URL im Feld | Ergebnis |
+| --- | --- |
+| `https://wiki.example.com/%objectname|lower|slug%` | `https://wiki.example.com/web-server-01` |
+| `https://search.example.com/?q=%objectname|raw-encode%` | `https://search.example.com/?q=Web%20Server%2001` |
+
+Unbekannte Modifikatoren werden ignoriert. Dieselben Modifikatoren gelten auch in der [QR-Code-Konfiguration](../../administration/verwaltung/vordefinierte-inhalte/qr-code.md#variablen-verandern).
+
 ### Primärer Zugriff
 
 Kennzeichnet, ob dieser Eintrag der bevorzugte Zugangsweg zum Objekt ist. Dialog-Feld mit den Werten `Ja` und `Nein`. Pro Objekt sollte genau ein Eintrag als primär markiert werden – dieser wird in Übersichten und der Objektliste bevorzugt angezeigt. Typischerweise ist das die Web-Oberfläche oder der am häufigsten genutzte Zugangsweg.

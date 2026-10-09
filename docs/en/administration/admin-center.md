@@ -78,6 +78,7 @@ If your i-doit installation does not have direct internet access (e.g., for lice
 | **Host/IP-Address** | Hostname or IP of the proxy server |
 | **Port** | Proxy port (default: 3128 for Squid) |
 | **Username/Password** | If the proxy requires authentication |
+| **Verify SSL certificate** | Verify the TLS certificate of the remote site for outgoing connections of the proxy and the updater (default: **Yes**). If your proxy replaces certificates with its own certificate, make sure the server trusts this certificate instead of setting this option to **No**. |
 
 ### SMTP
 
@@ -163,6 +164,18 @@ Via the **Expert settings** link at the top right of the System Settings page, y
 | Key | Default | What happens when you change it? |
 |-----|---------|----------------------------------|
 | `security.passwort.minlength` | (empty) | Minimum length for user passwords. Set this value to at least **8**, preferably **12**, in production environments. |
+
+### Login throttling
+
+These keys control how i-doit blocks the login after too many failed attempts. Failed attempts are counted per user name and per IP address. The login of the Admin Center is protected as well.
+
+| Key | Default | What happens when you change it? |
+|-----|---------|----------------------------------|
+| `system.security.login-throttle.active` | `1` | When set to `0`, failed logins are no longer limited. |
+| `system.security.login-throttle.max-attempts` | `5` | Number of failed attempts after which the login is blocked. |
+| `system.security.login-throttle.window` | `300` | Period in seconds in which failed attempts are counted. |
+| `system.security.login-throttle.lockout` | `900` | Duration of the block in seconds. |
+| `system.security.login-throttle.trusted-proxies` | (empty) | Comma separated IP addresses of trusted reverse proxies. Only for requests from these addresses is the client IP address taken from the `X-Forwarded-For` header. If i-doit runs behind a reverse proxy and this key is empty, all users share the IP address of the proxy. |
 
 ### Logging and debug
 

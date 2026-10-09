@@ -53,6 +53,12 @@ These settings apply to all users of the current tenant.
 | `cmdb.renew-properties` | `0` | When set to `1`, the internal property definitions are regenerated. Like `cmdb.refresh-table-configurations`, a one-time repair mechanism that resets itself. |
 | `synetics_admin.news.subscription-and-addons` | `1` | When set to `0`, news notifications about add-ons and subscriptions are hidden on the dashboard. |
 
+### CMDB export
+
+| Key | Default | What happens when you change it? |
+|-----|---------|----------------------------------|
+| `cmdb.cmdb-export.allow-save-on-filesystem` | not set (`0`) | When set to `1`, the CMDB export offers the option **Save export data as...** again. The export file is then always saved as XML in the `temp` directory of the i-doit installation. While the key is not set or set to `0`, the option is hidden and an export started with this option is downloaded instead. If the key does not exist yet, add it as a new key. Not available in i-doit Cloud. |
+
 ## User settings (User)
 
 These settings apply only to the currently logged-in user.

@@ -37,6 +37,6 @@ Here you configure:
 
 ## Restore
 
-Here you restore entries that have already been archived.
+Here you restore entries that have already been archived. You can also restore archived entries with the console command [logbook:restore](../../../automation-and-integration/cli/commands-and-options.md#logbookrestore).
 
 [![Restore](../../../assets/images/de/administration/verwaltung/logbuch/4-l.png)](../../../assets/images/de/administration/verwaltung/logbuch/4-l.png)

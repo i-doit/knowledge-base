@@ -78,6 +78,7 @@ Wenn deine i-doit-Installation keinen direkten Internetzugang hat (z.B. für Liz
 | **Host/IP-Address**   | Hostname oder IP des Proxy-Servers          |
 | **Port**              | Proxy-Port (Standard: 3128 für Squid)       |
 | **Username/Password** | Falls der Proxy Authentifizierung erfordert |
+| **Verify SSL certificate** | Prüft das TLS-Zertifikat der Gegenstelle bei ausgehenden Verbindungen über den Proxy und den Updater (Standard: **Yes**). Ersetzt dein Proxy Zertifikate durch ein eigenes Zertifikat, sorge dafür, dass der Server diesem Zertifikat vertraut, statt die Option auf **No** zu setzen. |
 
 ### SMTP
 
@@ -163,6 +164,18 @@ E-Mail-Konfiguration für [Benachrichtigungen](../auswertungen/benachrichtigunge
 | Key                           | Standard | Was passiert wenn du es änderst?                                                                                     |
 | ----------------------------- | -------- | -------------------------------------------------------------------------------------------------------------------- |
 | `security.passwort.minlength` | (leer)   | Mindestlänge für Benutzerpasswörter. Setze diesen Wert in Produktionsumgebungen auf mindestens **8**, besser **12**. |
+
+### Begrenzung der Login-Versuche
+
+Mit diesen Schlüsseln steuerst du, wie i-doit den Login nach zu vielen Fehlversuchen sperrt. Fehlversuche werden je Benutzername und je IP-Adresse gezählt. Der Login des Admin-Centers ist ebenfalls geschützt.
+
+| Key | Standard | Was passiert wenn du es änderst? |
+|-----|---------|----------------------------------|
+| `system.security.login-throttle.active` | `1` | Bei `0` werden fehlgeschlagene Logins nicht mehr begrenzt. |
+| `system.security.login-throttle.max-attempts` | `5` | Anzahl der Fehlversuche, nach denen der Login gesperrt wird. |
+| `system.security.login-throttle.window` | `300` | Zeitraum in Sekunden, in dem Fehlversuche gezählt werden. |
+| `system.security.login-throttle.lockout` | `900` | Dauer der Sperre in Sekunden. |
+| `system.security.login-throttle.trusted-proxies` | (leer) | Kommagetrennte IP-Adressen vertrauenswürdiger Reverse Proxies. Nur bei Anfragen von diesen Adressen wird die IP-Adresse des Clients aus dem Header `X-Forwarded-For` übernommen. Läuft i-doit hinter einem Reverse Proxy und ist der Schlüssel leer, teilen sich alle Benutzer die IP-Adresse des Proxys. |
 
 ### Logging und Debug
 

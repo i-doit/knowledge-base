@@ -59,11 +59,15 @@ Each object type in i-doit has its own documentation page with a description, us
 |---|---|
 | [Application](application.md) | `C__OBJTYPE__APPLICATION` |
 | [Operating System](operating-system.md) | `C__OBJTYPE__OPERATING_SYSTEM` |
+| [Cloud Storage](cloud-storage.md) | `C__OBJTYPE__CLOUD_STORAGE` |
 | [Cluster](cluster.md) | `C__OBJTYPE__CLUSTER` |
 | [Cluster Service](cluster-service.md) | `C__OBJTYPE__CLUSTER_SERVICE` |
 | [Database Instance](datenbankinstanz.md) | `C__OBJTYPE__DATABASE_INSTANCE` |
 | [Database Schema](datenbankschema.md) | `C__OBJTYPE__DATABASE_SCHEMA` |
 | [DBMS](dbms.md) | `C__OBJTYPE__DBMS` |
+| [Kubernetes Container](k8s-container.md) | `C__OBJTYPE__K8S_CONTAINER` |
+| [Kubernetes Pod](k8s-pod.md) | `C__OBJTYPE__K8S_POD` |
+| [Kubernetes Service](k8s-service.md) | `C__OBJTYPE__K8S_SERVICE` |
 | [Licenses](licenses.md) | `C__OBJTYPE__LICENCE` |
 | [Middleware](middleware.md) | `C__OBJTYPE__MIDDLEWARE` |
 | [Replication Object](replikationsobjekt.md) | `C__OBJTYPE__REPLICATION` |
