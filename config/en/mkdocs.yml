@@ -859,6 +859,7 @@ nav:
           - Document Templates: i-doit-add-ons/documents/document-templates.md
           - Placeholders: i-doit-add-ons/documents/platzhalter-im-add-on-dokumente.md
           - Document Creation: i-doit-add-ons/documents/dokumenterstellung.md
+          - AI functions: i-doit-add-ons/documents/ai-functions.md
       - Events: i-doit-add-ons/events.md
       - Floorplan: i-doit-add-ons/floorplan.md
       - Flows:
