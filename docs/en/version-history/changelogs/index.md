@@ -9,6 +9,7 @@ lang: en
 
 What changes were published per release of _i-doit_?
 
+-   [Changelog 39](./changelog-39.md)
 -   [Changelog 38](./changelog-38.md)
 -   [Changelog 37](./changelog-37.md)
 -   [Changelog 36](./changelog-36.md)

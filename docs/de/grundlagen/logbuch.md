@@ -91,7 +91,7 @@ Beispiel:
     sudo -u www-data php console.php logbook:archive --user admin --password admin --tenantId 1
 ```
 
-Archivierte Einträge lassen sich zur weiteren Auswertung wiederherstellen. Dieser Punkt befindet sich unter **Extras → CMDB → Logbuch → Wiederherstellen**.
+Archivierte Einträge lassen sich zur weiteren Auswertung wiederherstellen. Dieser Punkt befindet sich unter **Extras → CMDB → Logbuch → Wiederherstellen**. Alternativ stellst du archivierte Einträge mit dem Konsolen-Befehl [logbook:restore](../automatisierung-und-integration/cli/befehle-und-optionen.md#logbookrestore) wieder her.
 
 [![archivierte-einträge](../assets/images/de/grundlagen/logbuch/9-lb.png)](../assets/images/de/grundlagen/logbuch/9-lb.png)
 

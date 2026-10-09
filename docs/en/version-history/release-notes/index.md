@@ -7,8 +7,9 @@ search:
 
 # Release Notes
 
-Welche Änderungen sind mit welchen Versionen veröffentlicht worden?
+Which changes were released with which versions?
 
+-   [Release Notes 39](release-notes-39.md)
 -   [Release Notes 38](release-notes-38.md)
 -   [Release Notes 37](release-notes-37.md)
 -   [Release Notes 36](release-notes-36.md)

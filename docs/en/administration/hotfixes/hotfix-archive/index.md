@@ -8,6 +8,7 @@ lang: en
 
 Here you can find the archive of old hotfix pages.
 
+-   [Version 38](v38.md): Hotfix archive for version 38
 -   [Version 37](v37.md) — Hotfix archive for version 37
 -   [Version 36](v36.md) — Hotfix archive for version 36
 -   [Version 35](v35.md) — Hotfix archive for version 35

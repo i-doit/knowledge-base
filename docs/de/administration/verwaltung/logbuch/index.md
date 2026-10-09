@@ -37,6 +37,6 @@ Hier konfigurierst du:
 
 ## Wiederherstellen
 
-Hier stellst du Einträge wieder her, die bereits archiviert wurden.
+Hier stellst du Einträge wieder her, die bereits archiviert wurden. Alternativ stellst du archivierte Einträge mit dem Konsolen-Befehl [logbook:restore](../../../automatisierung-und-integration/cli/befehle-und-optionen.md#logbookrestore) wieder her.
 
 [![Wiederherstellen](../../../assets/images/de/administration/verwaltung/logbuch/4-l.png)](../../../assets/images/de/administration/verwaltung/logbuch/4-l.png)

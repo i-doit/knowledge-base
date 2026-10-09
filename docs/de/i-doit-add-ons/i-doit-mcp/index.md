@@ -19,6 +19,21 @@ Der Assistent arbeitet immer mit den Rechten der Person, zu der sein Zugriffstok
     - Die JSON-RPC API ist für den Mandanten eingeschaltet: **JSON-RPC API aktivieren** unter **Verwaltung → Add-ons → JSON-RPC API** steht auf **Ja**. Solange die Option aus ist, wird jede Anfrage eines KI-Clients abgewiesen.
     - Ein KI-Client, der MCP über HTTP unterstützt.
 
+!!! warning "Apache mit AllowOverride None"
+    Die `.htaccess` von i-doit 39 erlaubt den Zugriff auf `src/mcp.php` und reicht den `Authorization`-Header an PHP weiter. Wenn dein Apache VHost `AllowOverride None` verwendet und die Regeln der `.htaccess` direkt enthält, übernimm diese Änderungen in deine VHost-Konfiguration und lade Apache neu. Sonst kann sich der KI-Client nicht verbinden. Die geänderten Zeilen findest du im VHost-Beispiel der [Installationsanleitung](../../installation/manuelle-installation/debian/index.md):
+
+    ```apache
+    <FilesMatch "^(jsonrpc\.php|mcp\.php)$">
+        Require all granted
+    </FilesMatch>
+    ```
+
+    ```apache
+    RewriteEngine On
+    RewriteCond %{HTTP:Authorization} .+
+    RewriteRule ^ - [E=HTTP_AUTHORIZATION:%0]
+    ```
+
 ## Installation
 
 Das Add-on wird wie jedes andere Add-on installiert, siehe [Add-ons](../index.md). Nach der Installation findest du es im Hauptmenü unter **Add-ons → i-doit MCP** mit drei Seiten:
@@ -170,4 +185,4 @@ Die Seite **Anfrage-Protokoll** listet jede Anfrage der KI-Clients mit Zeitpunkt
 
 | Version | Datum | Changelog |
 | --- | --- | --- |
-| 1.1.1 | 2026-10-08 | Initial release |
+| 1.1.1 | 2026-10-09 | Initial release |

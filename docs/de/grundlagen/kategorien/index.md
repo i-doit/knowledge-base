@@ -22,6 +22,7 @@ Jede Kategorie in i-doit hat eine eigene Dokumentationsseite mit Feldbeschreibun
 | [Betriebssystem](operating-system.md) | `C__CATG__OPERATING_SYSTEM` | 12 |
 | [Beziehung](relation.md) | `C__CATG__RELATION` | 6 |
 | [Buchhaltung](accounting.md) | `C__CATG__ACCOUNTING` | 22 |
+| [Cloud](cloud.md) | `C__CATG__CLOUD` | 6 |
 | [Cluster](cluster.md) | `C__CATG__CLUSTER` | 6 |
 | [Cluster (Übersicht)](cluster-root.md) | `C__CATG__CLUSTER_ROOT` | 6 |
 | [Cluster Dienstzuweisung](cluster-adm-service.md) | `C__CATG__CLUSTER_ADM_SERVICE` | 2 |
@@ -55,6 +56,7 @@ Jede Kategorie in i-doit hat eine eigene Dokumentationsseite mit Feldbeschreibun
 | [Kabelverbindung](cable.md) | `C__CATG__CABLE` | 8 |
 | Kabelverbindung | `C__CATG__CABLE_CONNECTION` | 0 |
 | [Kontaktzuweisung](contact.md) | `C__CATG__CONTACT` | 8 |
+| [Kubernetes](kubernetes.md) | `C__CATG__KUBERNETES` | 4 |
 | [Laufwerk](drive.md) | `C__CATG__DRIVE` | 19 |
 | [Listener](net-listener.md) | `C__CATG__NET_LISTENER` | 8 |
 | [Logbuch](logbook.md) | `C__CATG__LOGBOOK` | 14 |

@@ -48,6 +48,7 @@ lang: de
 | [license-remove](#license-remove)                                         | Entfernt Lizenzen von i-doit                                                                                                                                               |
 | [list](#list)                                                             | Listet alle console Kommandos auf                                                                                                                                          |
 | [logbook:archive](#logbookarchive)                                        | Logbuch-Einträge archivieren                                                                                                                                               |
+| [logbook:restore](#logbookrestore)                                        | Archivierte Logbuch-Einträge wiederherstellen                                                                                                                              |
 | [migrate-uploaded-files](#migrate-uploaded-files)                         | Migriert hochgeladene Dateien von i-doit <v1.13 zu v.1.14>                                                                                                                 |
 | [notifications-list](#notifications-list)                                 | Listet alle [Benachrichtigungen](../../auswertungen/benachrichtigungen.md) auf                                                                                             |
 | [notifications-send](#notifications-send)                                 | Benachrichtigungen per E-Mail versenden (Benachrichtigungen werden in der GUI konfiguriert)                                                                                |
@@ -877,6 +878,32 @@ Archiviert die Logbucheinträge mit einem definierten Alter, gemäß den Einstel
 
 ```shell
 sudo -u www-data php console.php logbook:archive --user admin --password admin --tenantId 1
+```
+
+### logbook:restore
+
+Stellt archivierte Logbucheinträge wieder im Logbuch her. Der Befehl verwendet die Archiv-Einstellungen und den Zeitraum, die auf der i-doit Oberfläche festgelegt sind. Archivierte Einträge, die älter als dieser Zeitraum sind, werden zurück in das Logbuch kopiert. Einträge, die bereits im Logbuch vorhanden sind, werden übersprungen.
+
+**Optionen:**
+
+| Parameter (Kurzform) | Parameter (Langform)   | Beschreibung                                                                                     |
+| -------------------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
+|                      | --batch=[BATCHSIZE]    | Anzahl der Einträge, die pro Batch wiederhergestellt werden sollen [Standard: 1000]              |
+| -u                   | --user=[USERNAME]      | Username eines Benutzers, der zur Ausführung berechtigt ist                                      |
+| -p                   | --password=[PASSWORD]  | Passwort zur Authentifizierung des zuvor angegebenen Benutzers                                   |
+| -i                   | --tenantId=[TENANT-ID] | Mandanten ID des Mandanten, der verwendet werden soll (Standard: 1)                              |
+| -c                   | --config=[CONFIG-FILE] | Angabe des Pfades zur Konfigurationsdatei                                                        |
+| -h                   | --help                 | Hilfenachricht zur Einblendung weiterer Informationen                                            |
+| -q                   | --quiet                | Quiet-Mode um die Rückgabe zu deaktivieren                                                       |
+| -V                   | --version              | Ausgabe der Version der i-doit Console                                                           |
+|                      | --ansi<br>--no-ansi    | ANSI-Ausgabe erzwingen (oder --no-ansi deaktivieren)                                             |
+| -n                   | --no-interaction       | Deaktiviert sämtliche Interaktionsfragen der i-doit Console                                      |
+| -v / -vv / -vvv      | --verbose              | Erhöht den Umfang der Rückgabe. (1 = Normale Ausgabe, 2 = Detaillierte Ausgabe, 3 = Debug-Level) |
+
+**Beispiel zur Verwendung**
+
+```shell
+sudo -u www-data php console.php logbook:restore --user admin --password admin --tenantId 1
 ```
 
 ### migrate-uploaded-files

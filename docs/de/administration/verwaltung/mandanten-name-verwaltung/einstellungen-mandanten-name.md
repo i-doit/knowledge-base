@@ -51,6 +51,7 @@ Diese Sektion enthält die meisten Optionen und steuert das grundlegende Verhalt
 | **CSV-Export Trennzeichen** | Komma, Semikolon, Raute oder Tab |
 | **One-Click-Edit** | Ja / Nein |
 | **Globaler SYS-ID Präfix** | String |
+| **Erlaubte Dateiendungen für den CMDB-Kategorie-Upload** | Kommaseparierte Liste oder leer |
 | **CMDB Status von Kabeln nach Verkabelung "In Betrieb" setzen** | Ja / Nein |
 | **CMDB Status von Kabeln nach Entkabelung "Außer Betrieb" setzen** | Ja / Nein |
 | **Objekttyp Konstante für Segmentierungs-Templates** | String |
@@ -80,6 +81,8 @@ Diese Sektion enthält die meisten Optionen und steuert das grundlegende Verhalt
 **One-Click-Edit** — Wenn aktiviert, kannst du Attributwerte in der Listenansicht direkt per Klick bearbeiten, ohne die Detailseite des Objekts zu öffnen. Dies beschleunigt die Pflege, erhöht aber das Risiko versehentlicher Änderungen.
 
 **Globaler SYS-ID Präfix** — Jedes neue Objekt erhält automatisch eine SYS-ID mit diesem Präfix (z.B. `CMDB-`). Ändere den Präfix nur, wenn du mehrere i-doit-Instanzen betreibst und die SYS-IDs unterscheidbar halten möchtest.
+
+**Erlaubte Dateiendungen für den CMDB-Kategorie-Upload**: Kommaseparierte Liste der Dateiendungen, die i-doit beim Hochladen von Dateien in Datei-Objekte oder in der Kategorie **Dateizuweisung** annimmt. Dateien mit anderen Endungen werden abgelehnt. Neuinstallationen bringen die systemweite Standardliste `pdf, doc, docx, xls, xlsx, ppt, pptx, odt, ods, odp, txt, csv, rtf, png, jpg, jpeg, gif, bmp, zip` mit. Ist das Feld im Mandanten leer, gilt diese Standardliste. Nach einem Update von einer älteren Version gibt es keine systemweite Standardliste, damit erlaubt ein leeres Feld alle Endungen, bis du es befüllst.
 
 **Kabelstatus automatisch setzen** — Die beiden Optionen für den CMDB-Status von Kabeln sorgen dafür, dass Kabelobjekte beim Verkabeln automatisch auf "In Betrieb" und beim Entkabeln auf "Außer Betrieb" gesetzt werden. Das spart manuelle Nacharbeit bei der Verkabelungsdokumentation.
 
@@ -188,7 +191,7 @@ Diese Optionen beeinflussen, wie Informationen in der Benutzeroberfläche darges
 
 **Drag 'n' Drop** — Erlaubt das Verschieben von Objekten per Drag & Drop in Standort- und Objektlisten. Deaktiviere es, wenn Benutzer versehentlich Objekte verschieben.
 
-**Objekttyp Sortierung** — "Alphabetisch" sortiert die Objekttyp-Gruppen und -Typen in der Navigation automatisch. "Manuell" erlaubt eine eigene Reihenfolge über die Objekttyp-Konfiguration.
+**Objekttyp Sortierung** — "Alphabetisch" sortiert die Objekttyp-Gruppen und -Typen in der Navigation automatisch. "Manuell" erlaubt eine eigene Reihenfolge über die Objekttyp-Konfiguration. Neuinstallationen verwenden standardmäßig "Alphabetisch". Bestehende Installationen behalten nach einem Update ihre bisherige Einstellung.
 
 ---
 
@@ -245,6 +248,7 @@ Templates ermöglichen es, Objekte mit vordefinierten Attributwerten anzulegen. 
 | **Information about last login** | Aktiv / Inaktiv |
 | **Informationen zum letzten Login** | Ja / Nein |
 | **Dateneingabe bereinigen** | Ja / Nein |
+| **Erlaubte URL-Schemata** | Kommaseparierte Liste |
 
 !!! danger "Rechtesystem nicht unbedacht deaktivieren"
     Wenn du das Rechtesystem deaktivierst, haben **alle authentifizierten Benutzer vollen Zugriff** auf sämtliche Objekte, Kategorien und Verwaltungsfunktionen des Mandanten. Deaktiviere das Rechtesystem nur zu Testzwecken oder in Einzelbenutzer-Installationen.
@@ -257,6 +261,8 @@ Templates ermöglichen es, Objekte mit vordefinierten Attributwerten anzulegen. 
     Diese Option betrifft die Anzeige in der Kategorie "Passwörter". Auch bei Deaktivierung werden Passwörter in der Datenbank gespeichert — diese Option regelt lediglich die Sichtbarkeit auf der Oberfläche.
 
 **Dateneingabe bereinigen** — Filtert Markup, mit dem sich Code im Browser ausführen lässt (zum Beispiel `<script>`-Elemente, Event-Handler-Attribute wie `onclick`, `<iframe>`-Elemente und `javascript:`-Links), aus den Inhalten von Attributen heraus, wenn diese dargestellt werden. Der Filter wirkt auf die Ausgabe, nicht auf die gespeicherten Daten: Was du speicherst, wird unverändert in die Datenbank geschrieben. Die Option reduziert außerdem die Werkzeugleiste des [HTML-Editors](../../../grundlagen/attributfelder.md#warum-der-editor-weniger-formatierungsoptionen-anbietet), weshalb dort Links, Schriftarten und Farben standardmäßig fehlen. Lass diese Option aktiviert, es sei denn, du hast einen konkreten Grund, ungefiltertes HTML auszugeben.
+
+**Erlaubte URL-Schemata**: Kommaseparierte Liste der URL-Schemata, die in Link-Feldern erlaubt sind, zum Beispiel in den Kategorien **Dateizuweisung** und **Zugriff**. Links mit einem anderen Schema wie `javascript:` lassen sich nicht speichern und werden nicht als anklickbarer Link angezeigt. URLs ohne Schema wird automatisch `http://` vorangestellt. Standard ist `http, https, ftp, ftps, mailto, tel`, bei Neuinstallationen und nach einem Update.
 
 ---
 

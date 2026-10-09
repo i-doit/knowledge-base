@@ -299,6 +299,7 @@ idoit
     idoit:set-update-capability         Die i-doit-Update-Fähigkeit de- und aktivieren
 logbook
     logbook:archive                     Archiviert Logbuch-Einträge (Einstellungen werden in der GUI definiert)
+    logbook:restore                     Stellt archivierte Logbuch-Einträge wieder her (Einstellungen werden in der GUI definiert)
 system
     system:tenant-export                Exportieren Sie Ihre Mandantendaten einschließlich hochgeladener Dateien in ein ZIP-Paket.
     system:tenant-import                Importieren Sie Ihre Mandantendaten einschließlich hochgeladener Dateien aus einem ZIP-Paket, das mit dem Befehl system:tenant-export generiert wurde.

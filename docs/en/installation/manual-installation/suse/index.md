@@ -238,9 +238,9 @@ ServerName i-doit
         </FilesMatch>
 
         ## …except some PHP files in src/:
-        <Files "jsonrpc.php">
+        <FilesMatch "^(jsonrpc\.php|mcp\.php)$">
             Require all granted
-        </Files>
+        </FilesMatch>
 
         ## …except some PHP files in src/tools/php/:
         <FilesMatch "^(rt\.php|barcode_window\.php|barcode\.php)$">
@@ -291,6 +291,8 @@ ServerName i-doit
     ## Pretty URLs:
     <IfModule mod_rewrite.c>
         RewriteEngine On
+        RewriteCond %{HTTP:Authorization} .+
+        RewriteRule ^ - [E=HTTP_AUTHORIZATION:%0]
         RewriteRule favicon\.ico$ images/favicon.ico [L]
         RewriteCond %{REQUEST_FILENAME} !-l
         RewriteCond %{REQUEST_FILENAME} !-f

@@ -299,6 +299,7 @@ idoit
     idoit:set-update-capability         Enable and disable the i-doit update capability
 logbook
     logbook:archive                     Archives logbook entries (settings are defined in the GUI)
+    logbook:restore                     Restores archived logbook entries (settings are defined in the GUI)
 system
     system:tenant-export                Export your tenant data including uploaded files into a ZIP package.
     system:tenant-import                Import your tenant data including uploaded files from a ZIP package generated with the system:tenant-export command.

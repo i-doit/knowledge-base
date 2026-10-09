@@ -48,6 +48,7 @@ lang: en
 | [license-remove](#license-remove)                                         | Removes licenses from i-doit                                                                                                                                               |
 | [list](#list)                                                             | Lists all console commands                                                                                                                                          |
 | [logbook:archive](#logbookarchive)                                        | Archive logbook entries                                                                                                                                               |
+| [logbook:restore](#logbookrestore)                                        | Restore archived logbook entries                                                                                                                                      |
 | [migrate-uploaded-files](#migrate-uploaded-files)                         | Migrates uploaded files from i-doit <v1.13 to v.1.14>                                                                                                                 |
 | [notifications-list](#notifications-list)                                 | Lists all [notifications](../../evaluation/notifications.md)                                                                                             |
 | [notifications-send](#notifications-send)                                 | Send notifications via email (notifications are configured in the GUI)                                                                                |
@@ -877,6 +878,32 @@ Archives logbook entries with a defined age according to the settings in the i-d
 
 ```shell
 sudo -u www-data php console.php logbook:archive --user admin --password admin --tenantId 1
+```
+
+### logbook:restore
+
+Restores archived logbook entries back into the logbook. The command uses the archive settings and the interval configured in the i-doit interface. Archived entries that are older than this interval are copied back into the logbook. Entries that already exist in the logbook are skipped.
+
+**Options:**
+
+| parameter (short) | parameter (long)   | Description                                                                                     |
+| -------------------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
+|                      | --batch=[BATCHSIZE]    | Number of entries to be restored per batch [default: 1000]                     |
+| -u                   | --user=[USERNAME]      | Username of a user authorized for execution                                      |
+| -p                   | --password=[PASSWORD]  | Password for authentication of the previously specified user                                   |
+| -i                   | --tenantId=[TENANT-ID] | Tenant ID of the tenant to be used (default: 1)                              |
+| -c                   | --config=[CONFIG-FILE] | Path to the configuration file                                                        |
+| -h                   | --help                 | Help message for displaying further information                                            |
+| -q                   | --quiet                | Quiet mode to suppress output                                                       |
+| -V                   | --version              | Output of the i-doit console version                                                           |
+|                      | --ansi<br>--no-ansi    | Force ANSI output (or disable with --no-ansi)                                             |
+| -n                   | --no-interaction       | Disables all interaction questions of the i-doit console                                      |
+| -v / -vv / -vvv      | --verbose              | Increases the verbosity of output (1 = normal output, 2 = detailed output, 3 = debug level) |
+
+**Usage example**
+
+```shell
+sudo -u www-data php console.php logbook:restore --user admin --password admin --tenantId 1
 ```
 
 ### migrate-uploaded-files

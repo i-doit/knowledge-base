@@ -91,7 +91,7 @@ Example:
     sudo -u www-data php console.php logbook:archive --user admin --password admin --tenantId 1
 ```
 
-Archived entries can be restored for further evaluation. This function is located under **Extras → CMDB → Logbook → Restore**.
+Archived entries can be restored for further evaluation. This function is located under **Extras → CMDB → Logbook → Restore**. Alternatively, you can restore archived entries with the console command [logbook:restore](../automation-and-integration/cli/commands-and-options.md#logbookrestore).
 
 [![archived-entries](../assets/images/en/basics/logbook/9-lb.png)](../assets/images/en/basics/logbook/9-lb.png)
 

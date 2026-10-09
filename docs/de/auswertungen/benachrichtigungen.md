@@ -107,6 +107,7 @@ Im linken Navigationsbaum unter **E-Mail-Vorlagen** kannst du den Inhalt der Ben
 | Sprache               | Es wird die Sprache angezeigt, die gerade bearbeitet wird.                                                                                             |
 | Betreff               | Der Betreff der zu verschickenden Nachricht kann mit Platzhaltern aus dem unteren Bereich der Oberfläche selbst definiert werden.                      |
 | Benachrichtigungstext | Der Text kann, wie auch der Betreff, mit Platzhaltern zusammengestellt werden.                                                                         |
+| Als HTML senden       | Seit i-doit 39. Wenn aktiviert, wird die E-Mail als HTML versendet und HTML-Markup im Benachrichtigungstext wird dargestellt. Der Text wird dann in einem Editor mit Formatierungsoptionen bearbeitet. Der Wechsel zwischen HTML- und Text-E-Mails wird erst nach dem Speichern aktiv. Standardmäßig deaktiviert. |
 | Report                | Ein Report kann hier definiert werden, mit dem in der E-Mail die in der Benachrichtigung gefundenen Objektinformationen aufbereitet verschickt werden. |
 
 ## Konfiguration des Aufrufs mit CLI

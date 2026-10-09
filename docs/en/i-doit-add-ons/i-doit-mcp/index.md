@@ -19,6 +19,21 @@ The assistant always works with the permissions of the person its access token b
     - The JSON-RPC API switched on for the tenant: **Activate JSON-RPC API** under **Administration → Add-ons → JSON-RPC API** has to be set to **Yes**. While it is off, every request of an AI client is refused.
     - An AI client that supports MCP over HTTP.
 
+!!! warning "Apache with AllowOverride None"
+    The `.htaccess` file of i-doit 39 allows access to `src/mcp.php` and passes the `Authorization` header to PHP. If your Apache virtual host uses `AllowOverride None` and contains the rules of the `.htaccess` file directly, transfer these changes to your virtual host configuration and reload Apache. Otherwise the AI client cannot connect. The changed lines are shown in the virtual host example of the [installation guide](../../installation/manual-installation/debian/index.md):
+
+    ```apache
+    <FilesMatch "^(jsonrpc\.php|mcp\.php)$">
+        Require all granted
+    </FilesMatch>
+    ```
+
+    ```apache
+    RewriteEngine On
+    RewriteCond %{HTTP:Authorization} .+
+    RewriteRule ^ - [E=HTTP_AUTHORIZATION:%0]
+    ```
+
 ## Installation
 
 The add-on is installed like every other add-on, see [Add-ons](../index.md). After the installation, you find it in the main menu under **Add-ons → i-doit MCP** with three pages:
@@ -170,4 +185,4 @@ The **Request log** page lists every request of the AI clients with time, person
 
 | Version | Date | Changelog |
 | --- | --- | --- |
-| 1.1.1 | 2026-10-08 | Initial release |
+| 1.1.1 | 2026-10-09 | Initial release |
