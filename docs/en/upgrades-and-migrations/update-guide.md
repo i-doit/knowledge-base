@@ -1,5 +1,5 @@
 ---
-title: Update Guide from i-doit 1.7.4 to 34
+title: Update Guide from i-doit 1.7.4 to 38
 description: i-doit update guide
 icon: fontawesome/brands/linux
 status:
@@ -8,7 +8,7 @@ lang: en
 
 ## Important information before you begin
 
-Here you will find a short guide for updating your i-doit to i-doit 31.<br>
+Here you will find a short guide for updating your i-doit to i-doit 38.<br>
 You may need to update your operating system.<br>
 These instructions apply to **Debian**; the commands used may differ on other operating systems. Before you begin, download all the updates you need to perform and copy them to the i-doit root folder.
 
@@ -858,6 +858,32 @@ In the web interface updater, verify that the update to version 34 is displayed 
     Please take the time to review the logs and check whether an error has occurred.
 
 !!! success "**Check the system and i-doit**"
+
+## Update from 34 to 38
+
+Version 35 cannot be skipped: versions 36, 37 and 38 require an installed version 35 (see the [compatibility matrix](../installation/system-requirements.md#compatibility-matrix)). Version 35 still runs with PHP 8.1 (deprecated), from version 36 on PHP 8.2 or newer is required, version 38 requires MariaDB 10.6 or newer. Update PHP and MariaDB first if necessary, see [Update PHP (Debian/Ubuntu)](../maintenance-and-operation/php-update.md).
+
+First, prepare the update to version 35 via the CLI by opening the i-doit folder at `/var/www/html/` and extracting the update package with
+
+```sh
+sudo -u www-data unzip idoit-35-update.zip
+```
+
+If prompted, overwrite everything by entering **A**.
+
+In the web interface updater, verify that the update to version 35 is displayed and selected, then perform the update.
+
+!!! success "**Check the update logs**"
+    Please take the time to review the logs and check whether an error has occurred.
+
+Then update from 35 directly to 38 in the same way with the package `idoit-38-update.zip`. Alternatively, both steps can be performed with the [console](../maintenance-and-operation/i-doit-update.md#update-via-the-console-using-consolephp):
+
+```sh
+sudo -u www-data php console.php update -u {username} -p {password} -z /var/www/html/idoit-38-update.zip --v 38
+```
+
+!!! success "**Check the system and i-doit**"
+    After the update, perform the steps listed under [After the Update](../maintenance-and-operation/i-doit-update.md#after-the-update).
 
 ## Sources
 

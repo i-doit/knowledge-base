@@ -26,7 +26,7 @@ A few things need to be considered to ensure a smooth migration:
 
 First, the new system should be prepared as much as possible:
 
-1. The system requirements match the version in use; see the [compatibility matrix](../installation/system-requirements.md#kompatibilitatsmatrix).
+1. The system requirements match the version in use; see the [compatibility matrix](../installation/system-requirements.md#compatibility-matrix).
 2. Customized [system settings](../installation/manual-installation/system-settings.md) have been configured.
 
 ## Decommission Old System
@@ -65,13 +65,16 @@ The old system should no longer be used productively during the migration:
         ```
         <!-- cSpell:enable -->
 
-2. Save the databases to a file ("dump") and compress with gz:
+2. Save the two i-doit databases to a file ("dump") and compress with gz. Adjust the database names to your installation (see `$g_db_system` in `src/config.inc.php` and the table `isys_mandator`):
 
     <!-- cSpell:disable -->
     ```shell
-    mysqldump -hlocalhost -uroot -p --all-databases | gzip -9 > /tmp/idoit-backup.sql.gz
+    mysqldump -hlocalhost -uroot -p --databases idoit_system idoit_data | gzip -9 > /tmp/idoit-backup.sql.gz
     ```
     <!-- cSpell:enable -->
+
+    !!! warning "Do not use `--all-databases`"
+        A dump of all databases also contains the system database `mysql` with the user accounts and privileges of the old server. Importing it on the new system overwrites the accounts created there and fails between different MariaDB versions.
 
 3. Then transfer the files and the database dump to the new host:
 
@@ -123,6 +126,9 @@ The old system should no longer be used productively during the migration:
     ```
     <!-- cSpell:enable -->
 
+    !!! info "Error `ERROR at line 1: Unknown command '\\-'`"
+        Newer MariaDB versions write the line `/*!999999\- enable the sandbox mode */` into the first line of a dump, which older MariaDB versions cannot import. Remove this first line from the SQL file and repeat the import.
+
 3. If file system permissions are no longer correct:
 
     ```shell
@@ -138,7 +144,7 @@ The old system should no longer be used productively during the migration:
     sudo rm -r temp/*
     ```
 
-5. It should be checked whether the .htaccess file was copied:
+5. Check the Apache configuration. Systems set up with the idoit-install script or according to our [installation guides](../installation/manual-installation/index.md) run with `AllowOverride None` and carry the rules of the `.htaccess` file in the VirtualHost configuration. Compare the `.htaccess` file of the migrated i-doit version with the VirtualHost configuration of the new system and carry over differences:
 
     ```shell
     ls -lha /var/www/html/.htaccess

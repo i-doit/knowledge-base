@@ -9,7 +9,7 @@ lang: en
 
 This section covers specific upgrades and migrations related to i-doit.
 
-*   [Update guide i-doit 1.7.4 to 34](update-guide.md) — i-doit update guide
+*   [Update guide i-doit 1.7.4 to 38](update-guide.md) — i-doit update guide
 *   [Upgrade from i-doit open to pro](upgrade-from-open-to-i-doit.md) — How to upgrade from i-doit open to i-doit with extended features.
 *   [Update from i-doit open 1.4.8 to 1.8](update-from-open-1.4.8-to-1.8.md) — This article describes the specifics of updating the open variant from version 1.4.8 to 1.8.
 *   [Upgrade to MySQL 5.6 or MariaDB 10.0](upgrade-zu-mysql-5.6-oder-mariadb-10.0.md) — Starting with i-doit version 1.7, you need at least MySQL 5.6 or MariaDB 10.0 (previously: MySQL 5.5 / MariaDB 5.5).
