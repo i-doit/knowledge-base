@@ -33,13 +33,13 @@ Vorgefertigter Stack aus zwei gehärteten Containern (`app` mit Apache + PHP + i
 
 ### Mit eigenem Image-Build
 
-Klassischer Setup mit selbst gebautem PHP-Apache-Image (`php:8.2-apache`), separater MariaDB und dediziertem Cron-Container. Volle Kontrolle über PHP-Extensions und Apache-Konfiguration.
+Klassischer Setup mit selbst gebautem PHP-Apache-Image (`php:8.4-apache`), separater MariaDB und dediziertem Cron-Container. Volle Kontrolle über PHP-Extensions und Apache-Konfiguration.
 
 | Container | Image | Aufgabe |
 |-----------|-------|---------|
-| `idoit-web` | `php:8.2-apache` (selbst gebaut) | Apache + PHP + i-doit |
-| `idoit-db` | `mariadb:10.6` | Datenbank |
-| `idoit-cron` | `php:8.2-apache` (selbst gebaut) | i-doit Cronjobs |
+| `idoit-web` | `php:8.4-apache` (selbst gebaut) | Apache + PHP + i-doit |
+| `idoit-db` | `mariadb:10.11` | Datenbank |
+| `idoit-cron` | `php:8.4-apache` (selbst gebaut) | i-doit Cronjobs |
 
 Wähle dein Betriebssystem:
 

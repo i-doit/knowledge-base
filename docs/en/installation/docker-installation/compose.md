@@ -178,15 +178,22 @@ IDOIT_USER_PASSWORD=admin
 # Application & license
 IDOIT_APP_URL=https://idoit.example.com
 IDOIT_LICENSE_TOKEN=changeme
-# IDOIT_LICENSE_FILE=changeme
+
+# Optional
+# IDOIT_USER_EMAIL=admin@example.com
+# IDOIT_LICENSE_SERVER_URL=https://lizenzen.i-doit.com
 ```
 <!-- cSpell:enable -->
 
 !!! warning "Replace the passwords"
     The values `root`, `idoit`, `admin` are only intended for the initial setup. Replace them with strong, individual passwords before going into production.
 
+!!! info "Optional variables"
+    - `IDOIT_USER_EMAIL`: Recovery e-mail address of the initial user account, only used on the first start when the tenant is created. Leave the line commented out if not needed: as soon as the variable is set, even with an empty value, it is passed to the tenant creation.
+    - `IDOIT_LICENSE_SERVER_URL`: License server used to activate the license token. Default: `https://lizenzen.i-doit.com`.
+
 !!! tip "Important: `IDOIT_APP_URL`"
-    `IDOIT_APP_URL` must point to the **externally reachable** URL of the application — including scheme (`https://`) and hostname. The value is only written to the i-doit settings on the *very first* container start; later changes to the `.env` alone are not enough (see the **Troubleshooting** section).
+    `IDOIT_APP_URL` must point to the **externally reachable** URL of the application, including scheme (`https://`) and hostname. The value is written to the i-doit settings on every container start. After changing it in the `.env`, apply it with `sudo docker compose up -d` (see the **Troubleshooting** section).
 
 ### Apache override for reverse proxy headers
 <!-- cSpell:disable -->
@@ -319,23 +326,13 @@ sudo docker compose exec app bash -c '
     cd /var/www/html
     php console.php idoit:feature-manager --unset-cloud \
         -u admin -p "$IDOIT_ADMIN_CENTER_PASSWORD" -i 1
-    php console.php idoit:feature-manager --noncloudable --enable all \
-        -u admin -p "$IDOIT_ADMIN_CENTER_PASSWORD" -i 1
-    sed -i "s/\$g_is_cloud = .1./\$g_is_cloud = '\''0'\''/" \
-        /data/data/config.inc.php
 '
 
 sudo docker compose restart app
 ```
 <!-- cSpell:enable -->
 
-What the three commands do:
-
-| Command | Effect |
-|---|---|
-| `--unset-cloud` | Resets the cloud flag in the i-doit database. |
-| `--noncloudable --enable all` | Enables all features that are disabled by default in cloud mode (LDAP, JDisc integration, logbook archive, etc.). |
-| `sed` command | Sets `$g_is_cloud` in the persistent `config.inc.php` to `0`. |
+`--unset-cloud` writes `$g_is_cloud = 0` to the persistent `config.inc.php` in the data volume. Without cloud mode, i-doit treats all features as active (LDAP, JDisc integration, logbook archive, etc.), so no further feature switches are needed.
 
 !!! info "Add-on install and Pro features"
     Without this step, installing add-ons from the Subscription Center fails and certain modules are not visible. The switch is a one-time operation per installation.
@@ -346,27 +343,26 @@ i-doit Pro requires a valid license token or license file to activate. The shipp
 
 ### Variant A — web license token
 
-Copy the token from the i-doit group customer portal, write it to the `.env`, and restart the `app` container:
+Copy the token from the i-doit group customer portal, write it to the `.env`, and recreate the `app` container. `docker compose restart` does not reload the `.env`, therefore use `up -d`:
 <!-- cSpell:disable -->
 ```sh
 sudo sed -i 's/^IDOIT_LICENSE_TOKEN=.*/IDOIT_LICENSE_TOKEN=<token>/' /opt/idoit/.env
-sudo docker compose restart app
+sudo docker compose up -d
 ```
 <!-- cSpell:enable -->
 
 ### Variant B — license file
 
-Place the license file (`license.key`) into the data volume and replace the token line with the file variant:
+The image reads the license file from the fixed path `/data/data/license.key` in the data volume. Copy the file there, empty the token line, and recreate the `app` container. On start, the file is installed if no token is set or the token activation fails:
 <!-- cSpell:disable -->
 ```sh
 sudo docker compose cp ./license.key app:/data/data/license.key
 sudo sed -i 's/^IDOIT_LICENSE_TOKEN=.*/IDOIT_LICENSE_TOKEN=/' /opt/idoit/.env
-sudo sed -i 's/^# IDOIT_LICENSE_FILE=.*/IDOIT_LICENSE_FILE=\/data\/data\/license.key/' /opt/idoit/.env
-sudo docker compose restart app
+sudo docker compose up -d
 ```
 <!-- cSpell:enable -->
 
-After the restart, the license status can be verified in the Admin Center on the **License** tab.
+After that, the license status can be verified in the Admin Center on the **License** tab.
 
 ## Update
 
@@ -416,7 +412,7 @@ docker run --rm \
     -v "${BACKUP_DIR}":/backup \
     alpine tar czf "/backup/app_${DATE}.tgz" -C /data .
 
-# Remove backups older than 14 days
+# Keep the 28 most recent backup files (14 daily runs), delete the rest
 find "${BACKUP_DIR}" -name "*.sql" -o -name "*.tgz" \
     | xargs ls -t | tail -n +29 | xargs rm -f 2>/dev/null
 
@@ -459,14 +455,14 @@ The `.env` is incomplete. The entrypoint runs with `set -u` and aborts as soon a
 
 ### License error `Authentication failed, please check your weblicense token`
 
-The token is wrong or still the placeholder `changeme`. Put the correct token from the customer portal into the `.env`, then `sudo docker compose restart app`.
+The token is wrong or still the placeholder `changeme`. Put the correct token from the customer portal into the `.env`, then `sudo docker compose up -d`.
 
 ### Add-on from the Subscription Center fails with `rmdir: Device or resource busy`
 
 Full error:
 
 ```
-Failed to remove directory "/var/www/idoit/updates/versions/38/files/temp/":
+Failed to remove directory "/var/www/idoit/updates/versions/39/files/temp/":
 rmdir(...): Device or resource busy
 ```
 
@@ -488,25 +484,16 @@ The image initialises i-doit as a cloud instance. Pro-specific features and cert
 `IDOIT_APP_URL` is still set to `http://localhost:8080`, but the access happens from another host.
 
 !!! warning "Important"
-    The value from the `.env` is written to the i-doit settings only on the *very first* container start. When fixed afterwards, a container restart is **not** enough — the value also has to be set inside the application via the console command.
+    The entrypoint writes the value from the `.env` to the i-doit settings on every container start. `docker compose restart` does not reload the `.env`, so the container has to be recreated with `docker compose up -d`.
 
 <!-- cSpell:disable -->
 ```sh
-# 1. Fix the .env (for future re-installs)
 sudo sed -i 's|^IDOIT_APP_URL=.*|IDOIT_APP_URL=https://idoit.example.com|' /opt/idoit/.env
-
-# 2. Update the value in the i-doit settings
-sudo docker compose exec app bash -c \
-    'cd /var/www/html && php console.php idoit:set-env-var \
-        -u admin -p "$IDOIT_ADMIN_CENTER_PASSWORD" \
-        -k "IDOIT_APP_URL=https://idoit.example.com"'
-
-# 3. Restart the app container
-sudo docker compose restart app
+sudo docker compose up -d
 ```
 <!-- cSpell:enable -->
 
-The `idoit:set-env-var` command is also the clean way to switch later from HTTP to HTTPS or to a different hostname.
+The same steps apply when switching later from HTTP to HTTPS or to a different hostname.
 
 ### Links such as `/admin` redirect to `http://...:8080/...`
 
