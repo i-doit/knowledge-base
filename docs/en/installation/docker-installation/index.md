@@ -25,8 +25,8 @@ Prebuilt stack of two hardened containers (`app` with Apache + PHP + i-doit, `db
 
 | Container | Image | Purpose |
 |-----------|-------|---------|
-| `app` | `registry.on.ops.docupike.net/i-doit/app:38` | Apache + PHP + i-doit |
-| `db` | `registry.on.ops.docupike.net/i-doit/db:38` | MariaDB |
+| `app` | `registry.on.ops.docupike.net/i-doit/app:39` | Apache + PHP + i-doit |
+| `db` | `registry.on.ops.docupike.net/i-doit/db:39` | MariaDB |
 | `nginx` (optional) | `nginx:1.27-alpine` | TLS reverse proxy |
 
 → [Installation with official images](compose.md)

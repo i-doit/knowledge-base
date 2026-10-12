@@ -6,7 +6,7 @@ status:
 lang: de
 ---
 
-!!! note "Getestet mit i-doit **38** und **Debian 13 Trixie**"
+!!! note "Getestet mit i-doit **39** und **Debian 13 Trixie**"
 
 Diese Anleitung beschreibt die Installation von i-doit Pro mit den offiziellen Container-Images der i-doit group über Docker Compose. Der Stack besteht aus zwei Services — `app` (Apache + PHP + i-doit) und `db` (MariaDB) — und ist auf einem Linux-Server in wenigen Minuten einsatzbereit.
 
@@ -80,7 +80,7 @@ sudo nano /opt/idoit/compose.yaml
 services:
 
   db:
-    image: registry.on.ops.docupike.net/i-doit/db:38
+    image: registry.on.ops.docupike.net/i-doit/db:39
     restart: unless-stopped
     volumes:
       - db:/var/lib/mysql
@@ -103,7 +103,7 @@ services:
       - ALL
 
   app:
-    image: registry.on.ops.docupike.net/i-doit/app:38
+    image: registry.on.ops.docupike.net/i-doit/app:39
     restart: unless-stopped
     volumes:
       - app:/data/data
@@ -164,7 +164,7 @@ MYSQL_PASSWORD=idoit
 MYSQL_HOSTNAME=db
 
 # i-doit System
-IDOIT_VERSION=38
+IDOIT_VERSION=39
 IDOIT_SYSTEM_DATABASE=idoit_system
 IDOIT_TENANT_DATABASE=idoit_data
 IDOIT_ADMIN_CENTER_PASSWORD=admin
@@ -294,7 +294,7 @@ curl -k https://idoit.example.com/health
 Erwartete Antwort:
 <!-- cSpell:disable -->
 ```json
-{"status":"ready","version":"38"}
+{"status":"ready","version":"39"}
 ```
 <!-- cSpell:enable -->
 
@@ -372,7 +372,7 @@ Nach dem Restart lässt sich der Lizenzstatus im Admin-Center (Tab **Lizenz**) p
 
 Auf eine neuere Image-Version aktualisieren:
 
-1. `compose.yaml` öffnen und den Image-Tag (`:38`) in beiden Services auf die Ziel-Version setzen.
+1. `compose.yaml` öffnen und den Image-Tag (`:39`) in beiden Services auf die Ziel-Version setzen.
 2. `IDOIT_VERSION` in der `.env` auf denselben Wert anheben.
 3. Update durchführen:
 <!-- cSpell:disable -->
@@ -454,7 +454,7 @@ sudo docker compose down --volumes --rmi all
 
 Die `.env` ist unvollständig. Das Entrypoint-Skript läuft mit `set -u` und bricht ab, sobald eine erwartete Variable nicht gesetzt ist. Häufige Lücken in eigenen `.env`-Vorlagen:
 
-- `IDOIT_VERSION` — muss zum Image-Tag passen (Tag `:38` ⇒ `IDOIT_VERSION=38`).
+- `IDOIT_VERSION` — muss zum Image-Tag passen (Tag `:39` ⇒ `IDOIT_VERSION=39`).
 - `IDOIT_SYSTEM_SETTINGS` — darf leer bleiben, muss aber **gesetzt** sein.
 
 ### Lizenz-Fehler `Authentication failed, please check your weblicense token`

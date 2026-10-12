@@ -6,7 +6,7 @@ status:
 lang: en
 ---
 
-!!! note "Tested with i-doit **38** and **Debian 13 Trixie**"
+!!! note "Tested with i-doit **39** and **Debian 13 Trixie**"
 
 This guide describes how to install i-doit Pro using the official container images from the i-doit group via Docker Compose. The stack consists of two services — `app` (Apache + PHP + i-doit) and `db` (MariaDB) — and is ready to use on a Linux server within a few minutes.
 
@@ -80,7 +80,7 @@ sudo nano /opt/idoit/compose.yaml
 services:
 
   db:
-    image: registry.on.ops.docupike.net/i-doit/db:38
+    image: registry.on.ops.docupike.net/i-doit/db:39
     restart: unless-stopped
     volumes:
       - db:/var/lib/mysql
@@ -103,7 +103,7 @@ services:
       - ALL
 
   app:
-    image: registry.on.ops.docupike.net/i-doit/app:38
+    image: registry.on.ops.docupike.net/i-doit/app:39
     restart: unless-stopped
     volumes:
       - app:/data/data
@@ -164,7 +164,7 @@ MYSQL_PASSWORD=idoit
 MYSQL_HOSTNAME=db
 
 # i-doit system
-IDOIT_VERSION=38
+IDOIT_VERSION=39
 IDOIT_SYSTEM_DATABASE=idoit_system
 IDOIT_TENANT_DATABASE=idoit_data
 IDOIT_ADMIN_CENTER_PASSWORD=admin
@@ -294,7 +294,7 @@ curl -k https://idoit.example.com/health
 Expected response:
 <!-- cSpell:disable -->
 ```json
-{"status":"ready","version":"38"}
+{"status":"ready","version":"39"}
 ```
 <!-- cSpell:enable -->
 
@@ -372,7 +372,7 @@ After the restart, the license status can be verified in the Admin Center on the
 
 Upgrade to a newer image version:
 
-1. Open `compose.yaml` and set the image tag (`:38`) to the target version in both services.
+1. Open `compose.yaml` and set the image tag (`:39`) to the target version in both services.
 2. Set `IDOIT_VERSION` in the `.env` to the same value.
 3. Run the update:
 <!-- cSpell:disable -->
@@ -454,7 +454,7 @@ sudo docker compose down --volumes --rmi all
 
 The `.env` is incomplete. The entrypoint runs with `set -u` and aborts as soon as an expected variable is unset. Common gaps in self-made `.env` files:
 
-- `IDOIT_VERSION` — must match the image tag (tag `:38` ⇒ `IDOIT_VERSION=38`).
+- `IDOIT_VERSION` — must match the image tag (tag `:39` ⇒ `IDOIT_VERSION=39`).
 - `IDOIT_SYSTEM_SETTINGS` — may be empty, but must be **set**.
 
 ### License error `Authentication failed, please check your weblicense token`
