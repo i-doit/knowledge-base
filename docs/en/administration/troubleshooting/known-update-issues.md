@@ -8,6 +8,35 @@ lang: en
 
 This article lists all known problems when updating from or to a specific i-doit version.
 
+## Version 39
+
+After the update to 39, no add-on can be installed or updated in the [Add-on & Subscription Center](../add-on-and-subscription-center.md). This error message appears:
+
+```log
+Invalid add-on identifier in package.json
+```
+
+Install this hotfix in **39** to make installing and updating add-ons work again:
+
+[i-doit_39_hotfix_ID-12679_417db18.zip :material-file-download:](../../assets/downloads/hotfixes/39/i-doit_39_hotfix_ID-12679_417db18.zip){ .md-button .md-button--primary }
+
+---
+
+If pages fail with `HTTP 500` after the update to 39 and the web server log shows this error message:
+
+```log
+PHP Fatal error:  Declaration of idoit\\Component\\isys_component_sessionProxyEebb398::include_mandator_cache() must be compatible with isys_component_session::include_mandator_cache(): void in /var/www/html/temp/di_container_cache_mandator_1.php on line 2628
+```
+
+This happens, for example, after an update via the [Add-on & Subscription Center](../add-on-and-subscription-center.md). The updater then also fails with `HTTP 500`. The cache file in the `temp` directory is still from version 38. Empty the `temp` directory and restart the web server. The cache is rebuilt on the next request:
+
+```sh
+sudo rm -rf /var/www/html/temp/*
+sudo systemctl restart apache2
+```
+
+If you use PHP-FPM, also restart the PHP-FPM service. Then finish the update with the updater.
+
 ## Version 34
 
 SM-View `2024.3.0.2708` is not compatible with i-doit 34. After the update, an `HTTP 500` server error is thrown. [Deactivate the add-on](../../i-doit-add-ons/index.md#de-enablen) in the [Admin Center](../admin-center.md) to continue working. The error message in the web server log looks like this:
