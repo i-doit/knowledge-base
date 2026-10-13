@@ -144,7 +144,7 @@ sudo nano /opt/idoit-docker/config/idoit-cron
 ```
 <!-- cSpell:enable -->
 
-!!! info "Die Jobs entsprechen denen des offiziellen i-doit Container-Images. `--user` und `--password` sind die Zugangsdaten eines i-doit-Benutzers mit Administratorrechten im Mandanten mit der ID `1` (Standard nach der Installation: `admin` / `admin`)."
+!!! info "Die Jobs orientieren sich an denen des offiziellen i-doit Container-Images. `--user` und `--password` sind die Zugangsdaten eines i-doit-Benutzers mit Administratorrechten im Mandanten mit der ID `1` (Standard nach der Installation: `admin` / `admin`)."
 
 ## docker-compose.yml erstellen
 <!-- cSpell:disable -->
