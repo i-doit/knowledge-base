@@ -450,8 +450,8 @@ sudo docker compose down --volumes --rmi all
 
 The `.env` is incomplete. The entrypoint runs with `set -u` and aborts as soon as an expected variable is unset. Common gaps in self-made `.env` files:
 
-- `IDOIT_VERSION` — must match the image tag (tag `:39` ⇒ `IDOIT_VERSION=39`).
-- `IDOIT_SYSTEM_SETTINGS` — may be empty, but must be **set**.
+- `IDOIT_VERSION`: must match the image tag (tag `:39` ⇒ `IDOIT_VERSION=39`).
+- `IDOIT_SYSTEM_SETTINGS`: may be empty, but must be **set**.
 
 ### License error `Authentication failed, please check your weblicense token`
 

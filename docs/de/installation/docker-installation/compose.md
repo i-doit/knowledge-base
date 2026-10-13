@@ -450,8 +450,8 @@ sudo docker compose down --volumes --rmi all
 
 Die `.env` ist unvollständig. Das Entrypoint-Skript läuft mit `set -u` und bricht ab, sobald eine erwartete Variable nicht gesetzt ist. Häufige Lücken in eigenen `.env`-Vorlagen:
 
-- `IDOIT_VERSION` — muss zum Image-Tag passen (Tag `:39` ⇒ `IDOIT_VERSION=39`).
-- `IDOIT_SYSTEM_SETTINGS` — darf leer bleiben, muss aber **gesetzt** sein.
+- `IDOIT_VERSION`: muss zum Image-Tag passen (Tag `:39` ⇒ `IDOIT_VERSION=39`).
+- `IDOIT_SYSTEM_SETTINGS`: darf leer bleiben, muss aber **gesetzt** sein.
 
 ### Lizenz-Fehler `Authentication failed, please check your weblicense token`
 
