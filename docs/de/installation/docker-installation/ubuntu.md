@@ -56,7 +56,7 @@ sudo nano /opt/idoit-docker/Dockerfile
 <!-- cSpell:enable -->
 <!-- cSpell:disable -->
 ```dockerfile
-FROM php:8.2-apache
+FROM php:8.4-apache
 RUN apt-get update && apt-get install -y \
     libpng-dev libjpeg-dev libldap2-dev libpq-dev libzip-dev \
     libmemcached-dev zlib1g-dev libxml2-dev default-mysql-client cron \
@@ -121,7 +121,7 @@ sql-mode = ""
 ```
 <!-- cSpell:enable -->
 
-!!! info "Der Query Cache wurde in MariaDB 10.6 entfernt. Die entsprechenden `query_cache_*`-Einstellungen aus älteren Anleitungen sind nicht mehr relevant und können weggelassen werden."
+!!! info "Anders als MySQL 8.0 bietet MariaDB den Query Cache weiterhin an. Die `query_cache_*`-Einstellungen sind optional und in diesem Beispiel nicht enthalten. Das offizielle i-doit Datenbank-Image nutzt `query_cache_type = 1` und `query_cache_size = 80M`."
 
 ### Cron-Konfiguration
 
@@ -133,9 +133,18 @@ sudo nano /opt/idoit-docker/config/idoit-cron
 <!-- cSpell:enable -->
 <!-- cSpell:disable -->
 ```
-* * * * * www-data php /var/www/html/console.php controller-worker -v >> /var/log/apache2/cron.log 2>&1
+# Suchindex (stündlich)
+0 * * * * www-data /usr/local/bin/php /var/www/html/console.php search-index --user admin --password admin --tenantId 1 --no-interaction >> /var/log/apache2/cron.log 2>&1
+# Bereinigung (täglich)
+0 3 * * * www-data /usr/local/bin/php /var/www/html/console.php auth-cleanup --user admin --password admin --tenantId 1 --no-interaction >> /var/log/apache2/cron.log 2>&1
+15 3 * * * www-data /usr/local/bin/php /var/www/html/console.php system-objectcleanup --objectStatus 1 --user admin --password admin --tenantId 1 --no-interaction >> /var/log/apache2/cron.log 2>&1
+# Flows-Add-on (minütlich, nur wenn das Add-on installiert ist)
+* * * * * www-data /usr/local/bin/php /var/www/html/console.php flows:time-trigger --user admin --password admin --tenantId 1 --no-interaction >> /var/log/apache2/cron.log 2>&1
+* * * * * www-data /usr/local/bin/php /var/www/html/console.php flows:perform --user admin --password admin --tenantId 1 --no-interaction >> /var/log/apache2/cron.log 2>&1
 ```
 <!-- cSpell:enable -->
+
+!!! info "Die Jobs orientieren sich an denen des offiziellen i-doit Container-Images. `--user` und `--password` sind die Zugangsdaten eines i-doit-Benutzers mit Administratorrechten im Mandanten mit der ID `1` (Standard nach der Installation: `admin` / `admin`)."
 
 ## docker-compose.yml erstellen
 <!-- cSpell:disable -->
@@ -147,7 +156,7 @@ sudo nano /opt/idoit-docker/docker-compose.yml
 ```yaml
 services:
   idoit-db:
-    image: mariadb:10.6
+    image: mariadb:10.11
     restart: always
     environment:
       MARIADB_ROOT_PASSWORD: idoit_secure_password
@@ -197,16 +206,13 @@ Nach der Installation muss Memcached in i-doit unter **Verwaltung → Systemeins
 
 ## i-doit herunterladen
 
-i-doit wird vom offiziellen Update-Feed heruntergeladen und in das HTML-Verzeichnis entpackt:
+Das Installationspaket von i-doit 39 herunterladen und in das HTML-Verzeichnis entpacken:
 <!-- cSpell:disable -->
 ```sh
 cd /opt/idoit-docker
-wget -q -O updates.xml https://i-doit.com/updates.xml
-DOWNLOAD_URL=$(grep -oP "(?<=<filename>)[^<]+" updates.xml | tail -n 1)
-DOWNLOAD_URL=${DOWNLOAD_URL/-update.zip/.zip}
-wget -O idoit.zip "$DOWNLOAD_URL"
+wget -O idoit.zip https://login.i-doit.com/downloads/idoit-39.zip
 sudo unzip -q -o idoit.zip -d html/
-rm idoit.zip updates.xml
+rm idoit.zip
 sudo chown -R 33:33 html/
 sudo find html/ -type d -exec chmod 775 {} \;
 sudo find html/ -type f -exec chmod 664 {} \;
@@ -280,7 +286,7 @@ tar czf "${BACKUP_DIR}/html_${DATE}.tar.gz" \
     --exclude="${INSTALL_DIR}/html/log" \
     "${INSTALL_DIR}/html/"
 
-# Backups älter als 14 Tage löschen
+# Die 28 neuesten Sicherungsdateien behalten (14 tägliche Läufe), den Rest löschen
 find "${BACKUP_DIR}" -name "*.sql" -o -name "*.tar.gz" | xargs ls -t | tail -n +29 | xargs rm -f 2>/dev/null
 
 echo "Backup ${DATE} abgeschlossen."
