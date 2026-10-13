@@ -8,6 +8,35 @@ lang: de
 
 Dieser Artikel listet alle bekannten Probleme beim Update von oder auf eine bestimmte i-doit-Version.
 
+## Version 39
+
+Nach dem Update auf 39 lässt sich im [Add-on- & Abonnement-Center](../add-on-and-subscription-center.md) kein Add-on installieren oder aktualisieren. Es erscheint diese Fehlermeldung:
+
+```log
+Invalid add-on identifier in package.json
+```
+
+Spiele diesen Hotfix in der **39** ein, damit Installation und Update von Add-ons wieder funktionieren:
+
+[i-doit_39_hotfix_ID-12679_417db18.zip :material-file-download:](../../assets/downloads/hotfixes/39/i-doit_39_hotfix_ID-12679_417db18.zip){ .md-button .md-button--primary }
+
+---
+
+Wenn nach dem Update auf 39 Seiten mit `HTTP 500` abbrechen und im Webserver-Log diese Fehlermeldung steht:
+
+```log
+PHP Fatal error:  Declaration of idoit\\Component\\isys_component_sessionProxyEebb398::include_mandator_cache() must be compatible with isys_component_session::include_mandator_cache(): void in /var/www/html/temp/di_container_cache_mandator_1.php on line 2628
+```
+
+Das passiert zum Beispiel nach einem Update über das [Add-on- & Abonnement-Center](../add-on-and-subscription-center.md). Dann bricht auch der Updater mit `HTTP 500` ab. Die Cache-Datei im Verzeichnis `temp` stammt noch aus Version 38. Leere das Verzeichnis `temp` und starte den Webserver neu. Beim nächsten Aufruf wird der Cache neu erzeugt:
+
+```sh
+sudo rm -rf /var/www/html/temp/*
+sudo systemctl restart apache2
+```
+
+Nutzt du PHP-FPM, starte zusätzlich den PHP-FPM-Dienst neu. Schließe das Update danach mit dem Updater ab.
+
 ## Version 34
 
 SM-View `2024.3.0.2708` ist nicht kompatibel mit i-doit 34. Nach dem Update wird ein `HTTP 500`-Serverfehler geworfen. [Deaktiviere das Add-on](../../i-doit-add-ons/index.md#de-aktivieren) im [Admin-Center](../admin-center.md), um weiterarbeiten zu können. Die Fehlermeldung im Webserver-Log sieht so aus:

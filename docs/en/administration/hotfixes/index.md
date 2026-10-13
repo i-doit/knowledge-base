@@ -48,6 +48,10 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 ## i-doit core
 
+### Install and update add-ons in the Add-on & Subscription Center (ID-12679)
+
+[i-doit_39_hotfix_ID-12679_417db18.zip :material-file-download:](../../assets/downloads/hotfixes/39/i-doit_39_hotfix_ID-12679_417db18.zip){ .md-button .md-button--primary }
+
 * * *
 
 ## Replacement Add-on
