@@ -37,6 +37,10 @@ A comprehensive IT documentation often includes documents in the form of files. 
 
 With version 1.xx of i-doit, we introduced an additional method that can be used to document databases within i-doit.
 
+## [Documenting End of Life Data](./end-of-life.md)
+
+Monitoring End of Life (EOL) and End of Support (EOS) dates is essential for proactive lifecycle management. i-doit offers several strategies to maintain this data, to save object licenses, and to make the information intuitively usable for your colleagues.
+
 ## [Populating Excel Spreadsheets with Data from i-doit (deprecated)](./populate-excel-with-i-doit-data.md)
 
 With just a few lines of Visual Basic, you can read any content from i-doit and display it in Microsoft Excel. In this article, we explain the procedure using [reports](../evaluation/report-manager.md).
