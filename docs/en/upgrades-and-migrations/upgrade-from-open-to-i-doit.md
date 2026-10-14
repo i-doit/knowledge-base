@@ -54,7 +54,7 @@ Apply the valid license [in the Admin Center under **Licenses**](../maintenance-
 ## Clear Caches
 
 1. Log out of the Admin Center and log in to i-doit.
-2. Navigate to **Administration → System Tools → Cache / Database** and click **Clear entire cache**.
+2. Navigate to **Administration → CMDB management → Repair and clean up** and click **Clear complete Cache**.
 3. Clear the browser cache with **CTRL+F5**.
 
 ## Configure Permissions
@@ -63,8 +63,8 @@ Unlike i-doit open, i-doit has a comprehensive [permissions system](../efficient
 
 To get full access:
 
-1. Navigate to **Administration → Permissions System → Reset Permissions System**.
-2. Enter the credentials for the [Admin Center](../administration/admin-center.md) .
+1. Navigate to **Administration → User permissions → Debug permission system**.
+2. Enter the credentials for the [Admin Center](../administration/admin-center.md) and click **Execute**.
 
 Then configure the permissions for other persons and person groups.
 

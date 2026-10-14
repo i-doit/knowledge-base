@@ -65,13 +65,16 @@ Das alte System sollte bereits während des Umzugs nicht mehr produktiv verwende
         ```
         <!-- cSpell:enable -->
 
-2. Die Datenbanken in eine Datei speichern "dumpen" und mit gz packen:
+2. Die beiden i-doit-Datenbanken in eine Datei speichern ("dumpen") und mit gz packen. Passe die Datenbanknamen an deine Installation an (siehe `$g_db_system` in `src/config.inc.php` und die Tabelle `isys_mandator`):
 
     <!-- cSpell:disable -->
     ```shell
-    mysqldump -hlocalhost -uroot -p --all-databases | gzip -9 > /tmp/idoit-backup.sql.gz
+    mysqldump -hlocalhost -uroot -p --databases idoit_system idoit_data | gzip -9 > /tmp/idoit-backup.sql.gz
     ```
     <!-- cSpell:enable -->
+
+    !!! warning "Kein `--all-databases` verwenden"
+        Ein Dump aller Datenbanken enthält auch die Systemdatenbank `mysql` mit den Benutzerkonten und Rechten des alten Servers. Beim Import auf dem neuen System überschreibt er die dort angelegten Konten und schlägt zwischen unterschiedlichen MariaDB-Versionen fehl.
 
 3. Dann die Dateien und den Datenbank dump auf den neuen Host übertragen:
 
@@ -123,6 +126,9 @@ Das alte System sollte bereits während des Umzugs nicht mehr produktiv verwende
     ```
     <!-- cSpell:enable -->
 
+    !!! info "Fehler `ERROR at line 1: Unknown command '\\-'`"
+        Neuere MariaDB-Versionen schreiben die Zeile `/*!999999\- enable the sandbox mode */` in die erste Zeile eines Dumps, die ältere MariaDB-Versionen nicht importieren können. Entferne diese erste Zeile aus der SQL-Datei und wiederhole den Import.
+
 3. Sollten die Dateisystem Rechte nicht mehr korrekt sein:
 
     ```shell
@@ -138,7 +144,7 @@ Das alte System sollte bereits während des Umzugs nicht mehr produktiv verwende
     sudo rm -r temp/*
     ```
 
-5. Es sollte kontrolliert werden, ob die Datei .htaccess kopiert wurde:
+5. Kontrolliere die Apache-Konfiguration. Systeme, die mit dem idoit-install Skript oder nach unseren [Installationsanleitungen](../installation/manuelle-installation/index.md) eingerichtet wurden, laufen mit `AllowOverride None` und tragen die Regeln der Datei `.htaccess` in der VirtualHost-Konfiguration. Vergleiche die `.htaccess` der umgezogenen i-doit-Version mit der VirtualHost-Konfiguration des neuen Systems und übernimm Abweichungen:
 
     ```shell
     ls -lha /var/www/html/.htaccess

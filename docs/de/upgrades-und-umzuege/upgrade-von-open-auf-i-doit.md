@@ -54,7 +54,7 @@ Spiele die gueltige Lizenz [im Admin-Center unter **Licenses**](../wartung-und-b
 ## Caches leeren
 
 1. Melde dich vom Admin-Center ab und in i-doit an.
-2. Navigiere zu **Verwaltung → Systemtools → Cache / Datenbank** und klicke auf **Kompletten Cache leeren**.
+2. Navigiere zu **Verwaltung → CMDB Verwaltung → Systemreparatur und Bereinigung** und klicke auf **Kompletten Cache leeren**.
 3. Leere den Browser-Cache mit **STRG+F5**.
 
 ## Rechte konfigurieren
@@ -63,8 +63,8 @@ Im Gegensatz zu i-doit open verfügt i-doit über ein umfangreiches [Rechtesyste
 
 So erhältst du vollen Zugriff:
 
-1. Rufe **Verwaltung → Rechtesystem → Rechtesystem zurücksetzen** auf.
-2. Gib die Credentials für das [Admin-Center](../administration/admin-center.md) ein.
+1. Rufe **Verwaltung → Berechtigungen → Rechtesystemfehler lösen** auf.
+2. Gib die Zugangsdaten für das [Admin-Center](../administration/admin-center.md) ein und klicke auf **Ausführen**.
 
 Anschließend konfigurierst du die Rechte für weitere Personen und Personengruppen.
 
