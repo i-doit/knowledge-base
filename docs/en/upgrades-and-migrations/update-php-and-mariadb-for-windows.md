@@ -28,7 +28,7 @@ To successfully update to MariaDB 10.11, we need the [MariaDB Server 10.11.1 RC 
 
 ??? info "The already selected options must be present!"
 
-[![MariaDB selektierte Optionen](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/1-pum.png)](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/1-pum.png)
+[![MariaDB selektierte Optionen](../assets/images/en/upgrades-and-migrations/php-mariadb-update/1-pum.png)](../assets/images/en/upgrades-and-migrations/php-mariadb-update/1-pum.png)
 
 ## Update MariaDB and PHP
 
@@ -42,7 +42,7 @@ First, the Apache2 service must be stopped. This can be done either via the "Ser
 
 Find the **Apache2.4** service among the displayed services and click **"Stop the service"**
 
-[![Apache Service stoppen Fenster](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/2-pum.png)](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/2-pum.png)
+[![Apache Service stoppen Fenster](../assets/images/en/upgrades-and-migrations/php-mariadb-update/2-pum.png)](../assets/images/en/upgrades-and-migrations/php-mariadb-update/2-pum.png)
 
 **Console:**
 
@@ -59,19 +59,19 @@ After the Apache2.4 service has been successfully stopped, the MariaDB MSI file 
 
 After agreeing to the license, select the option **"Do not create a new database. Optionally upgrade existing instances"**.
 
-[![upgrade existing instances](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/3-pum.png)](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/3-pum.png)
+[![upgrade existing instances](../assets/images/en/upgrades-and-migrations/php-mariadb-update/3-pum.png)](../assets/images/en/upgrades-and-migrations/php-mariadb-update/3-pum.png)
 
 Then change the path to **"C:\ProgramData\"** and click **"Install"**
 
-[![ProgramData](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/4-pum.png)](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/4-pum.png)
+[![ProgramData](../assets/images/en/upgrades-and-migrations/php-mariadb-update/4-pum.png)](../assets/images/en/upgrades-and-migrations/php-mariadb-update/4-pum.png)
 
 Finally, the option "Launch Wizard to Upgrade existing MariaDB or MySQL services" must be set.
 
-[![Haken](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/5-pum.png)](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/5-pum.png)
+[![Haken](../assets/images/en/upgrades-and-migrations/php-mariadb-update/5-pum.png)](../assets/images/en/upgrades-and-migrations/php-mariadb-update/5-pum.png)
 
 In the new window that opens, select the MySQL service and click **"Upgrade"**.
 
-[![upgrade existing instances](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/6-pum.png)](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/6-pum.png)
+[![upgrade existing instances](../assets/images/en/upgrades-and-migrations/php-mariadb-update/6-pum.png)](../assets/images/en/upgrades-and-migrations/php-mariadb-update/6-pum.png)
 
 !!! info "If the upgrade window does not appear, you can manually find and run the MariaDB 10.11 Upgrade Wizard EXE at **C:\ProgramData\MariaDB10.11\bin**."
 
@@ -95,4 +95,4 @@ Finally, the Apache2.4 service must be restarted, and PHP is now successfully up
 
 Finally, verify that the update was successful by checking the versions in the Administration under **"System Config Check"**
 
-[![check version](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/7-pum.png)](../assets/images/de/upgrades-und-umzuege/php-mariadb-update/7-pum.png)
+[![check version](../assets/images/en/upgrades-and-migrations/php-mariadb-update/7-pum.png)](../assets/images/en/upgrades-and-migrations/php-mariadb-update/7-pum.png)

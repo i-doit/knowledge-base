@@ -28,13 +28,13 @@ To access the Add-on & Subscription Center and to keep your i-doit licensed, you
 
 First, open the [Add-on & Subscription Center](add-on-and-subscription-center.md) in i-doit. The token is displayed in the **Advanced** tab under "Weblicense Token".
 
-[![subscription-center-token](../assets/images/de/administration/reset-token/addon-subscription-center.png)](../assets/images/de/administration/reset-token/addon-subscription-center.png)
+[![subscription-center-token](../assets/images/en/system-administration/reset-token/addon-subscription-center.png)](../assets/images/en/system-administration/reset-token/addon-subscription-center.png)
 
 ## Option B: Find the token in the Admin Center (i-doit up to version 34)
 
 First, log in to the [Admin Center](admin-center.md). The token is displayed in the **Config** tab under "Weblicense Token".
 
-[![admin-center-token](../assets/images/de/administration/reset-token/admin-center.png)](../assets/images/de/administration/reset-token/admin-center.png)
+[![admin-center-token](../assets/images/en/system-administration/reset-token/admin-center.png)](../assets/images/en/system-administration/reset-token/admin-center.png)
 
 ## Option C: Find the token with operating system access (all versions)
 

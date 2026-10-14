@@ -117,7 +117,7 @@ If you want to use the custom category via the [API](../i-doit-add-ons/api/index
 
 There you can change the technical keys for each field by clicking **Change technical key**.
 
-[![Change-technical-key](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/9-bk.png)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/9-bk.png)
+[![Change-technical-key](../assets/images/en/grundlagen/benutzerdefinierte-kategorien/9-bk.png)](../assets/images/en/grundlagen/benutzerdefinierte-kategorien/9-bk.png)
 
 Now you can change the key. i-doit automatically validates the new value before you can save.
 
@@ -128,7 +128,7 @@ Now you can change the key. i-doit automatically validates the new value before 
     - It **must not be empty** and **must not be longer than 64 characters**.<br>
     - It **must be unique**.
 
-[![Change-technical-key](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/10-bk.png)](../assets/images/de/grundlagen/benutzerdefinierte-kategorien/10-bk.png)
+[![Change-technical-key](../assets/images/en/grundlagen/benutzerdefinierte-kategorien/10-bk.png)](../assets/images/en/grundlagen/benutzerdefinierte-kategorien/10-bk.png)
 
 After saving the custom category, you can view and use the new technical configuration.
 
