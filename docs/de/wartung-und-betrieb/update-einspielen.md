@@ -157,3 +157,4 @@ Führe nach jedem Update folgende Schritte aus:
 1. [Cache leeren](../administration/verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md)
 2. [Suchindex erneuern](../administration/verwaltung/mandanten-name-verwaltung/systemreparatur-und-bereinigung.md)
 3. [Reporte aktualisieren](../auswertungen/report-manager.md#aktualisieren-der-reports-nach-einem-update)
+4. Vergleiche die mitgelieferte Datei `.htaccess` im i-doit-Verzeichnis mit deiner Apache-Konfiguration. Systeme, die mit dem idoit-install Skript oder nach unseren [Installationsanleitungen](../installation/manuelle-installation/index.md) eingerichtet wurden, laufen mit `AllowOverride None`, die Regeln der `.htaccess` stehen dort in der VirtualHost-Konfiguration und Änderungen müssen dort nachgezogen werden.

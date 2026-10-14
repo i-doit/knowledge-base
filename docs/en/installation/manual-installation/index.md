@@ -14,7 +14,7 @@ With manual installation, you configure all components (Apache, PHP, MariaDB) yo
 -   The [system requirements](../system-requirements.md) **must** be met. The LAMP stack (Apache Web Server, MariaDB/MySQL, PHP) mentioned there is excluded.<br>
 -   One of the [supported](../system-requirements.md) GNU/Linux operating systems is installed and updated.<br>
 -   The system can access package repositories via an **internet connection**.<br>
--   The Apache module (**mod_php**) is used. Alternative methods (Fast CGI, HHVM) are not covered.<br>
+-   PHP runs as **PHP-FPM** and is connected to the Apache web server via `mod_proxy_fcgi`, as the [idoit-install script](../automatic-installation.md) sets it up. The Apache module mod_php is not covered.<br>
 -   Furthermore, this is a simplified setup: **i-doit is the main application** on the system, and Apache Web Server, PHP, and MariaDB/MySQL are installed locally.<br>
 -   **Firewall rules and open ports:** i-doit is a typical web application. This means that the basic functionality is accessed via a web browser. This typically happens over port 80 (unencrypted) or 443 (encrypted). If a firewall is in use, these ports must be opened for incoming TCP connections. If additional functions are used ([notifications](../../evaluation/notifications.md), [interfaces to third-party applications](../../automation-and-integration/index.md)), additional rules may be required. Communication between i-doit and MySQL/MariaDB takes place locally (port 3306 TCP), for which no separate firewall rules are usually needed.<br>
 -   **Security frameworks:** If a security framework such as **AppArmor** or **SELinux** is installed, it must be configured accordingly.

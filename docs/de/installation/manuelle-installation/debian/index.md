@@ -46,7 +46,7 @@ zu installieren:
 
 ```shell
 apt update
-apt install apache2 php8.4-fpm mariadb-client mariadb-server memcached unzip sudo moreutils php php-{bcmath,cli,common,curl,gd,imagick,json,ldap,mbstring,memcached,mysql,pgsql,soap,xml,zip}
+apt install apache2 libapache2-mod-fcgid mariadb-client mariadb-server memcached unzip sudo moreutils php-{bcmath,cli,common,curl,fpm,gd,imagick,ldap,mbstring,memcached,mysql,opcache,pgsql,soap,xml,zip}
 ```
 
 ## Konfiguration
