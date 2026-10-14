@@ -76,6 +76,9 @@ Settings that must be configured to establish the connection to the JDisc instan
 | **Password**       | Password for the JDisc database                                  |
 | **Version check**  | Only relevant for very old JDisc versions                        |
 
+!!! info "Changing the password of the read-only database user"
+    The connector logs on to the JDisc database with the read-only user `postgresro`. Its password is set in JDisc, not in i-doit: stop JDisc Discovery and select **Administration → Database → Change Read-Only Password** (the menu item **Change Password** next to it changes the administrative database password instead). Afterwards, enter the new password in the **Password** field of the Discovery Server entry in i-doit and run the **Configuration Check**. Details: [JDisc Discovery Administration Guide](https://jdisc.com/guides/JDisc%20Discovery%20AdministrationGuide.pdf), section *Change The Database Password*.
+
 <!--[![discovery-server-common-settings-de](../../assets/images/de/i-doit-add-ons/jdisc-connector/discovery-server-discovery-settings-de.png)](../../assets/images/de/i-doit-add-ons/jdisc-connector/discovery-server-discovery-settings-de.png)-->
 
 | Discovery settings | Description                                    |
