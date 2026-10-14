@@ -65,6 +65,19 @@ Im Eingabefeld fügst du den Inhalt des Kapitels über den WYSIWYG-Editor ein. �
 | [![icon](../../assets/images/de/i-doit-add-ons/documents/vorlagen/11-vor.png)](../../assets/images/de/i-doit-add-ons/documents/vorlagen/11-vor.png) | Inhalte aus der Dokumentation bindest du dynamisch über [Platzhalter](./platzhalter-im-add-on-dokumente.md) ein. Details findest du [im entsprechenden Kapitel](./platzhalter-im-add-on-dokumente.md).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | [![icon](../../assets/images/de/i-doit-add-ons/documents/vorlagen/12-vor.png)](../../assets/images/de/i-doit-add-ons/documents/vorlagen/12-vor.png) | Hier fügst du einen automatischen Seitenumbruch ein.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
+## Druckoptimierte Tabellen
+
+Das PDF wird von einer anderen Engine erzeugt als der Browser-Editor. Sehr komplexe Tabellen-Layouts können daher im PDF anders aussehen als im Editor. Das betrifft Tabellen im Inhalt ebenso wie in der Kopf- und Fußzeile. Damit Tabellen im PDF zuverlässig dargestellt werden, beachtest du folgende Punkte:
+
+* Verwende relative Breiten (zum Beispiel die Tabelle auf 100 %) statt fester Pixelbreiten und halte die Gesamtbreite innerhalb der Seite.
+* Verwende über alle Zeilen einer Tabelle dieselben Spaltenbreiten.
+* Vermeide verbundene Zellen (colspan/rowspan) nach Möglichkeit und nutze stattdessen eine einheitliche Spaltenaufteilung.
+* Halte Kopf- und Fußzeile kompakt. Eine sehr hohe Kopfzeile verringert den Platz für den Inhalt.
+* Prüfe das Ergebnis vor dem Fertigstellen über die Vorschau, da die Editor-Ansicht nicht mit der PDF-Ausgabe identisch ist.
+
+!!! tip "Aus Word übernommene Inhalte"
+    Füge Tabellen nicht direkt aus Word oder anderen Office-Programmen ein. Dabei werden aufgeblähte Pixelbreiten und verstecktes Styling übernommen, das die PDF-Engine nicht auflösen kann. Füge den Inhalt als reinen Text ein und baue die Tabelle im Editor neu auf, oder bereinige sie in der Quellcode-Ansicht.
+
 ## Vorlagen exportieren und importieren
 
 Vorhandene Vorlagen exportierst du bei Bedarf und importierst sie in andere Mandanten oder i-doit-Installationen. Öffne dazu die Vorlage in der Bearbeitungsansicht und klicke auf "Dokumentvorlage exportieren". Die Vorlage wird als ZIP-Datei bereitgestellt, die alle Inhalte inklusive eingefügter Bilder enthält.
