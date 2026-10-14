@@ -113,7 +113,7 @@ Lösche unerwünschte Einträge (z.B. Wildcards `%` oder externe Adressen). Erla
 Halte PHP immer auf dem neuesten Patch-Stand. Die für i-doit erforderlichen Einstellungen stehen in den [Systemeinstellungen](../installation/manuelle-installation/systemeinstellungen.md). Zusätzliche Härtung erreichst du über eine eigene Konfigurationsdatei:
 
 ```shell
-sudo nano /etc/php/8.2/mods-available/zz_security.ini
+sudo nano /etc/php/8.4/mods-available/zz_security.ini
 ```
 
 ```ini
@@ -135,7 +135,7 @@ sudo systemctl restart apache2.service
 ```
 
 !!! tip "PHP-Version anpassen"
-    Ersetze `8.2` durch die PHP-Version, die du im Einsatz hast. Welche Versionen i-doit unterstützt, findest du in den [Systemvoraussetzungen](../installation/systemvoraussetzungen.md).
+    Ersetze `8.4` durch die PHP-Version, die du im Einsatz hast. Welche Versionen i-doit unterstützt, findest du in den [Systemvoraussetzungen](../installation/systemvoraussetzungen.md).
 
 ### Backup und Restore
 
@@ -166,7 +166,7 @@ sudo apt install certbot python3-certbot-apache
 sudo certbot --apache -d cmdb.firma.de
 ```
 
-Certbot konfiguriert Apache automatisch und richtet die Zertifikatserneuerung per Cronjob ein. Teste die Erneuerung:
+Certbot konfiguriert Apache automatisch und richtet die Zertifikatserneuerung per systemd-Timer ein (auf älteren Systemen per Cronjob). Teste die Erneuerung:
 
 ```shell
 sudo certbot renew --dry-run
@@ -180,7 +180,7 @@ Beispiel für Apache mit Security-Headern:
 
 ```apache
 <IfModule mod_headers.c>
-    # HTTP auf HTTPS umleiten
+    # HTTPS erzwingen (HSTS)
     Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains"
     # Clickjacking verhindern
     Header always set X-Frame-Options "SAMEORIGIN"
@@ -188,10 +188,9 @@ Beispiel für Apache mit Security-Headern:
     Header always set X-Content-Type-Options "nosniff"
     # Referrer einschränken
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
-    # Server-Version verstecken
-    Header unset Server
 </IfModule>
 
+# Server-Version verbergen (mod_headers kann den Server-Header nicht entfernen)
 ServerSignature Off
 ServerTokens    Prod
 
@@ -264,10 +263,14 @@ sudo chown www-data:www-data -R .
 sudo find . -type d -exec chmod 550 {} \;
 sudo find . -type f -exec chmod 440 {} \;
 
-# Schreibrechte nur für Verzeichnisse die es brauchen:
-for dir in log/ imports/ temp/ upload/; do
+# Schreibrechte nur dort, wo i-doit im Betrieb schreibt
+# (Logs, Importe, Cache, Uploads, eigene Übersetzungen):
+for dir in log/ imports/ temp/ upload/ src/lang/; do
     sudo find "$dir" -type d -exec chmod 770 {} \;
 done
+
+# Das Admin-Center schreibt die Konfigurationsdatei:
+sudo chmod 660 src/config.inc.php
 ```
 
 Vor einem [Update](update-einspielen.md) die Einschränkungen temporär aufheben:
@@ -292,7 +295,11 @@ Die Benutzer **admin**, **reader**, **author** und **editor** haben standardmä�
 
 #### Admin-Center-Passwort
 
-Das Passwort kannst du im [Admin-Center](../administration/admin-center.md) unter **Config** ändern oder direkt in der Datei `src/config.inc.php`.
+Das Passwort kannst du im [Admin-Center](../administration/admin-center.md) unter **Config** ändern. Hast du dich ausgesperrt, setzt du es auf der Kommandozeile zurück (die Datei `src/config.inc.php` enthält nur einen Hash, bearbeite sie nicht von Hand):
+
+```shell
+sudo -u www-data php console.php admin-center-password-reset
+```
 
 #### MySQL-Benutzer
 
@@ -300,15 +307,7 @@ Das Passwort kannst du im [Admin-Center](../administration/admin-center.md) unte
 ALTER USER 'idoit'@'localhost' IDENTIFIED BY 'EinSicheresPasswort!2026';
 ```
 
-Das neue Passwort auch in der Systemdatenbank hinterlegen:
-
-```sql
-UPDATE idoit_system.isys_mandator
-SET isys_mandator__db_pass = 'EinSicheresPasswort!2026'
-WHERE isys_mandator__db_user = 'idoit';
-```
-
-Zusätzlich in `src/config.inc.php` oder im Admin-Center unter **Config** anpassen.
+Hinterlege das neue Passwort anschließend dort, wo i-doit es liest: Die Verbindung zur **Systemdatenbank** konfigurierst du im [Admin-Center](../administration/admin-center.md) unter **Config** (landet in `src/config.inc.php`), die Verbindung jeder **Mandantendatenbank** unter **Tenants**. Nutze für beides das Admin-Center, es speichert das Mandantenpasswort verschlüsselt in der Systemdatenbank; bearbeite die Tabelle `isys_mandator` nicht von Hand.
 
 #### Linux-Benutzer
 
@@ -330,9 +329,9 @@ Zusätzliche Authentifizierungsmechanismen lassen sich über den Apache Webserve
 
 ### Session-Timeout konfigurieren
 
-Standardmäßig bleiben Sitzungen in i-doit sehr lange aktiv. Für sicherheitskritische Umgebungen solltest du den Session-Timeout verkürzen, damit vergessene Browserfenster nicht dauerhaft offen bleiben.
+Standardmäßig endet eine i-doit-Sitzung nach **3600** Sekunden (1 Stunde) ohne Aktivität. Für sicherheitskritische Umgebungen verkürzt du den Session-Timeout, damit vergessene Browserfenster nicht angemeldet bleiben, zum Beispiel auf **1800** (30 Minuten) oder weniger.
 
-Die Einstellung findest du in den [Experteneinstellungen](../administration/verwaltung/mandanten-name-verwaltung/experteneinstellungen.md) unter `session.time` — der Wert ist in Sekunden angegeben. Ein sinnvoller Wert für Produktivumgebungen liegt bei **3600** (1 Stunde).
+Die Einstellung gilt systemweit und findet sich im [Admin-Center](../administration/admin-center.md) unter **System settings → Session → Session timeout**; der Wert wird in Sekunden angegeben.
 
 ### API absichern
 
@@ -348,8 +347,8 @@ Die [JSON-RPC API](../i-doit-add-ons/api/index.md) ist ein mächtiges Werkzeug �
 </Location>
 ```
 
-- **Eigenen API-Benutzer anlegen** — verwende nicht den Admin-Account für API-Zugriffe. Lege einen dedizierten Benutzer mit minimalen Rechten an.
-- **API deaktivieren** wenn sie nicht gebraucht wird — das Add-on kann in der [Verwaltung](../administration/verwaltung/import-und-schnittstellen/index.md) deaktiviert werden.
+- **Eigenen API-Benutzer anlegen** — verwende nicht den Admin-Account für API-Zugriffe. Lege einen dedizierten Benutzer mit minimalen Rechten an und setze die [Experteneinstellung](../administration/verwaltung/mandanten-name-verwaltung/experteneinstellungen.md) `api.authenticated-users-only` auf `1`, damit jede Anfrage zusätzlich zum API-Key gültige Benutzerdaten mitbringen muss.
+- **API deaktivieren** wenn sie nicht gebraucht wird — setze die [Experteneinstellung](../administration/verwaltung/mandanten-name-verwaltung/experteneinstellungen.md) `api.status` auf `0`; jede Anfrage wird dann mit einem Fehler beantwortet.
 
 ---
 
@@ -424,7 +423,7 @@ Unter GNU/Linux schützen [SELinux](https://de.wikipedia.org/wiki/SELinux) und [
 
 ### Angriffe automatisch abwehren
 
-[fail2ban](http://www.fail2ban.org/) analysiert Log-Dateien und sperrt automatisch IP-Adressen nach wiederholten fehlgeschlagenen Login-Versuchen:
+[fail2ban](https://www.fail2ban.org/) analysiert Log-Dateien und sperrt automatisch IP-Adressen nach wiederholten fehlgeschlagenen Login-Versuchen:
 
 ```shell
 sudo apt install fail2ban
