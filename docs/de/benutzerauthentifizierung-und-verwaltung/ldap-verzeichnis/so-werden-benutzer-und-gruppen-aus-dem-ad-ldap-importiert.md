@@ -21,6 +21,25 @@ In den folgenden Beispielen wird für Personen die `objectClass = user` und für
 
 [![ldap_personen-suchen](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/1-ldap-bg.png)](../../assets/images/de/automatisierung-und-integration/ldap/benutzer-und-gruppen/1-ldap-bg.png)
 
+## So läuft die Synchronisation ab
+
+Jeder Lauf von `ldap-sync` arbeitet jeden aktiven LDAP-Server in derselben Reihenfolge ab. Wer diese Reihenfolge kennt, versteht, was ein Filter steuert und was nicht:
+
+1. **Deaktivierte Konten (nur Active Directory).** Bevor dein Filter greift, sucht i-doit im konfigurierten **Nach Benutzern suchen in (OU)** alle deaktivierten Konten (`userAccountControl` Bit 2), unabhängig vom Filter. Jedes davon, das bereits als Person in i-doit existiert, wird gemäß `disabledUsersBehaviour` behandelt (Standard: archiviert) und gemerkt, damit Schritt 3 es nicht reaktiviert.
+2. **Suche mit deinem Filter.** i-doit leert den gespeicherten LDAP-DN aller Personen dieses Servers und führt dann deinen **Filter** unterhalb der Such-OU aus (rekursiv, falls konfiguriert, seitenweise bei aktiviertem **Enable LDAP Paging**). Jedes Ergebnis wird nach seiner `objectClass` einsortiert: Gruppen werden Personengruppen, Benutzer werden einzeln synchronisiert.
+3. **Benutzer.** Für jeden Benutzer liest i-doit den Benutzernamen aus dem Mapping **Username**, sucht die Person über die [eindeutige Kennung](index.md#identifizierung-von-objekten), falls konfiguriert, sonst über den Benutzernamen, legt sie bei Bedarf an und aktualisiert Vorname, Nachname, E-Mail-Adresse, die Felder der Attributerweiterung und den gespeicherten DN. Benutzer, auf die `ignoreUsersWithAttributes` zutrifft, werden übersprungen. Bei einem Active-Directory-Server werden in i-doit archivierte Personen reaktiviert, außer Schritt 1 hat sie als deaktiviert markiert; `autoReactivateUsers` erweitert das auf andere Verzeichnisse.
+4. **Gruppen und Mitgliedschaften.** In Schritt 2 gefundene Gruppen werden angelegt oder aktualisiert (im Active Directory über `objectSid`, sonst über den Namen). Jeder synchronisierte Benutzer wird den Gruppen aus seinem `memberOf` und seiner primären Gruppe (`memberUid` bei OpenLDAP) zugeordnet, dazu den Gruppen aus der Mandanteneinstellung `ldap.default-group`. Bestehende Mitgliedschaften bleiben erhalten, sofern `dropExistingRelations` nicht gesetzt ist; aus dem Verzeichnis verschwundene Gruppen behandelt `archiveDeletedGroups`.
+5. **Verwaiste Personen.** Jede Person dieses Servers, deren DN in Schritt 3 nicht geschrieben wurde, also jede Person, die dein Filter nicht geliefert hat, wird gemäß `deletedUsersBehaviour` behandelt (Standard: archiviert).
+
+Was das für deine Filter bedeutet:
+
+- Der Filter entscheidet, wer als vorhanden gilt. Ein Benutzer, der im Verzeichnis noch existiert, aber nicht mehr passt, zum Beispiel weil er die im Filter geprüfte Gruppe verlassen hat, ist in Schritt 5 verwaist und wird archiviert, gelöscht oder für den Login gesperrt.
+- Deaktivierte Active-Directory-Konten, die dein Filter weiterhin liefert, bleiben so, wie `disabledUsersBehaviour` sie hinterlassen hat, weil Schritt 3 sie nicht reaktiviert. Deaktivierte Konten, die dein Filter **nicht** liefert, landen stattdessen in Schritt 5: Mit `deletedUsersBehaviour = disable_login` sind sie danach **normal mit gesperrtem Login**, nicht archiviert. Verlässt du dich auf `disabledUsersBehaviour`, halte deaktivierte Konten innerhalb deines Filters oder verschiebe sie aus der Such-OU.
+- Eingebaute Personen mit einer Konstante, zum Beispiel `admin`, werden vom Sync nie archiviert oder gelöscht.
+- Ein Benutzer, der sich über LDAP anmeldet, wird in diesem Moment nur mit den gemappten Attributen angelegt oder aktualisiert; die Schritte 1, 4 und 5 laufen ausschließlich in `ldap-sync`.
+
+Jede Entscheidung steht in `log/ldap_<Datum>.log`, zum Beispiel `User with username "..." was not found. Creating..`, `Username has changed from "..." to "..."` oder `Found 2 orphaned user(s) which is/are archived now`.
+
 ## Konfiguration der Filter
 
 * * *

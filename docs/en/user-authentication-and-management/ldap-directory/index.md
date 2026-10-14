@@ -149,6 +149,8 @@ You can also import custom LDAP attributes into the master data. Configure addit
 
 You have already completed the basic configuration in the previous steps. Now set up the appropriate [i-doit console utility](../../automation-and-integration/cli/index.md) command to execute the synchronization on a regular basis. Optionally, configure additional fields to be synchronized.
 
+What `ldap-sync` does in which order, and why a filter decides which persons get archived, is explained in [How the synchronization works](user-group-synchronization.md#how-the-synchronization-works).
+
 ### Extended configuration
 
 An example can be found [here](../../automation-and-integration/cli/configuration-files.md). This file can be extended with login credentials, tenant, and additional options. For the `ldap-sync` command to consider it, specify it via the parameter `-c /path/`. Additional information can be found at the [i-doit console utility](../../automation-and-integration/cli/index.md).
