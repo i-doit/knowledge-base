@@ -52,6 +52,10 @@ C:\ProgramData\i-doit-discovery\apache-2.4\htdocs
 
 [i-doit_39_hotfix_ID-12679_417db18.zip :material-file-download:](../../assets/downloads/hotfixes/39/i-doit_39_hotfix_ID-12679_417db18.zip){ .md-button .md-button--primary }
 
+### LDAP login fails for users without a local password (ID-12645)
+
+[i-doit_39_hotfix_ID-12645_860c18e.zip :material-file-download:](../../assets/downloads/hotfixes/39/i-doit_39_hotfix_ID-12645_860c18e.zip){ .md-button .md-button--primary }
+
 * * *
 
 ## Replacement Add-on
