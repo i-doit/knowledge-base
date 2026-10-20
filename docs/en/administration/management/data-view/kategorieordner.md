@@ -41,7 +41,7 @@ You need the **Category Folders** permission in the **Administration** area. The
 
 ## Hide categories
 
-As of i-doit version XX, you can hide single categories for an object type. This helps when an object type carries a category you do not want to maintain, for example because the same data is already documented through another category.
+As of i-doit version 40, you can hide single categories for an object type. This helps when an object type carries a category you do not want to maintain, for example because the same data is already documented through another category.
 
 1. Select the object type.
 2. Hover over the category and click the eye icon.

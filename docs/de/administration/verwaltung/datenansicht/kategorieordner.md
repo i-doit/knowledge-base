@@ -41,7 +41,7 @@ Du benötigst die Berechtigung **Kategorieordner** im Bereich **Administration**
 
 ## Kategorien ausblenden
 
-Ab i-doit Version XX blendest du einzelne Kategorien für einen Objekttyp aus. Das hilft, wenn ein Objekttyp eine Kategorie führt, die du nicht pflegen willst, etwa weil dieselben Daten bereits über eine andere Kategorie erfasst werden.
+Ab i-doit Version 40 blendest du einzelne Kategorien für einen Objekttyp aus. Das hilft, wenn ein Objekttyp eine Kategorie führt, die du nicht pflegen willst, etwa weil dieselben Daten bereits über eine andere Kategorie erfasst werden.
 
 1. Wähle den Objekttyp aus.
 2. Fahre mit der Maus über die Kategorie und klicke auf das Auge-Symbol.
