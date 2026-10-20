@@ -5,6 +5,15 @@ search:
 
 # Changelog 39
 <!-- cSpell:disable -->
+## 39.1
+
+[Bug][Add-on & Subscription Center]      Prevent HTTP 500 after an i-doit update through the Add-on & Subscription Center<br>
+[Bug][Add-on & Subscription Center]      Fix add-on identifier check that blocks every install and update in the Add-on & Subscription Center<br>
+[Bug][LDAP]                              LDAP login crashes with "i-doit system error" for every user created by ldap-sync (checkPassword TypeError on NULL password)<br>
+[Bug][Categories]                        Stop encrypting an already encrypted password again when a password entry is updated<br>
+
+## 39
+
 [Task][Code (Internal)]                  Refactor usages of abandoned "mysql-php/errors" package<br>
 [Task][Categories]                       Enable URL encoded variables in category Access<br>
 [Improvement][CMDB]                      Add a generic Cloud category (provider, account, region, state)<br>
