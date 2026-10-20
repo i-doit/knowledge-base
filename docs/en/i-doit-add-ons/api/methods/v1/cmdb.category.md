@@ -341,6 +341,103 @@ JSON key **result** contains a JSON object.
     }
     ```
 
+### Special case: connecting a network port (assigned_connector)
+
+The property **assigned_connector** of the category **C__CATG__NETWORK_PORT** does not take an object identifier. It expects the **entry identifier of the connector on the other end** of the cable, which you find in the category **Cabling → Connectors** (**C__CATG__CONNECTOR**) of the target object:
+
+1. Read **C__CATG__CONNECTOR** of the object you want to connect to. For a patch panel this returns its connectors. For a switch or another device with network ports it also returns one connector per port; the right entry has `"assigned_category": {"const": "C__CATG__NETWORK_PORT"}` and the title of the port.
+2. Save the network port with `"assigned_connector": <id of that entry>`. i-doit creates the cable object automatically. To use an existing cable object instead, pass its object identifier in **cable**.
+
+Any other value, for example the object identifier of the patch panel, is rejected with the error `-32099`: *(assigned_connector) The given connector does not exist, please check "Cabling > Connector" category!*
+
+=== "1. Read the connectors of the target object"
+
+    ```json
+    {
+        "version": "2.0",
+        "method": "cmdb.category.read",
+        "params": {
+            "objID": 42884,
+            "category": "C__CATG__CONNECTOR",
+            "apikey": "xxx",
+            "language": "en"
+        },
+        "id": 1
+    }
+    ```
+
+=== "Response body (shortened)"
+
+    ```json
+    {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "result": [
+            {
+                "id": "1365",
+                "objID": "42884",
+                "title": "Port 1",
+                "type": { "id": "2", "title": "Output" },
+                "assigned_connector": null,
+                "assigned_category": { "value": "50", "const": "C__CATG__CONNECTOR", "title": "Connectors" },
+                "cable_connection": null
+            }
+        ]
+    }
+    ```
+
+=== "2. Connect the network port"
+
+    ```json
+    {
+        "version": "2.0",
+        "method": "cmdb.category.save",
+        "params": {
+            "object": 42883,
+            "category": "C__CATG__NETWORK_PORT",
+            "entry": 1364,
+            "data": {
+                "assigned_connector": 1365
+            },
+            "apikey": "xxx",
+            "language": "en"
+        },
+        "id": 1
+    }
+    ```
+
+=== "Response body"
+
+    ```json
+    {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "result": {
+            "success": true,
+            "message": "Category entry successfully saved",
+            "entry": 1364
+        }
+    }
+    ```
+
+Reading the network port afterwards shows the connected connector and the cable that was created:
+
+```json
+"assigned_connector": {
+    "id": "42884",
+    "title": "KB-1189 Patch panel",
+    "type": "C__OBJTYPE__PATCH_PANEL",
+    "assigned_category": "C__CATG__CONNECTOR",
+    "ref_id": "1365",
+    "ref_title": "Port 1"
+},
+"cable": {
+    "id": "42886",
+    "title": "KABEL_DEFAULT_259",
+    "type": "C__OBJTYPE__CABLE"
+}
+```
+
 ## cmdb.category.quickpurge
 
 If **Quickpurge** is [enabled](../../../../administration/management/tenant-management/tenant-settings.md#cmdb), purge a category entry of an object directly from the database.
