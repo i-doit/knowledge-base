@@ -9,7 +9,7 @@ lang: de
 
 Der JDisc-Import kann Cloud- und Kubernetes-Informationen uebernehmen, die JDisc Discovery in Ihrer Infrastruktur erhebt.
 Dieser Artikel beschreibt, welche Cloud- und Kubernetes-Daten der Import in die CMDB schreibt und wie Sie ihn in einem JDisc-Profil aktivieren.
-Diese Funktionen stehen ab i-doit 39 zusammen mit dem JDisc Connector 1.0.5 zur Verfuegung.
+Die Kategorien und Objekttypen (Cloud, Kubernetes, Cloud Storage) sind ab i-doit 39 enthalten. Der Import dieser Daten setzt den JDisc Connector 1.0.6 voraus.
 
 ## Voraussetzungen
 
