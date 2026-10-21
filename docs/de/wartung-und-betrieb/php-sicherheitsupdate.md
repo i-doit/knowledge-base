@@ -35,7 +35,7 @@ Die Linux-Distributionen haben die Patches vorab erhalten und liefern eigene Pak
 
     | Distribution | Update | Dienste neu starten |
     | --- | --- | --- |
-    | Debian 13 (Pakete seit 21.10., 15:45 Uhr) | `sudo apt update && sudo apt upgrade` | `sudo systemctl restart apache2 php8.4-fpm` |
+    | Debian 13 (Pakete seit 21.10., 15:45 Uhr, [ausführliche Anleitung](php-sicherheitsupdate-debian.md)) | `sudo apt update && sudo apt upgrade` | `sudo systemctl restart apache2 php8.4-fpm` |
     | Ubuntu 24.04 | `sudo apt update && sudo apt upgrade` | `sudo systemctl restart apache2 php8.3-fpm` |
     | RHEL 10 / Rocky / Alma | `sudo dnf update 'php*'` | `sudo systemctl restart httpd php-fpm` |
     | SLES 15 SP6 | `sudo zypper refresh && sudo zypper patch` | `sudo systemctl restart apache2 php-fpm` |
