@@ -36,7 +36,7 @@ The Linux distributions received the patches in advance and ship their own packa
     | Distribution | Update | Restart services |
     | --- | --- | --- |
     | Debian 13 (packages since 2026-10-21, 13:45 UTC, [detailed guide](php-security-update-debian.md)) | `sudo apt update && sudo apt upgrade` | `sudo systemctl restart apache2 php8.4-fpm` |
-    | Ubuntu 24.04 | `sudo apt update && sudo apt upgrade` | `sudo systemctl restart apache2 php8.3-fpm` |
+    | Ubuntu 24.04 (packages since 2026-10-21, approx. 14:05 UTC, [detailed guide](php-security-update-ubuntu.md)) | `sudo apt update && sudo apt upgrade` | `sudo systemctl restart apache2 php8.3-fpm` |
     | RHEL 10 / Rocky / Alma | `sudo dnf update 'php*'` | `sudo systemctl restart httpd php-fpm` |
     | SLES 15 SP6 | `sudo zypper refresh && sudo zypper patch` | `sudo systemctl restart apache2 php-fpm` |
 
@@ -64,7 +64,7 @@ The PHP project also provides the new versions as [Windows binaries](https://www
 
 ### PHP 8.1 or older
 
-The PHP project no longer provides updates for these versions. Some distributions and LTS vendors provide backported fixes. Ask your vendor, or upgrade your installation to a supported version (8.2–8.4). PHP 8.2 receives security updates until December 31, 2026.
+The PHP project no longer provides updates for these versions. Some distributions and LTS vendors provide backported fixes, for example Ubuntu 22.04 LTS for PHP 8.1 (package `8.1.2-1ubuntu2.28`, USN-8948-1). Ask your vendor, or upgrade your installation to a supported version (8.2–8.4). PHP 8.2 receives security updates until December 31, 2026.
 
 ### If you cannot update immediately
 
