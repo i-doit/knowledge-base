@@ -335,6 +335,7 @@ nav:
       - PHP-Sicherheitsupdate (Oktober 2026):
           - wartung-und-betrieb/php-sicherheitsupdate.md
           - Debian 13: wartung-und-betrieb/php-sicherheitsupdate-debian.md
+          - Ubuntu 24.04: wartung-und-betrieb/php-sicherheitsupdate-ubuntu.md
   - Upgrades und Umzüge:
       - upgrades-und-umzuege/index.md
       - i-doit update Anleitung: upgrades-und-umzuege/update-anleitung.md
