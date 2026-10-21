@@ -13,7 +13,7 @@
 ##   IDOIT_TENANT=...           Mandant-Name                 (Standard: CMDB)
 ##
 ## Beispiel mit Lizenz-Token:
-##   IDOIT_LICENSE_TOKEN=889bdc3c6a119da5f0a5d9c0db8747c6 ./idoit-install-ubuntu2404.sh
+##   IDOIT_LICENSE_TOKEN=<dein-token> ./idoit-install-ubuntu2404.sh
 ##
 
 set -euo pipefail
