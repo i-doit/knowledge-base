@@ -361,6 +361,7 @@ nav:
       - i-doit Update: maintenance-and-operation/i-doit-update.md
       - Security and Protection: maintenance-and-operation/security-and-protection.md
       - PHP update: maintenance-and-operation/php-update.md
+      - PHP security update (October 2026): maintenance-and-operation/php-security-update.md
   - Upgrades and Migrations:
       - upgrades-and-migrations/index.md
       - i-doit Update Guide: upgrades-and-migrations/update-guide.md

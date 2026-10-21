@@ -361,6 +361,7 @@ nav:
       - i-doit Update: wartung-und-betrieb/update-einspielen.md
       - Sicherheit und Schutz: wartung-und-betrieb/sicherheit-und-schutz.md
       - PHP update: wartung-und-betrieb/php-update.md
+      - PHP-Sicherheitsupdate (Oktober 2026): wartung-und-betrieb/php-sicherheitsupdate.md
   - Upgrades und Umzüge:
       - upgrades-und-umzuege/index.md
       - i-doit update Anleitung: upgrades-und-umzuege/update-anleitung.md
