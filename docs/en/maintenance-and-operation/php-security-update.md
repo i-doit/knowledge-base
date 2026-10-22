@@ -37,7 +37,7 @@ The Linux distributions received the patches in advance and ship their own packa
     | --- | --- | --- |
     | Debian 13 (packages since 2026-10-21, 13:45 UTC, [detailed guide](php-security-update-debian.md)) | `sudo apt update && sudo apt upgrade` | `sudo systemctl restart apache2 php8.4-fpm` |
     | Ubuntu 24.04 (packages since 2026-10-21, approx. 14:05 UTC, [detailed guide](php-security-update-ubuntu.md)) | `sudo apt update && sudo apt upgrade` | `sudo systemctl restart apache2 php8.3-fpm` |
-    | RHEL 10 / Rocky / Alma | `sudo dnf update 'php*'` | `sudo systemctl restart httpd php-fpm` |
+    | RHEL 10 / Rocky / Alma (packages since 2026-10-21, 22:58 UTC, [detailed guide](php-security-update-rocky.md)) | `sudo dnf --refresh update 'php*'` | `sudo systemctl restart httpd php-fpm` |
     | SLES 15 SP6 | `sudo zypper refresh && sudo zypper patch` | `sudo systemctl restart apache2 php-fpm` |
 
     With mod_php instead of PHP-FPM, restarting the web server is enough.
@@ -46,11 +46,11 @@ The Linux distributions received the patches in advance and ship their own packa
 4. Test i-doit: log in, open and save an object, open the Admin Center.
 
 !!! info "The version number does not always show the fix"
-    Debian ships the new PHP version, so `php -v` shows `8.4.27` afterwards. Ubuntu, Red Hat and SUSE instead build the fix into their existing PHP version (backport). There, `php -v` still shows e.g. `8.3.6`, not `8.3.36`. You can tell whether the fix is installed by the CVE number in the package changelog or in your distribution's security tracker:
+    Debian and Red Hat Enterprise Linux 10 (including Rocky and Alma) ship the new PHP version, so `php -v` shows `8.4.27` or `8.3.36` afterwards. Ubuntu and SUSE instead build the fix into their existing PHP version (backport). There, `php -v` still shows e.g. `8.3.6`, not `8.3.36`. You can tell whether the fix is installed by the CVE number in the package changelog, by the package version in the security advisory or in your distribution's security tracker:
 
     - Debian: `zgrep CVE-2026-10961 /usr/share/doc/php8.4-cli/changelog.Debian.gz` or [Debian Security Tracker](https://security-tracker.debian.org/tracker/CVE-2026-109618)
     - Ubuntu: `zgrep CVE-2026-10961 /usr/share/doc/php8.3-cli/changelog.Debian.gz` or [Ubuntu CVE page](https://ubuntu.com/security/CVE-2026-109618)
-    - RHEL/Rocky/Alma: `dnf updateinfo info --cve CVE-2026-109618`
+    - RHEL/Rocky/Alma: compare `rpm -q php` with the version in the security advisory, for Rocky `8.3.36-1.el10_2` according to [RLSA-2026:87070](https://errata.rockylinux.org/RLSA-2026:87070). `dnf updateinfo info --cve CVE-2026-109618` only shows it once the mirrors deliver the advisory metadata, in the test hours after the packages.
     - SLES/openSUSE: `zypper lp --cve=CVE-2026-109618` or [SUSE CVE page](https://www.suse.com/security/cve/CVE-2026-109618.html)
 
 !!! danger "PHP from the Remi repository"
