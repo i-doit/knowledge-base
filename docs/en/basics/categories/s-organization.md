@@ -29,7 +29,7 @@ Typical use cases:
 
 ### Title
 
-The name of the organization, e.g. `synetics GmbH`, `ACME Corp.`, or `IT Department Berlin`. This value appears in the list view and in reports. For external organizations, the official company name is recommended; for internal units, a unique title following internal naming conventions.
+The name of the organization, e.g. `i-doit GmbH`, `ACME Corp.`, or `IT Department Berlin`. This value appears in the list view and in reports. For external organizations, the official company name is recommended; for internal units, a unique title following internal naming conventions.
 
 ### Phone
 
@@ -84,7 +84,7 @@ Free text for additional details: industry, contract partner number, internal ab
         "object": 200,
         "category": "C__CATS__ORGANIZATION",
         "data": {
-            "title": "synetics GmbH",
+            "title": "i-doit GmbH",
             "telephone": "+49 211 699 31-0",
             "fax": "+49 211 699 31-99",
             "website": "https://www.i-doit.com",

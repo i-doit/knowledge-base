@@ -43,6 +43,9 @@ You configure which information is stored in the QR code under **Administration 
 
 With the global definition, you fill the QR code information using the following placeholders:
 
+!!! info "Modifiers since i-doit 39"
+    Since i-doit 39, the placeholders can be transformed with modifiers, for example `%hostname|lower%`. The complete list is available under [QR code](../administration/management/predefined-content/qr-code.md#modifying-variables).
+
 [![Global definition](../assets/images/en/i-doit-add-ons/qr-code-printer/6-qr.png)](../assets/images/en/i-doit-add-ons/qr-code-printer/6-qr.png)
 
 ### Primary access URL
