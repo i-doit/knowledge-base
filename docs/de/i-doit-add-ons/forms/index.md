@@ -36,7 +36,7 @@ So installierst du das Add-on:
 
 1. Installiere das Forms Add-on über das [Admin-Center](../../administration/admin-center.md).
 2. Installiere [MongoDB Server **v8**](https://docs.mongodb.com/manual/installation/).
-3. Installiere [NodeJS **v22**](https://nodejs.org/en/download/current/) via [nvm Package Manager](https://github.com/nvm-sh/nvm).
+3. Installiere [NodeJS **v22**](https://nodejs.org/en/download/current/) systemweit, siehe [Installation NodeJS](forms-installation.md#3-installation-nodejs).
 4. Konfiguriere das Forms Backend.
 5. Konfiguriere i-doit.
 
