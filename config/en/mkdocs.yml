@@ -365,6 +365,7 @@ nav:
           - maintenance-and-operation/php-security-update.md
           - Debian 13: maintenance-and-operation/php-security-update-debian.md
           - Ubuntu 24.04: maintenance-and-operation/php-security-update-ubuntu.md
+          - Rocky Linux 10: maintenance-and-operation/php-security-update-rocky.md
   - Upgrades and Migrations:
       - upgrades-and-migrations/index.md
       - i-doit Update Guide: upgrades-and-migrations/update-guide.md
