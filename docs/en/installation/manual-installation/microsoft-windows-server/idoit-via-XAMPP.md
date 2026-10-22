@@ -7,54 +7,74 @@ lang: en
 ---
 # i-doit via XAMPP
 
-This article describes how to install i-doit on the Windows operating system.
+This article describes how to install i-doit on the Windows operating system with XAMPP.
 
-!!! info "This article was last verified for i-doit version **31**"
+!!! info "This article was last verified for i-doit version **39.1**"
+
+!!! note "Tested on 22.10.2026 with Windows Server 2022, XAMPP 8.2.12 (Apache 2.4.58), PHP 8.2.35 (Thread Safe) and MariaDB 10.11.19"
+
+!!! warning "XAMPP is only used for Apache and PHP"
+    The latest XAMPP package for Windows is `xampp-windows-x64-8.2.12-0-VS16` from November 2023. It contains PHP 8.2.12 and MariaDB 10.4.32. Since version 30, i-doit requires at least **MariaDB 10.6**, and PHP 8.2.12 has known security vulnerabilities. Therefore, we only install **Apache** and **PHP** from XAMPP, update PHP to the current version and install MariaDB separately.<br>
+    PHP 8.2 is deprecated for i-doit, PHP 8.4 is recommended. There is no XAMPP package with PHP 8.4. Observe the [system requirements](../../system-requirements.md).
 
 !!! attention "Firewall"
     For our installation, we disable the Windows Firewall so that RDP and the connection to the web server work. Of course, the applications and ports should be specifically configured in the firewall, but we do not want to focus on this in this guide.
 
-## Step 1: installation
+All commands in this guide are run in **PowerShell as administrator**.
 
-First, download the XAMPP package from [https://www.apachefriends.org/de/index.html](https://www.apachefriends.org/de/index.html) .<br>
-Other packages also work. For example, the compressed package (.zip) can also simply be extracted to C:\\.<br>
-It is important when installing XAMPP that the installation path is "C:\\xampp", because the directory "C:\\Program Files (x86)" does not have sufficient permissions and therefore the installation will most likely not work correctly.
+## Step 1: Install XAMPP
 
-The [system requirements](../../system-requirements.md) of the respective i-doit version must be observed. Therefore, in this example, the installation package → xampp-windows-x64-8.2.12-0-VS16-installer.exe with PHP 8.2, which has been supported since i-doit 30, is used.
+Download the installation package `xampp-windows-x64-8.2.12-0-VS16-installer.exe` from [https://www.apachefriends.org/index.html](https://www.apachefriends.org/index.html) and start it.
+Confirm the warning about User Account Control (UAC) with **OK**.
 
-At least the components **Apache**, **MySQL**, and **PHP** must be installed.<br>
-[![installation](../../../assets/images/de/installation/microsoft-windows/xampp/schritt-1-installation.png)](../../../assets/images/de/installation/microsoft-windows/xampp/schritt-1-installation.png)
+Select only **Apache** and **PHP** as components. Clear all other components, in particular **MySQL** and **phpMyAdmin**.
 
-The default folder is kept → **C:\xampp**
+[![Components](../../../assets/images/de/installation/microsoft-windows/xampp/schritt-1-installation-komponenten.png)](../../../assets/images/de/installation/microsoft-windows/xampp/schritt-1-installation-komponenten.png)
 
-[![installationspfad](../../../assets/images/de/installation/microsoft-windows/xampp/schritt-1-installation-pfad.png)](../../../assets/images/de/installation/microsoft-windows/xampp/schritt-1-installation-pfad.png)
+The default folder is kept → **C:\xampp**. Do not install XAMPP under `C:\Program Files`, because write permissions are missing there.
 
-Then we select the language; we keep it at **English**.
+[![Installation path](../../../assets/images/de/installation/microsoft-windows/xampp/schritt-1-installation-pfad.png)](../../../assets/images/de/installation/microsoft-windows/xampp/schritt-1-installation-pfad.png)
 
-[![installationssprache](../../../assets/images/de/installation/microsoft-windows/xampp/schritt-1-installation-sprache.png)](../../../assets/images/de/installation/microsoft-windows/xampp/schritt-1-installation-sprache.png)
+We keep the language at **English**.
 
-The next **Next >** buttons should be self-explanatory.
+[![Installation language](../../../assets/images/de/installation/microsoft-windows/xampp/schritt-1-installation-sprache.png)](../../../assets/images/de/installation/microsoft-windows/xampp/schritt-1-installation-sprache.png)
 
-[![installations abschließen](../../../assets/images/de/installation/microsoft-windows/xampp/schritt-1-installation-fertig.png)](../../../assets/images/de/installation/microsoft-windows/xampp/schritt-1-installation-fertig.png)
+**Next >** starts the installation. On the last page, you can clear the check box for the Control Panel, because we run Apache as a Windows service. **Finish** completes the installation.
 
-The installation is now complete and we start the XAMPP Control Panel by clicking Finish.
+## Step 2: Update PHP
 
-[![installation-control-panel](../../../assets/images/de/installation/microsoft-windows/xampp/schritt-1-installation-control-panel.png)](../../../assets/images/de/installation/microsoft-windows/xampp/schritt-1-installation-control-panel.png)
+XAMPP ships PHP 8.2.12. Replace PHP right after the installation with the current 8.2.x version (**Thread Safe**), as described in the **XAMPP** section of the guide [PHP security update on Windows](../../../maintenance-and-operation/php-security-update-windows.md). Since Apache is not running yet, nothing needs to be stopped beforehand.
 
-## Step 2: Environment Configuration
+Then check the version:
+
+```powershell
+C:\xampp\php\php.exe -v
+```
+
+## Step 3: Configure PHP and Apache
 
 ### PHP
 
-Now we configure PHP. Click the Config button → PHP (php.ini) to open php.ini.
+Open the file `C:\xampp\php\php.ini` in an editor.
 
-[![Configuration-PHP](../../../assets/images/de/installation/microsoft-windows/xampp/schritt-2-php.png)](../../../assets/images/de/installation/microsoft-windows/xampp/schritt-2-php.png)
+Under **Dynamic Extensions**, enable the following extensions by removing the semicolon at the beginning of the line:
 
-Normally, the file should open automatically in the editor. We add the following settings at the end of the file and save:
+```ini
+extension=gd
+extension=intl
+extension=ldap
+extension=soap
+extension=sockets
+extension=zip
+```
 
-```ìni
-allow_url_fopen = Yes
+The line `;extension=openssl` stays commented out. XAMPP already loads OpenSSL at the end of the file via `extension=php_openssl.dll`.
+
+Then add the following settings at the end of the file and save:
+
+```ini
+allow_url_fopen = On
 file_uploads = On
-magic_quotes_gpc = Off
 max_execution_time = 300
 max_file_uploads = 42
 max_input_time = 60
@@ -62,7 +82,6 @@ max_input_vars = 10000
 memory_limit = 256M
 post_max_size = 128M
 register_argc_argv = On
-register_globals = Off
 short_open_tag = On
 upload_max_filesize = 128M
 display_errors = Off
@@ -76,108 +95,83 @@ session.gc_maxlifetime = 604800
 session.cookie_lifetime = 0
 ```
 
-_Additionally, it may be necessary for the LDAP extension to copy the file **libsasl.dll** from **C:\xampp\php** to **C:\xampp\apache\bin**.<br>
-Additionally, in the php.ini under Dynamic Extensions, the leading semicolons must be removed from ;extension=ldap and ;extension=gd._
+`date.timezone` must match the Windows time zone. Otherwise i-doit reports a time difference between PHP and MariaDB in the system overview under **System Config Check**.
 
-### Apache Web Server
+The file `libsasl.dll` for LDAP does not need to be copied. XAMPP already ships it in `C:\xampp\apache\bin`.
 
-No separate settings for the Apache web server are necessary here.
+### Apache
 
-### MySQL/MariaDB
+For Apache to load the PHP extension `curl`, it needs some libraries from the PHP folder. Open the file `C:\xampp\apache\conf\extra\httpd-xampp.conf` and add these four lines directly below the line `LoadFile "C:/xampp/php/libsqlite3.dll"`:
 
-Now we configure MySQL/MariaDB. Click the Config button → my.ini.
+```apache
+LoadFile "C:/xampp/php/brotlicommon.dll"
+LoadFile "C:/xampp/php/brotlidec.dll"
+LoadFile "C:/xampp/php/libssh2.dll"
+LoadFile "C:/xampp/php/nghttp2.dll"
+```
 
-[![Configuration-MySQL](../../../assets/images/de/installation/microsoft-windows/xampp/schritt-2-mysql.png)](../../../assets/images/de/installation/microsoft-windows/xampp/schritt-2-mysql.png)
+Without these lines, the Apache log `logs\error.log` shows the message `Unable to load dynamic library 'curl'`, and i-doit cannot establish connections over HTTPS, for example for the update check.
 
-Normally, this file should also open automatically in the editor. We also add the following settings at the end of the file and save:
+Set up Apache as a Windows service and start it:
 
-```ìni
-[mysqld]
+```powershell
+C:\xampp\apache\bin\httpd.exe -k install
+Start-Service Apache2.4
+```
 
-# This is the number 1 setting to look at for any performance optimization
-# It is where the data and indexes are cached: having it as large as possible will
-# ensure MySQL uses memory and not disks for most read operations.
-#
-# Typical values are 1G (1-2GB RAM), 5-6G (8GB RAM), 20-25G (32GB RAM), 100-120G (128GB RAM).
-innodb_buffer_pool_size = 1G
+The service `Apache2.4` then starts automatically with Windows. A Windows Firewall prompt may appear.
 
-# Use multiple instances if you have innodb_buffer_pool_size > 10G, 1 every 4GB
-innodb_buffer_pool_instances = 1
+## Step 4: Install MariaDB
 
-# Redo log file size, the higher the better.
-# MySQL/MariaDB writes two of these log files in a default installation.
+Download MariaDB **10.11** as an MSI package for Windows (`mariadb-10.11.x-winx64.msi`) from [https://mariadb.org/download/](https://mariadb.org/download/) and install it. In the wizard, set a password for the user `root` and let MariaDB install as a service named **MariaDB** on port **3306**.
+
+Alternatively, the package can be installed without the wizard. Replace `<password>` with your own password and the file name with the downloaded version:
+
+```powershell
+msiexec /i mariadb-10.11.19-winx64.msi /qn SERVICENAME=MariaDB PASSWORD=<password> PORT=3306
+```
+
+Then open the file `C:\Program Files\MariaDB 10.11\data\my.ini`. The `[mysqld]` section already contains `datadir`, `port` and `innodb_buffer_pool_size`. The setup sets `innodb_buffer_pool_size` according to the available memory; keep it. Add the following settings below it, before the `[client]` section, and save:
+
+```ini
 innodb_log_file_size = 512M
-
 innodb_sort_buffer_size = 64M
-sort_buffer_size = 262144 # default
-join_buffer_size = 262144 # default
-
+sort_buffer_size = 262144
+join_buffer_size = 262144
 max_allowed_packet = 128M
 max_heap_table_size = 32M
 query_cache_min_res_unit = 4096
 query_cache_type = 1
 query_cache_limit = 5M
 query_cache_size = 80M
-
 tmp_table_size = 32M
 max_connections = 200
 innodb_file_per_table = 1
-
-# Disable this (= 0) if you have only one to two CPU cores, change it to 4 for a quad core.
-innodb_thread_concurrency = 0
-
-# Disable this (= 0) if you have slow harddisks
 innodb_flush_log_at_trx_commit = 1
 innodb_flush_method = O_DIRECT
-
 innodb_lru_scan_depth = 2048
 table_definition_cache = 1024
 table_open_cache = 2048
-# Only if your have MySQL 5.6 or higher, do not use with MariaDB!
-#table_open_cache_instances = 4
-
 innodb_stats_on_metadata = 0
-
+table_open_cache_instances = 8
 sql-mode = ""
 ```
 
-## Step 3: Starting Apache and MySQL
+Restart MariaDB:
 
-We click the![start-button](../../../assets/images/de/installation/microsoft-windows/xampp/start.png) Start button for Apache and MySQL. A firewall popup may appear.<br>
-Both modules should now be highlighted in green.
-
-[![Service-start](../../../assets/images/de/installation/microsoft-windows/xampp/schritt-3-start.png)](../../../assets/images/de/installation/microsoft-windows/xampp/schritt-3-start.png)
-
-### Password for MySQL root
-
-Now we should set a password for the MySQL root user.<br>
-To do this, we click the ![shell-button](../../../assets/images/de/installation/microsoft-windows/xampp/shell.png) Shell button.
-
-[![shell-control-panel](../../../assets/images/de/installation/microsoft-windows/xampp/schritt-3-passwort-root.png)](../../../assets/images/de/installation/microsoft-windows/xampp/schritt-3-passwort-root.png)
-
-First, we log in:
-
-```sql
-    mysql -u root
+```powershell
+Restart-Service MariaDB
 ```
 
-Now we change the password; '_thisistotallysecure!!11_' should be replaced with your own password:
+## Step 5: Download and extract i-doit
 
-```sql
-    ALTER USER 'root'@'localhost' IDENTIFIED BY 'thisistotallysecure!!11';
-```
+Download the latest version of i-doit from the [customer portal](../../../administration/customer-portal.md).
+Extract `idoit-xx.zip` into the new folder `C:\xampp\htdocs\idoit`. The folder then directly contains the subfolders `admin`, `src`, `setup` and so on.
 
-## Step 4: Download and Extract i-doit
+## Step 6: Check the installation
 
-### Download and Extract i-doit
-
-Now we download i-doit in the latest version from the [customer portal](../../../administration/customer-portal.md).<br>
-Extract the idoit-xx.x.zip to C:\\xampp\\htdocs and rename the idoit-xx.x folder to idoit.
-
-## Step 5: Verify the installation
-
-With the previous configuration, we have prepared the web server. Now, when we open the IP of the system or localhost in a browser, the Apache welcome page should be displayed.<br>
-Under PHPInfo in the menu, you can verify whether the values set in php.ini have been correctly applied.
+Open `http://<i-doit-host>/idoit/` in a browser. The i-doit installation page with the check of the system requirements appears.
+During setup, enter `127.0.0.1` with port `3306` as the database server and the MariaDB user `root` with the password from step 4.
 
 ## Next Step
 
@@ -185,9 +179,4 @@ The operating system is now prepared so that i-doit can be installed:
 
 [Continue to **Setup**](../../manual-installation/setup.md)
 
-## FAQ
-
-With XAMPP "xampp-windows-x64-8.0.23-0-VS16-installer" a new version of the PHP gd extension was added.<br>
-Therefore, the php.ini should not be replaced with the PHP7.4 version.
-
-In PHP 7.4, this was called extension=gd2, and in PHP 8.0 it is called extension=gd.
+For later PHP updates, use the guide [PHP security update on Windows](../../../maintenance-and-operation/php-security-update-windows.md). The lines in `httpd-xampp.conf` from step 3 remain valid, because the libraries are replaced together with the PHP folder.
