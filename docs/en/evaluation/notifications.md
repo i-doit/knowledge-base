@@ -107,7 +107,7 @@ In the left navigation tree under **Email Templates**, you can globally customiz
 | Language            | Displays the language currently being edited.                                                                                                      |
 | Subject             | The subject of the message to be sent can be defined using placeholders from the lower area of the interface.                                      |
 | Notification text   | The text can, like the subject, be composed using placeholders.                                                                                    |
-| Send as HTML        | Since i-doit 39. When enabled, the email is sent as HTML and HTML markup in the notification text is rendered. The text is then edited in an editor with formatting options. Switching between HTML and plain text only takes effect after saving. Disabled by default. |
+| Send as HTML        | Since i-doit 39. Yes/No selection. With **Yes**, the email is sent as HTML and HTML markup in the notification text is rendered. The text is then edited in an editor with formatting options. Switching between HTML and plain text only takes effect after saving. The default is **No**, so existing templates keep sending plain text emails. |
 | Report              | A report can be defined here to send the object information found by the notification in a formatted manner within the email.                      |
 
 ## Configuration of the CLI Call

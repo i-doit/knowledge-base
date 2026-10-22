@@ -60,7 +60,7 @@ Example for an object named `Web Server 01`:
 | `https://wiki.example.com/%objectname|lower|slug%` | `https://wiki.example.com/web-server-01` |
 | `https://search.example.com/?q=%objectname|raw-encode%` | `https://search.example.com/?q=Web%20Server%2001` |
 
-Unknown modifiers are ignored. The same modifiers can be used in the [QR code configuration](../../administration/management/predefined-content/qr-code.md#modifying-variables).
+Unknown modifiers are ignored. The modifiers apply wherever the variables are replaced: in the category view, in object and category lists, in reports and when reading the category via the API. The same modifiers can be used in the [QR code configuration](../../administration/management/predefined-content/qr-code.md#modifying-variables).
 
 ### Primary access
 

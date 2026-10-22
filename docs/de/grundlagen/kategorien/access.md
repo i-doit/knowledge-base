@@ -60,7 +60,7 @@ Beispiel für ein Objekt mit dem Namen `Web Server 01`:
 | `https://wiki.example.com/%objectname|lower|slug%` | `https://wiki.example.com/web-server-01` |
 | `https://search.example.com/?q=%objectname|raw-encode%` | `https://search.example.com/?q=Web%20Server%2001` |
 
-Unbekannte Modifikatoren werden ignoriert. Dieselben Modifikatoren gelten auch in der [QR-Code-Konfiguration](../../administration/verwaltung/vordefinierte-inhalte/qr-code.md#variablen-verandern).
+Unbekannte Modifikatoren werden ignoriert. Die Modifikatoren greifen überall dort, wo die Variablen ersetzt werden: in der Kategorie-Ansicht, in Objekt- und Kategorie-Listen, in Reports und beim Lesen der Kategorie über die API. Dieselben Modifikatoren gelten auch in der [QR-Code-Konfiguration](../../administration/verwaltung/vordefinierte-inhalte/qr-code.md#variablen-verandern).
 
 ### Primärer Zugriff
 

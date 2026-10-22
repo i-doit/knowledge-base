@@ -43,6 +43,9 @@ Welche Informationen im QR-Code gespeichert werden, konfigurierst du unter **Ver
 
 Bei der globalen Definition befuellst du die QR-Code-Informationen mit folgenden Platzhaltern:
 
+!!! info "Modifikatoren seit i-doit 39"
+    Seit i-doit 39 lassen sich die Platzhalter mit Modifikatoren umformen, zum Beispiel `%hostname|lower%`. Die vollständige Liste steht unter [QR-Code](../administration/verwaltung/vordefinierte-inhalte/qr-code.md#variablen-verandern).
+
 [![Globale Definition](../assets/images/de/i-doit-add-ons/qr-code-printer/6-qr.png)](../assets/images/de/i-doit-add-ons/qr-code-printer/6-qr.png)
 
 ### Primäre Zugriffs URL
