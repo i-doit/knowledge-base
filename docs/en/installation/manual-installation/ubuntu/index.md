@@ -42,7 +42,7 @@ to install:
 
 ```shell
 sudo apt update
-sudo apt install apache2 libapache2-mod-fcgid mariadb-client mariadb-server memcached unzip sudo moreutils php-{bcmath,cli,common,curl,fpm,gd,ldap,mbstring,memcached,mysql,opcache,pgsql,soap,xml,zip}
+sudo apt install apache2 mariadb-client mariadb-server memcached unzip sudo moreutils php-bcmath php-cli php-common php-curl php-fpm php-gd php-ldap php-mbstring php-memcached php-mysql php-opcache php-pgsql php-soap php-xml php-zip
 ```
 
 ## Configuration
@@ -62,7 +62,6 @@ sudo nano /etc/php/8.3/mods-available/i-doit.ini
 ```ini
 allow_url_fopen = Yes
 file_uploads = On
-magic_quotes_gpc = Off
 max_execution_time = 300
 max_file_uploads = 42
 max_input_time = 60
@@ -70,7 +69,6 @@ max_input_vars = 10000
 memory_limit = 256M
 post_max_size = 128M
 register_argc_argv = On
-register_globals = Off
 short_open_tag = On
 upload_max_filesize = 128M
 display_errors = Off
@@ -110,9 +108,8 @@ sudo nano /etc/apache2/sites-available/i-doit.conf
 <VirtualHost *:80>
         ServerAdmin i-doit@example.net
 
-        DocumentRoot /var/www/html/
-DirectoryIndex index.php
-DocumentRoot /var/www/html
+        DocumentRoot /var/www/html
+        DirectoryIndex index.php
 
     <Directory /var/www/html>
         ## See https://httpd.apache.org/docs/2.2/mod/core.html#allowoverride
@@ -268,7 +265,10 @@ DocumentRoot /var/www/html
 In the next step, the new VHost and the required Apache module **rewrite** are activated, and the Apache web server is restarted:
 
 ```shell
-sudo a2ensite i-doit && sudo a2enmod rewrite proxy_fcgi setenvif && sudo systemctl restart apache2 php8.3-fpm
+sudo a2dismod mpm_prefork
+sudo a2enmod mpm_event proxy proxy_fcgi setenvif rewrite
+sudo a2ensite i-doit
+sudo systemctl restart apache2 php8.3-fpm
 ```
 
 ### MariaDB
