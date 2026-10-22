@@ -44,6 +44,10 @@ Create a sources file for MongoDB:
 
 !!! attention "This repo is only to be used for **Debian 12** Bookworm!"
 
+!!! note "Debian 13 (trixie)"
+    For MongoDB 8 there is (as of 2026-10-22) no dedicated `trixie` repository yet. On Debian 13, the
+    `bookworm` repository line works as a workaround. This guide is tested with **Debian 12**.
+
 ```shell
 echo "deb [ signed-by=/usr/share/keyrings/mongodb-server-8.0.gpg ] http://repo.mongodb.org/apt/debian bookworm/mongodb-org/8.0 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-8.0.list
 ```
@@ -82,41 +86,36 @@ sudo systemctl start mongod
 
 ## 3. Install NodeJS
 
-!!! attention "The installation was last tested with NodeJS v22.14.0 LTS on Debian 12"
+!!! attention "Tested with NodeJS v22.23.4 on Debian 12. Forms requires Node.js 22 (`engines: node ^22.13.0`)."
 
-A manual download is available [here](https://nodejs.org/en/download){: target="_blank"}. Instructions are also provided there.
+The Forms backend service runs as user `www-data` and starts `node` from the system `PATH`. Node.js must therefore be
+installed **system-wide** in version 22. `nvm` in a user's home directory is not sufficient, because `www-data` cannot
+see it.
 
-For the next step you need cURL:
+First install cURL:
 
 ```shell
-sudo apt-get install curl
+sudo apt-get install -y curl
 ```
 
-Install NodeJS via package manager. Use the code displayed at [https://nodejs.org/en/download](https://nodejs.org/en/download){: target="_blank"}:
+Install NodeJS 22.x from the official NodeSource repository:
 
 ```shell
-# Download and install nvm:
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | bash
-
-# in lieu of restarting the shell
-\. "$HOME/.nvm/nvm.sh"
-
-# Download and install Node.js:
-nvm install 22
-
-# Verify the Node.js version:
-node -v # Should print "v22.14.0".
-nvm current # Should print "v22.14.0".
-
-# Verify npm version:
-npm -v # Should print "10.9.2".
-```
-
-Install NodeJS:
-
-```shell
+curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
+
+Check the version:
+
+```shell
+node -v    # v22.23.4 or newer
+npm -v
+```
+
+!!! warning "No additional `apt-get install nodejs` from the Debian sources"
+    The Debian package `nodejs` provides Node.js 18 on Debian 12 and Node.js 20 on Debian 13 (both end-of-life). If it
+    is installed additionally, the Forms service uses it and runs with an outdated, vulnerable Node.js. Only use the
+    NodeSource repository (or another source that provides Node.js 22 system-wide as `/usr/bin/node`).
 
 * * *
 

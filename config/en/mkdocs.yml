@@ -885,6 +885,7 @@ nav:
       - Forms:
           - i-doit-add-ons/forms/index.md
           - Installation of Forms Add-on: i-doit-add-ons/forms/forms-installation.md
+          - Node.js security update (October 2026): i-doit-add-ons/forms/forms-nodejs-security-update.md
           - Create Forms: i-doit-add-ons/forms/create-forms.md
           - Publish Forms: i-doit-add-ons/forms/formulare-publishen.md
           - Fill Out Form: i-doit-add-ons/forms/fill-out-forms.md
