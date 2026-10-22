@@ -366,6 +366,7 @@ nav:
           - Debian 13: wartung-und-betrieb/php-sicherheitsupdate-debian.md
           - Ubuntu 24.04: wartung-und-betrieb/php-sicherheitsupdate-ubuntu.md
           - Rocky Linux 10: wartung-und-betrieb/php-sicherheitsupdate-rocky.md
+          - Windows: wartung-und-betrieb/php-sicherheitsupdate-windows.md
   - Upgrades und Umzüge:
       - upgrades-und-umzuege/index.md
       - i-doit update Anleitung: upgrades-und-umzuege/update-anleitung.md

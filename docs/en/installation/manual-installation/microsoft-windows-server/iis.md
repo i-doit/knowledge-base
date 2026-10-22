@@ -6,7 +6,7 @@ status:
 lang: en
 ---
 
-!!! note "Tested with i-doit **38**, **Windows Server 2022**, **PHP 8.2**, **MariaDB 10.6**"
+!!! note "Tested on 22 Oct 2026 with i-doit **39.1**, **Windows Server 2022**, **PHP 8.2.35**, **MariaDB 10.6.25**"
 
 This guide describes the installation of i-doit on **Internet Information Services (IIS)** on Windows Server 2022. The installation runs fully automated via a PowerShell script.
 
@@ -44,14 +44,14 @@ The script runs through 12 steps and displays the progress in the console:
 ```
 >>> Step 1/12 -- Download prerequisites <<<
     [OK]   Visual C++ 2019 Redistributable downloaded (24.2 MB).
-    [OK]   PHP 8.2.30 NTS x64 downloaded (30.4 MB).
+    [OK]   PHP 8.2.35 NTS x64 downloaded (32.1 MB).
     [OK]   IIS URL Rewrite Module downloaded (5.8 MB).
     [OK]   MariaDB 10.6.25 downloaded (72.2 MB).
-    [OK]   i-doit (latest) downloaded (17 MB).
+    [OK]   i-doit (latest) downloaded (17.3 MB).
 
 >>> Step 2/12 -- Enable IIS with CGI and management features <<<
 >>> Step 3/12 -- Install Visual C++ 2019 Redistributable <<<
->>> Step 4/12 -- Install PHP 8.2.30 NTS <<<
+>>> Step 4/12 -- Install PHP 8.2.35 NTS <<<
 >>> Step 5/12 -- Install IIS URL Rewrite Module <<<
 >>> Step 6/12 -- Install MariaDB 10.6.25 <<<
 >>> Step 7/12 -- Configure MariaDB <<<
