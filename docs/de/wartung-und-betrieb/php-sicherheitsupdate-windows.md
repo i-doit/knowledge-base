@@ -312,14 +312,14 @@ Hinweise).
 
 !!! note "Hinweise zu XAMPP"
     -   Das XAMPP-Paket bleibt auch nach dem Austausch alt (Apache 2.4.58, MariaDB 10.4.32). Das PHP-Update schließt nur
-        die beiden PHP-Lücken.
-    -   Die `libsasl.dll`, die der KB-Artikel für LDAP nach `C:\xampp\apache\bin` kopieren lässt, stammt aus dem alten
-        PHP. Im Test lud Apache sie weiter, und `ldap` funktionierte mit PHP 8.2.35 trotzdem; ein erneutes Kopieren war
-        nicht nötig.
-    -   Unter Apache lädt XAMPP die Erweiterung `curl` nicht (`Unable to load dynamic library 'curl'` im Apache-Log),
-        auf der Kommandozeile dagegen schon. Das war im Test schon vor dem Update mit PHP 8.2.12 so und hat nichts mit dem
-        Update zu tun. `zip`, `intl`, `soap` und `sockets` sind in der `php.ini` von XAMPP auskommentiert; der KB-Artikel
-        aktiviert nur `ldap` und `gd`.
+        die beiden PHP-Lücken. Der Artikel [i-doit via XAMPP](../installation/manuelle-installation/microsoft-windows-server/idoit-via-XAMPP.md)
+        nutzt XAMPP deshalb nur noch für Apache und PHP und installiert MariaDB 10.11 separat.
+    -   Lädt Apache die Erweiterung `curl` nicht (`Unable to load dynamic library 'curl'` im Apache-Log), fehlen die
+        `LoadFile`-Zeilen für `brotlicommon.dll`, `brotlidec.dll`, `libssh2.dll` und `nghttp2.dll` in der
+        `httpd-xampp.conf`. Sie stehen in Schritt 3 des Artikels [i-doit via XAMPP](../installation/manuelle-installation/microsoft-windows-server/idoit-via-XAMPP.md).
+        Auf der Kommandozeile lädt `curl` auch ohne diese Zeilen.
+    -   Die `libsasl.dll` für LDAP bringt XAMPP in `C:\xampp\apache\bin` mit. Im Test funktionierte `ldap` mit PHP 8.2.35,
+        ohne die Datei zu ersetzen.
 
 ## i-doit Discovery (nicht getestet)
 

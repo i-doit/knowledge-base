@@ -81,6 +81,14 @@ OpenSSL req -x509 -sha256 -nodes -days 365 -newkey rsa:4096 -keyout private.key 
 
 The certificate and private key have now been created in the folder where the command was executed. Copy them, for example, to the folder `ProgramData\i-doit\apache-2.4\conf\extra\`.
 
+You can also use the `openssl.exe` shipped in the i-doit Apache folder instead of installing OpenSSL separately. In PowerShell:
+
+```powershell
+cd C:\ProgramData\i-doit\apache-2.4\conf\extra
+$env:OPENSSL_CONF = "C:\ProgramData\i-doit\apache-2.4\conf\openssl.cnf"
+C:\ProgramData\i-doit\apache-2.4\bin\openssl.exe req -x509 -sha256 -nodes -days 365 -newkey rsa:4096 -keyout private.key -out certificate.crt -subj "/CN=$env:COMPUTERNAME"
+```
+
 ### Configuration Steps
 
 #### 1. **Create the ssl.conf File**
@@ -123,8 +131,10 @@ Navigate to your i-doit folder at `ProgramData\i-doit\apache-2.4\conf\extra\` an
 
 Edit the `httpd.conf` file located at `i-doit\apache-2.4\conf\`
 
--   Add `Listen 443` and comment out `Listen 80`. This will make i-doit no longer accessible via HTTP.
+-   Add `Listen 443` and comment out `Listen 8080`. This will make i-doit no longer accessible via HTTP.
 -   Also add the following lines: `LoadModule ssl_module modules/mod_ssl.so` and `Include conf/extra/ssl.conf`
+-   Change `ServerName localhost:8080` to `ServerName localhost:443`.
+-   Leave `PHPIniDir "C:/ProgramData/i-doit/php"` unchanged. If `PHPIniDir` points to a different folder, PHP loads no `php.ini` and i-doit does not start.
 
 The file should then look like this if nothing was changed before:
 <!-- cSpell:disable -->
@@ -132,7 +142,7 @@ The file should then look like this if nothing was changed before:
 Define SRVROOT "C:/ProgramData/i-doit/apache-2.4"
 
 ServerRoot "${SRVROOT}"
-#Listen 80
+#Listen 8080
 Listen 443
 
 LoadModule actions_module modules/mod_actions.so
@@ -164,7 +174,7 @@ LoadModule php_module "C:/ProgramData/i-doit/php/php8apache2_4.dll"
 LoadModule ssl_module modules/mod_ssl.so
 Include conf/extra/ssl.conf
 
-PHPIniDir "C:/i-doit/php"
+PHPIniDir "C:/ProgramData/i-doit/php"
 
 <IfModule unixd_module>
     User daemon
@@ -173,7 +183,7 @@ PHPIniDir "C:/i-doit/php"
 
 ServerAdmin admin@example.com
 
-ServerName localhost:80
+ServerName localhost:443
 <Directory />
     AllowOverride all
     Require all granted
@@ -250,7 +260,9 @@ Enter the following command to restart the Apache web server:
 C:\ProgramData\i-doit\apache-2.4\bin\httpd.exe -k restart
 ```
 
-The Apache web server has now been restarted. Check the installation and whether i-doit is accessible via HTTPS.
+The Apache web server has now been restarted. Check the installation and whether i-doit is accessible via HTTPS (`https://<i-doit-host>/`).
+
+The error log `logs\error.log` then shows the warnings `AH01873` (session cache) and `AH01916` (HTTP on port 443). Neither affects operation.
 
 That's it! Your i-doit installation is now configured for SSL on Windows.
 
@@ -373,6 +385,51 @@ Now the i-doit folder must be deleted and the PHP `PATH` must be removed from th
 [![Uninstall PHP](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/4-idw.png)](../../../assets/images/en/installation/manual-installation/microsoft-windows-server/i-doit-windows/4-idw.png)
 
 ## FAQ
+
+### HTTPS connections from i-doit fail (cURL error 77)
+
+i-doit calls addresses over HTTPS for some functions, for example the update check. PHP verifies the certificates against the file set in `php.ini` under `curl.cainfo` and `openssl.cafile`. If this file is missing, the calls fail with a message like this:
+
+```text
+cURL error 77: error adding trust anchors from file: C:/ProgramData/i-doit/php/extras/ssl/cacert.pem
+```
+
+This is how you add the file or replace an outdated certificate bundle. Open PowerShell as administrator:
+
+**Step 1:** Check which file `php.ini` expects:
+
+```powershell
+Select-String C:\ProgramData\i-doit\php\php.ini -Pattern '^\s*(curl\.cainfo|openssl\.cafile)'
+```
+
+If the command returns nothing, add these two lines at the end of `php.ini`:
+
+```ini
+curl.cainfo = "C:/ProgramData/i-doit/php/extras/ssl/cacert.pem"
+openssl.cafile = "C:/ProgramData/i-doit/php/extras/ssl/cacert.pem"
+```
+
+**Step 2:** Download the current CA bundle from curl.se, store it in that location and verify the checksum. Adjust `$target` if `php.ini` names a different path:
+
+```powershell
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+$target = 'C:\ProgramData\i-doit\php\extras\ssl\cacert.pem'
+New-Item -ItemType Directory -Force (Split-Path $target) | Out-Null
+Invoke-WebRequest https://curl.se/ca/cacert.pem -OutFile $target -UseBasicParsing
+Invoke-WebRequest https://curl.se/ca/cacert.pem.sha256 -OutFile "$target.sha256" -UseBasicParsing
+(Get-Content "$target.sha256").Split(' ')[0] -eq (Get-FileHash $target -Algorithm SHA256).Hash
+Remove-Item "$target.sha256"
+```
+
+The last check must return `True`.
+
+**Step 3:** Restart the web server:
+
+```powershell
+Restart-Service Apache2.4
+```
+
+To test, open **Administration > [tenant name] management** in i-doit, expand **System Config Check** and click **Check for update** next to **Updates**. Instead of the error message, i-doit then shows the latest available version or that it is up to date.
 
 ### Improved Website Loading
 
