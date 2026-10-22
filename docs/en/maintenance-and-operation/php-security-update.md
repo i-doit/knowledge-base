@@ -60,7 +60,7 @@ For details on switching to a different PHP version, see [PHP update](php-update
 
 ### On-premises (Windows)
 
-The PHP project also provides the new versions as [Windows binaries](https://www.php.net/downloads.php?os=windows). Replace PHP as described in [Update PHP and MariaDB on Windows](../upgrades-and-migrations/update-php-and-mariadb-for-windows.md).
+The PHP project also provides the new versions as [Windows binaries](https://www.php.net/downloads.php?os=windows). On Windows, you replace the PHP files with the fixed build. The [detailed guide for Windows](php-security-update-windows.md) describes how to do this for the i-doit Windows Installer, IIS and XAMPP, and which build (Thread Safe or Non Thread Safe) fits each.
 
 ### PHP 8.1 or older
 
