@@ -110,7 +110,12 @@ You can add the **Maintenance overview** category to the object type via the [ob
 
 ## Maintenance on the dashboard
 
-On the [Dashboard](../basics/dashboard-and-widgets.md) you display planned and completed maintenance activities in the calendar widget. These are highlighted.
+On the [Dashboard](../basics/dashboard-and-widgets.md), the calendar widget marks the days of planned and completed maintenance activities. Click a marked day to see which object is under maintenance.
+
+The widget only shows maintenance activities for objects on which **you** are entered in the category **Contact assignment** with the role **Administrator**. Maintenance activities for other objects, or for objects where you are assigned with another role (for example User), do not appear, regardless of your permissions in i-doit. Two more conditions apply:
+
+- The option **Display object events** must be enabled in the widget configuration (default).
+- Only maintenance activities from the beginning of the previous month to the end of the following month are shown.
 
 [![Kalender-Widget](../assets/images/en/i-doit-add-ons/maintenance/9-main.png)](../assets/images/en/i-doit-add-ons/maintenance/9-main.png)
 
