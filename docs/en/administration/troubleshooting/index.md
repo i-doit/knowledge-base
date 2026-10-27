@@ -80,6 +80,7 @@ If you cannot log in, there are several possible causes:
 
 - **"Lost link to database"** — the database connection is interrupted. Detailed help can be found in the article ["Lost link to database"](lost-link-to-database.md).
 - **Session timeout incorrectly configured** — a value that is too low can cause you to be logged out immediately after logging in. Read [No login after changing the session timeout](no-login-after-session-timeout.md).
+- **Logged out again after a few clicks** — since i-doit 33 the session is bound to the client IP address and the browser. Behind a load balancer, a proxy or in a mobile network the IP address can change between requests, which ends the session. Set the system expert setting `system.verify-ip-between-requests` to `0` to skip this check, see [Admin Center](../../administration/admin-center.md#security-and-passwords).
 - **LDAP problems** — if LDAP users cannot log in, check the LDAP configuration and the debug log. For TLS connections, the article [LDAP via TLS](ldap-via-tls.md) helps.
 - **Admin Center login** — the Admin Center uses separate credentials. If the password is forgotten, it can only be reset via the [CLI tool](../../automation-and-integration/cli/index.md). See [Admin Center](../../administration/admin-center.md).
 
