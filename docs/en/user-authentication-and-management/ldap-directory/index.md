@@ -172,8 +172,8 @@ The automatic assignment ensures that users receive the permissions of their per
 
 To set up the assignment:
 
-1. Open the **master data** of a **person group** in i-doit.
-2. Enter the name of the corresponding LDAP/AD group in the **LDAP Group (Mapping)** attribute.
+1. Open a **person group** in i-doit and switch to the category **Person groups** inside the folder of the same name.
+2. Enter the name of the corresponding LDAP/AD group in the **LDAP-Group (Mapping)** attribute and save.
 
 During login or synchronization, i-doit compares the user's group memberships in the directory with the configured mappings. If they match, the person group is automatically assigned.
 

@@ -172,8 +172,8 @@ Die automatische Zuweisung sorgt dafür, dass Benutzer nach dem Login automatisc
 
 So richtest du die Zuweisung ein:
 
-1. Öffne die **Stammdaten** einer **Personengruppe** in i-doit.
-2. Trage im Attribut **LDAP-Gruppe (Mapping)** den Namen der entsprechenden LDAP-/AD-Gruppe ein.
+1. Öffne eine **Personengruppe** in i-doit und wechsle in die Kategorie **Personengruppen** im gleichnamigen Ordner.
+2. Trage im Attribut **LDAP-Gruppe (Mapping)** den Namen der entsprechenden LDAP-/AD-Gruppe ein und speichere.
 
 Beim Login oder bei der Synchronisation gleicht i-doit die Gruppenmitgliedschaften des Benutzers im Directory mit den konfigurierten Mappings ab. Bei Übereinstimmung wird die Personengruppe automatisch zugewiesen.
 
