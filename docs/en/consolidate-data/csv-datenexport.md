@@ -16,7 +16,7 @@ Open the [object list](../basics/object-list/index.md) and click the **CSV** but
 
 If you have set a [filter](../basics/object-list/navigate-and-filter.md), you only export the filtered results.
 
-[![CSV export in action bar](../assets/images/de/daten-konsolidieren/csv-datenexport/1-csv-de.png)](../assets/images/de/daten-konsolidieren/csv-datenexport/1-csv-de.png)
+[![CSV export in action bar](../assets/images/en/consolidate-data/csv-data-export/1-csv-de.png)](../assets/images/en/consolidate-data/csv-data-export/1-csv-de.png)
 
 ## Exporting Category Lists
 
@@ -24,13 +24,13 @@ The CSV export supports many [category lists](../glossary.md) (multi-value). Cli
 
 The attribute names serve as column headers. i-doit exports multi-value data comma-separated.
 
-[![Multi-value category](../assets/images/de/daten-konsolidieren/csv-datenexport/2-csv-de.png)](../assets/images/de/daten-konsolidieren/csv-datenexport/2-csv-de.png)
+[![Multi-value category](../assets/images/en/consolidate-data/csv-data-export/2-csv-de.png)](../assets/images/en/consolidate-data/csv-data-export/2-csv-de.png)
 
 ## Exporting Reports
 
 The [Report Manager](../evaluation/report-manager.md) also offers CSV export. Open a report and click **CSV**.
 
-[![Report display](../assets/images/de/daten-konsolidieren/csv-datenexport/3-csv-de.png)](../assets/images/de/daten-konsolidieren/csv-datenexport/3-csv-de.png)
+[![Report display](../assets/images/en/consolidate-data/csv-data-export/3-csv-de.png)](../assets/images/en/consolidate-data/csv-data-export/3-csv-de.png)
 
 ## CSV Format
 

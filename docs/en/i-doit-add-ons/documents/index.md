@@ -10,7 +10,7 @@ lang: en
 
 With the i-doit [Add-on](../index.md) "Documents", you combine free text, text elements, and documentation content in templates to create complete documents. This allows you to conveniently generate and export operations manuals, handover protocols, emergency plans, and much more. The documentation content can thus be easily found, used, and shared.
 
-[![Documents](../../assets/images/de/i-doit-add-ons/documents/documents-uebersicht.png)](../../assets/images/de/i-doit-add-ons/documents/documents-uebersicht.png)
+[![Documents](../../assets/images/en/i-doit-add-ons/documents/documents-overview.png)](../../assets/images/en/i-doit-add-ons/documents/documents-overview.png)
 
 ## Documentation Areas
 

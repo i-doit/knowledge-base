@@ -73,15 +73,15 @@ To be able to execute MySQL commands directly in the command prompt, add the Mar
 
 1. Search for "Advanced system settings" via Windows search and click on **"Environment Variables..."**.
 
-[![Umgebungsvariablen](../assets/images/de/upgrades-und-umzuege/umzug-von-linux-zu-windows/1-uvlzw.png)](../assets/images/de/upgrades-und-umzuege/umzug-von-linux-zu-windows/1-uvlzw.png)
+[![Umgebungsvariablen](../assets/images/en/upgrades-and-migrations/migration-from-linux-to-windows/1-uvlzw.png)](../assets/images/en/upgrades-and-migrations/migration-from-linux-to-windows/1-uvlzw.png)
 
 2. In the new window, select the **"Path"** variable under system variables and click **"Edit"**:
 
-[![Umgebungsvariablen](../assets/images/de/upgrades-und-umzuege/umzug-von-linux-zu-windows/2-uvlzw.png)](../assets/images/de/upgrades-und-umzuege/umzug-von-linux-zu-windows/2-uvlzw.png)
+[![Umgebungsvariablen](../assets/images/en/upgrades-and-migrations/migration-from-linux-to-windows/2-uvlzw.png)](../assets/images/en/upgrades-and-migrations/migration-from-linux-to-windows/2-uvlzw.png)
 
 3. Create a new entry with the path to the MariaDB **bin** folder: **C:\ProgramData\MariaDB\bin**.
 
-[![Umgebungsvariablen](../assets/images/de/upgrades-und-umzuege/umzug-von-linux-zu-windows/3-uvlzw.png)](../assets/images/de/upgrades-und-umzuege/umzug-von-linux-zu-windows/3-uvlzw.png)
+[![Umgebungsvariablen](../assets/images/en/upgrades-and-migrations/migration-from-linux-to-windows/3-uvlzw.png)](../assets/images/en/upgrades-and-migrations/migration-from-linux-to-windows/3-uvlzw.png)
 
 After setting the path, you can use SQL commands in the command prompt. Restart the window if necessary.
 

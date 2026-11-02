@@ -19,7 +19,7 @@ You can reach the Center in two ways:
 -   Via the login page of the Admin Center
 -   Within i-doit by clicking on the avatar and selecting the menu item **Add-on & Subscription Center**
 
-[![Add-on & Subscription Center](../assets/images/de/administration/add-on-and-subscription-center/asc-1.png)](../assets/images/de/administration/add-on-and-subscription-center/asc-1.png)
+[![Add-on & Subscription Center](../assets/images/en/system-administration/add-on-and-subscription-center/asc-1.png)](../assets/images/en/system-administration/add-on-and-subscription-center/asc-1.png)
 
 ## Permissions
 
@@ -36,35 +36,35 @@ Under **Administration → Permissions → Add-on & Subscription Center**, [perm
 
 The **Dashboard** contains various widgets that display information.
 
-[![Dashboard](../assets/images/de/administration/add-on-and-subscription-center/asc-2.png)](../assets/images/de/administration/add-on-and-subscription-center/asc-2.png)
+[![Dashboard](../assets/images/en/system-administration/add-on-and-subscription-center/asc-2.png)](../assets/images/en/system-administration/add-on-and-subscription-center/asc-2.png)
 
 ## Subscription
 
 Here you can find information about your **subscription**.
 
-[![Subscription](../assets/images/de/administration/add-on-and-subscription-center/asc-3.png)](../assets/images/de/administration/add-on-and-subscription-center/asc-3.png)
+[![Subscription](../assets/images/en/system-administration/add-on-and-subscription-center/asc-3.png)](../assets/images/en/system-administration/add-on-and-subscription-center/asc-3.png)
 
 ## Invoice
 
 Here **invoice** information is displayed. You can also find links to invoices here.
 
-[![Invoice](../assets/images/de/administration/add-on-and-subscription-center/asc-4.png)](../assets/images/de/administration/add-on-and-subscription-center/asc-4.png)
+[![Invoice](../assets/images/en/system-administration/add-on-and-subscription-center/asc-4.png)](../assets/images/en/system-administration/add-on-and-subscription-center/asc-4.png)
 
 ## Help
 
 On this page you can get **help**. Links to the Knowledge Base and the Help Center are provided. You can also create a support ticket directly from within the system.
 
-[![Help](../assets/images/de/administration/add-on-and-subscription-center/asc-5.png)](../assets/images/de/administration/add-on-and-subscription-center/asc-5.png)
+[![Help](../assets/images/en/system-administration/add-on-and-subscription-center/asc-5.png)](../assets/images/en/system-administration/add-on-and-subscription-center/asc-5.png)
 
 If you have not purchased a support package, this page will be displayed instead. In that case, create support tickets via the Help Center at <https://help.i-doit.com> or by email to <help@i-doit.com>.
 
-[![Help](../assets/images/de/administration/add-on-and-subscription-center/asc-5-1.png)](../assets/images/de/administration/add-on-and-subscription-center/asc-5-1.png)
+[![Help](../assets/images/en/system-administration/add-on-and-subscription-center/asc-5-1.png)](../assets/images/en/system-administration/add-on-and-subscription-center/asc-5-1.png)
 
 ## Advanced
 
 Under **Advanced** you can edit the token.
 
-[![Advanced](../assets/images/de/administration/add-on-and-subscription-center/asc-6.png)](../assets/images/de/administration/add-on-and-subscription-center/asc-6.png)
+[![Advanced](../assets/images/en/system-administration/add-on-and-subscription-center/asc-6.png)](../assets/images/en/system-administration/add-on-and-subscription-center/asc-6.png)
 
 ## Add-ons
 
@@ -72,10 +72,10 @@ Under **Advanced** you can edit the token.
 
 Under **My add-ons**, available add-ons are listed. They can be **updated**, **deactivated**, and **deleted**.
 
-[![My Add-ons](../assets/images/de/administration/add-on-and-subscription-center/asc-7.png)](../assets/images/de/administration/add-on-and-subscription-center/asc-7.png)
+[![My Add-ons](../assets/images/en/system-administration/add-on-and-subscription-center/asc-7.png)](../assets/images/en/system-administration/add-on-and-subscription-center/asc-7.png)
 
 ### Discover more add-ons
 
 Here you can find all available add-ons in a clear list.
 
-[![More Add-ons](../assets/images/de/administration/add-on-and-subscription-center/asc-8.png)](../assets/images/de/administration/add-on-and-subscription-center/asc-8.png)
+[![More Add-ons](../assets/images/en/system-administration/add-on-and-subscription-center/asc-8.png)](../assets/images/en/system-administration/add-on-and-subscription-center/asc-8.png)
