@@ -65,6 +65,7 @@ plugins:
       strict: false
   - redirects:
       redirect_maps:
+        'i-doit-add-ons/i-diary/index.md': 'i-doit-add-ons/i-diary.md'
         'i-doit-add-ons/mcp/index.md': 'i-doit-add-ons/i-doit-mcp/index.md'
         'i-doit-add-ons/checkmk2/index.md': 'i-doit-add-ons/shd-connect/checkmk-adapter.md'
         'i-doit-add-ons/checkmk2/checkmk-sites-synchronisieren.md': 'i-doit-add-ons/shd-connect/checkmk-adapter.md'
