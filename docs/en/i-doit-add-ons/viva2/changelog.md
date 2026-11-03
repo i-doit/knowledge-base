@@ -9,17 +9,17 @@ lang: en
 
 3.3.0
 --------------------------------------------------------------------------------
-[Bug] Protection requirement no longer inherited by group members
-[Bug] Fix the protection needs view freezing and running out of memory when recalculating inheritance
-[Bug] Hide Export profile button in the edit view of IT-Grundschutz templates
-[Bug] Fix an error when editing protection needs in the Assessment of protection needs view
+[Bug]           Protection requirement no longer inherited by group members
+[Bug]           Fix the protection needs view freezing and running out of memory when recalculating inheritance
+[Bug]           Hide Export profile button in the edit view of IT-Grundschutz templates
+[Bug]           Fix an error when editing protection needs in the Assessment of protection needs view
 
 3.2.6
 --------------------------------------------------------------------------------
-[Bug] Fix error for installation of the Add-on
-[Bug] Fix an error in the Assessment of protection needs
-[Bug] Create object type Target groups
-[Bug] Fix an error when saving an IT-Grundschutz profile with one module added
+[Bug]           Fix error for installation of the Add-on
+[Bug]           Fix an error in the Assessment of protection needs
+[Bug]           Create object type Target groups
+[Bug]           Fix an error when saving an IT-Grundschutz profile with one module added
 
 3.2.5
 --------------------------------------------------------------------------------
