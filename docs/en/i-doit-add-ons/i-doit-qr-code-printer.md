@@ -105,4 +105,5 @@ To print a label:
 
 | Version | Date | Changelog |
 | --- | --- | --- |
+| 1.5.1 | 03.11.2026 | [Task] Compatibility towards i-doit 40+ |
 | 1.5 | 24.01.2023 | [Bug] Fix the configuration of the Text margin |
