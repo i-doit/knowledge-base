@@ -27,7 +27,7 @@ The integration of JDisc Discovery into i-doit aims to combine the strengths of 
 ## Prerequisites
 
 - Separate JDisc installation
-- i-doit Version: >= 36
+- i-doit Version: >= 38 (add-on version 1.0.5 and later), >= 36 (up to add-on version 1.0.4)
 - JDisc with activated GraphQL interface
 - Network access to the JDisc server
 - User account in JDisc with read permissions (`postgresro`)
@@ -157,6 +157,18 @@ Each `JDisc type` is linked with an `i-doit object type`  If no `i-doit object t
 | **Software filter (hidden)**                                                                       | Only visible when the **Import all software** option is activated. Either a whitelist or a blacklist of software applications can be specified, which should be imported (whitelist) or not (blacklist). Wildcards (\*) can be specified. The list of titles is separated by commas.                                                                                                                                                                                                                                          |
 | **Use filter as regular expression**                                                               | Use the software filter with strings or regular expressions? Since the regex is passed directly to the JDisc database, the appropriate regex parameters should be used.<br>These can be found at [h](https://www.postgresql.org/docs/9.3/functions-matching.html)[https://www.postgresql.org/docs/9.3/functions-matching.html](https://www.postgresql.org/docs/9.3/functions-matching.html) <br><br>Note from a user:<br><br>\s cannot be used. Spaces are used instead.<br>\d cannot be used. You must use [a-zA-Z] instead. |
 | **Use operating system family (if available) instead of operating system version as object title** | Use the software family as object title for software import instead of the software version. E.g. instead of "Windows Server 2008 default" only "Windows" with "Server 2008 default" as variant.                                                                                                                                                                                                                                                                                                                              |
+
+!!! info "System type and locale of software"
+    If JDisc delivers a system type (for example "x86") and a locale (for example "de-DE") for an installed software, the import takes both into account:
+
+    - The software is first assigned to an object with exactly the software title. If no such object exists, an existing object whose title also contains the system type and/or the locale is used, for example "Windows (x86, de-DE)" or "Windows (x86)".
+    - In the category **Variants** of the software object, the import creates an entry with the system type as **Title** and the locale as **Variant** if it does not exist yet.
+    - The **Software assignment** of the device references this variant. If the same software in the same version is installed several times with different system types or locales, the device gets one software assignment per variant.
+
+    If JDisc does not deliver these values, software is imported as before.
+
+!!! warning "Changed behavior from add-on version 1.0.5"
+    From add-on version 1.0.5, the import can create additional entries in the categories **Variants** and **Software assignment** if JDisc delivers a system type and a locale. Reports, lists and license counts that are based on the number of software assignments can show different values after the first import. Back up the database before the first import after the update.
 
 #### Network
 

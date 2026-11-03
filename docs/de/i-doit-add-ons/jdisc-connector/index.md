@@ -27,7 +27,7 @@ Die Integration von JDisc Discovery in i-doit zielt darauf ab, die Stärken beid
 ## Voraussetzungen
 
 - Separate JDisc installation
-- i-doit Version: >= 36
+- i-doit Version: >= 38 (ab Add-on-Version 1.0.5), >= 36 (bis Add-on-Version 1.0.4)
 - JDisc mit aktivierter GraphQL-Schnittstelle
 - Netzwerkzugang zum JDisc-Server
 - Benutzerkonto in JDisc mit Leserechten (`postgresro`)
@@ -157,6 +157,18 @@ Jeder `JDisc-Typ` wird mit einem `i-doit Objekttyp` verknüpft. Wenn kein `i-doi
 | **Software-Filter (versteckt)**                                                                   | Nur sichtbar wenn die Option **Alle Software importieren** aktiviert ist. Entweder kann eine White- oder eine Blacklist an Software-Applikationen angegeben werden, welche importiert werden sollen (Whitelist) oder eben nicht (Blacklist). Es können Wildcards (\*) angegeben werden. Die Liste von Titeln wird durch Kommas separiert.                                                                                                                                                                                                                                                                                 |
 | **Filter als regulären Ausdruck verwenden**                                                       | Den Software Filter mit Strings oder mit Regulären Ausdrücken verwenden? Da das regex direkt an die JDisc Datenbank weitergeleitet wird, sollten die passenden regex parameter verwendet werden.<br>Diese sind z.B. unter [h](https://www.postgresql.org/docs/9.3/functions-matching.html)[https://www.postgresql.org/docs/9.3/functions-matching.html](https://www.postgresql.org/docs/9.3/functions-matching.html) zu finden.<br><br>Hinweis eines Anwenders:<br><br>\s kann nicht verwendet werden. Hier wird mit Leerzeichen gearbeitet.<br>\d kann nicht verwendet werden. Hier muss mit [a-zA-Z] gearbeitet werden. |
 | **Betriebssystemfamilie (falls verfügbar) statt Betriebssystemversion als Objekttitel verwenden** | Für den Softwareimport anstatt der Softwareversion die Softwarefamilie als Objekttitel verwenden. Z.B. anstatt "Windows Server 2008 Standard" nur "Windows" mit "Server 2008 Standard" als Variante.                                                                                                                                                                                                                                                                                                                                                                                                                      |
+
+!!! info "Systemtyp und Locale von Software"
+    Liefert JDisc zu einer installierten Software einen Systemtyp (zum Beispiel "x86") und eine Locale (zum Beispiel "de-DE"), berücksichtigt der Import beides:
+
+    - Die Software wird zuerst einem Objekt mit genau dem Softwaretitel zugeordnet. Gibt es kein solches Objekt, wird ein bestehendes Objekt verwendet, dessen Titel zusätzlich den Systemtyp und/oder die Locale enthält, zum Beispiel "Windows (x86, de-DE)" oder "Windows (x86)".
+    - In der Kategorie **Varianten** des Software-Objekts legt der Import einen Eintrag mit dem Systemtyp als **Bezeichnung** und der Locale als **Variante** an, falls er noch fehlt.
+    - Die **Softwarezuweisung** am Gerät verweist auf diese Variante. Ist dieselbe Software in derselben Version mehrfach mit unterschiedlichem Systemtyp oder unterschiedlicher Locale installiert, erhält das Gerät je Variante eine eigene Softwarezuweisung.
+
+    Liefert JDisc diese Werte nicht, wird Software wie bisher importiert.
+
+!!! warning "Geändertes Verhalten ab Add-on-Version 1.0.5"
+    Ab Add-on-Version 1.0.5 kann der Import zusätzliche Einträge in den Kategorien **Varianten** und **Softwarezuweisung** anlegen, wenn JDisc Systemtyp und Locale liefert. Reports, Listen und Lizenzzählungen, die auf der Anzahl der Softwarezuweisungen beruhen, können nach dem ersten Import andere Werte zeigen. Vor dem ersten Import nach dem Update sollte die Datenbank gesichert werden.
 
 #### Netzwerk
 
