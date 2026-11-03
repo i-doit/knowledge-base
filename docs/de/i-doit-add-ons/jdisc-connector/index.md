@@ -12,6 +12,9 @@ Der **JDisc Connector** ist ein Add-on für i-doit, das den automatisierten Impo
 
 !!! warning "Das Add-on ist ab **i-doit Version 36** verfügbar. Ab Add-on-Version 1.0.5 ist **i-doit Version 38** erforderlich. Die bisherige Integration bleibt bestehen solange das Add-on nicht installiert ist. Wird das Add-on installiert ersetzt das Add-on die bisherige Integration."
 
+!!! warning "Geändertes Verhalten ab Add-on-Version 1.0.5"
+    Ab Add-on-Version 1.0.5 legt der Import zusätzliche Einträge in den Kategorien **Varianten** und **Softwarezuweisung** an, wenn JDisc einen Systemtyp liefert, mit oder ohne Locale. Im Importmodus **Aktualisieren** bleiben die bisherigen Softwarezuweisungen ohne Variante erhalten, und das Gerät erhält zusätzlich je Variante eine Zuweisung. Dieselbe Installation erscheint dann zweimal. Ein Import im Importmodus **Überschreiben** entfernt die alten Zuweisungen. Dieser Modus löscht alle Listenkategorien der bestehenden Objekte, auch von Hand gepflegte Einträge. Reports, Listen und Lizenzzählungen, die auf der Anzahl der Softwarezuweisungen beruhen, können nach dem ersten Import andere Werte zeigen. Vor dem ersten Import nach dem Update sollte die Datenbank gesichert werden.
+
 ## Ziel der JDisc-Integration in i-doit
 
 Die Integration von JDisc Discovery in i-doit zielt darauf ab, die Stärken beider Systeme zu kombinieren:
@@ -166,9 +169,6 @@ Jeder `JDisc-Typ` wird mit einem `i-doit Objekttyp` verknüpft. Wenn kein `i-doi
     - Die **Softwarezuweisung** am Gerät verweist auf diese Variante. Ist dieselbe Software in derselben Version mehrfach mit unterschiedlichem Systemtyp oder unterschiedlicher Locale installiert, erhält das Gerät je Variante eine eigene Softwarezuweisung.
 
     Liefert JDisc diese Werte nicht, wird Software wie bisher importiert.
-
-!!! warning "Geändertes Verhalten ab Add-on-Version 1.0.5"
-    Ab Add-on-Version 1.0.5 legt der Import zusätzliche Einträge in den Kategorien **Varianten** und **Softwarezuweisung** an, wenn JDisc einen Systemtyp liefert, mit oder ohne Locale. Im Importmodus **Aktualisieren** bleiben die bisherigen Softwarezuweisungen ohne Variante erhalten, und das Gerät erhält zusätzlich je Variante eine Zuweisung. Dieselbe Installation erscheint dann zweimal. Ein Import im Importmodus **Überschreiben** entfernt die alten Zuweisungen. Dieser Modus löscht alle Listenkategorien der bestehenden Objekte, auch von Hand gepflegte Einträge. Reports, Listen und Lizenzzählungen, die auf der Anzahl der Softwarezuweisungen beruhen, können nach dem ersten Import andere Werte zeigen. Vor dem ersten Import nach dem Update sollte die Datenbank gesichert werden.
 
 #### Netzwerk
 

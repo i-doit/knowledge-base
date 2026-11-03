@@ -12,6 +12,9 @@ The **JDisc Connector** is an add-on for i-doit that enables the automated impor
 
 !!! warning "The add-on is available from **i-doit version 36** onwards. Add-on version 1.0.5 and later requires **i-doit version 38**. The previous integration remains as long as the add-on is not installed. Once the add-on is installed, it replaces the previous integration."
 
+!!! warning "Changed behavior from add-on version 1.0.5"
+    From add-on version 1.0.5, the import creates additional entries in the categories **Variants** and **Software assignment** if JDisc delivers a system type, with or without a locale. With the import mode **Update**, the existing software assignments without variant are kept and the device additionally gets one assignment per variant, so the same installation is listed twice. An import with the import mode **Overwrite** removes the old assignments. This mode deletes all list categories of the existing objects, including manually maintained entries. Reports, lists and license counts that are based on the number of software assignments can show different values after the first import. Back up the database before the first import after the update.
+
 ## Goal of the JDisc integration in i-doit
 
 The integration of JDisc Discovery into i-doit aims to combine the strengths of both systems:
@@ -166,9 +169,6 @@ Each `JDisc type` is linked with an `i-doit object type`  If no `i-doit object t
     - The **Software assignment** of the device references this variant. If the same software in the same version is installed several times with different system types or locales, the device gets one software assignment per variant.
 
     If JDisc does not deliver these values, software is imported as before.
-
-!!! warning "Changed behavior from add-on version 1.0.5"
-    From add-on version 1.0.5, the import creates additional entries in the categories **Variants** and **Software assignment** if JDisc delivers a system type, with or without a locale. With the import mode **Update**, the existing software assignments without variant are kept and the device additionally gets one assignment per variant, so the same installation is listed twice. An import with the import mode **Overwrite** removes the old assignments. This mode deletes all list categories of the existing objects, including manually maintained entries. Reports, lists and license counts that are based on the number of software assignments can show different values after the first import. Back up the database before the first import after the update.
 
 #### Network
 
