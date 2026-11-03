@@ -32,18 +32,19 @@ i-diary is a Windows application that functions as an add-on for i-doit. As a sy
 *   Windows 7 or 10
 *   .Net framework version >= 4.6.2
 
-## installation
+## Installation
 
 1. Download the add-on from the [customer portal](../administration/customer-portal.md).
 2. Install it via the [Admin Center](../administration/admin-center.md).
+3. In i-doit, open **Add-ons → i-diary**. The page shows a short description of the add-on.
+4. Click **download** to get the Windows application as a ZIP file (for add-on version 1.3.1: `i-diary_1.3.zip`).
+5. Extract the ZIP file on the Windows server.
+
+[![i-diary landing page](../assets/images/en/i-doit-add-ons/i-diary/9-i-diary.png)](../assets/images/en/i-doit-add-ons/i-diary/9-i-diary.png)
 
 ## Updates
 
-Update the add-on via the [Admin Center](../administration/admin-center.md). Then replace the `i-diary.exe` with the new version. You can find it in the downloaded ZIP file under:
-
-```
-idoit-i-diary-x.x.x.zip\idoit-i-diary-1.1\src\classes\modules\syneticsgmbh_idoit\i-diary
-```
+Update the add-on via the [Admin Center](../administration/admin-center.md). Then open **Add-ons → i-diary**, click **download** and replace the existing i-diary executable on the Windows server with the one from the downloaded ZIP file.
 
 ## Configuration
 

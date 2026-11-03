@@ -68,9 +68,17 @@ Upload an image file -- it is automatically integrated into every label.
 
 With the QR Code Printer, you conveniently print labels on your label printer. You configure the formats to match your specifications. When someone scans the QR code with a smartphone or tablet, they are redirected directly to the overview page of the [object](../glossary.md).
 
-### Start and configuration
+### Installation and download
 
-Download the QR Code Printer from the [customer portal](../administration/customer-portal.md). The Windows application starts directly -- no installation is required.
+1. Download the QR-Code Printer add-on from the [customer portal](../administration/customer-portal.md).
+2. Install it via the [Admin Center](../administration/admin-center.md).
+3. In i-doit, open **Add-ons → QR-Code Printer**. The page shows a short description of the add-on.
+4. Click **download** to get the Windows application as a ZIP file (for add-on version 1.5.1: `qr-code-label-printer_1.5.zip`).
+5. Extract the ZIP file and start `qr-code-label-printer_1.5.exe`. The Windows application starts directly, no installation is required.
+
+[![QR-Code Printer landing page](../assets/images/en/i-doit-add-ons/qr-code-printer/8-qr.png)](../assets/images/en/i-doit-add-ons/qr-code-printer/8-qr.png)
+
+### Start and configuration
 
 To set up the connection:
 
