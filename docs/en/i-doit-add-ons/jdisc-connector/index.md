@@ -161,14 +161,14 @@ Each `JDisc type` is linked with an `i-doit object type`  If no `i-doit object t
 !!! info "System type and locale of software"
     If JDisc delivers a system type (for example "x86") and a locale (for example "de-DE") for an installed software, the import takes both into account:
 
-    - The software is first assigned to an object with exactly the software title. If no such object exists, an existing object whose title also contains the system type and/or the locale is used, for example "Windows (x86, de-DE)" or "Windows (x86)".
+    - The software is first assigned to an object with exactly the software title. If no such object exists, the import uses an existing object whose title also contains exactly the delivered values: with system type and locale for example "Windows (x86, de-DE)", with only a system type for example "Windows (x86)". If no such object exists either, the import creates a new object with the plain software title. Later imports assign the software to this object, because the exact title is checked first.
     - In the category **Variants** of the software object, the import creates an entry with the system type as **Title** and the locale as **Variant** if it does not exist yet.
     - The **Software assignment** of the device references this variant. If the same software in the same version is installed several times with different system types or locales, the device gets one software assignment per variant.
 
     If JDisc does not deliver these values, software is imported as before.
 
 !!! warning "Changed behavior from add-on version 1.0.5"
-    From add-on version 1.0.5, the import can create additional entries in the categories **Variants** and **Software assignment** if JDisc delivers a system type and a locale. Reports, lists and license counts that are based on the number of software assignments can show different values after the first import. Back up the database before the first import after the update.
+    From add-on version 1.0.5, the import creates additional entries in the categories **Variants** and **Software assignment** if JDisc delivers a system type, with or without a locale. With the import mode **Update**, the existing software assignments without variant are kept and the device additionally gets one assignment per variant, so the same installation is listed twice. An import with the import mode **Overwrite** removes the old assignments. Reports, lists and license counts that are based on the number of software assignments can show different values after the first import. Back up the database before the first import after the update.
 
 #### Network
 

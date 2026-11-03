@@ -161,14 +161,14 @@ Jeder `JDisc-Typ` wird mit einem `i-doit Objekttyp` verknüpft. Wenn kein `i-doi
 !!! info "Systemtyp und Locale von Software"
     Liefert JDisc zu einer installierten Software einen Systemtyp (zum Beispiel "x86") und eine Locale (zum Beispiel "de-DE"), berücksichtigt der Import beides:
 
-    - Die Software wird zuerst einem Objekt mit genau dem Softwaretitel zugeordnet. Gibt es kein solches Objekt, wird ein bestehendes Objekt verwendet, dessen Titel zusätzlich den Systemtyp und/oder die Locale enthält, zum Beispiel "Windows (x86, de-DE)" oder "Windows (x86)".
+    - Die Software wird zuerst einem Objekt mit genau dem Softwaretitel zugeordnet. Gibt es kein solches Objekt, verwendet der Import ein bestehendes Objekt, dessen Titel zusätzlich genau die gelieferten Werte enthält: bei Systemtyp und Locale zum Beispiel "Windows (x86, de-DE)", bei nur einem Systemtyp zum Beispiel "Windows (x86)". Gibt es auch dieses nicht, legt der Import ein neues Objekt mit dem reinen Softwaretitel an. Spätere Importe ordnen die Software diesem Objekt zu, weil der genaue Titel zuerst geprüft wird.
     - In der Kategorie **Varianten** des Software-Objekts legt der Import einen Eintrag mit dem Systemtyp als **Bezeichnung** und der Locale als **Variante** an, falls er noch fehlt.
     - Die **Softwarezuweisung** am Gerät verweist auf diese Variante. Ist dieselbe Software in derselben Version mehrfach mit unterschiedlichem Systemtyp oder unterschiedlicher Locale installiert, erhält das Gerät je Variante eine eigene Softwarezuweisung.
 
     Liefert JDisc diese Werte nicht, wird Software wie bisher importiert.
 
 !!! warning "Geändertes Verhalten ab Add-on-Version 1.0.5"
-    Ab Add-on-Version 1.0.5 kann der Import zusätzliche Einträge in den Kategorien **Varianten** und **Softwarezuweisung** anlegen, wenn JDisc Systemtyp und Locale liefert. Reports, Listen und Lizenzzählungen, die auf der Anzahl der Softwarezuweisungen beruhen, können nach dem ersten Import andere Werte zeigen. Vor dem ersten Import nach dem Update sollte die Datenbank gesichert werden.
+    Ab Add-on-Version 1.0.5 legt der Import zusätzliche Einträge in den Kategorien **Varianten** und **Softwarezuweisung** an, wenn JDisc einen Systemtyp liefert, mit oder ohne Locale. Im Importmodus **Aktualisieren** bleiben die bisherigen Softwarezuweisungen ohne Variante erhalten, und das Gerät erhält zusätzlich je Variante eine Zuweisung. Dieselbe Installation erscheint dann zweimal. Ein Import im Importmodus **Überschreiben** entfernt die alten Zuweisungen. Reports, Listen und Lizenzzählungen, die auf der Anzahl der Softwarezuweisungen beruhen, können nach dem ersten Import andere Werte zeigen. Vor dem ersten Import nach dem Update sollte die Datenbank gesichert werden.
 
 #### Netzwerk
 
