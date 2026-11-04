@@ -68,9 +68,17 @@ Lade eine Bilddatei hoch -- sie wird automatisch in jedes Etikett integriert.
 
 Mit dem QR-Code Printer druckst du Etiketten bequem auf deinem Etikettendrucker. Die Formate konfigurierst du passend zu deinen Vorgaben. Scannt jemand den QR-Code mit einem Smartphone oder Tablet, wird er direkt auf die Übersichtsseite des [Objekts](../glossar.md) weitergeleitet.
 
-### Start und Konfiguration
+### Installation und Download
 
-Lade den QR-Code Printer aus dem [Kundenportal](../administration/kundenportal.md) herunter. Die Windows-Anwendung startet direkt -- eine Installation ist nicht nötig.
+1. Lade das Add-on QR-Code Printer aus dem [Kundenportal](../administration/kundenportal.md) herunter.
+2. Installiere es über das [Admin-Center](../administration/admin-center.md).
+3. Öffne in i-doit **Add-ons → QR-Code-Drucker**. Die Seite zeigt eine kurze Beschreibung des Add-ons.
+4. Klicke auf **herunterladen**, um die Windows-Anwendung als ZIP-Datei zu erhalten (bei Add-on-Version 1.5.1: `qr-code-label-printer_1.5.zip`).
+5. Entpacke die ZIP-Datei und starte `qr-code-label-printer_1.5.exe`. Die Windows-Anwendung startet direkt, eine Installation ist nicht nötig.
+
+[![QR-Code-Drucker Landing Page](../assets/images/de/i-doit-add-ons/qr-code-printer/8-qr.png)](../assets/images/de/i-doit-add-ons/qr-code-printer/8-qr.png)
+
+### Start und Konfiguration
 
 So richtest du die Verbindung ein:
 
@@ -105,4 +113,5 @@ So druckst du ein Etikett:
 
 | Version | Datum | Changelog |
 | --- | --- | --- |
+| 1.5.1 | 03.11.2026 | [Task] Compatibility towards i-doit 40+ |
 | 1.5 | 24.01.2023 | [Bug] Fix the configuration of the Text margin |

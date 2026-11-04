@@ -61,18 +61,20 @@ Die folgenden Anforderungen sind vor der Installation oder Verwendung des i-diar
 [Installation](#installation)
 =============================
 
-Das Add-on wird über das [Kundenportal](../administration/kundenportal.md) heruntergeladen
-Das Add-on muss zuvor über das [Admin-Center](../administration/admin-center.md) installiert werden.
+1. Lade das Add-on aus dem [Kundenportal](../administration/kundenportal.md) herunter.
+2. Installiere es über das [Admin-Center](../administration/admin-center.md).
+3. Öffne in i-doit **Add-ons → i-diary**. Die Seite zeigt eine kurze Beschreibung des Add-ons.
+4. Klicke auf **herunterladen**, um die Windows-Anwendung als ZIP-Datei zu erhalten (bei Add-on-Version 1.3.1: `i-diary_1.3.zip`).
+5. Entpacke die ZIP-Datei auf dem Windows-Server.
+
+[![i-diary Landing Page](../assets/images/de/i-doit-add-ons/i-diary/9-id.png)](../assets/images/de/i-doit-add-ons/i-diary/9-id.png)
 
 * * *
 
 [Updates](#updates)
 ===================
 
-i-diary wird wie andere Add-on auch über das [Admin-Center](../administration/admin-center.md) aktualisiert.
-Die neue i-diary.exe muss dann durch die aktualisierte i-diary.exe ersetzt werden.
-Diese befindet sich in der heruntergeladenen ZIP idoit-i_diary-x.x.x.zip im Pfad
-\idoit-i-diary-1.1\src\classes\modules\syneticsgmbh_idoit\i-diary
+Aktualisiere das Add-on wie andere Add-ons über das [Admin-Center](../administration/admin-center.md). Öffne danach **Add-ons → i-diary**, klicke auf **herunterladen** und ersetze die bisherige i-diary-Anwendung auf dem Windows-Server durch die aus der heruntergeladenen ZIP-Datei.
 
 * * *
 
@@ -234,6 +236,7 @@ Bekannte Fehlermeldungen und deren Bedeutung:
 
 | Version | Release    | Changelog                                                                                                                                                                                                                               |
 | ------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1.3.1   | 03.11.2026 | Compatibility towards i-doit 40+                                                                                                                                                                                                        |
 | 1.3     | 08.05.2024 | Used "idoit_i_diary" as new identifier<br> Objects are not loaded after second start<br> Starting i-diary needs a lot of time<br> i-diary does not recognize diary category<br>Author is not loaded                                     |
 | 1.2     | 23.01.2023 | Primary IP address is shown empty  <br>Clicking on the info icon crashes i-diary  <br>Contact assignment does not show the Primary contact                                                                                              |
 | 1.1     | 04.01.2022 | Show all details about the host  <br>Update entries in i-diary  <br>Automatic recognition of object types  <br>Provide all Changelogs in CHANGELOG file                                                                                 |
