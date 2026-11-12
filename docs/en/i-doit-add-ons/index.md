@@ -18,7 +18,7 @@ Add-ons are available as installable ZIP files. These are installed via the [Adm
 In the [customer portal](../administration/customer-portal.md), customers can download add-ons. Licensed add-ons (see above) are made available for download in your customer account during the purchase process.
 If you are missing any add-ons that you have purchased, please contact [help@i-doit.com](mailto:help@i-doit.com) for assistance.
 
-Evaluation users can download all free and commercial add-ons during the evaluation process. Download buttons for all add-ons are available on your personal evaluation page at [https://center.i-doit.com](https://center.i-doit.com). All licensed add-ons are included in the evaluation license.
+Evaluation users cannot download add-ons from [https://center.i-doit.com](https://center.i-doit.com). Instead, open the [Add-on & Subscription Center](../administration/add-on-and-subscription-center.md) in your i-doit installation and click **Try Add-on** on the add-on card. The add-on is installed with a 30-day trial. This requires a connection to [https://center.i-doit.com](https://center.i-doit.com). If the error "Invalid add-on identifier in package.json" appears on i-doit 39, install the hotfix from [Known Update Problems](../administration/troubleshooting/known-update-issues.md#version-39). If your evaluation installation has no internet connection, see [How Do I Activate the i-doit Eval/Trial (Offline)](../maintenance-and-operation/licensing.md#how-do-i-activate-the-i-doit-evaltrial-offline).
 
 ## installation
 
