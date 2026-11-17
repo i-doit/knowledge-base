@@ -160,7 +160,6 @@ There are already numerous projects and products that use the i-doit API. Here w
 | i-doit-python     | <https://github.com/ScaleUp-Technologies/i-doit-python>  | Python               | MIT     |
 | ansible-i-doit    | <https://github.com/ScaleUp-Technologies/ansible-i-doit> | Python               | MIT     |
 | i-doit_API        | <https://github.com/mvorl/i-doit_API>                    | Python               | AGPLv3  |
-| i-doit-js         | <https://github.com/Hildebrand-S/i-doit-js>              | JavaScript           | MIT     |
 | i-doit_powershell | <https://github.com/l-gosling/i-doit_powershell>         | PowerShell           | MIT     |
 
 !!! info "Feedback"
