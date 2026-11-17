@@ -74,6 +74,17 @@ Use batch requests
 
 The API supports so-called batch requests: with a single API call, multiple requests can be sent. This boosts performance because network connections and additional overhead are reduced to a minimum.
 
+A batch request is a JSON array of normal JSON-RPC 2.0 requests. It is sent in a single POST request to the same URL (`/src/jsonrpc.php`) with the same HTTP headers as a single request. Every request in the array needs its own `id`. The response is also a JSON array with one response per request; assign the responses to the requests by their `id`. On the server, the requests of a batch are processed one after another with a single login, so a batch saves the overhead per HTTP request, not the work of each individual request.
+
+Example: query the categories of the object type "Virtual server" and the field definitions of the category "Host address" in one call:
+
+```json
+[
+  {"jsonrpc": "2.0", "method": "cmdb.object_type_categories", "params": {"apikey": "YOUR-API-KEY", "language": "en", "type": "C__OBJTYPE__VIRTUAL_SERVER"}, "id": 1},
+  {"jsonrpc": "2.0", "method": "cmdb.category_info", "params": {"apikey": "YOUR-API-KEY", "language": "en", "category": "C__CATG__IP"}, "id": 2}
+]
+```
+
 However, caution: combining too many requests into a single batch request can bring a weak i-doit installation to its knees. The result is an abort with an HTTP status 500. In this case, it helps to give the PHP processes more memory.
 
 Automate the data exchange
