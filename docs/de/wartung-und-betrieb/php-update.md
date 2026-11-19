@@ -8,6 +8,13 @@ lang: de
 
 # PHP aktualisieren (Debian/Ubuntu)
 
+!!! warning "PHP-Sicherheitsupdate November 2026"
+    Am 19.11.2026 hat das PHP-Projekt **PHP 8.5.13, 8.4.28, 8.3.37 und 8.2.36** veröffentlicht. Sie beheben rund 20 Sicherheitslücken, die schwerste davon ist als kritisch eingestuft (**CVE-2026-115560**, Remote Code Execution über die Session-Verarbeitung).
+
+    Diese Lücke greift nur bei einer ungewöhnlichen Konfiguration mit gemischten Session-Serializern. i-doit nutzt diese Konfiguration nicht, eine Standard-Installation ist deshalb praktisch nicht angreifbar. Die übrigen Fixes betreffen unter anderem PHP-FPM, Session, Phar und SOAP.
+
+    Installiere das Update wie gewohnt über die Pakete deiner Distribution und starte danach PHP-FPM und den Webserver neu. Der Ablauf ist derselbe wie beim [PHP-Sicherheitsupdate vom Oktober 2026](php-sicherheitsupdate.md), auch für [Windows](php-sicherheitsupdate-windows.md). Bis das Update eingespielt ist, kannst du zusätzlich `session.upload_progress.enabled = 0` in der `php.ini` bzw. im FPM-Pool setzen und PHP-FPM neu starten.
+
 Neue PHP-Versionen bringen Sicherheitsfixes, bessere Performance und neue Funktionen. Gleichzeitig setzt i-doit bestimmte PHP-Versionen voraus — prüfe vor dem Update immer die [Systemvoraussetzungen](../installation/systemvoraussetzungen.md), welche Versionen aktuell unterstützt werden.
 
 Dieser Artikel beschreibt den Wechsel von einer PHP-Version auf eine neuere unter **Debian** und **Ubuntu** — mit den offiziellen Paketquellen, ohne Drittanbieter-Repositories.
