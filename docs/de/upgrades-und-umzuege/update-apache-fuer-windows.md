@@ -109,8 +109,7 @@ curl.exe -sSL -o "$dl\vc_redist.x64.exe" https://aka.ms/vc14/vc_redist.x64.exe
 Start-Process "$dl\vc_redist.x64.exe" -ArgumentList '/install','/quiet','/norestart' -Wait
 ```
 
-Die zweite Zeile muss `Valid` ausgeben. Im Test war kein Neustart nötig. PHP läuft mit der neueren Version unverändert
-weiter.
+Die zweite Zeile muss `Valid` ausgeben. Im Test war kein Neustart nötig.
 
 ## 5. Apache stoppen und sichern
 
@@ -175,13 +174,6 @@ werden.
 -   **Apache vorher stoppen.** Sonst sind `httpd.exe` und die Module gesperrt und lassen sich nicht ersetzen.
 -   **Visual C++ Redistributable.** Apache Lounge setzt die auf der Download-Seite genannte Version voraus. Im Test
     startete der neue Build auch mit der älteren Version, unterstützt ist das laut Apache Lounge aber nicht.
--   **Meldung `Failed loading C:/ProgramData/i-doit/php/ext` im Log.** Sie erscheint im Test mit dem alten und dem neuen
-    Apache gleichermaßen und hat mit dem Update nichts zu tun.
-
-## i-doit Discovery (nicht getestet)
-
-Das Paket i-doit Discovery richtet Apache wie der i-doit Windows Installer ein, aber unter
-`C:\ProgramData\i-doit-discovery\apache-2.4`. Der Ablauf gilt entsprechend mit diesem Pfad. Wir haben ihn nicht getestet.
 
 ## Rückweg
 
@@ -201,6 +193,4 @@ Start-Service Apache2.4
 
 -   [Apache Lounge Downloads](https://www.apachelounge.com/download/)
 -   [Apache HTTP Server: Sicherheitshinweise 2.4](https://httpd.apache.org/security/vulnerabilities_24.html)
--   [Update PHP und MariaDB für Windows](update-php-und-mariadb-fuer-windows.md)
--   [PHP-Sicherheitsupdate einspielen (Windows)](../wartung-und-betrieb/php-sicherheitsupdate-windows.md)
 -   [Systemvoraussetzungen](../installation/systemvoraussetzungen.md)
