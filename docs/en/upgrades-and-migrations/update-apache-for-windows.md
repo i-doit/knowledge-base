@@ -67,11 +67,10 @@ Example before the update:
 ```text
 Server version: Apache/2.4.55 (Win64)
 Apache Lounge VS17 Server built:   Feb  9 2023 09:58:39
-
-Version
--------
-v14.44.35211.00
 ```
+
+The second query shows the installed Visual C++ Redistributable version, for example `v14.52.37029.00` after
+step 4.
 
 ## 3. Download and verify the new build
 
@@ -89,8 +88,9 @@ curl.exe -sSL -o "$dl\$zip" "https://www.apachelounge.com/download/VS18/binaries
 Expand-Archive "$dl\$zip" -DestinationPath "$dl\x" -Force
 ```
 
-The second to last line must print `True`. On `False`, do not use the file. For a newer build, take file name, path and
-checksum from the download page.
+The second to last line must print `True`. On `False`, do not use the file. File name and checksum are an example.
+Apache Lounge usually only offers the current build, so always take file name, path and checksum from the download
+page.
 
 !!! tip "curl.exe instead of Invoke-WebRequest"
     `Invoke-WebRequest` from Windows PowerShell 5.1 fails on apachelounge.com with "308 Permanent Redirect".
@@ -142,8 +142,8 @@ Start-Service Apache2.4
 Get-Service Apache2.4
 ```
 
-`httpd.exe -t` must report `Syntax OK`. PowerShell shows the message in red because Apache writes it to the error
-stream. This is not an error.
+`httpd.exe -t` must report `Syntax OK`. Apache writes `Syntax OK` to the error stream. PowerShell may
+therefore display the line as an error, which it is not.
 
 ## 8. Verify and check i-doit
 

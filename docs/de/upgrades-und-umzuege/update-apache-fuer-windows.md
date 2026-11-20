@@ -68,11 +68,10 @@ Beispiel vor dem Update:
 ```text
 Server version: Apache/2.4.55 (Win64)
 Apache Lounge VS17 Server built:   Feb  9 2023 09:58:39
-
-Version
--------
-v14.44.35211.00
 ```
+
+Die zweite Abfrage zeigt die installierte Version des Visual C++ Redistributable, nach Schritt 4 zum Beispiel
+`v14.52.37029.00`.
 
 ## 3. Neuen Build laden und prüfen
 
@@ -90,8 +89,9 @@ curl.exe -sSL -o "$dl\$zip" "https://www.apachelounge.com/download/VS18/binaries
 Expand-Archive "$dl\$zip" -DestinationPath "$dl\x" -Force
 ```
 
-Die vorletzte Zeile muss `True` ausgeben. Bei `False` die Datei nicht verwenden. Für einen neueren Build Dateiname,
-Pfad und Prüfsumme von der Download-Seite übernehmen.
+Die vorletzte Zeile muss `True` ausgeben. Bei `False` die Datei nicht verwenden. Dateiname und Prüfsumme sind ein Beispiel.
+Apache Lounge bietet meist nur den aktuellen Build an, deshalb Dateiname, Pfad und Prüfsumme immer von der
+Download-Seite übernehmen.
 
 !!! tip "curl.exe statt Invoke-WebRequest"
     `Invoke-WebRequest` aus Windows PowerShell 5.1 bricht bei apachelounge.com mit "308 Permanent Redirect" ab.
@@ -144,8 +144,8 @@ Start-Service Apache2.4
 Get-Service Apache2.4
 ```
 
-`httpd.exe -t` muss `Syntax OK` melden. PowerShell zeigt die Meldung rot an, weil Apache sie auf den Fehlerkanal
-schreibt. Das ist kein Fehler.
+`httpd.exe -t` muss `Syntax OK` melden. Apache schreibt `Syntax OK` auf den Fehlerkanal. PowerShell kann die Zeile
+deshalb als Fehler darstellen, das ist kein Fehler.
 
 ## 8. Nachweis und i-doit prüfen
 
