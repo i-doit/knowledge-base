@@ -377,6 +377,7 @@ nav:
       - Umzug von Windows zu Linux: upgrades-und-umzuege/umzug-von-windows-zu-linux.md
       - Umzug von Linux zu Windows: upgrades-und-umzuege/umzug-von-linux-zu-windows.md
       - Update PHP und MariaDB für Windows: upgrades-und-umzuege/update-php-und-mariadb-fuer-windows.md
+      - Apache aktualisieren (Windows Installer): upgrades-und-umzuege/update-apache-fuer-windows.md
   - Grundlagen:
       - grundlagen/index.md
       - Erstanmeldung: grundlagen/erstanmeldung.md
