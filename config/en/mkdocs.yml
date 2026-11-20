@@ -378,6 +378,7 @@ nav:
       - Migration from Windows to Linux: upgrades-and-migrations/migration-windows-to-linux.md
       - Migration from Linux to Windows: upgrades-and-migrations/migration-linux-to-windows.md
       - Update PHP and MariaDB for Windows: upgrades-and-migrations/update-php-and-mariadb-for-windows.md
+      - Update Apache (Windows Installer): upgrades-and-migrations/update-apache-for-windows.md
   - Basics:
       - basics/index.md
       - Getting Started:
