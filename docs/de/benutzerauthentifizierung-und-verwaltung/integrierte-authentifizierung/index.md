@@ -59,7 +59,7 @@ Um Komfort und Sicherheit weiter zu steigern, unterstützt i-doit moderne Authen
 
 Weitere Informationen:
 
-* [SSO über Azure AD (SAML)](../sso-vergleich/saml/azure-ad-saml.md)
+* [SSO über Microsoft Entra ID (SAML)](../sso-vergleich/saml/azure-ad-saml.md)
 * [2-Faktor-Authentifizierung](../2fa/index.md)
 
 ---

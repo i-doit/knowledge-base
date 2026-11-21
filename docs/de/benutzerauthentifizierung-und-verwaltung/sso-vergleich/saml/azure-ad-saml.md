@@ -1,15 +1,15 @@
 ---
-title: Azure AD (SAML) Authentifizierung
+title: Microsoft Entra ID (SAML) Authentifizierung
 description: "Diese Anleitung beschreibt die Einrichtung von Single Sign-On (SSO) für i-doit mit SAML."
 icon:
 status:
 lang: de
 ---
-# Azure AD (SAML) Authentifizierung
+# Microsoft Entra ID (SAML) Authentifizierung
 
 !!! warning "Bitte erstelle vor jeder Änderung an einer Schnittstelle/Import ein vollständiges Backup. Falls das Ergebnis nicht zufriedenstellend ist, kann dieses dann wiederhergestellt werden"
 
-Diese Anleitung beschreibt die Einrichtung von Single Sign-On (SSO) für i-doit mit SAML. Als Authenticator wird Mellon gegen Azure AD eingesetzt.
+Diese Anleitung beschreibt die Einrichtung von Single Sign-On (SSO) für i-doit mit SAML. Als Authenticator wird Mellon gegen Microsoft Entra ID (ehemals Azure Active Directory) eingesetzt.
 
 ## Vorbereitungen
 
@@ -17,7 +17,7 @@ Die Beispielkonfiguration verwendet einen Debian 11 Server mit Apache, Mellon un
 
 ### Basiskonfiguration
 
-✔ In diesem Leitfaden wird davon ausgegangen, dass Ihr Azure Active Directory bereits ordnungsgemäß konfiguriert wurde.<br>
+✔ In diesem Leitfaden wird davon ausgegangen, dass dein Microsoft Entra Mandant bereits ordnungsgemäß konfiguriert wurde.<br>
 ✔ i-doit ist bereits vorinstalliert und nutzbar.
 
 ### Pakete Installieren
@@ -62,7 +62,7 @@ Fuege die folgenden Direktiven ein:
     MellonSPPrivateKeyFile /etc/apache2/mellon/https_tu2_samlsso.synetics.test_.key
     MellonSPCertFile /etc/apache2/mellon/https_tu2_samlsso.synetics.test_.cert
     MellonSPMetadataFile /etc/apache2/mellon/https_tu2_samlsso.synetics.test_.xml
-    MellonIdPMetadataFile /etc/apache2/mellon/AzureAD_metadata.xml
+    MellonIdPMetadataFile /etc/apache2/mellon/EntraID_metadata.xml
     MellonEndpointPath /mellon
     MellonEnable "info"
 </Location>
@@ -151,17 +151,20 @@ Beispiel-Konfiguration:
 
 Solange die Konfigurationen auf dem Linux Server noch nicht aktiviert wurde, können sich Benutzer noch mit der i-doit Anmeldemaske und einem lokalen Benutzer anmelden.
 
-## Azure AD (SAML)
+## Microsoft Entra ID (SAML)
 
 Um die benötigte XML für die Mellon-Konfiguration zu erhalten, führe die folgenden Schritte aus:
 
 ### Erstellen einer benutzerdefinierten Unternehmensanwendung
 
-Melde dich im Azure AD an und navigiere zu **Unternehmensanwendungen**.
+Melde dich im [Microsoft Entra Admin Center](https://entra.microsoft.com) an und navigiere zu **Entra ID → Unternehmens-Apps → Alle Anwendungen**. Dieselben Seiten sind weiterhin im Azure-Portal unter **Microsoft Entra ID → Unternehmensanwendungen** erreichbar.
+
+!!! info "Zu den Screenshots"
+    Die Screenshots in diesem Abschnitt stammen aus dem früheren Azure-Portal. Das Microsoft Entra Admin Center ordnet die Seiten etwas anders an, die Schritte und die Feldnamen sind dieselben.
 
 [![Azure-AD-Unternehmensanwendung](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen.png)
 
-Erstelle eine eigene benutzerdefinierte Anwendung.
+Wähle **Neue Anwendung** und dann **Eigene Anwendung erstellen**.
 
 [![Azure-AD-Unternehmensanwendung-2](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen-2.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen-2.png)
 
@@ -207,7 +210,7 @@ Editiere unter **Erforderlicher Anspruch** den ersten angezeigten Anspruch.
 
 [![Azure-AD-Unternehmensanwendung-10](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen-10.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/saml/azure-ad/azure-ad-unternehmensanwendungen-erstellen-10.png)
 
-Die Konfiguration der Unternehmensanwendung in Azure AD ist damit abgeschlossen.
+Die Konfiguration der Unternehmensanwendung in Microsoft Entra ID ist damit abgeschlossen.
 
 ## Aktivierung der Konfigurationen auf dem Linux Server
 
@@ -217,7 +220,7 @@ Stelle die zuvor erstellte Metadaten-XML auf deinem Linux-Server im Verzeichnis 
 
 !!!attention "Dateiname"
 
-    Bitte den Namen der Datei anhand der `mellon.conf` auf `AzureAD_metadata.xml` anpassen.
+    Bitte den Namen der Datei anhand der `mellon.conf` auf `EntraID_metadata.xml` anpassen.
     Alternativ den Dateinamen in der `mellon.conf` anpassen.
 
 Teste nun die Konfiguration und aktiviere alle notwendigen Module.
@@ -239,7 +242,7 @@ sudo systemctl restart apache2
 
 Die Konfiguration des Linux-Servers ist damit abgeschlossen.
 
-Wenn du jetzt die URL `https://tu2-samlsso.synetics.test` in deinem Browser öffnest, wirst du zur Azure AD-Anmeldung weitergeleitet. Nach erfolgreicher Anmeldung gelangst du direkt in dein i-doit.
+Wenn du jetzt die URL `https://tu2-samlsso.synetics.test` in deinem Browser öffnest, wirst du zur Microsoft Entra Anmeldung weitergeleitet. Nach erfolgreicher Anmeldung gelangst du direkt in dein i-doit.
 
 !!! info "Fallback auf Anmeldemaske"
     Sollte sich ein Benutzer anmelden, der in i-doit noch nicht vorhanden ist, dann wird dieser automatisch auf die Anmeldemaske von i-doit weitergeleitet und kann sich mit einem lokalen Benutzer anmelden.
