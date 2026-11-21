@@ -79,7 +79,6 @@ Kopiere die ZIP-Datei und die SQL-Datei auf den neuen Server (z. B. per [WinSCP]
         sudo chown www-data:www-data -R .
         sudo find . -type d -name \* -exec chmod 775 {} \;
         sudo find . -type f -exec chmod 664 {} \;
-        sudo chmod 774 controller tenants import updatecheck *.sh
         sudo rm -r temp/*
 
     Lösche bei Bedarf Dateien, die noch aus der XAMPP-Installation stammen.
