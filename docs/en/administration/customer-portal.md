@@ -18,28 +18,28 @@ To log in, you need your license token. You receive this during the ordering pro
 
 After navigating to <https://center.i-doit.com/>, you will land on the login page.
 
-[![login](../assets/images/de/administration/kundenportal/login.png)](../assets/images/de/administration/kundenportal/login.png)
+[![login](../assets/images/en/system-administration/customer-portal/login.png)](../assets/images/en/system-administration/customer-portal/login.png)
 
 After logging in, you will see the Dashboard.
 
-[![dashboard](../assets/images/de/administration/kundenportal/dashboard.png)](../assets/images/de/administration/kundenportal/dashboard.png)
+[![dashboard](../assets/images/en/system-administration/customer-portal/dashboard.png)](../assets/images/en/system-administration/customer-portal/dashboard.png)
 
 Under **Subscription**, you can find information about your subscription.
 
-[![subscription](../assets/images/de/administration/kundenportal/subscription.png)](../assets/images/de/administration/kundenportal/subscription.png)
+[![subscription](../assets/images/en/system-administration/customer-portal/subscription.png)](../assets/images/en/system-administration/customer-portal/subscription.png)
 
 Under **Invoice**, you can see invoices and invoice details.
 
-[![invoice](../assets/images/de/administration/kundenportal/invoice.png)](../assets/images/de/administration/kundenportal/invoice.png)
+[![invoice](../assets/images/en/system-administration/customer-portal/invoice.png)](../assets/images/en/system-administration/customer-portal/invoice.png)
 
 Under **Help**, you can find helpful links and a contact form for support.
 
-[![help](../assets/images/de/administration/kundenportal/help.png)](../assets/images/de/administration/kundenportal/help.png)
+[![help](../assets/images/en/system-administration/customer-portal/help.png)](../assets/images/en/system-administration/customer-portal/help.png)
 
 Under **Advanced**, you can find the offline license. You need this if your i-doit instance does not have internet access.
 
-[![advanced](../assets/images/de/administration/kundenportal/advanced.png)](../assets/images/de/administration/kundenportal/advanced.png)
+[![advanced](../assets/images/en/system-administration/customer-portal/advanced.png)](../assets/images/en/system-administration/customer-portal/advanced.png)
 
 Under **Downloads**, the portal lists all available downloads.
 
-[![downloads](../assets/images/de/administration/kundenportal/downloads.png)](../assets/images/de/administration/kundenportal/downloads.png)
+[![downloads](../assets/images/en/system-administration/customer-portal/downloads.png)](../assets/images/en/system-administration/customer-portal/downloads.png)

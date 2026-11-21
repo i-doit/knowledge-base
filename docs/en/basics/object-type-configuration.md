@@ -18,7 +18,7 @@ A complete description of all predefined object types with usage examples and as
 
 Alternatively: Click the gear icon in the upper right corner of an object type's object list.
 
-[![Object-type-configuration](../assets/images/de/grundlagen/objekttypen/1-ot.png)](/img/assets/images/de/grundlagen/objekttypen/1-ot.png)
+[![Object-type-configuration](../assets/images/en/basics/object-types/1-ot.png)](/img/assets/images/en/basics/object-types/1-ot.png)
 
 The following description follows the order of fields as they appear in the configuration screen.
 
