@@ -24,6 +24,17 @@ The AI functions are configured per tenant in the i-doit Administration under **
 
 If the generation of a template takes longer than the configured timeout, the request is aborted. In this case increase the value of **Timeout**.
 
+### AI service and key
+
+By default the add-on uses the i-doit AI service. The service and the model it uses are fixed and cannot be changed. To use it you need an AI key, which you enter in the **AI API key** field. You obtain the key by purchasing the product "Documents (with AI)" in the Add-on & Subscription Center.
+
+If you want to connect your own, self-hosted AI service instead, you need the additional `document-custom-ai` license. You obtain it by purchasing the product "AI Documents Creator (bring own AI)" in the Add-on & Subscription Center. The service must provide an OpenAI compatible interface. With this license the configuration shows two additional fields where you enter your own service:
+
+- **AI URL endpoint**: Address of the OpenAI compatible interface of your service.
+- **AI model**: Name of the model the service provides.
+
+For a custom service the **AI API key** is optional and stays empty if the service does not require one.
+
 ## Creating a document template with AI
 
 If the AI functions are active, the "New" button in the template overview opens the dialog **Create a new document template** with two options:

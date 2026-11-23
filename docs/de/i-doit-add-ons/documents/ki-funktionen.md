@@ -24,6 +24,17 @@ Die KI Funktionen konfigurierst du pro Mandant in der i-doit Verwaltung unter **
 
 Dauert das Erstellen einer Vorlage länger als das eingestellte Timeout, wird die Anfrage abgebrochen. Erhöhe in diesem Fall den Wert für **Timeout**.
 
+### KI Dienst und Schlüssel
+
+Standardmäßig nutzt das Add-on den KI Dienst von i-doit. Der Dienst und das verwendete Modell sind dabei fest vorgegeben und nicht einstellbar. Für die Nutzung benötigst du einen KI Schlüssel, den du im Feld **KI API Schlüssel** einträgst. Den Schlüssel erhältst du, indem du das Produkt "Documents (with AI)" im Add-on & Subscription Center kaufst.
+
+Möchtest du stattdessen einen eigenen, selbst betriebenen KI Dienst anbinden, benötigst du die zusätzliche Lizenz `document-custom-ai`. Diese erhältst du, indem du das Produkt "AI Documents Creator (bring own AI)" im Add-on & Subscription Center kaufst. Der Dienst muss eine OpenAI-kompatible Schnittstelle bereitstellen. Mit dieser Lizenz zeigt die Konfiguration zusätzlich zwei Felder, über die du den eigenen Dienst einträgst:
+
+- **KI URL Endpunkt**: Adresse der OpenAI-kompatiblen Schnittstelle deines Dienstes.
+- **KI Modell**: Name des Modells, das der Dienst bereitstellt.
+
+Der **KI API Schlüssel** ist bei einem eigenen Dienst optional und bleibt leer, wenn der Dienst keinen Schlüssel verlangt.
+
 ## Dokumentenvorlage mit KI erstellen
 
 Sind die KI Funktionen aktiv, öffnet die Schaltfläche "Neu" in der Vorlagenübersicht den Dialog **Neue Dokumentenvorlage erstellen** mit zwei Möglichkeiten:
