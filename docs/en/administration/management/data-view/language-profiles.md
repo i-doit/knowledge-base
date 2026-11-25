@@ -31,10 +31,10 @@ i-doit downloads the file `custom-translation-<abbreviation>.json`. It contains 
 
 1. Open **Administration → Data View → Language Profiles**.
 2. Click **Import**. The **Import translation** window opens.
-3. Under **Merge translations**, define how existing customized terms are handled:
-    - **Yes**: The terms from the file are added to the existing ones. Terms contained in both get the value from the file.
-    - **No**: The existing customized terms are replaced by the terms from the file.
-4. Under **Select file**, choose the exported JSON file. The import starts right after the upload and lists the individual steps.
+3. Under **Merge translations**, define how existing customized terms are handled. The default is **No**.
+    - **Yes**: The terms from the file are added to the existing ones. Terms contained in both get the value from the file. Existing terms that are missing in the file are kept.
+    - **No**: The existing customized terms are replaced by the terms from the file. Afterwards, the profile only contains the terms from the file.
+4. Under **Select file**, choose the exported JSON file and click **Upload file**. The import starts after the upload and lists the individual steps.
 5. Click **Close**. The page reloads and shows the imported language profile.
 
 If a language profile with the same abbreviation already exists, the import updates this profile (name, flag and availability). Otherwise, it creates a new language profile. Only JSON files up to 16 MB that contain a valid abbreviation are accepted.

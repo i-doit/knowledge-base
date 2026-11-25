@@ -31,10 +31,10 @@ i-doit lädt die Datei `custom-translation-<Kürzel>.json` herunter. Sie enthäl
 
 1. Öffne **Verwaltung → Datenansicht → Sprachprofile**.
 2. Klicke auf **Importieren**. Das Fenster **Übersetzung importieren** öffnet sich.
-3. Lege bei **Übersetzungen zusammenführen** fest, wie mit bereits vorhandenen angepassten Begriffen verfahren wird:
-    - **Ja**: Die Begriffe aus der Datei werden zu den vorhandenen hinzugefügt. Begriffe, die in beiden enthalten sind, erhalten den Wert aus der Datei.
-    - **Nein**: Die vorhandenen angepassten Begriffe werden durch die Begriffe aus der Datei ersetzt.
-4. Wähle bei **Datei auswählen** die exportierte JSON-Datei aus. Der Import startet direkt nach dem Hochladen und zeigt die einzelnen Schritte an.
+3. Lege bei **Übersetzungen zusammenführen** fest, wie mit bereits vorhandenen angepassten Begriffen verfahren wird. Voreingestellt ist **Nein**.
+    - **Ja**: Die Begriffe aus der Datei werden zu den vorhandenen hinzugefügt. Begriffe, die in beiden enthalten sind, erhalten den Wert aus der Datei. Vorhandene Begriffe, die in der Datei fehlen, bleiben erhalten.
+    - **Nein**: Die vorhandenen angepassten Begriffe werden durch die Begriffe aus der Datei ersetzt. Danach enthält das Profil nur noch die Begriffe aus der Datei.
+4. Wähle bei **Datei auswählen** die exportierte JSON-Datei aus und klicke auf **Datei hochladen**. Der Import startet nach dem Hochladen und zeigt die einzelnen Schritte an.
 5. Klicke auf **Schließen**. Die Seite wird neu geladen und zeigt das importierte Sprachprofil.
 
 Gibt es bereits ein Sprachprofil mit demselben Kürzel, aktualisiert der Import dieses Profil (Bezeichnung, Flagge und Verfügbarkeit). Andernfalls legt er ein neues Sprachprofil an. Es werden nur JSON-Dateien bis 16 MB angenommen, die ein gültiges Kürzel enthalten.
