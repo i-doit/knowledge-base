@@ -63,6 +63,10 @@ Hier werden bekannte Methoden zu Add-ons aufgelistet.
 
 ## Documents
 
+### Kategorie Dokumente
+
+Ab Documents 1.12 liefert [cmdb.category.read](cmdb.category.md#cmdbcategoryread) für die Kategorie `C__CATG__DOCUMENT` zusätzlich den Schlüssel `document_id`. Er enthält die ID des zugewiesenen Dokuments, die du als `docID` an `document.documents.read` übergeben kannst.
+
 ### document.documents.read
 
 #### Request parameters
