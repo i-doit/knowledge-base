@@ -28,12 +28,26 @@ If the generation of a template takes longer than the configured timeout, the re
 
 By default the add-on uses the i-doit AI service. The service and the model it uses are fixed and cannot be changed. To use it you need an AI key, which you enter in the **AI API key** field. You obtain the key by purchasing the product "Documents (with AI)" in the Add-on & Subscription Center.
 
-If you want to connect your own, self-hosted AI service instead, you need the additional `document-custom-ai` license. You obtain it by purchasing the product "AI Documents Creator (bring own AI)" in the Add-on & Subscription Center. The service must provide an OpenAI compatible interface. With this license the configuration shows two additional fields where you enter your own service:
+If you want to connect your own, self-hosted AI service instead, you need the `document-custom-ai` license. You obtain it by purchasing the product "AI Documents Creator (bring own AI)" in the Add-on & Subscription Center. The service must provide an OpenAI compatible interface. With this license the configuration shows two additional fields where you enter your own service:
 
 - **AI URL endpoint**: Address of the OpenAI compatible interface of your service.
 - **AI model**: Name of the model the service provides.
 
 For a custom service the **AI API key** is optional and stays empty if the service does not require one.
+
+From version 1.13 the `document-custom-ai` license alone also licenses the Documents add-on. In version 1.12 the Documents license is required in addition.
+
+### Used AI tokens
+
+From version 1.12 the configuration shows the entry **Used AI tokens** if the add-on uses the i-doit AI service and **AI functions** is set to **Active**. The entry shows the token consumption for the periods reported by the i-doit AI service, for example **Today**, **This week**, **This month**, **This year** and **Total**:
+
+- For a period with a limit, a progress bar shows the share of used tokens. Below it you see how many of the available tokens are used and the percentage.
+- For a period without a limit, only the number of used tokens is shown together with a note that the plan has no usage limit.
+- If the usage data cannot be loaded, an error message is shown in red.
+
+[![Used AI tokens](../../assets/images/en/i-doit-add-ons/documents/ai-functions/used-ai-tokens.png)](../../assets/images/en/i-doit-add-ons/documents/ai-functions/used-ai-tokens.png)
+
+With a custom AI connection (`document-custom-ai` license) the entry is not shown, because usage data is only available for the i-doit AI service.
 
 ## Creating a document template with AI
 
