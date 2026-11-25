@@ -11,7 +11,7 @@ We are happy to announce the release of i-doit 34. With our first Release 2025 w
 If you are using i-doit for the first time during your evaluation period, you will also be able to get better insights automatically suited to your needs and purchase i-doit including add-ons and support directly through the software.
 
 Since many customers asked for it, we also implemented a way for users to reset their login password without the help of an administrator. For this, the user’s e-mail address needs to be defined in the settings.
-Alongside these improvements for the general user experience, we also added the first improvements to our latest add-on [Flows](https://kb.i-doit.com/en/i-doit-add-ons/flows.html). This will only be the first step for multiple improvements that are based on your feedback which we have gathered over the last months.
+Alongside these improvements for the general user experience, we also added the first improvements to our latest add-on [Flows](https://kb.i-doit.com/en/i-doit-add-ons/flows/index.html). This will only be the first step for multiple improvements that are based on your feedback which we have gathered over the last months.
 Of course, you can also look forward to many quality changes which are listed in detail in our [changelog](../changelogs/changelog-34.md).
 
 ## Highlights in this release
