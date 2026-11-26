@@ -18,21 +18,25 @@ One of the keys must be provided.
 
 | Key          | JSON data type | Required | Description |
 | ------------ | -------------- | -------- | ----------- |
-| **catgID**   | Integer        | No       | Placeholder |
-| **catsID**   | Integer        | No       | Placeholder |
-| **customID** | Integer        | No       | Placeholder |
-| **category** | String         | No       | Placeholder |
+| **catgID**   | Integer        | No       | Identifier of a global category, for example **1** |
+| **catsID**   | Integer        | No       | Identifier of a specific category, for example **49** |
+| **customID** | Integer        | No       | Identifier of a custom category, for example **1** |
+| **category** | String         | No       | Category constant, for example **"C__CATG__MODEL"** |
 
-!!! example "WIP"
+### Response parameters
 
-    ### Response parameters
+JSON key **result** contains a JSON object. Keys are the attribute keys of the category, for example **title**. Each value is a JSON object describing the attribute:
 
-    JSON key **result** contains an array of JSON objects. Each object contains a search result.
+| Key        | JSON data type  | Description                                                                                                                     |
+| ---------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| **title**  | String          | Translated attribute title                                                                                                      |
+| **check**  | Object          | Validation rules, for example **mandatory** (Boolean)                                                                           |
+| **info**   | Object          | General information, for example **title** (language constant) and **type** (attribute type such as **"text"** or **"dialog"**) |
+| **data**   | Object          | Database mapping, for example **type**, **field** (database column) and further flags                                           |
+| **ui**     | Object          | Definition of the input field, for example **id**, **type**, **default** and **params**                                         |
+| **format** | Object or Array | Formatting callback; not present for every attribute                                                                            |
 
-    | Key             | JSON data type | Description |
-    | --------------- | -------------- | ----------- |
-    | **Placeholder** | Placeholder    | Placeholder |
-    | **Placeholder** | Placeholder    | Placeholder |
+Depending on the category, the keys inside **info** and **data** are written in camelCase (for example **primaryField**, **readOnly**, **sourceTable**) or in snake_case (for example **primary_field**, **readonly**, **table_alias**).
 
 ### Example
 

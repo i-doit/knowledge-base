@@ -14,23 +14,32 @@ Fetches workplace components for a Person.
 
 ### Request parameters
 
-| Key        | JSON data type     | Required | Description            |
-| ---------- | ------------------ | -------- | ---------------------- |
-| **id**     | Integer            | No       | ID of a object         |
-| **ids**    | Array with integer | No       | ID of objects          |
-| **email**  | String             | No       | Person email address   |
-| **emails** | String             | No       | Person email addresses |
+| Key               | JSON data type | Required | Description                                 |
+| ----------------- | -------------- | -------- | ------------------------------------------- |
+| **filter**        | Object         | Yes      | At least one of the following keys          |
+| **filter.id**     | Integer        | No       | Object identifier of a person               |
+| **filter.ids**    | Array          | No       | Object identifiers of persons (as integers) |
+| **filter.email**  | String         | No       | E-mail address of a person                  |
+| **filter.emails** | Array          | No       | E-mail addresses of persons (as strings)    |
 
-!!! example "WIP"
+### Response parameters
 
-    ### Response parameters
+JSON key **result** contains a JSON object. Keys are the object identifiers of the persons; each value is a JSON object with the keys **data** and **children**.
 
-    JSON key **result** contains an array of JSON objects. Each object contains a search result.
+| Key                 | JSON data type    | Description                                                                                                                |
+| ------------------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| **data.id**         | String            | Object identifier of the person (as numeric string)                                                                        |
+| **data.title**      | String            | Object title of the person                                                                                                 |
+| **data.sysid**      | String            | SYSID (see category **Global**)                                                                                            |
+| **data.type**       | String            | Object type identifier (as numeric string)                                                                                 |
+| **data.type_title** | String            | Translated name of object type; may be empty                                                                               |
+| **data.status**     | String            | Record status (as numeric string)                                                                                          |
+| **data.email**      | String            | Primary e-mail address of the person                                                                                       |
+| **data.first_name** | String            | First name of the person                                                                                                   |
+| **data.last_name**  | String            | Last name of the person                                                                                                    |
+| **children**        | Object or Boolean | Workplaces of the person<br><br>Keys: object identifiers of the workplaces<br><br>**false** if the person has no workplace |
 
-    | Key             | JSON data type | Description |
-    | --------------- | -------------- | ----------- |
-    | **Placeholder** | Placeholder    | Placeholder |
-    | **Placeholder** | Placeholder    | Placeholder |
+Each workplace in **children** again has the keys **data** (with **id**, **title**, **sysid**, **type**, **type_title** and **status**) and **children** (the components of the workplace, same structure). For components, **children** is **false**.
 
 ### Example
 

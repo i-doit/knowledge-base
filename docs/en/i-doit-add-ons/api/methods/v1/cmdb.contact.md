@@ -19,16 +19,19 @@ Retrieves all assigned objects by contact.
 | **method** | String         | only "assigned_objects_by_contact" available |                                   |
 | **filter** | Object         | Yes                                          | By `email` String or `id` Integer |
 
-!!! example "WIP"
+### Response parameters
 
-    ### Response parameters
+JSON key **result** contains a JSON object. Keys are the identifiers of the assigned objects, values are JSON objects:
 
-    JSON key **result** contains an array of JSON objects. Each object contains a search result.
-
-    | Key       | JSON data type | Description                      |
-    | --------- | -------------- | -------------------------------- |
-    | **key**   | String         | Attribute which relates to query |
-    | **value** | String         | Value which relates to query     |
+| Key            | JSON data type | Description                                                                        |
+| -------------- | -------------- | ---------------------------------------------------------------------------------- |
+| **id**         | String         | Object identifier (as numeric string)                                              |
+| **title**      | String         | Object title                                                                       |
+| **sysid**      | String         | SYSID (see category **Global**)                                                    |
+| **type**       | String         | Object type identifier (as numeric string)                                         |
+| **type_title** | String         | Translated name of object type                                                     |
+| **primary**    | String         | Translated **"Yes"** or **"No"**: the contact is the primary contact of the object |
+| **role**       | String         | Translated role of the contact, for example **"Administrator"**                    |
 
 ### Example
 
@@ -41,9 +44,9 @@ Retrieves all assigned objects by contact.
       "params": {
         "method": "assigned_objects_by_contact",
         "filter": {
-          "id": 9
+          "id": 37
         },
-        "apikey": "h3md6u3y",
+        "apikey": "xxx",
         "language": "en"
       },
       "id": 1
@@ -57,16 +60,25 @@ Retrieves all assigned objects by contact.
       "id": 1,
       "jsonrpc": "2.0",
       "result": {
-        "1122742661": {
-          "id": "55",
-          "title": "CareBear Power Server",
-          "sysid": "SYSID_2807233812",
-          "type": "5",
-          "type_title": "Server",
-          "primary": "No",
+        "39": {
+          "id": "39",
+          "title": "Contoso GmbH",
+          "sysid": "SYSID_1794918100",
+          "type": "52",
+          "type_title": "Organization",
+          "primary": "Yes",
           "role": "Administrator"
-            }
+        },
+        "44": {
+          "id": "44",
+          "title": "Zone Rechenzentrum",
+          "sysid": "SYSID_1794918121",
+          "type": "91",
+          "type_title": "Net zone",
+          "primary": "Yes",
+          "role": "Administrator"
         }
+      }
     }
     ```
 
