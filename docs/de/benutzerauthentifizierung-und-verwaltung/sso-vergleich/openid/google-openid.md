@@ -193,7 +193,7 @@ sudo systemctl restart apache2
 7. Lasse **Use Domain Part** auf **No** — i-doit verwendet dann die vollständige E-Mail-Adresse als Login-Namen.
 8. Klicke auf **Save**.
 
-[![Single Sign On Einstellungen](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/google-openid/9-oid.png)](/img/assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/google-openid/9-oid.png)
+[![Single Sign On Einstellungen](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/google-openid/9-oid.png)](../../../assets/images/de/benutzerauthentifizierung-und-verwaltung/sso-vergleich/openid/google-openid/9-oid.png)
 
 ***
 

@@ -68,7 +68,7 @@ i-doit is available in two variants:
 | **Updates** | You decide when | Automatically within 7 days |
 | **Backup** | Your responsibility | Automatic (hourly to yearly) |
 | **Customization** | Full control (SSH, CLI, PHP) | Limited (no shell access) |
-| **Automation** | [Cronjobs](../maintenance-and-operation/set-up-cron-jobs.md) + Console | [Flows Lite](../idoit-cloud/index.md#automatisierung-mit-flows-lite) |
+| **Automation** | [Cronjobs](../maintenance-and-operation/set-up-cron-jobs.md) + Console | [Flows Lite](../idoit-cloud/index.md#automation-with-flows-lite) |
 
 Both variants offer the same feature set for IT documentation. The differences lie in administration and access.
 

@@ -46,7 +46,7 @@ Automatically extends the duration of non-terminated contracts. A use case can b
 | Option              | Description                                                                                                                                                                   |
 | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **importFile**      | Specify the full path to the file. If you previously uploaded the file for CSV import, the path is for example `/var/www/html/imports/1/title.csv`. The `1` is the tenant ID. |
-| **importProfileId** | You must first create a CSV import profile, see [Create profile](../../../consolidate-data/csv-data-import/index.md#profil-anlegen).                                          |
+| **importProfileId** | You must first create a CSV import profile, see [Create profile](../../../consolidate-data/csv-data-import/index.md#creating-a-profile).                                          |
 
 ## import-hinventory (only on-prem)
 

@@ -205,7 +205,7 @@ JSON key **result** contains a JSON object.
 
 Archive a category entry for an object, mark it as deleted or purge it from database. See also [documentationszyklus](../../../../basics/life-and-documentation-cycle.md)
 
-**Liwithations:**
+**Limitations:**
 
 -   This only works with ==multi-value categories== at the moment.
 -   You can only ==archive== category entries which have a normal status.
@@ -546,7 +546,7 @@ JSON key **result** contains a JSON object.
 
 ## cmdb.category.recycle
 
-**Liwithations:**
+**Limitations:**
 
 -   This only works with multi-value categories.
 -   You can recycle category entries which have archived or deleted status.
@@ -602,7 +602,7 @@ JSON key **result** contains a JSON object.
 
 ## cmdb.category.archive
 
-**Liwithations**
+**Limitations**
 
 -   This only works with multi-value categories at the moment.
 -   You can only archive category entries which have a normal status.

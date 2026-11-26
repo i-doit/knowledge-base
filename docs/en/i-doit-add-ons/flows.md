@@ -72,7 +72,7 @@ Under **Administration → Permissions → Flows** can [permissions for persons 
 
 ## Overview
 
-Via the [**action bar**](../basics/it-documentation-structure.md#kategorie) you create, delete, or export Flows. In the overview you open, enable, or disable Flows via the **Actions** column. The **More** button (three dots) offers additional options: **Edit**, **Duplicate**, and **Switch to test mode**.
+Via the [**action bar**](../basics/it-documentation-structure.md#category) you create, delete, or export Flows. In the overview you open, enable, or disable Flows via the **Actions** column. The **More** button (three dots) offers additional options: **Edit**, **Duplicate**, and **Switch to test mode**.
 
 ## Creating a Flow
 

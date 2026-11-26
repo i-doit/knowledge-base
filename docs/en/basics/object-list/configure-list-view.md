@@ -60,7 +60,7 @@ Often, looking at the object list is not sufficient to retrieve all required att
 *   **Via row click**: Activate the checkbox **This list should open the object via a click on the row.** Then you open an object with a click on its row.
 *   **Via Edit button**: Check the checkbox of an object and click **Edit**. The object is opened and is immediately in edit mode.
 
-The row click option can be activated for all users and all object lists at once. In the [Administration](../../administration/management/tenant-management/system-repair-and-cleanup.md#datenbank), you will find the **Activate row click in object lists** button.
+The row click option can be activated for all users and all object lists at once. In the [Administration](../../administration/management/tenant-management/system-repair-and-cleanup.md#database), you will find the **Activate row click in object lists** button.
 
 ## Resetting the configuration
 

@@ -28,4 +28,4 @@ A practical example can be found on our [Blog](https://www.i-doit.com/blog/zamma
 
 ???+ question "**"Authentication error: System setting 'api.authenticated-users-only' is enabled. Please provide valid user credentials by http basic auth or use an existing session id.**"
 
-    This setting can be found in the Admin Center > System settings under [Expert settings](../../administration/admin-center.md#expert-settings-system-bezogen) as "api.authenticated-users-only" and must be set to "0" for Zammad.
+    This setting can be found in the Admin Center > System settings under [Expert settings](../../administration/admin-center.md#expert-settings-system-wide) as "api.authenticated-users-only" and must be set to "0" for Zammad.

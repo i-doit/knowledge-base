@@ -194,7 +194,7 @@ The executing user requires supervisor permissions on the categories **Group mem
 
 ## Logging
 
-In the `log/` directory of your i-doit installation you will find the log file `ldap_YYYY-MM-DD.log`. Logging is configured in the [Admin Center](../../administration/admin-center.md#system-settings) or via the [Expert settings](../../administration/admin-center.md#expert-settings-system-bezogen).
+In the `log/` directory of your i-doit installation you will find the log file `ldap_YYYY-MM-DD.log`. Logging is configured in the [Admin Center](../../administration/admin-center.md#system-settings) or via the [Expert settings](../../administration/admin-center.md#expert-settings-system-wide).
 
 ## Executing the ldap-sync
 

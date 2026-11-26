@@ -23,7 +23,7 @@ You drag the object via drag-and-drop to the desired object type in the left men
 
 [![object-list-3](../../assets/images/en/basics/object-list/3-ol.gif)](../../assets/images/en/basics/object-list/3-ol.gif)
 
-For this, the [interface display](../../administration/management/tenant-management/tenant-settings.md#oberflachendarstellung) Drag 'n' Drop of objects must be set to Yes.
+For this, the [interface display](../../administration/management/tenant-management/tenant-settings.md#interface-display) Drag 'n' Drop of objects must be set to Yes.
 
 The following articles describe which additional functions and customizations are available for the object list:
 
