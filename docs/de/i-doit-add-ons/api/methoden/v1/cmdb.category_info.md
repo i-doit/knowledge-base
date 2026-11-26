@@ -1644,7 +1644,7 @@ Depending on the category, the keys inside **info** and **data** are written in 
       "method": "cmdb.category_info.read",
       "params": {
         "category": "C__CATG__GLOBAL",
-        "apikey": "{{apikey}}",
+        "apikey": "h3md6u3y",
         "language": "en"
       },
       "id": 1

@@ -64,7 +64,7 @@ JSON key **result** contains a JSON object.
             "key": "api",
             "version": "1.14.1",
             "author": {
-              "name": "synetics GmbH"
+              "name": "i-doit GmbH"
             },
             "licensed": true,
             "active": true,
@@ -75,7 +75,7 @@ JSON key **result** contains a JSON object.
             "key": "pro",
             "version": "25",
             "author": {
-              "name": "synetics GmbH"
+              "name": "i-doit GmbH"
             },
             "licensed": true,
             "active": true,
@@ -237,7 +237,7 @@ JSON key **result** contains a JSON object.
       "version": "2.0",
       "method": "idoit.license",
       "params": {
-        "apikey": "{{apikey}}",
+        "apikey": "h3md6u3y",
         "language": "en"
       },
       "id": 1

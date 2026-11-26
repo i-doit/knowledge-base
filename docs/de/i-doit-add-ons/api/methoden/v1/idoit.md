@@ -237,7 +237,7 @@ JSON key **result** contains a JSON object.
       "version": "2.0",
       "method": "idoit.license",
       "params": {
-        "apikey": "{{apikey}}",
+        "apikey": "h3md6u3y",
         "language": "en"
       },
       "id": 1
