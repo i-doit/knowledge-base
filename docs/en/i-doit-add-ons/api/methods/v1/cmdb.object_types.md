@@ -18,7 +18,7 @@ Read objects type configurations.
 | ---------------- | -------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **countobjects** | Boolean        | No       | Display object counter                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | **filter**       | Array          | No       | Filter list of objects; see below for a full list of options                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| **liwith**        | Mixed          | No       | Maximum amount of objects (as integer), for example, fetch the first thousand of objects: **1000**<br><br>Combine this liwith with an offset (as string), for example, fetch the next thousand of objects: **"1000,1000"**                                                                                                                                                                                                                                                                                                                                                   |
+| **limit**        | Mixed          | No       | Maximum amount of objects (as integer), for example, fetch the first thousand of objects: **1000**<br><br>Combine this limit with an offset (as string), for example, fetch the next thousand of objects: **"1000,1000"**                                                                                                                                                                                                                                                                                                                                                   |
 | **sort**         | String         | No       | Only useful in combination with key **order_by**; allowed values are either **"ASC"** (ascending) or **"DESC"** (descending)                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | **order_by**     | String         | No       | Order result set by (see filter for more details what each value means):<br><br>- **"isys_obj_type__id"**,<br>- **"isys_obj__isys_obj_type__id"**,<br>- **"type"**,<br>- **"isys_obj__title"**,<br>- **"title"**,<br>- **"isys_obj_type__title"**,<br>- **"type_title"**,<br>- **"isys_obj__sysid"**,<br>- **"sysid"**,<br>- **"isys_cats_person_list__first_name"**,<br>- **"first_name"**,<br>- **"isys_cats_person_list__last_name"**,<br>- **"last_name"**,<br>- **"isys_cats_person_list__mail_address"**,<br>- **"email"**,<br>- **"isys_obj__id"**, or<br>- **"id"** |
 | **raw**          | Boolean        | No       | Displayed raw formatting, see example.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
@@ -35,16 +35,27 @@ Read objects type configurations.
 
 You can use any combination of filters.
 
-!!! example "WIP"
+### Response parameters
 
-    ### Response parameters
+JSON key **result** contains an array of JSON objects, one per object type.
 
-    JSON key **result** contains an array of JSON objects. Each object contains a search result.
+| Key                  | JSON data type | Description                                                                                                         |
+| -------------------- | -------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **id**               | String         | Object type identifier (as numeric string)                                                                          |
+| **title**            | String         | Translated name of object type                                                                                      |
+| **container**        | String         | **"1"** if objects of this type can contain other objects as a location, otherwise **"0"**                          |
+| **const**            | String         | Object type constant                                                                                                |
+| **color**            | String         | Color of the object type as stored, for example **"#a2bcfa"**                                                       |
+| **image**            | String         | URL to object type picture                                                                                          |
+| **icon**             | String         | Relative URL to object type icon                                                                                    |
+| **cats**             | String         | Identifier of the specific category of the object type (as numeric string); only present if the object type has one |
+| **tree_group**       | String         | Identifier of the object type group the object type is assigned to (as numeric string)                              |
+| **status**           | String         | Record status (as numeric string), for example **"2"** (Normal)                                                     |
+| **type_group**       | String         | Object type group identifier (as numeric string)                                                                    |
+| **type_group_title** | String         | Translated name of object type group                                                                                |
+| **objectcount**      | String         | Number of objects of this type (as numeric string); only present with **countobjects** set to **true**              |
 
-    | Key             | JSON data type | Description |
-    | --------------- | -------------- | ----------- |
-    | **Placeholder** | Placeholder    | Placeholder |
-    | **Placeholder** | Placeholder    | Placeholder |
+With **raw** set to **true**, the entries contain the database columns of the object type instead.
 
 ### Example
 
@@ -78,8 +89,8 @@ You can use any combination of filters.
           "title": "Server",
           "container": "0",
           "const": "C__OBJTYPE__SERVER",
-          "color": "A2BCFA",
-          "image": "http://10.10.60.64/testinstance/images/objecttypes/server.png",
+          "color": "#a2bcfa",
+          "image": "/cmdb/object-type/image/5?tenant_id=1",
           "icon": "images/axialis/hardware-network/server-single.svg",
           "tree_group": "2",
           "status": "2",

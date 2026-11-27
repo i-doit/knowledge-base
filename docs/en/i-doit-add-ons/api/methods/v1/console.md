@@ -18,16 +18,14 @@ Get a list of the tenants.
 | --- | -------------- | -------- | ----------- |
 | -   | -              | -        | -           |
 
-!!! example "WIP"
+### Response parameters
 
-    ### Response parameters
+JSON key **result** contains a JSON object.
 
-    JSON key **result** contains an array of JSON objects. Each object contains a search result.
-
-| Key         | JSON data type | Description                  |
-| ----------- | -------------- | ---------------------------- |
-| **success** | Boolean        | Should always be **true**    |
-| **output**  | String         | Table with available tenants |
+| Key         | JSON data type | Description                                                             |
+| ----------- | -------------- | ----------------------------------------------------------------------- |
+| **success** | Boolean        | Should always be **true**                                               |
+| **output**  | Array          | Lines of the console output (strings), a table of the available tenants |
 
 ### Example
 

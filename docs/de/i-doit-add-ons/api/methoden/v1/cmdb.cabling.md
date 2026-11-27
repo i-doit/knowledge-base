@@ -20,16 +20,25 @@ Dieser Endpunkt ruft Informationen darüber ab, welcher Konnektor mit einem Kabe
 | --------- | -------------- | -------- | ---------------- |
 | **objID** | Integer        | Yes      | ID of the object |
 
-!!! example "WIP"
+### Response parameters
 
-    ### Response parameters
+JSON key **result** contains a JSON object with the keys **start** and **end**, one for each end of the cable.
 
-    JSON key **result** contains an array of JSON objects. Each object contains a search result.
+| Key                             | JSON data type | Description                                                                    |
+| ------------------------------- | -------------- | ------------------------------------------------------------------------------ |
+| **start**                       | Object or Null | Connector at one end of the cable; **null** if this end is not connected       |
+| **end**                         | Object or Null | Connector at the other end of the cable; **null** if this end is not connected |
+| **start.presentation**          | String         | Object title and connector title, for example **"server11 > server_output11"** |
+| **start.connector.id**          | Integer        | Identifier of the connector                                                    |
+| **start.connector.title**       | String         | Connector title                                                                |
+| **start.connector.type**        | String         | Category constant of the connector, for example **"C__CATG__CONNECTOR"**       |
+| **start.connector.inOutput**    | String         | Direction of the connector, for example **"Input"** or **"Output"**            |
+| **start.ciObject.id**           | Integer        | Identifier of the object the connector belongs to                              |
+| **start.ciObject.title**        | String         | Object title                                                                   |
+| **start.ciObject.type**         | String         | Translated name of object type                                                 |
+| **start.ciObject.typeConstant** | String         | Object type constant, for example **"C__OBJTYPE__SERVER"**                     |
 
-    | Key       | JSON data type | Description                                             |
-    | --------- | -------------- | ------------------------------------------------------- |
-    | **start** | Object         | Represents the starting point of the wiring connection. |
-    | **end**   | Object         | Represents the starting point of the wiring connection. |
+Key **end** has the same structure as key **start**.
 
 ### Example
 
@@ -42,7 +51,7 @@ Dieser Endpunkt ruft Informationen darüber ab, welcher Konnektor mit einem Kabe
         "id": 1,
         "params": {
             "objID": 2821,
-            "apikey": [{api-key}]
+            "apikey": "h3md6u3y"
         }
     }
     ```

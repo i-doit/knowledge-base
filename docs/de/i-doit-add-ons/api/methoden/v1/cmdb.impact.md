@@ -6,8 +6,6 @@ icon: material/api
 lang: de
 ---
 
-!!! example "Work in Progress"
-
 ## cmdb.impact.read
 
 This method is used for impact analysis and recursively returns all relationships of the specified object. The output can be restricted by specifying the relationship type.<br>
@@ -17,8 +15,8 @@ Attention: Depending on the environment and filling of the database this query m
 
 | Key               | JSON data type    | Required | Description                                                                         |
 | ----------------- | ----------------- | -------- | ----------------------------------------------------------------------------------- |
-| **id**            | Integer           | Yes      | Object identifier, for example: **9**                                               |
-| **relation_type** | String or Integer | Yes      | Constant of the relationship type or ID of the relationship type, for example **4** |
+| **id**            | Integer           | Yes      | Object identifier, for example: **37**                                               |
+| **relation_type** | String or Integer | Yes      | Constant of the relationship type or ID of the relationship type, for example: **4** or **C__RELATION_TYPE__ADMIN** |
 
 Default relation types are:
 
@@ -52,20 +50,21 @@ Default relation types are:
 
 ### Response parameters
 
-JSON key **result** contains an array of JSON objects. Each object contains a search result.
+JSON key **result** contains an array of JSON objects. Each object contains one related object. If the object has no relationships of the given type or the relationship type is unknown, the array is empty. If the object does not exist, **result** is `null`.
 
-| Key             | JSON data type | Description |
-| --------------- | -------------- | ----------- |
-| **id**          | String         | Placeholder |
-| **name**        | String         | Placeholder |
-| **data**        | String         | Placeholder |
-| **type**        | String         | Placeholder |
-| **text**        | String         | Placeholder |
-| **relation**    | String         | Placeholder |
-| **statusColor** | String         | Placeholder |
-| **objTypeID**   | String         | Placeholder |
-| **objectType**  | String         | Placeholder |
-| **objID**       | String         | Placeholder |
+| Key                            | JSON data type | Description                                                         |
+| ------------------------------ | -------------- | ------------------------------------------------------------------- |
+| **id**                         | Integer        | Identifier of the related object                                    |
+| **name**                       | String         | Title of the related object                                         |
+| **data**                       | Object         | Details of the related object and the relationship                  |
+| **data.relation**              | Object         | Relationship to the related object                                  |
+| **data.relation.type**         | String         | Relationship type, for example: "Contact assignment"                |
+| **data.relation.text**         | String         | Description of the relationship, for example: "administrates"       |
+| **data.color**                 | String         | Color of the object type as hex code, for example: "#82e27e"        |
+| **data.statusColor**           | String         | Color of the CMDB status as hex code, for example: "#33c20a"        |
+| **data.objTypeID**             | Integer        | Object type identifier                                              |
+| **data.objectType**            | String         | Object type, translated into the requested language                 |
+| **data.objID**                 | Integer        | Identifier of the related object, same as **id**                    |
 
 ### Example
 
@@ -76,9 +75,9 @@ JSON key **result** contains an array of JSON objects. Each object contains a se
       "version": "2.0",
       "method": "cmdb.impact.read",
       "params": {
-        "id": 9,
-        "relation_type": 4,
-        "apikey": "xxx",
+        "id": 37,
+        "relation_type": "C__RELATION_TYPE__ADMIN",
+        "apikey": "h3md6u3y",
         "language": "en"
       },
       "id": 1
@@ -93,21 +92,50 @@ JSON key **result** contains an array of JSON objects. Each object contains a se
       "jsonrpc": "2.0",
       "result": [
         {
-          "id": 123,
-          "name": "CareBear Power Client",
+          "id": 39,
+          "name": "Contoso GmbH",
           "data": {
             "relation": {
               "type": "Contact assignment",
               "text": "administrates"
             },
-            "color": "B9E1BE",
-            "statusColor": "33C20A",
-            "objTypeID": 10,
-            "objectType": "Client",
-            "objID": 1122714692
+            "color": "#82e27e",
+            "statusColor": "#33c20a",
+            "objTypeID": 52,
+            "objectType": "Organization",
+            "objID": 39
+          }
+        },
+        {
+          "id": 44,
+          "name": "Zone Rechenzentrum",
+          "data": {
+            "relation": {
+              "type": "Contact assignment",
+              "text": "administrates"
+            },
+            "color": "#59bdff",
+            "statusColor": "#33c20a",
+            "objTypeID": 91,
+            "objectType": "Net zone",
+            "objID": 44
           }
         }
       ]
+    }
+    ```
+
+=== "Error: id or relation_type missing"
+
+    ```json
+    {
+      "id": 1,
+      "jsonrpc": "2.0",
+      "error": {
+        "code": -32099,
+        "message": "i-doit system error: Error: You have to specify the parameters 'id' and 'relation_type'",
+        "data": null
+      }
     }
     ```
 
