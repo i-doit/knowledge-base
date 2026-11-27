@@ -1,5 +1,5 @@
 ---
-title: Update Guide from i-doit 1.7.4 to 34
+title: Update Guide from i-doit 1.7.4 to 39
 description: i-doit update guide
 icon: fontawesome/brands/linux
 status:
@@ -8,7 +8,7 @@ lang: en
 
 ## Important information before you begin
 
-Here you will find a short guide for updating your i-doit to i-doit 31.<br>
+Here you will find a short guide for updating your i-doit to i-doit 39.<br>
 You may need to update your operating system.<br>
 These instructions apply to **Debian**; the commands used may differ on other operating systems. Before you begin, download all the updates you need to perform and copy them to the i-doit root folder.
 
@@ -16,7 +16,7 @@ These instructions apply to **Debian**; the commands used may differ on other op
 
     This guide is provided without warranty and may not work in your specific use case.<br>
     This depends on the configuration and installation type of your instance.
-    Required **add-on** updates are also not mentioned.
+    Required **add-on** updates are not covered step by step. Before each step, check the minimum add-on versions in the [compatibility matrix](../installation/system-requirements.md#compatibility-matrix) and update your add-ons first if necessary.
 
 !!! attention "Backup"
     Create a backup or snapshot before each update step!
@@ -30,6 +30,26 @@ These instructions apply to **Debian**; the commands used may differ on other op
     If a hotfix is required to update an older version, you will find it in the hotfix subchapters here in the Knowledge Base.
     Since these are hotfixes, we recommend installing them only if the adjustments are required for smooth operation of your installation or if you are requested to do so by the support team. Make sure you have created a [backup of i-doit](../maintenance-and-operation/backup-and-restore/index.md) before using a hotfix.
     Please inform us about the use of hotfixes if you subsequently contact our support team.
+
+## Update path
+
+Some versions cannot be skipped, and some versions require a minimum version before you can install them. The [compatibility matrix](../installation/system-requirements.md#compatibility-matrix) lists these requirements. From i-doit 1.19, follow these steps in this order:
+
+| Step | Update                                       | Why this step is needed                                         |
+| ---- | -------------------------------------------- | --------------------------------------------------------------- |
+| 1    | [1.19 to 20](#update-from-119-to-20)         | i-doit 20 is the first version after 1.19                       |
+| 2    | [20 to 29](#update-from-20-to-29)            | i-doit 29 cannot be skipped                                     |
+| 3    | [Debian 11 to 12](#upgrade-debian-11-to-12), [PHP 8.2](#configure-php-82) and [MariaDB 10.11](#mariadb-1011-upgrade) | i-doit 31 and later require at least PHP 8.0 and MariaDB 10.4 |
+| 4    | [29 to 31](#update-from-29-to-31)            | i-doit 32 to 35 require at least i-doit 31, and i-doit 31 supports MariaDB 10.11 from Debian 12 |
+| 5    | [31 to 35](#update-from-31-to-35)            | i-doit 35 cannot be skipped                                     |
+| 6    | [35 to 39](#update-from-35-to-39)            | i-doit 36 to 39 require at least i-doit 35                      |
+
+i-doit 29 supports MariaDB only up to version 10.6. Perform steps 3 and 4 directly one after the other and do not work with i-doit in between. From step 3 on, i-doit 29 runs with PHP 8. Before step 3, check that your add-ons support PHP 8.
+
+!!! note "**.htaccess and Apache virtual host**"
+    Each update package brings a new `.htaccess` file in the i-doit directory. If your Apache virtual host uses `AllowOverride None` and contains the rules of the `.htaccess` file directly, as in our [installation guides](../installation/manual-installation/debian/index.md), the changes have no effect. After each update, compare `/var/www/html/.htaccess` with your virtual host configuration and transfer the changes. i-doit 39, for example, adds rules for `src/mcp.php` and the `Authorization` header.
+
+If you run an older version than 1.19, start with the matching section below and continue in order. Download all update packages from the [customer portal](../administration/customer-portal.md) or the [download links](../download-links.md).
 
 ## Update from 1.7.4 to 1.8
 
@@ -680,7 +700,10 @@ sudo -u www-data unzip idoit-20-update.zip
 
 If prompted, overwrite everything by entering **A**.
 
-In the web interface, verify that the update to version 20 is displayed and selected, then perform the update.
+In the web interface, select the update to version 20 and perform the update. The updater may preselect your current version 1.19. In that case, select version 20 by hand, otherwise the updater only reinstalls 1.19.
+
+!!! note "**License required**"
+    The updater only offers updates if a valid license is activated. Otherwise it shows the message "Your licence does not allow any updates". [Activate your license token](../maintenance-and-operation/licensing.md) first.
 
 [![Update from 1.19 to 20](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/12-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/12-u18-119.png)
 
@@ -729,11 +752,12 @@ In the web interface of the updater, verify that the update to version 29 is dis
 sudo nano /etc/apt/sources.list
 ```
 
-Change all entries to 'bookworm' or delete all entries and add the following
+Change all entries from 'bullseye' to 'bookworm', or delete all entries and add the following. Also check the files in `/etc/apt/sources.list.d/`.
 
 ```sh
-deb http://deb.debian.org/debian bookworm main
-deb http://deb.debian.org/debian bookworm contrib
+deb http://deb.debian.org/debian bookworm main contrib non-free-firmware
+deb http://deb.debian.org/debian bookworm-updates main contrib non-free-firmware
+deb http://security.debian.org/debian-security bookworm-security main contrib non-free-firmware
 ```
 
 Now stop mysql and cron
@@ -750,11 +774,13 @@ sudo apt-get upgrade
 sudo apt-get full-upgrade
 ```
 
-Start the services we stopped
+Restart the server so that the new kernel and all services are loaded
 
 ```sh
-sudo systemctl start mysql cron
+sudo reboot
 ```
+
+During the upgrade, Debian may report that the automatic MariaDB upgrade failed, for example with `Access denied for user 'root'@'localhost'`. This happens if the database user root has a password. You fix it in the section [MariaDB 10.11 Upgrade](#mariadb-1011-upgrade).
 
 Errors? [Read here](https://www.debian.org/releases/bookworm/amd64/release-notes/ch-upgrading.en.html#trouble)<br>
 
@@ -770,7 +796,7 @@ sudo apt-get clean
 
 Check your sources.list; for additional information see [here](https://wiki.debian.org/SourcesList)
 
-You are now on Debian 12 with PHP 8.2.18 and MariaDB 10.11.
+You are now on Debian 12 with PHP 8.2 and MariaDB 10.11.
 
 ## Configure PHP 8.2
 
@@ -785,7 +811,6 @@ Add the following:
 ```ini
 allow_url_fopen = Yes
 file_uploads = On
-magic_quotes_gpc = Off
 max_execution_time = 300
 max_file_uploads = 42
 max_input_time = 60
@@ -793,7 +818,6 @@ max_input_vars = 10000
 memory_limit = 256M
 post_max_size = 128M
 register_argc_argv = On
-register_globals = Off
 short_open_tag = On
 upload_max_filesize = 128M
 display_errors = Off
@@ -808,6 +832,12 @@ session.cookie_lifetime = 0
 mysqli.default_socket = /var/run/mysqld/mysqld.sock
 ```
 
+Debian 12 replaces the PHP 7.4 modules with PHP 8.2 modules only if they were installed with the generic package names such as `php-bcmath`. Make sure that all PHP modules i-doit needs are installed:
+
+```sh
+sudo apt install libapache2-mod-php php-bcmath php-cli php-common php-curl php-gd php-imagick php-json php-ldap php-mbstring php-memcached php-mysql php-pgsql php-soap php-xml php-zip
+```
+
 Enable the changes
 
 ```sh
@@ -818,13 +848,13 @@ sudo phpenmod memcached
 sudo systemctl restart apache2.service
 ```
 
-If apache2 does not restart, restart the server.
+If `a2dismod` or `a2enmod` reports that the module is already disabled or enabled, that is fine. If apache2 does not restart, restart the server.
 
-i-doit should now display the new PHP version 8.2.18 under Administration > [Tenant Name] Administration > System Config Check.
+Check the PHP version with `php -v`. It should show PHP 8.2.
 
 ## MariaDB 10.11 Upgrade
 
-Now we need to check the tables and update to the latest version with
+Debian cannot upgrade the system tables automatically if the database user root has a password. Check the tables and update them to the new version with
 
 ```sh
 sudo mariadb-upgrade -p
@@ -835,24 +865,69 @@ Enter your password and check whether everything went well
 Then restart MariaDB
 
 ```sh
-sudo systemctl start mysql.service
+sudo systemctl restart mysql.service
 ```
 
-## Update from 29 to 34
+## Update from 29 to 31
 
 First, prepare the update via the CLI by opening the i-doit folder at `/var/www/html/` and extracting the i-doit update package with
 
 ```sh
-sudo -u www-data unzip idoit-34-update.zip
+sudo -u www-data unzip idoit-31-update.zip
 ```
-
-
 
 If prompted, overwrite everything by entering **A**.
 
-In the web interface updater, verify that the update to version 34 is displayed and selected, then perform the update.
+In the web interface updater, verify that the update to version 31 is displayed and selected, then perform the update.
 
-[![Update from 29 to 34](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/14-u18-119.png)](../assets/images/en/upgrades-and-migrations/update-from-1.7.4-to-1.19/14-u18-119.png)
+!!! success "**Check the update logs**"
+    Please take the time to review the logs and check whether an error has occurred.
+
+!!! success "**Check the system and i-doit**"
+
+## Update from 31 to 35
+
+!!! attention "**Update your add-ons**"
+    i-doit 35 changes the internal template engine. Update all installed add-ons to their latest version that supports i-doit 35, see the [compatibility matrix](../installation/system-requirements.md#compatibility-matrix).
+
+First, prepare the update via the CLI by opening the i-doit folder at `/var/www/html/` and extracting the i-doit update package with
+
+```sh
+sudo -u www-data unzip idoit-35-update.zip
+```
+
+If prompted, overwrite everything by entering **A**.
+
+In the web interface updater, verify that the update to version 35 is displayed and selected, then perform the update.
+
+!!! success "**Check the update logs**"
+    Please take the time to review the logs and check whether an error has occurred.
+
+!!! success "**Check the system and i-doit**"
+
+## Update from 35 to 39
+
+!!! attention "**PHP version**"
+    i-doit 39 still runs with PHP 8.2 from Debian 12, but PHP 8.2 is deprecated. PHP 8.4 is recommended. Plan the switch to a newer PHP version, for example with a later upgrade to Debian 13. Read the [release notes of i-doit 39](../version-history/release-notes/release-notes-39.md) before this step, because some security improvements change the behavior of i-doit.
+
+!!! note "**Changed behavior in i-doit 39**"
+    Check these points after the update, details are in the [release notes](../version-history/release-notes/release-notes-39.md#important-changes):
+
+    - Logins are blocked for some minutes after too many failed attempts. If i-doit runs behind a reverse proxy, enter its IP address in the expert setting `system.security.login-throttle.trusted-proxies`.
+    - The CMDB export no longer saves files on the server by default.
+    - Uploads are only accepted with allowed file extensions, and links only with allowed URL schemes.
+    - The updater and the internal proxy validate TLS certificates. If your proxy replaces certificates, the server must trust its certificate.
+    - Permissions for imports and add-on pages are checked on the server. Users who used direct URLs may need additional rights.
+
+First, prepare the update via the CLI by opening the i-doit folder at `/var/www/html/` and extracting the i-doit update package with
+
+```sh
+sudo -u www-data unzip idoit-39-update.zip
+```
+
+If prompted, overwrite everything by entering **A**.
+
+In the web interface updater, verify that the update to version 39 is displayed and selected, then perform the update.
 
 !!! success "**Check the update logs**"
     Please take the time to review the logs and check whether an error has occurred.
