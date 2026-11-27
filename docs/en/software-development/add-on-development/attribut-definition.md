@@ -162,7 +162,7 @@ The UI area is necessary for the display of attributes in "generic interfaces" s
 areas of i-doit also access this information.
 
 In particular, the UI class of the corresponding category will use this definition and pass the data to the
-[TOM (Template Object Model)](programming-categories.md#ubergabe-der-daten-an-smarty-plugins-mittels-tom-und-rules).
+[TOM (Template Object Model)](programming-categories.md#passing-data-to-smarty-plugins-via-tom-and-rules).
 This means Smarty parameters do not need to be stored in multiple places.
 
 #### ID

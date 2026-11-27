@@ -18,16 +18,21 @@ Displays a list of installed add-ons
 | --- | -------------- | ----------- |
 | -   | -              | -           |
 
-!!! example "WIP"
+### Response parameters
 
-    ### Response parameters
+JSON key **result** contains a JSON object.
 
-    JSON key **result** contains an array of JSON objects. Each object contains a search result.
-
-    | Key             | JSON data type | Description |
-    | --------------- | -------------- | ----------- |
-    | **Placeholder** | Placeholder    | Placeholder |
-    | **Placeholder** | Placeholder    | Placeholder |
+| Key                    | JSON data type | Description                                     |
+| ---------------------- | -------------- | ----------------------------------------------- |
+| **success**            | Boolean        | Should always be **true**                       |
+| **result**             | Array          | List of add-ons, one JSON object per add-on     |
+| **result.title**       | String         | Name of the add-on                              |
+| **result.key**         | String         | Identifier of the add-on, for example **"api"** |
+| **result.version**     | String         | Installed version                               |
+| **result.author.name** | String         | Name of the author                              |
+| **result.licensed**    | Boolean        | **true** if the add-on is licensed              |
+| **result.active**      | Boolean        | **true** if the add-on is active                |
+| **result.installed**   | Boolean        | **true** if the add-on is installed             |
 
 ### Example
 
@@ -59,7 +64,7 @@ Displays a list of installed add-ons
             "key": "api",
             "version": "1.14.1",
             "author": {
-              "name": "synetics GmbH"
+              "name": "i-doit GmbH"
             },
             "licensed": true,
             "active": true,
@@ -70,7 +75,7 @@ Displays a list of installed add-ons
             "key": "pro",
             "version": "25",
             "author": {
-              "name": "synetics GmbH"
+              "name": "i-doit GmbH"
             },
             "licensed": true,
             "active": true,
@@ -201,18 +206,27 @@ Displays information about the installed license.
 
 | Key             | JSON data type | Required | Description |
 | --------------- | -------------- | -------- | ----------- |
-| **Placeholder** | Placeholder    | Yes      | Placeholder |
+| -               | -              | -        | -           |
 
-!!! example "WIP"
+### Response parameters
 
-    ### Response parameters
+JSON key **result** contains a JSON object.
 
-    JSON key **result** contains an array of JSON objects. Each object contains a search result.
-
-    | Key             | JSON data type | Description |
-    | --------------- | -------------- | ----------- |
-    | **Placeholder** | Placeholder    | Placeholder |
-    | **Placeholder** | Placeholder    | Placeholder |
+| Key                           | JSON data type | Description                                                                                                                                                                                                                    |
+| ----------------------------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **objectCapacity.total**      | Integer        | Number of objects allowed by the licenses                                                                                                                                                                                      |
+| **objectCapacity.inUse**      | Integer        | Number of objects counted against the licenses                                                                                                                                                                                 |
+| **addons**                    | Object         | Licensable add-ons<br><br>Keys: add-on identifiers, for example **"document"**<br><br>Values: JSON objects with the keys **licensed** (Boolean, **true** if the add-on is licensed) and **label** (String, name of the add-on) |
+| **licenses**                  | Array          | Installed licenses, one JSON object per license                                                                                                                                                                                |
+| **licenses.id**               | Integer        | License identifier                                                                                                                                                                                                             |
+| **licenses.label**            | String         | Name of the license                                                                                                                                                                                                            |
+| **licenses.licenseType**      | String         | Type of the license, for example **"Add-on"**                                                                                                                                                                                  |
+| **licenses.registrationDate** | String         | Start of the license; format: **Y-m-d H:i:s**                                                                                                                                                                                  |
+| **licenses.validUntil**       | String         | End of the license; format: **Y-m-d H:i:s**                                                                                                                                                                                    |
+| **licenses.objects**          | Integer        | Number of objects covered by the license                                                                                                                                                                                       |
+| **licenses.tenants**          | Integer        | Number of tenants covered by the license                                                                                                                                                                                       |
+| **licenses.environment**      | String         | Environment the license is issued for                                                                                                                                                                                          |
+| **licenses.valid**            | Boolean        | **true** if the license is valid                                                                                                                                                                                               |
 
 ### Example
 
@@ -223,7 +237,7 @@ Displays information about the installed license.
       "version": "2.0",
       "method": "idoit.license",
       "params": {
-        "apikey": "{{apikey}}",
+        "apikey": "h3md6u3y",
         "language": "en"
       },
       "id": 1
@@ -465,9 +479,8 @@ JSON key **result** contains an array of JSON objects. Each object contains a se
                 "link": "/?objID=1000&catgID=1&cateID=1029&highlight=My%20little%20server",
                 "score": "100",
                 "status": "Normal"
-            },
-            […]
-        ],
+            }
+        ]
     }
     ```
 

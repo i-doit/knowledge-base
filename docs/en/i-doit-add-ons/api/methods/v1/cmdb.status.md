@@ -18,19 +18,17 @@ Read all available states.
 | --- | -------------- | -------- | ----------- |
 | -   | -              | -        | -           |
 
-!!! example "WIP"
+### Response parameters
 
-    ### Response parameters
+JSON key **result** contains an array of JSON objects, one per CMDB status.
 
-    JSON key **result** contains an array of JSON objects. Each object contains a search result.
-
-    | Key          | JSON data type | Description            |
-    | ------------ | -------------- | ---------------------- |
-    | **id**       | integer        | id of the status       |
-    | **title**    | string         | Title of the status    |
-    | **constant** | string         | constant of the status |
-    | **color**    | string         | Color code             |
-    | **editable** | bool           | Is the status editable |
+| Key          | JSON data type | Description                                                        |
+| ------------ | -------------- | ------------------------------------------------------------------ |
+| **id**       | Integer        | Identifier of the CMDB status                                      |
+| **title**    | String         | Translated title of the CMDB status                                |
+| **constant** | String         | Constant of the CMDB status                                        |
+| **color**    | String         | Color as stored: six hex characters, with or without leading **#** |
+| **editable** | Boolean        | **true** if the CMDB status can be edited                          |
 
 ### Example
 
@@ -59,98 +57,14 @@ Read all available states.
           "id": 1,
           "title": "planned",
           "constant": "C__CMDB_STATUS__PLANNED",
-          "color": "EFAA43",
+          "color": "#efaa43",
           "editable": true
         },
         {
-          "id": 2,
-          "title": "ordered",
-          "constant": "C__CMDB_STATUS__ORDERED",
-          "color": "838683",
-          "editable": true
-        },
-        {
-          "id": 3,
-          "title": "delivered",
-          "constant": "C__CMDB_STATUS__DELIVERED",
-          "color": "DDECD5",
-          "editable": true
-        },
-        {
-          "id": 4,
-          "title": "assembled",
-          "constant": "C__CMDB_STATUS__ASSEMBLED",
-          "color": "C6DFB9",
-          "editable": true
-        },
-        {
-          "id": 5,
-          "title": "tested",
-          "constant": "C__CMDB_STATUS__TESTED",
-          "color": "95C47C",
-          "editable": true
-        },
-        {
-          "id": 6,
-          "title": "in operation",
-          "constant": "C__CMDB_STATUS__IN_OPERATION",
-          "color": "33C20A",
-          "editable": false
-        },
-        {
-          "id": 7,
-          "title": "defect",
-          "constant": "C__CMDB_STATUS__DEFECT",
-          "color": "BC0A19",
-          "editable": true
-        },
-        {
-          "id": 8,
-          "title": "under repair",
-          "constant": "C__CMDB_STATUS__UNDER_REPAIR",
-          "color": "F990BE",
-          "editable": true
-        },
-        {
-          "id": 9,
-          "title": "delivered from repair",
-          "constant": "C__CMDB_STATUS__DELIVERED_FROM_REPAIR",
-          "color": "F3EF15",
-          "editable": true
-        },
-        {
-          "id": 10,
-          "title": "inoperative",
-          "constant": "C__CMDB_STATUS__INOPERATIVE",
-          "color": "FF0000",
-          "editable": false
-        },
-        {
-          "id": 11,
-          "title": "stored",
-          "constant": "C__CMDB_STATUS__STORED",
-          "color": "A2BCFA",
-          "editable": true
-        },
-        {
-          "id": 12,
-          "title": "scrapped",
-          "constant": "C__CMDB_STATUS__SCRAPPED",
-          "color": "082B9A",
-          "editable": true
-        },
-        {
-          "id": 13,
-          "title": "i-doit Status",
-          "constant": "C__CMDB_STATUS__IDOIT_STATUS",
-          "color": "AAAAAA",
-          "editable": false
-        },
-        {
-          "id": 14,
-          "title": "Template",
-          "constant": "C__CMDB_STATUS__IDOIT_STATUS_TEMPLATE",
-          "color": "CCCCCC",
+          "id": 15,
+          "title": "In disposal",
+          "constant": "C__CMDB_STATUS__IN_DISPOSAL",
+          "color": "999999",
           "editable": false
         }
       ]
@@ -168,18 +82,17 @@ Create new or save existing state.
 | **title**    | String         | Yes      | Status title                                           |
 | **constant** | String         | Yes      | Status constant                                        |
 | **color**    | String         | Yes      | Color in hex without leading `#`, for example `FF0000` |
+| **id**       | Integer        | No       | Identifier of an existing status to update; without **id**, a new status is created |
 
-!!! example "WIP"
+### Response parameters
 
-    ### Response parameters
+JSON key **result** contains a JSON object.
 
-    JSON key **result** contains an array of JSON objects. Each object contains a search result.
-
-| Key         | JSON data type | Description                           |
-| ----------- | -------------- | ------------------------------------- |
-| **id**      | String         | Object identifier (as numeric string) |
-| **message** | String         | Some information                      |
-| **success** | Boolean        | Should always be **true**             |
+| Key         | JSON data type | Description                                      |
+| ----------- | -------------- | ------------------------------------------------ |
+| **success** | Boolean        | Should always be **true**                        |
+| **message** | String         | **"Status created"** or **"Status updated"**     |
+| **id**      | Integer        | Identifier of the created or updated CMDB status |
 
 ### Example
 
@@ -242,16 +155,14 @@ Purge a state.
 | ------ | -------------- | -------- | --------------------- |
 | **id** | Integer        | Yes      | ID of the CMDB Status |
 
-!!! example "WIP"
+### Response parameters
 
-    ### Response parameters
+JSON key **result** contains a JSON object.
 
-    JSON key **result** contains an array of JSON objects. Each object contains a search result.
-
-    | Key             | JSON data type | Description |
-    | --------------- | -------------- | ----------- |
-    | **Placeholder** | Placeholder    | Placeholder |
-    | **Placeholder** | Placeholder    | Placeholder |
+| Key         | JSON data type | Description                   |
+| ----------- | -------------- | ----------------------------- |
+| **success** | Boolean        | Should always be **true**     |
+| **message** | String         | Should be **"Status purged"** |
 
 ### Example
 

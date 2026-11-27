@@ -30,9 +30,9 @@ ISOs, security and compliance officers, administrators, auditors.
 ## Prerequisites
 
 - Read the **system requirements** and install the add-on:
-  see [VIVA2 system requirements](setup.md#systemvoraussetzungen) and [Installation](setup.md#installation).
+  see [VIVA2 system requirements](setup.md#system-requirements) and [Installation](setup.md#installation).
 - Complete the **setup** by importing the IT-Grundschutz Compendium:
-  see [Installation and setup](setup.md#installation-und-einrichtung).
+  see [Installation and setup](setup.md#setup).
 
 !!! warning "The VIVA2 add-on consumes licensed objects"
     Importing the IT-Grundschutz Compendium generates approximately **2927** licensed objects. After subtracting discontinued requirements, approximately **2637** remain. Make sure your i-doit license includes enough licensed objects to use the add-on.
@@ -58,7 +58,7 @@ ISOs, security and compliance officers, administrators, auditors.
 - **IT-Grundschutz profiles**: Create, export, import, and apply profiles.
   → [Profiles](it-grundschutz-profiles.md)
 - **Update the compendium**: Selectively adopt new editions.
-  → [Updating the compendium](setup.md#kompendium-aktualisieren)
+  → [Updating the compendium](setup.md#updating-the-compendium)
 
 ## Interaction with Other Add-ons
 

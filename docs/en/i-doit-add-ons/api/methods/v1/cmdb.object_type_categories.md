@@ -19,16 +19,20 @@ Read categories assigned to a object type.
 | **type** | Integer or String | Yes      | Object type ID or Constant             |
 | **raw**  | Boolean           | No       | Displayed raw formatting, see example. |
 
-!!! example "WIP"
+### Response parameters
 
-    ### Response parameters
+JSON key **result** contains a JSON object with the keys **catg** (global categories), **cats** (specific categories) and **custom** (custom categories). Each key contains an array of JSON objects:
 
-    JSON key **result** contains an array of JSON objects. Each object contains a search result.
+| Key              | JSON data type | Description                                                                           |
+| ---------------- | -------------- | ------------------------------------------------------------------------------------- |
+| **id**           | String         | Category identifier (as numeric string)                                               |
+| **title**        | String         | Translated category title                                                             |
+| **const**        | String         | Category constant                                                                     |
+| **parent**       | String         | Identifier of the parent category (as numeric string); not present for every category |
+| **multi_value**  | String         | **"1"** for a multi-value category, **"0"** for a single-value category               |
+| **source_table** | String         | Database table of the category                                                        |
 
-    | Key             | JSON data type | Description |
-    | --------------- | -------------- | ----------- |
-    | **Placeholder** | Placeholder    | Placeholder |
-    | **Placeholder** | Placeholder    | Placeholder |
+With **raw** set to **true**, the entries contain the database columns of the category instead.
 
 ### Example
 
@@ -40,7 +44,7 @@ Read categories assigned to a object type.
       "method": "cmdb.object_type_categories",
       "params": {
         "type":  14,
-        "apikey": "h3md6u3y",
+        "apikey": "xxx",
         "language": "en"
       },
       "id": 1

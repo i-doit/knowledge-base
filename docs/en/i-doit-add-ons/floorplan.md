@@ -113,7 +113,7 @@ Base floorplan:
         -   obj H
 ```
 
-In the "Base" floorplan, you see the nested "Floorplan A", and within it "Floorplan B" (including "obj E" and "obj F"). "Floorplan C", however, is only displayed as a simple object -- nesting is liwithed to three levels to avoid recursion and performance issues.
+In the "Base" floorplan, you see the nested "Floorplan A", and within it "Floorplan B" (including "obj E" and "obj F"). "Floorplan C", however, is only displayed as a simple object -- nesting is limited to three levels to avoid recursion and performance issues.
 
 ### How it works
 

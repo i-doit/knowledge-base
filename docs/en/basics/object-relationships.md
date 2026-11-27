@@ -101,4 +101,4 @@ In [custom categories](custom-categories.md), object relationships can be docume
 
 ### Direction of the relationship
 
-In `v35`, the direction of the relationship is determined by the object type configuration. There it is configured whether an object is the [relationship master](./custom-object-types.md#felder-in-der-konfiguration) or not. This setting will override the [default direction](#object-relationship-types) setting.
+In `v35`, the direction of the relationship is determined by the object type configuration. There it is configured whether an object is the [relationship master](./custom-object-types.md#fields-in-the-configuration) or not. This setting will override the [default direction](#object-relationship-types) setting.

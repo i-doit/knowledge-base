@@ -39,7 +39,7 @@ If you use PHP-FPM, also restart the PHP-FPM service. Then finish the update wit
 
 ## Version 34
 
-SM-View `2024.3.0.2708` is not compatible with i-doit 34. After the update, an `HTTP 500` server error is thrown. [Deactivate the add-on](../../i-doit-add-ons/index.md#de-enablen) in the [Admin Center](../admin-center.md) to continue working. The error message in the web server log looks like this:
+SM-View `2024.3.0.2708` is not compatible with i-doit 34. After the update, an `HTTP 500` server error is thrown. [Deactivate the add-on](../../i-doit-add-ons/index.md#de-activating) in the [Admin Center](../admin-center.md) to continue working. The error message in the web server log looks like this:
 
 ```log
 PHP Fatal error: Declaration of Symfony\Component\HttpFoundation\ResponseHeaderBag::all(?string $key = null) must be compatible with Symfony\Component\HttpFoundation\HeaderBag::all(?string $key = null): array in /var/www/html/src/classes/modules/shd_smview_connect/vendor/symfony/http-foundation/ResponseHeaderBag.php on line 91
@@ -94,7 +94,7 @@ Follow these steps:
 
 1. Run the update to version **28** again using the updater.
 2. Download the update ZIP for version **29** from the [Customer Portal](../customer-portal.md).
-3. Extract the ZIP in the i-doit folder, as [described here](../../maintenance-and-operation/i-doit-update.md#update-uber-die-konsole-vorbereiten).
+3. Extract the ZIP in the i-doit folder, as [described here](../../maintenance-and-operation/i-doit-update.md#prepare-update-via-the-console).
 4. Run the update to version **29** using the updater.
 
 ## Version 25 - 28

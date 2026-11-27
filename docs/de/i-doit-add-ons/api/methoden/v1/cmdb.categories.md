@@ -22,16 +22,16 @@ Um mehrere Kategorien mit einer Anfrage abzurufen, solltest du die Methode `cmdb
 | **catgID** | Integer        | No       | catgid of a category, can be retrieved via [cmdb.object_type_categories](cmdb.object_type_categories.md#cmdbobject_type_categories) |
 | **catsID** | Integer        | No       | catsid of a category, can be retrieved via [cmdb.object_type_categories](cmdb.object_type_categories.md#cmdbobject_type_categories) |
 
-!!! example "WIP"
+### Response parameters
 
-    ### Response parameters
+JSON key **result** contains a JSON object with the keys **catgID** and **catsID**, depending on the request. If neither **catgID** nor **catsID** is given, **result** is an empty array.
 
-    JSON key **result** contains an array of JSON objects. Each object contains a search result.
+| Key        | JSON data type | Description                                                                                                                                                                                                                             |
+| ---------- | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **catgID** | Object         | Requested global category<br><br>Key: category constant, for example **C__CATG__GLOBAL**<br><br>Value: a JSON object with the entry for a single-value category, or an array of JSON objects (one per entry) for a multi-value category |
+| **catsID** | Object         | Requested specific category<br><br>Key: category constant, for example **C__CATS__PERSON_MASTER**<br><br>Value: same structure as for **catgID**                                                                                        |
 
-    | Key             | JSON data type | Description |
-    | --------------- | -------------- | ----------- |
-    | **Placeholder** | Placeholder    | Placeholder |
-    | **Placeholder** | Placeholder    | Placeholder |
+The keys of an entry are the attributes of the category, see [cmdb.category_info](cmdb.category_info.md). Identifiers are returned as numeric strings. Dialog attributes are JSON objects with the keys **id**, **title**, **const** and **title_lang**.
 
 ### Example
 

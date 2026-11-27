@@ -18,16 +18,18 @@ Get all Layer3 Objects (except Global v4/v6, where the IP is in the address rang
 | ------ | -------------- | -------- | ------------ |
 | **ip** | String         | Yes      | A IP Address |
 
-!!! example "WIP"
+### Response parameters
 
-    ### Response parameters
+JSON key **result** contains an array of JSON objects, one per layer-3 net whose address range contains the IP address. The array is empty if no net matches.
 
-    JSON key **result** contains an array of JSON objects. Each object contains a search result.
-
-    | Key             | JSON data type | Description |
-    | --------------- | -------------- | ----------- |
-    | **Placeholder** | Placeholder    | Placeholder |
-    | **Placeholder** | Placeholder    | Placeholder |
+| Key             | JSON data type | Description                                              |
+| --------------- | -------------- | -------------------------------------------------------- |
+| **id**          | String         | Object identifier of the layer-3 net (as numeric string) |
+| **title**       | String         | Object title                                             |
+| **sysid**       | String         | SYSID (see category **Global**)                          |
+| **cmdb_status** | String         | CMDB status (see category **Global**; as numeric string) |
+| **range from**  | String         | First address of the net; the key contains a space       |
+| **range to**    | String         | Last address of the net; the key contains a space        |
 
 ### Example
 
@@ -38,8 +40,8 @@ Get all Layer3 Objects (except Global v4/v6, where the IP is in the address rang
       "version": "2.0",
       "method": "cmdb.ip_search.read",
       "params": {
-        "ip": "10.10.0.1",
-        "apikey": "h3md6u3y",
+        "ip": "10.10.20.22",
+        "apikey": "xxx",
         "language": "en"
       },
       "id": 1
@@ -49,7 +51,28 @@ Get all Layer3 Objects (except Global v4/v6, where the IP is in the address rang
 === "Response body"
 
     ```json
-    Placeholder
+    {
+      "id": 1,
+      "jsonrpc": "2.0",
+      "result": [
+        {
+          "id": "41",
+          "title": "Netz Server 10.10.20.0/24",
+          "sysid": "SYSID_1794918107",
+          "cmdb_status": "6",
+          "range from": "10.10.20.1",
+          "range to": "10.10.20.254"
+        },
+        {
+          "id": "42",
+          "title": "Supernetz 10.0.0.0/8",
+          "sysid": "SYSID_1794918113",
+          "cmdb_status": "6",
+          "range from": "10.0.0.1",
+          "range to": "10.255.255.254"
+        }
+      ]
+    }
     ```
 
 ## Siehe auch

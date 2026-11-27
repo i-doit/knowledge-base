@@ -50,4 +50,4 @@ Via "New," you create additional documents for the object. The object is already
 
 You can also create new revisions and export documents via the i-doit [Console](../../automation-and-integration/cli/index.md) and automate them.
 
-The command [documents](index.md#cli-console-commands-und-optionen) is available for these operations.
+The command [documents](index.md#cli-console-commands-and-options) is available for these operations.

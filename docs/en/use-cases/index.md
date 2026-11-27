@@ -79,7 +79,7 @@ The placement of hardware and more is an essential component of i-doit. This art
 
 ## [Switch Stacking](./switch-stacking.md)
 
-With the [object type](../basics/object-type-configuration.md) **Stacking**, it is possible to define a stack group with multiple members that exchange information with each other. Although stacking can be used for different object types, the original concept for this object type and the associated [category](../basics/categories-and-attributes.md) **Stack Members** traces back to switch stacking. The object type can be found under the [object type group](../basics/it-documentation-structure.md#objekttypgruppe) **Other** starting from version 1.7.
+With the [object type](../basics/object-type-configuration.md) **Stacking**, it is possible to define a stack group with multiple members that exchange information with each other. Although stacking can be used for different object types, the original concept for this object type and the associated [category](../basics/categories-and-attributes.md) **Stack Members** traces back to switch stacking. The object type can be found under the [object type group](../basics/it-documentation-structure.md#object-type-group) **Other** starting from version 1.7.
 
 ## [Variable Reports](./variable-reports.md)
 

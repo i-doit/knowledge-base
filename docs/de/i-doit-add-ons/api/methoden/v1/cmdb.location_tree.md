@@ -18,16 +18,20 @@ This method can be used to build the location tree. Always exactly one level is 
 | ------ | -------------- | -------- | -------------------------------------------- |
 | **id** | Integer        | Yes      | A location object, for example a City **31** |
 
-!!! example "WIP"
+### Response parameters
 
-    ### Response parameters
+JSON key **result** contains an array of JSON objects, one per location directly below the requested object.
 
-    JSON key **result** contains an array of JSON objects. Each object contains a search result.
-
-    | Key             | JSON data type | Description |
-    | --------------- | -------------- | ----------- |
-    | **Placeholder** | Placeholder    | Placeholder |
-    | **Placeholder** | Placeholder    | Placeholder |
+| Key                   | JSON data type | Description                                             |
+| --------------------- | -------------- | ------------------------------------------------------- |
+| **id**                | Integer        | Object identifier                                       |
+| **title**             | String         | Object title                                            |
+| **sysid**             | String         | SYSID (see category **Global**)                         |
+| **type**              | Integer        | Object type identifier                                  |
+| **type_title**        | String         | Translated name of object type                          |
+| **status**            | Integer        | Record status of the object, for example **2** (Normal) |
+| **cmdb_status**       | Integer        | CMDB status (see category **Global**)                   |
+| **cmdb_status_title** | String         | Translated CMDB status (see category **Global**)        |
 
 ### Example
 
@@ -39,7 +43,7 @@ This method can be used to build the location tree. Always exactly one level is 
       "method": "cmdb.location_tree",
       "params": {
         "id": 31,
-        "apikey": "h3md6u3y",
+        "apikey": "xxx",
         "language": "en"
       },
       "id": 1

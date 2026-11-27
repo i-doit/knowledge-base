@@ -66,7 +66,7 @@ unzip idoit-33-update.zip
 
 Now adjust the file permissions so that the web server has read and write access to **i-doit**.
 
-!!! info "The user:group combination **www-data:www-data** used here refers to **Debian** or **Ubuntu** Linux. If you are using a different operating system, you must adjust the user:group combination accordingly. See [here](../../installation/manual-installation/setup.md#installationspaket-herunterladen-und-entpacken)."
+!!! info "The user:group combination **www-data:www-data** used here refers to **Debian** or **Ubuntu** Linux. If you are using a different operating system, you must adjust the user:group combination accordingly. See [here](../../installation/manual-installation/setup.md#download-and-extract-the-installation-package)."
 
 !!! quote ""
     === "Debian & Ubuntu"

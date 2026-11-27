@@ -19,7 +19,7 @@ To trace which printer is assigned to which room from both the room and the prin
 ## Custom Category Area Printer
 
 To assign printers to the respective rooms, we create a custom category called **Area Printer**.
-This is assigned to the [object type](../basics/it-documentation-structure.md#objekttyp) **Printer** and defined as a [single-value category](../basics/it-documentation-structure.md#single-value-kategorie). The [attribute](../basics/it-documentation-structure.md#attribut) **Area printer for** is added as an **Object relationship (Multiple objects)** with the addition **Share access**.
+This is assigned to the [object type](../basics/it-documentation-structure.md#object-type) **Printer** and defined as a [single-value category](../basics/it-documentation-structure.md#single-value-category). The [attribute](../basics/it-documentation-structure.md#attribute) **Area printer for** is added as an **Object relationship (Multiple objects)** with the addition **Share access**.
 
 [![Custom categories](../assets/images/en/use-cases/variable-reports/1-vr.png)](../assets/images/en/use-cases/variable-reports/1-vr.png)
 

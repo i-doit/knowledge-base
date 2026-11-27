@@ -51,16 +51,25 @@ Default relation types are:
 | Replication partner        | 24  | C__RELATION_TYPE__REPLICATION_PARTNER    |
 | SOA-Component              | 25  | C__RELATION_TYPE__SOA_COMPONENTS         |
 
-!!! example "WIP"
+### Response parameters
 
-    ### Response parameters
+JSON key **result** contains a JSON object. Keys are the identifiers of the relation objects; each value is a JSON object with the keys **data** and **children**.
 
-    JSON key **result** contains an array of JSON objects. Each object contains a search result.
-
-    | Key             | JSON data type | Description |
-    | --------------- | -------------- | ----------- |
-    | **Placeholder** | Placeholder    | Placeholder |
-    | **Placeholder** | Placeholder    | Placeholder |
+| Key                                | JSON data type | Description                                                                       |
+| ---------------------------------- | -------------- | --------------------------------------------------------------------------------- |
+| **data.id**                        | Integer        | Object identifier of the relation                                                 |
+| **data.title**                     | String         | Title of the relation, for example **"Admin has member John Doe"**                |
+| **data.cmdb_status_title**         | String         | Translated CMDB status of the relation; may be empty                              |
+| **data.related_object**            | Integer        | Object identifier of the related object                                           |
+| **data.related_title**             | String         | Title of the related object                                                       |
+| **data.related_type**              | Integer        | Object type identifier of the related object                                      |
+| **data.related_type_title**        | String         | Translated name of object type of the related object                              |
+| **data.related_cmdb_status_title** | String         | Translated CMDB status of the related object                                      |
+| **data.master**                    | Integer        | Object identifier of the master object of the relation                            |
+| **data.slave**                     | Integer        | Object identifier of the slave object of the relation                             |
+| **data.type**                      | Integer        | Object type identifier of the relation object                                     |
+| **data.type_title**                | String         | Translated name of object type of the relation object, for example **"Relation"** |
+| **children**                       | Boolean        | Should always be **false**                                                        |
 
 ### Example
 
@@ -171,7 +180,7 @@ Default relation types are:
         "id": 62,
         "relation_type": 5,
         "raw": false,
-        "apikey": "h3md6u3y",
+        "apikey": "xxx",
         "language": "en"
       },
       "id": 1

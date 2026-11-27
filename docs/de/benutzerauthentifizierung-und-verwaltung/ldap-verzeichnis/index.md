@@ -194,7 +194,7 @@ Der ausführende Benutzer benötigt Supervisor-Rechte auf die Kategorien **Grupp
 
 ## Logging
 
-Im Verzeichnis `log/` deiner i-doit-Installation findest du die Logdatei `ldap_YYYY-MM-DD.log`. Das Logging konfigurierst du im [Admin-Center](../../administration/admin-center.md#system-settings) oder über die [Experteneinstellungen](../../administration/admin-center.md#expert-settings-system-bezogen).
+Im Verzeichnis `log/` deiner i-doit-Installation findest du die Logdatei `ldap_YYYY-MM-DD.log`. Das Logging konfigurierst du im [Admin-Center](../../administration/admin-center.md#system-settings) oder über die [Experteneinstellungen](../../administration/admin-center.md#expert-settings-system-weit).
 
 ## Den ldap-sync ausführen
 

@@ -17,7 +17,7 @@ Read object type groups.
 | Key          | JSON data type | Required | Description                                                                                                                                                                                                                                       |
 | ------------ | -------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **filter**   | Array          | No       | Filter list of objects; see below for a full list of options                                                                                                                                                                                      |
-| **liwith**    | Mixed          | No       | Maximum amount of objects (as integer), for example, fetch the first thousand of objects: **1000**<br><br>Combine this liwith with an offset (as string), for example, fetch the next thousand of objects: **"1000,1000"**                         |
+| **limit**    | Mixed          | No       | Maximum amount of objects (as integer), for example, fetch the first thousand of objects: **1000**<br><br>Combine this limit with an offset (as string), for example, fetch the next thousand of objects: **"1000,1000"**                         |
 | **sort**     | String         | No       | Only useful in combination with key **order_by**; allowed values are either **"ASC"** (ascending) or **"DESC"** (descending)                                                                                                                      |
 | **order_by** | String         | No       | Order result set by (see filter for more details what each value means):<br>-   **"email"**,<br>-   **"first_name"**,<br>-   **"id"**,<br>-   **"last_name"**,<br>-   **"sysid"**,<br>-   **"type"**,<br>-   **"title"**,<br>-   **"type_title"** |
 | **raw**      | Boolean        | No       | Displayed raw formatting, see example.                                                                                                                                                                                                            |
@@ -33,16 +33,18 @@ Read object type groups.
 
 You can use any combination of filters. Filters are logically associated with AND. A valid combination could be: "Give me all servers which have the same hostname."
 
-!!! example "WIP"
+### Response parameters
 
-    ### Response parameters
+JSON key **result** contains an array of JSON objects, one per object type group.
 
-    JSON key **result** contains an array of JSON objects. Each object contains a search result.
+| Key        | JSON data type | Description                                                     |
+| ---------- | -------------- | --------------------------------------------------------------- |
+| **id**     | String         | Object type group identifier (as numeric string)                |
+| **title**  | String         | Translated name of object type group                            |
+| **const**  | String         | Object type group constant                                      |
+| **status** | String         | Record status (as numeric string), for example **"2"** (Normal) |
 
-    | Key             | JSON data type | Description |
-    | --------------- | -------------- | ----------- |
-    | **Placeholder** | Placeholder    | Placeholder |
-    | **Placeholder** | Placeholder    | Placeholder |
+With **raw** set to **true**, the entries contain the database columns of the object type group instead.
 
 ### Example
 

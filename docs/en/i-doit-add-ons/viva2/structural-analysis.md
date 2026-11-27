@@ -46,7 +46,7 @@ The cleaned network plan should be linked in the "Information Domain" category o
 
 ## Communication Links
 
-The communication links to be documented are maintained via the new [Communication Link object type](objecttypes-categories.md#kommunikationsverbindung) in i-doit.
+The communication links to be documented are maintained via the new [Communication Link object type](objecttypes-categories.md#communication-link) in i-doit.
 
 [![Communication Links](../../assets/images/en/i-doit-add-ons/viva2/structural-analysis/communication-link.png)](../../assets/images/en/i-doit-add-ons/viva2/structural-analysis/communication-link.png){:target="_blank"}
 
