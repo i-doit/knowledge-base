@@ -15,9 +15,9 @@ Highlights in this release
 *   A complete **redesign** of the i-doit frontend to **improve the user experience**.
 *   Added **compatibility** for **PHP 8.0**.
 *   **New configuration** to **create custom translations** and **custom languages**.
-*   **Setting** to define a [**default language** for newly created users](../../administration/management/tenant-management/tenant-settings.md#sprache).
+*   **Setting** to define a [**default language** for newly created users](../../administration/management/tenant-management/tenant-settings.md#language).
 *   **New configuration** to **[attribute settings](../../administration/management/data-view/attribute-settings.md)** from categories and/or overview pages.
-*   **Option** to **log** the **[last login](../../administration/management/tenant-management/tenant-settings.md#sicherheit)** of a user.
+*   **Option** to **log** the **[last login](../../administration/management/tenant-management/tenant-settings.md#security)** of a user.
 *   [**Export** for **reports**](../../evaluation/report-manager.md#exportingimporting-reports) which have been created via **query builder**.
 
 Add-ons

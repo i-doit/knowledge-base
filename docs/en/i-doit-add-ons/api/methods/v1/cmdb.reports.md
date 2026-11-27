@@ -17,7 +17,7 @@ Display the result of a report.
 | Key        | JSON data type | Required | Description                                  |
 | ---------- | -------------- | -------- | -------------------------------------------- |
 | **id**     | String         | No       | Identifier of the Report                     |
-| **liwith**  | Integer        | No       | Liwith displayed results                      |
+| **limit**  | Integer        | No       | Limit displayed results                      |
 | **offset** | Integer        | No       | Start displaying results from defined offset |
 
 ### Response parameters
@@ -58,7 +58,7 @@ JSON key **result** contains the Report result.
     }
     ```
 
-=== "Request boy with Identifier"
+=== "Request body with Identifier"
 
     ```json
     {
@@ -91,7 +91,7 @@ JSON key **result** contains the Report result.
     }
     ```
 
-=== "Request boy with liwith and offset"
+=== "Request body with limit and offset"
 
     ```json
     {
@@ -113,7 +113,7 @@ JSON key **result** contains the Report result.
         },
     ```
 
-=== "Response body with liwith and offset"
+=== "Response body with limit and offset"
 
     ```json
     {

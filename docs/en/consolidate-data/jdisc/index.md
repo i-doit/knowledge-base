@@ -179,7 +179,7 @@ This report allows removing archived and deleted i-doit devices directly from JD
 
 ## FAQ
 
-If the import exceeds the default `memory_limit` of **2G**, the following value can be set in the [Expert Settings](../../administration/management/tenant-management/expert-settings.md#liste-der-einstellungen):
+If the import exceeds the default `memory_limit` of **2G**, the following value can be set in the [Expert Settings](../../administration/management/tenant-management/expert-settings.md):
 
 ```ini
 system.memory-limit.jdisc = 3G

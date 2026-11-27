@@ -185,7 +185,7 @@ Ja. Eigene Objekttypen: [Benutzerdefinierte Objekttypen](grundlagen/benutzerdefi
 
 ### Wie erstelle ich einen Report?
 
-Mit dem [Report Manager](auswertungen/report-manager.md). Du kannst Reports über den visuellen Abfrage-Editor erstellen oder direkt SQL schreiben. Reports lassen sich auch per [Cronjob exportieren](wartung-und-betrieb/cronjobs-einrichten.md#report-export).
+Mit dem [Report Manager](auswertungen/report-manager.md). Du kannst Reports über den visuellen Abfrage-Editor erstellen oder direkt SQL schreiben. Reports lassen sich auch per [Cronjob exportieren](wartung-und-betrieb/cronjobs-einrichten.md).
 
 ### Wo finde ich die Changelogs?
 

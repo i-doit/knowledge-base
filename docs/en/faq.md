@@ -31,7 +31,7 @@ Details: [Licensing](maintenance-and-operation/licensing.md)
 
 Common causes:
 
-- **Firewall blocks license verification** — i-doit must be able to reach `lizenzen.i-doit.com` and `center.i-doit.com` on port 443. See [Firewall rules](maintenance-and-operation/security-and-protection.md#firewall-freigaben-fur-i-doit).
+- **Firewall blocks license verification** — i-doit must be able to reach `lizenzen.i-doit.com` and `center.i-doit.com` on port 443. See [Firewall rules](maintenance-and-operation/security-and-protection.md#firewall-rules-for-i-doit).
 - **Object limit reached** — check in the Admin Center under **Licenses** how many objects are licensed.
 - **Outdated cache** — clear the cache under **Administration → System repair and cleanup**.
 
@@ -97,7 +97,7 @@ Yes, via [cronjobs](maintenance-and-operation/set-up-cron-jobs.md). Both CSV and
 
 ### How do I synchronize users from Active Directory?
 
-Via the [LDAP synchronization](user-authentication-and-management/ldap-directory/index.md). You configure an LDAP server in the Administration and set up a cronjob for regular synchronization. A complete configuration example can be found under [Configuration files — ldap-sync](automation-and-integration/cli/configuration-files.md#beispiel-fur-den-befehl-ldap-sync).
+Via the [LDAP synchronization](user-authentication-and-management/ldap-directory/index.md). You configure an LDAP server in the Administration and set up a cronjob for regular synchronization. A complete configuration example can be found under [Configuration files — ldap-sync](automation-and-integration/cli/configuration-files.md#example-for-the-ldap-sync-command).
 
 ### The LDAP sync doesn't find any users — what should I do?
 
@@ -173,7 +173,7 @@ Yes, i-doit offers a [JSON-RPC API](i-doit-add-ons/api/index.md). With it, you c
 
 ### How do I secure the API?
 
-Keep the API key secret, restrict access by IP, create a dedicated API user with minimal permissions. Details: [Securing the API](maintenance-and-operation/security-and-protection.md#api-absichern)
+Keep the API key secret, restrict access by IP, create a dedicated API user with minimal permissions. Details: [Securing the API](maintenance-and-operation/security-and-protection.md#secure-the-api)
 
 ---
 

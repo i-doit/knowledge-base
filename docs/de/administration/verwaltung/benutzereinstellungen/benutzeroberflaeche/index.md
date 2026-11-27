@@ -9,7 +9,7 @@ lang: de
 
 Hier findest du die Einstellungen für die Benutzeroberfläche
 
-[![Benutzeroberfläche](../../../../assets/images/de/administration/benutzereinstellungen/benutzeroberflaeche.png)](/img/assets/images/de/administration/benutzereinstellungen/benutzeroberflaeche.png)
+[![Benutzeroberfläche](../../../../assets/images/de/administration/benutzereinstellungen/benutzeroberflaeche.png)](../../../../assets/images/de/administration/benutzereinstellungen/benutzeroberflaeche.png)
 
 ## Abstände
 

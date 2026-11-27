@@ -15,9 +15,9 @@ Here you can find the settings for the user interface
 
 | Option                | Value                                                                            |
 | --------------------- | -------------------------------------------------------------------------------- |
-| Row spacing           | [Small or Medium or Large](../../../../basics/web-gui.md#zeilen-abstande)        |
-| Spacing in menu trees | [Small or Medium or Large](../../../../basics/web-gui.md#abstande-in-menubaumen) |
-| Display spacers       | [Yes or No](../../../../basics/web-gui.md#abstandhalter-darstellen)              |
+| Row spacing           | [Small or Medium or Large](../../../../basics/web-gui.md#row-spacing)        |
+| Spacing in menu trees | [Small or Medium or Large](../../../../basics/web-gui.md#spacing-in-menu-trees) |
+| Display spacers       | [Yes or No](../../../../basics/web-gui.md#display-spacers)              |
 
 ## Main menu
 
@@ -51,8 +51,8 @@ Here you can find the settings for the user interface
 
 | Option                  | Value                                                                                                                      |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| Default tree view       | [Object view](../../../../basics/web-gui.md#objektansicht)<br>[Location view](../../../../basics/web-gui.md#standortsicht) |
-| Tree view type          | [Physical location or Logical location or Combined view](../../../../basics/web-gui.md#standortsicht)                      |
+| Default tree view       | [Object view](../../../../basics/web-gui.md#object-view)<br>[Location view](../../../../basics/web-gui.md#location-view) |
+| Tree view type          | [Physical location or Logical location or Combined view](../../../../basics/web-gui.md#location-view)                      |
 | Hide empty object types | Yes or No                                                                                                                  |
 | Hide empty categories   | Yes or No                                                                                                                  |
 

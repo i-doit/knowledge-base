@@ -18,7 +18,7 @@ Eine vollständige Beschreibung aller vordefinierten Objekttypen mit Verwendungs
 
 Alternativ: Klicke in der Objektliste eines Typs auf das Zahnrad-Symbol oben rechts.
 
-[![Objekttyp-Konfiguration](../assets/images/de/grundlagen/objekttypen/1-ot.png)](/img/assets/images/de/grundlagen/objekttypen/1-ot.png)
+[![Objekttyp-Konfiguration](../assets/images/de/grundlagen/objekttypen/1-ot.png)](../assets/images/de/grundlagen/objekttypen/1-ot.png)
 
 Die folgende Beschreibung folgt der Reihenfolge der Felder, wie sie in der Konfigurationsmaske erscheinen.
 

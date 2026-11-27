@@ -179,7 +179,7 @@ Dieser Report ermöglicht das Entfernen archivierter und gelöschter i-doit Ger�
 
 ## FAQ
 
-Falls der Import das Standard-`memory_limit` von **2G** überschreitet, kann in den [Experteneinstellungen](../../administration/verwaltung/mandanten-name-verwaltung/experteneinstellungen.md#liste-der-einstellungen) folgender Wert gesetzt werden:
+Falls der Import das Standard-`memory_limit` von **2G** überschreitet, kann in den [Experteneinstellungen](../../administration/verwaltung/mandanten-name-verwaltung/experteneinstellungen.md) folgender Wert gesetzt werden:
 
 ```ini
 system.memory-limit.jdisc = 3G

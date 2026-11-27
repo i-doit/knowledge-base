@@ -26,11 +26,11 @@ You can find the option to define these settings under **Administration → Data
 
 [![attribute-validate](../assets/images/de/effizientes-dokumentieren/attributvalidierung-und-pflichtfelder/vup-1.png)](../assets/images/de/effizientes-dokumentieren/attributvalidierung-und-pflichtfelder/vup-1.png)
 
-First, you get the option to set the visibility of the attribute with three choices. A detailed view of this option can be found in the article [**Attribute Visibility**](../administration/management/data-view/attribute-settings.md#attributsichtbarkeit)
+First, you get the option to set the visibility of the attribute with three choices. A detailed view of this option can be found in the article [**Attribute Visibility**](../administration/management/data-view/attribute-settings.md#attribute-visibility)
 
 [![attribute-visibility](../assets/images/de/effizientes-dokumentieren/attributvalidierung-und-pflichtfelder/vup-1.1.png)](../assets/images/de/effizientes-dokumentieren/attributvalidierung-und-pflichtfelder/vup-1.1.png)
 
-Now the attributes of the category are ready for [validation configuration](../administration/management/data-view/attribute-settings.md#verwendung). By checking the **Mandatory field** checkbox, you can require users to enter data in this field. It is not possible to save the category if the field is empty. The marking in the category is done via a red asterisk (\*) next to the attribute name.
+Now the attributes of the category are ready for [validation configuration](../administration/management/data-view/attribute-settings.md#usage). By checking the **Mandatory field** checkbox, you can require users to enter data in this field. It is not possible to save the category if the field is empty. The marking in the category is done via a red asterisk (\*) next to the attribute name.
 
 Furthermore, you can specify whether the attribute must be unique in your [IT documentation](../basics/it-documentation-structure.md), i.e., may only exist once at most. This is done via the following buttons:
 
@@ -42,7 +42,7 @@ If a value for a field is already in use, the user is informed by a notice that 
 
 [![attribute-must](../assets/images/de/effizientes-dokumentieren/attributvalidierung-und-pflichtfelder/vup-2.png)](../assets/images/de/effizientes-dokumentieren/attributvalidierung-und-pflichtfelder/vup-2.png)
 
-The **Attribute must** selection is available where there is no existing category-internal validation. A date field, for example, is generally only able to accept and save a date. [Dialog-Plus fields](../basics/attribute-fields.md#dialog-plus-feld-erweitertes-drop-down) only allow the defined values for selection. Such fields therefore cannot be restricted to a specific field value.
+The **Attribute must** selection is available where there is no existing category-internal validation. A date field, for example, is generally only able to accept and save a date. [Dialog-Plus fields](../basics/attribute-fields.md#dialog-plus-field-extended-drop-down) only allow the defined values for selection. Such fields therefore cannot be restricted to a specific field value.
 
 If no category-internal validation exists, you can either define specific content types that the value must match or specify custom text values from which users can choose.
 

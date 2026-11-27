@@ -47,7 +47,7 @@ In this example add-on, the class is named example_report_view_01.class.php -- t
 
 As soon as a Report View is opened in the i-doit frontend, the backend first runs the optional init() method and then the start() method. This serves as the entry point into the Report View and is typically used to load all initial data that will subsequently be used in the Smarty template.
 
-We can use the [TOM logic](./programming-categories.md#ubergabe-der-daten-an-smarty-plugins-mittels-tom-und-rules) here, similar to categories -- in the example add-on, we use this method to prepare the status filter.
+We can use the [TOM logic](./programming-categories.md#passing-data-to-smarty-plugins-via-tom-and-rules) here, similar to categories -- in the example add-on, we use this method to prepare the status filter.
 
 ### Loading Data via ajax_request()
 

@@ -23,7 +23,7 @@ The **ISMS add-on** for the **i-doit CMDB** is a powerful extension for **inform
 The ISMS add-on requires a functional i-doit installation. This documentation refers to the current version of the add-on unless otherwise stated.
 
 !!! warning "The ISMS add-on consumes licensed objects"
-    The ISMS add-on uses approximately **2015** licensed objects, see [Import](configuration.md#4-manahmen-hinzufugen). Make sure that your i-doit license contains enough licensed objects to be able to use the add-on.
+    The ISMS add-on uses approximately **2015** licensed objects, see [Import](configuration.md#4-add-measures). Make sure that your i-doit license contains enough licensed objects to be able to use the add-on.
 
 * * *
 
@@ -57,7 +57,7 @@ When the ISMS add-on is installed, a new object type group named "ISMS" is creat
 
 CSV import files are available for several of these object types to quickly and efficiently import data. You can customize all objects and object types in i-doit to your individual requirements as usual.
 
-The ISMS add-on also supports [consideration of location rights](configuration.md#optionale-einstellungen) to ensure secure and flexible rights management.
+The ISMS add-on also supports [consideration of location rights](configuration.md#optionally-settings) to ensure secure and flexible rights management.
 
 ### Reports for Evaluation and Documentation
 
