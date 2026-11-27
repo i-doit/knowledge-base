@@ -28,12 +28,26 @@ Dauert das Erstellen einer Vorlage länger als das eingestellte Timeout, wird di
 
 Standardmäßig nutzt das Add-on den KI Dienst von i-doit. Der Dienst und das verwendete Modell sind dabei fest vorgegeben und nicht einstellbar. Für die Nutzung benötigst du einen KI Schlüssel, den du im Feld **KI API Schlüssel** einträgst. Den Schlüssel erhältst du, indem du das Produkt "Documents (with AI)" im Add-on & Subscription Center kaufst.
 
-Möchtest du stattdessen einen eigenen, selbst betriebenen KI Dienst anbinden, benötigst du die zusätzliche Lizenz `document-custom-ai`. Diese erhältst du, indem du das Produkt "AI Documents Creator (bring own AI)" im Add-on & Subscription Center kaufst. Der Dienst muss eine OpenAI-kompatible Schnittstelle bereitstellen. Mit dieser Lizenz zeigt die Konfiguration zusätzlich zwei Felder, über die du den eigenen Dienst einträgst:
+Möchtest du stattdessen einen eigenen, selbst betriebenen KI Dienst anbinden, benötigst du die Lizenz `document-custom-ai`. Diese erhältst du, indem du das Produkt "AI Documents Creator (bring own AI)" im Add-on & Subscription Center kaufst. Der Dienst muss eine OpenAI-kompatible Schnittstelle bereitstellen. Mit dieser Lizenz zeigt die Konfiguration zusätzlich zwei Felder, über die du den eigenen Dienst einträgst:
 
 - **KI URL Endpunkt**: Adresse der OpenAI-kompatiblen Schnittstelle deines Dienstes.
 - **KI Modell**: Name des Modells, das der Dienst bereitstellt.
 
 Der **KI API Schlüssel** ist bei einem eigenen Dienst optional und bleibt leer, wenn der Dienst keinen Schlüssel verlangt.
+
+Ab Version 1.13 lizenziert die Lizenz `document-custom-ai` auch allein das Add-on Dokumente. In Version 1.12 ist zusätzlich die Lizenz für das Add-on Dokumente nötig.
+
+### Verwendete KI Tokens
+
+Ab Version 1.12 zeigt die Konfiguration den Eintrag **Verwendete KI Tokens**, wenn das Add-on den KI Dienst von i-doit nutzt und **KI Funktionen** auf **Aktiv** steht. Der Eintrag zeigt den Tokenverbrauch für die Zeiträume, die der KI Dienst von i-doit meldet, zum Beispiel **Heute**, **Diese Woche**, **Diesen Monat**, **Dieses Jahr** und **Gesamt**:
+
+- Für einen Zeitraum mit Limit zeigt ein Fortschrittsbalken den Anteil der verwendeten Tokens. Darunter steht, wie viele der verfügbaren Tokens verwendet sind und wie viel Prozent das sind.
+- Für einen Zeitraum ohne Limit erscheint nur die Anzahl der verwendeten Tokens zusammen mit dem Hinweis, dass der Tarif kein Nutzungslimit hat.
+- Können die Verbrauchsdaten nicht geladen werden, erscheint eine Fehlermeldung in roter Schrift.
+
+[![Verwendete KI Tokens](../../assets/images/de/i-doit-add-ons/documents/ki-funktionen/verwendete-ki-tokens.png)](../../assets/images/de/i-doit-add-ons/documents/ki-funktionen/verwendete-ki-tokens.png)
+
+Bei einer eigenen KI Verbindung (Lizenz `document-custom-ai`) fehlt der Eintrag, weil Verbrauchsdaten nur für den KI Dienst von i-doit vorliegen.
 
 ## Dokumentenvorlage mit KI erstellen
 
