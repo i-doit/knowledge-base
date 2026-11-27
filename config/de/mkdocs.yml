@@ -65,6 +65,7 @@ plugins:
       strict: false
   - redirects:
       redirect_maps:
+        'i-doit-add-ons/flows.md': 'i-doit-add-ons/flows/index.md'
         'i-doit-add-ons/mcp/index.md': 'i-doit-add-ons/i-doit-mcp/index.md'
         'i-doit-add-ons/checkmk2/index.md': 'i-doit-add-ons/shd-connect/checkmk-adapter.md'
         'i-doit-add-ons/checkmk2/abgleich-von-objekten-aus-i-doit-mit-hosts-aus-checkmk.md': 'i-doit-add-ons/shd-connect/checkmk-adapter.md'
@@ -971,4 +972,3 @@ nav:
 not_in_nav: |
   _archiv/*
   i-doit-add-ons/api/methoden/v1/cmdb.ip_search.md
-  i-doit-add-ons/flows.md
