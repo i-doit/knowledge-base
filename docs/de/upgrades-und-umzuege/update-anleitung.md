@@ -1,5 +1,5 @@
 ---
-title: Update Anleitung von i-doit 1.7.4 zu 34
+title: Update Anleitung von i-doit 1.7.4 zu 39
 description: i-doit update guide
 icon: fontawesome/brands/linux
 status:
@@ -8,7 +8,7 @@ lang: de
 
 ## Wichtige Informationen bevor du beginnst
 
-Hier findest du eine kurze Anleitung zum Aktualisieren deines i-doit auf i-doit 31.<br>
+Hier findest du eine kurze Anleitung zum Aktualisieren deines i-doit auf i-doit 39.<br>
 Möglicherweise musst du dein Betriebssystem aktualisieren.<br>
 Diese Anweisungen gelten für **Debian**, die verwendeten Befehle unterscheiden sich in anderen Betriebssystemen. Bevor du beginnst, lädst du alle Updates herunter, die du durchführen musst, und kopiere sie in den i-doit-Stammordner.
 
@@ -16,7 +16,7 @@ Diese Anweisungen gelten für **Debian**, die verwendeten Befehle unterscheiden 
 
     Diese Anleitung wird ohne Gewähr bereitgestellt und funktioniert möglicherweise nicht in deinem spezifischen Anwendungsfall.<br>
     Dies hängt von der Konfiguration und Installationsart deiner Instanz ab.
-    Auch benötigte **Add-on**-Updates werden nicht erwähnt.
+    Benötigte **Add-on**-Updates werden nicht Schritt für Schritt beschrieben. Prüfe vor jedem Schritt die Mindestversionen der Add-ons in der [Kompatibilitätsmatrix](../installation/systemvoraussetzungen.md#kompatibilitatsmatrix) und aktualisiere deine Add-ons bei Bedarf zuerst.
 
 !!! attention "Backup"
     Erstelle vor jedem Aktualisierungsschritt ein Backup oder einen Snapshot!
@@ -30,6 +30,26 @@ Diese Anweisungen gelten für **Debian**, die verwendeten Befehle unterscheiden 
     Wenn ein Hotfix erforderlich ist, um eine ältere Version zu aktualisieren, findest du diesen in den Hotfix-Unterkapiteln hier im Knowledge Base.
     Da es sich um Hotfixes handelt, empfehlen wir, sie nur zu installieren, wenn die Anpassungen für einen reibungslosen Betrieb deiner Installation erforderlich sind oder wenn du vom Support-Team dazu aufgefordert wirst. Stelle sicher, dass du ein [Backup von i-doit](../wartung-und-betrieb/daten-sichern-und-wiederherstellen/index.md) erstellt hast, bevor du einen Hotfix verwendest.
     Informiere uns über die Verwendung von Hotfixes, wenn du dich anschließend an unser Support-Team wendest.
+
+## Update-Pfad
+
+Manche Versionen lassen sich nicht überspringen, und manche Versionen setzen eine Mindestversion voraus. Diese Anforderungen stehen in der [Kompatibilitätsmatrix](../installation/systemvoraussetzungen.md#kompatibilitatsmatrix). Ab i-doit 1.19 gehst du diese Schritte in dieser Reihenfolge:
+
+| Schritt | Update                                        | Warum dieser Schritt nötig ist                                  |
+| ------- | --------------------------------------------- | --------------------------------------------------------------- |
+| 1       | [1.19 auf 20](#aktualisierung-von-119-auf-20) | i-doit 20 ist die erste Version nach 1.19                       |
+| 2       | [20 auf 29](#aktualisierung-von-20-auf-29)    | i-doit 29 lässt sich nicht überspringen                         |
+| 3       | [Debian 11 auf 12](#upgrade-von-debian-11-auf-12), [PHP 8.2](#konfigurieren-von-php-82) und [MariaDB 10.11](#mariadb-1011-upgrade) | i-doit 31 und neuer brauchen mindestens PHP 8.0 und MariaDB 10.4 |
+| 4       | [29 auf 31](#aktualisierung-von-29-auf-31)    | i-doit 32 bis 35 setzen mindestens i-doit 31 voraus, und i-doit 31 unterstützt MariaDB 10.11 aus Debian 12 |
+| 5       | [31 auf 35](#aktualisierung-von-31-auf-35)    | i-doit 35 lässt sich nicht überspringen                         |
+| 6       | [35 auf 39](#aktualisierung-von-35-auf-39)    | i-doit 36 bis 39 setzen mindestens i-doit 35 voraus             |
+
+i-doit 29 unterstützt MariaDB nur bis Version 10.6. Führe die Schritte 3 und 4 deshalb direkt nacheinander aus und arbeite dazwischen nicht mit i-doit. Ab Schritt 3 läuft i-doit 29 mit PHP 8. Prüfe deshalb vor Schritt 3, ob deine Add-ons PHP 8 unterstützen.
+
+!!! note "**.htaccess und Apache-VirtualHost**"
+    Jedes Update-Paket bringt eine neue `.htaccess`-Datei im i-doit-Verzeichnis mit. Nutzt dein Apache-VirtualHost `AllowOverride None` und enthält die Regeln der `.htaccess`-Datei direkt, wie in unseren [Installationsanleitungen](../installation/manuelle-installation/debian/index.md), wirken die Änderungen nicht. Vergleiche nach jedem Update `/var/www/html/.htaccess` mit deiner VirtualHost-Konfiguration und übernimm die Änderungen. i-doit 39 ergänzt zum Beispiel Regeln für `src/mcp.php` und den `Authorization`-Header.
+
+Läuft bei dir eine ältere Version als 1.19, beginnst du mit dem passenden Abschnitt weiter unten und gehst der Reihe nach vor. Alle Update-Pakete findest du im [Kundenportal](../administration/kundenportal.md) oder bei den [Download-Links](../download-links.md).
 
 ## Aktualisierung von 1.7.4 auf 1.8
 
@@ -680,7 +700,10 @@ sudo -u www-data unzip idoit-20-update.zip
 
 Wenn du dazu aufgefordert wirst, überschreibe alles, indem du **A** eingibst.
 
-Überprüfe im Webinterface, ob das Update auf Version 20 angezeigt und ausgewählt ist, und führst du dann das Update durch.
+Wähle im Webinterface das Update auf Version 20 aus und führe das Update durch. Der Updater wählt eventuell deine aktuelle Version 1.19 vor. Wähle dann Version 20 von Hand aus, sonst spielt der Updater nur 1.19 erneut ein.
+
+!!! note "**Lizenz erforderlich**"
+    Der Updater bietet nur Updates an, wenn eine gültige Lizenz aktiviert ist. Sonst erscheint die Meldung "Your licence does not allow any updates" (deine Lizenz erlaubt keine Updates). [Aktiviere zuerst deinen Lizenz-Token](../wartung-und-betrieb/lizenzierung.md).
 
 [![Aktualisierung von 1.19 auf 20](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/12-u18-119.png)](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/12-u18-119.png)
 
@@ -729,11 +752,12 @@ Wenn du dazu aufgefordert wirst, überschreibe alles, indem du **A** eingibst.
 sudo nano /etc/apt/sources.list
 ```
 
-Ändere alle Einträge in 'bookworm' oder löschst du alle Einträge und Füge folgendes ein
+Ändere alle Einträge von 'bullseye' auf 'bookworm' oder lösche alle Einträge und füge Folgendes ein. Prüfe auch die Dateien in `/etc/apt/sources.list.d/`.
 
 ```sh
-deb http://deb.debian.org/debian bookworm main
-deb http://deb.debian.org/debian bookworm contrib
+deb http://deb.debian.org/debian bookworm main contrib non-free-firmware
+deb http://deb.debian.org/debian bookworm-updates main contrib non-free-firmware
+deb http://security.debian.org/debian-security bookworm-security main contrib non-free-firmware
 ```
 
 Stoppe nun mysql und cron
@@ -750,11 +774,13 @@ sudo apt-get upgrade
 sudo apt-get full-upgrade
 ```
 
-Starte die Dienste, die wir gestoppt haben
+Starte den Server neu, damit der neue Kernel und alle Dienste geladen werden
 
 ```sh
-sudo systemctl start mysql cron
+sudo reboot
 ```
+
+Während des Upgrades meldet Debian eventuell, dass das automatische MariaDB-Upgrade fehlgeschlagen ist, zum Beispiel mit `Access denied for user 'root'@'localhost'`. Das passiert, wenn der Datenbankbenutzer root ein Passwort hat. Du behebst das im Abschnitt [MariaDB 10.11 Upgrade](#mariadb-1011-upgrade).
 
 Fehler? [Hier lesen](https://www.debian.org/releases/bookworm/amd64/release-notes/ch-upgrading.en.html#trouble)<br>
 
@@ -770,7 +796,7 @@ sudo apt-get clean
 
 Überprüfe deine sources.list, für weitere Informationen siehe [hier](https://wiki.debian.org/SourcesList)
 
-Du befindest dich jetzt bei Debian 12 mit PHP 8.2.18 und MariaDB 10.11.
+Du befindest dich jetzt bei Debian 12 mit PHP 8.2 und MariaDB 10.11.
 
 ## Konfigurieren von PHP 8.2
 
@@ -785,7 +811,6 @@ Füge ein:
 ```ini
 allow_url_fopen = Yes
 file_uploads = On
-magic_quotes_gpc = Off
 max_execution_time = 300
 max_file_uploads = 42
 max_input_time = 60
@@ -793,7 +818,6 @@ max_input_vars = 10000
 memory_limit = 256M
 post_max_size = 128M
 register_argc_argv = On
-register_globals = Off
 short_open_tag = On
 upload_max_filesize = 128M
 display_errors = Off
@@ -808,6 +832,12 @@ session.cookie_lifetime = 0
 mysqli.default_socket = /var/run/mysqld/mysqld.sock
 ```
 
+Debian 12 ersetzt die PHP-7.4-Module nur dann durch PHP-8.2-Module, wenn sie mit den allgemeinen Paketnamen wie `php-bcmath` installiert wurden. Stelle sicher, dass alle PHP-Module installiert sind, die i-doit braucht:
+
+```sh
+sudo apt install libapache2-mod-php php-bcmath php-cli php-common php-curl php-gd php-imagick php-json php-ldap php-mbstring php-memcached php-mysql php-pgsql php-soap php-xml php-zip
+```
+
 Änderungen aktivieren
 
 ```sh
@@ -818,44 +848,89 @@ sudo phpenmod memcached
 sudo systemctl restart apache2.service
 ```
 
-Wenn der apache2 nicht neu startet, startest du den Server neu.
+Meldet `a2dismod` oder `a2enmod`, dass das Modul schon deaktiviert oder aktiviert ist, ist das in Ordnung. Wenn der apache2 nicht neu startet, startest du den Server neu.
 
-i-doit sollte jetzt die neue PHP-Version 8.2.18 unter Verwaltung > [Mandant Name] Verwaltung > System Config Check anzeigen.
+Prüfe die PHP-Version mit `php -v`. Sie sollte PHP 8.2 anzeigen.
 
 ## MariaDB 10.11 Upgrade
 
-Jetzt müssen wir die Tabellen überprüfen und auf die letzte Version aktualisieren mit
+Debian kann die Systemtabellen nicht automatisch aktualisieren, wenn der Datenbankbenutzer root ein Passwort hat. Prüfe die Tabellen und aktualisiere sie auf die neue Version mit
 
 ```sh
 sudo mariadb-upgrade -p
 ```
 
-Gib dein Passwort ein und Überprüfe, ob alles gut gelaufen ist
+Gib dein Passwort ein und überprüfe, ob alles gut gelaufen ist
 
 Starte danach MariaDB neu
 
 ```sh
-sudo systemctl start mysql.service
+sudo systemctl restart mysql.service
 ```
 
-## Aktualisierung von 29 auf 34
+## Aktualisierung von 29 auf 31
 
-Zuerst musst du das Update über die CLI vorbereiten, indem du den i-doit-Ordner unter `/var/www/html/` öffnen und das idoit-Update-Paket mit
+Bereite das Update zuerst über die CLI vor: Öffne den i-doit-Ordner unter `/var/www/html/` und entpacke das i-doit-Update-Paket mit
 
 ```sh
-sudo -u www-data unzip idoit-34-update.zip
+sudo -u www-data unzip idoit-31-update.zip
 ```
 
-entpacken.
+Wenn du gefragt wirst, überschreibst du alles, indem du **A** eingibst.
 
-Wenn du gefragt werden, überschreiben du alles, indem du **A** eingibst.
-
-Im Web-Interface-Updater Überprüfe, ob das Update auf Version 33 angezeigt und ausgewählt ist, und führst du dann das Update durch.
-
-[![Aktualisierung von 29 auf 34](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/14-u18-119.png)](../assets/images/de/upgrades-und-umzuege/update-anleitung-1.7.4-bis-31/14-u18-119.png)
+Prüfe im Web-Interface-Updater, ob das Update auf Version 31 angezeigt und ausgewählt ist, und führe dann das Update durch.
 
 !!! success "**Überprüfe die Update-Logs**"
-    Bitte nimmst du dich die Zeit, um die Logs durchzusehen und zu überprüfen, ob ein Fehler aufgetreten ist.
+    Nimm dir bitte die Zeit, die Logs durchzusehen und zu prüfen, ob ein Fehler aufgetreten ist.
+
+!!! success "**Überprüfe das System und i-doit**"
+
+## Aktualisierung von 31 auf 35
+
+!!! attention "**Aktualisiere deine Add-ons**"
+    i-doit 35 ändert die interne Template-Engine. Aktualisiere alle installierten Add-ons auf ihre neueste Version, die i-doit 35 unterstützt, siehe [Kompatibilitätsmatrix](../installation/systemvoraussetzungen.md#kompatibilitatsmatrix).
+
+Bereite das Update zuerst über die CLI vor: Öffne den i-doit-Ordner unter `/var/www/html/` und entpacke das i-doit-Update-Paket mit
+
+```sh
+sudo -u www-data unzip idoit-35-update.zip
+```
+
+Wenn du gefragt wirst, überschreibst du alles, indem du **A** eingibst.
+
+Prüfe im Web-Interface-Updater, ob das Update auf Version 35 angezeigt und ausgewählt ist, und führe dann das Update durch.
+
+!!! success "**Überprüfe die Update-Logs**"
+    Nimm dir bitte die Zeit, die Logs durchzusehen und zu prüfen, ob ein Fehler aufgetreten ist.
+
+!!! success "**Überprüfe das System und i-doit**"
+
+## Aktualisierung von 35 auf 39
+
+!!! attention "**PHP-Version**"
+    i-doit 39 läuft noch mit PHP 8.2 aus Debian 12, PHP 8.2 ist aber als veraltet markiert. Empfohlen ist PHP 8.4. Plane den Wechsel auf eine neuere PHP-Version ein, zum Beispiel mit einem späteren Upgrade auf Debian 13. Lies vor diesem Schritt die [Release Notes zu i-doit 39](../versionshistorie/release-notes/release-notes-39.md), denn einige Sicherheitsverbesserungen ändern das Verhalten von i-doit.
+
+!!! note "**Geändertes Verhalten in i-doit 39**"
+    Prüfe diese Punkte nach dem Update, Details stehen in den [Release Notes](../versionshistorie/release-notes/release-notes-39.md#wichtige-anderungen):
+
+    - Nach zu vielen Fehlversuchen wird der Login für einige Minuten gesperrt. Läuft i-doit hinter einem Reverse Proxy, trägst du dessen IP-Adresse in die Experteneinstellung `system.security.login-throttle.trusted-proxies` ein.
+    - Der CMDB-Export speichert standardmäßig keine Dateien mehr auf dem Server.
+    - Uploads werden nur noch mit erlaubten Dateiendungen angenommen, Links nur noch mit erlaubten URL-Schemata.
+    - Der Updater und der interne Proxy prüfen TLS-Zertifikate. Ersetzt dein Proxy Zertifikate, muss der Server dessen Zertifikat als vertrauenswürdig kennen.
+    - Berechtigungen für Importe und Add-on-Seiten werden auf dem Server geprüft. Wer bisher direkte URLs genutzt hat, braucht eventuell zusätzliche Rechte.
+
+Bereite das Update zuerst über die CLI vor: Öffne den i-doit-Ordner unter `/var/www/html/` und entpacke das i-doit-Update-Paket mit
+
+```sh
+sudo -u www-data unzip idoit-39-update.zip
+```
+
+Wenn du gefragt wirst, überschreibst du alles, indem du **A** eingibst.
+
+Prüfe im Web-Interface-Updater, ob das Update auf Version 39 angezeigt und ausgewählt ist, und führe dann das Update durch.
+
+!!! success "**Überprüfe die Update-Logs**"
+    Nimm dir bitte die Zeit, die Logs durchzusehen und zu prüfen, ob ein Fehler aufgetreten ist.
 
 !!! success "**Überprüfe das System und i-doit**"
 
