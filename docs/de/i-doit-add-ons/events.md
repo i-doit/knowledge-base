@@ -176,7 +176,7 @@ Jede Ausführung eines Event-Befehlsaufrufs wird protokolliert. Die letzten 500 
 
 | Version | Datum | Changelog |
 | --- | --- | --- |
-| 1.3 | 05.09.2022 | [Task] Change link to knowledgebase<br>[Task] PHP 8.0 Compatibilit<br>[Task] Design Compatibility<br>[Bug] Events are not triggered when changing/assigning roles |
+| 1.3 | 05.09.2022 | [Task] Change link to knowledgebase<br>[Task] PHP 8.0 Compatibility<br>[Task] Design Compatibility<br>[Bug] Events are not triggered when changing/assigning roles |
 | 1.2 |     | [Improvement] The event contains information about the user<br>[Bug] Custom category constants are not passed, when ranking entries |
 | 1.1.1 | 31.07.2019 | [Bug] Drop-down empty in hooks for object types<br> |
 | 1.1 | 30.01.2019 | [Bug] Constant of user defined categories is missing<br> |
