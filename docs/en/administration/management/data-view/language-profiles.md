@@ -15,6 +15,35 @@ To create a language profile, select the source language and the target language
 
 [![Language Profiles](../../../assets/images/de/administration/verwaltung/datenansicht/sprachprofile/1-s.png)](../../../assets/images/de/administration/verwaltung/datenansicht/sprachprofile/1-s.png)
 
+## Export and import
+
+Language profiles can be exported as a JSON file and imported into another i-doit installation or another tenant. This way, you can transfer customized terms, for example from a test system to the production system.
+
+### Export a language profile
+
+1. Open **Administration → Data View → Language Profiles**.
+2. Select exactly one language profile in the list.
+3. Click **Export**.
+
+i-doit downloads the file `custom-translation-<abbreviation>.json`. It contains the name of the language, the abbreviation, whether the language is available, the flag, and all customized terms of the profile.
+
+### Import a language profile
+
+1. Open **Administration → Data View → Language Profiles**.
+2. Click **Import**. The **Import translation** window opens.
+3. Under **Merge translations**, define how existing customized terms are handled. The default is **No**.
+    - **Yes**: The terms from the file are added to the existing ones. Terms contained in both get the value from the file. Existing terms that are missing in the file are kept.
+    - **No**: The existing customized terms are replaced by the terms from the file. Afterwards, the profile only contains the terms from the file.
+4. Under **Select file**, choose the exported JSON file and click **Upload file**. The import starts after the upload and lists the individual steps.
+5. Click **Close**. The page reloads and shows the imported language profile.
+
+If a language profile with the same abbreviation already exists, the import updates this profile (name, flag and availability). Otherwise, it creates a new language profile. Only JSON files up to 16 MB that contain a valid abbreviation are accepted.
+
+Exporting requires the **Edit** right for **Language profiles**, importing requires the **Create** or **Edit** right.
+
+!!! note "Exports before i-doit 39.2"
+    Before i-doit 39.2, the export file could contain no customized terms. In this case, export the language profile again with i-doit 39.2 or later.
+
 ## See also
 
 - [User Language](../user-settings/user-language.md) -- Set the language per user
